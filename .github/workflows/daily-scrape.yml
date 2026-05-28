@@ -1,0 +1,68 @@
+# .github/workflows/daily-scrape.yml
+# ---------------------------------------------------------------
+# Runs the scraper automatically every day at 6am Pacific time.
+# GitHub Actions handles the server — your Mac doesn't need to
+# be on.
+#
+# You can also trigger it manually anytime from the GitHub
+# website under the Actions tab.
+# ---------------------------------------------------------------
+
+name: Daily USFS Project Scrape
+
+on:
+  # Run on a schedule — 14:00 UTC = 6:00am Pacific (adjust if needed)
+  schedule:
+    - cron: "0 14 * * *"
+
+  # Also allow manual triggering from the GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Step 4: Download the existing database so we don't
+      # lose historical data between runs
+      - name: Download existing database
+        uses: actions/cache@v4
+        with:
+          path: projects.db
+          key: projects-db
+          restore-keys: projects-db
+
+      # Step 5: Run the scraper
+      - name: Run scraper
+        run: python scraper.py
+
+      # Step 6: Save the updated database for the next run
+      - name: Save updated database
+        uses: actions/cache@v4
+        with:
+          path: projects.db
+          key: projects-db
+
+      # Step 7: Commit the updated projects.json back to the repo
+      # so you can always see the latest data on GitHub
+      - name: Commit updated projects.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add projects.json
+          git diff --staged --quiet || git commit -m "Daily scrape: $(date -u '+%Y-%m-%d')"
+          git push
