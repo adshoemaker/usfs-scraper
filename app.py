@@ -1638,7 +1638,7 @@ def index():
     selected_forest   = request.args.get("forest", "").strip()
     selected_status   = request.args.get("status", "").strip()
     selected_days     = request.args.get("days", "").strip()
-    selected_category = request.args.get("category", "").strip()
+    selected_category = request.args.get("category", "taking_comments").strip()
     selected_sort     = request.args.get("sort", "").strip()
     selected_sort2    = request.args.get("sort2", "").strip()
 
