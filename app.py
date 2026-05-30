@@ -29,11 +29,22 @@ ANALYSIS_COLORS = {
 }
 
 FORESTS = [
+    # Washington
     {"name": "Mt. Baker-Snoqualmie National Forest", "code": "mbs"},
     {"name": "Olympic National Forest",              "code": "olympic"},
     {"name": "Okanogan-Wenatchee National Forest",   "code": "okanogan-wenatchee"},
     {"name": "Gifford Pinchot National Forest",      "code": "giffordpinchot"},
     {"name": "Colville National Forest",             "code": "colville"},
+    # Oregon
+    {"name": "Rogue River-Siskiyou National Forest", "code": "rogue-siskiyou"},
+    {"name": "Wallowa-Whitman National Forest",      "code": "wallowa-whitman"},
+    {"name": "Fremont-Winema National Forest",       "code": "fremont-winema"},
+    # California
+    {"name": "Shasta-Trinity National Forest",       "code": "shasta-trinity"},
+    {"name": "Inyo National Forest",                 "code": "inyo"},
+    {"name": "Los Padres National Forest",           "code": "lospadres"},
+    {"name": "Klamath National Forest",              "code": "klamath"},
+    # Alaska
     {"name": "Tongass National Forest",              "code": "tongass"},
 ]
 
