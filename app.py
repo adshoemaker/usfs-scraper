@@ -1023,6 +1023,32 @@ PAGE_TEMPLATE = """
             .forest-summary-inner { gap: 6px; }
             .summary-totals { margin-left: 0; width: 100%; }
 
+            /* Mobile: 2-column forest summary */
+            .forest-cols-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+                width: 100%;
+            }
+
+            .forest-col {
+                width: 100% !important;
+                flex: unset !important;
+                padding: 0 !important;
+            }
+
+            .forest-pill {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            /* Column grouping for mobile */
+            .forest-col-group {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+
             .filters { gap: 8px; }
             .filters select { width: 100%; }
 
@@ -1072,6 +1098,7 @@ PAGE_TEMPLATE = """
             .desktop-only { display: none !important; }
             .mobile-only  { display: flex !important; }
             div.mobile-only { display: flex !important; }
+            .forest-col-group.mobile-only { display: flex !important; flex-direction: column; gap: 8px; }
 
             /* Comment badge centered on mobile */
             .mobile-only.comment-open-badge {
@@ -1195,11 +1222,54 @@ PAGE_TEMPLATE = """
 <div class="forest-summary">
     <div class="forest-summary-inner">
         <div class="forest-cols-row">
+            <!-- Desktop: individual columns. Mobile: left group (CA/CA+OR/OR), right group (WA/AK) -->
+            {% set left_states = ['CA', 'CA+OR', 'OR'] %}
+            {% set right_states = ['WA', 'AK'] %}
+
+            <!-- Left mobile group -->
+            <div class="forest-col-group mobile-only" style="display:none;">
+                {% for state in left_states %}
+                {% set col_forests = forests|selectattr('state','eq',state)|sort(attribute='name')|list %}
+                {% if col_forests %}
+                {% set sc = state_colors.get(state, {}) %}
+                <div class="forest-col">
+                    <div class="forest-col-label" style="color:{{ sc.get('label','var(--text-dim)') }};">{{ state }}</div>
+                    {% for f in col_forests %}
+                    <span class="forest-pill" style="background:{{ sc.get('pill','var(--accent)') }};">
+                        {{ f.name.replace('National Forest', 'NF') }}
+                        <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
+                    </span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <!-- Right mobile group -->
+            <div class="forest-col-group mobile-only" style="display:none;">
+                {% for state in right_states %}
+                {% set col_forests = forests|selectattr('state','eq',state)|sort(attribute='name')|list %}
+                {% if col_forests %}
+                {% set sc = state_colors.get(state, {}) %}
+                <div class="forest-col">
+                    <div class="forest-col-label" style="color:{{ sc.get('label','var(--text-dim)') }};">{{ state }}</div>
+                    {% for f in col_forests %}
+                    <span class="forest-pill" style="background:{{ sc.get('pill','var(--accent)') }};">
+                        {{ f.name.replace('National Forest', 'NF') }}
+                        <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
+                    </span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <!-- Desktop: individual columns (hidden on mobile) -->
             {% for state in state_columns %}
             {% set col_forests = forests|selectattr('state','eq',state)|sort(attribute='name')|list %}
             {% if col_forests %}
             {% set sc = state_colors.get(state, {}) %}
-            <div class="forest-col">
+            <div class="forest-col desktop-only">
                 <div class="forest-col-label" style="color:{{ sc.get('label','var(--text-dim)') }};">{{ state }}</div>
                 {% for f in col_forests %}
                 <span class="forest-pill" style="background:{{ sc.get('pill','var(--accent)') }};">
@@ -1516,6 +1586,8 @@ window.addEventListener('load', function() {
 @app.route("/")
 def index():
     search            = request.args.get("q", "").strip()
+    hidden_forests     = []
+    hidden_forests_str = ""
     selected_forest   = request.args.get("forest", "").strip()
     selected_status   = request.args.get("status", "").strip()
     selected_days     = request.args.get("days", "").strip()
