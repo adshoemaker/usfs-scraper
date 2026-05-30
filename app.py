@@ -309,56 +309,30 @@ PAGE_TEMPLATE = """
         /* ── Header ── */
         header {
             display: flex;
-            align-items: stretch;
-            min-height: 78px;
-        }
-
-        .header-white {
-            flex-shrink: 0;
-            background: transparent;
-            display: flex;
-            align-items: flex-start;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .header-banner {
-            height: 76px;
-            width: auto;
-            display: block;
-            object-fit: cover;
-            object-position: top left;
-        }
-
-        .header-logo {
-            display: none;
+            align-items: center;
+            justify-content: center;
+            background: #8fa68e;
+            min-height: 70px;
+            padding: 12px 20px;
         }
 
         .header-green {
-            flex: 1;
-            background: #8fa68e;
+            width: 100%;
+            max-width: 1150px;
             display: flex;
             align-items: center;
-            padding: 10px 0;
-            box-sizing: border-box;
-        }
-
-        .header-green-inner {
-            width: 100%;
-            padding-right: 20px;
-            display: flex;
-            justify-content: flex-end;
+            justify-content: center;
         }
 
         .header-subtitle {
             font-family: 'Lexend', sans-serif;
-            font-size: 0.94rem;
+            font-size: 1.3rem;
             font-weight: 600;
             color: white;
             letter-spacing: 0.5px;
-            text-align: right;
-            border: 1px solid white;
-            padding: 5px 12px;
+            text-align: center;
+            border: 2px solid #1a1a1a;
+            padding: 8px 28px;
             border-radius: 0;
             display: inline-block;
         }
@@ -1248,13 +1222,8 @@ PAGE_TEMPLATE = """
 <body>
 
 <header>
-    <div class="header-white">
-        <img src="/static/LFDC banner.png" alt="Legacy Forest Defense Coalition" class="header-banner">
-    </div>
     <div class="header-green">
-        <div class="header-green-inner">
-            <div class="header-subtitle">National Forest NEPA Project Tracker</div>
-        </div>
+        <div class="header-subtitle">National Forest NEPA Project Tracker</div>
     </div>
 </header>
 
@@ -1623,23 +1592,7 @@ PAGE_TEMPLATE = """
 
 </body>
 <script>
-window.addEventListener('load', function() {
-    var inner  = document.querySelector('.header-green-inner');
-    var banner = document.querySelector('.header-banner');
-    var box    = document.querySelector('.header-white');
-    var totalWidth = document.documentElement.clientWidth;
-    var contentWidth = Math.min(1150, totalWidth);
-    var leftOffset = Math.max(20, Math.round((totalWidth - contentWidth) / 2) + 20);
-    var rightPad   = Math.max(20, Math.round((totalWidth - contentWidth) / 2) + 20);
-    if (inner)  inner.style.paddingRight = rightPad + 'px';
-    if (banner) banner.style.marginLeft  = (leftOffset - 45) + 'px';
-    if (banner && box) {
-        // White box: from left edge to 45px right of image right edge
-        var imgRight = banner.getBoundingClientRect().right;
-        box.style.width = Math.round(imgRight + 45) + 'px';
-        box.style.background = 'white';
-    }
-});
+
 </script>
 </html>
 """
