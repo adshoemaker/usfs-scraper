@@ -264,9 +264,6 @@ def filter_projects(projects, search="", forest_code="", status="",
             }
             results.sort(key=lambda p: ANALYSIS_SORT_ORDER2.get(p.get("analysis_type", ""), 99))
 
-    # Always pin projects currently accepting comments to the top
-    results.sort(key=lambda p: 0 if p.get("accepting_comments") else 1)
-
     return results
 
 
@@ -1477,9 +1474,10 @@ PAGE_TEMPLATE = """
         {% set cat_bg = {'extractive': 'rgba(204,17,17,0.18)', 'restorative': 'rgba(45,122,31,0.15)', 'mixed': 'rgba(196,106,48,0.16)'}.get(p.category or '', 'white') %}
         {% set cat_border = {'extractive': '#cc1111', 'restorative': '#2d7a1f', 'mixed': '#c46a30'}.get(p.category or '', '#d0d0c8') %}
         {% set cat_label = {'extractive': 'Extractive', 'restorative': 'Restorative', 'mixed': 'Mixed'}.get(p.category or '', '') %}
+        {% set is_tcn = p.get('accepting_comments') %}
         <div class="project-card {{ p.category or '' }}"
-             style="background: {{ cat_bg }};
-                    border: 1px solid {{ cat_border }};">
+             style="background: {{ 'white' if is_tcn else cat_bg }};
+                    border: {{ '2px' if is_tcn else '1px' }} solid {{ cat_border }};">
             <div class="card-category-bar" style="background: {{ cat_border }};">
                 {% if cat_label %}
                 <span class="card-category-label">{{ cat_label }}</span>
