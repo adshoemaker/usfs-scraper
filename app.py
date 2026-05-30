@@ -586,41 +586,36 @@ PAGE_TEMPLATE = """
             display: inline-flex;
             flex-direction: column;
             align-items: center;
-            padding: 6px 14px;
+            padding: 8px 18px;
             border-radius: 6px;
             background: #fbbf24;
-            border: 2px solid #f59e0b;
+            border: 2px solid #cc1111;
             color: #7c2d12;
             font-weight: 700;
-            font-size: 0.78rem;
-            line-height: 1.3;
+            font-size: 0.82rem;
+            line-height: 1.4;
             text-align: center;
-            animation: pulse-yellow 2s ease-in-out infinite;
+            animation: pulse-yellow 2.5s ease-in-out infinite;
             flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(204,17,17,0.2);
         }
 
         .comment-open-badge .badge-title {
-            font-size: 0.82rem;
+            font-size: 0.88rem;
             font-weight: 800;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.4px;
         }
 
         .comment-open-badge .badge-deadline {
-            font-size: 0.68rem;
+            font-size: 0.72rem;
             font-weight: 600;
-            opacity: 0.85;
-            margin-top: 1px;
+            opacity: 0.9;
+            margin-top: 2px;
         }
 
         @keyframes pulse-yellow {
-            0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(251,191,36,0.5); }
-            50%       { opacity: 0.75; box-shadow: 0 0 0 6px rgba(251,191,36,0); }
-        }
-
-        /* Extra red outline for cards taking comments */
-        .project-card.taking-comments {
-            outline: 3px solid #cc1111;
-            outline-offset: 2px;
+            0%, 100% { opacity: 1; box-shadow: 0 2px 8px rgba(204,17,17,0.2); }
+            50%       { opacity: 0.8; box-shadow: 0 2px 16px rgba(204,17,17,0.4); }
         }
 
         .new-badge {
@@ -792,28 +787,8 @@ PAGE_TEMPLATE = """
 
         /* ── Mobile layout ── */
         @media (max-width: 680px) {
-            .card-body {
-                display: flex;
-                flex-direction: column;
-            }
 
-            .milestone-section {
-                width: 100%;
-                order: 2;
-                grid-column: unset;
-                grid-row: unset;
-            }
-
-            .card-body .description {
-                order: 1;
-                grid-column: unset;
-                grid-row: unset;
-            }
-
-            .comment-buttons {
-                order: 3;
-            }
-
+            /* Header stacks vertically */
             header {
                 flex-direction: column;
                 align-items: flex-start;
@@ -821,38 +796,73 @@ PAGE_TEMPLATE = """
                 padding: 12px 16px;
             }
 
-            .header-search input[type="text"] {
+            .header-search { width: 100%; }
+            .header-search input[type="text"] { width: 100%; }
+
+            .forest-summary-inner { gap: 6px; }
+            .summary-totals { margin-left: 0; width: 100%; }
+
+            .filters { gap: 8px; }
+            .filters select { width: 100%; }
+
+            .container { padding: 10px; }
+            .project-card { padding: 12px 14px; }
+
+            /* ── Card layout: full vertical stack ── */
+
+            /* Comment badge — top, left justified */
+            .comment-open-badge {
+                align-self: flex-start;
+                margin-bottom: 6px;
+            }
+
+            /* Card top: forest + title left, status + analysis right */
+            .card-top {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            /* Card body: switch to single column */
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 8px;
+            }
+
+            .card-body .description {
+                order: 1;
                 width: 100%;
             }
 
-            .header-search {
-                width: 100%;
+            /* Milestone table below description, full width */
+            .milestone-section {
+                order: 2;
+                width: 100% !important;
+                grid-column: unset !important;
+                grid-row: unset !important;
+                align-self: unset;
+                justify-self: unset;
             }
 
-            .forest-summary-inner {
+            /* Comment buttons below milestone table */
+            .comment-buttons {
+                order: 3;
+                flex-direction: column;
                 gap: 6px;
             }
 
-            .filters {
-                gap: 8px;
-            }
-
-            .filters select {
+            .btn-comment {
                 width: 100%;
+                text-align: center;
+                justify-content: center;
             }
 
-            .container {
-                padding: 12px;
-            }
-
-            .project-card {
-                padding: 12px 14px;
-            }
-
-            .summary-totals {
-                margin-left: 0;
-                width: 100%;
-            }
+            /* Meta at very bottom */
+            .meta { margin-top: 10px; }
         }
 
         /* ── Meta ── */
@@ -1026,10 +1036,19 @@ PAGE_TEMPLATE = """
         {% set has_milestones = p.get('milestones') and p['milestones']|length > 0 %}
         {% set status_color = status_border_colors.get(p.status, '#d0d0c8') %}
         {% set cat_bg = {'extractive': 'rgba(204,17,17,0.18)', 'restorative': 'rgba(45,122,31,0.15)', 'mixed': 'rgba(196,106,48,0.16)'}.get(p.category or '', 'white') %}
-        <div class="project-card {{ p.category or '' }} {{ 'taking-comments' if p.get('accepting_comments') else '' }}"
+        <div class="project-card {{ p.category or '' }}"
              style="background: {{ cat_bg }};
                     border: 1px solid {{ status_color }};
                     border-left: 4px solid {{ status_color }};">
+
+            {% if p.get('accepting_comments') %}
+            <div class="comment-open-badge" style="margin-bottom:8px;">
+                <span class="badge-title">💬 Taking Comments Now!</span>
+                {% if p.get('comment_deadline') %}
+                <span class="badge-deadline">Deadline: {{ p.comment_deadline }}</span>
+                {% endif %}
+            </div>
+            {% endif %}
 
             <div class="card-top">
                 <div>
@@ -1044,14 +1063,6 @@ PAGE_TEMPLATE = """
                     </div>
                 </div>
                 <div style="display:flex; flex-direction:column; align-items:flex-end; gap:6px; flex-shrink:0;">
-                    {% if p.get('accepting_comments') %}
-                    <div class="comment-open-badge">
-                        <span class="badge-title">💬 Taking Comments Now!</span>
-                        {% if p.get('comment_deadline') %}
-                        <span class="badge-deadline">Deadline: {{ p.comment_deadline }}</span>
-                        {% endif %}
-                    </div>
-                    {% endif %}
                     {% if p.status %}
                     <span class="status-badge"
                           style="background: {{ status_colors.get(p.status, '#8892a4') }}">
