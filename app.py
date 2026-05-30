@@ -538,7 +538,7 @@ PAGE_TEMPLATE = """
         }
 
         .forest-tag {
-            font-size: 0.65rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--accent);
             text-transform: uppercase;
@@ -557,15 +557,17 @@ PAGE_TEMPLATE = """
         .project-card h2 a:hover { color: white; }
 
         .status-badge {
-            display: inline-block;
+            display: block;
             padding: 3px 10px;
             border-radius: 20px;
             font-size: 0.65rem;
             font-weight: 700;
-            color: #0f1117;
+            color: white;
             white-space: nowrap;
-            flex-shrink: 0;
             letter-spacing: 0.3px;
+            text-align: center;
+            width: 240px;
+            box-sizing: border-box;
         }
 
         .analysis-badge {
@@ -579,7 +581,7 @@ PAGE_TEMPLATE = """
             border: 1px solid var(--border);
             white-space: nowrap;
             letter-spacing: 0.2px;
-            width: 220px;
+            width: 240px;
             text-align: center;
             box-sizing: border-box;
         }
@@ -601,6 +603,8 @@ PAGE_TEMPLATE = """
             animation: pulse-yellow 2.5s ease-in-out infinite;
             flex-shrink: 0;
             box-shadow: 0 2px 8px rgba(204,17,17,0.2);
+            width: 480px;
+            box-sizing: border-box;
         }
 
         .comment-open-badge .badge-title {
@@ -623,33 +627,73 @@ PAGE_TEMPLATE = """
 
         .new-badge {
             display: inline-block;
-            background: rgba(251,191,36,0.15);
-            color: #fbbf24;
-            border: 1px solid rgba(251,191,36,0.4);
+            background: #fbbf24;
+            color: #7c2d12;
+            border: 2px solid #cc1111;
             border-radius: 4px;
-            font-size: 0.62rem;
+            font-size: 0.82rem;
             font-weight: 700;
-            padding: 1px 5px;
+            padding: 3px 8px;
             vertical-align: middle;
             margin-left: 6px;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
+            box-shadow: 0 2px 8px rgba(204,17,17,0.2);
         }
 
-        /* ── Card body layout ── */
+        /* ── Card layout ── */
+
+        /* Card header: forest + title left, taking comments badge right */
+        .card-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 10px;
+        }
+
+        .card-header-left {
+            flex: 1;
+            min-width: 0;
+        }
+
+        /* Desktop: badge in header right, hidden on mobile */
+        .card-header-badge {
+            flex-shrink: 0;
+            width: 240px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        /* Two-column body below header */
         .card-body {
             display: flex;
             flex-direction: row;
             gap: 16px;
-            margin-top: 6px;
-            align-items: stretch;
+            min-height: 80px;
         }
 
+        /* Left column: description fills, buttons pin to bottom */
         .card-body-left {
             flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 8px;
             min-width: 0;
+        }
+
+        .card-body-left .description {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-weight: 400;
+            flex: 1;
+        }
+
+        .card-body-left .left-bottom {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding-top: 10px;
         }
 
         .card-body .description {
@@ -659,19 +703,27 @@ PAGE_TEMPLATE = """
             font-weight: 400;
         }
 
+        /* Right column: status + analysis + milestone, top-aligned */
         .card-body-right {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            justify-content: flex-end;
+            justify-content: flex-start;
             gap: 6px;
             flex-shrink: 0;
-            width: 230px;
+            width: 240px;
+        }
+
+        .card-body-right .status-badge,
+        .card-body-right .analysis-badge,
+        .card-body-right .milestone-section {
+            width: 240px;
+            box-sizing: border-box;
         }
 
         /* ── Milestone table ── */
         .milestone-section {
-            width: 230px;
+            width: 240px;
             border: 1px solid var(--border2);
             border-radius: 6px;
             overflow: hidden;
@@ -864,6 +916,7 @@ PAGE_TEMPLATE = """
             /* Show/hide desktop vs mobile elements */
             .desktop-only { display: none !important; }
             .mobile-only  { display: flex !important; }
+            div.mobile-only { display: flex !important; }
 
             /* Comment badge centered on mobile */
             .mobile-only.comment-open-badge {
@@ -872,19 +925,30 @@ PAGE_TEMPLATE = """
                 width: fit-content;
             }
 
-            /* Card body: single column on mobile */
+            /* Mobile: single column */
+            .project-card {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+
+            .card-header-row {
+                flex-direction: column;
+            }
+
+            .card-header-left { width: 100%; }
+
+            .card-header-badge { display: none !important; }
+
             .card-body {
                 flex-direction: column;
                 gap: 10px;
-                margin-top: 8px;
+                width: 100%;
             }
 
             .card-body-left { width: 100%; }
-            .card-body-right { width: 100%; align-items: stretch; }
 
             .card-body .description { width: 100%; }
 
-            /* Milestone table full width on mobile */
             .milestone-section {
                 width: 100% !important;
             }
@@ -1085,8 +1149,9 @@ PAGE_TEMPLATE = """
                     border: 1px solid {{ status_color }};
                     border-left: 4px solid {{ status_color }};">
 
-            <div class="card-top">
-                <div class="card-top-left">
+            <!-- CARD HEADER: forest name + title left, taking comments badge right -->
+            <div class="card-header-row">
+                <div class="card-header-left">
                     {% if p.get('accepting_comments') %}
                     <div class="comment-open-badge mobile-only" style="margin-bottom:8px;">
                         <span class="badge-title">💬 Taking Comments Now!</span>
@@ -1105,70 +1170,110 @@ PAGE_TEMPLATE = """
                         {% endif %}
                     </div>
                 </div>
-                <div class="card-top-right">
-                    {% if p.status %}
-                    <span class="status-badge"
-                          style="background: {{ status_colors.get(p.status, '#8892a4') }}">
-                        {{ p.status }}
-                    </span>
+                <div class="card-header-badge desktop-only">
+                {% if p.get('accepting_comments') %}
+                <div class="comment-open-badge">
+                    <span class="badge-title">💬 Taking Comments Now!</span>
+                    {% if p.get('comment_deadline') %}
+                    <span class="badge-deadline">Deadline: {{ p.comment_deadline }}</span>
                     {% endif %}
-                    {% if p.get('analysis_type') %}
-                    <span class="analysis-badge"
-                          style="background: {{ analysis_colors.get(p.analysis_type, '#888') }}; color: white; border-color: transparent;"
-                          title="{{ analysis_tooltips.get(p.analysis_type, '') }}">
-                        {{ p.analysis_type }}
-                    </span>
-                    {% endif %}
+                </div>
+                {% endif %}
                 </div>
             </div>
 
+            <!-- LEFT BOTTOM: description + buttons + meta (grid row 2) -->
             <div class="card-body">
                 <div class="card-body-left">
                     {% if p.description %}
                     <div class="description">{{ p.description }}</div>
                     {% endif %}
-                    <div class="milestone-section-label">Project Milestones</div>
-                    <table class="milestone-table">
-                        <thead>
-                            <tr><th>Milestone</th><th>Date</th></tr>
-                        </thead>
-                        <tbody>
-                            {% for m in p['milestones'] %}
-                            <tr>
-                                <td>{{ m.milestone }}</td>
-                                <td class="date-cell {{ 'estimated' if m.estimated else '' }}">
-                                    {{ m.date if m.date else '—' }}
-                                </td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-                {% endif %}
+                    <div class="left-bottom">
+                        <!-- Mobile: status + analysis above buttons -->
+                        <div class="mobile-only" style="display:none; justify-content:flex-end; gap:6px; flex-wrap:wrap;">
+                            {% if p.status %}
+                            <span class="status-badge" style="background: {{ status_colors.get(p.status, '#8892a4') }}; width:auto;">
+                                {{ p.status }}
+                            </span>
+                            {% endif %}
+                            {% if p.get('analysis_type') %}
+                            <span class="analysis-badge"
+                                  style="background: {{ analysis_colors.get(p.analysis_type, '#888') }}; color:white; border-color:transparent; width:auto;"
+                                  title="{{ analysis_tooltips.get(p.analysis_type, '') }}">
+                                {{ p.analysis_type }}
+                            </span>
+                            {% endif %}
+                        </div>
+                        <!-- Mobile milestone table -->
+                        {% if has_milestones %}
+                        <div class="milestone-section mobile-only" style="width:100%;">
+                            <div class="milestone-section-label">Project Milestones</div>
+                            <table class="milestone-table">
+                                <thead><tr><th>Milestone</th><th>Date</th></tr></thead>
+                                <tbody>
+                                    {% for m in p['milestones'] %}
+                                    <tr>
+                                        <td>{{ m.milestone }}</td>
+                                        <td class="date-cell {{ 'estimated' if m.estimated else '' }}">{{ m.date if m.date else '—' }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        {% endif %}
+                        <!-- Comment buttons (desktop: side by side; mobile: stacked) -->
+                        {% if has_milestones %}
+                        {% set project_id = p.project_url.rstrip('/').split('/')[-1] %}
+                        <div class="comment-buttons">
+                            <a class="btn-comment primary"
+                               href="https://cara.fs2c.usda.gov/Public/CommentInput?Project={{ project_id }}"
+                               target="_blank" rel="noopener">✍️ Submit New Comments</a>
+                            <a class="btn-comment secondary"
+                               href="https://cara.fs2c.usda.gov/Public/ReadingRoom?Project={{ project_id }}"
+                               target="_blank" rel="noopener">📖 View Prior Comments</a>
+                        </div>
+                        {% endif %}
+                        <!-- Meta tags -->
+                        <div class="meta">
+                            {% if p.unit %}<span>📍 {{ p.unit }}</span>{% endif %}
+                            {% if p.purpose %}<span>🏷 {{ p.purpose.replace('|', ' · ') }}</span>{% endif %}
+                            {% if p.first_seen %}<span>Added: {{ p.first_seen[:10] }}</span>{% endif %}
+                        </div>
+                    </div>
+                </div><!-- card-body-left -->
+
+                <!-- RIGHT COLUMN (desktop only): status + analysis + milestone -->
+                <div class="card-body-right desktop-only">
+                    {% if p.status %}
+                    <span class="status-badge" style="background: {{ status_colors.get(p.status, '#8892a4') }}">
+                        {{ p.status }}
+                    </span>
+                    {% endif %}
+                    {% if p.get('analysis_type') %}
+                    <span class="analysis-badge"
+                          style="background: {{ analysis_colors.get(p.analysis_type, '#888') }}; color:white; border-color:transparent;"
+                          title="{{ analysis_tooltips.get(p.analysis_type, '') }}">
+                        {{ p.analysis_type }}
+                    </span>
+                    {% endif %}
+                    {% if has_milestones %}
+                    <div class="milestone-section">
+                        <div class="milestone-section-label">Project Milestones</div>
+                        <table class="milestone-table">
+                            <thead><tr><th>Milestone</th><th>Date</th></tr></thead>
+                            <tbody>
+                                {% for m in p['milestones'] %}
+                                <tr>
+                                    <td>{{ m.milestone }}</td>
+                                    <td class="date-cell {{ 'estimated' if m.estimated else '' }}">{{ m.date if m.date else '—' }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% endif %}
                 </div><!-- card-body-right -->
-            </div>
-
-            {% if has_milestones %}
-            {% set project_id = p.project_url.rstrip('/').split('/')[-1] %}
-            <div class="comment-buttons">
-                <a class="btn-comment primary"
-                   href="https://cara.fs2c.usda.gov/Public/CommentInput?Project={{ project_id }}"
-                   target="_blank" rel="noopener">
-                   ✍️ Submit New Comments
-                </a>
-                <a class="btn-comment secondary"
-                   href="https://cara.fs2c.usda.gov/Public/ReadingRoom?Project={{ project_id }}"
-                   target="_blank" rel="noopener">
-                   📖 View Prior Comments
-                </a>
-            </div>
-            {% endif %}
-
-            <div class="meta">
-                {% if p.unit %}<span>📍 {{ p.unit }}</span>{% endif %}
-                {% if p.purpose %}<span>🏷 {{ p.purpose.replace('|', ' · ') }}</span>{% endif %}
-                {% if p.first_seen %}<span>Added: {{ p.first_seen[:10] }}</span>{% endif %}
-            </div>
+            </div><!-- card-body -->
         </div>
         {% endfor %}
     {% else %}
