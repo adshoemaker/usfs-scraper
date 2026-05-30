@@ -15,6 +15,13 @@ from flask import Flask, request, render_template_string
 
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static'))
 
+STATUS_BORDER_COLORS = {
+    "Developing Proposal": "#9b72d8",
+    "In Progress":         "#4a90d9",
+    "On Hold":             "#e08848",
+    "Completed":           "#5aaa48",
+}
+
 STATUS_COLORS = {
     "Developing Proposal": "#9b72d8",
     "In Progress":         "#4a90d9",
@@ -503,9 +510,7 @@ PAGE_TEMPLATE = """
             box-shadow: 0 2px 10px rgba(0,0,0,0.10);
         }
 
-        .project-card.extractive  { border-left-color: var(--red); }
-        .project-card.restorative { border-left-color: var(--green); }
-        .project-card.mixed       { border-left-color: var(--orange); }
+        /* border colors now set inline per card */
 
         .card-top {
             display: flex;
@@ -847,7 +852,7 @@ PAGE_TEMPLATE = """
         <span class="tracking-label">Currently tracking:</span>
         {% for f in forests %}
         <span class="forest-pill">
-            {{ forest_abbrevs.get(f.name, f.name) }}
+            {{ f.name.replace('National Forest', 'NF') }}
             <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
         </span>
         {% endfor %}
@@ -871,7 +876,7 @@ PAGE_TEMPLATE = """
                 {% for f in forests %}
                 <option value="{{ f.code }}"
                     {% if selected_forest == f.code %}selected{% endif %}>
-                    {{ forest_abbrevs.get(f.name, f.name) }}
+                    {{ f.name.replace('National Forest', 'NF') }}
                 </option>
                 {% endfor %}
             </select>
@@ -958,17 +963,16 @@ PAGE_TEMPLATE = """
     {% if projects %}
         {% for p in projects %}
         {% set has_milestones = p.get('milestones') and p['milestones']|length > 0 %}
-        <div class="project-card {{ p.category or '' }}">
+        {% set status_color = status_border_colors.get(p.status, '#d0d0c8') %}
+        {% set cat_bg = {'extractive': 'rgba(204,17,17,0.06)', 'restorative': 'rgba(45,122,31,0.06)', 'mixed': 'rgba(196,106,48,0.06)'}.get(p.category or '', 'white') %}
+        <div class="project-card {{ p.category or '' }}"
+             style="background: {{ cat_bg }};
+                    border: 1px solid {{ status_color }};
+                    border-left: 4px solid {{ status_color }};">
 
             <div class="card-top">
                 <div>
-                    <div class="forest-tag">
-                        {% if p.get('is_multi_forest') %}
-                            {{ p.forest_name }}
-                        {% else %}
-                            {{ forest_abbrevs.get(p.forest_name, p.forest_name) }}
-                        {% endif %}
-                    </div>
+                    <div class="forest-tag">{{ p.forest_name }}</div>
                     <div class="btn-title-wrap">
                         <a href="{{ p.project_url }}" target="_blank" class="btn-title">
                             {{ p.project_name }}
@@ -1140,6 +1144,7 @@ def index():
         selected_category=selected_category,
         selected_sort=selected_sort,
         status_colors=STATUS_COLORS,
+        status_border_colors=STATUS_BORDER_COLORS,
         forest_abbrevs=FOREST_ABBREVS,
         analysis_colors=ANALYSIS_COLORS,
         analysis_tooltips={
