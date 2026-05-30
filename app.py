@@ -326,7 +326,7 @@ PAGE_TEMPLATE = """
             display: flex;
             align-items: center;
             gap: 14px;
-            width: 480px;
+            width: 520px;
             flex-shrink: 0;
             box-sizing: border-box;
         }
@@ -364,6 +364,7 @@ PAGE_TEMPLATE = """
             background: #f7f7f0;
             border-bottom: 1px solid var(--border);
             padding: 8px 30px;
+            border-radius: 0;
         }
 
         .forest-summary-inner {
@@ -445,7 +446,7 @@ PAGE_TEMPLATE = """
             font-size: 0.65rem;
             font-weight: 600;
             padding: 2px 8px;
-            border-radius: 10px;
+            border-radius: 0;
             border: 1px solid var(--border2);
             background: white;
             color: var(--text-muted);
@@ -519,7 +520,7 @@ PAGE_TEMPLATE = """
         .filters {
             background: var(--bg2);
             border: 1px solid var(--border);
-            border-radius: 10px;
+            border-radius: 0;
             padding: 14px 18px;
             margin-bottom: 10px;
             display: flex;
@@ -647,7 +648,7 @@ PAGE_TEMPLATE = """
             background: var(--bg2);
             border: 1px solid var(--border);
             border-left: 4px solid var(--border);
-            border-radius: 10px;
+            border-radius: 0;
             padding: 16px 18px;
             margin-bottom: 10px;
             transition: border-color 0.15s, box-shadow 0.15s;
@@ -655,7 +656,7 @@ PAGE_TEMPLATE = """
 
         .project-card:hover {
             border-color: var(--border2);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+            box-shadow: 2px 2px 0 rgba(0,0,0,0.08);
         }
 
         /* border colors now set inline per card */
@@ -723,7 +724,7 @@ PAGE_TEMPLATE = """
             flex-direction: column;
             align-items: center;
             padding: 8px 18px;
-            border-radius: 6px;
+            border-radius: 0;
             background: #fbbf24;
             border: 2px solid #cc1111;
             color: #7c2d12;
@@ -761,7 +762,7 @@ PAGE_TEMPLATE = """
             background: #fbbf24;
             color: #7c2d12;
             border: 2px solid #cc1111;
-            border-radius: 4px;
+            border-radius: 0;
             font-size: 0.82rem;
             font-weight: 700;
             padding: 3px 8px;
@@ -856,7 +857,7 @@ PAGE_TEMPLATE = """
         .milestone-section {
             width: 240px;
             border: 1px solid var(--border2);
-            border-radius: 6px;
+            border-radius: 0;
             overflow: hidden;
             background: #e8e8e4;
             flex-shrink: 0;
@@ -871,6 +872,7 @@ PAGE_TEMPLATE = """
             padding: 5px 10px 4px;
             background: #d0d0cc;
             border-bottom: 1px solid #c0c0bc;
+            border-radius: 0;
         }
 
         .milestone-table {
@@ -923,7 +925,7 @@ PAGE_TEMPLATE = """
             display: inline-flex;
             align-items: center;
             padding: 5px 12px;
-            border-radius: 5px;
+            border-radius: 0;
             font-family: 'Lexend', sans-serif;
             font-size: 0.88rem;
             font-weight: 600;
@@ -951,7 +953,7 @@ PAGE_TEMPLATE = """
         .btn-comment {
             display: inline-block;
             padding: 5px 12px;
-            border-radius: 5px;
+            border-radius: 0;
             font-family: 'Lexend', sans-serif;
             font-size: 0.72rem;
             font-weight: 600;
