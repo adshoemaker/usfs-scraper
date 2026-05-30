@@ -1590,6 +1590,12 @@ PAGE_TEMPLATE = """
     Data scraped from fs.usda.gov &nbsp;·&nbsp; Last updated: {{ last_scraped }}
 </footer>
 
+<script>
+// On first bare visit (no URL params), default to Taking Comments Now filter
+if (window.location.search === '' || window.location.search === '?') {
+    window.location.replace('/?category=taking_comments');
+}
+</script>
 </body>
 <script>
 
