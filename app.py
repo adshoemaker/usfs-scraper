@@ -28,6 +28,22 @@ ANALYSIS_COLORS = {
     "Environmental Impact Statement": "#2d7a1f",
 }
 
+FOREST_ABBREVS = {
+    "Mt. Baker-Snoqualmie National Forest":  "MBS",
+    "Olympic National Forest":               "ONF",
+    "Okanogan-Wenatchee National Forest":    "Okan-Wen",
+    "Gifford Pinchot National Forest":       "GPNF",
+    "Colville National Forest":              "Colville",
+    "Rogue River-Siskiyou National Forest":  "RRS",
+    "Wallowa-Whitman National Forest":       "Wallowa-Whitman",
+    "Fremont-Winema National Forest":        "Fremont-Winema",
+    "Shasta-Trinity National Forest":        "Shasta-Trinity",
+    "Inyo National Forest":                  "Inyo",
+    "Los Padres National Forest":            "Los Padres",
+    "Klamath National Forest":               "Klamath",
+    "Tongass National Forest":               "Tongass",
+}
+
 FORESTS = [
     # Washington
     {"name": "Mt. Baker-Snoqualmie National Forest", "code": "mbs"},
@@ -125,7 +141,9 @@ def filter_projects(projects, search="", forest_code="", status="",
                   and search_lower not in p.get("description", "").lower():
             continue
         if forest_code and p.get("forest_code") != forest_code:
-            continue
+            # Also include multi-forest projects that contain this forest
+            if not (p.get("is_multi_forest") and forest_code in p.get("forest_name", "")):
+                continue
         if status and p.get("status") != status:
             continue
         if category and p.get("category") != category:
@@ -829,7 +847,7 @@ PAGE_TEMPLATE = """
         <span class="tracking-label">Currently tracking:</span>
         {% for f in forests %}
         <span class="forest-pill">
-            {{ f.name.replace('National Forest', 'NF') }}
+            {{ forest_abbrevs.get(f.name, f.name) }}
             <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
         </span>
         {% endfor %}
@@ -853,7 +871,7 @@ PAGE_TEMPLATE = """
                 {% for f in forests %}
                 <option value="{{ f.code }}"
                     {% if selected_forest == f.code %}selected{% endif %}>
-                    {{ f.name.replace('National Forest', 'NF') }}
+                    {{ forest_abbrevs.get(f.name, f.name) }}
                 </option>
                 {% endfor %}
             </select>
@@ -944,7 +962,13 @@ PAGE_TEMPLATE = """
 
             <div class="card-top">
                 <div>
-                    <div class="forest-tag">{{ p.forest_name }}</div>
+                    <div class="forest-tag">
+                        {% if p.get('is_multi_forest') %}
+                            {{ p.forest_name }}
+                        {% else %}
+                            {{ forest_abbrevs.get(p.forest_name, p.forest_name) }}
+                        {% endif %}
+                    </div>
                     <div class="btn-title-wrap">
                         <a href="{{ p.project_url }}" target="_blank" class="btn-title">
                             {{ p.project_name }}
@@ -1116,6 +1140,7 @@ def index():
         selected_category=selected_category,
         selected_sort=selected_sort,
         status_colors=STATUS_COLORS,
+        forest_abbrevs=FOREST_ABBREVS,
         analysis_colors=ANALYSIS_COLORS,
         analysis_tooltips={
             "Categorical Exclusion": "Lowest rigor of analysis",

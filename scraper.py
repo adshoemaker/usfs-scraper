@@ -299,6 +299,100 @@ def scrape_forest(session: requests.Session, forest: dict,
     return projects
 
 
+# Status priority for dedup merging (lower = higher priority)
+STATUS_PRIORITY = {
+    "In Progress":         0,
+    "Developing Proposal": 1,
+    "On Hold":             2,
+    "Completed":           3,
+}
+
+# Forest abbreviations for display
+FOREST_ABBREVS = {
+    "Mt. Baker-Snoqualmie National Forest":  "MBS",
+    "Olympic National Forest":               "ONF",
+    "Okanogan-Wenatchee National Forest":    "Okan-Wen",
+    "Gifford Pinchot National Forest":       "GPNF",
+    "Colville National Forest":              "Colville",
+    "Rogue River-Siskiyou National Forest":  "RRS",
+    "Wallowa-Whitman National Forest":       "Wallowa-Whitman",
+    "Fremont-Winema National Forest":        "Fremont-Winema",
+    "Shasta-Trinity National Forest":        "Shasta-Trinity",
+    "Inyo National Forest":                  "Inyo",
+    "Los Padres National Forest":            "Los Padres",
+    "Klamath National Forest":              "Klamath",
+    "Tongass National Forest":               "Tongass",
+}
+
+
+def deduplicate_projects(projects: list[dict]) -> list[dict]:
+    """
+    Merge projects with identical names into a single card.
+    - Merges forest names into a combined list
+    - Keeps the highest-priority status
+    - Keeps the longest description
+    - Keeps milestones from whichever entry has them
+    - Keeps the earliest first_seen date
+    """
+    groups = {}
+    for p in projects:
+        key = p["project_name"].strip().lower()
+        if key not in groups:
+            groups[key] = []
+        groups[key].append(p)
+
+    merged = []
+    dupes = 0
+    for key, group in groups.items():
+        if len(group) == 1:
+            p = group[0]
+        else:
+            dupes += 1
+            # Sort by status priority
+            group.sort(key=lambda x: STATUS_PRIORITY.get(x.get("status", ""), 99))
+            base = group[0].copy()
+
+            # Merge forest names — collect all unique forests
+            all_forests = []
+            seen_codes = set()
+            for g in group:
+                if g["forest_code"] not in seen_codes:
+                    seen_codes.add(g["forest_code"])
+                    all_forests.append(g["forest_name"])
+
+            base["forest_name"] = ", ".join(
+                FOREST_ABBREVS.get(f, f) for f in all_forests
+            )
+            base["forest_code"] = "multi"
+            base["is_multi_forest"] = True
+
+            # Keep longest description
+            base["description"] = max(
+                (g.get("description", "") for g in group),
+                key=len
+            )
+
+            # Keep milestones from first entry that has them
+            for g in group:
+                if g.get("milestones"):
+                    base["milestones"] = g["milestones"]
+                    base["analysis_type"] = g.get("analysis_type", "")
+                    break
+
+            # Keep earliest first_seen
+            first_seens = [g.get("first_seen", "") for g in group if g.get("first_seen")]
+            if first_seens:
+                base["first_seen"] = min(first_seens)
+
+            p = base
+
+        merged.append(p)
+
+    if dupes:
+        print(f"  Deduplicated {dupes} multi-forest projects")
+    return merged
+
+
 def run_scraper():
     print("=" * 60)
     print("USFS NEPA Project Scraper")
@@ -367,6 +461,10 @@ def run_scraper():
 
     save_hash_cache(hash_cache)
     print(f"\nForests skipped (unchanged): {skipped_forests}/{len(FORESTS)}")
+
+    # Deduplicate multi-forest projects
+    all_projects = deduplicate_projects(all_projects)
+    print(f"  After dedup: {len(all_projects)} unique projects")
 
     # Build JSON including first_seen and milestones
     conn = get_connection()
