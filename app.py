@@ -36,10 +36,11 @@ STATUS_COLORS = {
 }
 
 ANALYSIS_COLORS = {
-    "Categorical Exclusion":        "#cc1111",
-    "Environmental Assessment":     "#c46a30",
-    "Decision Memo":                "#c46a30",
+    "Categorical Exclusion":          "#cc1111",
+    "Environmental Assessment":       "#c46a30",
+    "Decision Memo":                  "#c46a30",
     "Environmental Impact Statement": "#2d7a1f",
+    "Unknown":                        "#999",
 }
 
 FOREST_ABBREVS = {
@@ -151,6 +152,8 @@ def load_projects():
     projects = data.get("projects", [])
     for p in projects:
         p["category"] = classify_project(p)
+        if p.get("analysis_type") == "Decision Memo":
+            p["analysis_type"] = "Environmental Assessment"
     return projects, scraped_at
 
 
@@ -1499,13 +1502,12 @@ PAGE_TEMPLATE = """
                                 {{ p.status }}
                             </span>
                             {% endif %}
-                            {% if p.get('analysis_type') %}
+                            {% set atype = p.analysis_type if p.get('analysis_type') else 'Unknown' %}
                             <span class="analysis-badge"
-                                  style="background: {{ analysis_colors.get(p.analysis_type, '#888') }}; color:white; border-color:transparent; width:auto;"
-                                  title="{{ analysis_tooltips.get(p.analysis_type, '') }}">
-                                {{ p.analysis_type }}
+                                  style="background: {{ analysis_colors.get(atype, '#999') }}; color:white; border-color:transparent; width:auto;"
+                                  title="{{ analysis_tooltips.get(atype, '') }}">
+                                {{ atype }}
                             </span>
-                            {% endif %}
                         </div>
                         <!-- Mobile milestone table -->
                         {% if has_milestones %}
@@ -1552,13 +1554,12 @@ PAGE_TEMPLATE = """
                         {{ p.status }}
                     </span>
                     {% endif %}
-                    {% if p.get('analysis_type') %}
+                    {% set atype = p.analysis_type if p.get('analysis_type') else 'Unknown' %}
                     <span class="analysis-badge"
-                          style="background: {{ analysis_colors.get(p.analysis_type, '#888') }}; color:white; border-color:transparent;"
-                          title="{{ analysis_tooltips.get(p.analysis_type, '') }}">
-                        {{ p.analysis_type }}
+                          style="background: {{ analysis_colors.get(atype, '#999') }}; color:white; border-color:transparent;"
+                          title="{{ analysis_tooltips.get(atype, '') }}">
+                        {{ atype }}
                     </span>
-                    {% endif %}
                     {% if has_milestones %}
                     <div class="milestone-section">
                         <div class="milestone-section-label">Project Milestones</div>
