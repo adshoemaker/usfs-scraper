@@ -310,204 +310,84 @@ PAGE_TEMPLATE = """
 
         /* ── Header ── */
         header {
-            background: #8fa68e;
-            border-bottom: 2px solid #7a9279;
-            padding: 0;
             display: flex;
             align-items: stretch;
-            justify-content: space-between;
-            gap: 0;
-            flex-wrap: wrap;
+            height: 72px;
         }
 
-        .header-left-panel {
+        .header-white {
+            width: 400px;
+            flex-shrink: 0;
             background: white;
-            padding: 12px 24px;
             display: flex;
             align-items: center;
-            gap: 14px;
-            width: 600px;
-            flex-shrink: 0;
+            gap: 12px;
+            padding: 0 20px;
             box-sizing: border-box;
         }
 
-        .header-right-panel {
-            flex: 1;
-            padding: 12px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-        }
-
-
-
-        .header-logo {
-            height: 52px;
-            width: 52px;
-            border-radius: 6px;
-            object-fit: cover;
-            border: 2px solid rgba(255,255,255,0.2);
-            flex-shrink: 0;
-        }
-
-        header h1 {
-            font-size: 1.43rem;
-            font-weight: 500;
+        .header-white h1 {
             font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
             color: #1a1a1a;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.2px;
             line-height: 1.2;
         }
 
-        /* Forest summary bar */
-        .forest-summary {
-            background: #f7f7f0;
-            border-bottom: 1px solid var(--border);
-            padding: 8px 30px;
-            border-radius: 0;
-        }
-
-        .forest-summary-inner {
-            max-width: 1150px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-            font-size: 0.75rem;
-        }
-
-        .tracking-label {
-            font-weight: 700;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-size: 0.68rem;
-            margin-right: 4px;
-            white-space: nowrap;
-        }
-
-        .forest-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 2px 10px 2px 8px;
-            font-size: 0.72rem;
-            font-weight: 500;
-            color: var(--text);
-            white-space: nowrap;
-        }
-
-        .toggle-pill {
-            cursor: pointer;
-            transition: all 0.15s;
-            user-select: none;
-        }
-
-        .toggle-pill:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        .toggle-pill.pill-on {
-            box-shadow: 0 0 0 2px currentColor;
-            font-weight: 700;
-        }
-
-        .forest-pill-count {
-            background: var(--border);
-            border-radius: 10px;
-            padding: 0px 6px;
-            font-size: 0.65rem;
-            font-weight: 700;
-            color: var(--text-muted);
-        }
-
-        .pill-state-divider {
-            display: inline-flex;
-            align-items: center;
-            margin: 0 2px 0 8px;
+        .header-logo {
+            height: 44px;
+            width: 44px;
+            border-radius: 4px;
+            object-fit: cover;
             flex-shrink: 0;
         }
 
-        .pill-state-divider:first-of-type { margin-left: 0; }
-
-        .pill-controls {
-            display: inline-flex;
-            gap: 4px;
-            margin-left: 4px;
-        }
-
-        .pill-ctrl-btn {
-            font-family: 'Lexend', sans-serif;
-            font-size: 0.65rem;
-            font-weight: 600;
-            padding: 2px 8px;
-            border-radius: 0;
-            border: 1px solid var(--border2);
-            background: white;
-            color: var(--text-muted);
-            cursor: pointer;
-            transition: all 0.15s;
-        }
-
-        .pill-ctrl-btn:hover {
-            background: var(--accent);
-            color: white;
-            border-color: var(--accent);
-        }
-
-        .summary-totals {
-            margin-left: auto;
-            color: var(--text-muted);
-            font-size: 0.72rem;
-            white-space: nowrap;
-        }
-
-        .summary-totals strong {
-            color: var(--text);
-            font-weight: 700;
+        .header-green {
+            flex: 1;
+            background: #8fa68e;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 24px;
         }
 
         .header-search {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 0;
         }
 
         .header-search input[type="text"] {
-            padding: 7px 14px;
-            border: 1px solid rgba(255,255,255,0.4);
+            padding: 8px 14px;
+            border: none;
             border-radius: 0;
             font-family: 'Lexend', sans-serif;
-            font-size: 0.85rem;
-            width: 230px;
-            background: rgba(255,255,255,0.25);
+            font-size: 0.88rem;
+            width: 260px;
+            background: rgba(255,255,255,0.85);
             color: #1a1a1a;
             outline: none;
-            transition: border-color 0.2s;
         }
 
-        .header-search input[type="text"]::placeholder { color: rgba(0,0,0,0.4); }
-        .header-search input[type="text"]:focus { background: rgba(255,255,255,0.45); border-color: rgba(255,255,255,0.8); }
+        .header-search input[type="text"]::placeholder { color: #888; }
+        .header-search input[type="text"]:focus { background: white; }
 
         .header-search button {
-            padding: 7px 14px;
-            background: rgba(255,255,255,0.3);
-            color: #1a1a1a;
-            border: 1px solid rgba(255,255,255,0.4);
+            padding: 8px 18px;
+            background: #2d4a24;
+            color: white;
+            border: none;
             border-radius: 0;
             font-family: 'Lexend', sans-serif;
-            font-size: 0.82rem;
+            font-size: 0.88rem;
             font-weight: 700;
             cursor: pointer;
-            transition: background 0.15s;
+            height: 100%;
+            white-space: nowrap;
         }
 
-        .header-search button:hover { background: rgba(255,255,255,0.5); }
+        .header-search button:hover { background: #1e3a12; }55,255,0.5); }
 
         /* ── Container ── */
         .container {
@@ -1157,23 +1037,25 @@ PAGE_TEMPLATE = """
 <body>
 
 <header>
-    <div class="header-left-panel">
+    <div class="header-white">
         <img src="/static/LFDC_Logo.jpg" alt="LFDC Logo" class="header-logo">
         <h1>National Forest NEPA Project Tracker</h1>
     </div>
-    <div class="header-right-panel">
-    <form class="header-search" method="GET" action="/" id="searchform">
-        <input type="focused" name="forest"   value="{{ selected_forest }}">
-        <input type="focused" name="status"   value="{{ selected_status }}">
-        <input type="focused" name="days"     value="{{ selected_days }}">
-        <input type="focused" name="sort"     value="{{ selected_sort }}">
-        <input type="focused" name="category" value="{{ selected_category }}">
-        <input type="text" name="q"
-               placeholder="Search projects..."
-               value="{{ search }}"
-               autocomplete="off">
-        <button type="submit">Search</button>
-    </form>
+    <div class="header-green">
+        <form class="header-search" method="GET" action="/" id="searchform">
+            <input type="hidden" name="forest"   value="{{ selected_forest }}">
+            <input type="hidden" name="status"   value="{{ selected_status }}">
+            <input type="hidden" name="days"     value="{{ selected_days }}">
+            <input type="hidden" name="sort"     value="{{ selected_sort }}">
+            <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
+            <input type="hidden" name="category" value="{{ selected_category }}">
+            <input type="hidden" name="focused"  value="{{ focused_forests_str }}">
+            <input type="text" name="q"
+                   placeholder="Search projects..."
+                   value="{{ search }}"
+                   autocomplete="off">
+            <button type="submit">Search</button>
+        </form>
     </div>
 </header>
 
@@ -1216,10 +1098,10 @@ PAGE_TEMPLATE = """
 <div class="container">
 
     <form class="filters" method="GET" action="/">
-        <input type="focused" name="q"        value="{{ search }}">
-        <input type="focused" name="category" value="{{ selected_category }}">
-        <input type="focused" name="sort2"    value="{{ selected_sort2 }}">
-        <input type="focused" name="focused"   value="{{ focused_forests_str }}">
+        <input type="hidden" name="q"        value="{{ search }}">
+        <input type="hidden" name="category" value="{{ selected_category }}">
+        <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
+        <input type="hidden" name="focused"   value="{{ focused_forests_str }}">
         <div>
             <label for="forest">Forest</label>
             <select id="forest" name="forest" onchange="this.form.submit()">
