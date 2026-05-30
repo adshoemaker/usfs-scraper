@@ -59,35 +59,24 @@ FOREST_ABBREVS = {
 
 FORESTS = [
     # Washington
-    {"name": "Mt. Baker-Snoqualmie National Forest", "code": "mbs",              "state": "WA"},
-    {"name": "Olympic National Forest",              "code": "olympic",           "state": "WA"},
-    {"name": "Okanogan-Wenatchee National Forest",   "code": "okanogan-wenatchee","state": "WA"},
-    {"name": "Gifford Pinchot National Forest",      "code": "giffordpinchot",   "state": "WA"},
-    {"name": "Colville National Forest",             "code": "colville",          "state": "WA"},
+    {"name": "Mt. Baker-Snoqualmie National Forest", "code": "mbs"},
+    {"name": "Olympic National Forest",              "code": "olympic"},
+    {"name": "Okanogan-Wenatchee National Forest",   "code": "okanogan-wenatchee"},
+    {"name": "Gifford Pinchot National Forest",      "code": "giffordpinchot"},
+    {"name": "Colville National Forest",             "code": "colville"},
     # Oregon
-    {"name": "Rogue River-Siskiyou National Forest", "code": "rogue-siskiyou",   "state": "OR/CA"},
-    {"name": "Wallowa-Whitman National Forest",      "code": "wallowa-whitman",  "state": "OR"},
-    {"name": "Fremont-Winema National Forest",       "code": "fremont-winema",   "state": "OR"},
+    {"name": "Rogue River-Siskiyou National Forest", "code": "rogue-siskiyou"},
+    {"name": "Wallowa-Whitman National Forest",      "code": "wallowa-whitman"},
+    {"name": "Fremont-Winema National Forest",       "code": "fremont-winema"},
     # California
-    {"name": "Shasta-Trinity National Forest",       "code": "shasta-trinity",   "state": "CA"},
-    {"name": "Inyo National Forest",                 "code": "inyo",              "state": "CA"},
-    {"name": "Los Padres National Forest",           "code": "lospadres",         "state": "CA"},
-    {"name": "Klamath National Forest",              "code": "klamath",           "state": "OR/CA"},
+    {"name": "Shasta-Trinity National Forest",       "code": "shasta-trinity"},
+    {"name": "Inyo National Forest",                 "code": "inyo"},
+    {"name": "Los Padres National Forest",           "code": "lospadres"},
+    {"name": "Klamath National Forest",              "code": "klamath"},
     # Alaska
-    {"name": "Tongass National Forest",              "code": "tongass",           "state": "AK"},
+    {"name": "Tongass National Forest",              "code": "tongass"},
 ]
 
-# State color palette (rainbow order: CA=red, OR=yellow, WA=green, AK=blue-violet)
-STATE_PILL_COLORS = {
-    "CA":    {"bg": "rgba(204,51,51,0.15)",   "border": "#cc3333", "text": "#8b1a1a"},
-    "OR":    {"bg": "rgba(200,168,0,0.15)",   "border": "#c8a800", "text": "#7a6500"},
-    "OR/CA": {"bg": "rgba(201,106,0,0.15)",   "border": "#c96a00", "text": "#7a3e00"},
-    "WA":    {"bg": "rgba(45,122,31,0.15)",   "border": "#2d7a1f", "text": "#1a4f0f"},
-    "AK":    {"bg": "rgba(91,79,168,0.15)",   "border": "#5b4fa8", "text": "#352d6e"},
-}
-
-# Map forest code -> state for use in project cards
-FOREST_STATE_MAP = {f["code"]: f["state"] for f in FORESTS}
 
 DATE_RANGES = [
     ("7",  "Last 7 days"),
@@ -153,7 +142,7 @@ def load_projects():
 
 
 def filter_projects(projects, search="", forest_code="", status="",
-                    days="", category="", sort="", sort2="", focused_forests=None):
+                    days="", category="", sort="", sort2=""):
     results = []
     search_lower = search.lower()
     cutoff = None
@@ -266,7 +255,7 @@ def filter_projects(projects, search="", forest_code="", status="",
     # Always pin projects currently accepting comments to the top
     results.sort(key=lambda p: 0 if p.get("accepting_comments") else 1)
 
-    return results, focused_forests
+    return results
 
 
 PAGE_TEMPLATE = """
@@ -387,7 +376,66 @@ PAGE_TEMPLATE = """
             white-space: nowrap;
         }
 
-        .header-search button:hover { background: #1e3a12; }55,255,0.5); }
+        .header-search button:hover { background: #1e3a12; }
+
+        /* ── Forest summary bar ── */
+        .forest-summary {
+            background: #f7f7f0;
+            border-bottom: 1px solid var(--border);
+            padding: 8px 30px;
+        }
+
+        .forest-summary-inner {
+            max-width: 1150px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tracking-label {
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.68rem;
+            white-space: nowrap;
+        }
+
+        .forest-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--accent);
+            border-radius: 20px;
+            padding: 3px 12px 3px 10px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: white;
+            white-space: nowrap;
+        }
+
+        .forest-pill-count {
+            background: rgba(255,255,255,0.25);
+            border-radius: 10px;
+            padding: 0px 6px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .summary-totals {
+            margin-left: auto;
+            color: var(--text-muted);
+            font-size: 0.72rem;
+            white-space: nowrap;
+        }
+
+        .summary-totals strong {
+            color: var(--text);
+            font-weight: 700;
+        }
 
         /* ── Container ── */
         .container {
@@ -531,6 +579,7 @@ PAGE_TEMPLATE = """
             border-radius: 0;
             padding: 16px 18px;
             margin-bottom: 10px;
+            margin-left: 24px;
             transition: border-color 0.15s, box-shadow 0.15s;
         }
 
@@ -996,24 +1045,6 @@ PAGE_TEMPLATE = """
 
         .meta span { margin-right: 14px; }
 
-        .focused-group-label {
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.6px;
-            color: var(--accent);
-            margin: 6px 0 8px 2px;
-        }
-
-        .unfocused-label {
-            color: var(--text-dim);
-            margin-top: 16px;
-        }
-
-        .unfocused-card {
-            filter: grayscale(30%);
-        }
-
         /* ── No results ── */
         .no-results {
             text-align: center;
@@ -1049,7 +1080,6 @@ PAGE_TEMPLATE = """
             <input type="hidden" name="sort"     value="{{ selected_sort }}">
             <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
             <input type="hidden" name="category" value="{{ selected_category }}">
-            <input type="hidden" name="focused"  value="{{ focused_forests_str }}">
             <input type="text" name="q"
                    placeholder="Search projects..."
                    value="{{ search }}"
@@ -1063,30 +1093,12 @@ PAGE_TEMPLATE = """
 <div class="forest-summary">
     <div class="forest-summary-inner">
         <span class="tracking-label">Currently tracking:</span>
-        {% set state_order = ['CA', 'OR/CA', 'OR', 'WA', 'AK'] %}
-        {% set prev_state = namespace(val='') %}
-        {% for state in state_order %}
-            {% set state_forests = forests|selectattr('state','eq',state)|sort(attribute='name')|list %}
-            {% if state_forests %}
-            <span class="pill-state-divider" style="color:{{ state_pill_colors.get(state,{}).get('border','#888') }}; font-size:0.6rem; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; opacity:0.7;">{{ state }}</span>
-            {% for f in state_forests %}
-            {% set sc = state_pill_colors.get(f.state, {}) %}
-            {% set is_focused = f.code in focused_forests %}
-            <span class="forest-pill toggle-pill {{ 'pill-on' if is_focused else '' }}"
-                  onclick="toggleForest('{{ f.code }}')"
-                  data-code="{{ f.code }}"
-                  title="{{ f.state }} — Click to {{ 'deselect' if is_focused else 'highlight' }} {{ f.name }}"
-                  style="background:{{ sc.bg }}; border-color:{{ sc.border }}; color:{{ sc.text }}; {{ 'box-shadow: 0 0 0 2px ' + sc.border + ';' if is_focused else 'opacity:0.7;' }}">
-                {{ f.name.replace('National Forest', 'NF') }}
-                <span class="forest-pill-count" style="background:{{ sc.border }}20; color:{{ sc.border }};">{{ forest_counts[f.code].total }}</span>
-            </span>
-            {% endfor %}
-            {% endif %}
-        {% endfor %}
-        <span class="pill-controls">
-            <button class="pill-ctrl-btn" onclick="setAllForests(true)">Select all</button>
-            <button class="pill-ctrl-btn" onclick="setAllForests(false)">Deselect all</button>
+        {% for f in forests %}
+        <span class="forest-pill">
+            {{ f.name.replace('National Forest', 'NF') }}
+            <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
         </span>
+        {% endfor %}
         <span class="summary-totals">
             <strong>{{ total }}</strong> projects total
             &nbsp;·&nbsp;
@@ -1101,7 +1113,6 @@ PAGE_TEMPLATE = """
         <input type="hidden" name="q"        value="{{ search }}">
         <input type="hidden" name="category" value="{{ selected_category }}">
         <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
-        <input type="hidden" name="focused"   value="{{ focused_forests_str }}">
         <div>
             <label for="forest">Forest</label>
             <select id="forest" name="forest" onchange="this.form.submit()">
@@ -1214,11 +1225,7 @@ PAGE_TEMPLATE = """
     </div>
 
     {% if projects %}
-        {% if focused_forests %}
-        <div class="focused-group-label">📌 Highlighted forests</div>
-        {% endif %}
-        {% set display_projects = projects_focused if focused_forests else projects %}
-        {% for p in display_projects %}
+        {% for p in projects %}
         {% set has_milestones = p.get('milestones') and p['milestones']|length > 0 %}
         {% set status_color = status_border_colors.get(p.status, '#d0d0c8') %}
         {% set cat_bg = {'extractive': 'rgba(204,17,17,0.18)', 'restorative': 'rgba(45,122,31,0.15)', 'mixed': 'rgba(196,106,48,0.16)'}.get(p.category or '', 'white') %}
@@ -1239,9 +1246,7 @@ PAGE_TEMPLATE = """
                         {% endif %}
                     </div>
                     {% endif %}
-                    {% set f_state = forest_state_map.get(p.forest_code, '') %}
-                    {% set f_color = state_pill_colors.get(f_state, {}).get('text', 'var(--accent)') %}
-                    <div class="forest-tag" style="color: {{ f_color }};">{{ p.forest_name }}</div>
+                    <div class="forest-tag">{{ p.forest_name }}</div>
                     <div class="btn-title-wrap">
                         <a href="{{ p.project_url }}" target="_blank" class="btn-title">
                             {{ p.project_name }}
@@ -1357,30 +1362,6 @@ PAGE_TEMPLATE = """
             </div><!-- card-body -->
         </div>
         {% endfor %}
-
-        {% if focused_forests and projects_unfocused %}
-        <div class="focused-group-label unfocused-label">Other projects</div>
-        {% for p in projects_unfocused %}
-        {% set has_milestones = p.get('milestones') and p['milestones']|length > 0 %}
-        {% set status_color = status_border_colors.get(p.status, '#d0d0c8') %}
-        {% set cat_bg = {'extractive': 'rgba(204,17,17,0.18)', 'restorative': 'rgba(45,122,31,0.15)', 'mixed': 'rgba(196,106,48,0.16)'}.get(p.category or '', 'white') %}
-        {% set cat_border = {'extractive': '#cc1111', 'restorative': '#2d7a1f', 'mixed': '#c46a30'}.get(p.category or '', '#d0d0c8') %}
-        <div class="project-card {{ p.category or '' }} unfocused-card"
-             style="background: {{ cat_bg }}; border: 1px solid {{ cat_border }}; border-left: 4px solid {{ cat_border }}; opacity: 0.45; pointer-events: none;">
-            <div class="card-header-row">
-                <div class="card-header-left">
-                    {% set f_state = forest_state_map.get(p.forest_code, '') %}
-                    {% set f_color = state_pill_colors.get(f_state, {}).get('text', 'var(--accent)') %}
-                    <div class="forest-tag" style="color: {{ f_color }};">{{ p.forest_name }}</div>
-                    <div class="btn-title-wrap">
-                        <span class="btn-title" style="cursor:default;">{{ p.project_name }}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-        {% endif %}
-
     {% else %}
         <div class="no-results">No projects found matching your search.</div>
     {% endif %}
@@ -1391,45 +1372,6 @@ PAGE_TEMPLATE = """
     Data scraped from fs.usda.gov &nbsp;·&nbsp; Last updated: {{ last_scraped }}
 </footer>
 
-<script>
-// Read hidden forests from URL param
-function getHiddenForests() {
-    const params = new URLSearchParams(window.location.search);
-    const h = params.get('focused');
-    return h ? h.split(',').filter(Boolean) : [];
-}
-
-// Update URL and reload with new hidden forests list
-function setHiddenForests(list) {
-    const params = new URLSearchParams(window.location.search);
-    if (list.length === 0) {
-        params.delete('focused');
-    } else {
-        params.set('focused', list.join(','));
-    }
-    window.location.search = params.toString();
-}
-
-function toggleForest(code) {
-    let hidden = getHiddenForests();
-    if (hidden.includes(code)) {
-        hidden = hidden.filter(c => c !== code);
-    } else {
-        hidden.push(code);
-    }
-    setHiddenForests(hidden);
-}
-
-function setAllForests(show) {
-    if (show) {
-        setHiddenForests([]);
-    } else {
-        const codes = Array.from(document.querySelectorAll('.toggle-pill'))
-                           .map(el => el.dataset.code);
-        setHiddenForests(codes);
-    }
-}
-</script>
 </body>
 </html>
 """
@@ -1438,8 +1380,6 @@ function setAllForests(show) {
 @app.route("/")
 def index():
     search            = request.args.get("q", "").strip()
-    focused_forests_str = request.args.get("focused", "").strip()
-    focused_forests     = [f.strip() for f in focused_forests_str.split(",") if f.strip()]
     selected_forest   = request.args.get("forest", "").strip()
     selected_status   = request.args.get("status", "").strip()
     selected_days     = request.args.get("days", "").strip()
@@ -1470,7 +1410,7 @@ def index():
         if p.get("status") in ("In Progress", "Developing Proposal")
     )
 
-    _projects, _focused = filter_projects(
+    projects = filter_projects(
         all_projects,
         search=search,
         forest_code=selected_forest,
@@ -1479,15 +1419,7 @@ def index():
         category=selected_category,
         sort=selected_sort,
         sort2=selected_sort2,
-        focused_forests=focused_forests,
     )
-    if focused_forests:
-        projects_focused   = [p for p in _projects if p.get("forest_code") in focused_forests]
-        projects_unfocused = [p for p in _projects if p.get("forest_code") not in focused_forests]
-    else:
-        projects_focused   = []
-        projects_unfocused = _projects
-    projects = _projects
 
     status_list = sorted(set(p["status"] for p in all_projects if p.get("status")))
 
@@ -1528,10 +1460,6 @@ def index():
         selected_category=selected_category,
         selected_sort=selected_sort,
         selected_sort2=selected_sort2,
-        focused_forests=focused_forests,
-        focused_forests_str=focused_forests_str,
-        state_pill_colors=STATE_PILL_COLORS,
-        forest_state_map=FOREST_STATE_MAP,
         status_colors=STATUS_COLORS,
         status_border_colors=STATUS_BORDER_COLORS,
         forest_abbrevs=FOREST_ABBREVS,
