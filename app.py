@@ -558,6 +558,7 @@ PAGE_TEMPLATE = """
             gap: 12px;
             align-items: flex-end;
             flex-wrap: wrap;
+            justify-content: flex-end;
         }
 
         .filters label {
@@ -1028,9 +1029,9 @@ PAGE_TEMPLATE = """
         }
 
         .btn-comment.secondary {
-            background: transparent;
-            color: var(--text-muted);
-            border: 1px solid var(--border2);
+            background: #d8d8d4;
+            color: #555;
+            border: 2px solid var(--green);
         }
 
         .btn-comment.primary {
@@ -1038,8 +1039,21 @@ PAGE_TEMPLATE = """
         }
 
         .btn-comment.secondary:hover {
-            color: var(--text);
-            border-color: var(--text-dim);
+            background: #c8c8c4;
+            color: #333;
+            border-color: var(--green);
+        }
+
+        .btn-comment.primary-inactive {
+            background: #d8d8d4 !important;
+            color: #555 !important;
+            border: 1px solid #b8b8b4 !important;
+            cursor: pointer;
+        }
+
+        .btn-comment.primary-inactive:hover {
+            background: #c8c8c4 !important;
+            color: #444 !important;
         }
 
         /* ── Mobile layout ── */
@@ -1351,18 +1365,7 @@ PAGE_TEMPLATE = """
         <input type="hidden" name="category" value="{{ selected_category }}">
         <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
         <input type="hidden" name="forests"  value="{{ selected_forests_str }}">
-        <div>
-            <label for="forest">Forest</label>
-            <select id="forest" name="forest" onchange="this.form.submit()">
-                <option value="">All forests</option>
-                {% for f in forests %}
-                <option value="{{ f.code }}"
-                    {% if selected_forest == f.code %}selected{% endif %}>
-                    {{ f.name.replace('National Forest', 'NF') }}
-                </option>
-                {% endfor %}
-            </select>
-        </div>
+        <input type="hidden" name="forest"   value="{{ selected_forest }}">
         <div>
             <label for="status">Status</label>
             <select id="status" name="status" onchange="this.form.submit()">
@@ -1423,27 +1426,27 @@ PAGE_TEMPLATE = """
         <a href="{{ url_with_category('extractive') }}"
            class="cat-btn extractive {{ 'active' if selected_category == 'extractive' else '' }}">
             <span class="dot extractive-dot"></span>
-            Extractive ({{ counts.extractive }})
+            Extractive ({{ filtered_counts.extractive }} of {{ counts.extractive }})
         </a>
         <a href="{{ url_with_category('mixed') }}"
            class="cat-btn mixed {{ 'active' if selected_category == 'mixed' else '' }}">
             <span class="dot mixed-dot"></span>
-            Mixed ({{ counts.mixed }})
+            Mixed ({{ filtered_counts.mixed }} of {{ counts.mixed }})
         </a>
         <a href="{{ url_with_category('restorative') }}"
            class="cat-btn restorative {{ 'active' if selected_category == 'restorative' else '' }}">
             <span class="dot restorative-dot"></span>
-            Restorative ({{ counts.restorative }})
+            Restorative ({{ filtered_counts.restorative }} of {{ counts.restorative }})
         </a>
         <a href="{{ url_with_category('unclassified') }}"
            class="cat-btn unclassified {{ 'active' if selected_category == 'unclassified' else '' }}">
             <span class="dot unclassified-dot"></span>
-            Unclassified ({{ counts.unclassified }})
+            Unclassified ({{ filtered_counts.unclassified }} of {{ counts.unclassified }})
         </a>
         <a href="{{ url_with_category('taking_comments') }}"
            class="cat-btn taking-comments {{ 'active' if selected_category == 'taking_comments' else '' }}">
             <span class="dot taking-comments-dot"></span>
-            💬 Taking Comments ({{ counts.taking_comments }})
+            💬 Taking Comments ({{ filtered_counts.taking_comments }} of {{ counts.taking_comments }})
         </a>
     </div>
 
@@ -1559,9 +1562,9 @@ PAGE_TEMPLATE = """
                         {% if has_milestones %}
                         {% set project_id = p.project_url.rstrip('/').split('/')[-1] %}
                         <div class="comment-buttons">
-                            <a class="btn-comment primary"
+                            <a class="btn-comment {{ 'primary' if p.get('accepting_comments') else 'primary-inactive' }}"
                                href="https://cara.fs2c.usda.gov/Public/CommentInput?Project={{ project_id }}"
-                               target="_blank" rel="noopener">✍️ Submit New Comments</a>
+                               target="_blank" rel="noopener">{{ '✍️ ' if p.get('accepting_comments') else '' }}Submit New Comments</a>
                             <a class="btn-comment secondary"
                                href="https://cara.fs2c.usda.gov/Public/ReadingRoom?Project={{ project_id }}"
                                target="_blank" rel="noopener">📖 View Prior Comments</a>
@@ -1701,6 +1704,16 @@ def index():
         forest_visible = [p for p in all_projects if p.get('forest_code') in selected_forests]
     else:
         forest_visible = all_projects
+
+    # Filtered counts based on forest selection, before category filter
+    filtered_counts = {
+        "extractive":      sum(1 for p in forest_visible if p.get("category") == "extractive"),
+        "restorative":     sum(1 for p in forest_visible if p.get("category") == "restorative"),
+        "mixed":           sum(1 for p in forest_visible if p.get("category") == "mixed"),
+        "unclassified":    sum(1 for p in forest_visible if not p.get("category")),
+        "taking_comments": sum(1 for p in forest_visible if p.get("accepting_comments")),
+    }
+
     projects = filter_projects(
         forest_visible,
         search=search,
@@ -1726,11 +1739,12 @@ def index():
 
     def url_with_category(cat):
         args = {}
-        if search:          args["q"]      = search
-        if selected_forest: args["forest"] = selected_forest
-        if selected_status: args["status"] = selected_status
-        if selected_days:   args["days"]   = selected_days
-        if selected_sort:   args["sort"]   = selected_sort
+        if search:                args["q"]       = search
+        if selected_forest:       args["forest"]  = selected_forest
+        if selected_status:       args["status"]  = selected_status
+        if selected_days:         args["days"]    = selected_days
+        if selected_sort:         args["sort"]    = selected_sort
+        if selected_forests_str:  args["forests"] = selected_forests_str
         if selected_category != cat:
             args["category"] = cat
         from urllib.parse import urlencode
@@ -1764,6 +1778,7 @@ def index():
         last_scraped=last_scraped,
         recent_cutoff=recent_cutoff,
         counts=counts,
+        filtered_counts=filtered_counts,
         forest_counts=forest_counts,
         state_columns=STATE_COLUMNS,
         state_colors=STATE_COLORS,
