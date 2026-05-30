@@ -452,6 +452,19 @@ PAGE_TEMPLATE = """
         }
 
         .forest-pill {
+            transition: opacity 0.15s, box-shadow 0.15s;
+        }
+
+        .forest-pill.pill-selected {
+            box-shadow: 0 0 0 2px white, 0 0 0 3px currentColor;
+        }
+
+        .forest-pill-link {
+            text-decoration: none;
+        }
+
+        /* Original forest-pill styles below */
+        .forest-pill {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -1061,6 +1074,19 @@ PAGE_TEMPLATE = """
             }
 
             .forest-pill {
+            transition: opacity 0.15s, box-shadow 0.15s;
+        }
+
+        .forest-pill.pill-selected {
+            box-shadow: 0 0 0 2px white, 0 0 0 3px currentColor;
+        }
+
+        .forest-pill-link {
+            text-decoration: none;
+        }
+
+        /* Original forest-pill styles below */
+        .forest-pill {
                 width: 100%;
                 box-sizing: border-box;
             }
@@ -1258,10 +1284,13 @@ PAGE_TEMPLATE = """
                 <div class="forest-col">
                     <div class="forest-col-label" style="color:{{ sc.get('label','var(--text-dim)') }};">{{ state }}</div>
                     {% for f in col_forests %}
-                    <span class="forest-pill" style="background:{{ sc.get('pill','var(--accent)') }};">
+                    {% set is_sel = f.code in selected_forests %}
+                    <a href="{{ toggle_forest_url(f.code, selected_forests_str) }}"
+                       class="forest-pill {{ 'pill-selected' if is_sel else '' }}"
+                       style="background:{{ sc.get('pill','var(--accent)') }}; opacity:{{ '1' if (not selected_forests or is_sel) else '0.4' }}; text-decoration:none;">
                         {{ f.name.replace('National Forest', 'NF') }}
                         <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
-                    </span>
+                    </a>
                     {% endfor %}
                 </div>
                 {% endif %}
@@ -1295,10 +1324,13 @@ PAGE_TEMPLATE = """
             <div class="forest-col desktop-only">
                 <div class="forest-col-label" style="color:{{ sc.get('label','var(--text-dim)') }};">{{ state }}</div>
                 {% for f in col_forests %}
-                <span class="forest-pill" style="background:{{ sc.get('pill','var(--accent)') }};">
+                {% set is_sel = f.code in selected_forests %}
+                <a href="{{ toggle_forest_url(f.code, selected_forests_str) }}"
+                   class="forest-pill {{ 'pill-selected' if is_sel else '' }}"
+                   style="background:{{ sc.get('pill','var(--accent)') }}; opacity:{{ '1' if (not selected_forests or is_sel) else '0.4' }}; text-decoration:none;">
                     {{ f.name.replace('National Forest', 'NF') }}
                     <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
-                </span>
+                </a>
                 {% endfor %}
             </div>
             {% endif %}
@@ -1318,6 +1350,7 @@ PAGE_TEMPLATE = """
         <input type="hidden" name="q"        value="{{ search }}">
         <input type="hidden" name="category" value="{{ selected_category }}">
         <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
+        <input type="hidden" name="forests"  value="{{ selected_forests_str }}">
         <div>
             <label for="forest">Forest</label>
             <select id="forest" name="forest" onchange="this.form.submit()">
@@ -1611,11 +1644,28 @@ window.addEventListener('load', function() {
 """
 
 
+def toggle_forest_url_fn(code, current_str):
+    """Return URL with the given forest code toggled in the forests param."""
+    from flask import request as req
+    current = [f.strip() for f in current_str.split(",") if f.strip()]
+    if code in current:
+        new = [c for c in current if c != code]
+    else:
+        new = current + [code]
+    args = dict(req.args)
+    if new:
+        args["forests"] = ",".join(new)
+    elif "forests" in args:
+        del args["forests"]
+    from urllib.parse import urlencode
+    return "/?" + urlencode(args) if args else "/"
+
+
 @app.route("/")
 def index():
     search            = request.args.get("q", "").strip()
-    hidden_forests     = []
-    hidden_forests_str = ""
+    selected_forests_str = request.args.get("forests", "").strip()
+    selected_forests     = [f.strip() for f in selected_forests_str.split(",") if f.strip()]
     selected_forest   = request.args.get("forest", "").strip()
     selected_status   = request.args.get("status", "").strip()
     selected_days     = request.args.get("days", "").strip()
@@ -1647,8 +1697,12 @@ def index():
         if p.get("status") in ("In Progress", "Developing Proposal")
     )
 
+    if selected_forests:
+        forest_visible = [p for p in all_projects if p.get('forest_code') in selected_forests]
+    else:
+        forest_visible = all_projects
     projects = filter_projects(
-        all_projects,
+        forest_visible,
         search=search,
         forest_code=selected_forest,
         status=selected_status,
@@ -1713,6 +1767,9 @@ def index():
         forest_counts=forest_counts,
         state_columns=STATE_COLUMNS,
         state_colors=STATE_COLORS,
+        selected_forests=selected_forests,
+        selected_forests_str=selected_forests_str,
+        toggle_forest_url=toggle_forest_url_fn,
         active_count=active_count,
         url_with_category=url_with_category,
     )
