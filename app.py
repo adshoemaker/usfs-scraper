@@ -308,33 +308,51 @@ PAGE_TEMPLATE = """
 
         /* ── Header ── */
         header {
+            position: relative;
+            height: 140px;
+            overflow: hidden;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #8fa68e;
-            min-height: 70px;
-            padding: 12px 20px;
+            align-items: stretch;
         }
 
-        .header-green {
+        .header-bg-img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(0.6);
+        }
+
+        .header-overlay {
+            position: relative;
+            z-index: 1;
             width: 100%;
             max-width: 1150px;
+            margin: 0 auto;
+            padding: 16px 20px;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
         }
 
-        .header-subtitle {
-            font-family: 'Lexend', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 600;
+        .header-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 300;
             color: white;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
             text-align: center;
-            border: 2px solid #1a1a1a;
-            padding: 8px 28px;
-            border-radius: 0;
-            display: inline-block;
+            width: 100%;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+        }
+
+        .header-search-row {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
         }
 
         .header-search {
@@ -1222,30 +1240,27 @@ PAGE_TEMPLATE = """
 <body>
 
 <header>
-    <div class="header-green">
-        <div class="header-subtitle">National Forest NEPA Project Tracker</div>
+    <img src="/static/forest_banner.jpg" alt="" class="header-bg-img">
+    <div class="header-overlay">
+        <div class="header-title">National Forest NEPA Project Tracker</div>
+        <div class="header-search-row">
+            <form class="header-search" method="GET" action="/" id="searchform">
+                <input type="hidden" name="forest"   value="{{ selected_forest }}">
+                <input type="hidden" name="status"   value="{{ selected_status }}">
+                <input type="hidden" name="days"     value="{{ selected_days }}">
+                <input type="hidden" name="sort"     value="{{ selected_sort }}">
+                <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
+                <input type="hidden" name="category" value="{{ selected_category }}">
+                <input type="hidden" name="forests"  value="{{ selected_forests_str }}">
+                <input type="text" name="q"
+                       placeholder="Search projects..."
+                       value="{{ search }}"
+                       autocomplete="off">
+                <button type="submit">Search</button>
+            </form>
+        </div>
     </div>
 </header>
-
-<!-- Search bar section -->
-<div class="search-section">
-    <img src="/static/forest_banner.jpg" alt="" class="search-section-bg">
-    <div class="search-section-inner">
-        <form class="header-search" method="GET" action="/" id="searchform">
-            <input type="hidden" name="forest"   value="{{ selected_forest }}">
-            <input type="hidden" name="status"   value="{{ selected_status }}">
-            <input type="hidden" name="days"     value="{{ selected_days }}">
-            <input type="hidden" name="sort"     value="{{ selected_sort }}">
-            <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
-            <input type="hidden" name="category" value="{{ selected_category }}">
-            <input type="text" name="q"
-                   placeholder="Search projects..."
-                   value="{{ search }}"
-                   autocomplete="off">
-            <button type="submit">Search</button>
-        </form>
-    </div>
-</div>
 
 <!-- Forest summary bar -->
 <div class="forest-summary">
