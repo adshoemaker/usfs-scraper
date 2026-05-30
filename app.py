@@ -58,24 +58,23 @@ FOREST_ABBREVS = {
 }
 
 FORESTS = [
-    # Washington
-    {"name": "Mt. Baker-Snoqualmie National Forest", "code": "mbs"},
-    {"name": "Olympic National Forest",              "code": "olympic"},
-    {"name": "Okanogan-Wenatchee National Forest",   "code": "okanogan-wenatchee"},
-    {"name": "Gifford Pinchot National Forest",      "code": "giffordpinchot"},
-    {"name": "Colville National Forest",             "code": "colville"},
-    # Oregon
-    {"name": "Rogue River-Siskiyou National Forest", "code": "rogue-siskiyou"},
-    {"name": "Wallowa-Whitman National Forest",      "code": "wallowa-whitman"},
-    {"name": "Fremont-Winema National Forest",       "code": "fremont-winema"},
-    # California
-    {"name": "Shasta-Trinity National Forest",       "code": "shasta-trinity"},
-    {"name": "Inyo National Forest",                 "code": "inyo"},
-    {"name": "Los Padres National Forest",           "code": "lospadres"},
-    {"name": "Klamath National Forest",              "code": "klamath"},
-    # Alaska
-    {"name": "Tongass National Forest",              "code": "tongass"},
+    {"name": "Mt. Baker-Snoqualmie National Forest", "code": "mbs",              "state": "WA"},
+    {"name": "Olympic National Forest",              "code": "olympic",           "state": "WA"},
+    {"name": "Okanogan-Wenatchee National Forest",   "code": "okanogan-wenatchee","state": "WA"},
+    {"name": "Gifford Pinchot National Forest",      "code": "giffordpinchot",   "state": "WA"},
+    {"name": "Colville National Forest",             "code": "colville",          "state": "WA"},
+    {"name": "Rogue River-Siskiyou National Forest", "code": "rogue-siskiyou",   "state": "CA+OR"},
+    {"name": "Wallowa-Whitman National Forest",      "code": "wallowa-whitman",  "state": "OR"},
+    {"name": "Fremont-Winema National Forest",       "code": "fremont-winema",   "state": "OR"},
+    {"name": "Shasta-Trinity National Forest",       "code": "shasta-trinity",   "state": "CA"},
+    {"name": "Inyo National Forest",                 "code": "inyo",              "state": "CA"},
+    {"name": "Los Padres National Forest",           "code": "lospadres",         "state": "CA"},
+    {"name": "Klamath National Forest",              "code": "klamath",           "state": "CA+OR"},
+    {"name": "Tongass National Forest",              "code": "tongass",           "state": "AK"},
 ]
+
+# Column order for forest summary
+STATE_COLUMNS = ["CA", "CA+OR", "OR", "OR+WA", "WA", "AK"]
 
 
 DATE_RANGES = [
@@ -301,35 +300,30 @@ PAGE_TEMPLATE = """
         header {
             display: flex;
             align-items: stretch;
-            height: 72px;
+            min-height: 78px;
         }
 
         .header-white {
-            width: 400px;
             flex-shrink: 0;
             background: white;
             display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 0 20px;
+            align-items: flex-start;
+            justify-content: flex-end;
+            padding-left: 0;
             box-sizing: border-box;
+            overflow: hidden;
         }
 
-        .header-white h1 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: #1a1a1a;
-            letter-spacing: 0.2px;
-            line-height: 1.2;
+        .header-banner {
+            height: 80px;
+            width: auto;
+            display: block;
+            object-fit: cover;
+            object-position: top left;
         }
 
         .header-logo {
-            height: 44px;
-            width: 44px;
-            border-radius: 4px;
-            object-fit: cover;
-            flex-shrink: 0;
+            display: none;
         }
 
         .header-green {
@@ -337,8 +331,28 @@ PAGE_TEMPLATE = """
             background: #8fa68e;
             display: flex;
             align-items: center;
+            padding: 10px 0;
+            box-sizing: border-box;
+        }
+
+        .header-green-inner {
+            width: 100%;
+            padding-right: 20px;
+            display: flex;
             justify-content: flex-end;
-            padding: 0 24px;
+        }
+
+        .header-subtitle {
+            font-family: 'Lexend', sans-serif;
+            font-size: 0.94rem;
+            font-weight: 600;
+            color: white;
+            letter-spacing: 0.5px;
+            text-align: right;
+            border: 1px solid white;
+            padding: 5px 12px;
+            border-radius: 0;
+            display: inline-block;
         }
 
         .header-search {
@@ -348,13 +362,16 @@ PAGE_TEMPLATE = """
         }
 
         .header-search input[type="text"] {
-            padding: 8px 14px;
+            flex: 1;
+        }
+
+        .header-search input[type="text"] {
+            padding: 7px 14px;
             border: none;
             border-radius: 0;
             font-family: 'Lexend', sans-serif;
             font-size: 0.88rem;
-            width: 260px;
-            background: rgba(255,255,255,0.85);
+            background: rgba(255,255,255,0.92);
             color: #1a1a1a;
             outline: none;
         }
@@ -363,8 +380,8 @@ PAGE_TEMPLATE = """
         .header-search input[type="text"]:focus { background: white; }
 
         .header-search button {
-            padding: 8px 18px;
-            background: #2d4a24;
+            padding: 7px 18px;
+            background: #1e3a12;
             color: white;
             border: none;
             border-radius: 0;
@@ -372,64 +389,86 @@ PAGE_TEMPLATE = """
             font-size: 0.88rem;
             font-weight: 700;
             cursor: pointer;
-            height: 100%;
             white-space: nowrap;
         }
 
-        .header-search button:hover { background: #1e3a12; }
+        .header-search button:hover { background: #0f2009; }
 
         /* ── Forest summary bar ── */
         .forest-summary {
             background: #f7f7f0;
             border-bottom: 1px solid var(--border);
-            padding: 8px 30px;
+            padding: 10px 20px;
         }
 
         .forest-summary-inner {
             max-width: 1150px;
             margin: 0 auto;
             display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 6px;
         }
 
-        .tracking-label {
+        .forest-cols-row {
+            display: flex;
+            gap: 0;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .forest-totals-row {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+        }
+
+        .forest-col {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1;
+            min-width: 0;
+            padding: 0 8px;
+        }
+
+        .forest-col-label {
+            font-size: 0.6rem;
             font-weight: 700;
-            color: var(--text-muted);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-size: 0.68rem;
-            white-space: nowrap;
+            letter-spacing: 0.6px;
+            color: var(--text-dim);
+            margin-bottom: 2px;
         }
 
         .forest-pill {
-            display: inline-flex;
+            display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 5px;
             background: var(--accent);
             border-radius: 20px;
-            padding: 3px 12px 3px 10px;
-            font-size: 0.72rem;
+            padding: 3px 10px 3px 10px;
+            font-size: 0.7rem;
             font-weight: 600;
             color: white;
             white-space: nowrap;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .forest-pill-count {
             background: rgba(255,255,255,0.25);
             border-radius: 10px;
-            padding: 0px 6px;
-            font-size: 0.65rem;
+            padding: 0 5px;
+            font-size: 0.62rem;
             font-weight: 700;
             color: white;
         }
 
         .summary-totals {
-            margin-left: auto;
             color: var(--text-muted);
             font-size: 0.72rem;
-            white-space: nowrap;
+            text-align: right;
         }
 
         .summary-totals strong {
@@ -437,11 +476,51 @@ PAGE_TEMPLATE = """
             font-weight: 700;
         }
 
+        /* ── Search section ── */
+        .search-section {
+            border-bottom: 1px solid var(--border);
+            padding: 0;
+            position: relative;
+            height: 120px;
+            overflow: hidden;
+        }
+
+        .search-section-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(0.75);
+        }
+
+        .search-section-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 1150px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding: 0 20px 14px 20px;
+        }
+
+        .search-section .header-search {
+            width: 100%;
+            max-width: 400px;
+        }
+        .search-section .header-search input[type="text"] {
+            flex: 1;
+            width: auto;
+        }
+
         /* ── Container ── */
         .container {
             max-width: 1150px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 20px 20px;
         }
 
         /* ── Filter bar ── */
@@ -497,6 +576,7 @@ PAGE_TEMPLATE = """
         .category-filters {
             display: flex;
             gap: 10px;
+            padding: 0 0 0 24px;
             align-items: center;
             flex-wrap: wrap;
             justify-content: flex-end;
@@ -579,7 +659,6 @@ PAGE_TEMPLATE = """
             border-radius: 0;
             padding: 16px 18px;
             margin-bottom: 10px;
-            margin-left: 24px;
             transition: border-color 0.15s, box-shadow 0.15s;
         }
 
@@ -1069,10 +1148,46 @@ PAGE_TEMPLATE = """
 
 <header>
     <div class="header-white">
-        <img src="/static/LFDC_Logo.jpg" alt="LFDC Logo" class="header-logo">
-        <h1>National Forest NEPA Project Tracker</h1>
+        <img src="/static/LFDC banner.png" alt="Legacy Forest Defense Coalition" class="header-banner">
     </div>
     <div class="header-green">
+        <div class="header-green-inner">
+            <div class="header-subtitle">National Forest NEPA Project Tracker</div>
+        </div>
+    </div>
+</header>
+
+<!-- Forest summary bar -->
+<div class="forest-summary">
+    <div class="forest-summary-inner">
+        <div class="forest-cols-row">
+            {% for state in state_columns %}
+            {% set col_forests = forests|selectattr('state','eq',state)|sort(attribute='name')|list %}
+            {% if col_forests %}
+            <div class="forest-col">
+                <div class="forest-col-label">{{ state }}</div>
+                {% for f in col_forests %}
+                <span class="forest-pill">
+                    {{ f.name.replace('National Forest', 'NF') }}
+                    <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
+                </span>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="forest-totals-row">
+            <span class="summary-totals">
+                <strong>{{ total }}</strong> total &nbsp;·&nbsp; <strong>{{ active_count }}</strong> active / planning
+            </span>
+        </div>
+    </div>
+</div>
+
+<!-- Search bar section -->
+<div class="search-section">
+    <img src="/static/forest_banner.jpg" alt="" class="search-section-bg">
+    <div class="search-section-inner">
         <form class="header-search" method="GET" action="/" id="searchform">
             <input type="hidden" name="forest"   value="{{ selected_forest }}">
             <input type="hidden" name="status"   value="{{ selected_status }}">
@@ -1086,24 +1201,6 @@ PAGE_TEMPLATE = """
                    autocomplete="off">
             <button type="submit">Search</button>
         </form>
-    </div>
-</header>
-
-<!-- Forest summary bar -->
-<div class="forest-summary">
-    <div class="forest-summary-inner">
-        <span class="tracking-label">Currently tracking:</span>
-        {% for f in forests %}
-        <span class="forest-pill">
-            {{ f.name.replace('National Forest', 'NF') }}
-            <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
-        </span>
-        {% endfor %}
-        <span class="summary-totals">
-            <strong>{{ total }}</strong> projects total
-            &nbsp;·&nbsp;
-            <strong>{{ active_count }}</strong> active / planning
-        </span>
     </div>
 </div>
 
@@ -1373,6 +1470,24 @@ PAGE_TEMPLATE = """
 </footer>
 
 </body>
+<script>
+window.addEventListener('load', function() {
+    var banner = document.querySelector('.header-banner');
+    var box    = document.querySelector('.header-white');
+    var inner  = document.querySelector('.header-green-inner');
+    if (banner && box) {
+        box.style.width = Math.round(banner.offsetWidth * 1.2) + 65 + 'px';
+        // After resizing white box, recalculate right padding for subtitle
+        if (inner) {
+            var containerRight = 20; // matches all other sections
+            var totalWidth = document.documentElement.clientWidth;
+            var contentWidth = Math.min(1150, totalWidth);
+            var rightPad = Math.max(20, Math.round((totalWidth - contentWidth) / 2) + 20);
+            inner.style.paddingRight = rightPad + 'px';
+        }
+    }
+});
+</script>
 </html>
 """
 
@@ -1474,6 +1589,7 @@ def index():
         recent_cutoff=recent_cutoff,
         counts=counts,
         forest_counts=forest_counts,
+        state_columns=STATE_COLUMNS,
         active_count=active_count,
         url_with_category=url_with_category,
     )
