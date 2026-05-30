@@ -816,13 +816,42 @@ PAGE_TEMPLATE = """
                 margin-bottom: 6px;
             }
 
-            /* Card top: forest + title left, status + analysis right */
+            /* Card top: forest + title full width, then status/analysis right */
             .card-top {
                 display: flex;
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .card-top-left {
+                width: 100%;
+            }
+
+            .card-top-left .forest-tag {
+                font-size: 0.7rem;
+            }
+
+            .card-top-left .btn-title {
+                width: 100%;
+                display: block;
+                box-sizing: border-box;
+            }
+
+            .card-top-right {
+                display: flex;
                 flex-direction: row;
-                justify-content: space-between;
-                align-items: flex-start;
-                gap: 10px;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 6px;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            /* Comment badge centered on mobile */
+            .comment-open-badge {
+                align-self: center;
+                margin: 0 auto 6px auto;
+                display: flex;
             }
 
             /* Card body: switch to single column */
@@ -1041,17 +1070,8 @@ PAGE_TEMPLATE = """
                     border: 1px solid {{ status_color }};
                     border-left: 4px solid {{ status_color }};">
 
-            {% if p.get('accepting_comments') %}
-            <div class="comment-open-badge" style="margin-bottom:8px;">
-                <span class="badge-title">💬 Taking Comments Now!</span>
-                {% if p.get('comment_deadline') %}
-                <span class="badge-deadline">Deadline: {{ p.comment_deadline }}</span>
-                {% endif %}
-            </div>
-            {% endif %}
-
             <div class="card-top">
-                <div>
+                <div class="card-top-left">
                     <div class="forest-tag">{{ p.forest_name }}</div>
                     <div class="btn-title-wrap">
                         <a href="{{ p.project_url }}" target="_blank" class="btn-title">
@@ -1062,7 +1082,15 @@ PAGE_TEMPLATE = """
                         {% endif %}
                     </div>
                 </div>
-                <div style="display:flex; flex-direction:column; align-items:flex-end; gap:6px; flex-shrink:0;">
+                <div class="card-top-right">
+                    {% if p.get('accepting_comments') %}
+                    <div class="comment-open-badge">
+                        <span class="badge-title">💬 Taking Comments Now!</span>
+                        {% if p.get('comment_deadline') %}
+                        <span class="badge-deadline">Deadline: {{ p.comment_deadline }}</span>
+                        {% endif %}
+                    </div>
+                    {% endif %}
                     {% if p.status %}
                     <span class="status-badge"
                           style="background: {{ status_colors.get(p.status, '#8892a4') }}">
