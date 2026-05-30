@@ -198,7 +198,15 @@ def filter_projects(projects, search="", forest_code="", status="",
             "On Hold":             2,
             "Completed":           3,
         }
-        results.sort(key=lambda p: STATUS_SORT_ORDER.get(p.get("status", ""), 99))
+        CATEGORY_SORT_ORDER = {
+            "extractive":  0,
+            "mixed":       1,
+            "restorative": 2,
+        }
+        results.sort(key=lambda p: (
+            STATUS_SORT_ORDER.get(p.get("status", ""), 99),
+            CATEGORY_SORT_ORDER.get(p.get("category", ""), 3),
+        ))
 
     # Always pin projects currently accepting comments to the top
     results.sort(key=lambda p: 0 if p.get("accepting_comments") else 1)
