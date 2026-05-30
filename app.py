@@ -38,6 +38,7 @@ STATUS_COLORS = {
 ANALYSIS_COLORS = {
     "Categorical Exclusion":        "#cc1111",
     "Environmental Assessment":     "#c46a30",
+    "Decision Memo":                "#c46a30",
     "Environmental Impact Statement": "#2d7a1f",
 }
 
@@ -75,6 +76,9 @@ FORESTS = [
 
 # Column order for forest summary
 STATE_COLUMNS = ["CA", "CA+OR", "OR", "OR+WA", "WA", "AK"]
+
+# Map forest code -> state for color lookup
+FOREST_STATE_MAP = {f["code"]: f["state"] for f in FORESTS}
 
 # Colors for each state column
 STATE_COLORS = {
@@ -195,6 +199,7 @@ def filter_projects(projects, search="", forest_code="", status="",
     ANALYSIS_SORT_ORDER = {
         "Environmental Impact Statement": 0,
         "Environmental Assessment":       1,
+        "Decision Memo":                  1,
         "Categorical Exclusion":          2,
     }
 
@@ -260,6 +265,7 @@ def filter_projects(projects, search="", forest_code="", status="",
             ANALYSIS_SORT_ORDER2 = {
                 "Environmental Impact Statement": 0,
                 "Environmental Assessment":       1,
+                "Decision Memo":                  1,
                 "Categorical Exclusion":          2,
             }
             results.sort(key=lambda p: ANALYSIS_SORT_ORDER2.get(p.get("analysis_type", ""), 99))
@@ -1455,7 +1461,9 @@ PAGE_TEMPLATE = """
                         {% endif %}
                     </div>
                     {% endif %}
-                    <div class="forest-tag">{{ p.forest_name }}</div>
+                    {% set _fstate = forest_state_map.get(p.forest_code, '') %}
+                    {% set _fcolor = state_colors.get(_fstate, {}).get('pill', '#2d7a1f') %}
+                    <div class="forest-tag" style="color: {{ _fcolor }};">{{ p.forest_name }}</div>
                     <div class="btn-title-wrap">
                         <a href="{{ p.project_url }}" target="_blank" class="btn-title">
                             {{ p.project_name }}
@@ -1727,6 +1735,7 @@ def index():
         forest_counts=forest_counts,
         state_columns=STATE_COLUMNS,
         state_colors=STATE_COLORS,
+        forest_state_map=FOREST_STATE_MAP,
         selected_forests=selected_forests,
         selected_forests_str=selected_forests_str,
         toggle_forest_url=toggle_forest_url_fn,
