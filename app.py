@@ -313,16 +313,11 @@ PAGE_TEMPLATE = """
             overflow: hidden;
             display: flex;
             align-items: stretch;
+            background: transparent;
         }
 
         .header-bg-img {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            filter: brightness(0.6);
+            display: none;
         }
 
         .header-overlay {
@@ -342,11 +337,11 @@ PAGE_TEMPLATE = """
             font-family: 'Outfit', sans-serif;
             font-size: 1.6rem;
             font-weight: 300;
-            color: white;
+            color: #1a1a1a;
             letter-spacing: 0.3px;
             text-align: center;
             width: 100%;
-            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+            text-shadow: none;
         }
 
         .header-search-row {
@@ -367,21 +362,21 @@ PAGE_TEMPLATE = """
 
         .header-search input[type="text"] {
             padding: 7px 14px;
-            border: none;
+            border: 1px solid #ccc;
             border-radius: 0;
             font-family: 'Lexend', sans-serif;
             font-size: 0.88rem;
-            background: rgba(255,255,255,0.92);
+            background: white;
             color: #1a1a1a;
             outline: none;
         }
 
-        .header-search input[type="text"]::placeholder { color: #888; }
-        .header-search input[type="text"]:focus { background: white; }
+        .header-search input[type="text"]::placeholder { color: #aaa; }
+        .header-search input[type="text"]:focus { border-color: #888; }
 
         .header-search button {
             padding: 7px 18px;
-            background: #1e3a12;
+            background: #2d4a24;
             color: white;
             border: none;
             border-radius: 0;
@@ -392,7 +387,7 @@ PAGE_TEMPLATE = """
             white-space: nowrap;
         }
 
-        .header-search button:hover { background: #0f2009; }
+        .header-search button:hover { background: #1e3a12; }
 
         /* ── Forest summary bar ── */
         .forest-summary {
@@ -629,6 +624,18 @@ PAGE_TEMPLATE = """
         .cat-btn.taking-comments { border-color: #cc1111; color: #cc1111; background: rgba(251,191,36,0.15); }
         .cat-btn.taking-comments.active { background: #fbbf24; color: #7c2d12; border: 3px solid #cc1111; }
         .cat-btn .dot.taking-comments-dot { background: #fbbf24; border: 1px solid #cc1111; }
+
+        .category-disclaimer {
+            font-size: 0.62rem;
+            color: var(--text-dim);
+            font-style: italic;
+        }
+
+        .category-disclaimer-row {
+            display: flex;
+            justify-content: flex-end;
+            padding: 3px 0 6px 0;
+        }
         .cat-btn.extractive  { border-color: var(--red);    color: var(--red);    background: rgba(204,17,17,0.07); }
         .cat-btn.restorative { border-color: var(--green);  color: var(--green);  background: rgba(45,122,31,0.07); }
         .cat-btn.mixed       { border-color: var(--orange); color: var(--orange); background: rgba(196,106,48,0.07); }
@@ -1407,41 +1414,38 @@ PAGE_TEMPLATE = """
         <a href="{{ url_with_category('extractive') }}"
            class="cat-btn extractive {{ 'active' if selected_category == 'extractive' else '' }}">
             <span class="dot extractive-dot"></span>
-            Extractive ({{ filtered_counts.extractive }} of {{ counts.extractive }})
+            Significant Effect ({{ filtered_counts.extractive }} of {{ counts.extractive }})
         </a>
         <a href="{{ url_with_category('mixed') }}"
            class="cat-btn mixed {{ 'active' if selected_category == 'mixed' else '' }}">
             <span class="dot mixed-dot"></span>
-            Mixed ({{ filtered_counts.mixed }} of {{ counts.mixed }})
+            Mixed Impact ({{ filtered_counts.mixed }} of {{ counts.mixed }})
         </a>
         <a href="{{ url_with_category('restorative') }}"
            class="cat-btn restorative {{ 'active' if selected_category == 'restorative' else '' }}">
             <span class="dot restorative-dot"></span>
-            Restorative ({{ filtered_counts.restorative }} of {{ counts.restorative }})
+            Restorative Impact ({{ filtered_counts.restorative }} of {{ counts.restorative }})
         </a>
         <a href="{{ url_with_category('unclassified') }}"
            class="cat-btn unclassified {{ 'active' if selected_category == 'unclassified' else '' }}">
             <span class="dot unclassified-dot"></span>
-            Unclassified ({{ filtered_counts.unclassified }} of {{ counts.unclassified }})
+            Unknown ({{ filtered_counts.unclassified }} of {{ counts.unclassified }})
         </a>
         <a href="{{ url_with_category('taking_comments') }}"
            class="cat-btn taking-comments {{ 'active' if selected_category == 'taking_comments' else '' }}">
             <span class="dot taking-comments-dot"></span>
-            💬 Taking Comments ({{ filtered_counts.taking_comments }} of {{ counts.taking_comments }})
+            💬 Taking Comments Now ({{ filtered_counts.taking_comments }} of {{ counts.taking_comments }})
         </a>
     </div>
-
-    <div class="legend">
-        <div class="legend-item"><div class="legend-stripe" style="background:var(--red)"></div> Extractive</div>
-        <div class="legend-item"><div class="legend-stripe" style="background:var(--green)"></div> Restorative</div>
-        <div class="legend-item"><div class="legend-stripe" style="background:var(--orange)"></div> Mixed</div>
-        <div class="legend-item"><div class="legend-stripe" style="background:#888"></div> Unclassified</div>
+    <div class="category-disclaimer-row">
+        <span class="category-disclaimer">Impact level assigned based on keywords and intended as a general guide only</span>
     </div>
 
     <div class="results-header">
+        {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Unknown', 'taking_comments': 'Taking Comments Now'} %}
         {% if search or selected_forest or selected_status or selected_days or selected_category %}
             Showing <strong>{{ projects|length }}</strong> result{% if projects|length != 1 %}s{% endif %}
-            {% if selected_category %} — <strong>{{ selected_category }}</strong>{% endif %}
+            {% if selected_category %} — <strong>{{ cat_labels.get(selected_category, selected_category) }}</strong>{% endif %}
             {% if selected_days %} added in the last <strong>{{ selected_days }} days</strong>{% endif %}
             {% if search %} matching "<strong>{{ search }}</strong>"{% endif %}
             {% if selected_status %} · status: <strong>{{ selected_status }}</strong>{% endif %}
@@ -1457,7 +1461,7 @@ PAGE_TEMPLATE = """
         {% set status_color = status_border_colors.get(p.status, '#d0d0c8') %}
         {% set cat_bg = {'extractive': 'rgba(204,17,17,0.18)', 'restorative': 'rgba(45,122,31,0.15)', 'mixed': 'rgba(196,106,48,0.16)'}.get(p.category or '', 'white') %}
         {% set cat_border = {'extractive': '#cc1111', 'restorative': '#2d7a1f', 'mixed': '#c46a30'}.get(p.category or '', '#d0d0c8') %}
-        {% set cat_label = {'extractive': 'Extractive', 'restorative': 'Restorative', 'mixed': 'Mixed'}.get(p.category or '', '') %}
+        {% set cat_label = {'extractive': 'Significant Effect', 'restorative': 'Restorative Impact', 'mixed': 'Mixed Impact'}.get(p.category or '', '') %}
         {% set is_tcn = p.get('accepting_comments') %}
         <div class="project-card {{ p.category or '' }}"
              style="background: {{ 'white' if is_tcn else cat_bg }};
