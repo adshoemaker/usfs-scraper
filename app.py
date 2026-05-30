@@ -1604,7 +1604,7 @@ def toggle_forest_url_fn(code, current_str):
     if req.args.get("days"):      args["days"]     = req.args.get("days")
     if req.args.get("sort"):      args["sort"]     = req.args.get("sort")
     if req.args.get("sort2"):     args["sort2"]    = req.args.get("sort2")
-    if req.args.get("category"):  args["category"] = req.args.get("category")
+    # Don't carry category when toggling forest — avoids zero results
     if new:                       args["forests"]  = ",".join(new)
     return "/?" + urlencode(args) if args else "/"
 
