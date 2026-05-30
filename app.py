@@ -22,6 +22,12 @@ STATUS_BORDER_COLORS = {
     "Completed":           "#5aaa48",
 }
 
+CATEGORY_BG = {
+    "extractive":  "rgba(204,17,17,0.18)",
+    "restorative": "rgba(45,122,31,0.15)",
+    "mixed":       "rgba(196,106,48,0.16)",
+}
+
 STATUS_COLORS = {
     "Developing Proposal": "#9b72d8",
     "In Progress":         "#4a90d9",
@@ -608,6 +614,7 @@ PAGE_TEMPLATE = """
             border: 1px solid var(--border2);
             border-radius: 6px;
             overflow: hidden;
+            background: #e8e8e4;
         }
 
         .milestone-section-label {
@@ -615,10 +622,10 @@ PAGE_TEMPLATE = """
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            color: var(--text-dim);
+            color: #555;
             padding: 5px 10px 4px;
-            background: var(--bg3);
-            border-bottom: 1px solid var(--border);
+            background: #d0d0cc;
+            border-bottom: 1px solid #c0c0bc;
         }
 
         .milestone-table {
@@ -630,13 +637,13 @@ PAGE_TEMPLATE = """
         .milestone-table th {
             text-align: left;
             padding: 4px 10px;
-            background: var(--bg3);
-            color: var(--text-dim);
+            background: #d8d8d4;
+            color: #555;
             font-weight: 700;
             font-size: 0.6rem;
             text-transform: uppercase;
             letter-spacing: 0.6px;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid #c0c0bc;
         }
 
         .milestone-table td {
@@ -964,7 +971,7 @@ PAGE_TEMPLATE = """
         {% for p in projects %}
         {% set has_milestones = p.get('milestones') and p['milestones']|length > 0 %}
         {% set status_color = status_border_colors.get(p.status, '#d0d0c8') %}
-        {% set cat_bg = {'extractive': 'rgba(204,17,17,0.07)', 'restorative': 'rgba(45,122,31,0.07)', 'mixed': 'rgba(196,106,48,0.07)'}.get(p.category or '', 'white') %}
+        {% set cat_bg = {'extractive': 'rgba(204,17,17,0.18)', 'restorative': 'rgba(45,122,31,0.15)', 'mixed': 'rgba(196,106,48,0.16)'}.get(p.category or '', 'white') %}
         <div class="project-card {{ p.category or '' }}"
              style="background: {{ cat_bg }};
                     border: 1px solid {{ status_color }};
