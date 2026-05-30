@@ -964,7 +964,7 @@ PAGE_TEMPLATE = """
         {% for p in projects %}
         {% set has_milestones = p.get('milestones') and p['milestones']|length > 0 %}
         {% set status_color = status_border_colors.get(p.status, '#d0d0c8') %}
-        {% set cat_bg = {'extractive': 'rgba(204,17,17,0.06)', 'restorative': 'rgba(45,122,31,0.06)', 'mixed': 'rgba(196,106,48,0.06)'}.get(p.category or '', 'white') %}
+        {% set cat_bg = {'extractive': 'rgba(204,17,17,0.07)', 'restorative': 'rgba(45,122,31,0.07)', 'mixed': 'rgba(196,106,48,0.07)'}.get(p.category or '', 'white') %}
         <div class="project-card {{ p.category or '' }}"
              style="background: {{ cat_bg }};
                     border: 1px solid {{ status_color }};
