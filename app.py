@@ -307,45 +307,15 @@ PAGE_TEMPLATE = """
         }
 
         /* ── Header ── */
-        header {
-            position: relative;
-            height: 140px;
-            overflow: hidden;
-            display: flex;
-            align-items: stretch;
-            background: transparent;
+        .top-search-bar {
+            background: var(--bg3);
+            border-bottom: 1px solid var(--border);
+            padding: 8px 20px;
         }
 
-        .header-bg-img {
-            display: none;
-        }
-
-        .header-overlay {
-            position: relative;
-            z-index: 1;
-            width: 100%;
+        .top-search-inner {
             max-width: 1150px;
             margin: 0 auto;
-            padding: 16px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-between;
-        }
-
-        .header-title {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.6rem;
-            font-weight: 300;
-            color: #1a1a1a;
-            letter-spacing: 0.3px;
-            text-align: center;
-            width: 100%;
-            text-shadow: none;
-        }
-
-        .header-search-row {
-            width: 100%;
             display: flex;
             justify-content: flex-end;
         }
@@ -1116,11 +1086,17 @@ PAGE_TEMPLATE = """
 
             /* ── Card layout: full vertical stack ── */
 
-            /* Comment badge — top, left justified */
+            /* Comment badge — mobile: full width, smaller */
             .comment-open-badge {
-                align-self: flex-start;
+                width: 100% !important;
+                box-sizing: border-box;
+                font-size: 0.72rem !important;
+                padding: 5px 10px !important;
                 margin-bottom: 6px;
+                align-self: stretch;
             }
+            .comment-open-badge .badge-title { font-size: 0.76rem !important; }
+            .comment-open-badge .badge-deadline { font-size: 0.65rem !important; }
 
             /* Card top: forest + title full width, then status/analysis right */
             .card-top {
@@ -1246,28 +1222,24 @@ PAGE_TEMPLATE = """
 </head>
 <body>
 
-<header>
-    <img src="/static/forest_banner.jpg" alt="" class="header-bg-img">
-    <div class="header-overlay">
-        <div class="header-title">National Forest NEPA Project Tracker</div>
-        <div class="header-search-row">
-            <form class="header-search" method="GET" action="/" id="searchform">
-                <input type="hidden" name="forest"   value="{{ selected_forest }}">
-                <input type="hidden" name="status"   value="{{ selected_status }}">
-                <input type="hidden" name="days"     value="{{ selected_days }}">
-                <input type="hidden" name="sort"     value="{{ selected_sort }}">
-                <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
-                <input type="hidden" name="category" value="{{ selected_category }}">
-                <input type="hidden" name="forests"  value="{{ selected_forests_str }}">
-                <input type="text" name="q"
-                       placeholder="Search projects..."
-                       value="{{ search }}"
-                       autocomplete="off">
-                <button type="submit">Search</button>
-            </form>
-        </div>
+<div class="top-search-bar">
+    <div class="top-search-inner">
+        <form class="header-search" method="GET" action="/" id="searchform">
+            <input type="hidden" name="forest"   value="{{ selected_forest }}">
+            <input type="hidden" name="status"   value="{{ selected_status }}">
+            <input type="hidden" name="days"     value="{{ selected_days }}">
+            <input type="hidden" name="sort"     value="{{ selected_sort }}">
+            <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
+            <input type="hidden" name="category" value="{{ selected_category }}">
+            <input type="hidden" name="forests"  value="{{ selected_forests_str }}">
+            <input type="text" name="q"
+                   placeholder="Search projects..."
+                   value="{{ search }}"
+                   autocomplete="off">
+            <button type="submit">Search</button>
+        </form>
     </div>
-</header>
+</div>
 
 <!-- Forest summary bar -->
 <div class="forest-summary">
@@ -1620,17 +1592,20 @@ PAGE_TEMPLATE = """
 def toggle_forest_url_fn(code, current_str):
     """Return URL with the given forest code toggled in the forests param."""
     from flask import request as req
+    from urllib.parse import urlencode
     current = [f.strip() for f in current_str.split(",") if f.strip()]
     if code in current:
         new = [c for c in current if c != code]
     else:
         new = current + [code]
-    args = dict(req.args)
-    if new:
-        args["forests"] = ",".join(new)
-    elif "forests" in args:
-        del args["forests"]
-    from urllib.parse import urlencode
+    args = {}
+    if req.args.get("q"):         args["q"]        = req.args.get("q")
+    if req.args.get("status"):    args["status"]   = req.args.get("status")
+    if req.args.get("days"):      args["days"]     = req.args.get("days")
+    if req.args.get("sort"):      args["sort"]     = req.args.get("sort")
+    if req.args.get("sort2"):     args["sort2"]    = req.args.get("sort2")
+    if req.args.get("category"):  args["category"] = req.args.get("category")
+    if new:                       args["forests"]  = ",".join(new)
     return "/?" + urlencode(args) if args else "/"
 
 
