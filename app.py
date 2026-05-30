@@ -669,11 +669,34 @@ PAGE_TEMPLATE = """
         .project-card {
             background: var(--bg2);
             border: 1px solid var(--border);
-            border-left: 4px solid var(--border);
             border-radius: 0;
-            padding: 16px 18px;
+            padding: 16px 18px 16px 46px;
             margin-bottom: 10px;
             transition: border-color 0.15s, box-shadow 0.15s;
+            position: relative;
+        }
+
+        .card-category-bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-category-label {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 0.65rem;
+            font-weight: 400;
+            color: white;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            white-space: nowrap;
+            user-select: none;
         }
 
         .project-card:hover {
@@ -1417,10 +1440,15 @@ PAGE_TEMPLATE = """
         {% set status_color = status_border_colors.get(p.status, '#d0d0c8') %}
         {% set cat_bg = {'extractive': 'rgba(204,17,17,0.18)', 'restorative': 'rgba(45,122,31,0.15)', 'mixed': 'rgba(196,106,48,0.16)'}.get(p.category or '', 'white') %}
         {% set cat_border = {'extractive': '#cc1111', 'restorative': '#2d7a1f', 'mixed': '#c46a30'}.get(p.category or '', '#d0d0c8') %}
+        {% set cat_label = {'extractive': 'Extractive', 'restorative': 'Restorative', 'mixed': 'Mixed'}.get(p.category or '', '') %}
         <div class="project-card {{ p.category or '' }}"
              style="background: {{ cat_bg }};
-                    border: 1px solid {{ cat_border }};
-                    border-left: 4px solid {{ cat_border }};">
+                    border: 1px solid {{ cat_border }};">
+            <div class="card-category-bar" style="background: {{ cat_border }};">
+                {% if cat_label %}
+                <span class="card-category-label">{{ cat_label }}</span>
+                {% endif %}
+            </div>
 
             <!-- CARD HEADER: forest name + title left, taking comments badge right -->
             <div class="card-header-row">
