@@ -76,6 +76,16 @@ FORESTS = [
 # Column order for forest summary
 STATE_COLUMNS = ["CA", "CA+OR", "OR", "OR+WA", "WA", "AK"]
 
+# Colors for each state column
+STATE_COLORS = {
+    "CA":    {"pill": "#cc3333", "label": "#8b1a1a"},
+    "CA+OR": {"pill": "#c96a00", "label": "#7a3e00"},
+    "OR":    {"pill": "#b8960a", "label": "#6b5500"},
+    "OR+WA": {"pill": "#7a9a2f", "label": "#445a18"},
+    "WA":    {"pill": "#2d7a1f", "label": "#1a4f0f"},
+    "AK":    {"pill": "#5b4fa8", "label": "#352d6e"},
+}
+
 
 DATE_RANGES = [
     ("7",  "Last 7 days"),
@@ -162,6 +172,9 @@ def filter_projects(projects, search="", forest_code="", status="",
         if category:
             if category == "unclassified":
                 if p.get("category"):
+                    continue
+            elif category == "taking_comments":
+                if not p.get("accepting_comments"):
                     continue
             elif p.get("category") != category:
                 continue
@@ -305,12 +318,10 @@ PAGE_TEMPLATE = """
 
         .header-white {
             flex-shrink: 0;
-            background: white;
+            background: transparent;
             display: flex;
             align-items: flex-start;
-            justify-content: flex-end;
-            padding-left: 0;
-            box-sizing: border-box;
+            padding: 0;
             overflow: hidden;
         }
 
@@ -344,13 +355,13 @@ PAGE_TEMPLATE = """
 
         .header-subtitle {
             font-family: 'Lexend', sans-serif;
-            font-size: 1.08rem;
+            font-size: 0.94rem;
             font-weight: 600;
             color: white;
             letter-spacing: 0.5px;
             text-align: right;
             border: 1px solid white;
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 0;
             display: inline-block;
         }
@@ -612,6 +623,9 @@ PAGE_TEMPLATE = """
         .cat-btn.unclassified { border-color: #888; color: #555; background: rgba(128,128,128,0.07); }
         .cat-btn.unclassified.active { background: #888; color: white; border: 3px solid #888; }
         .cat-btn .dot.unclassified-dot { background: #888; }
+        .cat-btn.taking-comments { border-color: #cc1111; color: #cc1111; background: rgba(251,191,36,0.15); }
+        .cat-btn.taking-comments.active { background: #fbbf24; color: #7c2d12; border: 3px solid #cc1111; }
+        .cat-btn .dot.taking-comments-dot { background: #fbbf24; border: 1px solid #cc1111; }
         .cat-btn.extractive  { border-color: var(--red);    color: var(--red);    background: rgba(204,17,17,0.07); }
         .cat-btn.restorative { border-color: var(--green);  color: var(--green);  background: rgba(45,122,31,0.07); }
         .cat-btn.mixed       { border-color: var(--orange); color: var(--orange); background: rgba(196,106,48,0.07); }
@@ -1157,33 +1171,6 @@ PAGE_TEMPLATE = """
     </div>
 </header>
 
-<!-- Forest summary bar -->
-<div class="forest-summary">
-    <div class="forest-summary-inner">
-        <div class="forest-cols-row">
-            {% for state in state_columns %}
-            {% set col_forests = forests|selectattr('state','eq',state)|sort(attribute='name')|list %}
-            {% if col_forests %}
-            <div class="forest-col">
-                <div class="forest-col-label">{{ state }}</div>
-                {% for f in col_forests %}
-                <span class="forest-pill">
-                    {{ f.name.replace('National Forest', 'NF') }}
-                    <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
-                </span>
-                {% endfor %}
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div class="forest-totals-row">
-            <span class="summary-totals">
-                <strong>{{ total }}</strong> total &nbsp;·&nbsp; <strong>{{ active_count }}</strong> active / planning
-            </span>
-        </div>
-    </div>
-</div>
-
 <!-- Search bar section -->
 <div class="search-section">
     <img src="/static/forest_banner.jpg" alt="" class="search-section-bg">
@@ -1201,6 +1188,34 @@ PAGE_TEMPLATE = """
                    autocomplete="off">
             <button type="submit">Search</button>
         </form>
+    </div>
+</div>
+
+<!-- Forest summary bar -->
+<div class="forest-summary">
+    <div class="forest-summary-inner">
+        <div class="forest-cols-row">
+            {% for state in state_columns %}
+            {% set col_forests = forests|selectattr('state','eq',state)|sort(attribute='name')|list %}
+            {% if col_forests %}
+            {% set sc = state_colors.get(state, {}) %}
+            <div class="forest-col">
+                <div class="forest-col-label" style="color:{{ sc.get('label','var(--text-dim)') }};">{{ state }}</div>
+                {% for f in col_forests %}
+                <span class="forest-pill" style="background:{{ sc.get('pill','var(--accent)') }};">
+                    {{ f.name.replace('National Forest', 'NF') }}
+                    <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
+                </span>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="forest-totals-row">
+            <span class="summary-totals">
+                <strong>{{ total }}</strong> total &nbsp;·&nbsp; <strong>{{ active_count }}</strong> active / planning
+            </span>
+        </div>
     </div>
 </div>
 
@@ -1298,6 +1313,11 @@ PAGE_TEMPLATE = """
            class="cat-btn unclassified {{ 'active' if selected_category == 'unclassified' else '' }}">
             <span class="dot unclassified-dot"></span>
             Unclassified ({{ counts.unclassified }})
+        </a>
+        <a href="{{ url_with_category('taking_comments') }}"
+           class="cat-btn taking-comments {{ 'active' if selected_category == 'taking_comments' else '' }}">
+            <span class="dot taking-comments-dot"></span>
+            💬 Taking Comments ({{ counts.taking_comments }})
         </a>
     </div>
 
@@ -1472,19 +1492,20 @@ PAGE_TEMPLATE = """
 </body>
 <script>
 window.addEventListener('load', function() {
+    var inner  = document.querySelector('.header-green-inner');
     var banner = document.querySelector('.header-banner');
     var box    = document.querySelector('.header-white');
-    var inner  = document.querySelector('.header-green-inner');
+    var totalWidth = document.documentElement.clientWidth;
+    var contentWidth = Math.min(1150, totalWidth);
+    var leftOffset = Math.max(20, Math.round((totalWidth - contentWidth) / 2) + 20);
+    var rightPad   = Math.max(20, Math.round((totalWidth - contentWidth) / 2) + 20);
+    if (inner)  inner.style.paddingRight = rightPad + 'px';
+    if (banner) banner.style.marginLeft  = (leftOffset - 45) + 'px';
     if (banner && box) {
-        box.style.width = Math.round(banner.offsetWidth * 1.2) + 65 + 'px';
-        // After resizing white box, recalculate right padding for subtitle
-        if (inner) {
-            var containerRight = 20; // matches all other sections
-            var totalWidth = document.documentElement.clientWidth;
-            var contentWidth = Math.min(1150, totalWidth);
-            var rightPad = Math.max(20, Math.round((totalWidth - contentWidth) / 2) + 20);
-            inner.style.paddingRight = rightPad + 'px';
-        }
+        // White box: from left edge to 45px right of image right edge
+        var imgRight = banner.getBoundingClientRect().right;
+        box.style.width = Math.round(imgRight + 45) + 'px';
+        box.style.background = 'white';
     }
 });
 </script>
@@ -1505,10 +1526,11 @@ def index():
     all_projects, last_scraped = load_projects()
 
     counts = {
-        "extractive":   sum(1 for p in all_projects if p.get("category") == "extractive"),
-        "restorative":  sum(1 for p in all_projects if p.get("category") == "restorative"),
-        "mixed":        sum(1 for p in all_projects if p.get("category") == "mixed"),
-        "unclassified": sum(1 for p in all_projects if not p.get("category")),
+        "extractive":      sum(1 for p in all_projects if p.get("category") == "extractive"),
+        "restorative":     sum(1 for p in all_projects if p.get("category") == "restorative"),
+        "mixed":           sum(1 for p in all_projects if p.get("category") == "mixed"),
+        "unclassified":    sum(1 for p in all_projects if not p.get("category")),
+        "taking_comments": sum(1 for p in all_projects if p.get("accepting_comments")),
     }
 
     # Per-forest project counts for the summary bar
@@ -1590,6 +1612,7 @@ def index():
         counts=counts,
         forest_counts=forest_counts,
         state_columns=STATE_COLUMNS,
+        state_colors=STATE_COLORS,
         active_count=active_count,
         url_with_category=url_with_category,
     )
