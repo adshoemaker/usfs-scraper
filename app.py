@@ -326,7 +326,7 @@ PAGE_TEMPLATE = """
             display: flex;
             align-items: center;
             gap: 14px;
-            width: 520px;
+            width: 600px;
             flex-shrink: 0;
             box-sizing: border-box;
         }
