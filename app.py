@@ -59,23 +59,32 @@ FOREST_ABBREVS = {
 
 FORESTS = [
     # Washington
-    {"name": "Mt. Baker-Snoqualmie National Forest", "code": "mbs"},
-    {"name": "Olympic National Forest",              "code": "olympic"},
-    {"name": "Okanogan-Wenatchee National Forest",   "code": "okanogan-wenatchee"},
-    {"name": "Gifford Pinchot National Forest",      "code": "giffordpinchot"},
-    {"name": "Colville National Forest",             "code": "colville"},
+    {"name": "Mt. Baker-Snoqualmie National Forest", "code": "mbs",              "state": "WA"},
+    {"name": "Olympic National Forest",              "code": "olympic",           "state": "WA"},
+    {"name": "Okanogan-Wenatchee National Forest",   "code": "okanogan-wenatchee","state": "WA"},
+    {"name": "Gifford Pinchot National Forest",      "code": "giffordpinchot",   "state": "WA"},
+    {"name": "Colville National Forest",             "code": "colville",          "state": "WA"},
     # Oregon
-    {"name": "Rogue River-Siskiyou National Forest", "code": "rogue-siskiyou"},
-    {"name": "Wallowa-Whitman National Forest",      "code": "wallowa-whitman"},
-    {"name": "Fremont-Winema National Forest",       "code": "fremont-winema"},
+    {"name": "Rogue River-Siskiyou National Forest", "code": "rogue-siskiyou",   "state": "OR/CA"},
+    {"name": "Wallowa-Whitman National Forest",      "code": "wallowa-whitman",  "state": "OR"},
+    {"name": "Fremont-Winema National Forest",       "code": "fremont-winema",   "state": "OR"},
     # California
-    {"name": "Shasta-Trinity National Forest",       "code": "shasta-trinity"},
-    {"name": "Inyo National Forest",                 "code": "inyo"},
-    {"name": "Los Padres National Forest",           "code": "lospadres"},
-    {"name": "Klamath National Forest",              "code": "klamath"},
+    {"name": "Shasta-Trinity National Forest",       "code": "shasta-trinity",   "state": "CA"},
+    {"name": "Inyo National Forest",                 "code": "inyo",              "state": "CA"},
+    {"name": "Los Padres National Forest",           "code": "lospadres",         "state": "CA"},
+    {"name": "Klamath National Forest",              "code": "klamath",           "state": "OR/CA"},
     # Alaska
-    {"name": "Tongass National Forest",              "code": "tongass"},
+    {"name": "Tongass National Forest",              "code": "tongass",           "state": "AK"},
 ]
+
+# State color palette (rainbow order: CA=red, OR=yellow, WA=green, AK=blue-violet)
+STATE_PILL_COLORS = {
+    "CA":    {"bg": "rgba(204,51,51,0.15)",   "border": "#cc3333", "text": "#8b1a1a"},
+    "OR":    {"bg": "rgba(200,168,0,0.15)",   "border": "#c8a800", "text": "#7a6500"},
+    "OR/CA": {"bg": "rgba(201,106,0,0.15)",   "border": "#c96a00", "text": "#7a3e00"},
+    "WA":    {"bg": "rgba(45,122,31,0.15)",   "border": "#2d7a1f", "text": "#1a4f0f"},
+    "AK":    {"bg": "rgba(91,79,168,0.15)",   "border": "#5b4fa8", "text": "#352d6e"},
+}
 
 DATE_RANGES = [
     ("7",  "Last 7 days"),
@@ -388,6 +397,25 @@ PAGE_TEMPLATE = """
             white-space: nowrap;
         }
 
+        .toggle-pill {
+            cursor: pointer;
+            transition: all 0.15s;
+            user-select: none;
+        }
+
+        .toggle-pill:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .toggle-pill.pill-off {
+            background: #e8e8e4;
+            border-color: #c0c0bc;
+            color: #999;
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+
         .forest-pill-count {
             background: var(--border);
             border-radius: 10px;
@@ -395,6 +423,31 @@ PAGE_TEMPLATE = """
             font-size: 0.65rem;
             font-weight: 700;
             color: var(--text-muted);
+        }
+
+        .pill-controls {
+            display: inline-flex;
+            gap: 4px;
+            margin-left: 4px;
+        }
+
+        .pill-ctrl-btn {
+            font-family: 'Lexend', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 10px;
+            border: 1px solid var(--border2);
+            background: white;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .pill-ctrl-btn:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
         }
 
         .summary-totals {
@@ -1099,12 +1152,21 @@ PAGE_TEMPLATE = """
 <div class="forest-summary">
     <div class="forest-summary-inner">
         <span class="tracking-label">Currently tracking:</span>
-        {% for f in forests %}
-        <span class="forest-pill">
+        {% for f in forests|sort(attribute='name') %}
+        {% set sc = state_pill_colors.get(f.state, {}) %}
+        <span class="forest-pill toggle-pill {{ 'pill-off' if f.code in hidden_forests else '' }}"
+              onclick="toggleForest('{{ f.code }}')"
+              data-code="{{ f.code }}"
+              title="{{ f.state }} — {{ 'Click to show' if f.code in hidden_forests else 'Click to hide' }} {{ f.name }}"
+              style="{% if f.code not in hidden_forests %}background:{{ sc.bg }}; border-color:{{ sc.border }}; color:{{ sc.text }};{% endif %}">
             {{ f.name.replace('National Forest', 'NF') }}
-            <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
+            <span class="forest-pill-count" style="background:{{ sc.border }}20; color:{{ sc.border }};">{{ forest_counts[f.code].total }}</span>
         </span>
         {% endfor %}
+        <span class="pill-controls">
+            <button class="pill-ctrl-btn" onclick="setAllForests(true)">Show all</button>
+            <button class="pill-ctrl-btn" onclick="setAllForests(false)">Hide all</button>
+        </span>
         <span class="summary-totals">
             <strong>{{ total }}</strong> projects total
             &nbsp;·&nbsp;
@@ -1119,6 +1181,7 @@ PAGE_TEMPLATE = """
         <input type="hidden" name="q"        value="{{ search }}">
         <input type="hidden" name="category" value="{{ selected_category }}">
         <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
+        <input type="hidden" name="hidden"   value="{{ hidden_forests_str }}">
         <div>
             <label for="forest">Forest</label>
             <select id="forest" name="forest" onchange="this.form.submit()">
@@ -1378,6 +1441,45 @@ PAGE_TEMPLATE = """
     Data scraped from fs.usda.gov &nbsp;·&nbsp; Last updated: {{ last_scraped }}
 </footer>
 
+<script>
+// Read hidden forests from URL param
+function getHiddenForests() {
+    const params = new URLSearchParams(window.location.search);
+    const h = params.get('hidden');
+    return h ? h.split(',').filter(Boolean) : [];
+}
+
+// Update URL and reload with new hidden forests list
+function setHiddenForests(list) {
+    const params = new URLSearchParams(window.location.search);
+    if (list.length === 0) {
+        params.delete('hidden');
+    } else {
+        params.set('hidden', list.join(','));
+    }
+    window.location.search = params.toString();
+}
+
+function toggleForest(code) {
+    let hidden = getHiddenForests();
+    if (hidden.includes(code)) {
+        hidden = hidden.filter(c => c !== code);
+    } else {
+        hidden.push(code);
+    }
+    setHiddenForests(hidden);
+}
+
+function setAllForests(show) {
+    if (show) {
+        setHiddenForests([]);
+    } else {
+        const codes = Array.from(document.querySelectorAll('.toggle-pill'))
+                           .map(el => el.dataset.code);
+        setHiddenForests(codes);
+    }
+}
+</script>
 </body>
 </html>
 """
@@ -1386,6 +1488,8 @@ PAGE_TEMPLATE = """
 @app.route("/")
 def index():
     search            = request.args.get("q", "").strip()
+    hidden_forests_str = request.args.get("hidden", "").strip()
+    hidden_forests     = [f.strip() for f in hidden_forests_str.split(",") if f.strip()]
     selected_forest   = request.args.get("forest", "").strip()
     selected_status   = request.args.get("status", "").strip()
     selected_days     = request.args.get("days", "").strip()
@@ -1416,8 +1520,11 @@ def index():
         if p.get("status") in ("In Progress", "Developing Proposal")
     )
 
+    # Remove projects from hidden forests
+    visible_projects = [p for p in all_projects if p.get("forest_code") not in hidden_forests]
+
     projects = filter_projects(
-        all_projects,
+        visible_projects,
         search=search,
         forest_code=selected_forest,
         status=selected_status,
@@ -1466,6 +1573,9 @@ def index():
         selected_category=selected_category,
         selected_sort=selected_sort,
         selected_sort2=selected_sort2,
+        hidden_forests=hidden_forests,
+        hidden_forests_str=hidden_forests_str,
+        state_pill_colors=STATE_PILL_COLORS,
         status_colors=STATUS_COLORS,
         status_border_colors=STATUS_BORDER_COLORS,
         forest_abbrevs=FOREST_ABBREVS,
