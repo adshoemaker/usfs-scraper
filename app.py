@@ -200,6 +200,9 @@ def filter_projects(projects, search="", forest_code="", status="",
         }
         results.sort(key=lambda p: STATUS_SORT_ORDER.get(p.get("status", ""), 99))
 
+    # Always pin projects currently accepting comments to the top
+    results.sort(key=lambda p: 0 if p.get("accepting_comments") else 1)
+
     return results
 
 
@@ -576,6 +579,48 @@ PAGE_TEMPLATE = """
             border: 1px solid var(--border);
             white-space: nowrap;
             letter-spacing: 0.2px;
+        }
+
+        /* Taking Comments Now badge */
+        .comment-open-badge {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 6px 14px;
+            border-radius: 6px;
+            background: #fbbf24;
+            border: 2px solid #f59e0b;
+            color: #7c2d12;
+            font-weight: 700;
+            font-size: 0.78rem;
+            line-height: 1.3;
+            text-align: center;
+            animation: pulse-yellow 2s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+
+        .comment-open-badge .badge-title {
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+        }
+
+        .comment-open-badge .badge-deadline {
+            font-size: 0.68rem;
+            font-weight: 600;
+            opacity: 0.85;
+            margin-top: 1px;
+        }
+
+        @keyframes pulse-yellow {
+            0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(251,191,36,0.5); }
+            50%       { opacity: 0.75; box-shadow: 0 0 0 6px rgba(251,191,36,0); }
+        }
+
+        /* Extra red outline for cards taking comments */
+        .project-card.taking-comments {
+            outline: 3px solid #cc1111;
+            outline-offset: 2px;
         }
 
         .new-badge {
@@ -981,7 +1026,7 @@ PAGE_TEMPLATE = """
         {% set has_milestones = p.get('milestones') and p['milestones']|length > 0 %}
         {% set status_color = status_border_colors.get(p.status, '#d0d0c8') %}
         {% set cat_bg = {'extractive': 'rgba(204,17,17,0.18)', 'restorative': 'rgba(45,122,31,0.15)', 'mixed': 'rgba(196,106,48,0.16)'}.get(p.category or '', 'white') %}
-        <div class="project-card {{ p.category or '' }}"
+        <div class="project-card {{ p.category or '' }} {{ 'taking-comments' if p.get('accepting_comments') else '' }}"
              style="background: {{ cat_bg }};
                     border: 1px solid {{ status_color }};
                     border-left: 4px solid {{ status_color }};">
@@ -998,7 +1043,15 @@ PAGE_TEMPLATE = """
                         {% endif %}
                     </div>
                 </div>
-                <div style="display:flex; flex-direction:column; align-items:flex-end; gap:5px; flex-shrink:0;">
+                <div style="display:flex; flex-direction:column; align-items:flex-end; gap:6px; flex-shrink:0;">
+                    {% if p.get('accepting_comments') %}
+                    <div class="comment-open-badge">
+                        <span class="badge-title">💬 Taking Comments Now!</span>
+                        {% if p.get('comment_deadline') %}
+                        <span class="badge-deadline">Deadline: {{ p.comment_deadline }}</span>
+                        {% endif %}
+                    </div>
+                    {% endif %}
                     {% if p.status %}
                     <span class="status-badge"
                           style="background: {{ status_colors.get(p.status, '#8892a4') }}">

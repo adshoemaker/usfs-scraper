@@ -71,6 +71,39 @@ def should_fetch_milestones() -> bool:
     return get_scrape_flags()["fetch_milestones"]
 
 
+def parse_comment_period(session: requests.Session, project_id: str) -> dict:
+    """
+    Fetch the CARA comment submission page and check if comments are
+    currently being accepted. Returns:
+      accepting_comments: bool
+      comment_deadline:   str (e.g. "6/8/2026 11:59:59 PM")
+    """
+    url = f"https://cara.fs2c.usda.gov/Public/CommentInput?Project={project_id}"
+    result = {"accepting_comments": False, "comment_deadline": ""}
+    try:
+        r = session.get(url, timeout=20)
+        if r.status_code != 200:
+            return result
+        text = r.text
+        # Key phrase that appears when comments are open
+        if "Your comments are requested through" in text:
+            result["accepting_comments"] = True
+            # Extract the deadline date
+            import re
+            match = re.search(
+                "Your comments are requested through" + r"\s+([^<\n.]+)",
+                text
+            )
+            if match:
+                deadline = match.group(1).strip()
+                # Clean up any trailing punctuation/whitespace
+                deadline = deadline.rstrip(" .")
+                result["comment_deadline"] = deadline
+    except Exception:
+        pass
+    return result
+
+
 def parse_detail_page(html: str) -> dict:
     """
     Parse a project detail page.
@@ -160,14 +193,26 @@ def page_hash(html: str) -> str:
 
 
 def fetch_detail(session: requests.Session, project_url: str) -> dict:
-    """Fetch a project detail page and return milestones and analysis type."""
+    """Fetch a project detail page and return milestones, analysis type, and comment status."""
+    result = {"milestones": [], "analysis_type": "", "accepting_comments": False, "comment_deadline": ""}
     try:
         r = session.get(project_url, timeout=30)
         r.raise_for_status()
-        return parse_detail_page(r.text)
+        detail = parse_detail_page(r.text)
+        result.update(detail)
     except requests.RequestException as e:
         print(f"    !! Could not fetch detail from {project_url}: {e}")
-        return {"milestones": [], "analysis_type": ""}
+        return result
+
+    # Extract project ID and check comment period
+    project_id = project_url.rstrip("/").split("/")[-1]
+    if project_id.isdigit():
+        comment_info = parse_comment_period(session, project_id)
+        result.update(comment_info)
+        if comment_info["accepting_comments"]:
+            print(f"    💬 COMMENTS OPEN until {comment_info['comment_deadline']}")
+
+    return result
 
 
 def scrape_forest(session: requests.Session, forest: dict,
@@ -260,10 +305,12 @@ def scrape_forest(session: requests.Session, forest: dict,
         with open("projects.json", encoding="utf-8") as _f:
             _existing = json.load(_f)
         for _p in _existing.get("projects", []):
-            if _p.get("milestones"):
+            if _p.get("milestones") or _p.get("accepting_comments"):
                 existing_milestones[_p["project_url"]] = {
-                    "milestones": _p.get("milestones", []),
-                    "analysis_type": _p.get("analysis_type", ""),
+                    "milestones":         _p.get("milestones", []),
+                    "analysis_type":      _p.get("analysis_type", ""),
+                    "accepting_comments": _p.get("accepting_comments", False),
+                    "comment_deadline":   _p.get("comment_deadline", ""),
                 }
     except Exception:
         pass
@@ -277,11 +324,15 @@ def scrape_forest(session: requests.Session, forest: dict,
             # Re-use cached data for existing projects on non-full days
             cached = existing_milestones[p["project_url"]]
             if isinstance(cached, dict):
-                p["milestones"] = cached.get("milestones", [])
-                p["analysis_type"] = cached.get("analysis_type", "")
+                p["milestones"]         = cached.get("milestones", [])
+                p["analysis_type"]      = cached.get("analysis_type", "")
+                p["accepting_comments"] = cached.get("accepting_comments", False)
+                p["comment_deadline"]   = cached.get("comment_deadline", "")
             else:
-                p["milestones"] = cached
-                p["analysis_type"] = ""
+                p["milestones"]         = cached
+                p["analysis_type"]      = ""
+                p["accepting_comments"] = False
+                p["comment_deadline"]   = ""
 
     if to_fetch:
         reason = "full refresh" if do_full else "new projects only"
@@ -289,8 +340,10 @@ def scrape_forest(session: requests.Session, forest: dict,
         for p in to_fetch:
             time.sleep(DELAY_BETWEEN_REQUESTS)
             detail = fetch_detail(session, p["project_url"])
-            p["milestones"] = detail["milestones"]
-            p["analysis_type"] = detail["analysis_type"]
+            p["milestones"]          = detail["milestones"]
+            p["analysis_type"]       = detail["analysis_type"]
+            p["accepting_comments"]  = detail["accepting_comments"]
+            p["comment_deadline"]    = detail["comment_deadline"]
             if detail["milestones"]:
                 print(f"    ✓ {p['project_name'][:50]} — {len(detail['milestones'])} milestones, type: {detail['analysis_type'] or 'n/a'}")
     else:
