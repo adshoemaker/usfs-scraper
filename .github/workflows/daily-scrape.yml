@@ -1,25 +1,24 @@
 # .github/workflows/daily-scrape.yml
 # ---------------------------------------------------------------
-# DAILY run (Mon, Wed, Thu, Sat, Sun): checks for new projects
-# only — no milestone fetching.
+# Schedule:
+#   Monday      — full scrape including completed projects + milestones
+#   Tue & Fri   — active projects + fresh milestones, skip completed
+#   Wed/Thu/Sat/Sun — lightweight: new projects only, skip completed,
+#                     hash cache skips unchanged forests
 #
-# TUESDAY & FRIDAY: full scrape including fresh milestone data
-# for all In Progress / Developing Proposal projects.
-#
-# Both can also be triggered manually from the Actions tab.
+# Manual trigger available from Actions tab with optional full fetch.
 # ---------------------------------------------------------------
 
 name: USFS Project Scraper
 
 on:
   schedule:
-    # Daily at 6:00am Pacific (14:00 UTC), every day
-    - cron: "0 14 * * *"
+    - cron: "0 14 * * *"   # Daily at 6:00am Pacific (14:00 UTC)
 
   workflow_dispatch:
     inputs:
       full_scrape:
-        description: 'Force full milestone fetch (yes/no)'
+        description: 'Force full scrape including completed projects (yes/no)'
         required: false
         default: 'no'
 
@@ -39,25 +38,36 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Download existing database
+      - name: Restore database cache
         uses: actions/cache@v4
         with:
           path: projects.db
           key: projects-db
           restore-keys: projects-db
 
+      - name: Restore page hash cache
+        uses: actions/cache@v4
+        with:
+          path: page_hashes.json
+          key: page-hashes
+          restore-keys: page-hashes
+
       - name: Run scraper
         env:
-          # Pass day of week so scraper knows whether to fetch milestones.
-          # Tuesday=2, Friday=5. Manual trigger with full_scrape=yes also fetches.
           SCRAPE_MODE: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.full_scrape == 'yes') && 'full' || '' }}
         run: python scraper.py
 
-      - name: Save updated database
+      - name: Save database cache
         uses: actions/cache@v4
         with:
           path: projects.db
           key: projects-db
+
+      - name: Save page hash cache
+        uses: actions/cache@v4
+        with:
+          path: page_hashes.json
+          key: page-hashes
 
       - name: Commit updated projects.json
         run: |
