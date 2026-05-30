@@ -191,6 +191,14 @@ def filter_projects(projects, search="", forest_code="", status="",
         results.sort(key=lambda p: p.get("forest_name", "").lower())
     elif sort == "analysis":
         results.sort(key=lambda p: ANALYSIS_SORT_ORDER.get(p.get("analysis_type", ""), 99))
+    elif sort == "status":
+        STATUS_SORT_ORDER = {
+            "Developing Proposal": 0,
+            "In Progress":         1,
+            "On Hold":             2,
+            "Completed":           3,
+        }
+        results.sort(key=lambda p: STATUS_SORT_ORDER.get(p.get("status", ""), 99))
 
     return results
 
@@ -921,6 +929,7 @@ PAGE_TEMPLATE = """
                 <option value="name"     {% if selected_sort == "name"     %}selected{% endif %}>Project name A–Z</option>
                 <option value="forest"   {% if selected_sort == "forest"   %}selected{% endif %}>Forest</option>
                 <option value="analysis" {% if selected_sort == "analysis" %}selected{% endif %}>Analysis type</option>
+                <option value="status"   {% if selected_sort == "status"   %}selected{% endif %}>Status</option>
             </select>
         </div>
         {% if search or selected_forest or selected_status or selected_days or selected_category or selected_sort %}
