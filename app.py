@@ -1144,10 +1144,11 @@ PAGE_TEMPLATE = """
         {% set has_milestones = p.get('milestones') and p['milestones']|length > 0 %}
         {% set status_color = status_border_colors.get(p.status, '#d0d0c8') %}
         {% set cat_bg = {'extractive': 'rgba(204,17,17,0.18)', 'restorative': 'rgba(45,122,31,0.15)', 'mixed': 'rgba(196,106,48,0.16)'}.get(p.category or '', 'white') %}
+        {% set cat_border = {'extractive': '#cc1111', 'restorative': '#2d7a1f', 'mixed': '#c46a30'}.get(p.category or '', '#d0d0c8') %}
         <div class="project-card {{ p.category or '' }}"
              style="background: {{ cat_bg }};
-                    border: 1px solid {{ status_color }};
-                    border-left: 4px solid {{ status_color }};">
+                    border: 1px solid {{ cat_border }};
+                    border-left: 4px solid {{ cat_border }};">
 
             <!-- CARD HEADER: forest name + title left, taking comments badge right -->
             <div class="card-header-row">
