@@ -315,7 +315,7 @@ PAGE_TEMPLATE = """
         }
 
         .header-banner {
-            height: 80px;
+            height: 76px;
             width: auto;
             display: block;
             object-fit: cover;
@@ -344,13 +344,13 @@ PAGE_TEMPLATE = """
 
         .header-subtitle {
             font-family: 'Lexend', sans-serif;
-            font-size: 0.94rem;
+            font-size: 1.08rem;
             font-weight: 600;
             color: white;
             letter-spacing: 0.5px;
             text-align: right;
             border: 1px solid white;
-            padding: 5px 12px;
+            padding: 6px 14px;
             border-radius: 0;
             display: inline-block;
         }
