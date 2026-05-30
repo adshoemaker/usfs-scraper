@@ -14,6 +14,7 @@ import json
 import os
 import time
 import datetime
+import hashlib
 import requests
 from bs4 import BeautifulSoup
 
@@ -47,22 +48,27 @@ HEADERS = {
 # Only fetch detail pages for these statuses
 MILESTONE_STATUSES = {"In Progress", "Developing Proposal"}
 
+def get_scrape_flags() -> dict:
+    """
+    Returns flags controlling what this run does:
+      fetch_milestones - True on Tue/Fri or manual full trigger or local
+      include_completed - True on Monday or manual full trigger or local
+      use_hash_cache   - True always (skip unchanged forests)
+    """
+    manual_full = os.environ.get("SCRAPE_MODE") == "full"
+    is_local    = not os.environ.get("CI")
+    weekday     = datetime.datetime.now(datetime.timezone.utc).weekday()
+    # 0=Mon 1=Tue 2=Wed 3=Thu 4=Fri 5=Sat 6=Sun
+
+    return {
+        "fetch_milestones":   manual_full or is_local or weekday in (1, 4),
+        "include_completed":  manual_full or is_local or weekday == 0,
+        "use_hash_cache":     not (manual_full or is_local),
+    }
+
+
 def should_fetch_milestones() -> bool:
-    """
-    Returns True if we should do a full milestone fetch this run.
-    True on Tuesdays (weekday=1) and Fridays (weekday=4),
-    or when SCRAPE_MODE=full is set (manual GitHub Actions trigger),
-    or when running locally (not in CI).
-    """
-    # Manual override via environment variable
-    if os.environ.get("SCRAPE_MODE") == "full":
-        return True
-    # Running locally (no CI environment variable)
-    if not os.environ.get("CI"):
-        return True
-    # Tuesday or Friday
-    weekday = datetime.datetime.now(datetime.timezone.utc).weekday()
-    return weekday in (1, 4)  # 1=Tuesday, 4=Friday
+    return get_scrape_flags()["fetch_milestones"]
 
 
 def parse_detail_page(html: str) -> dict:
@@ -130,6 +136,29 @@ def most_recent_activity(milestones: list[dict]) -> list[dict]:
     return summary
 
 
+HASH_CACHE_FILE = "page_hashes.json"
+
+
+def load_hash_cache() -> dict:
+    """Load the stored page hashes from the last run."""
+    try:
+        with open(HASH_CACHE_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def save_hash_cache(cache: dict):
+    """Save updated page hashes for the next run."""
+    with open(HASH_CACHE_FILE, "w", encoding="utf-8") as f:
+        json.dump(cache, f, indent=2)
+
+
+def page_hash(html: str) -> str:
+    """Return a short fingerprint of a page's content."""
+    return hashlib.md5(html.encode("utf-8")).hexdigest()
+
+
 def fetch_detail(session: requests.Session, project_url: str) -> dict:
     """Fetch a project detail page and return milestones and analysis type."""
     try:
@@ -141,8 +170,12 @@ def fetch_detail(session: requests.Session, project_url: str) -> dict:
         return {"milestones": [], "analysis_type": ""}
 
 
-def scrape_forest(session: requests.Session, forest: dict) -> list[dict]:
-    """Fetch one forest's projects page and return a list of projects."""
+def scrape_forest(session: requests.Session, forest: dict,
+                  flags: dict, hash_cache: dict) -> list[dict] | None:
+    """
+    Fetch one forest's projects page and return a list of projects.
+    Returns None if the page is unchanged (hash cache hit).
+    """
     url = forest["projects_url"]
     print(f"  Fetching: {url}")
 
@@ -152,6 +185,14 @@ def scrape_forest(session: requests.Session, forest: dict) -> list[dict]:
     except requests.RequestException as e:
         print(f"  !! ERROR fetching {url}: {e}")
         return []
+
+    # Hash check — skip if page content hasn't changed since last run
+    if flags.get("use_hash_cache"):
+        current_hash = page_hash(response.text)
+        if hash_cache.get(url) == current_hash:
+            print(f"  Unchanged since last run — skipping")
+            return None
+        hash_cache[url] = current_hash
 
     soup = BeautifulSoup(response.text, "html.parser")
     projects = []
@@ -205,7 +246,12 @@ def scrape_forest(session: requests.Session, forest: dict) -> list[dict]:
     # Decide whether to fetch milestones this run.
     # Full fetch: Tuesdays, Fridays, manual trigger, or local run.
     # New projects always get milestones fetched regardless of day.
-    milestone_projects = [p for p in projects if p["status"] in MILESTONE_STATUSES]
+    # Only fetch milestones for active (non-completed) projects
+    milestone_projects = [
+        p for p in projects
+        if p["status"] in MILESTONE_STATUSES
+        and (flags.get("include_completed") or p["status"] != "Completed")
+    ]
     do_full = should_fetch_milestones()
 
     # Load existing milestone data to identify new projects
@@ -262,6 +308,14 @@ def run_scraper():
 
     create_tables()
 
+    flags = get_scrape_flags()
+    print(f"\nRun flags:")
+    print(f"  fetch_milestones:  {flags['fetch_milestones']}")
+    print(f"  include_completed: {flags['include_completed']}")
+    print(f"  use_hash_cache:    {flags['use_hash_cache']}")
+
+    hash_cache = load_hash_cache()
+
     session = requests.Session()
     session.headers.update(HEADERS)
 
@@ -273,13 +327,34 @@ def run_scraper():
         pass
 
     all_projects = []
+    skipped_forests = 0
 
     for i, forest in enumerate(FORESTS):
         print(f"\n[{i+1}/{len(FORESTS)}] {forest['name']}")
-        projects = scrape_forest(session, forest)
+        projects = scrape_forest(session, forest, flags, hash_cache)
+
+        if projects is None:
+            # Page unchanged — load existing projects from JSON for this forest
+            skipped_forests += 1
+            try:
+                with open("projects.json", encoding="utf-8") as f:
+                    existing = json.load(f)
+                forest_projects = [
+                    p for p in existing.get("projects", [])
+                    if p.get("forest_code") == forest["code"]
+                ]
+                all_projects.extend(forest_projects)
+                print(f"  Using {len(forest_projects)} cached projects")
+            except Exception:
+                pass
+            continue
 
         if projects:
             for p in projects:
+                # Skip re-processing completed projects on non-Monday runs
+                if not flags["include_completed"] and p.get("status") == "Completed":
+                    # Still include in output but don't re-upsert
+                    continue
                 upsert_project(p)
             active_urls = [p["project_url"] for p in projects]
             mark_inactive_projects(active_urls, forest["code"])
@@ -289,6 +364,9 @@ def run_scraper():
         if i < len(FORESTS) - 1:
             print(f"  Waiting {DELAY_BETWEEN_REQUESTS}s before next forest...")
             time.sleep(DELAY_BETWEEN_REQUESTS)
+
+    save_hash_cache(hash_cache)
+    print(f"\nForests skipped (unchanged): {skipped_forests}/{len(FORESTS)}")
 
     # Build JSON including first_seen and milestones
     conn = get_connection()
