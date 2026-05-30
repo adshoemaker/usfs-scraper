@@ -141,7 +141,7 @@ def load_projects():
 
 
 def filter_projects(projects, search="", forest_code="", status="",
-                    days="", category="", sort=""):
+                    days="", category="", sort="", sort2=""):
     results = []
     search_lower = search.lower()
     cutoff = None
@@ -159,8 +159,12 @@ def filter_projects(projects, search="", forest_code="", status="",
                 continue
         if status and p.get("status") != status:
             continue
-        if category and p.get("category") != category:
-            continue
+        if category:
+            if category == "unclassified":
+                if p.get("category"):
+                    continue
+            elif p.get("category") != category:
+                continue
         if cutoff:
             first_seen_str = p.get("first_seen", "")
             if not first_seen_str:
@@ -207,6 +211,45 @@ def filter_projects(projects, search="", forest_code="", status="",
             STATUS_SORT_ORDER.get(p.get("status", ""), 99),
             CATEGORY_SORT_ORDER.get(p.get("category", ""), 3),
         ))
+
+    # Impact category sort order
+    IMPACT_SORT_ORDER = {
+        "extractive":  0,
+        "mixed":       1,
+        "restorative": 2,
+        None:          3,
+    }
+
+    if sort == "impact":
+        results.sort(key=lambda p: IMPACT_SORT_ORDER.get(p.get("category"), 3))
+
+    # Secondary sort
+    if sort2:
+        if sort2 == "newest":
+            results.sort(key=lambda p: p.get("first_seen", ""), reverse=True)
+        elif sort2 == "oldest":
+            results.sort(key=lambda p: p.get("first_seen", ""))
+        elif sort2 == "name":
+            results.sort(key=lambda p: p.get("project_name", "").lower())
+        elif sort2 == "forest":
+            results.sort(key=lambda p: p.get("forest_name", "").lower())
+        elif sort2 == "status":
+            STATUS_SORT_ORDER2 = {
+                "Developing Proposal": 0,
+                "In Progress":         1,
+                "On Hold":             2,
+                "Completed":           3,
+            }
+            results.sort(key=lambda p: STATUS_SORT_ORDER2.get(p.get("status", ""), 99))
+        elif sort2 == "impact":
+            results.sort(key=lambda p: IMPACT_SORT_ORDER.get(p.get("category"), 3))
+        elif sort2 == "analysis":
+            ANALYSIS_SORT_ORDER2 = {
+                "Environmental Impact Statement": 0,
+                "Environmental Assessment":       1,
+                "Categorical Exclusion":          2,
+            }
+            results.sort(key=lambda p: ANALYSIS_SORT_ORDER2.get(p.get("analysis_type", ""), 99))
 
     # Always pin projects currently accepting comments to the top
     results.sort(key=lambda p: 0 if p.get("accepting_comments") else 1)
@@ -255,21 +298,36 @@ PAGE_TEMPLATE = """
 
         /* ── Header ── */
         header {
-            background: #3a5c30;
-            border-bottom: 2px solid #2d4a24;
-            padding: 12px 30px;
+            background: #8fa68e;
+            border-bottom: 2px solid #7a9279;
+            padding: 0;
             display: flex;
-            align-items: center;
+            align-items: stretch;
             justify-content: space-between;
-            gap: 20px;
+            gap: 0;
             flex-wrap: wrap;
         }
 
-        .header-left {
+        .header-left-panel {
+            background: white;
+            padding: 12px 24px;
             display: flex;
             align-items: center;
             gap: 14px;
+            width: 480px;
+            flex-shrink: 0;
+            box-sizing: border-box;
         }
+
+        .header-right-panel {
+            flex: 1;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+
 
         .header-logo {
             height: 52px;
@@ -284,7 +342,7 @@ PAGE_TEMPLATE = """
             font-size: 1.43rem;
             font-weight: 500;
             font-family: 'Outfit', sans-serif;
-            color: white;
+            color: #1a1a1a;
             letter-spacing: 0.3px;
             line-height: 1.2;
         }
@@ -359,25 +417,25 @@ PAGE_TEMPLATE = """
 
         .header-search input[type="text"] {
             padding: 7px 14px;
-            border: 1px solid rgba(255,255,255,0.25);
+            border: 1px solid rgba(255,255,255,0.4);
             border-radius: 6px;
             font-family: 'Lexend', sans-serif;
             font-size: 0.85rem;
             width: 230px;
-            background: rgba(255,255,255,0.12);
-            color: white;
+            background: rgba(255,255,255,0.25);
+            color: #1a1a1a;
             outline: none;
             transition: border-color 0.2s;
         }
 
-        .header-search input[type="text"]::placeholder { color: rgba(255,255,255,0.5); }
-        .header-search input[type="text"]:focus { border-color: rgba(255,255,255,0.6); }
+        .header-search input[type="text"]::placeholder { color: rgba(0,0,0,0.4); }
+        .header-search input[type="text"]:focus { background: rgba(255,255,255,0.45); border-color: rgba(255,255,255,0.8); }
 
         .header-search button {
             padding: 7px 14px;
-            background: rgba(255,255,255,0.18);
-            color: white;
-            border: 1px solid rgba(255,255,255,0.25);
+            background: rgba(255,255,255,0.3);
+            color: #1a1a1a;
+            border: 1px solid rgba(255,255,255,0.4);
             border-radius: 6px;
             font-family: 'Lexend', sans-serif;
             font-size: 0.82rem;
@@ -386,7 +444,7 @@ PAGE_TEMPLATE = """
             transition: background 0.15s;
         }
 
-        .header-search button:hover { background: rgba(255,255,255,0.28); }
+        .header-search button:hover { background: rgba(255,255,255,0.5); }
 
         /* ── Container ── */
         .container {
@@ -480,6 +538,9 @@ PAGE_TEMPLATE = """
 
         .cat-btn .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
+        .cat-btn.unclassified { border-color: #888; color: #555; background: rgba(128,128,128,0.07); }
+        .cat-btn.unclassified.active { background: #888; color: white; border: 3px solid #888; }
+        .cat-btn .dot.unclassified-dot { background: #888; }
         .cat-btn.extractive  { border-color: var(--red);    color: var(--red);    background: rgba(204,17,17,0.07); }
         .cat-btn.restorative { border-color: var(--green);  color: var(--green);  background: rgba(45,122,31,0.07); }
         .cat-btn.mixed       { border-color: var(--orange); color: var(--orange); background: rgba(196,106,48,0.07); }
@@ -1014,10 +1075,11 @@ PAGE_TEMPLATE = """
 <body>
 
 <header>
-    <div class="header-left">
+    <div class="header-left-panel">
         <img src="/static/LFDC_Logo.jpg" alt="LFDC Logo" class="header-logo">
         <h1>National Forest NEPA Project Tracker</h1>
     </div>
+    <div class="header-right-panel">
     <form class="header-search" method="GET" action="/" id="searchform">
         <input type="hidden" name="forest"   value="{{ selected_forest }}">
         <input type="hidden" name="status"   value="{{ selected_status }}">
@@ -1030,6 +1092,7 @@ PAGE_TEMPLATE = """
                autocomplete="off">
         <button type="submit">Search</button>
     </form>
+    </div>
 </header>
 
 <!-- Forest summary bar -->
@@ -1055,6 +1118,7 @@ PAGE_TEMPLATE = """
     <form class="filters" method="GET" action="/">
         <input type="hidden" name="q"        value="{{ search }}">
         <input type="hidden" name="category" value="{{ selected_category }}">
+        <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
         <div>
             <label for="forest">Forest</label>
             <select id="forest" name="forest" onchange="this.form.submit()">
@@ -1101,9 +1165,23 @@ PAGE_TEMPLATE = """
                 <option value="forest"   {% if selected_sort == "forest"   %}selected{% endif %}>Forest</option>
                 <option value="analysis" {% if selected_sort == "analysis" %}selected{% endif %}>Analysis type</option>
                 <option value="status"   {% if selected_sort == "status"   %}selected{% endif %}>Status</option>
+                <option value="impact"   {% if selected_sort == "impact"   %}selected{% endif %}>Impact category</option>
             </select>
         </div>
-        {% if search or selected_forest or selected_status or selected_days or selected_category or selected_sort %}
+        <div>
+            <label for="sort2">Then sort by</label>
+            <select id="sort2" name="sort2" onchange="this.form.submit()">
+                <option value="">None</option>
+                <option value="newest"   {% if selected_sort2 == "newest"   %}selected{% endif %}>Newest first</option>
+                <option value="oldest"   {% if selected_sort2 == "oldest"   %}selected{% endif %}>Oldest first</option>
+                <option value="name"     {% if selected_sort2 == "name"     %}selected{% endif %}>Project name A–Z</option>
+                <option value="forest"   {% if selected_sort2 == "forest"   %}selected{% endif %}>Forest</option>
+                <option value="status"   {% if selected_sort2 == "status"   %}selected{% endif %}>Status</option>
+                <option value="impact"   {% if selected_sort2 == "impact"   %}selected{% endif %}>Impact category</option>
+                <option value="analysis" {% if selected_sort2 == "analysis" %}selected{% endif %}>Analysis type</option>
+            </select>
+        </div>
+        {% if search or selected_forest or selected_status or selected_days or selected_category or selected_sort or selected_sort2 %}
         <a class="clear" href="/">Clear all</a>
         {% endif %}
     </form>
@@ -1125,13 +1203,18 @@ PAGE_TEMPLATE = """
             <span class="dot restorative-dot"></span>
             Restorative ({{ counts.restorative }})
         </a>
+        <a href="{{ url_with_category('unclassified') }}"
+           class="cat-btn unclassified {{ 'active' if selected_category == 'unclassified' else '' }}">
+            <span class="dot unclassified-dot"></span>
+            Unclassified ({{ counts.unclassified }})
+        </a>
     </div>
 
     <div class="legend">
         <div class="legend-item"><div class="legend-stripe" style="background:var(--red)"></div> Extractive</div>
         <div class="legend-item"><div class="legend-stripe" style="background:var(--green)"></div> Restorative</div>
         <div class="legend-item"><div class="legend-stripe" style="background:var(--orange)"></div> Mixed</div>
-        <div class="legend-item"><div class="legend-stripe" style="background:var(--border2)"></div> Uncategorized</div>
+        <div class="legend-item"><div class="legend-stripe" style="background:#888"></div> Unclassified</div>
     </div>
 
     <div class="results-header">
@@ -1308,13 +1391,15 @@ def index():
     selected_days     = request.args.get("days", "").strip()
     selected_category = request.args.get("category", "").strip()
     selected_sort     = request.args.get("sort", "").strip()
+    selected_sort2    = request.args.get("sort2", "").strip()
 
     all_projects, last_scraped = load_projects()
 
     counts = {
-        "extractive":  sum(1 for p in all_projects if p.get("category") == "extractive"),
-        "restorative": sum(1 for p in all_projects if p.get("category") == "restorative"),
-        "mixed":       sum(1 for p in all_projects if p.get("category") == "mixed"),
+        "extractive":   sum(1 for p in all_projects if p.get("category") == "extractive"),
+        "restorative":  sum(1 for p in all_projects if p.get("category") == "restorative"),
+        "mixed":        sum(1 for p in all_projects if p.get("category") == "mixed"),
+        "unclassified": sum(1 for p in all_projects if not p.get("category")),
     }
 
     # Per-forest project counts for the summary bar
@@ -1339,6 +1424,7 @@ def index():
         days=selected_days,
         category=selected_category,
         sort=selected_sort,
+        sort2=selected_sort2,
     )
 
     status_list = sorted(set(p["status"] for p in all_projects if p.get("status")))
@@ -1379,6 +1465,7 @@ def index():
         selected_days=selected_days,
         selected_category=selected_category,
         selected_sort=selected_sort,
+        selected_sort2=selected_sort2,
         status_colors=STATUS_COLORS,
         status_border_colors=STATUS_BORDER_COLORS,
         forest_abbrevs=FOREST_ABBREVS,
