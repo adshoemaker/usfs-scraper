@@ -1,0 +1,68 @@
+# .github/workflows/daily-scrape.yml
+# ---------------------------------------------------------------
+# DAILY run (Mon, Wed, Thu, Sat, Sun): checks for new projects
+# only — no milestone fetching.
+#
+# TUESDAY & FRIDAY: full scrape including fresh milestone data
+# for all In Progress / Developing Proposal projects.
+#
+# Both can also be triggered manually from the Actions tab.
+# ---------------------------------------------------------------
+
+name: USFS Project Scraper
+
+on:
+  schedule:
+    # Daily at 6:00am Pacific (14:00 UTC), every day
+    - cron: "0 14 * * *"
+
+  workflow_dispatch:
+    inputs:
+      full_scrape:
+        description: 'Force full milestone fetch (yes/no)'
+        required: false
+        default: 'no'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Download existing database
+        uses: actions/cache@v4
+        with:
+          path: projects.db
+          key: projects-db
+          restore-keys: projects-db
+
+      - name: Run scraper
+        env:
+          # Pass day of week so scraper knows whether to fetch milestones.
+          # Tuesday=2, Friday=5. Manual trigger with full_scrape=yes also fetches.
+          SCRAPE_MODE: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.full_scrape == 'yes') && 'full' || '' }}
+        run: python scraper.py
+
+      - name: Save updated database
+        uses: actions/cache@v4
+        with:
+          path: projects.db
+          key: projects-db
+
+      - name: Commit updated projects.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add projects.json
+          git diff --staged --quiet || git commit -m "Scrape: $(date -u '+%Y-%m-%d')"
+          git push
