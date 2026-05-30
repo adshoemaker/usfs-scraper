@@ -579,6 +579,9 @@ PAGE_TEMPLATE = """
             border: 1px solid var(--border);
             white-space: nowrap;
             letter-spacing: 0.2px;
+            width: 220px;
+            text-align: center;
+            box-sizing: border-box;
         }
 
         /* Taking Comments Now badge */
@@ -634,35 +637,46 @@ PAGE_TEMPLATE = """
 
         /* ── Card body layout ── */
         .card-body {
-            display: grid;
-            grid-template-columns: 1fr 310px;
-            grid-template-rows: auto 1fr;
-            gap: 10px 16px;
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
             margin-top: 6px;
-            min-height: 60px;
+            align-items: stretch;
+        }
+
+        .card-body-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            min-width: 0;
         }
 
         .card-body .description {
-            grid-column: 1;
-            grid-row: 1;
             font-size: 0.82rem;
             color: var(--text-muted);
             line-height: 1.6;
             font-weight: 400;
-            align-self: start;
+        }
+
+        .card-body-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            gap: 6px;
+            flex-shrink: 0;
+            width: 230px;
         }
 
         /* ── Milestone table ── */
         .milestone-section {
-            grid-column: 2;
-            grid-row: 1 / 3;
-            align-self: end;
-            justify-self: end;
-            width: 310px;
+            width: 230px;
             border: 1px solid var(--border2);
             border-radius: 6px;
             overflow: hidden;
             background: #e8e8e4;
+            flex-shrink: 0;
         }
 
         .milestone-section-label {
@@ -847,39 +861,36 @@ PAGE_TEMPLATE = """
                 width: 100%;
             }
 
+            /* Show/hide desktop vs mobile elements */
+            .desktop-only { display: none !important; }
+            .mobile-only  { display: flex !important; }
+
             /* Comment badge centered on mobile */
-            .comment-open-badge {
+            .mobile-only.comment-open-badge {
                 align-self: center;
-                margin: 0 auto 6px auto;
-                display: flex;
+                margin: 0 auto 8px auto;
+                width: fit-content;
             }
 
-            /* Card body: switch to single column */
+            /* Card body: single column on mobile */
             .card-body {
-                display: flex;
                 flex-direction: column;
                 gap: 10px;
                 margin-top: 8px;
             }
 
-            .card-body .description {
-                order: 1;
-                width: 100%;
-            }
+            .card-body-left { width: 100%; }
+            .card-body-right { width: 100%; align-items: stretch; }
 
-            /* Milestone table below description, full width */
+            .card-body .description { width: 100%; }
+
+            /* Milestone table full width on mobile */
             .milestone-section {
-                order: 2;
                 width: 100% !important;
-                grid-column: unset !important;
-                grid-row: unset !important;
-                align-self: unset;
-                justify-self: unset;
             }
 
-            /* Comment buttons below milestone table */
+            /* Comment buttons stack vertically */
             .comment-buttons {
-                order: 3;
                 flex-direction: column;
                 gap: 6px;
             }
@@ -893,6 +904,10 @@ PAGE_TEMPLATE = """
             /* Meta at very bottom */
             .meta { margin-top: 10px; }
         }
+
+        /* Desktop/mobile visibility helpers */
+        .desktop-only { display: flex; }
+        .mobile-only  { display: none; }
 
         /* ── Meta ── */
         .meta {
@@ -1072,6 +1087,14 @@ PAGE_TEMPLATE = """
 
             <div class="card-top">
                 <div class="card-top-left">
+                    {% if p.get('accepting_comments') %}
+                    <div class="comment-open-badge mobile-only" style="margin-bottom:8px;">
+                        <span class="badge-title">💬 Taking Comments Now!</span>
+                        {% if p.get('comment_deadline') %}
+                        <span class="badge-deadline">Deadline: {{ p.comment_deadline }}</span>
+                        {% endif %}
+                    </div>
+                    {% endif %}
                     <div class="forest-tag">{{ p.forest_name }}</div>
                     <div class="btn-title-wrap">
                         <a href="{{ p.project_url }}" target="_blank" class="btn-title">
@@ -1083,14 +1106,6 @@ PAGE_TEMPLATE = """
                     </div>
                 </div>
                 <div class="card-top-right">
-                    {% if p.get('accepting_comments') %}
-                    <div class="comment-open-badge">
-                        <span class="badge-title">💬 Taking Comments Now!</span>
-                        {% if p.get('comment_deadline') %}
-                        <span class="badge-deadline">Deadline: {{ p.comment_deadline }}</span>
-                        {% endif %}
-                    </div>
-                    {% endif %}
                     {% if p.status %}
                     <span class="status-badge"
                           style="background: {{ status_colors.get(p.status, '#8892a4') }}">
@@ -1108,12 +1123,10 @@ PAGE_TEMPLATE = """
             </div>
 
             <div class="card-body">
-                {% if p.description %}
-                <div class="description">{{ p.description }}</div>
-                {% endif %}
-
-                {% if has_milestones %}
-                <div class="milestone-section">
+                <div class="card-body-left">
+                    {% if p.description %}
+                    <div class="description">{{ p.description }}</div>
+                    {% endif %}
                     <div class="milestone-section-label">Project Milestones</div>
                     <table class="milestone-table">
                         <thead>
@@ -1132,6 +1145,7 @@ PAGE_TEMPLATE = """
                     </table>
                 </div>
                 {% endif %}
+                </div><!-- card-body-right -->
             </div>
 
             {% if has_milestones %}
