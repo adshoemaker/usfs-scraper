@@ -511,23 +511,28 @@ PAGE_TEMPLATE = """
         }
 
         /* ── Filter bar ── */
+        .filters-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+
         .filters {
             background: var(--bg2);
             border: 1px solid var(--border);
             border-radius: 0;
-            padding: 14px 18px;
-            margin-bottom: 10px;
-            display: flex;
-            gap: 12px;
-            align-items: flex-end;
+            padding: 8px 12px;
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
             flex-wrap: wrap;
             justify-content: flex-end;
         }
 
         .filters label {
             display: block;
-            font-size: 0.62rem;
-            font-weight: 700;
+            font-size: 0.58rem;
+            font-weight: 600;
             color: var(--text-dim);
             margin-bottom: 5px;
             text-transform: uppercase;
@@ -535,7 +540,7 @@ PAGE_TEMPLATE = """
         }
 
         .filters select {
-            padding: 7px 11px;
+            padding: 5px 8px;
             border: 1px solid var(--border2);
             border-radius: 0;
             font-family: 'Poppins', sans-serif;
@@ -1352,6 +1357,7 @@ PAGE_TEMPLATE = """
 
 <div class="container">
 
+    <div class="filters-wrapper">
     <form class="filters" method="GET" action="/">
         <input type="hidden" name="q"        value="{{ search }}">
         <input type="hidden" name="category" value="{{ selected_category }}">
@@ -1412,7 +1418,7 @@ PAGE_TEMPLATE = """
         <a class="clear" href="/">Clear all</a>
         {% endif %}
     </form>
-
+    </div>
     <div class="category-filters">
         <span>Show only:</span>
         <a href="{{ url_with_category('extractive') }}"
@@ -1442,7 +1448,7 @@ PAGE_TEMPLATE = """
         </a>
     </div>
     <div class="category-disclaimer-row">
-        <span class="category-disclaimer">Impact level assigned based on keywords and intended as a general guide only</span>
+        <span class="category-disclaimer">*Impact level assigned automatically, based on keywords and is intended as a general guide only</span>
     </div>
 
     <div class="results-header">
