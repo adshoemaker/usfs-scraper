@@ -183,6 +183,9 @@ def filter_projects(projects, search="", forest_code="", status="",
             elif category == "taking_comments":
                 if not p.get("accepting_comments"):
                     continue
+            elif category == "active":
+                if p.get("status") not in ("In Progress", "Developing Proposal"):
+                    continue
             elif p.get("category") != category:
                 continue
         if cutoff:
@@ -628,6 +631,10 @@ PAGE_TEMPLATE = """
         .cat-btn .dot.unclassified-dot { background: #888; }
         .cat-btn.taking-comments { border-color: #cc1111; border-width: 3px; color: #7c2d12; background: rgba(251,191,36,0.35); padding: 6px 37px; font-size: 0.78rem; }
         .cat-btn.taking-comments.active { background: #fbbf24; color: #7c2d12; border: 3px solid #cc1111; }
+        .cat-btn.active-filter { border-color: #2d7a1f; border-width: 3px; color: #1a4f0f; background: rgba(45,122,31,0.15); padding: 6px 37px; font-size: 0.78rem; }
+        .cat-btn.active-filter.active { background: #2d7a1f; color: white; border: 3px solid #1a4f0f; }
+        .cat-btn .dot.active-filter-dot { background: #2d7a1f; }
+        .cat-btn.taking-comments.active { background: #fbbf24; color: #7c2d12; border: 3px solid #cc1111; }
         .cat-btn .dot.taking-comments-dot { background: #fbbf24; border: 1px solid #cc1111; }
 
         .category-disclaimer {
@@ -736,7 +743,7 @@ PAGE_TEMPLATE = """
             color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            margin-bottom: 4px;
+            margin-bottom: 30px;
         }
 
         .project-card h2 { font-size: 0.92rem; font-weight: 700; }
@@ -759,7 +766,7 @@ PAGE_TEMPLATE = """
             white-space: nowrap;
             letter-spacing: 0.3px;
             text-align: center;
-            width: 240px;
+            width: 255px;
             box-sizing: border-box;
         }
 
@@ -774,7 +781,7 @@ PAGE_TEMPLATE = """
             border: 1px solid var(--border);
             white-space: nowrap;
             letter-spacing: 0.2px;
-            width: 240px;
+            width: 255px;
             text-align: center;
             box-sizing: border-box;
         }
@@ -796,7 +803,7 @@ PAGE_TEMPLATE = """
             animation: pulse-yellow 2.5s ease-in-out infinite;
             flex-shrink: 0;
             box-shadow: 0 2px 8px rgba(204,17,17,0.2);
-            width: 480px;
+            width: 475px;
             box-sizing: border-box;
         }
 
@@ -904,19 +911,19 @@ PAGE_TEMPLATE = """
             justify-content: flex-start;
             gap: 6px;
             flex-shrink: 0;
-            width: 240px;
+            width: 255px;
         }
 
         .card-body-right .status-badge,
         .card-body-right .analysis-badge,
         .card-body-right .milestone-section {
-            width: 240px;
+            width: 255px;
             box-sizing: border-box;
         }
 
         /* ── Milestone table ── */
         .milestone-section {
-            width: 240px;
+            width: 255px;
             border: 1px solid var(--border2);
             border-radius: 0;
             overflow: hidden;
@@ -990,6 +997,7 @@ PAGE_TEMPLATE = """
             letter-spacing: 0.8px;
             line-height: 1.3;
             display: block;
+            padding-right: 10px;
         }
 
         .btn-comment.project-link {
@@ -1371,7 +1379,7 @@ PAGE_TEMPLATE = """
         </div>
         <div class="forest-totals-row">
             <span class="summary-totals">
-                <strong>{{ total }}</strong> total &nbsp;·&nbsp; <strong>{{ active_count }}</strong> active / planning
+                <strong>{{ total }}</strong> total &nbsp;·&nbsp; <strong>{{ active_count }}</strong> active / in development
             </span>
             <a href="/" class="forest-reset-btn">Reset</a>
         </div>
@@ -1469,13 +1477,18 @@ PAGE_TEMPLATE = """
             <span class="dot taking-comments-dot"></span>
             💬 Taking Comments Now ({{ filtered_counts.taking_comments }} of {{ counts.taking_comments }})
         </a>
+        <a href="{{ url_with_category('active') }}"
+           class="cat-btn active-filter {{ 'active' if selected_category == 'active' else '' }}">
+            <span class="dot active-filter-dot"></span>
+            Active / In Development ({{ filtered_counts.active }} of {{ counts.active }})
+        </a>
     </div>
     <div class="category-disclaimer-row">
         <span class="category-disclaimer">*Impact level assigned automatically, based on keywords and is intended as a general guide only</span>
     </div>
 
     <div class="results-header">
-        {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Unknown', 'taking_comments': 'Taking Comments Now'} %}
+        {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Unknown', 'taking_comments': 'Taking Comments Now', 'active': 'Active / In Development'} %}
         {% if search or selected_forest or selected_status or selected_days or selected_category %}
             Showing <strong>{{ projects|length }}</strong> result{% if projects|length != 1 %}s{% endif %}
             {% if selected_category %} — <strong>{{ cat_labels.get(selected_category, selected_category) }}</strong>{% endif %}
@@ -1691,6 +1704,7 @@ def index():
         "mixed":           sum(1 for p in all_projects if p.get("category") == "mixed"),
         "unclassified":    sum(1 for p in all_projects if not p.get("category")),
         "taking_comments": sum(1 for p in all_projects if p.get("accepting_comments")),
+        "active":          sum(1 for p in all_projects if p.get("status") in ("In Progress", "Developing Proposal")),
     }
 
     # Per-forest project counts for the summary bar
@@ -1719,6 +1733,7 @@ def index():
         "mixed":           sum(1 for p in forest_visible if p.get("category") == "mixed"),
         "unclassified":    sum(1 for p in forest_visible if not p.get("category")),
         "taking_comments": sum(1 for p in forest_visible if p.get("accepting_comments")),
+        "active":          sum(1 for p in forest_visible if p.get("status") in ("In Progress", "Developing Proposal")),
     }
 
     projects = filter_projects(
