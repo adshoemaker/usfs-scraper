@@ -392,8 +392,29 @@ PAGE_TEMPLATE = """
 
         .forest-totals-row {
             display: flex;
+            flex-direction: row;
+            align-items: center;
             justify-content: flex-end;
+            gap: 12px;
             width: 100%;
+        }
+
+        .forest-reset-btn {
+            display: inline-block;
+            padding: 5px 12px;
+            background: #e05a2b;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.62rem;
+            font-weight: 400;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .forest-reset-btn:hover {
+            background: #c44d22;
         }
 
         .forest-col {
@@ -1351,6 +1372,7 @@ PAGE_TEMPLATE = """
             <span class="summary-totals">
                 <strong>{{ total }}</strong> total &nbsp;·&nbsp; <strong>{{ active_count }}</strong> active / planning
             </span>
+            <a href="/" class="forest-reset-btn">Reset</a>
         </div>
     </div>
 </div>
