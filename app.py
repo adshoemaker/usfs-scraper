@@ -285,7 +285,7 @@ PAGE_TEMPLATE = """
     <title>National Forest NEPA Project Tracker</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Outfit:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -308,7 +308,7 @@ PAGE_TEMPLATE = """
         }
 
         body {
-            font-family: 'Lexend', sans-serif;
+            font-family: 'Poppins', sans-serif;
             background: var(--bg);
             color: var(--text);
             font-size: 14px;
@@ -343,7 +343,7 @@ PAGE_TEMPLATE = """
             padding: 7px 14px;
             border: 1px solid #ccc;
             border-radius: 0;
-            font-family: 'Lexend', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 0.88rem;
             background: white;
             color: #1a1a1a;
@@ -355,18 +355,18 @@ PAGE_TEMPLATE = """
 
         .header-search button {
             padding: 7px 18px;
-            background: #2d4a24;
+            background: #e05a2b;
             color: white;
             border: none;
             border-radius: 0;
-            font-family: 'Lexend', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 0.88rem;
-            font-weight: 700;
+            font-weight: 400;
             cursor: pointer;
             white-space: nowrap;
         }
 
-        .header-search button:hover { background: #1e3a12; }
+        .header-search button:hover { background: #c44d22; }
 
         /* ── Forest summary bar ── */
         .forest-summary {
@@ -436,7 +436,7 @@ PAGE_TEMPLATE = """
             border-radius: 20px;
             padding: 3px 10px 3px 10px;
             font-size: 0.7rem;
-            font-weight: 600;
+            font-weight: 400;
             color: white;
             white-space: nowrap;
             width: 100%;
@@ -538,7 +538,7 @@ PAGE_TEMPLATE = """
             padding: 7px 11px;
             border: 1px solid var(--border2);
             border-radius: 0;
-            font-family: 'Lexend', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 0.82rem;
             font-weight: 500;
             background: var(--bg3);
@@ -586,7 +586,7 @@ PAGE_TEMPLATE = """
             padding: 5px 14px;
             border-radius: 20px;
             border: 1.5px solid transparent;
-            font-family: 'Lexend', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 0.78rem;
             font-weight: 700;
             cursor: pointer;
@@ -656,6 +656,7 @@ PAGE_TEMPLATE = """
 
         /* ── Project cards ── */
         .project-card {
+            font-family: 'Lexend', sans-serif;
             background: var(--bg2);
             border: 1px solid var(--border);
             border-radius: 0;
@@ -960,7 +961,7 @@ PAGE_TEMPLATE = """
             align-items: center;
             padding: 5px 12px;
             border-radius: 0;
-            font-family: 'Lexend', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 0.88rem;
             font-weight: 600;
             text-decoration: none;
@@ -988,7 +989,7 @@ PAGE_TEMPLATE = """
             display: inline-block;
             padding: 5px 12px;
             border-radius: 0;
-            font-family: 'Lexend', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 0.72rem;
             font-weight: 600;
             text-decoration: none;
@@ -1091,7 +1092,8 @@ PAGE_TEMPLATE = """
             .filters select { width: 100%; }
 
             .container { padding: 10px; }
-            .project-card { padding: 12px 14px; }
+            .project-card {
+            font-family: 'Lexend', sans-serif; padding: 12px 14px; }
 
             /* ── Card layout: full vertical stack ── */
 
@@ -1153,6 +1155,7 @@ PAGE_TEMPLATE = """
 
             /* Mobile: single column */
             .project-card {
+            font-family: 'Lexend', sans-serif;
                 display: flex !important;
                 flex-direction: column !important;
             }
