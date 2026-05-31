@@ -626,7 +626,7 @@ PAGE_TEMPLATE = """
         .cat-btn.unclassified { border-color: #888; color: #555; background: rgba(128,128,128,0.07); }
         .cat-btn.unclassified.active { background: #888; color: white; border: 3px solid #888; }
         .cat-btn .dot.unclassified-dot { background: #888; }
-        .cat-btn.taking-comments { border-color: #cc1111; color: #cc1111; background: rgba(251,191,36,0.15); }
+        .cat-btn.taking-comments { border-color: #cc1111; border-width: 3px; color: #7c2d12; background: rgba(251,191,36,0.35); padding: 6px 37px; font-size: 0.78rem; }
         .cat-btn.taking-comments.active { background: #fbbf24; color: #7c2d12; border: 3px solid #cc1111; }
         .cat-btn .dot.taking-comments-dot { background: #fbbf24; border: 1px solid #cc1111; }
 
@@ -787,7 +787,7 @@ PAGE_TEMPLATE = """
             padding: 8px 18px;
             border-radius: 0;
             background: #fbbf24;
-            border: 2px solid #cc1111;
+            border: 3px solid #cc1111;
             color: #7c2d12;
             font-weight: 700;
             font-size: 0.82rem;
@@ -984,21 +984,22 @@ PAGE_TEMPLATE = """
 
         .project-title-text {
             font-family: 'Lexend', sans-serif;
-            font-size: 0.78rem;
+            font-size: 1.3rem;
             font-weight: 400;
             color: #1a1a1a;
-            line-height: 1.4;
-            display: inline;
+            letter-spacing: 0.8px;
+            line-height: 1.3;
+            display: block;
         }
 
         .btn-comment.project-link {
-            background: transparent;
+            background: white;
             color: #2563eb;
-            border: 1px solid #2563eb;
+            border: 2px solid #2563eb;
         }
 
         .btn-comment.project-link:hover {
-            background: rgba(37,99,235,0.08);
+            background: #f0f4ff;
             color: #1d4ed8;
         }
 
@@ -1051,7 +1052,7 @@ PAGE_TEMPLATE = """
         }
 
         .btn-comment.secondary {
-            background: #d8d8d4;
+            background: white;
             color: #555;
             border: 2px solid var(--green);
         }
@@ -1061,21 +1062,21 @@ PAGE_TEMPLATE = """
         }
 
         .btn-comment.secondary:hover {
-            background: #c8c8c4;
+            background: #f0fff0;
             color: #333;
             border-color: var(--green);
         }
 
         .btn-comment.primary-inactive {
-            background: #d8d8d4 !important;
-            color: #555 !important;
+            background: white !important;
+            color: #999 !important;
             border: 1px solid #b8b8b4 !important;
             cursor: pointer;
         }
 
         .btn-comment.primary-inactive:hover {
-            background: #c8c8c4 !important;
-            color: #444 !important;
+            background: #f8f8f8 !important;
+            color: #777 !important;
         }
 
         /* ── Mobile layout ── */
