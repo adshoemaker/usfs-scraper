@@ -956,6 +956,26 @@ PAGE_TEMPLATE = """
             margin-bottom: 8px;
         }
 
+        .project-title-text {
+            font-family: 'Lexend', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 400;
+            color: #1a1a1a;
+            line-height: 1.4;
+            display: inline;
+        }
+
+        .btn-comment.project-link {
+            background: transparent;
+            color: #2563eb;
+            border: 1px solid #2563eb;
+        }
+
+        .btn-comment.project-link:hover {
+            background: rgba(37,99,235,0.08);
+            color: #1d4ed8;
+        }
+
         .btn-title {
             display: inline-flex;
             align-items: center;
@@ -1471,9 +1491,7 @@ PAGE_TEMPLATE = """
                     {% set _fcolor = state_colors.get(_fstate, {}).get('pill', '#2d7a1f') %}
                     <div class="forest-tag" style="color: {{ _fcolor }};">{{ p.forest_name }}</div>
                     <div class="btn-title-wrap">
-                        <a href="{{ p.project_url }}" target="_blank" class="btn-title">
-                            {{ p.project_name }}
-                        </a>
+                        <span class="project-title-text">{{ p.project_name }}</span>
                         {% if p.get('first_seen') and p['first_seen'][:10] >= recent_cutoff %}
                         <span class="new-badge">NEW</span>
                         {% endif %}
@@ -1530,17 +1548,20 @@ PAGE_TEMPLATE = """
                         </div>
                         {% endif %}
                         <!-- Comment buttons (desktop: side by side; mobile: stacked) -->
-                        {% if has_milestones %}
                         {% set project_id = p.project_url.rstrip('/').split('/')[-1] %}
                         <div class="comment-buttons">
+                            <a class="btn-comment project-link"
+                               href="{{ p.project_url }}"
+                               target="_blank" rel="noopener">🔗 View Project Page</a>
+                            {% if has_milestones %}
                             <a class="btn-comment {{ 'primary' if p.get('accepting_comments') else 'primary-inactive' }}"
                                href="https://cara.fs2c.usda.gov/Public/CommentInput?Project={{ project_id }}"
                                target="_blank" rel="noopener">{{ '✍️ ' if p.get('accepting_comments') else '' }}Submit New Comments</a>
                             <a class="btn-comment secondary"
                                href="https://cara.fs2c.usda.gov/Public/ReadingRoom?Project={{ project_id }}"
                                target="_blank" rel="noopener">📖 View Prior Comments</a>
+                            {% endif %}
                         </div>
-                        {% endif %}
                         <!-- Meta tags -->
                         <div class="meta">
                             {% if p.unit %}<span>📍 {{ p.unit }}</span>{% endif %}
@@ -1593,12 +1614,6 @@ PAGE_TEMPLATE = """
     Data scraped from fs.usda.gov &nbsp;·&nbsp; Last updated: {{ last_scraped }}
 </footer>
 
-<script>
-// On first bare visit (no URL params), default to Taking Comments Now filter
-if (window.location.search === '' || window.location.search === '?') {
-    window.location.replace('/?category=taking_comments');
-}
-</script>
 </body>
 <script>
 
