@@ -4,8 +4,8 @@
   "forests_scraped": 13,
   "projects": [
     {
-      "forest_name": "MBS",
-      "forest_code": "multi",
+      "forest_name": "Mt. Baker-Snoqualmie National Forest",
+      "forest_code": "mbs",
       "region": "R06",
       "state": "WA",
       "project_name": "2025 Mt. Baker Geothermal Consent to Lease",
@@ -23,22 +23,22 @@
         },
         {
           "milestone": "Comment Period",
-          "date": "04/2026 (Estimated)",
+          "date": "04/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -55,12 +55,12 @@
         },
         {
           "milestone": "Comment Period",
-          "date": "04/2026 (Estimated)",
+          "date": "04/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -136,12 +136,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "04/2026 (Estimated)",
+          "date": "04/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -157,12 +157,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "04/2026 (Estimated)",
+          "date": "04/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -231,12 +231,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -252,12 +252,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -461,22 +461,22 @@
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "09/2027 (Estimated)",
+          "date": "09/2027\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "05/2027 (Estimated)",
+          "date": "05/2027\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "12/2027 (Estimated)",
+          "date": "12/2027\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "01/2028 (Estimated)",
+          "date": "01/2028\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -493,12 +493,12 @@
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "09/2027 (Estimated)",
+          "date": "09/2027\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "05/2027 (Estimated)",
+          "date": "05/2027\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -570,17 +570,17 @@
       "milestones": [
         {
           "milestone": "Scoping Start",
-          "date": "04/2023 (Estimated)",
+          "date": "04/2023\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "09/2023 (Estimated)",
+          "date": "09/2023\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "09/2023 (Estimated)",
+          "date": "09/2023\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -592,12 +592,12 @@
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
-          "date": "04/2023 (Estimated)",
+          "date": "04/2023\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "09/2023 (Estimated)",
+          "date": "09/2023\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -741,12 +741,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -762,12 +762,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -887,12 +887,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "09/2026 (Estimated)",
+          "date": "09/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "09/2026 (Estimated)",
+          "date": "09/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -908,12 +908,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "09/2026 (Estimated)",
+          "date": "09/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "09/2026 (Estimated)",
+          "date": "09/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -938,12 +938,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "09/2023 (Estimated)",
+          "date": "09/2023\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "09/2023 (Estimated)",
+          "date": "09/2023\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -959,12 +959,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "09/2023 (Estimated)",
+          "date": "09/2023\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "09/2023 (Estimated)",
+          "date": "09/2023\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -1023,12 +1023,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "09/2025 (Estimated)",
+          "date": "09/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "10/2025 (Estimated)",
+          "date": "10/2025\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -1044,12 +1044,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "09/2025 (Estimated)",
+          "date": "09/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "10/2025 (Estimated)",
+          "date": "10/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -1069,17 +1069,17 @@
       "milestones": [
         {
           "milestone": "Scoping Start",
-          "date": "06/2025 (Estimated)",
+          "date": "06/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "08/2025 (Estimated)",
+          "date": "08/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -1090,12 +1090,12 @@
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
-          "date": "06/2025 (Estimated)",
+          "date": "06/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "08/2025 (Estimated)",
+          "date": "08/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -1154,17 +1154,17 @@
         },
         {
           "milestone": "Comment Period",
-          "date": "03/2026 (Estimated)",
+          "date": "03/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "04/2026 (Estimated)",
+          "date": "04/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -1180,12 +1180,12 @@
         },
         {
           "milestone": "Comment Period",
-          "date": "03/2026 (Estimated)",
+          "date": "03/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "04/2026 (Estimated)",
+          "date": "04/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -1244,12 +1244,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "01/1970 (Estimated)",
+          "date": "01/1970\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "11/2023 (Estimated)",
+          "date": "11/2023\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -1265,12 +1265,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "01/1970 (Estimated)",
+          "date": "01/1970\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "11/2023 (Estimated)",
+          "date": "11/2023\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -1307,27 +1307,27 @@
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
-          "date": "04/2026 (Estimated)",
+          "date": "04/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "DEIS NOA in Federal Register",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "09/2026 (Estimated)",
+          "date": "09/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "11/2026 (Estimated)",
+          "date": "11/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "11/2026 (Estimated)",
+          "date": "11/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -1338,12 +1338,12 @@
       "most_recent_activity": [
         {
           "milestone": "NOI in Federal Register",
-          "date": "04/2026 (Estimated)",
+          "date": "04/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "DEIS NOA in Federal Register",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -1368,12 +1368,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "01/1970 (Estimated)",
+          "date": "01/1970\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "08/2023 (Estimated)",
+          "date": "08/2023\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -1389,12 +1389,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "01/1970 (Estimated)",
+          "date": "01/1970\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "08/2023 (Estimated)",
+          "date": "08/2023\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -1446,12 +1446,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "02/2026 (Estimated)",
+          "date": "02/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "03/2026 (Estimated)",
+          "date": "03/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -1467,12 +1467,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "02/2026 (Estimated)",
+          "date": "02/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "03/2026 (Estimated)",
+          "date": "03/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -1492,27 +1492,27 @@
       "milestones": [
         {
           "milestone": "Scoping Start",
-          "date": "07/2025 (Estimated)",
+          "date": "07/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Comment Period",
-          "date": "07/2025 (Estimated)",
+          "date": "07/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "08/2025 (Estimated)",
+          "date": "08/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "09/2025 (Estimated)",
+          "date": "09/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "09/2025 (Estimated)",
+          "date": "09/2025\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -1523,12 +1523,12 @@
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
-          "date": "07/2025 (Estimated)",
+          "date": "07/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Comment Period",
-          "date": "07/2025 (Estimated)",
+          "date": "07/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -1558,22 +1558,22 @@
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "10/2025 (Estimated)",
+          "date": "10/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "10/2025 (Estimated)",
+          "date": "10/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "12/2025 (Estimated)",
+          "date": "12/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -1589,12 +1589,12 @@
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "10/2025 (Estimated)",
+          "date": "10/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "10/2025 (Estimated)",
+          "date": "10/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -1631,22 +1631,22 @@
       "milestones": [
         {
           "milestone": "Scoping Start",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Comment Period",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "07/2027 (Estimated)",
+          "date": "07/2027\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "09/2027 (Estimated)",
+          "date": "09/2027\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -1657,12 +1657,12 @@
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Comment Period",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -1692,12 +1692,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -1713,12 +1713,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -1760,12 +1760,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "03/2025 (Estimated)",
+          "date": "03/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2025 (Estimated)",
+          "date": "06/2025\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -1781,12 +1781,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "03/2025 (Estimated)",
+          "date": "03/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2025 (Estimated)",
+          "date": "06/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -1913,12 +1913,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "10/2025 (Estimated)",
+          "date": "10/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -1934,12 +1934,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "10/2025 (Estimated)",
+          "date": "10/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -1964,22 +1964,22 @@
         },
         {
           "milestone": "Comment Period",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "09/2026 (Estimated)",
+          "date": "09/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "09/2026 (Estimated)",
+          "date": "09/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -1995,12 +1995,12 @@
         },
         {
           "milestone": "Comment Period",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -2047,22 +2047,22 @@
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "09/2026 (Estimated)",
+          "date": "09/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "09/2028 (Estimated)",
+          "date": "09/2028\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -2078,12 +2078,12 @@
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -2305,12 +2305,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "02/2026 (Estimated)",
+          "date": "02/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "02/2026 (Estimated)",
+          "date": "02/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -2326,12 +2326,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "02/2026 (Estimated)",
+          "date": "02/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "02/2026 (Estimated)",
+          "date": "02/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -2407,12 +2407,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "02/2020 (Estimated)",
+          "date": "02/2020\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "02/2020 (Estimated)",
+          "date": "02/2020\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -2428,12 +2428,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "02/2020 (Estimated)",
+          "date": "02/2020\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "02/2020 (Estimated)",
+          "date": "02/2020\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -2526,12 +2526,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -2547,12 +2547,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -2587,12 +2587,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -2608,12 +2608,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -2638,12 +2638,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "11/2026 (Estimated)",
+          "date": "11/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -2659,12 +2659,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "11/2026 (Estimated)",
+          "date": "11/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -2711,17 +2711,17 @@
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "04/2027 (Estimated)",
+          "date": "04/2027\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "04/2027 (Estimated)",
+          "date": "04/2027\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -2737,12 +2737,12 @@
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "04/2027 (Estimated)",
+          "date": "04/2027\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -2784,27 +2784,27 @@
         },
         {
           "milestone": "DEIS NOA in Federal Register",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "02/2027 (Estimated)",
+          "date": "02/2027\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "02/2027 (Estimated)",
+          "date": "02/2027\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "06/2027 (Estimated)",
+          "date": "06/2027\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2027 (Estimated)",
+          "date": "07/2027\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -2820,12 +2820,12 @@
         },
         {
           "milestone": "DEIS NOA in Federal Register",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "02/2027 (Estimated)",
+          "date": "02/2027\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -2867,12 +2867,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "10/2024 (Estimated)",
+          "date": "10/2024\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "10/2024 (Estimated)",
+          "date": "10/2024\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -2888,12 +2888,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "10/2024 (Estimated)",
+          "date": "10/2024\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "10/2024 (Estimated)",
+          "date": "10/2024\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -2935,12 +2935,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "09/2025 (Estimated)",
+          "date": "09/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "10/2025 (Estimated)",
+          "date": "10/2025\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -2956,12 +2956,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "09/2025 (Estimated)",
+          "date": "09/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "10/2025 (Estimated)",
+          "date": "10/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -3070,22 +3070,22 @@
       "milestones": [
         {
           "milestone": "Scoping Start",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Comment Period",
-          "date": "11/2026 (Estimated)",
+          "date": "11/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "03/2027 (Estimated)",
+          "date": "03/2027\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2027 (Estimated)",
+          "date": "07/2027\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -3096,12 +3096,12 @@
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Comment Period",
-          "date": "11/2026 (Estimated)",
+          "date": "11/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -3160,12 +3160,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "09/2025 (Estimated)",
+          "date": "09/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "10/2025 (Estimated)",
+          "date": "10/2025\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -3181,12 +3181,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "09/2025 (Estimated)",
+          "date": "09/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "10/2025 (Estimated)",
+          "date": "10/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -3257,17 +3257,17 @@
       "milestones": [
         {
           "milestone": "Scoping Start",
-          "date": "01/2026 (Estimated)",
+          "date": "01/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "01/2027 (Estimated)",
+          "date": "01/2027\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2028 (Estimated)",
+          "date": "06/2028\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -3278,12 +3278,12 @@
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
-          "date": "01/2026 (Estimated)",
+          "date": "01/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "01/2027 (Estimated)",
+          "date": "01/2027\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -3350,12 +3350,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -3372,12 +3372,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -3470,12 +3470,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2024 (Estimated)",
+          "date": "06/2024\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "08/2024 (Estimated)",
+          "date": "08/2024\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -3491,12 +3491,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2024 (Estimated)",
+          "date": "06/2024\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "08/2024 (Estimated)",
+          "date": "08/2024\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -3538,12 +3538,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "04/2026 (Estimated)",
+          "date": "04/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -3559,12 +3559,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "04/2026 (Estimated)",
+          "date": "04/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -3589,12 +3589,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "11/2026 (Estimated)",
+          "date": "11/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -3610,12 +3610,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "11/2026 (Estimated)",
+          "date": "11/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -3640,12 +3640,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "01/1970 (Estimated)",
+          "date": "01/1970\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2015 (Estimated)",
+          "date": "06/2015\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -3661,12 +3661,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "01/1970 (Estimated)",
+          "date": "01/1970\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2015 (Estimated)",
+          "date": "06/2015\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -3822,27 +3822,27 @@
       "milestones": [
         {
           "milestone": "Scoping Start",
-          "date": "11/2024 (Estimated)",
+          "date": "11/2024\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Comment Period",
-          "date": "02/2025 (Estimated)",
+          "date": "02/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "05/2025 (Estimated)",
+          "date": "05/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "09/2025 (Estimated)",
+          "date": "09/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -3853,12 +3853,12 @@
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
-          "date": "11/2024 (Estimated)",
+          "date": "11/2024\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Comment Period",
-          "date": "02/2025 (Estimated)",
+          "date": "02/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -3883,12 +3883,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "01/2025 (Estimated)",
+          "date": "01/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "04/2025 (Estimated)",
+          "date": "04/2025\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -3904,12 +3904,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "01/2025 (Estimated)",
+          "date": "01/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "04/2025 (Estimated)",
+          "date": "04/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -3934,17 +3934,17 @@
         },
         {
           "milestone": "Comment Period",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "04/2027 (Estimated)",
+          "date": "04/2027\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -3960,12 +3960,12 @@
         },
         {
           "milestone": "Comment Period",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -3990,12 +3990,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "10/2026 (Estimated)",
+          "date": "10/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -4011,12 +4011,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "10/2026 (Estimated)",
+          "date": "10/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -4104,17 +4104,17 @@
       "milestones": [
         {
           "milestone": "Scoping Start",
-          "date": "02/2026 (Estimated)",
+          "date": "02/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "12/2026 (Estimated)",
+          "date": "12/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "01/2027 (Estimated)",
+          "date": "01/2027\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -4125,12 +4125,12 @@
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
-          "date": "02/2026 (Estimated)",
+          "date": "02/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "12/2026 (Estimated)",
+          "date": "12/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -4177,12 +4177,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -4198,12 +4198,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -4308,22 +4308,22 @@
       "milestones": [
         {
           "milestone": "Scoping Start",
-          "date": "02/2026 (Estimated)",
+          "date": "02/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Comment Period",
-          "date": "03/2026 (Estimated)",
+          "date": "03/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -4334,12 +4334,12 @@
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
-          "date": "02/2026 (Estimated)",
+          "date": "02/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Comment Period",
-          "date": "03/2026 (Estimated)",
+          "date": "03/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -4364,17 +4364,17 @@
         },
         {
           "milestone": "Comment Period",
-          "date": "01/2026 (Estimated)",
+          "date": "01/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -4391,12 +4391,12 @@
         },
         {
           "milestone": "Comment Period",
-          "date": "01/2026 (Estimated)",
+          "date": "01/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "05/2026 (Estimated)",
+          "date": "05/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -4450,17 +4450,17 @@
       "milestones": [
         {
           "milestone": "Scoping Start",
-          "date": "06/2025 (Estimated)",
+          "date": "06/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "08/2025 (Estimated)",
+          "date": "08/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "09/2025 (Estimated)",
+          "date": "09/2025\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -4471,12 +4471,12 @@
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
-          "date": "06/2025 (Estimated)",
+          "date": "06/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "08/2025 (Estimated)",
+          "date": "08/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -4506,12 +4506,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -4527,12 +4527,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -4569,17 +4569,17 @@
       "milestones": [
         {
           "milestone": "Scoping Start",
-          "date": "08/2025 (Estimated)",
+          "date": "08/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "09/2025 (Estimated)",
+          "date": "09/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "10/2025 (Estimated)",
+          "date": "10/2025\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -4590,12 +4590,12 @@
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
-          "date": "08/2025 (Estimated)",
+          "date": "08/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "09/2025 (Estimated)",
+          "date": "09/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -4615,17 +4615,17 @@
       "milestones": [
         {
           "milestone": "Scoping Start",
-          "date": "05/2025 (Estimated)",
+          "date": "05/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "06/2025 (Estimated)",
+          "date": "06/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2025 (Estimated)",
+          "date": "07/2025\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -4636,12 +4636,12 @@
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
-          "date": "05/2025 (Estimated)",
+          "date": "05/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "06/2025 (Estimated)",
+          "date": "06/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -4794,12 +4794,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -4815,12 +4815,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -4915,27 +4915,27 @@
         },
         {
           "milestone": "DEIS NOA in Federal Register",
-          "date": "04/2023 (Estimated)",
+          "date": "04/2023\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "12/2023 (Estimated)",
+          "date": "12/2023\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "10/2023 (Estimated)",
+          "date": "10/2023\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "12/2023 (Estimated)",
+          "date": "12/2023\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "01/2024 (Estimated)",
+          "date": "01/2024\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -4951,12 +4951,12 @@
         },
         {
           "milestone": "DEIS NOA in Federal Register",
-          "date": "04/2023 (Estimated)",
+          "date": "04/2023\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "12/2023 (Estimated)",
+          "date": "12/2023\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -5027,17 +5027,17 @@
       "milestones": [
         {
           "milestone": "Scoping Start",
-          "date": "09/2024 (Estimated)",
+          "date": "09/2024\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "09/2024 (Estimated)",
+          "date": "09/2024\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "09/2024 (Estimated)",
+          "date": "09/2024\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -5048,12 +5048,12 @@
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
-          "date": "09/2024 (Estimated)",
+          "date": "09/2024\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "09/2024 (Estimated)",
+          "date": "09/2024\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -5078,12 +5078,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "08/2024 (Estimated)",
+          "date": "08/2024\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "09/2024 (Estimated)",
+          "date": "09/2024\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -5099,12 +5099,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "08/2024 (Estimated)",
+          "date": "08/2024\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "09/2024 (Estimated)",
+          "date": "09/2024\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -5158,17 +5158,17 @@
       "milestones": [
         {
           "milestone": "Scoping Start",
-          "date": "04/2024 (Estimated)",
+          "date": "04/2024\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "07/2024 (Estimated)",
+          "date": "07/2024\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "10/2024 (Estimated)",
+          "date": "10/2024\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -5179,12 +5179,12 @@
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
-          "date": "04/2024 (Estimated)",
+          "date": "04/2024\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "07/2024 (Estimated)",
+          "date": "07/2024\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -5209,27 +5209,27 @@
         },
         {
           "milestone": "DEIS NOA in Federal Register",
-          "date": "08/2025 (Estimated)",
+          "date": "08/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "04/2025 (Estimated)",
+          "date": "04/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "01/2026 (Estimated)",
+          "date": "01/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "04/2026 (Estimated)",
+          "date": "04/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "04/2027 (Estimated)",
+          "date": "04/2027\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -5245,12 +5245,12 @@
         },
         {
           "milestone": "DEIS NOA in Federal Register",
-          "date": "08/2025 (Estimated)",
+          "date": "08/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "04/2025 (Estimated)",
+          "date": "04/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -5292,12 +5292,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "01/2025 (Estimated)",
+          "date": "01/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2025 (Estimated)",
+          "date": "06/2025\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -5313,12 +5313,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "01/2025 (Estimated)",
+          "date": "01/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2025 (Estimated)",
+          "date": "06/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -5343,12 +5343,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -5364,12 +5364,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -5394,12 +5394,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "12/2024 (Estimated)",
+          "date": "12/2024\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2025 (Estimated)",
+          "date": "06/2025\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -5415,12 +5415,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "12/2024 (Estimated)",
+          "date": "12/2024\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2025 (Estimated)",
+          "date": "06/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -5462,12 +5462,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "03/2025 (Estimated)",
+          "date": "03/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2025 (Estimated)",
+          "date": "06/2025\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -5483,12 +5483,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "03/2025 (Estimated)",
+          "date": "03/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2025 (Estimated)",
+          "date": "06/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -5508,17 +5508,17 @@
       "milestones": [
         {
           "milestone": "Scoping Start",
-          "date": "04/2025 (Estimated)",
+          "date": "04/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "06/2025 (Estimated)",
+          "date": "06/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2025 (Estimated)",
+          "date": "07/2025\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -5529,12 +5529,12 @@
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
-          "date": "04/2025 (Estimated)",
+          "date": "04/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "06/2025 (Estimated)",
+          "date": "06/2025\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -5769,12 +5769,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -5790,12 +5790,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -5876,12 +5876,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "05/2025 (Estimated)",
+          "date": "05/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -5897,12 +5897,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "05/2025 (Estimated)",
+          "date": "05/2025\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -5949,12 +5949,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -5970,12 +5970,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -6080,12 +6080,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -6101,12 +6101,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -6182,12 +6182,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "09/2026 (Estimated)",
+          "date": "09/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "10/2026 (Estimated)",
+          "date": "10/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -6203,12 +6203,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "09/2026 (Estimated)",
+          "date": "09/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "10/2026 (Estimated)",
+          "date": "10/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -6267,12 +6267,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "01/2027 (Estimated)",
+          "date": "01/2027\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -6288,12 +6288,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "01/2027 (Estimated)",
+          "date": "01/2027\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -6330,22 +6330,22 @@
       "milestones": [
         {
           "milestone": "Scoping Start",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Comment Period",
-          "date": "09/2026 (Estimated)",
+          "date": "09/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "11/2026 (Estimated)",
+          "date": "11/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "04/2027 (Estimated)",
+          "date": "04/2027\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -6356,12 +6356,12 @@
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Comment Period",
-          "date": "09/2026 (Estimated)",
+          "date": "09/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -6403,12 +6403,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -6424,12 +6424,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -7113,7 +7113,7 @@
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
@@ -7123,12 +7123,12 @@
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -7144,12 +7144,12 @@
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
+          "date": "06/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -7242,27 +7242,27 @@
         },
         {
           "milestone": "DEIS NOA in Federal Register",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "05/2027 (Estimated)",
+          "date": "05/2027\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "05/2027 (Estimated)",
+          "date": "05/2027\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "10/2027 (Estimated)",
+          "date": "10/2027\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "11/2027 (Estimated)",
+          "date": "11/2027\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -7278,12 +7278,12 @@
         },
         {
           "milestone": "DEIS NOA in Federal Register",
-          "date": "08/2026 (Estimated)",
+          "date": "08/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "05/2027 (Estimated)",
+          "date": "05/2027\u00a0(Estimated)",
           "estimated": true
         }
       ]
@@ -7330,22 +7330,22 @@
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Decision",
-          "date": "11/2026 (Estimated)",
+          "date": "11/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Implementation",
-          "date": "12/2026 (Estimated)",
+          "date": "12/2026\u00a0(Estimated)",
           "estimated": true
         }
       ],
@@ -7361,12 +7361,12 @@
         },
         {
           "milestone": "FEIS NOA in Federal Register",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         },
         {
           "milestone": "Objection Period Start",
-          "date": "07/2026 (Estimated)",
+          "date": "07/2026\u00a0(Estimated)",
           "estimated": true
         }
       ]
