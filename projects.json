@@ -1,70 +1,8 @@
 {
-  "scraped_at": "2026-06-01T20:52:00.696457+00:00",
-  "total_projects": 255,
+  "scraped_at": "2026-06-01T22:39:21.170793+00:00",
+  "total_projects": 250,
   "forests_scraped": 13,
   "projects": [
-    {
-      "forest_name": "MBS",
-      "forest_code": "multi",
-      "region": "R06",
-      "state": "WA",
-      "project_name": "2025 Mt. Baker Geothermal Consent to Lease",
-      "project_url": "https://www.fs.usda.gov/r06/mbs/projects/68702",
-      "description": "To explore or develop geothermal resources on National Forest lands, the USFS must consent to lease areas nominated by the BLM. This analysis does not authorize ground disturbance, but creates stipulations for authorized leasing areas. https://usfs-public.box.com/s/r56gzyn1msyfvj8md81arv1mo15tgoso",
-      "status": "In Progress",
-      "unit": "Mt Baker Ranger District",
-      "purpose": "Minerals and geology",
-      "scraped_at": "2026-06-01T20:31:12.054372+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "09/10/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Comment Period",
-          "date": "04/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Objection Period Start",
-          "date": "06/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Decision",
-          "date": "07/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "is_multi_forest": true,
-      "first_seen": "2026-05-28T14:25:43.011910+00:00",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "09/10/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Comment Period",
-          "date": "04/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Objection Period Start",
-          "date": "06/2026 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
       "forest_code": "mbs",
@@ -107,7 +45,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.013008+00:00",
+      "first_seen": "2026-05-28T14:44:43.396891+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -153,7 +91,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.014132+00:00",
+      "first_seen": "2026-05-28T14:44:43.397679+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -214,7 +152,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.015356+00:00",
+      "first_seen": "2026-05-28T14:44:43.398477+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -265,7 +203,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.016573+00:00",
+      "first_seen": "2026-05-28T14:44:43.399296+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -316,7 +254,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.018233+00:00",
+      "first_seen": "2026-05-28T14:44:43.400112+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -367,7 +305,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.019441+00:00",
+      "first_seen": "2026-05-28T14:44:43.400936+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -428,7 +366,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.020585+00:00",
+      "first_seen": "2026-05-28T14:44:43.401722+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -479,7 +417,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.021692+00:00",
+      "first_seen": "2026-05-28T14:44:43.402463+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -530,7 +468,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.022985+00:00",
+      "first_seen": "2026-05-28T14:44:43.403525+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -581,7 +519,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.023987+00:00",
+      "first_seen": "2026-05-28T14:44:43.404305+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -627,7 +565,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.025101+00:00",
+      "first_seen": "2026-05-28T14:44:43.405097+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -663,7 +601,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.026164+00:00",
+      "first_seen": "2026-05-28T14:44:43.405934+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -704,7 +642,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.027276+00:00",
+      "first_seen": "2026-05-28T14:44:43.406835+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -755,7 +693,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.028283+00:00",
+      "first_seen": "2026-05-28T14:44:43.407610+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -816,7 +754,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.029384+00:00",
+      "first_seen": "2026-05-28T14:44:43.408531+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -831,73 +769,6 @@
         {
           "milestone": "Implementation",
           "date": "04/2025 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "MBS, ONF, Okan-Wen, GPNF, RRS, Fremont-Winema, Shasta-Trinity, Klamath",
-      "forest_code": "multi",
-      "region": "R06",
-      "state": "WA",
-      "project_name": "Northwest Forest Plan Amendment",
-      "project_url": "https://www.fs.usda.gov/r06/mbs/projects/64745",
-      "description": "The NWFP Amendment provides an updated management framework that incorporates best available scientific information, considers public input, recommendations from the Federal Advisory Committee, tribes, and government partners.",
-      "status": "In Progress",
-      "unit": "R6 - Pacific Northwest Region All Units",
-      "purpose": "Land management planning",
-      "scraped_at": "2026-06-01T20:31:12.055541+00:00",
-      "milestones": [
-        {
-          "milestone": "NOI in Federal Register",
-          "date": "12/18/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "DEIS NOA in Federal Register",
-          "date": "11/15/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "FEIS NOA in Federal Register",
-          "date": "09/2027 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Objection Period Start",
-          "date": "05/2027 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2027 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "01/2028 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Impact Statement",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "is_multi_forest": true,
-      "first_seen": "2026-05-28T14:25:43.030352+00:00",
-      "most_recent_activity": [
-        {
-          "milestone": "DEIS NOA in Federal Register",
-          "date": "11/15/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "FEIS NOA in Federal Register",
-          "date": "09/2027 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Objection Period Start",
-          "date": "05/2027 (Estimated)",
           "estimated": true
         }
       ]
@@ -934,7 +805,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.031373+00:00",
+      "first_seen": "2026-05-28T14:44:43.410109+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -949,68 +820,6 @@
         {
           "milestone": "Implementation",
           "date": "05/2025 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "MBS, ONF, Okan-Wen, Colville",
-      "forest_code": "multi",
-      "region": "R06",
-      "state": "WA",
-      "project_name": "Pacific Northwest National Scenic Trail Comprehensive Plan",
-      "project_url": "https://www.fs.usda.gov/r06/mbs/projects/52259",
-      "description": "The Comprehensive Plan will develop administrative and management objectives and practices and desired conditions for the Pacific Northwest National Scenic Trail on public lands in Forest Service Regions 1 and Regions 6.",
-      "status": "Completed",
-      "unit": "R6 - Pacific Northwest Region All Units",
-      "purpose": "Recreation management|Special area management",
-      "scraped_at": "2026-06-01T20:31:12.055687+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "11/01/2017",
-          "estimated": false
-        },
-        {
-          "milestone": "Comment Period",
-          "date": "03/16/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Objection Period Start",
-          "date": "07/13/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "11/2023 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "01/2024 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "is_multi_forest": true,
-      "first_seen": "2026-05-28T14:25:43.032339+00:00",
-      "most_recent_activity": [
-        {
-          "milestone": "Objection Period Start",
-          "date": "07/13/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "11/2023 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "01/2024 (Estimated)",
           "estimated": true
         }
       ]
@@ -1047,7 +856,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.033353+00:00",
+      "first_seen": "2026-05-28T14:44:43.411970+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -1062,53 +871,6 @@
         {
           "milestone": "Implementation",
           "date": "06/2015 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "MBS, Okan-Wen, Colville, Wallowa-Whitman, Fremont-Winema",
-      "forest_code": "multi",
-      "region": "R06",
-      "state": "WA",
-      "project_name": "Region 6 Elite Tree Protection Project",
-      "project_url": "https://www.fs.usda.gov/r06/mbs/projects/63727",
-      "description": "The Pacific Northwest Region is collaborating with nine Forests to develop a region-wide project to protect whitebark pine trees (Pinus albicaulis) that have  a high level of white pine blister rust resistance.",
-      "status": "Developing Proposal",
-      "unit": "R6 - Pacific Northwest Region All Units",
-      "purpose": "Wildlife, fish, rare plants|Vegetation management (other than forest products)",
-      "scraped_at": "2026-06-01T20:31:12.055827+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "04/2023 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Decision",
-          "date": "09/2023 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "09/2023 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Decision Memo",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "is_multi_forest": true,
-      "first_seen": "2026-05-28T14:25:43.034413+00:00",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "04/2023 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Decision",
-          "date": "09/2023 (Estimated)",
           "estimated": true
         }
       ]
@@ -1145,7 +907,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.035389+00:00",
+      "first_seen": "2026-05-28T14:44:43.413562+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -1196,7 +958,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.036324+00:00",
+      "first_seen": "2026-05-28T14:44:43.414341+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -1247,7 +1009,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.037268+00:00",
+      "first_seen": "2026-05-28T14:44:43.415135+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -1298,7 +1060,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.038206+00:00",
+      "first_seen": "2026-05-28T14:44:43.415937+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -1349,7 +1111,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.039147+00:00",
+      "first_seen": "2026-05-28T14:44:43.416724+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -1400,7 +1162,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.040176+00:00",
+      "first_seen": "2026-05-28T14:44:43.417530+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -1451,7 +1213,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.041203+00:00",
+      "first_seen": "2026-05-28T14:44:43.418281+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -1497,7 +1259,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.042207+00:00",
+      "first_seen": "2026-05-28T14:44:43.419350+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -1548,7 +1310,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.043158+00:00",
+      "first_seen": "2026-05-28T14:44:43.420131+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -1599,7 +1361,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.044478+00:00",
+      "first_seen": "2026-05-28T14:44:43.420928+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -1650,7 +1412,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.045814+00:00",
+      "first_seen": "2026-05-28T14:44:43.421711+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -1701,7 +1463,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.046706+00:00",
+      "first_seen": "2026-05-28T14:44:43.422645+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -1752,7 +1514,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:43.047728+00:00",
+      "first_seen": "2026-05-28T14:44:43.423464+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -1813,7 +1575,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": true,
       "comment_deadline": "6/30/2026 11:59:59 PM (Pacific Standard Time)",
-      "first_seen": "2026-05-28T14:25:46.319490+00:00",
+      "first_seen": "2026-05-28T14:44:46.559827+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -1864,7 +1626,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:46.320618+00:00",
+      "first_seen": "2026-05-28T14:44:46.560675+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -1915,7 +1677,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:46.321705+00:00",
+      "first_seen": "2026-05-28T14:44:46.561494+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -1966,7 +1728,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:46.322748+00:00",
+      "first_seen": "2026-05-28T14:44:46.562620+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -2017,7 +1779,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.585703+00:00",
+      "first_seen": "2026-05-28T14:44:49.699856+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -2068,7 +1830,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.586996+00:00",
+      "first_seen": "2026-05-28T14:44:49.700701+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -2119,7 +1881,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.588377+00:00",
+      "first_seen": "2026-05-28T14:44:49.701595+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -2170,7 +1932,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.589719+00:00",
+      "first_seen": "2026-05-28T14:44:49.702480+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -2226,7 +1988,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.591010+00:00",
+      "first_seen": "2026-05-28T14:44:49.703301+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -2277,7 +2039,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.592230+00:00",
+      "first_seen": "2026-05-28T14:44:49.704130+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -2328,7 +2090,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.593498+00:00",
+      "first_seen": "2026-05-28T14:44:49.705349+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -2379,7 +2141,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.594680+00:00",
+      "first_seen": "2026-05-28T14:44:49.706169+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -2440,7 +2202,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.595865+00:00",
+      "first_seen": "2026-05-28T14:44:49.706990+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -2501,7 +2263,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.596906+00:00",
+      "first_seen": "2026-05-28T14:44:49.707846+00:00",
       "most_recent_activity": [
         {
           "milestone": "NOI in Federal Register",
@@ -2547,7 +2309,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.597969+00:00",
+      "first_seen": "2026-05-28T14:44:49.708715+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -2598,7 +2360,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.599000+00:00",
+      "first_seen": "2026-05-28T14:44:49.709568+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -2659,7 +2421,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.600043+00:00",
+      "first_seen": "2026-05-28T14:44:49.710378+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -2720,7 +2482,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.601105+00:00",
+      "first_seen": "2026-05-28T14:44:49.711189+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -2781,7 +2543,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.604284+00:00",
+      "first_seen": "2026-05-28T14:44:49.713826+00:00",
       "most_recent_activity": [
         {
           "milestone": "DEIS NOA in Federal Register",
@@ -2832,7 +2594,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.605359+00:00",
+      "first_seen": "2026-05-28T14:44:49.714770+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -2888,7 +2650,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.607307+00:00",
+      "first_seen": "2026-05-28T14:44:49.716612+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -2939,7 +2701,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.608251+00:00",
+      "first_seen": "2026-05-28T14:44:49.717602+00:00",
       "most_recent_activity": [
         {
           "milestone": "Comment Period",
@@ -2990,7 +2752,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.609251+00:00",
+      "first_seen": "2026-05-28T14:44:49.718535+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -3041,7 +2803,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:49.610186+00:00",
+      "first_seen": "2026-05-28T14:44:49.719308+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -3092,7 +2854,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:52.885223+00:00",
+      "first_seen": "2026-05-28T14:44:52.854915+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -3143,7 +2905,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:52.887494+00:00",
+      "first_seen": "2026-05-28T14:44:52.856876+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -3204,7 +2966,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:52.888556+00:00",
+      "first_seen": "2026-05-28T14:44:52.857681+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -3250,7 +3012,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:52.889528+00:00",
+      "first_seen": "2026-05-28T14:44:52.858517+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -3301,7 +3063,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:52.890485+00:00",
+      "first_seen": "2026-05-28T14:44:52.859340+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -3352,7 +3114,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:52.891451+00:00",
+      "first_seen": "2026-05-28T14:44:52.860139+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -3403,7 +3165,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:52.892392+00:00",
+      "first_seen": "2026-05-28T14:44:52.860940+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -3464,7 +3226,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:52.895300+00:00",
+      "first_seen": "2026-05-28T14:44:52.863613+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -3520,7 +3282,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:52.896328+00:00",
+      "first_seen": "2026-05-28T14:44:52.864356+00:00",
       "most_recent_activity": [
         {
           "milestone": "Comment Period",
@@ -3586,7 +3348,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:52.897335+00:00",
+      "first_seen": "2026-05-28T14:44:52.865270+00:00",
       "most_recent_activity": [
         {
           "milestone": "DEIS NOA in Federal Register",
@@ -3637,7 +3399,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:56.156082+00:00",
+      "first_seen": "2026-05-28T14:44:56.000976+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -3693,7 +3455,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:56.157445+00:00",
+      "first_seen": "2026-05-28T14:44:56.001856+00:00",
       "most_recent_activity": [
         {
           "milestone": "Comment Period",
@@ -3754,7 +3516,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:56.158762+00:00",
+      "first_seen": "2026-05-28T14:44:56.002621+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -3800,7 +3562,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:56.160129+00:00",
+      "first_seen": "2026-05-28T14:44:56.003436+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -3851,7 +3613,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:56.161536+00:00",
+      "first_seen": "2026-05-28T14:44:56.004522+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -3902,7 +3664,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:56.162855+00:00",
+      "first_seen": "2026-05-28T14:44:56.005284+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -3953,7 +3715,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:56.164096+00:00",
+      "first_seen": "2026-05-28T14:44:56.006123+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -4019,7 +3781,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:56.165310+00:00",
+      "first_seen": "2026-05-28T14:44:56.006942+00:00",
       "most_recent_activity": [
         {
           "milestone": "DEIS NOA in Federal Register",
@@ -4075,7 +3837,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:56.166432+00:00",
+      "first_seen": "2026-05-28T14:44:56.007737+00:00",
       "most_recent_activity": [
         {
           "milestone": "Comment Period",
@@ -4126,7 +3888,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:56.169796+00:00",
+      "first_seen": "2026-05-28T14:44:56.010197+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -4187,7 +3949,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:56.170999+00:00",
+      "first_seen": "2026-05-28T14:44:56.011075+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -4248,7 +4010,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:56.172108+00:00",
+      "first_seen": "2026-05-28T14:44:56.011832+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -4299,7 +4061,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:56.173258+00:00",
+      "first_seen": "2026-05-28T14:44:56.012866+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -4360,7 +4122,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:56.174382+00:00",
+      "first_seen": "2026-05-28T14:44:56.013730+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -4411,7 +4173,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:27:45.397113+00:00",
+      "first_seen": "2026-06-01T20:37:55.686051+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -4462,7 +4224,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:27:45.400278+00:00",
+      "first_seen": "2026-06-01T20:37:55.686151+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -4513,7 +4275,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:27:45.401627+00:00",
+      "first_seen": "2026-06-01T20:37:55.686239+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -4564,7 +4326,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:27:45.403347+00:00",
+      "first_seen": "2026-06-01T20:37:55.686325+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -4620,7 +4382,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:27:45.404725+00:00",
+      "first_seen": "2026-06-01T20:37:55.686410+00:00",
       "most_recent_activity": [
         {
           "milestone": "Comment Period",
@@ -4671,7 +4433,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:27:45.406135+00:00",
+      "first_seen": "2026-06-01T20:37:55.686496+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -4722,7 +4484,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:27:45.407547+00:00",
+      "first_seen": "2026-06-01T20:37:55.686581+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -4783,7 +4545,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:27:45.410499+00:00",
+      "first_seen": "2026-06-01T20:37:55.686751+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -4834,7 +4596,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:27:45.411981+00:00",
+      "first_seen": "2026-06-01T20:37:55.686838+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -4885,7 +4647,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:27:45.413570+00:00",
+      "first_seen": "2026-06-01T20:37:55.686923+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -4946,7 +4708,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.749955+00:00",
+      "first_seen": "2026-06-01T20:38:43.521729+00:00",
       "most_recent_activity": [
         {
           "milestone": "DEIS NOA in Federal Register",
@@ -5007,7 +4769,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.753057+00:00",
+      "first_seen": "2026-06-01T20:38:43.521815+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -5073,7 +4835,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.754669+00:00",
+      "first_seen": "2026-06-01T20:38:43.521887+00:00",
       "most_recent_activity": [
         {
           "milestone": "NOI in Federal Register",
@@ -5124,7 +4886,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.756226+00:00",
+      "first_seen": "2026-06-01T20:38:43.521958+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -5175,7 +4937,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.757745+00:00",
+      "first_seen": "2026-06-01T20:38:43.522030+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -5226,7 +4988,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.759157+00:00",
+      "first_seen": "2026-06-01T20:38:43.522101+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -5272,7 +5034,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.761024+00:00",
+      "first_seen": "2026-06-01T20:38:43.522171+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -5318,7 +5080,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.762339+00:00",
+      "first_seen": "2026-06-01T20:38:43.522242+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -5359,7 +5121,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.763580+00:00",
+      "first_seen": "2026-06-01T20:38:43.522313+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -5405,7 +5167,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.764958+00:00",
+      "first_seen": "2026-06-01T20:38:43.522384+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -5451,7 +5213,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.766207+00:00",
+      "first_seen": "2026-06-01T20:38:43.522456+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -5507,7 +5269,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.767449+00:00",
+      "first_seen": "2026-06-01T20:38:43.522527+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -5558,7 +5320,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.768759+00:00",
+      "first_seen": "2026-06-01T20:38:43.522598+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -5609,7 +5371,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.769970+00:00",
+      "first_seen": "2026-06-01T20:38:43.522667+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -5660,7 +5422,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.771140+00:00",
+      "first_seen": "2026-06-01T20:38:43.522739+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -5711,7 +5473,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.772245+00:00",
+      "first_seen": "2026-06-01T20:38:43.522810+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -5777,7 +5539,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.773326+00:00",
+      "first_seen": "2026-06-01T20:38:43.522880+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -5828,7 +5590,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.774406+00:00",
+      "first_seen": "2026-06-01T20:38:43.522950+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -5838,100 +5600,6 @@
         {
           "milestone": "Decision",
           "date": "01/2027 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "Wallowa-Whitman",
-      "forest_code": "multi",
-      "region": "R06",
-      "state": "OR",
-      "project_name": "Red Cougar Integrated Vegetation Management",
-      "project_url": "https://www.fs.usda.gov/r06/wallowa-whitman/projects/304298",
-      "description": "Hazardous fuel reduction in a project area at high risk for insect and disease as well as high risk fireshed.",
-      "status": "Developing Proposal",
-      "unit": "WHITMAN RANGER DISTRICT",
-      "purpose": "Fuels management|Regulations, directives, orders|Vegetation management (other than forest products)",
-      "scraped_at": "2026-06-01T20:38:43.523022+00:00",
-      "milestones": [
-        {
-          "milestone": "NEPA Start Date",
-          "date": "",
-          "estimated": false
-        },
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "",
-          "estimated": false
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "is_multi_forest": true,
-      "first_seen": "2026-05-30T05:28:48.775522+00:00",
-      "most_recent_activity": [
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "",
-          "estimated": false
-        }
-      ]
-    },
-    {
-      "forest_name": "Wallowa-Whitman",
-      "forest_code": "multi",
-      "region": "R06",
-      "state": "OR",
-      "project_name": "Sufferin' Springs Vegetation Management Project",
-      "project_url": "https://www.fs.usda.gov/r06/wallowa-whitman/projects/68342",
-      "description": "Hazardous fuels reduction within stands at high risk for insect and disease out break as well as a high risk fireshed.",
-      "status": "In Progress",
-      "unit": "La Grande Ranger District",
-      "purpose": "Vegetation management (other than forest products)|Fuels management|Watershed management|Road management",
-      "scraped_at": "2026-06-01T20:38:43.523302+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "12/10/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Comment Period",
-          "date": "02/17/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "05/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "is_multi_forest": true,
-      "first_seen": "2026-05-30T05:28:48.779830+00:00",
-      "most_recent_activity": [
-        {
-          "milestone": "Comment Period",
-          "date": "02/17/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "05/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
           "estimated": true
         }
       ]
@@ -5968,7 +5636,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.781005+00:00",
+      "first_seen": "2026-06-01T20:38:43.523372+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -6029,7 +5697,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.782120+00:00",
+      "first_seen": "2026-06-01T20:38:43.523441+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -6080,7 +5748,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:28:48.783235+00:00",
+      "first_seen": "2026-06-01T20:38:43.523511+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -6131,7 +5799,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.199155+00:00",
+      "first_seen": "2026-06-01T20:40:48.436358+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -6182,7 +5850,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.200893+00:00",
+      "first_seen": "2026-06-01T20:40:48.436452+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -6233,7 +5901,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.201948+00:00",
+      "first_seen": "2026-06-01T20:40:48.436534+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -6284,7 +5952,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.203057+00:00",
+      "first_seen": "2026-06-01T20:40:48.436614+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -6335,7 +6003,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.204117+00:00",
+      "first_seen": "2026-06-01T20:40:48.436691+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -6386,7 +6054,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.205171+00:00",
+      "first_seen": "2026-06-01T20:40:48.436768+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -6437,7 +6105,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.206370+00:00",
+      "first_seen": "2026-06-01T20:40:48.436846+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -6493,7 +6161,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.207395+00:00",
+      "first_seen": "2026-06-01T20:40:48.436924+00:00",
       "most_recent_activity": [
         {
           "milestone": "Comment Period",
@@ -6544,7 +6212,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.208513+00:00",
+      "first_seen": "2026-06-01T20:40:48.437002+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -6590,7 +6258,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.209593+00:00",
+      "first_seen": "2026-06-01T20:40:48.437080+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -6631,7 +6299,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.210658+00:00",
+      "first_seen": "2026-06-01T20:40:48.437157+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -6692,7 +6360,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.211630+00:00",
+      "first_seen": "2026-06-01T20:40:48.437234+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -6743,7 +6411,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.212662+00:00",
+      "first_seen": "2026-06-01T20:40:48.437325+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -6794,7 +6462,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.213718+00:00",
+      "first_seen": "2026-06-01T20:40:48.437401+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -6855,7 +6523,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.215064+00:00",
+      "first_seen": "2026-06-01T20:40:48.437476+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -6901,7 +6569,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.218581+00:00",
+      "first_seen": "2026-06-01T20:40:48.437625+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -6957,7 +6625,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.219529+00:00",
+      "first_seen": "2026-06-01T20:40:48.437699+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -7008,7 +6676,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.220581+00:00",
+      "first_seen": "2026-06-01T20:40:48.437772+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -7059,7 +6727,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.222390+00:00",
+      "first_seen": "2026-06-01T20:40:48.437921+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -7105,7 +6773,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.223370+00:00",
+      "first_seen": "2026-06-01T20:40:48.437996+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -7146,7 +6814,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:29:34.224205+00:00",
+      "first_seen": "2026-06-01T20:40:48.438071+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -7197,7 +6865,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.854545+00:00",
+      "first_seen": "2026-06-01T20:42:31.888409+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -7248,7 +6916,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.858706+00:00",
+      "first_seen": "2026-06-01T20:42:31.888497+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -7304,7 +6972,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.860230+00:00",
+      "first_seen": "2026-06-01T20:42:31.888573+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -7360,7 +7028,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.861600+00:00",
+      "first_seen": "2026-06-01T20:42:31.888648+00:00",
       "most_recent_activity": [
         {
           "milestone": "Comment Period",
@@ -7411,7 +7079,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.863058+00:00",
+      "first_seen": "2026-06-01T20:42:31.888721+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -7462,7 +7130,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.867091+00:00",
+      "first_seen": "2026-06-01T20:42:31.888793+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -7513,7 +7181,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.870357+00:00",
+      "first_seen": "2026-06-01T20:42:31.888866+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -7574,7 +7242,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.871791+00:00",
+      "first_seen": "2026-06-01T20:42:31.888938+00:00",
       "most_recent_activity": [
         {
           "milestone": "FEIS NOA in Federal Register",
@@ -7630,7 +7298,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.873114+00:00",
+      "first_seen": "2026-06-01T20:42:31.889009+00:00",
       "most_recent_activity": [
         {
           "milestone": "Comment Period",
@@ -7686,7 +7354,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.874460+00:00",
+      "first_seen": "2026-06-01T20:42:31.889082+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -7696,63 +7364,6 @@
         {
           "milestone": "Comment Period",
           "date": "03/2026 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "Shasta-Trinity, Klamath",
-      "forest_code": "multi",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Klamath and Shasta-Trinity National Forests' Prescribed Fire Project",
-      "project_url": "https://www.fs.usda.gov/r05/shasta-trinity/projects/66585",
-      "description": "Fuels reduction and prescribed fire across the landscape. For more information, visit: https://www.fs.usda.gov/r05/klamath/projects/66583",
-      "status": "In Progress",
-      "unit": "Shasta Trinity National Forest All Units",
-      "purpose": "Fuels management",
-      "scraped_at": "2026-06-01T20:42:31.889154+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "05/13/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Comment Period",
-          "date": "01/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Decision",
-          "date": "05/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "06/2026 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "is_multi_forest": true,
-      "first_seen": "2026-05-30T05:30:38.875884+00:00",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "05/13/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Comment Period",
-          "date": "01/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Decision",
-          "date": "05/2026 (Estimated)",
           "estimated": true
         }
       ]
@@ -7789,7 +7400,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.877164+00:00",
+      "first_seen": "2026-06-01T20:42:31.889228+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -7850,7 +7461,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.878462+00:00",
+      "first_seen": "2026-06-01T20:42:31.889301+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -7901,7 +7512,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.879662+00:00",
+      "first_seen": "2026-06-01T20:42:31.889372+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -7952,7 +7563,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": true,
       "comment_deadline": "6/5/2026 11:59:59 PM (Eastern Standard Time)",
-      "first_seen": "2026-05-30T05:30:38.880645+00:00",
+      "first_seen": "2026-06-01T20:42:31.889445+00:00",
       "most_recent_activity": [
         {
           "milestone": "Comment Period",
@@ -8003,7 +7614,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.882986+00:00",
+      "first_seen": "2026-06-01T20:42:31.889587+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -8054,7 +7665,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.884146+00:00",
+      "first_seen": "2026-06-01T20:42:31.889658+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -8100,7 +7711,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.885156+00:00",
+      "first_seen": "2026-06-01T20:42:31.889731+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -8146,7 +7757,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.886297+00:00",
+      "first_seen": "2026-06-01T20:42:31.889803+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -8192,7 +7803,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.887486+00:00",
+      "first_seen": "2026-06-01T20:42:31.889875+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -8228,7 +7839,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.888550+00:00",
+      "first_seen": "2026-06-01T20:42:31.889947+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -8279,7 +7890,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.889816+00:00",
+      "first_seen": "2026-06-01T20:42:31.890020+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -8330,7 +7941,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.890883+00:00",
+      "first_seen": "2026-06-01T20:42:31.890091+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -8386,7 +7997,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.891838+00:00",
+      "first_seen": "2026-06-01T20:42:31.890163+00:00",
       "most_recent_activity": [
         {
           "milestone": "Comment Period",
@@ -8442,7 +8053,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.892829+00:00",
+      "first_seen": "2026-06-01T20:42:31.890234+00:00",
       "most_recent_activity": [
         {
           "milestone": "Comment Period",
@@ -8488,7 +8099,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.893756+00:00",
+      "first_seen": "2026-06-01T20:42:31.890305+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -8539,7 +8150,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.894670+00:00",
+      "first_seen": "2026-06-01T20:42:31.890376+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -8605,7 +8216,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:30:38.895717+00:00",
+      "first_seen": "2026-06-01T20:42:31.890446+00:00",
       "most_recent_activity": [
         {
           "milestone": "NOI in Federal Register",
@@ -8656,7 +8267,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.700196+00:00",
+      "first_seen": "2026-06-01T20:44:51.575548+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -8717,7 +8328,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.701944+00:00",
+      "first_seen": "2026-06-01T20:44:51.575637+00:00",
       "most_recent_activity": [
         {
           "milestone": "NOI in Federal Register",
@@ -8778,7 +8389,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.703447+00:00",
+      "first_seen": "2026-06-01T20:44:51.575714+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -8829,7 +8440,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.705008+00:00",
+      "first_seen": "2026-06-01T20:44:51.575789+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -8875,7 +8486,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.706459+00:00",
+      "first_seen": "2026-06-01T20:44:51.575864+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -8936,7 +8547,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.707997+00:00",
+      "first_seen": "2026-06-01T20:44:51.575951+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -8997,7 +8608,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.709526+00:00",
+      "first_seen": "2026-06-01T20:44:51.576023+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -9043,7 +8654,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.710976+00:00",
+      "first_seen": "2026-06-01T20:44:51.576094+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -9104,7 +8715,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.712493+00:00",
+      "first_seen": "2026-06-01T20:44:51.576166+00:00",
       "most_recent_activity": [
         {
           "milestone": "NOI in Federal Register",
@@ -9155,7 +8766,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.713948+00:00",
+      "first_seen": "2026-06-01T20:44:51.576237+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -9206,7 +8817,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.715231+00:00",
+      "first_seen": "2026-06-01T20:44:51.576308+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -9257,7 +8868,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.716617+00:00",
+      "first_seen": "2026-06-01T20:44:51.576379+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -9308,7 +8919,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.718007+00:00",
+      "first_seen": "2026-06-01T20:44:51.576449+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -9369,7 +8980,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.719335+00:00",
+      "first_seen": "2026-06-01T20:44:51.576520+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -9420,7 +9031,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.720603+00:00",
+      "first_seen": "2026-06-01T20:44:51.576592+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -9471,7 +9082,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.721869+00:00",
+      "first_seen": "2026-06-01T20:44:51.576663+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -9532,7 +9143,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.723108+00:00",
+      "first_seen": "2026-06-01T20:44:51.576736+00:00",
       "most_recent_activity": [
         {
           "milestone": "NOI in Federal Register",
@@ -9578,7 +9189,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:16.724180+00:00",
+      "first_seen": "2026-06-01T20:44:51.576808+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -9624,7 +9235,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:41.547609+00:00",
+      "first_seen": "2026-06-01T20:46:09.095503+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -9675,7 +9286,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:41.549206+00:00",
+      "first_seen": "2026-06-01T20:46:09.095588+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -9721,7 +9332,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:41.550588+00:00",
+      "first_seen": "2026-06-01T20:46:09.095662+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -9757,7 +9368,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:41.551722+00:00",
+      "first_seen": "2026-06-01T20:46:09.095732+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -9798,7 +9409,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:41.553066+00:00",
+      "first_seen": "2026-06-01T20:46:09.095803+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -9844,7 +9455,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:41.554402+00:00",
+      "first_seen": "2026-06-01T20:46:09.095873+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -9885,7 +9496,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:41.555716+00:00",
+      "first_seen": "2026-06-01T20:46:09.095943+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -9936,7 +9547,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:41.556773+00:00",
+      "first_seen": "2026-06-01T20:46:09.096012+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -9997,7 +9608,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:41.557921+00:00",
+      "first_seen": "2026-06-01T20:46:09.096085+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -10048,7 +9659,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:41.559045+00:00",
+      "first_seen": "2026-06-01T20:46:09.096156+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -10099,7 +9710,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:41.560007+00:00",
+      "first_seen": "2026-06-01T20:46:09.096227+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -10155,7 +9766,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:41.561103+00:00",
+      "first_seen": "2026-06-01T20:46:09.096298+00:00",
       "most_recent_activity": [
         {
           "milestone": "Comment Period",
@@ -10206,7 +9817,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:41.562207+00:00",
+      "first_seen": "2026-06-01T20:46:09.096368+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -10262,7 +9873,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:31:41.563160+00:00",
+      "first_seen": "2026-06-01T20:46:09.096438+00:00",
       "most_recent_activity": [
         {
           "milestone": "Comment Period",
@@ -10292,7 +9903,7 @@
       "status": "Completed",
       "unit": "Klamath National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-06-01T20:47:09.091991+00:00",
+      "scraped_at": "2026-06-01T22:38:55.785544+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10313,7 +9924,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:32:19.025368+00:00",
+      "first_seen": "2026-06-01T22:39:18.542052+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -10343,7 +9954,7 @@
       "status": "Developing Proposal",
       "unit": "Klamath National Forest",
       "purpose": "Special use management",
-      "scraped_at": "2026-06-01T20:47:09.092087+00:00",
+      "scraped_at": "2026-06-01T22:38:55.785629+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10359,7 +9970,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:32:19.027034+00:00",
+      "first_seen": "2026-06-01T22:39:18.543762+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -10379,7 +9990,7 @@
       "status": "Completed",
       "unit": "Klamath National Forest",
       "purpose": "Special use management",
-      "scraped_at": "2026-06-01T20:47:09.092172+00:00",
+      "scraped_at": "2026-06-01T22:38:55.785700+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10395,7 +10006,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:32:19.028090+00:00",
+      "first_seen": "2026-06-01T22:39:18.545146+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -10415,7 +10026,7 @@
       "status": "In Progress",
       "unit": "Salmon River Ranger District",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-06-01T20:47:09.092335+00:00",
+      "scraped_at": "2026-06-01T22:38:55.785820+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10447,7 +10058,7 @@
       "accepting_comments": false,
       "comment_deadline": "",
       "is_multi_forest": true,
-      "first_seen": "2026-05-30T05:32:19.029170+00:00",
+      "first_seen": "2026-06-01T22:39:18.546705+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -10477,7 +10088,7 @@
       "status": "Completed",
       "unit": "Happy Camp Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-06-01T20:47:09.092416+00:00",
+      "scraped_at": "2026-06-01T22:38:55.785877+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10498,7 +10109,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:32:19.030244+00:00",
+      "first_seen": "2026-06-01T22:39:18.547667+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -10528,7 +10139,7 @@
       "status": "Completed",
       "unit": "Klamath National Forest All Units",
       "purpose": "Recreation management|Fuels management",
-      "scraped_at": "2026-06-01T20:47:09.092497+00:00",
+      "scraped_at": "2026-06-01T22:38:55.785932+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10549,7 +10160,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:32:19.031385+00:00",
+      "first_seen": "2026-06-01T22:39:18.548703+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -10573,13 +10184,64 @@
       "forest_code": "klamath",
       "region": "R05",
       "state": "CA",
+      "project_name": "Klamath and Shasta-Trinity National Forests' Prescribed Fire Project",
+      "project_url": "https://www.fs.usda.gov/r05/klamath/projects/66583",
+      "description": "Fuels reduction and prescribed fire across the landscape.",
+      "status": "In Progress",
+      "unit": "Klamath National Forest All Units",
+      "purpose": "Fuels management",
+      "scraped_at": "2026-06-01T22:38:55.785989+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "05/13/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2026 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2026 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Environmental Assessment",
+      "accepting_comments": false,
+      "comment_deadline": "",
+      "first_seen": "2026-06-01T22:39:18.550106+00:00",
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "05/13/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2026 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2026 (Estimated)",
+          "estimated": true
+        }
+      ]
+    },
+    {
+      "forest_name": "Klamath National Forest",
+      "forest_code": "klamath",
+      "region": "R05",
+      "state": "CA",
       "project_name": "Large Wood Loading and Floodplain Restoration Phase II",
       "project_url": "https://www.fs.usda.gov/r05/klamath/projects/67959",
       "description": "Implement recovery actions for Federally listed Coho Salmon in Mid-Klamath tributaries (Horse Trough Creek Floodplain). Waterboard waiver B and 401/404 permits.",
       "status": "Completed",
       "unit": "Happy Camp Ranger District",
       "purpose": "Wildlife, fish, rare plants|Watershed management",
-      "scraped_at": "2026-06-01T20:47:09.092657+00:00",
+      "scraped_at": "2026-06-01T22:38:55.786042+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10600,7 +10262,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:32:19.033792+00:00",
+      "first_seen": "2026-06-01T22:39:18.550891+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -10630,7 +10292,7 @@
       "status": "In Progress",
       "unit": "Klamath National Forest All Units",
       "purpose": "Forest products|Vegetation management (other than forest products)|Fuels management",
-      "scraped_at": "2026-06-01T20:47:09.092736+00:00",
+      "scraped_at": "2026-06-01T22:38:55.786096+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10651,7 +10313,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:32:19.034951+00:00",
+      "first_seen": "2026-06-01T22:39:18.551846+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -10681,7 +10343,7 @@
       "status": "Developing Proposal",
       "unit": "Oak Knoll Ranger District",
       "purpose": "Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-06-01T20:47:09.092816+00:00",
+      "scraped_at": "2026-06-01T22:38:55.786151+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10697,7 +10359,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-06-01T20:48:35.301490+00:00",
+      "first_seen": "2026-06-01T22:39:18.552503+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -10717,7 +10379,7 @@
       "status": "Completed",
       "unit": "Klamath National Forest",
       "purpose": "Special use management",
-      "scraped_at": "2026-06-01T20:47:09.092902+00:00",
+      "scraped_at": "2026-06-01T22:38:55.786210+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10733,12 +10395,78 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:32:19.036322+00:00",
+      "first_seen": "2026-06-01T22:39:18.553494+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
           "date": "4/14/2026",
           "estimated": false
+        }
+      ]
+    },
+    {
+      "forest_name": "Klamath National Forest",
+      "forest_code": "klamath",
+      "region": "R05",
+      "state": "CA",
+      "project_name": "Northwest Forest Plan Amendment",
+      "project_url": "https://www.fs.usda.gov/r05/klamath/projects/64745",
+      "description": "The NWFP Amendment provides an updated management framework that incorporates best available scientific information, considers public input, recommendations from the Federal Advisory Committee, tribes, and government partners.",
+      "status": "In Progress",
+      "unit": "R6 - Pacific Northwest Region All Units",
+      "purpose": "Land management planning",
+      "scraped_at": "2026-06-01T22:38:55.786266+00:00",
+      "milestones": [
+        {
+          "milestone": "NOI in Federal Register",
+          "date": "12/18/2023",
+          "estimated": false
+        },
+        {
+          "milestone": "DEIS NOA in Federal Register",
+          "date": "11/15/2024",
+          "estimated": false
+        },
+        {
+          "milestone": "FEIS NOA in Federal Register",
+          "date": "09/2027 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Objection Period Start",
+          "date": "05/2027 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Decision",
+          "date": "12/2027 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "01/2028 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Environmental Impact Statement",
+      "accepting_comments": false,
+      "comment_deadline": "",
+      "first_seen": "2026-06-01T22:39:18.554408+00:00",
+      "most_recent_activity": [
+        {
+          "milestone": "DEIS NOA in Federal Register",
+          "date": "11/15/2024",
+          "estimated": false
+        },
+        {
+          "milestone": "FEIS NOA in Federal Register",
+          "date": "09/2027 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Objection Period Start",
+          "date": "05/2027 (Estimated)",
+          "estimated": true
         }
       ]
     },
@@ -10753,7 +10481,7 @@
       "status": "Completed",
       "unit": "Salmon River Ranger District",
       "purpose": "Vegetation management (other than forest products)|Fuels management|Watershed management",
-      "scraped_at": "2026-06-01T20:47:09.093064+00:00",
+      "scraped_at": "2026-06-01T22:38:55.786329+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10774,7 +10502,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:32:19.038723+00:00",
+      "first_seen": "2026-06-01T22:39:18.555179+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -10804,7 +10532,7 @@
       "status": "In Progress",
       "unit": "Happy Camp Ranger District",
       "purpose": "Forest products|Vegetation management (other than forest products)|Fuels management",
-      "scraped_at": "2026-06-01T20:47:09.093224+00:00",
+      "scraped_at": "2026-06-01T22:38:55.786436+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10826,7 +10554,7 @@
       "accepting_comments": false,
       "comment_deadline": "",
       "is_multi_forest": true,
-      "first_seen": "2026-05-30T05:32:19.040018+00:00",
+      "first_seen": "2026-06-01T22:39:18.556649+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -10856,7 +10584,7 @@
       "status": "Completed",
       "unit": "Goosenest Ranger District",
       "purpose": "Wildlife, fish, rare plants|Vegetation management (other than forest products)|Fuels management|Watershed management",
-      "scraped_at": "2026-06-01T20:47:09.093316+00:00",
+      "scraped_at": "2026-06-01T22:38:55.786490+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10877,7 +10605,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:32:19.041308+00:00",
+      "first_seen": "2026-06-01T22:39:18.557387+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -10907,7 +10635,7 @@
       "status": "Developing Proposal",
       "unit": "Klamath National Forest All Units",
       "purpose": "Forest products|Fuels management",
-      "scraped_at": "2026-06-01T20:47:09.093392+00:00",
+      "scraped_at": "2026-06-01T22:38:55.786544+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10933,7 +10661,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:32:19.042527+00:00",
+      "first_seen": "2026-06-01T22:39:18.558121+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -10958,7 +10686,7 @@
       "status": "Completed",
       "unit": "Goosenest Ranger District",
       "purpose": "Grazing management",
-      "scraped_at": "2026-06-01T20:47:09.093468+00:00",
+      "scraped_at": "2026-06-01T22:38:55.786597+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10974,7 +10702,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-30T05:32:19.043603+00:00",
+      "first_seen": "2026-06-01T22:39:18.559312+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -10994,7 +10722,7 @@
       "status": "In Progress",
       "unit": "Salmon River Ranger District",
       "purpose": "Wildlife, fish, rare plants|Watershed management",
-      "scraped_at": "2026-06-01T20:47:09.093620+00:00",
+      "scraped_at": "2026-06-01T22:38:55.786704+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11016,7 +10744,7 @@
       "accepting_comments": false,
       "comment_deadline": "",
       "is_multi_forest": true,
-      "first_seen": "2026-05-30T05:32:19.044747+00:00",
+      "first_seen": "2026-06-01T22:39:18.560685+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -11046,7 +10774,7 @@
       "status": "Completed",
       "unit": "Juneau Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-06-01T20:48:37.577864+00:00",
+      "scraped_at": "2026-06-01T22:39:21.128847+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11067,7 +10795,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.433442+00:00",
+      "first_seen": "2026-05-28T14:44:59.166583+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -11097,7 +10825,7 @@
       "status": "Completed",
       "unit": "Yakutat Ranger District",
       "purpose": "Wildlife, fish, rare plants|Watershed management",
-      "scraped_at": "2026-06-01T20:48:37.577971+00:00",
+      "scraped_at": "2026-06-01T22:39:21.128919+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11118,7 +10846,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.434609+00:00",
+      "first_seen": "2026-05-28T14:44:59.167563+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -11148,7 +10876,7 @@
       "status": "Cancelled",
       "unit": "Petersburg Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-06-01T20:48:37.578047+00:00",
+      "scraped_at": "2026-06-01T22:39:21.128975+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11169,7 +10897,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.435797+00:00",
+      "first_seen": "2026-05-28T14:44:59.168436+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -11199,7 +10927,7 @@
       "status": "Completed",
       "unit": "Yakutat Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-06-01T20:48:37.578121+00:00",
+      "scraped_at": "2026-06-01T22:39:21.129028+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11220,7 +10948,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.437094+00:00",
+      "first_seen": "2026-05-28T14:44:59.169213+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -11250,7 +10978,7 @@
       "status": "Completed",
       "unit": "Yakutat Ranger District",
       "purpose": "Recreation management|Road management",
-      "scraped_at": "2026-06-01T20:48:37.578197+00:00",
+      "scraped_at": "2026-06-01T22:39:21.129083+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11271,7 +10999,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.438283+00:00",
+      "first_seen": "2026-05-28T14:44:59.170034+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -11301,7 +11029,7 @@
       "status": "Completed",
       "unit": "Hoonah Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-06-01T20:48:37.578273+00:00",
+      "scraped_at": "2026-06-01T22:39:21.129154+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11322,7 +11050,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.439441+00:00",
+      "first_seen": "2026-05-28T14:44:59.170871+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -11352,7 +11080,7 @@
       "status": "Cancelled",
       "unit": "Wrangell Ranger District",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-06-01T20:48:37.578348+00:00",
+      "scraped_at": "2026-06-01T22:39:21.129212+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11373,7 +11101,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.440595+00:00",
+      "first_seen": "2026-05-28T14:44:59.171679+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -11403,7 +11131,7 @@
       "status": "Completed",
       "unit": "Admiralty Island National Monument",
       "purpose": "Watershed management|Wildlife, fish, rare plants|Projects that may affect wilderness (for mailing list contacts)",
-      "scraped_at": "2026-06-01T20:48:37.578423+00:00",
+      "scraped_at": "2026-06-01T22:39:21.129266+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11434,7 +11162,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.441753+00:00",
+      "first_seen": "2026-05-28T14:44:59.172755+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -11464,7 +11192,7 @@
       "status": "On Hold",
       "unit": "Sitka Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-06-01T20:48:37.578498+00:00",
+      "scraped_at": "2026-06-01T22:39:21.129332+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11485,7 +11213,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.442873+00:00",
+      "first_seen": "2026-05-28T14:44:59.173611+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -11510,7 +11238,7 @@
       "status": "Completed",
       "unit": "Petersburg Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-06-01T20:48:37.578573+00:00",
+      "scraped_at": "2026-06-01T22:39:21.129387+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11531,7 +11259,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.443953+00:00",
+      "first_seen": "2026-05-28T14:44:59.174463+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -11561,7 +11289,7 @@
       "status": "Completed",
       "unit": "Hoonah Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-06-01T20:48:37.578648+00:00",
+      "scraped_at": "2026-06-01T22:39:21.130348+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11592,7 +11320,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.444964+00:00",
+      "first_seen": "2026-05-28T14:44:59.175252+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -11622,7 +11350,7 @@
       "status": "Completed",
       "unit": "Admiralty Island National Monument",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-06-01T20:48:37.578724+00:00",
+      "scraped_at": "2026-06-01T22:39:21.130416+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -11658,7 +11386,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.445943+00:00",
+      "first_seen": "2026-05-28T14:44:59.176072+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -11688,7 +11416,7 @@
       "status": "Completed",
       "unit": "Admiralty Island National Monument",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-06-01T20:48:37.578798+00:00",
+      "scraped_at": "2026-06-01T22:39:21.130482+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11719,7 +11447,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.446909+00:00",
+      "first_seen": "2026-05-28T14:44:59.176905+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -11749,7 +11477,7 @@
       "status": "Completed",
       "unit": "Wrangell Ranger District",
       "purpose": "Facility management",
-      "scraped_at": "2026-06-01T20:48:37.578873+00:00",
+      "scraped_at": "2026-06-01T22:39:21.130543+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11770,7 +11498,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.447786+00:00",
+      "first_seen": "2026-05-28T14:44:59.177716+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -11800,7 +11528,7 @@
       "status": "Completed",
       "unit": "Juneau Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-06-01T20:48:37.578949+00:00",
+      "scraped_at": "2026-06-01T22:39:21.130603+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11831,7 +11559,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.448699+00:00",
+      "first_seen": "2026-05-28T14:44:59.178561+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -11861,7 +11589,7 @@
       "status": "Completed",
       "unit": "Juneau Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-06-01T20:48:37.579035+00:00",
+      "scraped_at": "2026-06-01T22:39:21.130663+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11882,7 +11610,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.449604+00:00",
+      "first_seen": "2026-05-28T14:44:59.179453+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -11912,7 +11640,7 @@
       "status": "On Hold",
       "unit": "Sitka Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-06-01T20:48:37.579108+00:00",
+      "scraped_at": "2026-06-01T22:39:21.130721+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11943,7 +11671,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.450655+00:00",
+      "first_seen": "2026-05-28T14:44:59.180277+00:00",
       "most_recent_activity": [
         {
           "milestone": "Comment Period",
@@ -11973,7 +11701,7 @@
       "status": "Completed",
       "unit": "Juneau Ranger District",
       "purpose": "Facility management",
-      "scraped_at": "2026-06-01T20:48:37.579180+00:00",
+      "scraped_at": "2026-06-01T22:39:21.130782+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11994,7 +11722,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.451471+00:00",
+      "first_seen": "2026-05-28T14:44:59.181344+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -12024,7 +11752,7 @@
       "status": "Completed",
       "unit": "Petersburg Ranger District",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-06-01T20:48:37.579252+00:00",
+      "scraped_at": "2026-06-01T22:39:21.130842+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12045,7 +11773,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.452335+00:00",
+      "first_seen": "2026-05-28T14:44:59.182146+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -12075,7 +11803,7 @@
       "status": "Completed",
       "unit": "Craig Ranger District",
       "purpose": "Facility management|Research",
-      "scraped_at": "2026-06-01T20:48:37.579324+00:00",
+      "scraped_at": "2026-06-01T22:39:21.130903+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12106,7 +11834,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.453339+00:00",
+      "first_seen": "2026-05-28T14:44:59.182974+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -12136,7 +11864,7 @@
       "status": "Completed",
       "unit": "Juneau Ranger District",
       "purpose": "Recreation management|Special area management|Facility management",
-      "scraped_at": "2026-06-01T20:48:37.579394+00:00",
+      "scraped_at": "2026-06-01T22:39:21.130962+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -12172,7 +11900,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.454225+00:00",
+      "first_seen": "2026-05-28T14:44:59.183917+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -12202,7 +11930,7 @@
       "status": "On Hold",
       "unit": "Hoonah Ranger District",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-06-01T20:48:37.579466+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131022+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12223,7 +11951,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.455123+00:00",
+      "first_seen": "2026-05-28T14:44:59.184781+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -12253,7 +11981,7 @@
       "status": "Completed",
       "unit": "Wrangell Ranger District",
       "purpose": "Road management",
-      "scraped_at": "2026-06-01T20:48:37.579539+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131080+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12274,7 +12002,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.456013+00:00",
+      "first_seen": "2026-05-28T14:44:59.185625+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -12304,7 +12032,7 @@
       "status": "Completed",
       "unit": "Wrangell Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-06-01T20:48:37.579612+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131138+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12325,7 +12053,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.457018+00:00",
+      "first_seen": "2026-05-28T14:44:59.186555+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -12355,7 +12083,7 @@
       "status": "Completed",
       "unit": "Wrangell Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-06-01T20:48:37.579684+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131189+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12376,7 +12104,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.457821+00:00",
+      "first_seen": "2026-05-28T14:44:59.187324+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -12406,7 +12134,7 @@
       "status": "Developing Proposal",
       "unit": "Admiralty National Monument",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-06-01T20:48:37.579757+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131242+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12422,7 +12150,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.458682+00:00",
+      "first_seen": "2026-05-28T14:44:59.188165+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -12442,7 +12170,7 @@
       "status": "Developing Proposal",
       "unit": "Hoonah Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-06-01T20:48:37.579828+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131293+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12458,7 +12186,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.459553+00:00",
+      "first_seen": "2026-05-28T14:44:59.189318+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -12478,7 +12206,7 @@
       "status": "Completed",
       "unit": "Juneau Ranger District",
       "purpose": "Land management planning",
-      "scraped_at": "2026-06-01T20:48:37.579901+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131355+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12494,7 +12222,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.460589+00:00",
+      "first_seen": "2026-05-28T14:44:59.190141+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -12514,7 +12242,7 @@
       "status": "In Progress",
       "unit": "Ketchikan - Misty Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-06-01T20:48:37.579972+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131408+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12530,7 +12258,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.461404+00:00",
+      "first_seen": "2026-05-28T14:44:59.190950+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -12550,7 +12278,7 @@
       "status": "Completed",
       "unit": "Sitka Ranger District",
       "purpose": "Facility management",
-      "scraped_at": "2026-06-01T20:48:37.580056+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131460+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12566,7 +12294,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.462263+00:00",
+      "first_seen": "2026-05-28T14:44:59.191757+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -12586,7 +12314,7 @@
       "status": "Completed",
       "unit": "Thorne Bay Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-06-01T20:48:37.580126+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131513+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12602,7 +12330,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.463156+00:00",
+      "first_seen": "2026-05-28T14:44:59.192640+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -12622,7 +12350,7 @@
       "status": "Completed",
       "unit": "Tongass National Forest",
       "purpose": "Special use management",
-      "scraped_at": "2026-06-01T20:48:37.580197+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131565+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12638,7 +12366,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.464177+00:00",
+      "first_seen": "2026-05-28T14:44:59.193471+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -12658,7 +12386,7 @@
       "status": "Completed",
       "unit": "Tongass National Forest",
       "purpose": "Special use management",
-      "scraped_at": "2026-06-01T20:48:37.580266+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131617+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12674,7 +12402,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.465179+00:00",
+      "first_seen": "2026-05-28T14:44:59.194283+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -12694,7 +12422,7 @@
       "status": "In Progress",
       "unit": "Yakutat Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-06-01T20:48:37.580335+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131670+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12710,7 +12438,7 @@
       "analysis_type": "Categorical Exclusion",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.466201+00:00",
+      "first_seen": "2026-05-28T14:44:59.195106+00:00",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
@@ -12730,7 +12458,7 @@
       "status": "In Progress",
       "unit": "Ketchikan Misty Fjords Ranger District",
       "purpose": "Recreation management|Wildlife, fish, rare plants|Forest products|Watershed management",
-      "scraped_at": "2026-06-01T20:48:37.580406+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131723+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -12766,7 +12494,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.467409+00:00",
+      "first_seen": "2026-05-28T14:44:59.195933+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -12796,7 +12524,7 @@
       "status": "Completed",
       "unit": "Thorne Bay Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-06-01T20:48:37.580476+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131776+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12817,7 +12545,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.468711+00:00",
+      "first_seen": "2026-05-28T14:44:59.196951+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -12847,7 +12575,7 @@
       "status": "Completed",
       "unit": "Juneau Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-06-01T20:48:37.580546+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131829+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12868,7 +12596,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.469772+00:00",
+      "first_seen": "2026-05-28T14:44:59.197832+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -12898,7 +12626,7 @@
       "status": "Completed",
       "unit": "Thorne Bay Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-06-01T20:48:37.580616+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131883+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12919,7 +12647,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.470729+00:00",
+      "first_seen": "2026-05-28T14:44:59.198580+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -12949,7 +12677,7 @@
       "status": "Completed",
       "unit": "Thorne Bay Ranger District",
       "purpose": "Wildlife, fish, rare plants|Forest products|Vegetation management (other than forest products)|Watershed management|Road management|Climate change adaptation",
-      "scraped_at": "2026-06-01T20:48:37.580687+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131936+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12980,7 +12708,7 @@
       "analysis_type": "Environmental Assessment",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.471613+00:00",
+      "first_seen": "2026-05-28T14:44:59.199815+00:00",
       "most_recent_activity": [
         {
           "milestone": "Objection Period Start",
@@ -13010,7 +12738,7 @@
       "status": "In Progress",
       "unit": "Tongass National Forest All Units",
       "purpose": "Land management planning",
-      "scraped_at": "2026-06-01T20:48:37.580757+00:00",
+      "scraped_at": "2026-06-01T22:39:21.131989+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -13046,7 +12774,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.472560+00:00",
+      "first_seen": "2026-05-28T14:44:59.200640+00:00",
       "most_recent_activity": [
         {
           "milestone": "NOI in Federal Register",
@@ -13076,7 +12804,7 @@
       "status": "Completed",
       "unit": "Craig Ranger District",
       "purpose": "Wildlife, fish, rare plants|Forest products|Vegetation management (other than forest products)|Watershed management",
-      "scraped_at": "2026-06-01T20:48:37.580827+00:00",
+      "scraped_at": "2026-06-01T22:39:21.132041+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13097,7 +12825,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.473397+00:00",
+      "first_seen": "2026-05-28T14:44:59.201441+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
@@ -13127,7 +12855,7 @@
       "status": "In Progress",
       "unit": "Thorne Bay Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-06-01T20:48:37.580897+00:00",
+      "scraped_at": "2026-06-01T22:39:21.132093+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -13163,7 +12891,7 @@
       "analysis_type": "Environmental Impact Statement",
       "accepting_comments": true,
       "comment_deadline": "6/8/2026 11:59:59 PM (Alaskan Standard Time)",
-      "first_seen": "2026-05-28T14:25:59.474443+00:00",
+      "first_seen": "2026-05-28T14:44:59.202305+00:00",
       "most_recent_activity": [
         {
           "milestone": "DEIS NOA in Federal Register",
@@ -13193,7 +12921,7 @@
       "status": "Completed",
       "unit": "Thorne Bay Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-06-01T20:48:37.580968+00:00",
+      "scraped_at": "2026-06-01T22:39:21.132144+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13214,7 +12942,7 @@
       "analysis_type": "Decision Memo",
       "accepting_comments": false,
       "comment_deadline": "",
-      "first_seen": "2026-05-28T14:25:59.475246+00:00",
+      "first_seen": "2026-05-28T14:44:59.203253+00:00",
       "most_recent_activity": [
         {
           "milestone": "Scoping Start",
