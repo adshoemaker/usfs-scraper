@@ -150,6 +150,20 @@ def load_projects():
         p["category"] = classify_project(p)
         if p.get("analysis_type") == "Decision Memo":
             p["analysis_type"] = "Environmental Assessment"
+        # Extract key milestone dates
+        scoping = decision = implementation = ""
+        for m in p.get("milestones", []):
+            name = m.get("milestone", "").lower()
+            date = m.get("date", "")
+            if "scoping" in name and "start" in name:
+                scoping = date
+            elif "decision" in name and not decision:
+                decision = date
+            elif "implementation" in name and not implementation:
+                implementation = date
+        p["scoping_start"]    = scoping
+        p["decision_date"]    = decision
+        p["implementation_date"] = implementation
     return projects, scraped_at
 
 
@@ -213,7 +227,32 @@ def filter_projects(projects, search="", forest_code="", status="",
             CATEGORY_SORT_ORDER.get(p.get("category", ""), 3),
         ))
 
-    if sort == "impact":
+    def date_key(field, p, reverse=False):
+        import re
+        d = (p.get(field) or "").replace("\xa0", " ").replace("(Estimated)", "").strip()
+        # Try MM/DD/YYYY
+        m = re.match(r'(\d{1,2})/(\d{1,2})/(\d{4})', d)
+        if m:
+            return f"{m.group(3)}/{m.group(1).zfill(2)}/{m.group(2).zfill(2)}"
+        # Try MM/YYYY — assign day 01
+        m = re.match(r'(\d{1,2})/(\d{4})', d)
+        if m:
+            return f"{m.group(2)}/{m.group(1).zfill(2)}/01"
+        return "0000/00/00" if reverse else "9999/99/99"
+
+    if sort == "scoping_newest":
+        results.sort(key=lambda p: date_key("scoping_start", p, True), reverse=True)
+    elif sort == "scoping_oldest":
+        results.sort(key=lambda p: date_key("scoping_start", p))
+    elif sort == "decision_newest":
+        results.sort(key=lambda p: date_key("decision_date", p, True), reverse=True)
+    elif sort == "decision_oldest":
+        results.sort(key=lambda p: date_key("decision_date", p))
+    elif sort == "implementation_newest":
+        results.sort(key=lambda p: date_key("implementation_date", p, True), reverse=True)
+    elif sort == "implementation_oldest":
+        results.sort(key=lambda p: date_key("implementation_date", p))
+    elif sort == "impact":
         results.sort(key=lambda p: IMPACT_SORT_ORDER.get(p.get("category"), 3))
 
     # Secondary sort
@@ -232,6 +271,18 @@ def filter_projects(projects, search="", forest_code="", status="",
             results.sort(key=lambda p: IMPACT_SORT_ORDER.get(p.get("category"), 3))
         elif sort2 == "analysis":
             results.sort(key=lambda p: ANALYSIS_SORT_ORDER.get(p.get("analysis_type", ""), 99))
+        elif sort2 == "scoping_newest":
+            results.sort(key=lambda p: date_key("scoping_start", p, True), reverse=True)
+        elif sort2 == "scoping_oldest":
+            results.sort(key=lambda p: date_key("scoping_start", p))
+        elif sort2 == "decision_newest":
+            results.sort(key=lambda p: date_key("decision_date", p, True), reverse=True)
+        elif sort2 == "decision_oldest":
+            results.sort(key=lambda p: date_key("decision_date", p))
+        elif sort2 == "implementation_newest":
+            results.sort(key=lambda p: date_key("implementation_date", p, True), reverse=True)
+        elif sort2 == "implementation_oldest":
+            results.sort(key=lambda p: date_key("implementation_date", p))
 
     return results
 
@@ -1349,7 +1400,6 @@ PAGE_TEMPLATE = """
     <form class="filters" method="GET" action="/">
         <input type="hidden" name="q"        value="{{ search }}">
         <input type="hidden" name="category" value="{{ selected_category }}">
-        <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
         <input type="hidden" name="forests"  value="{{ selected_forests_str }}">
         <input type="hidden" name="forest"   value="{{ selected_forest }}">
         <div>
@@ -1386,7 +1436,13 @@ PAGE_TEMPLATE = """
                 <option value="forest"   {% if selected_sort == "forest"   %}selected{% endif %}>Forest</option>
                 <option value="analysis" {% if selected_sort == "analysis" %}selected{% endif %}>Analysis type</option>
                 <option value="status"   {% if selected_sort == "status"   %}selected{% endif %}>Status</option>
-                <option value="impact"   {% if selected_sort == "impact"   %}selected{% endif %}>Impact category</option>
+                <option value="impact"        {% if selected_sort == "impact"        %}selected{% endif %}>Impact category</option>
+                <option value="scoping_newest"        {% if selected_sort == "scoping_newest"        %}selected{% endif %}>Scoping date newest</option>
+                <option value="scoping_oldest"        {% if selected_sort == "scoping_oldest"        %}selected{% endif %}>Scoping date oldest</option>
+                <option value="decision_newest"       {% if selected_sort == "decision_newest"       %}selected{% endif %}>Decision date newest</option>
+                <option value="decision_oldest"       {% if selected_sort == "decision_oldest"       %}selected{% endif %}>Decision date oldest</option>
+                <option value="implementation_newest" {% if selected_sort == "implementation_newest" %}selected{% endif %}>Implementation newest</option>
+                <option value="implementation_oldest" {% if selected_sort == "implementation_oldest" %}selected{% endif %}>Implementation oldest</option>
             </select>
         </div>
         <div>
@@ -1399,7 +1455,13 @@ PAGE_TEMPLATE = """
                 <option value="forest"   {% if selected_sort2 == "forest"   %}selected{% endif %}>Forest</option>
                 <option value="status"   {% if selected_sort2 == "status"   %}selected{% endif %}>Status</option>
                 <option value="impact"   {% if selected_sort2 == "impact"   %}selected{% endif %}>Impact category</option>
-                <option value="analysis" {% if selected_sort2 == "analysis" %}selected{% endif %}>Analysis type</option>
+                <option value="analysis"      {% if selected_sort2 == "analysis"      %}selected{% endif %}>Analysis type</option>
+                <option value="scoping_newest"        {% if selected_sort2 == "scoping_newest"        %}selected{% endif %}>Scoping date newest</option>
+                <option value="scoping_oldest"        {% if selected_sort2 == "scoping_oldest"        %}selected{% endif %}>Scoping date oldest</option>
+                <option value="decision_newest"       {% if selected_sort2 == "decision_newest"       %}selected{% endif %}>Decision date newest</option>
+                <option value="decision_oldest"       {% if selected_sort2 == "decision_oldest"       %}selected{% endif %}>Decision date oldest</option>
+                <option value="implementation_newest" {% if selected_sort2 == "implementation_newest" %}selected{% endif %}>Implementation newest</option>
+                <option value="implementation_oldest" {% if selected_sort2 == "implementation_oldest" %}selected{% endif %}>Implementation oldest</option>
             </select>
         </div>
         {% if search or selected_forest or selected_status or selected_days or selected_category or selected_sort or selected_sort2 %}
@@ -1723,6 +1785,7 @@ def index():
         if selected_status:       args["status"]  = selected_status
         if selected_days:         args["days"]    = selected_days
         if selected_sort:         args["sort"]    = selected_sort
+        if selected_sort2:        args["sort2"]   = selected_sort2
         if selected_forests_str:  args["forests"] = selected_forests_str
         if selected_category != cat:
             args["category"] = cat
