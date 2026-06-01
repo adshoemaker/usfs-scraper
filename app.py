@@ -15,19 +15,6 @@ from flask import Flask, request, render_template_string
 
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static'))
 
-STATUS_BORDER_COLORS = {
-    "Developing Proposal": "#9b72d8",
-    "In Progress":         "#4a90d9",
-    "On Hold":             "#e08848",
-    "Completed":           "#5aaa48",
-}
-
-CATEGORY_BG = {
-    "extractive":  "rgba(204,17,17,0.18)",
-    "restorative": "rgba(45,122,31,0.15)",
-    "mixed":       "rgba(196,106,48,0.16)",
-}
-
 STATUS_COLORS = {
     "Developing Proposal": "#9b72d8",
     "In Progress":         "#4a90d9",
@@ -38,25 +25,8 @@ STATUS_COLORS = {
 ANALYSIS_COLORS = {
     "Categorical Exclusion":          "#cc1111",
     "Environmental Assessment":       "#c46a30",
-    "Decision Memo":                  "#c46a30",
     "Environmental Impact Statement": "#2d7a1f",
     "Unknown":                        "#999",
-}
-
-FOREST_ABBREVS = {
-    "Mt. Baker-Snoqualmie National Forest":  "MBS",
-    "Olympic National Forest":               "ONF",
-    "Okanogan-Wenatchee National Forest":    "Okan-Wen",
-    "Gifford Pinchot National Forest":       "GPNF",
-    "Colville National Forest":              "Colville",
-    "Rogue River-Siskiyou National Forest":  "RRS",
-    "Wallowa-Whitman National Forest":       "Wallowa-Whitman",
-    "Fremont-Winema National Forest":        "Fremont-Winema",
-    "Shasta-Trinity National Forest":        "Shasta-Trinity",
-    "Inyo National Forest":                  "Inyo",
-    "Los Padres National Forest":            "Los Padres",
-    "Klamath National Forest":               "Klamath",
-    "Tongass National Forest":               "Tongass",
 }
 
 FORESTS = [
@@ -97,6 +67,32 @@ DATE_RANGES = [
     ("30", "Last 30 days"),
     ("90", "Last 90 days"),
 ]
+
+STATUS_SORT_ORDER = {
+    "Developing Proposal": 0,
+    "In Progress":         1,
+    "On Hold":             2,
+    "Completed":           3,
+}
+
+CATEGORY_SORT_ORDER = {
+    "extractive":  0,
+    "mixed":       1,
+    "restorative": 2,
+}
+
+IMPACT_SORT_ORDER = {
+    "extractive":  0,
+    "mixed":       1,
+    "restorative": 2,
+    None:          3,
+}
+
+ANALYSIS_SORT_ORDER = {
+    "Environmental Impact Statement": 0,
+    "Environmental Assessment":       1,
+    "Categorical Exclusion":          2,
+}
 
 # These match against the purpose tag field (pipe-separated values from USFS)
 EXTRACTIVE_KEYWORDS = [
@@ -201,14 +197,6 @@ def filter_projects(projects, search="", forest_code="", status="",
                 continue
         results.append(p)
 
-    # Analysis type sort order: EIS (highest) → EA → CatEx (lowest) → blank
-    ANALYSIS_SORT_ORDER = {
-        "Environmental Impact Statement": 0,
-        "Environmental Assessment":       1,
-        "Decision Memo":                  1,
-        "Categorical Exclusion":          2,
-    }
-
     if sort == "newest":
         results.sort(key=lambda p: p.get("first_seen", ""), reverse=True)
     elif sort == "oldest":
@@ -220,29 +208,10 @@ def filter_projects(projects, search="", forest_code="", status="",
     elif sort == "analysis":
         results.sort(key=lambda p: ANALYSIS_SORT_ORDER.get(p.get("analysis_type", ""), 99))
     elif sort == "status":
-        STATUS_SORT_ORDER = {
-            "Developing Proposal": 0,
-            "In Progress":         1,
-            "On Hold":             2,
-            "Completed":           3,
-        }
-        CATEGORY_SORT_ORDER = {
-            "extractive":  0,
-            "mixed":       1,
-            "restorative": 2,
-        }
         results.sort(key=lambda p: (
             STATUS_SORT_ORDER.get(p.get("status", ""), 99),
             CATEGORY_SORT_ORDER.get(p.get("category", ""), 3),
         ))
-
-    # Impact category sort order
-    IMPACT_SORT_ORDER = {
-        "extractive":  0,
-        "mixed":       1,
-        "restorative": 2,
-        None:          3,
-    }
 
     if sort == "impact":
         results.sort(key=lambda p: IMPACT_SORT_ORDER.get(p.get("category"), 3))
@@ -258,23 +227,11 @@ def filter_projects(projects, search="", forest_code="", status="",
         elif sort2 == "forest":
             results.sort(key=lambda p: p.get("forest_name", "").lower())
         elif sort2 == "status":
-            STATUS_SORT_ORDER2 = {
-                "Developing Proposal": 0,
-                "In Progress":         1,
-                "On Hold":             2,
-                "Completed":           3,
-            }
-            results.sort(key=lambda p: STATUS_SORT_ORDER2.get(p.get("status", ""), 99))
+            results.sort(key=lambda p: STATUS_SORT_ORDER.get(p.get("status", ""), 99))
         elif sort2 == "impact":
             results.sort(key=lambda p: IMPACT_SORT_ORDER.get(p.get("category"), 3))
         elif sort2 == "analysis":
-            ANALYSIS_SORT_ORDER2 = {
-                "Environmental Impact Statement": 0,
-                "Environmental Assessment":       1,
-                "Decision Memo":                  1,
-                "Categorical Exclusion":          2,
-            }
-            results.sort(key=lambda p: ANALYSIS_SORT_ORDER2.get(p.get("analysis_type", ""), 99))
+            results.sort(key=lambda p: ANALYSIS_SORT_ORDER.get(p.get("analysis_type", ""), 99))
 
     return results
 
@@ -1504,7 +1461,7 @@ PAGE_TEMPLATE = """
     {% if projects %}
         {% for p in projects %}
         {% set has_milestones = p.get('milestones') and p['milestones']|length > 0 %}
-        {% set status_color = status_border_colors.get(p.status, '#d0d0c8') %}
+        {% set status_color = status_colors.get(p.status, '#d0d0c8') %}
         {% set cat_bg = {'extractive': 'rgba(204,17,17,0.18)', 'restorative': 'rgba(45,122,31,0.15)', 'mixed': 'rgba(196,106,48,0.16)'}.get(p.category or '', 'white') %}
         {% set cat_border = {'extractive': '#cc1111', 'restorative': '#2d7a1f', 'mixed': '#c46a30'}.get(p.category or '', '#d0d0c8') %}
         {% set cat_label = {'extractive': 'Significant Effect', 'restorative': 'Restorative Impact', 'mixed': 'Mixed Impact'}.get(p.category or '', '') %}
@@ -1788,8 +1745,6 @@ def index():
         selected_sort=selected_sort,
         selected_sort2=selected_sort2,
         status_colors=STATUS_COLORS,
-        status_border_colors=STATUS_BORDER_COLORS,
-        forest_abbrevs=FOREST_ABBREVS,
         analysis_colors=ANALYSIS_COLORS,
         analysis_tooltips={
             "Categorical Exclusion": "Lowest rigor of analysis",

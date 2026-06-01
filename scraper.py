@@ -288,24 +288,20 @@ def scrape_forest(session: requests.Session, forest: dict,
 
     print(f"  Found {len(projects)} projects")
 
-    # Decide whether to fetch milestones this run.
-    # Full fetch: Tuesdays, Fridays, manual trigger, or local run.
-    # New projects always get milestones fetched regardless of day.
-    # Only fetch milestones for active (non-completed) projects
+    # Fetch milestones and detail for ALL projects
     milestone_projects = [
         p for p in projects
-        if p["status"] in MILESTONE_STATUSES
-        and (flags.get("include_completed") or p["status"] != "Completed")
+        if flags.get("include_completed") or p["status"] != "Completed"
     ]
     do_full = should_fetch_milestones()
 
-    # Load existing milestone data to identify new projects
+    # Load existing milestone/detail data to identify new projects
     existing_milestones = {}
     try:
         with open("projects.json", encoding="utf-8") as _f:
             _existing = json.load(_f)
         for _p in _existing.get("projects", []):
-            if _p.get("milestones") or _p.get("accepting_comments"):
+            if _p.get("milestones") or _p.get("accepting_comments") or _p.get("analysis_type"):
                 existing_milestones[_p["project_url"]] = {
                     "milestones":         _p.get("milestones", []),
                     "analysis_type":      _p.get("analysis_type", ""),
@@ -321,7 +317,6 @@ def scrape_forest(session: requests.Session, forest: dict,
         if do_full or is_new:
             to_fetch.append(p)
         else:
-            # Re-use cached data for existing projects on non-full days
             cached = existing_milestones[p["project_url"]]
             if isinstance(cached, dict):
                 p["milestones"]         = cached.get("milestones", [])
@@ -336,7 +331,7 @@ def scrape_forest(session: requests.Session, forest: dict,
 
     if to_fetch:
         reason = "full refresh" if do_full else "new projects only"
-        print(f"  Fetching milestones for {len(to_fetch)} projects ({reason})...")
+        print(f"  Fetching details for {len(to_fetch)} projects ({reason})...")
         for p in to_fetch:
             time.sleep(DELAY_BETWEEN_REQUESTS)
             detail = fetch_detail(session, p["project_url"])
@@ -346,8 +341,10 @@ def scrape_forest(session: requests.Session, forest: dict,
             p["comment_deadline"]    = detail["comment_deadline"]
             if detail["milestones"]:
                 print(f"    ✓ {p['project_name'][:50]} — {len(detail['milestones'])} milestones, type: {detail['analysis_type'] or 'n/a'}")
+            elif detail["analysis_type"]:
+                print(f"    ✓ {p['project_name'][:50]} — type: {detail['analysis_type']}")
     else:
-        print(f"  Milestones: using cached data ({len(milestone_projects)} projects, non-refresh day)")
+        print(f"  Details: using cached data ({len(milestone_projects)} projects, non-refresh day)")
 
     return projects
 
