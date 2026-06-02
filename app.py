@@ -718,6 +718,13 @@ PAGE_TEMPLATE = """
             justify-content: center;
         }
 
+        @media (max-width: 680px) {
+            .card-category-bar {
+                left: auto;
+                right: 0;
+            }
+        }
+
         .card-category-label {
             writing-mode: vertical-rl;
             transform: rotate(180deg);
