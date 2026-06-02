@@ -1111,6 +1111,9 @@ PAGE_TEMPLATE = """
         /* ── Mobile layout ── */
         @media (max-width: 680px) {
 
+            /* Scale down all fonts by 15% on mobile */
+            html { font-size: 85%; }
+
             /* Header stacks vertically */
             header {
                 flex-direction: column;
