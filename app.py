@@ -718,12 +718,7 @@ PAGE_TEMPLATE = """
             justify-content: center;
         }
 
-        @media (max-width: 680px) {
-            .card-category-bar {
-                left: auto;
-                right: 0;
-            }
-        }
+
 
         .card-category-label {
             writing-mode: vertical-rl;
@@ -735,6 +730,17 @@ PAGE_TEMPLATE = """
             text-transform: uppercase;
             white-space: nowrap;
             user-select: none;
+        }
+
+        .card-category-top {
+            display: none;
+            font-size: 0.62rem;
+            font-weight: 400;
+            color: white;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 3px 12px;
+            margin: -16px -16px 10px -16px;
         }
 
         .project-card:hover {
@@ -1543,6 +1549,12 @@ PAGE_TEMPLATE = """
                 <span class="card-category-label">{{ cat_label }}</span>
                 {% endif %}
             </div>
+
+            {% if cat_label %}
+            <div class="card-category-top" style="background: {{ cat_border }};">
+                {{ cat_label }}
+            </div>
+            {% endif %}
 
             <!-- CARD HEADER: forest name + title left, taking comments badge right -->
             <div class="card-header-row">
