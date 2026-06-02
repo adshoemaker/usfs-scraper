@@ -384,6 +384,7 @@ PAGE_TEMPLATE = """
             background: #f7f7f0;
             border-bottom: 1px solid var(--border);
             padding: 10px 20px;
+            overflow: hidden;
         }
 
         .forest-summary-inner {
@@ -1126,14 +1127,17 @@ PAGE_TEMPLATE = """
             .header-search input[type="text"] { width: 100%; }
 
             .forest-summary-inner { gap: 6px; }
+            .forest-summary { padding: 8px 8px; overflow: hidden; }
             .summary-totals { margin-left: 0; width: 100%; }
 
             /* Mobile: 2-column forest summary */
             .forest-cols-row {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 12px;
+                gap: 8px;
                 width: 100%;
+                max-width: 100%;
+                overflow: hidden;
             }
 
             .forest-col {
