@@ -1221,6 +1221,7 @@ PAGE_TEMPLATE = """
             .mobile-only  { display: flex !important; }
             div.mobile-only { display: flex !important; }
             .forest-col-group.mobile-only { display: flex !important; flex-direction: column; gap: 8px; }
+            .forest-col.desktop-only { display: none !important; visibility: hidden !important; pointer-events: none !important; }
 
             /* Comment badge centered on mobile */
             .mobile-only.comment-open-badge {
@@ -1375,10 +1376,13 @@ PAGE_TEMPLATE = """
                 <div class="forest-col">
                     <div class="forest-col-label" style="color:{{ sc.get('label','var(--text-dim)') }};">{{ state }}</div>
                     {% for f in col_forests %}
-                    <span class="forest-pill" style="background:{{ sc.get('pill','var(--accent)') }};">
+                    {% set is_sel = f.code in selected_forests %}
+                    <a href="{{ toggle_forest_url(f.code, selected_forests_str) }}"
+                       class="forest-pill {{ 'pill-selected' if is_sel else '' }}"
+                       style="background:{{ sc.get('pill','var(--accent)') }}; opacity:{{ '1' if (not selected_forests or is_sel) else '0.4' }}; text-decoration:none;">
                         {{ f.name.replace('National Forest', 'NF') }}
                         <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
-                    </span>
+                    </a>
                     {% endfor %}
                 </div>
                 {% endif %}
@@ -1390,7 +1394,7 @@ PAGE_TEMPLATE = """
             {% set col_forests = forests|selectattr('state','eq',state)|sort(attribute='name')|list %}
             {% if col_forests %}
             {% set sc = state_colors.get(state, {}) %}
-            <div class="forest-col desktop-only">
+            <div class="forest-col desktop-only" style="display:flex;">
                 <div class="forest-col-label" style="color:{{ sc.get('label','var(--text-dim)') }};">{{ state }}</div>
                 {% for f in col_forests %}
                 {% set is_sel = f.code in selected_forests %}
