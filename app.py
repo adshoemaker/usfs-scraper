@@ -1234,7 +1234,14 @@ PAGE_TEMPLATE = """
             font-family: 'Lexend', sans-serif;
                 display: flex !important;
                 flex-direction: column !important;
+                padding-left: 16px !important;
             }
+
+            /* Hide vertical left bar on mobile */
+            .card-category-bar { display: none !important; }
+
+            /* Show horizontal top label on mobile */
+            .card-category-top { display: block !important; }
 
             .card-header-row {
                 flex-direction: column;
