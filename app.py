@@ -55,7 +55,7 @@ FOREST_STATE_MAP = {f["code"]: f["state"] for f in FORESTS}
 STATE_COLORS = {
     "CA":    {"pill": "#cc3333", "label": "#8b1a1a"},
     "CA+OR": {"pill": "#c96a00", "label": "#7a3e00"},
-    "OR":    {"pill": "#b8960a", "label": "#6b5500"},
+    "OR":    {"pill": "#d4bc00", "label": "#6b5f00"},
     "OR+WA": {"pill": "#7a9a2f", "label": "#445a18"},
     "WA":    {"pill": "#2d7a1f", "label": "#1a4f0f"},
     "AK":    {"pill": "#5b4fa8", "label": "#352d6e"},
@@ -168,7 +168,7 @@ def load_projects():
 
 
 def filter_projects(projects, search="", forest_code="", status="",
-                    days="", categories=None, sort="", sort2=""):
+                    days="", categories=None, sort="", sort2="", recent_cutoff=""):
     if categories is None: categories = []
     results = []
     search_lower = search.lower()
@@ -198,6 +198,9 @@ def filter_projects(projects, search="", forest_code="", status="",
                         match = False; break
                 elif cat == "active":
                     if p.get("status") not in ("In Progress", "Developing Proposal"):
+                        match = False; break
+                elif cat == "newly_added":
+                    if not (p.get("first_seen", "")[:10] >= recent_cutoff):
                         match = False; break
                 elif p.get("category") != cat:
                     match = False; break
@@ -640,14 +643,17 @@ PAGE_TEMPLATE = """
         .cat-btn .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
         .cat-btn.unclassified { border-color: #888; color: #555; background: rgba(128,128,128,0.07); }
-        .cat-btn.unclassified.active { background: #888; color: white; border: 3px solid #888; }
+        .cat-btn.unclassified.active { background: #888; color: white; border-width: 3px; }
         .cat-btn .dot.unclassified-dot { background: #888; }
+        .cat-btn.newly-added { border-color: #2563eb; border-width: 3px; color: #1d4ed8; background: rgba(37,99,235,0.1); padding: 6px 37px; font-size: 0.78rem; }
+        .cat-btn.newly-added.active { background: #2563eb; color: white; border: 3px solid #1d4ed8; }
+        .cat-btn .dot.newly-added-dot { background: #2563eb; }
         .cat-btn.taking-comments { border-color: #cc1111; border-width: 3px; color: #7c2d12; background: rgba(251,191,36,0.35); padding: 6px 37px; font-size: 0.78rem; }
-        .cat-btn.taking-comments.active { background: #fbbf24; color: #7c2d12; border: 3px solid #cc1111; }
+        .cat-btn.taking-comments.active { background: #cc1111; color: white; border: 3px solid #cc1111; }
         .cat-btn.active-filter { border-color: #2d7a1f; border-width: 3px; color: #1a4f0f; background: rgba(45,122,31,0.15); padding: 6px 37px; font-size: 0.78rem; }
         .cat-btn.active-filter.active { background: #2d7a1f; color: white; border: 3px solid #1a4f0f; }
         .cat-btn .dot.active-filter-dot { background: #2d7a1f; }
-        .cat-btn.taking-comments.active { background: #fbbf24; color: #7c2d12; border: 3px solid #cc1111; }
+        .cat-btn.taking-comments.active { background: #cc1111; color: white; border: 3px solid #cc1111; }
         .cat-btn .dot.taking-comments-dot { background: #fbbf24; border: 1px solid #cc1111; }
 
         .category-disclaimer {
@@ -662,12 +668,12 @@ PAGE_TEMPLATE = """
             padding: 3px 0 6px 0;
         }
         .cat-btn.extractive  { border-color: var(--red);    color: var(--red);    background: rgba(204,17,17,0.07); }
+        .cat-btn.extractive.active  { background: var(--red);    color: white; border-width: 3px; }
         .cat-btn.restorative { border-color: var(--green);  color: var(--green);  background: rgba(45,122,31,0.07); }
+        .cat-btn.restorative.active { background: var(--green);  color: white; border-width: 3px; }
         .cat-btn.mixed       { border-color: var(--orange); color: var(--orange); background: rgba(196,106,48,0.07); }
+        .cat-btn.mixed.active       { background: var(--orange); color: white; border-width: 3px; }
 
-        .cat-btn.extractive.active  { background: rgba(204,17,17,0.07);   border: 3px solid var(--red);    color: var(--red); }
-        .cat-btn.restorative.active { background: rgba(45,122,31,0.07);  border: 3px solid var(--green);  color: var(--green); }
-        .cat-btn.mixed.active       { background: rgba(196,106,48,0.07); border: 3px solid var(--orange); color: var(--orange); }
 
         .cat-btn .dot.extractive-dot  { background: var(--red); }
         .cat-btn .dot.restorative-dot { background: var(--green); }
@@ -853,17 +859,16 @@ PAGE_TEMPLATE = """
 
         .new-badge {
             display: inline-block;
-            background: #fbbf24;
-            color: #7c2d12;
-            border: 2px solid #cc1111;
+            background: rgba(37,99,235,0.1);
+            color: #2563eb;
+            border: 2px solid #2563eb;
             border-radius: 0;
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             font-weight: 700;
             padding: 3px 8px;
             vertical-align: middle;
             margin-left: 6px;
             letter-spacing: 0.3px;
-            box-shadow: 0 2px 8px rgba(204,17,17,0.2);
         }
 
         /* ── Card layout ── */
@@ -1527,6 +1532,11 @@ PAGE_TEMPLATE = """
             <span class="dot unclassified-dot"></span>
             Unknown ({{ filtered_counts.unclassified }} of {{ counts.unclassified }})
         </a>
+        <a href="{{ url_with_category('newly_added') }}"
+           class="cat-btn newly-added {{ 'active' if 'newly_added' in selected_categories else '' }}">
+            <span class="dot newly-added-dot"></span>
+            Newly Added ({{ filtered_counts.newly_added }} of {{ counts.newly_added }})
+        </a>
         <a href="{{ url_with_category('taking_comments') }}"
            class="cat-btn taking-comments {{ 'active' if 'taking_comments' in selected_categories else '' }}">
             <span class="dot taking-comments-dot"></span>
@@ -1543,7 +1553,7 @@ PAGE_TEMPLATE = """
     </div>
 
     <div class="results-header">
-        {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Unknown', 'taking_comments': 'Taking Comments Now', 'active': 'Active / In Development'} %}
+        {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Unknown', 'taking_comments': 'Taking Comments Now', 'active': 'Active / In Development', 'newly_added': 'Newly Added'} %}
         {% if search or selected_forest or selected_status or selected_days or selected_category %}
             Showing <strong>{{ projects|length }}</strong> result{% if projects|length != 1 %}s{% endif %}
             {% if selected_categories %} — <strong>{{ selected_categories|map('lower')|map('title')|join(' + ') }}</strong>{% endif %}
@@ -1760,6 +1770,10 @@ def index():
 
     all_projects, last_scraped = load_projects()
 
+    recent_cutoff = (
+        datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=72)
+    ).strftime("%Y-%m-%d")
+
     counts = {
         "extractive":      sum(1 for p in all_projects if p.get("category") == "extractive"),
         "restorative":     sum(1 for p in all_projects if p.get("category") == "restorative"),
@@ -1767,6 +1781,7 @@ def index():
         "unclassified":    sum(1 for p in all_projects if not p.get("category")),
         "taking_comments": sum(1 for p in all_projects if p.get("accepting_comments")),
         "active":          sum(1 for p in all_projects if p.get("status") in ("In Progress", "Developing Proposal")),
+        "newly_added":     sum(1 for p in all_projects if p.get("first_seen", "")[:10] >= recent_cutoff),
     }
 
     # Per-forest project counts for the summary bar
@@ -1796,6 +1811,7 @@ def index():
         "unclassified":    sum(1 for p in forest_visible if not p.get("category")),
         "taking_comments": sum(1 for p in forest_visible if p.get("accepting_comments")),
         "active":          sum(1 for p in forest_visible if p.get("status") in ("In Progress", "Developing Proposal")),
+        "newly_added":     sum(1 for p in forest_visible if p.get("first_seen", "")[:10] >= recent_cutoff),
     }
     selected_category = selected_categories[0] if len(selected_categories) == 1 else ""
 
@@ -1806,6 +1822,7 @@ def index():
         status=selected_status,
         days=selected_days,
         categories=selected_categories,
+        recent_cutoff=recent_cutoff,
         sort=selected_sort,
         sort2=selected_sort2,
     )
@@ -1817,10 +1834,6 @@ def index():
         if f["code"] == selected_forest:
             selected_forest_name = f["name"]
             break
-
-    recent_cutoff = (
-        datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=7)
-    ).strftime("%Y-%m-%d")
 
     def url_with_category(cat):
         from urllib.parse import urlencode
