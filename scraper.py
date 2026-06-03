@@ -386,7 +386,9 @@ def deduplicate_projects(projects: list[dict]) -> list[dict]:
     """
     groups = {}
     for p in projects:
-        key = p["project_name"].strip().lower()
+        # Use project ID (from URL) as dedup key — same project appears across forests with same ID
+        project_id = p.get("project_url", "").rstrip("/").split("/")[-1]
+        key = project_id if project_id.isdigit() else p["project_name"].strip().lower()
         if key not in groups:
             groups[key] = []
         groups[key].append(p)
@@ -410,11 +412,13 @@ def deduplicate_projects(projects: list[dict]) -> list[dict]:
                     seen_codes.add(g["forest_code"])
                     all_forests.append(g["forest_name"])
 
-            base["forest_name"] = ", ".join(
-                FOREST_ABBREVS.get(f, f) for f in all_forests
-            )
-            base["forest_code"] = "multi"
-            base["is_multi_forest"] = True
+            if len(all_forests) > 1:
+                base["forest_name"] = ", ".join(
+                    FOREST_ABBREVS.get(f, f) for f in all_forests
+                )
+                base["forest_code"] = "multi"
+                base["is_multi_forest"] = True
+            # else: keep original forest_name and forest_code from base
 
             # Keep longest description
             base["description"] = max(
