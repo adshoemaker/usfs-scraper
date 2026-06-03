@@ -168,7 +168,8 @@ def load_projects():
 
 
 def filter_projects(projects, search="", forest_code="", status="",
-                    days="", category="", sort="", sort2=""):
+                    days="", categories=None, sort="", sort2=""):
+    if categories is None: categories = []
     results = []
     search_lower = search.lower()
     cutoff = None
@@ -186,17 +187,21 @@ def filter_projects(projects, search="", forest_code="", status="",
                 continue
         if status and p.get("status") != status:
             continue
-        if category:
-            if category == "unclassified":
-                if p.get("category"):
-                    continue
-            elif category == "taking_comments":
-                if not p.get("accepting_comments"):
-                    continue
-            elif category == "active":
-                if p.get("status") not in ("In Progress", "Developing Proposal"):
-                    continue
-            elif p.get("category") != category:
+        if categories:
+            match = True
+            for cat in categories:
+                if cat == "unclassified":
+                    if p.get("category"):
+                        match = False; break
+                elif cat == "taking_comments":
+                    if not p.get("accepting_comments"):
+                        match = False; break
+                elif cat == "active":
+                    if p.get("status") not in ("In Progress", "Developing Proposal"):
+                        match = False; break
+                elif p.get("category") != cat:
+                    match = False; break
+            if not match:
                 continue
         if cutoff:
             first_seen_str = p.get("first_seen", "")
@@ -1333,7 +1338,7 @@ PAGE_TEMPLATE = """
             <input type="hidden" name="days"     value="{{ selected_days }}">
             <input type="hidden" name="sort"     value="{{ selected_sort }}">
             <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
-            <input type="hidden" name="category" value="{{ selected_category }}">
+            <input type="hidden" name="category" value="{{ selected_category_str }}">
             <input type="hidden" name="forests"  value="{{ selected_forests_str }}">
             <input type="text" name="q"
                    placeholder="Search projects..."
@@ -1430,7 +1435,7 @@ PAGE_TEMPLATE = """
     <div class="filters-wrapper">
     <form class="filters" method="GET" action="/">
         <input type="hidden" name="q"        value="{{ search }}">
-        <input type="hidden" name="category" value="{{ selected_category }}">
+        <input type="hidden" name="category" value="{{ selected_category_str }}">
         <input type="hidden" name="forests"  value="{{ selected_forests_str }}">
         <input type="hidden" name="forest"   value="{{ selected_forest }}">
         <div>
@@ -1495,7 +1500,7 @@ PAGE_TEMPLATE = """
                 <option value="implementation_oldest" {% if selected_sort2 == "implementation_oldest" %}selected{% endif %}>Implementation oldest</option>
             </select>
         </div>
-        {% if search or selected_forest or selected_status or selected_days or selected_category or selected_sort or selected_sort2 %}
+        {% if search or selected_forest or selected_status or selected_days or selected_category_str or selected_sort or selected_sort2 %}
         <a class="clear" href="/">Clear all</a>
         {% endif %}
     </form>
@@ -1503,32 +1508,32 @@ PAGE_TEMPLATE = """
     <div class="category-filters">
         <span>Show only:</span>
         <a href="{{ url_with_category('extractive') }}"
-           class="cat-btn extractive {{ 'active' if selected_category == 'extractive' else '' }}">
+           class="cat-btn extractive {{ 'active' if 'extractive' in selected_categories else '' }}">
             <span class="dot extractive-dot"></span>
             Significant Effect ({{ filtered_counts.extractive }} of {{ counts.extractive }})
         </a>
         <a href="{{ url_with_category('mixed') }}"
-           class="cat-btn mixed {{ 'active' if selected_category == 'mixed' else '' }}">
+           class="cat-btn mixed {{ 'active' if 'mixed' in selected_categories else '' }}">
             <span class="dot mixed-dot"></span>
             Mixed Impact ({{ filtered_counts.mixed }} of {{ counts.mixed }})
         </a>
         <a href="{{ url_with_category('restorative') }}"
-           class="cat-btn restorative {{ 'active' if selected_category == 'restorative' else '' }}">
+           class="cat-btn restorative {{ 'active' if 'restorative' in selected_categories else '' }}">
             <span class="dot restorative-dot"></span>
             Restorative Impact ({{ filtered_counts.restorative }} of {{ counts.restorative }})
         </a>
         <a href="{{ url_with_category('unclassified') }}"
-           class="cat-btn unclassified {{ 'active' if selected_category == 'unclassified' else '' }}">
+           class="cat-btn unclassified {{ 'active' if 'unclassified' in selected_categories else '' }}">
             <span class="dot unclassified-dot"></span>
             Unknown ({{ filtered_counts.unclassified }} of {{ counts.unclassified }})
         </a>
         <a href="{{ url_with_category('taking_comments') }}"
-           class="cat-btn taking-comments {{ 'active' if selected_category == 'taking_comments' else '' }}">
+           class="cat-btn taking-comments {{ 'active' if 'taking_comments' in selected_categories else '' }}">
             <span class="dot taking-comments-dot"></span>
             💬 Taking Comments Now ({{ filtered_counts.taking_comments }} of {{ counts.taking_comments }})
         </a>
         <a href="{{ url_with_category('active') }}"
-           class="cat-btn active-filter {{ 'active' if selected_category == 'active' else '' }}">
+           class="cat-btn active-filter {{ 'active' if 'active' in selected_categories else '' }}">
             <span class="dot active-filter-dot"></span>
             Active / In Development ({{ filtered_counts.active }} of {{ counts.active }})
         </a>
@@ -1541,7 +1546,7 @@ PAGE_TEMPLATE = """
         {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Unknown', 'taking_comments': 'Taking Comments Now', 'active': 'Active / In Development'} %}
         {% if search or selected_forest or selected_status or selected_days or selected_category %}
             Showing <strong>{{ projects|length }}</strong> result{% if projects|length != 1 %}s{% endif %}
-            {% if selected_category %} — <strong>{{ cat_labels.get(selected_category, selected_category) }}</strong>{% endif %}
+            {% if selected_categories %} — <strong>{{ selected_categories|map('lower')|map('title')|join(' + ') }}</strong>{% endif %}
             {% if selected_days %} added in the last <strong>{{ selected_days }} days</strong>{% endif %}
             {% if search %} matching "<strong>{{ search }}</strong>"{% endif %}
             {% if selected_status %} · status: <strong>{{ selected_status }}</strong>{% endif %}
@@ -1748,8 +1753,9 @@ def index():
     selected_forest   = request.args.get("forest", "").strip()
     selected_status   = request.args.get("status", "").strip()
     selected_days     = request.args.get("days", "").strip()
-    selected_category = request.args.get("category", "").strip()
-    selected_sort     = request.args.get("sort", "").strip()
+    selected_category_str = request.args.get("category", "").strip()
+    selected_categories = [c.strip() for c in selected_category_str.split(",") if c.strip()]
+    selected_sort     = request.args.get("sort", "newest").strip()
     selected_sort2    = request.args.get("sort2", "").strip()
 
     all_projects, last_scraped = load_projects()
@@ -1791,6 +1797,7 @@ def index():
         "taking_comments": sum(1 for p in forest_visible if p.get("accepting_comments")),
         "active":          sum(1 for p in forest_visible if p.get("status") in ("In Progress", "Developing Proposal")),
     }
+    selected_category = selected_categories[0] if len(selected_categories) == 1 else ""
 
     projects = filter_projects(
         forest_visible,
@@ -1798,7 +1805,7 @@ def index():
         forest_code=selected_forest,
         status=selected_status,
         days=selected_days,
-        category=selected_category,
+        categories=selected_categories,
         sort=selected_sort,
         sort2=selected_sort2,
     )
@@ -1816,6 +1823,12 @@ def index():
     ).strftime("%Y-%m-%d")
 
     def url_with_category(cat):
+        from urllib.parse import urlencode
+        cats = list(selected_categories)
+        if cat in cats:
+            cats.remove(cat)
+        else:
+            cats.append(cat)
         args = {}
         if search:                args["q"]       = search
         if selected_forest:       args["forest"]  = selected_forest
@@ -1824,9 +1837,7 @@ def index():
         if selected_sort:         args["sort"]    = selected_sort
         if selected_sort2:        args["sort2"]   = selected_sort2
         if selected_forests_str:  args["forests"] = selected_forests_str
-        if selected_category != cat:
-            args["category"] = cat
-        from urllib.parse import urlencode
+        if cats:                  args["category"] = ",".join(cats)
         qs = urlencode(args)
         return f"/?{qs}" if qs else "/"
 
@@ -1842,6 +1853,8 @@ def index():
         selected_status=selected_status,
         selected_days=selected_days,
         selected_category=selected_category,
+        selected_categories=selected_categories,
+        selected_category_str=selected_category_str,
         selected_sort=selected_sort,
         selected_sort2=selected_sort2,
         status_colors=STATUS_COLORS,
