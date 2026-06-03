@@ -188,23 +188,43 @@ def filter_projects(projects, search="", forest_code="", status="",
         if status and p.get("status") != status:
             continue
         if categories:
-            match = True
-            for cat in categories:
-                if cat == "unclassified":
-                    if p.get("category"):
-                        match = False; break
-                elif cat == "taking_comments":
-                    if not p.get("accepting_comments"):
-                        match = False; break
-                elif cat == "active":
-                    if p.get("status") not in ("In Progress", "Developing Proposal"):
-                        match = False; break
-                elif cat == "newly_added":
-                    if not (p.get("first_seen", "")[:10] >= recent_cutoff):
-                        match = False; break
-                elif p.get("category") != cat:
-                    match = False; break
-            if not match:
+            IMPACT_CATS = {"extractive", "mixed", "restorative", "unclassified"}
+            UNIQUE_CATS = {"taking_comments", "active", "newly_added"}
+            selected_impact = [c for c in categories if c in IMPACT_CATS]
+            selected_unique = [c for c in categories if c in UNIQUE_CATS]
+
+            # Impact: OR logic — must match at least one if any selected
+            if selected_impact:
+                impact_match = False
+                for cat in selected_impact:
+                    if cat == "unclassified" and not p.get("category"):
+                        impact_match = True; break
+                    elif p.get("category") == cat:
+                        impact_match = True; break
+                if not impact_match:
+                    continue
+
+            # Unique: AND logic — must match all selected
+            for cat in selected_unique:
+                if cat == "taking_comments" and not p.get("accepting_comments"):
+                    continue  # outer loop handles skip
+                if cat == "active" and p.get("status") not in ("In Progress", "Developing Proposal"):
+                    break
+                if cat == "newly_added" and not (p.get("first_seen", "")[:10] >= recent_cutoff):
+                    break
+            else:
+                pass  # all unique filters passed
+
+            # Re-check unique filters cleanly
+            unique_match = True
+            for cat in selected_unique:
+                if cat == "taking_comments" and not p.get("accepting_comments"):
+                    unique_match = False; break
+                if cat == "active" and p.get("status") not in ("In Progress", "Developing Proposal"):
+                    unique_match = False; break
+                if cat == "newly_added" and not (p.get("first_seen", "")[:10] >= recent_cutoff):
+                    unique_match = False; break
+            if not unique_match:
                 continue
         if cutoff:
             first_seen_str = p.get("first_seen", "")
@@ -1556,7 +1576,7 @@ PAGE_TEMPLATE = """
         {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Unknown', 'taking_comments': 'Taking Comments Now', 'active': 'Active / In Development', 'newly_added': 'Newly Added'} %}
         {% if search or selected_forest or selected_status or selected_days or selected_category %}
             Showing <strong>{{ projects|length }}</strong> result{% if projects|length != 1 %}s{% endif %}
-            {% if selected_categories %} — <strong>{{ selected_categories|map('lower')|map('title')|join(' + ') }}</strong>{% endif %}
+            {% if selected_categories %} — <strong>{{ selected_categories|map('lower')|map('replace', '_', ' ')|map('title')|join(' · ') }}</strong>{% endif %}
             {% if selected_days %} added in the last <strong>{{ selected_days }} days</strong>{% endif %}
             {% if search %} matching "<strong>{{ search }}</strong>"{% endif %}
             {% if selected_status %} · status: <strong>{{ selected_status }}</strong>{% endif %}
