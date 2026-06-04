@@ -206,22 +206,34 @@ def is_dead_page(html: str) -> bool:
 
 def fetch_detail(session: requests.Session, project_url: str) -> dict:
     """Fetch a project detail page and return milestones, analysis type, and comment status.
-    Returns None if the page is dead (USFS unavailable message)."""
+    Returns None if the page is dead (USFS unavailable message).
+    Retries once on timeout."""
     result = {"milestones": [], "analysis_type": "", "accepting_comments": False, "comment_deadline": ""}
-    try:
-        r = session.get(project_url, timeout=30)
-        r.raise_for_status()
 
-        # Check for dead page before doing anything else
-        if is_dead_page(r.text):
-            print(f"    💀 DEAD PAGE — will be excluded")
-            return None
+    for attempt in range(2):
+        try:
+            r = session.get(project_url, timeout=60)
+            r.raise_for_status()
 
-        detail = parse_detail_page(r.text)
-        result.update(detail)
-    except requests.RequestException as e:
-        print(f"    !! Could not fetch detail from {project_url}: {e}")
-        return result
+            # Check for dead page before doing anything else
+            if is_dead_page(r.text):
+                print(f"    💀 DEAD PAGE — will be excluded")
+                return None
+
+            detail = parse_detail_page(r.text)
+            result.update(detail)
+            break  # success — exit retry loop
+
+        except requests.exceptions.Timeout:
+            if attempt == 0:
+                print(f"    ⏱ Timeout — retrying in 5s...")
+                time.sleep(5)
+            else:
+                print(f"    !! Timed out twice — skipping detail fetch")
+                return result
+        except requests.RequestException as e:
+            print(f"    !! Could not fetch detail from {project_url}: {e}")
+            return result
 
     # Extract project ID and check comment period
     project_id = project_url.rstrip("/").split("/")[-1]
@@ -348,10 +360,25 @@ def scrape_forest(session: requests.Session, forest: dict,
                 p["accepting_comments"] = False
                 p["comment_deadline"]   = ""
 
+    # Always check ALL projects for dead pages regardless of fetch/cache status
+    print(f"  Checking all {len(projects)} projects for dead pages...")
+    dead_urls = set()
+    for p in projects:
+        # Skip if already in to_fetch — fetch_detail handles it there
+        if p in to_fetch:
+            continue
+        time.sleep(DELAY_BETWEEN_REQUESTS)
+        try:
+            r = session.get(p["project_url"], timeout=60)
+            if is_dead_page(r.text):
+                print(f"    💀 DEAD PAGE: {p['project_name'][:50]}")
+                dead_urls.add(p["project_url"])
+        except Exception:
+            pass
+
     if to_fetch:
         reason = "full refresh" if do_full else "new projects only"
         print(f"  Fetching details for {len(to_fetch)} projects ({reason})...")
-        dead_urls = set()
         for p in to_fetch:
             time.sleep(DELAY_BETWEEN_REQUESTS)
             detail = fetch_detail(session, p["project_url"])
@@ -366,12 +393,13 @@ def scrape_forest(session: requests.Session, forest: dict,
                 print(f"    ✓ {p['project_name'][:50]} — {len(detail['milestones'])} milestones, type: {detail['analysis_type'] or 'n/a'}")
             elif detail["analysis_type"]:
                 print(f"    ✓ {p['project_name'][:50]} — type: {detail['analysis_type']}")
-        # Remove dead projects from this forest's list
-        if dead_urls:
-            projects[:] = [p for p in projects if p["project_url"] not in dead_urls]
-            print(f"  Removed {len(dead_urls)} dead page(s)")
     else:
         print(f"  Details: using cached data ({len(milestone_projects)} projects, non-refresh day)")
+
+    # Remove all dead projects found in either pass
+    if dead_urls:
+        projects[:] = [p for p in projects if p["project_url"] not in dead_urls]
+        print(f"  Removed {len(dead_urls)} dead page(s)")
 
     return projects
 
