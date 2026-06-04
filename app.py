@@ -1747,6 +1747,20 @@ PAGE_TEMPLATE = """
     Data scraped from fs.usda.gov &nbsp;·&nbsp; Last updated: {{ last_scraped }}
 </footer>
 
+<script>
+// Live search — submit form 350ms after user stops typing
+(function() {
+    var input = document.querySelector('#searchform input[name="q"]');
+    if (!input) return;
+    var timer;
+    input.addEventListener('input', function() {
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+            document.getElementById('searchform').submit();
+        }, 350);
+    });
+})();
+</script>
 </body>
 <script>
 
