@@ -192,12 +192,31 @@ def page_hash(html: str) -> str:
     return hashlib.md5(html.encode("utf-8")).hexdigest()
 
 
+DEAD_PAGE_PHRASES = [
+    "we're sorry, but the project listings are not available at this time",
+    "project listings are not available",
+]
+
+
+def is_dead_page(html: str) -> bool:
+    """Return True if the page shows the USFS unavailable message."""
+    lower = html.lower()
+    return any(phrase in lower for phrase in DEAD_PAGE_PHRASES)
+
+
 def fetch_detail(session: requests.Session, project_url: str) -> dict:
-    """Fetch a project detail page and return milestones, analysis type, and comment status."""
+    """Fetch a project detail page and return milestones, analysis type, and comment status.
+    Returns None if the page is dead (USFS unavailable message)."""
     result = {"milestones": [], "analysis_type": "", "accepting_comments": False, "comment_deadline": ""}
     try:
         r = session.get(project_url, timeout=30)
         r.raise_for_status()
+
+        # Check for dead page before doing anything else
+        if is_dead_page(r.text):
+            print(f"    💀 DEAD PAGE — will be excluded")
+            return None
+
         detail = parse_detail_page(r.text)
         result.update(detail)
     except requests.RequestException as e:
@@ -332,9 +351,13 @@ def scrape_forest(session: requests.Session, forest: dict,
     if to_fetch:
         reason = "full refresh" if do_full else "new projects only"
         print(f"  Fetching details for {len(to_fetch)} projects ({reason})...")
+        dead_urls = set()
         for p in to_fetch:
             time.sleep(DELAY_BETWEEN_REQUESTS)
             detail = fetch_detail(session, p["project_url"])
+            if detail is None:
+                dead_urls.add(p["project_url"])
+                continue
             p["milestones"]          = detail["milestones"]
             p["analysis_type"]       = detail["analysis_type"]
             p["accepting_comments"]  = detail["accepting_comments"]
@@ -343,6 +366,10 @@ def scrape_forest(session: requests.Session, forest: dict,
                 print(f"    ✓ {p['project_name'][:50]} — {len(detail['milestones'])} milestones, type: {detail['analysis_type'] or 'n/a'}")
             elif detail["analysis_type"]:
                 print(f"    ✓ {p['project_name'][:50]} — type: {detail['analysis_type']}")
+        # Remove dead projects from this forest's list
+        if dead_urls:
+            projects[:] = [p for p in projects if p["project_url"] not in dead_urls]
+            print(f"  Removed {len(dead_urls)} dead page(s)")
     else:
         print(f"  Details: using cached data ({len(milestone_projects)} projects, non-refresh day)")
 
