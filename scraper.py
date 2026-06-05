@@ -15,6 +15,7 @@ import os
 import time
 import datetime
 import hashlib
+import random
 import requests
 from bs4 import BeautifulSoup
 
@@ -22,7 +23,13 @@ from forests import FORESTS
 from database import (create_tables, upsert_project, mark_inactive_projects,
                       print_summary, get_connection)
 
-DELAY_BETWEEN_REQUESTS = 2
+DELAY_MIN = 2.0   # minimum seconds between requests
+DELAY_MAX = 4.0   # maximum seconds between requests
+
+
+def polite_sleep(extra: float = 0):
+    """Sleep for a randomized polite delay plus any extra backoff."""
+    time.sleep(random.uniform(DELAY_MIN, DELAY_MAX) + extra)
 
 HEADERS = {
     "User-Agent": (
@@ -81,7 +88,7 @@ def parse_comment_period(session: requests.Session, project_id: str) -> dict:
     url = f"https://cara.fs2c.usda.gov/Public/CommentInput?Project={project_id}"
     result = {"accepting_comments": False, "comment_deadline": ""}
     try:
-        r = session.get(url, timeout=20)
+        r = fetch_with_retry(session, url, timeout=20)
         if r.status_code != 200:
             return result
         text = r.text
@@ -204,36 +211,59 @@ def is_dead_page(html: str) -> bool:
     return any(phrase in lower for phrase in DEAD_PAGE_PHRASES)
 
 
+def fetch_with_retry(session: requests.Session, url: str,
+                     timeout: int = 60, max_retries: int = 3) -> requests.Response:
+    """
+    Fetch a URL with retry logic for 429 (rate limit) and timeout errors.
+    Backs off progressively on 429: 30s, 60s, 120s.
+    """
+    backoff = 30
+    for attempt in range(max_retries):
+        try:
+            r = session.get(url, timeout=timeout)
+            if r.status_code == 429:
+                if attempt < max_retries - 1:
+                    print(f"    ⚠️  Rate limited (429) — waiting {backoff}s before retry...")
+                    time.sleep(backoff)
+                    backoff *= 2
+                    continue
+            r.raise_for_status()
+            return r
+        except requests.exceptions.Timeout:
+            if attempt < max_retries - 1:
+                print(f"    ⏱ Timeout — retrying in 5s...")
+                time.sleep(5)
+            else:
+                raise
+    raise requests.RequestException(f"Failed after {max_retries} attempts: {url}")
+
+
 def fetch_detail(session: requests.Session, project_url: str) -> dict:
     """Fetch a project detail page and return milestones, analysis type, and comment status.
     Returns None if the page is dead (USFS unavailable message).
     Retries once on timeout."""
     result = {"milestones": [], "analysis_type": "", "accepting_comments": False, "comment_deadline": ""}
 
-    for attempt in range(2):
-        try:
-            r = session.get(project_url, timeout=60)
-            r.raise_for_status()
+    try:
+        r = fetch_with_retry(session, project_url)
 
-            # Check for dead page before doing anything else
-            if is_dead_page(r.text):
-                print(f"    💀 DEAD PAGE — will be excluded")
-                return None
+        # Check if we were redirected to a different project URL
+        final_url = r.url.rstrip("/")
+        stored_url = project_url.rstrip("/")
+        if final_url != stored_url:
+            print(f"    ↪ Redirected: {stored_url.split('/')[-1]} → {final_url.split('/')[-1]}")
+            result["redirect_url"] = final_url
 
-            detail = parse_detail_page(r.text)
-            result.update(detail)
-            break  # success — exit retry loop
+        # Check for dead page before doing anything else
+        if is_dead_page(r.text):
+            print(f"    💀 DEAD PAGE — will be excluded")
+            return None
 
-        except requests.exceptions.Timeout:
-            if attempt == 0:
-                print(f"    ⏱ Timeout — retrying in 5s...")
-                time.sleep(5)
-            else:
-                print(f"    !! Timed out twice — skipping detail fetch")
-                return result
-        except requests.RequestException as e:
-            print(f"    !! Could not fetch detail from {project_url}: {e}")
-            return result
+        detail = parse_detail_page(r.text)
+        result.update(detail)
+    except requests.RequestException as e:
+        print(f"    !! Could not fetch detail from {project_url}: {e}")
+        return result
 
     # Extract project ID and check comment period
     project_id = project_url.rstrip("/").split("/")[-1]
@@ -256,8 +286,7 @@ def scrape_forest(session: requests.Session, forest: dict,
     print(f"  Fetching: {url}")
 
     try:
-        response = session.get(url, timeout=30)
-        response.raise_for_status()
+        response = fetch_with_retry(session, url)
     except requests.RequestException as e:
         print(f"  !! ERROR fetching {url}: {e}")
         return []
@@ -367,7 +396,7 @@ def scrape_forest(session: requests.Session, forest: dict,
         # Skip if already in to_fetch — fetch_detail handles it there
         if p in to_fetch:
             continue
-        time.sleep(DELAY_BETWEEN_REQUESTS)
+        polite_sleep()
         try:
             r = session.get(p["project_url"], timeout=60)
             if is_dead_page(r.text):
@@ -380,11 +409,14 @@ def scrape_forest(session: requests.Session, forest: dict,
         reason = "full refresh" if do_full else "new projects only"
         print(f"  Fetching details for {len(to_fetch)} projects ({reason})...")
         for p in to_fetch:
-            time.sleep(DELAY_BETWEEN_REQUESTS)
+            polite_sleep()
             detail = fetch_detail(session, p["project_url"])
             if detail is None:
                 dead_urls.add(p["project_url"])
                 continue
+            # If redirected, update the stored URL to the new one
+            if detail.get("redirect_url"):
+                p["project_url"] = detail["redirect_url"]
             p["milestones"]          = detail["milestones"]
             p["analysis_type"]       = detail["analysis_type"]
             p["accepting_comments"]  = detail["accepting_comments"]
@@ -432,16 +464,14 @@ FOREST_ABBREVS = {
 
 def deduplicate_projects(projects: list[dict]) -> list[dict]:
     """
-    Merge projects with identical names into a single card.
-    - Merges forest names into a combined list
-    - Keeps the highest-priority status
-    - Keeps the longest description
-    - Keeps milestones from whichever entry has them
-    - Keeps the earliest first_seen date
+    Two-pass deduplication:
+    Pass 1: Merge projects with identical project IDs (same project across multiple forests)
+    Pass 2: Within same forest, keep only highest-numbered project ID for same-name projects
+             (handles cases where old project redirects to new project with same name)
     """
+    # Pass 1: group by project ID
     groups = {}
     for p in projects:
-        # Use project ID (from URL) as dedup key — same project appears across forests with same ID
         project_id = p.get("project_url", "").rstrip("/").split("/")[-1]
         key = project_id if project_id.isdigit() else p["project_name"].strip().lower()
         if key not in groups:
@@ -455,11 +485,9 @@ def deduplicate_projects(projects: list[dict]) -> list[dict]:
             p = group[0]
         else:
             dupes += 1
-            # Sort by status priority
             group.sort(key=lambda x: STATUS_PRIORITY.get(x.get("status", ""), 99))
             base = group[0].copy()
 
-            # Merge forest names — collect all unique forests
             all_forests = []
             seen_codes = set()
             for g in group:
@@ -473,22 +501,18 @@ def deduplicate_projects(projects: list[dict]) -> list[dict]:
                 )
                 base["forest_code"] = "multi"
                 base["is_multi_forest"] = True
-            # else: keep original forest_name and forest_code from base
 
-            # Keep longest description
             base["description"] = max(
                 (g.get("description", "") for g in group),
                 key=len
             )
 
-            # Keep milestones from first entry that has them
             for g in group:
                 if g.get("milestones"):
                     base["milestones"] = g["milestones"]
                     base["analysis_type"] = g.get("analysis_type", "")
                     break
 
-            # Keep earliest first_seen
             first_seens = [g.get("first_seen", "") for g in group if g.get("first_seen")]
             if first_seens:
                 base["first_seen"] = min(first_seens)
@@ -498,8 +522,42 @@ def deduplicate_projects(projects: list[dict]) -> list[dict]:
         merged.append(p)
 
     if dupes:
-        print(f"  Deduplicated {dupes} multi-forest projects")
-    return merged
+        print(f"  Pass 1: merged {dupes} multi-forest projects")
+
+    # Pass 2: within same forest, keep only highest project ID for same-name projects
+    by_name_forest = {}
+    for p in merged:
+        name = p["project_name"].strip().lower()
+        forest = p.get("forest_code", "")
+        key = f"{name}|{forest}"
+        if key not in by_name_forest:
+            by_name_forest[key] = []
+        by_name_forest[key].append(p)
+
+    final = []
+    redirect_dupes = 0
+    for key, group in by_name_forest.items():
+        if len(group) == 1:
+            final.append(group[0])
+        else:
+            redirect_dupes += 1
+            # Keep the project with the highest numeric project ID
+            def get_id(p):
+                pid = p.get("project_url", "").rstrip("/").split("/")[-1]
+                return int(pid) if pid.isdigit() else 0
+            group.sort(key=get_id, reverse=True)
+            kept = group[0]
+            # Preserve earliest first_seen across all versions
+            first_seens = [g.get("first_seen", "") for g in group if g.get("first_seen")]
+            if first_seens:
+                kept["first_seen"] = min(first_seens)
+            print(f"  Pass 2: kept ID {get_id(kept)} over {[get_id(g) for g in group[1:]]} for '{kept['project_name'][:40]}'")
+            final.append(kept)
+
+    if redirect_dupes:
+        print(f"  Pass 2: removed {redirect_dupes} superseded projects")
+
+    return final
 
 
 def run_scraper():
@@ -565,8 +623,7 @@ def run_scraper():
         all_projects.extend(projects)
 
         if i < len(FORESTS) - 1:
-            print(f"  Waiting {DELAY_BETWEEN_REQUESTS}s before next forest...")
-            time.sleep(DELAY_BETWEEN_REQUESTS)
+            polite_sleep()
 
     save_hash_cache(hash_cache)
     print(f"\nForests skipped (unchanged): {skipped_forests}/{len(FORESTS)}")
