@@ -17,14 +17,15 @@ import datetime
 import hashlib
 import random
 import requests
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from bs4 import BeautifulSoup
 
 from forests import FORESTS
 from database import (create_tables, upsert_project, mark_inactive_projects,
                       print_summary, get_connection)
 
-DELAY_MIN = 2.0   # minimum seconds between requests
-DELAY_MAX = 4.0   # maximum seconds between requests
+DELAY_MIN = 3.0   # minimum seconds between requests
+DELAY_MAX = 6.0   # maximum seconds between requests
 
 
 def polite_sleep(extra: float = 0):
@@ -238,11 +239,11 @@ def fetch_with_retry(session: requests.Session, url: str,
     raise requests.RequestException(f"Failed after {max_retries} attempts: {url}")
 
 
-def fetch_detail(session: requests.Session, project_url: str) -> dict:
+def fetch_detail(session: requests.Session, project_url: str, status: str = "") -> dict:
     """Fetch a project detail page and return milestones, analysis type, and comment status.
     Returns None if the page is dead (USFS unavailable message).
     Retries once on timeout."""
-    result = {"milestones": [], "analysis_type": "", "accepting_comments": False, "comment_deadline": ""}
+    result = {"milestones": [], "analysis_type": "", "accepting_comments": False, "comment_deadline": "", "_status": status}
 
     try:
         r = fetch_with_retry(session, project_url)
@@ -265,13 +266,17 @@ def fetch_detail(session: requests.Session, project_url: str) -> dict:
         print(f"    !! Could not fetch detail from {project_url}: {e}")
         return result
 
-    # Extract project ID and check comment period
-    project_id = project_url.rstrip("/").split("/")[-1]
-    if project_id.isdigit():
-        comment_info = parse_comment_period(session, project_id)
-        result.update(comment_info)
-        if comment_info["accepting_comments"]:
-            print(f"    💬 COMMENTS OPEN until {comment_info['comment_deadline']}")
+    # Extract project ID from final URL (after any redirect) for CARA check
+    # Skip CARA check for Completed and On Hold — they don't accept comments
+    skip_cara = result.get("_status") in ("Completed", "On Hold")
+    if not skip_cara:
+        final_project_url = result.get("redirect_url", project_url)
+        project_id = final_project_url.rstrip("/").split("/")[-1]
+        if project_id.isdigit():
+            comment_info = parse_comment_period(session, project_id)
+            result.update(comment_info)
+            if comment_info["accepting_comments"]:
+                print(f"    💬 COMMENTS OPEN until {comment_info['comment_deadline']}")
 
     return result
 
@@ -398,7 +403,7 @@ def scrape_forest(session: requests.Session, forest: dict,
             continue
         polite_sleep()
         try:
-            r = session.get(p["project_url"], timeout=60)
+            r = fetch_with_retry(session, p["project_url"], timeout=60)
             if is_dead_page(r.text):
                 print(f"    💀 DEAD PAGE: {p['project_name'][:50]}")
                 dead_urls.add(p["project_url"])
@@ -407,24 +412,30 @@ def scrape_forest(session: requests.Session, forest: dict,
 
     if to_fetch:
         reason = "full refresh" if do_full else "new projects only"
-        print(f"  Fetching details for {len(to_fetch)} projects ({reason})...")
-        for p in to_fetch:
+        print(f"  Fetching details for {len(to_fetch)} projects ({reason}) with 5 workers...")
+
+        def fetch_one(p):
             polite_sleep()
-            detail = fetch_detail(session, p["project_url"])
-            if detail is None:
-                dead_urls.add(p["project_url"])
-                continue
-            # If redirected, update the stored URL to the new one
-            if detail.get("redirect_url"):
-                p["project_url"] = detail["redirect_url"]
-            p["milestones"]          = detail["milestones"]
-            p["analysis_type"]       = detail["analysis_type"]
-            p["accepting_comments"]  = detail["accepting_comments"]
-            p["comment_deadline"]    = detail["comment_deadline"]
-            if detail["milestones"]:
-                print(f"    ✓ {p['project_name'][:50]} — {len(detail['milestones'])} milestones, type: {detail['analysis_type'] or 'n/a'}")
-            elif detail["analysis_type"]:
-                print(f"    ✓ {p['project_name'][:50]} — type: {detail['analysis_type']}")
+            detail = fetch_detail(session, p["project_url"], status=p.get("status", ""))
+            return p, detail
+
+        with ThreadPoolExecutor(max_workers=2) as executor:
+            futures = {executor.submit(fetch_one, p): p for p in to_fetch}
+            for future in as_completed(futures):
+                p, detail = future.result()
+                if detail is None:
+                    dead_urls.add(p["project_url"])
+                    continue
+                if detail.get("redirect_url"):
+                    p["project_url"] = detail["redirect_url"]
+                p["milestones"]          = detail["milestones"]
+                p["analysis_type"]       = detail["analysis_type"]
+                p["accepting_comments"]  = detail["accepting_comments"]
+                p["comment_deadline"]    = detail["comment_deadline"]
+                if detail["milestones"]:
+                    print(f"    ✓ {p['project_name'][:50]} — {len(detail['milestones'])} milestones, type: {detail['analysis_type'] or 'n/a'}")
+                elif detail["analysis_type"]:
+                    print(f"    ✓ {p['project_name'][:50]} — type: {detail['analysis_type']}")
     else:
         print(f"  Details: using cached data ({len(milestone_projects)} projects, non-refresh day)")
 
