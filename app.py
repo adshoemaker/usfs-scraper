@@ -734,7 +734,7 @@ PAGE_TEMPLATE = """
         }
 
         .btn-comment.primary.pulsing {
-            animation: pulse-green 1s ease-in-out infinite;
+            animation: pulse-green 2s ease-in-out infinite;
         }
 
         .category-disclaimer {
