@@ -244,7 +244,15 @@ def filter_projects(projects, search="", forest_code="", status="",
                 continue
         results.append(p)
 
-    if sort == "newest":
+    if sort == "cara_newest":
+        results.sort(key=lambda p: (0 if p.get("accepting_comments") else 1, p.get("first_seen", "") + "z" if not p.get("accepting_comments") else ""), reverse=False)
+        results.sort(key=lambda p: (0 if p.get("accepting_comments") else 1,))
+        # stable secondary: newest within each group
+        from operator import itemgetter
+        cara = sorted([p for p in results if p.get("accepting_comments")], key=lambda p: p.get("first_seen",""), reverse=True)
+        rest = sorted([p for p in results if not p.get("accepting_comments")], key=lambda p: p.get("first_seen",""), reverse=True)
+        results[:] = cara + rest
+    elif sort == "newest":
         results.sort(key=lambda p: p.get("first_seen", ""), reverse=True)
     elif sort == "oldest":
         results.sort(key=lambda p: p.get("first_seen", ""))
@@ -1551,7 +1559,7 @@ PAGE_TEMPLATE = """
         <div>
             <label for="sort">Sort by</label>
             <select id="sort" name="sort" onchange="this.form.submit()">
-                <option value="">Default</option>
+                <option value="cara_newest" {% if selected_sort == "cara_newest" %}selected{% endif %}>Default</option>
                 <option value="newest"   {% if selected_sort == "newest"   %}selected{% endif %}>Newest first</option>
                 <option value="oldest"   {% if selected_sort == "oldest"   %}selected{% endif %}>Oldest first</option>
                 <option value="name"     {% if selected_sort == "name"     %}selected{% endif %}>Project name A–Z</option>
@@ -1560,11 +1568,8 @@ PAGE_TEMPLATE = """
                 <option value="status"   {% if selected_sort == "status"   %}selected{% endif %}>Status</option>
                 <option value="impact"        {% if selected_sort == "impact"        %}selected{% endif %}>Impact category</option>
                 <option value="scoping_newest"        {% if selected_sort == "scoping_newest"        %}selected{% endif %}>Scoping date newest</option>
-                <option value="scoping_oldest"        {% if selected_sort == "scoping_oldest"        %}selected{% endif %}>Scoping date oldest</option>
                 <option value="decision_newest"       {% if selected_sort == "decision_newest"       %}selected{% endif %}>Decision date newest</option>
-                <option value="decision_oldest"       {% if selected_sort == "decision_oldest"       %}selected{% endif %}>Decision date oldest</option>
                 <option value="implementation_newest" {% if selected_sort == "implementation_newest" %}selected{% endif %}>Implementation newest</option>
-                <option value="implementation_oldest" {% if selected_sort == "implementation_oldest" %}selected{% endif %}>Implementation oldest</option>
             </select>
         </div>
         <div>
@@ -1579,11 +1584,8 @@ PAGE_TEMPLATE = """
                 <option value="impact"   {% if selected_sort2 == "impact"   %}selected{% endif %}>Impact category</option>
                 <option value="analysis"      {% if selected_sort2 == "analysis"      %}selected{% endif %}>Analysis type</option>
                 <option value="scoping_newest"        {% if selected_sort2 == "scoping_newest"        %}selected{% endif %}>Scoping date newest</option>
-                <option value="scoping_oldest"        {% if selected_sort2 == "scoping_oldest"        %}selected{% endif %}>Scoping date oldest</option>
                 <option value="decision_newest"       {% if selected_sort2 == "decision_newest"       %}selected{% endif %}>Decision date newest</option>
-                <option value="decision_oldest"       {% if selected_sort2 == "decision_oldest"       %}selected{% endif %}>Decision date oldest</option>
                 <option value="implementation_newest" {% if selected_sort2 == "implementation_newest" %}selected{% endif %}>Implementation newest</option>
-                <option value="implementation_oldest" {% if selected_sort2 == "implementation_oldest" %}selected{% endif %}>Implementation oldest</option>
             </select>
         </div>
         {% if search or selected_forest or selected_status or selected_days or selected_category_str or selected_sort or selected_sort2 %}
@@ -1878,7 +1880,7 @@ def index():
     selected_days     = request.args.get("days", "").strip()
     selected_category_str = request.args.get("category", "").strip()
     selected_categories = [c.strip() for c in selected_category_str.split(",") if c.strip()]
-    selected_sort     = request.args.get("sort", "newest").strip()
+    selected_sort     = request.args.get("sort", "cara_newest").strip()
     selected_sort2    = request.args.get("sort2", "").strip()
 
     all_projects, last_scraped = load_projects()
