@@ -727,6 +727,15 @@ PAGE_TEMPLATE = """
 
         .annotation-copy:hover { background: #1d4ed8; }
 
+        @keyframes pulse-green {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(45,122,31,0.5); }
+            50% { box-shadow: 0 0 0 6px rgba(45,122,31,0); }
+        }
+
+        .btn-comment.primary.pulsing {
+            animation: pulse-green 1.5s ease-in-out infinite;
+        }
+
         .category-disclaimer {
             font-size: 0.62rem;
             color: var(--text-dim);
@@ -1754,6 +1763,9 @@ PAGE_TEMPLATE = """
                                 var isHidden = box.style.display === 'none' || box.style.display === '';
                                 box.style.display = isHidden ? 'block' : 'none';
                                 this.innerText = isHidden ? '▲ Hide Suggested Comment' : '▼ View and Copy Suggested Comment';
+                                var card = this.closest('.project-card');
+                                var submitBtn = card ? card.querySelector('.btn-comment.primary') : null;
+                                if (submitBtn) submitBtn.classList.toggle('pulsing', isHidden);
                             ">▼ View and Copy Suggested Comment</button>
                             <div class="annotation-content" style="display:none;">
                                 <div class="annotation-text">{{ ann.annotation }}</div>
