@@ -11,9 +11,14 @@
 import json
 import os
 import datetime
-from flask import Flask, request, render_template_string
+import base64
+import urllib.request
+import urllib.error
+import urllib.parse
+from flask import Flask, request, render_template_string, session, redirect, url_for
 
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static'))
+app.secret_key = os.environ.get("FLASK_SECRET_KEY", "dev-secret-change-in-production")
 
 STATUS_COLORS = {
     "Developing Proposal": "#9b72d8",
@@ -675,6 +680,42 @@ PAGE_TEMPLATE = """
         .cat-btn .dot.active-filter-dot { background: #2d7a1f; }
         .cat-btn.taking-comments.active { background: #cc1111; color: white; border: 3px solid #cc1111; }
         .cat-btn .dot.taking-comments-dot { background: #fbbf24; border: 1px solid #cc1111; }
+
+        .annotation-box {
+            margin-top: 12px;
+            border: 2px solid #2563eb;
+            background: #f0f4ff;
+            padding: 10px 14px;
+        }
+
+        .annotation-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #2563eb;
+            margin-bottom: 6px;
+        }
+
+        .annotation-text {
+            font-size: 0.82rem;
+            color: #1a1a1a;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            margin-bottom: 8px;
+        }
+
+        .annotation-copy {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .annotation-copy:hover { background: #1d4ed8; }
 
         .category-disclaimer {
             font-size: 0.62rem;
@@ -1695,6 +1736,14 @@ PAGE_TEMPLATE = """
                                target="_blank" rel="noopener">📖 View Prior Comments</a>
                             {% endif %}
                         </div>
+                        {% set ann = annotations.get(p.project_url, {}) %}
+                        {% if ann.get('annotation') %}
+                        <div class="annotation-box">
+                            <div class="annotation-label">💬 Suggested Comment</div>
+                            <div class="annotation-text">{{ ann.annotation }}</div>
+                            <button class="annotation-copy" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy to clipboard',2000)">Copy to clipboard</button>
+                        </div>
+                        {% endif %}
                         <!-- Meta tags -->
                         <div class="meta">
                             {% if p.unit %}<span>📍 {{ p.unit }}</span>{% endif %}
@@ -1803,6 +1852,7 @@ def index():
     selected_sort2    = request.args.get("sort2", "").strip()
 
     all_projects, last_scraped = load_projects()
+    annotations = load_annotations()
 
     recent_cutoff = (
         datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=72)
@@ -1925,7 +1975,225 @@ def index():
         toggle_forest_url=toggle_forest_url_fn,
         active_count=active_count,
         url_with_category=url_with_category,
+        annotations=annotations,
     )
+
+
+# ── Annotations ──────────────────────────────────────────────
+
+ANNOTATIONS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "annotations.json")
+
+
+def load_annotations() -> dict:
+    try:
+        with open(ANNOTATIONS_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def save_annotations_local(annotations: dict):
+    with open(ANNOTATIONS_FILE, "w", encoding="utf-8") as f:
+        json.dump(annotations, f, indent=2, ensure_ascii=False)
+
+
+def save_annotations_github(annotations: dict) -> bool:
+    """Commit annotations.json to GitHub via the API. Returns True on success."""
+    token  = os.environ.get("GITHUB_TOKEN")
+    repo   = os.environ.get("GITHUB_REPO")   # e.g. "username/usfs-scraper"
+    if not token or not repo:
+        return False  # fall back to local only
+
+    content = json.dumps(annotations, indent=2, ensure_ascii=False).encode("utf-8")
+    encoded = base64.b64encode(content).decode("utf-8")
+
+    api_url = f"https://api.github.com/repos/{repo}/contents/annotations.json"
+
+    # Get current SHA (needed for update)
+    sha = None
+    try:
+        req = urllib.request.Request(api_url, headers={
+            "Authorization": f"token {token}",
+            "Accept": "application/vnd.github+json",
+        })
+        with urllib.request.urlopen(req) as resp:
+            sha = json.loads(resp.read())["sha"]
+    except Exception:
+        pass  # file doesn't exist yet — create it
+
+    payload = {
+        "message": f"Update annotations {datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M')}",
+        "content": encoded,
+    }
+    if sha:
+        payload["sha"] = sha
+
+    try:
+        data = json.dumps(payload).encode("utf-8")
+        req = urllib.request.Request(api_url, data=data, method="PUT", headers={
+            "Authorization": f"token {token}",
+            "Accept": "application/vnd.github+json",
+            "Content-Type": "application/json",
+        })
+        with urllib.request.urlopen(req):
+            pass
+        return True
+    except Exception as e:
+        print(f"GitHub commit failed: {e}")
+        return False
+
+
+ADMIN_TEMPLATE = """
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>LFDC Tracker Admin</title>
+<style>
+  body { font-family: 'Segoe UI', sans-serif; background: #f0f0ea; margin: 0; padding: 20px; color: #1a1a1a; }
+  h1 { font-size: 1.3rem; font-weight: 600; margin-bottom: 6px; }
+  .subtitle { font-size: 0.8rem; color: #666; margin-bottom: 24px; }
+  .project-list { display: flex; flex-direction: column; gap: 16px; max-width: 800px; }
+  .project-card { background: white; border: 2px solid #e0c040; border-radius: 0; padding: 16px; }
+  .project-name { font-weight: 600; font-size: 1rem; margin-bottom: 4px; }
+  .forest-name { font-size: 0.78rem; color: #666; margin-bottom: 12px; }
+  .deadline { font-size: 0.78rem; color: #cc1111; font-weight: 600; margin-bottom: 12px; }
+  label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #555; display: block; margin-bottom: 4px; }
+  textarea { width: 100%; box-sizing: border-box; padding: 8px; font-family: inherit; font-size: 0.85rem; border: 1px solid #ccc; resize: vertical; min-height: 80px; }
+  .save-btn { margin-top: 8px; padding: 6px 18px; background: #2d7a1f; color: white; border: none; font-size: 0.82rem; cursor: pointer; }
+  .save-btn:hover { background: #1e5a12; }
+  .saved-msg { display: none; color: #2d7a1f; font-size: 0.78rem; margin-left: 10px; }
+  .no-tcn { color: #888; font-size: 0.9rem; margin-top: 20px; }
+  .logout { float: right; font-size: 0.75rem; color: #888; text-decoration: none; }
+  .logout:hover { color: #333; }
+  .flash { background: #d4edda; border: 1px solid #2d7a1f; padding: 8px 14px; margin-bottom: 16px; font-size: 0.85rem; color: #1a4f0f; max-width: 800px; }
+</style>
+</head>
+<body>
+<a href="/admin/logout" class="logout">Log out</a>
+<h1>LFDC Tracker — Annotation Admin</h1>
+<p class="subtitle">Add suggested comment text to projects currently accepting comments. Changes save to GitHub automatically.</p>
+
+{% if flash %}
+<div class="flash">{{ flash }}</div>
+{% endif %}
+
+{% if tcn_projects %}
+<div class="project-list">
+{% for p in tcn_projects %}
+<div class="project-card">
+  <div class="project-name">{{ p.project_name }}</div>
+  <div class="forest-name">{{ p.forest_name }}</div>
+  {% if p.comment_deadline %}<div class="deadline">Comments due: {{ p.comment_deadline }}</div>{% endif %}
+  <form method="POST" action="/admin/save">
+    <input type="hidden" name="project_url" value="{{ p.project_url }}">
+    <label>Suggested Comment Text</label>
+    <textarea name="annotation" placeholder="Enter suggested comment text for users to copy...">{{ annotations.get(p.project_url, {}).get('annotation', '') }}</textarea>
+    <br>
+    <label style="margin-top:10px;">Internal Notes (not shown to public)</label>
+    <textarea name="notes" placeholder="Internal notes for LFDC staff only...">{{ annotations.get(p.project_url, {}).get('notes', '') }}</textarea>
+    <br>
+    <button type="submit" class="save-btn">Save</button>
+  </form>
+</div>
+{% endfor %}
+</div>
+{% else %}
+<p class="no-tcn">No projects are currently accepting comments.</p>
+{% endif %}
+</body>
+</html>
+"""
+
+ADMIN_LOGIN_TEMPLATE = """
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>LFDC Admin Login</title>
+<style>
+  body { font-family: 'Segoe UI', sans-serif; background: #f0f0ea; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+  .box { background: white; padding: 32px; border: 1px solid #ccc; max-width: 320px; width: 100%; }
+  h1 { font-size: 1.1rem; margin-bottom: 20px; }
+  input[type=password] { width: 100%; box-sizing: border-box; padding: 8px; font-size: 0.9rem; border: 1px solid #ccc; margin-bottom: 12px; }
+  button { padding: 8px 20px; background: #2d7a1f; color: white; border: none; font-size: 0.9rem; cursor: pointer; }
+  .error { color: #cc1111; font-size: 0.82rem; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>LFDC Tracker Admin</h1>
+  {% if error %}<div class="error">Incorrect password.</div>{% endif %}
+  <form method="POST">
+    <input type="password" name="password" placeholder="Password" autofocus>
+    <button type="submit">Log in</button>
+  </form>
+</div>
+</body>
+</html>
+"""
+
+
+@app.route("/admin", methods=["GET"])
+def admin():
+    if not session.get("admin_authed"):
+        return redirect(url_for("admin_login"))
+    projects, _ = load_projects()
+    tcn_projects = [p for p in projects if p.get("accepting_comments")]
+    annotations  = load_annotations()
+    flash = request.args.get("flash", "")
+    return render_template_string(ADMIN_TEMPLATE,
+        tcn_projects=tcn_projects,
+        annotations=annotations,
+        flash=flash,
+    )
+
+
+@app.route("/admin/login", methods=["GET", "POST"])
+def admin_login():
+    if request.method == "POST":
+        password = request.form.get("password", "")
+        admin_pw = os.environ.get("ADMIN_PASSWORD", "lfdc-admin")
+        if password == admin_pw:
+            session["admin_authed"] = True
+            return redirect(url_for("admin"))
+        return render_template_string(ADMIN_LOGIN_TEMPLATE, error=True)
+    return render_template_string(ADMIN_LOGIN_TEMPLATE, error=False)
+
+
+@app.route("/admin/logout")
+def admin_logout():
+    session.pop("admin_authed", None)
+    return redirect(url_for("admin_login"))
+
+
+@app.route("/admin/save", methods=["POST"])
+def admin_save():
+    if not session.get("admin_authed"):
+        return redirect(url_for("admin_login"))
+
+    project_url = request.form.get("project_url", "").strip()
+    annotation  = request.form.get("annotation", "").strip()
+    notes       = request.form.get("notes", "").strip()
+
+    if not project_url:
+        return redirect(url_for("admin"))
+
+    annotations = load_annotations()
+    if annotation or notes:
+        annotations[project_url] = {
+            "annotation": annotation,
+            "notes":      notes,
+            "updated":    datetime.datetime.utcnow().isoformat(),
+        }
+    elif project_url in annotations:
+        del annotations[project_url]
+
+    save_annotations_local(annotations)
+    github_ok = save_annotations_github(annotations)
+
+    flash = "Saved and committed to GitHub ✓" if github_ok else "Saved locally (GitHub token not configured)"
+    return redirect(url_for("admin") + f"?flash={urllib.parse.quote(flash)}")
 
 
 if __name__ == "__main__":
