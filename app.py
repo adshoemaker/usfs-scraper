@@ -729,12 +729,12 @@ PAGE_TEMPLATE = """
         .annotation-copy:hover { background: #1d4ed8; }
 
         @keyframes pulse-green {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(45,122,31,0.5); }
-            50% { box-shadow: 0 0 0 6px rgba(45,122,31,0); }
+            0%, 100% { box-shadow: 0 0 0 0 rgba(45,122,31,0.7); background: #2d7a1f; }
+            50% { box-shadow: 0 0 0 10px rgba(45,122,31,0); background: #4aaa35; }
         }
 
         .btn-comment.primary.pulsing {
-            animation: pulse-green 1.5s ease-in-out infinite;
+            animation: pulse-green 1s ease-in-out infinite;
         }
 
         .category-disclaimer {
