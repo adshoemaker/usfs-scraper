@@ -683,18 +683,28 @@ PAGE_TEMPLATE = """
 
         .annotation-box {
             margin-top: 12px;
-            border: 2px solid #2563eb;
-            background: #f0f4ff;
-            padding: 10px 14px;
         }
 
-        .annotation-label {
-            font-size: 0.68rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+        .annotation-toggle {
+            background: transparent;
             color: #2563eb;
-            margin-bottom: 6px;
+            border: 2px solid #2563eb;
+            padding: 5px 14px;
+            font-size: 0.78rem;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            text-align: left;
+        }
+
+        .annotation-toggle:hover { background: rgba(37,99,235,0.08); }
+
+        .annotation-content {
+            border: 2px solid #2563eb;
+            border-top: none;
+            background: #f0f4ff;
+            padding: 10px 14px;
         }
 
         .annotation-text {
@@ -1736,12 +1746,19 @@ PAGE_TEMPLATE = """
                                target="_blank" rel="noopener">📖 View Prior Comments</a>
                             {% endif %}
                         </div>
-                        {% set ann = annotations.get(p.project_url, {}) %}
+        {% set ann = annotations.get(p.project_url, {}) %}
                         {% if ann.get('annotation') %}
                         <div class="annotation-box">
-                            <div class="annotation-label">💬 Suggested Comment</div>
-                            <div class="annotation-text">{{ ann.annotation }}</div>
-                            <button class="annotation-copy" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy to clipboard',2000)">Copy to clipboard</button>
+                            <button class="annotation-toggle" onclick="
+                                var box = this.nextElementSibling;
+                                var isHidden = box.style.display === 'none' || box.style.display === '';
+                                box.style.display = isHidden ? 'block' : 'none';
+                                this.innerText = isHidden ? '▲ Hide Suggested Comment' : '▼ View and Copy Suggested Comment';
+                            ">▼ View and Copy Suggested Comment</button>
+                            <div class="annotation-content" style="display:none;">
+                                <div class="annotation-text">{{ ann.annotation }}</div>
+                                <button class="annotation-copy" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy to clipboard',2000)">Copy to clipboard</button>
+                            </div>
                         </div>
                         {% endif %}
                         <!-- Meta tags -->
