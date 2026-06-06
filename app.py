@@ -1844,7 +1844,6 @@ PAGE_TEMPLATE = """
                     </span>
                     {% if has_milestones %}
                     <div class="milestone-section">
-                        <div class="milestone-section-label">Project Milestones</div>
                         <table class="milestone-table">
                             <thead><tr><th>Milestone</th><th>Date</th></tr></thead>
                             <tbody>
