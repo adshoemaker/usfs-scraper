@@ -1556,7 +1556,7 @@ PAGE_TEMPLATE = """
         </div>
         <div class="forest-totals-row">
             <span class="summary-totals">
-                <strong>{{ total }}</strong> total &nbsp;·&nbsp; <strong>{{ active_count }}</strong> active / in development
+                <strong>{{ total }}</strong> total
             </span>
             <a href="/" class="forest-reset-btn">Reset</a>
         </div>
