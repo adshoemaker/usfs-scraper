@@ -744,11 +744,11 @@ PAGE_TEMPLATE = """
             background: #c94f1a;
             color: white;
             border: 2px solid #1a1a1a;
-            font-size: 0.78rem;
-            font-weight: 700;
+            font-size: 1.17rem;
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            padding: 16px 12px;
+            padding: 8px 12px;
             width: 255px;
             box-sizing: border-box;
         }
@@ -1806,7 +1806,7 @@ PAGE_TEMPLATE = """
                 <div class="card-body-right desktop-only">
                     {% if p.project_url in commented_urls %}
                     <div class="lfdc-commented-badge">
-                        <img src="/static/LFDC_Logo.png" style="height:20px; width:20px; object-fit:contain; vertical-align:middle;"> LFDC Commented
+                        <img src="/static/LFDC_Logo.png" style="height:30px; width:30px; object-fit:contain; vertical-align:middle;"> LFDC Commented
                     </div>
                     {% endif %}
                     {% if p.status %}
