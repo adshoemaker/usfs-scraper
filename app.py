@@ -772,13 +772,13 @@ PAGE_TEMPLATE = """
             align-items: center;
             justify-content: center;
             gap: 8px;
-            background: #8fa68e !important;
-            color: white !important;
-            border: 2px solid #1a1a1a;
+            background: #e8e8e4 !important;
+            color: #8fa68e !important;
+            border: 2px solid #e8e8e4;
             font-family: 'Poppins', sans-serif;
             font-size: 0.85rem;
             font-weight: 200;
-            text-transform: uppercase;
+            text-transform: none;
             letter-spacing: 0.8px;
             padding: 4px 6px;
             width: 255px;
@@ -1864,12 +1864,12 @@ PAGE_TEMPLATE = """
                 <div class="card-body-right desktop-only">
                     {% if p.project_url in thinning_urls %}
                     <a href="{{ thinning_url }}" target="_blank" rel="noopener" class="wildfire-badge" style="text-decoration:none;">
-                        🌲 Learn About Thinning
+                        Learn About Thinning
                     </a>
                     {% endif %}
                     {% if p.project_url in wildfire_urls %}
                     <a href="{{ wildfire_url }}" target="_blank" rel="noopener" class="wildfire-badge" style="text-decoration:none;">
-                        🔥 Learn About Wildfire
+                        Learn About Wildfire
                     </a>
                     {% endif %}
                     {% if p.project_url in commented_urls %}
