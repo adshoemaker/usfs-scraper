@@ -713,6 +713,7 @@ PAGE_TEMPLATE = """
 
         .annotation-box {
             margin-top: 12px;
+            display: inline-block;
         }
 
         .annotation-toggle {
@@ -726,9 +727,18 @@ PAGE_TEMPLATE = """
             font-weight: 600;
             width: 100%;
             text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .annotation-toggle:hover { background: rgba(37,99,235,0.08); }
+
+        .ann-arrow {
+            display: inline-block;
+            transition: transform 0.2s;
+            font-style: normal;
+        }
 
         .annotation-content {
             border: 2px solid #2563eb;
@@ -1465,7 +1475,7 @@ PAGE_TEMPLATE = """
 
 <div class="top-search-bar">
     <div class="top-search-inner">
-        <form class="header-search" method="GET" action="/" id="searchform">
+        <form class="header-search" method="GET" action="/" id="searchform" style="position:relative;">
             <input type="hidden" name="forest"   value="{{ selected_forest }}">
             <input type="hidden" name="status"   value="{{ selected_status }}">
             <input type="hidden" name="days"     value="{{ selected_days }}">
@@ -1473,10 +1483,15 @@ PAGE_TEMPLATE = """
             <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
             <input type="hidden" name="category" value="{{ selected_category_str }}">
             <input type="hidden" name="forests"  value="{{ selected_forests_str }}">
-            <input type="text" name="q"
-                   placeholder="Search projects..."
-                   value="{{ search }}"
-                   autocomplete="off">
+            <div style="position:relative; display:inline-block;">
+                <input type="text" name="q" id="search-q"
+                       placeholder="Search projects..."
+                       value="{{ search }}"
+                       autocomplete="off">
+                <button type="button" id="search-clear"
+                        onclick="document.getElementById('search-q').value=''; document.getElementById('search-q').dispatchEvent(new Event('input')); this.style.display='none';"
+                        style="position:absolute; right:6px; top:50%; transform:translateY(-50%); background:none; border:none; color:#aaa; font-size:1rem; cursor:pointer; padding:0; line-height:1; display:{{ 'flex' if search else 'none' }};">✕</button>
+            </div>
             <button type="submit">Search</button>
         </form>
     </div>
@@ -1804,11 +1819,12 @@ PAGE_TEMPLATE = """
                                 var box = this.nextElementSibling;
                                 var isHidden = box.style.display === 'none' || box.style.display === '';
                                 box.style.display = isHidden ? 'block' : 'none';
-                                this.innerText = isHidden ? '▲ Hide Suggested Comment' : '▼ View and Copy Suggested Comment';
+                                var arrow = this.querySelector('.ann-arrow');
+                                if (arrow) arrow.style.transform = isHidden ? 'rotate(90deg)' : 'rotate(0deg)';
                                 var card = this.closest('.project-card');
                                 var submitBtn = card ? card.querySelector('.btn-comment.primary') : null;
                                 if (submitBtn) submitBtn.classList.toggle('pulsing', isHidden);
-                            ">▼ View and Copy Suggested Comment</button>
+                            "><i class="ann-arrow">▶</i> View and Copy Suggested Comment</button>
                             <div class="annotation-content" style="display:none;">
                                 <div class="annotation-text">{{ ann.annotation }}</div>
                                 <button class="annotation-copy" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy to clipboard',2000)">Copy to clipboard</button>
@@ -1897,7 +1913,11 @@ PAGE_TEMPLATE = """
         if (countEl && term) countEl.innerText = visible;
     }
 
-    input.addEventListener('input', doFilter);
+    input.addEventListener('input', function() {
+        var clearBtn = document.getElementById('search-clear');
+        if (clearBtn) clearBtn.style.display = input.value ? 'flex' : 'none';
+        doFilter();
+    });
 
     // Still allow form submit (e.g. hitting Enter) for full server filter
     // but intercept if it's just a search with no other filters active
