@@ -1018,8 +1018,9 @@ PAGE_TEMPLATE = """
         }
 
         .comment-open-badge .badge-deadline {
+            font-family: 'Poppins', sans-serif;
             font-size: 0.72rem;
-            font-weight: 600;
+            font-weight: 200;
             opacity: 0.9;
             margin-top: 2px;
         }
