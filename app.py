@@ -1655,7 +1655,6 @@ PAGE_TEMPLATE = """
                 <option value="oldest"   {% if selected_sort == "oldest"   %}selected{% endif %}>Oldest first</option>
                 <option value="name"     {% if selected_sort == "name"     %}selected{% endif %}>Project name A–Z</option>
                 <option value="forest"   {% if selected_sort == "forest"   %}selected{% endif %}>Forest</option>
-                <option value="analysis" {% if selected_sort == "analysis" %}selected{% endif %}>Analysis type</option>
                 <option value="status"   {% if selected_sort == "status"   %}selected{% endif %}>Status</option>
                 <option value="impact"        {% if selected_sort == "impact"        %}selected{% endif %}>Impact category</option>
                 <option value="scoping_newest"        {% if selected_sort == "scoping_newest"        %}selected{% endif %}>Scoping date newest</option>
@@ -1673,7 +1672,6 @@ PAGE_TEMPLATE = """
                 <option value="forest"   {% if selected_sort2 == "forest"   %}selected{% endif %}>Forest</option>
                 <option value="status"   {% if selected_sort2 == "status"   %}selected{% endif %}>Status</option>
                 <option value="impact"   {% if selected_sort2 == "impact"   %}selected{% endif %}>Impact category</option>
-                <option value="analysis"      {% if selected_sort2 == "analysis"      %}selected{% endif %}>Analysis type</option>
                 <option value="scoping_newest"        {% if selected_sort2 == "scoping_newest"        %}selected{% endif %}>Scoping date newest</option>
                 <option value="decision_newest"       {% if selected_sort2 == "decision_newest"       %}selected{% endif %}>Decision date newest</option>
                 <option value="implementation_newest" {% if selected_sort2 == "implementation_newest" %}selected{% endif %}>Implementation newest</option>
@@ -1777,6 +1775,9 @@ PAGE_TEMPLATE = """
                     {% set _fstate = forest_state_map.get(p.forest_code, '') %}
                     {% set _fcolor = state_colors.get(_fstate, {}).get('pill', '#2d7a1f') %}
                     <div class="forest-tag" style="color: {{ _fcolor }};">{{ p.forest_name }}</div>
+                    {% if p.status %}
+                    <span class="status-badge" style="background: {{ status_colors.get(p.status, '#8892a4') }}; display:inline-block; margin-bottom:6px; width:auto;">{{ p.status }}</span>
+                    {% endif %}
                     <div class="btn-title-wrap">
                         <span class="project-title-text">{{ p.project_name }}</span>
                         {% if p.get('first_seen') and p['first_seen'][:10] >= recent_cutoff %}
@@ -1810,12 +1811,6 @@ PAGE_TEMPLATE = """
                                 {{ p.status }}
                             </span>
                             {% endif %}
-                            {% set atype = p.analysis_type if p.get('analysis_type') else 'Unknown' %}
-                            <span class="analysis-badge"
-                                  style="background: {{ analysis_colors.get(atype, '#999') }}; color:white; border-color:transparent; width:auto;"
-                                  title="{{ analysis_tooltips.get(atype, '') }}">
-                                {{ atype }}
-                            </span>
                         </div>
                         <!-- Mobile milestone table -->
                         {% if has_milestones %}
@@ -1906,12 +1901,6 @@ PAGE_TEMPLATE = """
                         {{ p.status }}
                     </span>
                     {% endif %}
-                    {% set atype = p.analysis_type if p.get('analysis_type') else 'Unknown' %}
-                    <span class="analysis-badge"
-                          style="background: {{ analysis_colors.get(atype, '#999') }}; color:white; border-color:transparent;"
-                          title="{{ analysis_tooltips.get(atype, '') }}">
-                        {{ atype }}
-                    </span>
                     {% if has_milestones %}
                     <div class="milestone-section">
                         <table class="milestone-table">
