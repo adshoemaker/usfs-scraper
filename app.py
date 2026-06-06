@@ -21,10 +21,10 @@ app = Flask(__name__, static_folder=os.path.join(os.path.dirname(os.path.abspath
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "dev-secret-change-in-production")
 
 STATUS_COLORS = {
-    "Developing Proposal": "#9b72d8",
-    "In Progress":         "#4a90d9",
-    "On Hold":             "#e08848",
-    "Completed":           "#5aaa48",
+    "Developing Proposal": "#b4b2a9",
+    "In Progress":         "#b4b2a9",
+    "On Hold":             "#b4b2a9",
+    "Completed":           "#b4b2a9",
 }
 
 ANALYSIS_COLORS = {
@@ -1798,7 +1798,7 @@ PAGE_TEMPLATE = """
                         {% endif %}
                     </div>
                     {% if p.status %}
-                    <span class="status-badge" style="background: {{ status_colors.get(p.status, '#8892a4') }}; display:inline-block; width:auto;">{{ p.status }}</span>
+                    <span class="status-badge" style="background: {{ status_colors.get(p.status, '#b4b2a9') }}; display:inline-block; width:auto;">{{ p.status }}</span>
                     {% endif %}
                 </div>
                 <div class="card-header-badge desktop-only">
@@ -1823,7 +1823,7 @@ PAGE_TEMPLATE = """
                         <!-- Mobile: status + analysis above buttons -->
                         <div class="mobile-only" style="display:none; justify-content:flex-end; gap:6px; flex-wrap:wrap;">
                             {% if p.status %}
-                            <span class="status-badge" style="background: {{ status_colors.get(p.status, '#8892a4') }}; width:auto;">
+                            <span class="status-badge" style="background: {{ status_colors.get(p.status, '#b4b2a9') }}; width:auto;">
                                 {{ p.status }}
                             </span>
                             {% endif %}
