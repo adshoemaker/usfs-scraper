@@ -703,7 +703,7 @@ PAGE_TEMPLATE = """
         .cat-btn.newly-added { border-color: #2563eb; border-width: 3px; color: #1d4ed8; background: rgba(37,99,235,0.1); padding: 6px 37px; font-size: 0.78rem; }
         .cat-btn.newly-added.active { background: #2563eb; color: white; border: 3px solid #1d4ed8; }
         .cat-btn .dot.newly-added-dot { background: #2563eb; }
-        .cat-btn.taking-comments { border-color: #cc1111; border-width: 3px; color: #7c2d12; background: rgba(251,191,36,0.35); padding: 6px 37px; font-size: 0.78rem; }
+        .cat-btn.taking-comments { border-color: #cc1111; border-width: 3px; color: #cc1111; background: #e8e8e4; padding: 6px 37px; font-size: 0.78rem; }
         .cat-btn.taking-comments.active { background: #cc1111; color: white; border: 3px solid #cc1111; }
         .cat-btn.active-filter { border-color: #2d7a1f; border-width: 3px; color: #1a4f0f; background: rgba(45,122,31,0.15); padding: 6px 37px; font-size: 0.78rem; }
         .cat-btn.active-filter.active { background: #2d7a1f; color: white; border: 3px solid #1a4f0f; }
@@ -964,9 +964,9 @@ PAGE_TEMPLATE = """
             align-items: center;
             padding: 8px 18px;
             border-radius: 0;
-            background: #fbbf24;
+            background: #e8e8e4;
             border: 3px solid #cc1111;
-            color: #7c2d12;
+            color: #cc1111;
             font-weight: 700;
             font-size: 0.82rem;
             line-height: 1.4;
