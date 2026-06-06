@@ -784,7 +784,7 @@ PAGE_TEMPLATE = """
             gap: 8px;
             background: #e8e8e4 !important;
             color: #8fa68e !important;
-            border: 2px solid #e8e8e4;
+            border: 1px solid #1a1a1a;
             font-family: 'Poppins', sans-serif;
             font-size: 1.02rem;
             font-weight: 200;
