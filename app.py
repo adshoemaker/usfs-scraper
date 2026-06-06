@@ -777,16 +777,17 @@ PAGE_TEMPLATE = """
 
         .annotation-copy:hover { background: #1d4ed8; }
 
-        .wildfire-badge:hover { background: #d8d8d4 !important; }
+        .wildfire-badge:hover { background: #7a9079 !important; }
 
         .wildfire-badge {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            background: #e8e8e4 !important;
-            color: #8fa68e !important;
+            background: #8fa68e !important;
+            color: white !important;
             border: 1px solid #1a1a1a;
+            border-radius: 4px;
             font-family: 'Poppins', sans-serif;
             font-size: 1.02rem;
             font-weight: 200;
@@ -808,6 +809,7 @@ PAGE_TEMPLATE = """
             background: #8fa68e !important;
             color: white !important;
             border: 2px solid #1a1a1a;
+            border-radius: 4px;
             font-family: 'Poppins', sans-serif;
             font-size: 0.82rem;
             font-weight: 200;
