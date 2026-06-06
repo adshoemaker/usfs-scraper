@@ -776,11 +776,11 @@ PAGE_TEMPLATE = """
             color: #8fa68e !important;
             border: 2px solid #e8e8e4;
             font-family: 'Poppins', sans-serif;
-            font-size: 0.85rem;
+            font-size: 1.02rem;
             font-weight: 200;
             text-transform: none;
             letter-spacing: 0.8px;
-            padding: 4px 6px;
+            padding: 2px 4px;
             width: 255px;
             box-sizing: border-box;
             cursor: pointer;
@@ -2144,7 +2144,7 @@ def index():
         wildfire_urls=wildfire_urls,
         thinning_urls=thinning_urls,
         thinning_url="https://johnmuirproject.org/wp-content/uploads/2024/12/JMP-fact-sheet-thinning-and-fire-29Nov24.pdf",
-        wildfire_url="https://johnmuirproject.org/wp-content/uploads/2014/12/TheMythOfTheCatastrophicWildfireReport.pdf",
+        wildfire_url="https://www.forestclimatealliance.org/s/Final-Wildfire-in-the-Age-of-Climate-Change-compressed.pdf",
     )
 
 
@@ -2484,7 +2484,7 @@ def admin():
         wildfire_urls=wildfire_urls,
         thinning_urls=thinning_urls,
         thinning_url="https://johnmuirproject.org/wp-content/uploads/2024/12/JMP-fact-sheet-thinning-and-fire-29Nov24.pdf",
-        wildfire_url="https://johnmuirproject.org/wp-content/uploads/2014/12/TheMythOfTheCatastrophicWildfireReport.pdf",
+        wildfire_url="https://www.forestclimatealliance.org/s/Final-Wildfire-in-the-Age-of-Climate-Change-compressed.pdf",
         recent_cutoff=admin_cutoff,
     )
 
