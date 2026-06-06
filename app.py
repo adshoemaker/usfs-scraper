@@ -829,13 +829,16 @@ PAGE_TEMPLATE = """
             cursor: pointer;
         }
 
-        @keyframes pulse-green {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(45,122,31,0.7); background: #2d7a1f; }
-            50% { box-shadow: 0 0 0 10px rgba(45,122,31,0); background: #4aaa35; }
+        @keyframes pulse-blue {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(37,99,235,0.7); }
+            50% { box-shadow: 0 0 0 10px rgba(37,99,235,0); }
         }
 
         .btn-comment.primary.pulsing {
-            animation: pulse-green 2s ease-in-out infinite;
+            animation: pulse-blue 2s ease-in-out infinite;
+            background: transparent !important;
+            color: #2563eb !important;
+            border: 1px solid #2563eb !important;
         }
 
         .category-disclaimer {
@@ -1225,7 +1228,7 @@ PAGE_TEMPLATE = """
         .btn-comment.project-link {
             background: white;
             color: #c94f1a;
-            border: 2px solid #c94f1a;
+            border: 1px solid #c94f1a;
         }
 
         .btn-comment.project-link:hover {
@@ -1279,13 +1282,13 @@ PAGE_TEMPLATE = """
         .btn-comment.primary {
             background: #2563eb;
             color: white;
-            border: none;
+            border: 1px solid #2563eb;
         }
 
         .btn-comment.secondary {
             background: white;
             color: #555;
-            border: 2px solid var(--green);
+            border: 1px solid var(--green);
         }
 
         .btn-comment.secondary:hover {
