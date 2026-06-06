@@ -786,7 +786,7 @@ PAGE_TEMPLATE = """
             gap: 8px;
             background: #8fa68e !important;
             color: white !important;
-            border: 1px solid #1a1a1a;
+            border: none;
             border-radius: 4px;
             font-family: 'Poppins', sans-serif;
             font-size: 1.02rem;
@@ -808,7 +808,7 @@ PAGE_TEMPLATE = """
             gap: 6px;
             background: #8fa68e !important;
             color: white !important;
-            border: 2px solid #1a1a1a;
+            border: none;
             border-radius: 4px;
             font-family: 'Poppins', sans-serif;
             font-size: 0.82rem;
