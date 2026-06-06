@@ -187,8 +187,12 @@ def filter_projects(projects, search="", forest_code="", status="",
                   and search_lower not in p.get("description", "").lower():
             continue
         if forest_code and p.get("forest_code") != forest_code:
-            # Also include multi-forest projects that contain this forest
-            if not (p.get("is_multi_forest") and forest_code in p.get("forest_name", "")):
+            if not p.get("is_multi_forest"):
+                continue
+            # For multi-forest projects, check if the forest name or code appears
+            fn = p.get("forest_name", "")
+            forest_obj = next((f for f in FORESTS if f['code'] == forest_code), None)
+            if not (forest_code in fn or (forest_obj and forest_obj['name'] in fn)):
                 continue
         if status and p.get("status") != status:
             continue
@@ -745,10 +749,10 @@ PAGE_TEMPLATE = """
             color: white;
             border: 2px solid #1a1a1a;
             font-size: 1.17rem;
-            font-weight: 300;
+            font-weight: 200;
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            padding: 8px 12px;
+            padding: 4px 6px;
             width: 255px;
             box-sizing: border-box;
         }
@@ -1938,7 +1942,17 @@ def index():
     )
 
     if selected_forests:
-        forest_visible = [p for p in all_projects if p.get('forest_code') in selected_forests]
+        def matches_forest_filter(p, selected):
+            if p.get('forest_code') in selected:
+                return True
+            if p.get('is_multi_forest'):
+                fn = p.get('forest_name', '')
+                return any(
+                    f['code'] in fn or f['name'] in fn
+                    for f in FORESTS if f['code'] in selected
+                )
+            return False
+        forest_visible = [p for p in all_projects if matches_forest_filter(p, selected_forests)]
     else:
         forest_visible = all_projects
 
