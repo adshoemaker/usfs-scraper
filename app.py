@@ -736,6 +736,21 @@ PAGE_TEMPLATE = """
 
         .annotation-copy:hover { background: #1d4ed8; }
 
+        .lfdc-commented-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #c94f1a;
+            color: white;
+            border: 2px solid #1a1a1a;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 4px 12px;
+            margin-top: 10px;
+        }
+
         @keyframes pulse-green {
             0%, 100% { box-shadow: 0 0 0 0 rgba(45,122,31,0.7); background: #2d7a1f; }
             50% { box-shadow: 0 0 0 10px rgba(45,122,31,0); background: #4aaa35; }
@@ -1776,6 +1791,9 @@ PAGE_TEMPLATE = """
                             </div>
                         </div>
                         {% endif %}
+                        {% if p.project_url in commented_urls %}
+                        <div class="lfdc-commented-badge"><img src="/static/LFDC_Logo.png" style="height:16px; width:16px; object-fit:contain; vertical-align:middle;"> LFDC Commented</div>
+                        {% endif %}
                         <!-- Meta tags -->
                         <div class="meta">
                             {% if p.unit %}<span>📍 {{ p.unit }}</span>{% endif %}
@@ -1885,6 +1903,7 @@ def index():
 
     all_projects, last_scraped = load_projects()
     annotations = load_annotations()
+    commented_urls = set(annotations.get("_commented", []))
 
     recent_cutoff = (
         datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=72)
@@ -2008,6 +2027,7 @@ def index():
         active_count=active_count,
         url_with_category=url_with_category,
         annotations=annotations,
+        commented_urls=commented_urls,
     )
 
 
@@ -2084,6 +2104,7 @@ ADMIN_TEMPLATE = """
 <style>
   body { font-family: 'Segoe UI', sans-serif; background: #f0f0ea; margin: 0; padding: 20px; color: #1a1a1a; }
   h1 { font-size: 1.3rem; font-weight: 600; margin-bottom: 6px; }
+  h2 { font-size: 1.05rem; font-weight: 600; margin: 28px 0 10px 0; border-bottom: 2px solid #ccc; padding-bottom: 6px; max-width: 900px; }
   .subtitle { font-size: 0.8rem; color: #666; margin-bottom: 24px; }
   .project-list { display: flex; flex-direction: column; gap: 16px; max-width: 800px; }
   .project-card { background: white; border: 2px solid #e0c040; border-radius: 0; padding: 16px; }
@@ -2094,21 +2115,39 @@ ADMIN_TEMPLATE = """
   textarea { width: 100%; box-sizing: border-box; padding: 8px; font-family: inherit; font-size: 0.85rem; border: 1px solid #ccc; resize: vertical; min-height: 80px; }
   .save-btn { margin-top: 8px; padding: 6px 18px; background: #2d7a1f; color: white; border: none; font-size: 0.82rem; cursor: pointer; }
   .save-btn:hover { background: #1e5a12; }
-  .saved-msg { display: none; color: #2d7a1f; font-size: 0.78rem; margin-left: 10px; }
   .no-tcn { color: #888; font-size: 0.9rem; margin-top: 20px; }
   .logout { float: right; font-size: 0.75rem; color: #888; text-decoration: none; }
   .logout:hover { color: #333; }
-  .flash { background: #d4edda; border: 1px solid #2d7a1f; padding: 8px 14px; margin-bottom: 16px; font-size: 0.85rem; color: #1a4f0f; max-width: 800px; }
+  .flash { background: #d4edda; border: 1px solid #2d7a1f; padding: 8px 14px; margin-bottom: 16px; font-size: 0.85rem; color: #1a4f0f; max-width: 900px; }
+  .flash.error { background: #fde8e8; border-color: #cc1111; color: #7c0000; }
+
+  /* LFDC Commented section */
+  .commented-section { max-width: 900px; }
+  .state-block { margin-bottom: 24px; }
+  .state-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 8px; }
+  .state-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 24px; }
+  .project-row { display: flex; align-items: center; gap: 8px; padding: 5px 8px; background: white; border: 1px solid #e0e0d8; }
+  .project-row:hover { background: #faf9f4; }
+  .project-row input[type=checkbox] { width: 16px; height: 16px; flex-shrink: 0; cursor: pointer; accent-color: #c94f1a; }
+  .project-row-name { font-size: 0.78rem; color: #1a1a1a; flex: 1; }
+  .project-row-forest { font-size: 0.68rem; color: #888; }
+  .project-row.checked { background: #fff4ef; border-color: #c94f1a; }
+  .project-row.checked .project-row-name { color: #c94f1a; font-weight: 600; }
+  .save-commented-btn { margin-top: 16px; padding: 8px 24px; background: #c94f1a; color: white; border: none; font-size: 0.88rem; cursor: pointer; font-family: inherit; font-weight: 600; }
+  .save-commented-btn:hover { background: #a33d12; }
 </style>
 </head>
 <body>
 <a href="/admin/logout" class="logout">Log out</a>
-<h1>LFDC Tracker — Annotation Admin</h1>
-<p class="subtitle">Add suggested comment text to projects currently accepting comments. Changes save to GitHub automatically.</p>
+<h1>LFDC Tracker — Admin</h1>
 
 {% if flash %}
-<div class="flash">{{ flash }}</div>
+<div class="flash {{ 'error' if flash_type == 'error' else '' }}">{{ flash }}</div>
 {% endif %}
+
+<!-- ── Section 1: Suggested Comments ── -->
+<h2>💬 Suggested Comments (Projects Taking Comments Now)</h2>
+<p class="subtitle">Add suggested comment text to projects currently accepting comments.</p>
 
 {% if tcn_projects %}
 <div class="project-list">
@@ -2133,6 +2172,39 @@ ADMIN_TEMPLATE = """
 {% else %}
 <p class="no-tcn">No projects are currently accepting comments.</p>
 {% endif %}
+
+<!-- ── Section 2: LFDC Commented ── -->
+<h2>🟠 LFDC Commented</h2>
+<p class="subtitle">Check projects where LFDC has submitted formal comments. A badge will appear on the public tracker.</p>
+
+<form method="POST" action="/admin/save-commented">
+<div class="commented-section">
+{% set state_order = ['WA', 'OR', 'CA+OR', 'CA', 'AK'] %}
+{% for state in state_order %}
+  {% set state_projects = all_projects_by_state.get(state, []) %}
+  {% if state_projects %}
+  <div class="state-block">
+    <div class="state-label">{{ state }}</div>
+    <div class="state-grid">
+    {% for p in state_projects %}
+      <label class="project-row {{ 'checked' if p.project_url in commented_urls else '' }}" style="cursor:pointer;">
+        <input type="checkbox" name="commented" value="{{ p.project_url }}"
+               {{ 'checked' if p.project_url in commented_urls else '' }}
+               onchange="this.closest('.project-row').classList.toggle('checked', this.checked)">
+        <div>
+          <div class="project-row-name">{{ p.project_name }}</div>
+          <div class="project-row-forest">{{ p.forest_name }}</div>
+        </div>
+      </label>
+    {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+{% endfor %}
+</div>
+<button type="submit" class="save-commented-btn">Save LFDC Commented List</button>
+</form>
+
 </body>
 </html>
 """
@@ -2173,15 +2245,41 @@ def admin():
     projects, _ = load_projects()
     tcn_projects = [p for p in projects if p.get("accepting_comments")]
     annotations  = load_annotations()
+    commented_urls = set(annotations.get("_commented", []))
+
+    # Organize all projects by state, then forest, then name
+    STATE_ORDER = ["WA", "OR", "CA+OR", "CA", "AK"]
+    by_state = {s: [] for s in STATE_ORDER}
+    for p in projects:
+        state = FOREST_STATE_MAP.get(p.get("forest_code", ""), "")
+        if state in by_state:
+            by_state[state].append(p)
+    for state in by_state:
+        by_state[state].sort(key=lambda p: (p.get("forest_name",""), p.get("project_name","").lower()))
+
     flash = request.args.get("flash", "")
+    flash_type = request.args.get("flash_type", "")
     return render_template_string(ADMIN_TEMPLATE,
         tcn_projects=tcn_projects,
         annotations=annotations,
         flash=flash,
+        flash_type=flash_type,
+        all_projects_by_state=by_state,
+        commented_urls=commented_urls,
     )
 
 
-@app.route("/admin/login", methods=["GET", "POST"])
+@app.route("/admin/save-commented", methods=["POST"])
+def admin_save_commented():
+    if not session.get("admin_authed"):
+        return redirect(url_for("admin_login"))
+    commented = request.form.getlist("commented")
+    annotations = load_annotations()
+    annotations["_commented"] = commented
+    save_annotations_local(annotations)
+    github_ok = save_annotations_github(annotations)
+    flash = "LFDC Commented list saved and committed to GitHub ✓" if github_ok else "Saved locally (GitHub token not configured)"
+    return redirect(url_for("admin") + f"?flash={urllib.parse.quote(flash)}")
 def admin_login():
     if request.method == "POST":
         password = request.form.get("password", "")
