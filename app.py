@@ -777,6 +777,8 @@ PAGE_TEMPLATE = """
 
         .annotation-copy:hover { background: #1d4ed8; }
 
+        .wildfire-badge:hover { background: #d8d8d4 !important; }
+
         .wildfire-badge {
             display: flex;
             align-items: center;
@@ -795,6 +797,8 @@ PAGE_TEMPLATE = """
             box-sizing: border-box;
             cursor: pointer;
         }
+
+        .lfdc-commented-badge:hover { background: #7a9079 !important; }
 
         .lfdc-commented-badge {
             display: flex;
@@ -1874,19 +1878,19 @@ PAGE_TEMPLATE = """
                 <div class="card-body-right desktop-only">
                     {% if p.project_url in thinning_urls %}
                     <a href="{{ thinning_url }}" target="_blank" rel="noopener" class="wildfire-badge" style="text-decoration:none;">
-                        Learn About Thinning
+                        Learn About Thinning <svg style="width:14px;height:14px;flex-shrink:0;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                     </a>
                     {% endif %}
                     {% if p.project_url in wildfire_urls %}
                     <a href="{{ wildfire_url }}" target="_blank" rel="noopener" class="wildfire-badge" style="text-decoration:none;">
-                        Learn About Wildfire
+                        Learn About Wildfire <svg style="width:14px;height:14px;flex-shrink:0;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                     </a>
                     {% endif %}
                     {% if p.project_url in commented_urls %}
                     {% set comment_link = commented_urls_map.get(p.project_url, '') %}
                     {% if comment_link %}
                     <a href="{{ comment_link }}" target="_blank" rel="noopener" class="lfdc-commented-badge" style="text-decoration:none;">
-                        <img src="/static/LFDC_Logo.png" style="height:30px; width:30px; object-fit:contain; vertical-align:middle;"> LFDC Commented
+                        <img src="/static/LFDC_Logo.png" style="height:30px; width:30px; object-fit:contain; vertical-align:middle;"> LFDC Commented <svg style="width:14px;height:14px;flex-shrink:0;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                     </a>
                     {% else %}
                     <div class="lfdc-commented-badge">
