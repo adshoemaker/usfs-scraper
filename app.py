@@ -724,25 +724,31 @@ PAGE_TEMPLATE = """
         .annotation-box {
             margin-top: 12px;
             display: inline-block;
+            width: auto;
+        }
+
+        .annotation-box.expanded {
+            width: 100%;
         }
 
         .annotation-toggle {
-            background: transparent;
-            color: #2563eb;
-            border: 2px solid #2563eb;
+            background: #2563eb;
+            color: white;
+            border: none;
             padding: 5px 14px;
             font-size: 0.78rem;
             font-family: 'Poppins', sans-serif;
             cursor: pointer;
             font-weight: 600;
-            width: 100%;
+            width: auto;
             text-align: left;
             display: flex;
             align-items: center;
             gap: 8px;
+            white-space: nowrap;
         }
 
-        .annotation-toggle:hover { background: rgba(37,99,235,0.08); }
+        .annotation-toggle:hover { background: #1d4ed8; }
 
         .ann-arrow {
             display: inline-block;
@@ -755,6 +761,8 @@ PAGE_TEMPLATE = """
             border-top: none;
             background: #f0f4ff;
             padding: 10px 14px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .annotation-text {
@@ -1216,13 +1224,13 @@ PAGE_TEMPLATE = """
 
         .btn-comment.project-link {
             background: white;
-            color: #2563eb;
-            border: 2px solid #2563eb;
+            color: #c94f1a;
+            border: 2px solid #c94f1a;
         }
 
         .btn-comment.project-link:hover {
-            background: #f0f4ff;
-            color: #1d4ed8;
+            background: #fff4ef;
+            color: #a33d12;
         }
 
         .btn-title {
@@ -1269,18 +1277,15 @@ PAGE_TEMPLATE = """
         .btn-comment:hover { opacity: 0.82; }
 
         .btn-comment.primary {
-            background: var(--green);
+            background: #2563eb;
             color: white;
+            border: none;
         }
 
         .btn-comment.secondary {
             background: white;
             color: #555;
             border: 2px solid var(--green);
-        }
-
-        .btn-comment.primary {
-            border: 1px solid var(--green);
         }
 
         .btn-comment.secondary:hover {
@@ -1857,8 +1862,10 @@ PAGE_TEMPLATE = """
                         <div class="annotation-box">
                             <button class="annotation-toggle" onclick="
                                 var box = this.nextElementSibling;
+                                var wrapper = this.closest('.annotation-box');
                                 var isHidden = box.style.display === 'none' || box.style.display === '';
                                 box.style.display = isHidden ? 'block' : 'none';
+                                if (wrapper) wrapper.classList.toggle('expanded', isHidden);
                                 var arrow = this.querySelector('.ann-arrow');
                                 if (arrow) arrow.style.transform = isHidden ? 'rotate(90deg)' : 'rotate(0deg)';
                                 var card = this.closest('.project-card');
