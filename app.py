@@ -997,14 +997,14 @@ PAGE_TEMPLATE = """
             display: inline-flex;
             flex-direction: column;
             align-items: center;
-            padding: 8px 18px;
+            padding: 3px 10px;
             border-radius: 0;
             background: #e8e8e4;
             border: 3px solid #cc1111;
             color: #cc1111;
             font-weight: 700;
             font-size: 0.82rem;
-            line-height: 1.4;
+            line-height: 1.2;
             text-align: center;
             animation: pulse-yellow 2.5s ease-in-out infinite;
             flex-shrink: 0;
