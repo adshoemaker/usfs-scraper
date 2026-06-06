@@ -1843,9 +1843,16 @@ PAGE_TEMPLATE = """
                 <!-- RIGHT COLUMN (desktop only): status + analysis + milestone -->
                 <div class="card-body-right desktop-only">
                     {% if p.project_url in commented_urls %}
+                    {% set comment_link = commented_urls_map.get(p.project_url, '') %}
+                    {% if comment_link %}
+                    <a href="{{ comment_link }}" target="_blank" rel="noopener" class="lfdc-commented-badge" style="text-decoration:none;">
+                        <img src="/static/LFDC_Logo.png" style="height:30px; width:30px; object-fit:contain; vertical-align:middle;"> LFDC Commented
+                    </a>
+                    {% else %}
                     <div class="lfdc-commented-badge">
                         <img src="/static/LFDC_Logo.png" style="height:30px; width:30px; object-fit:contain; vertical-align:middle;"> LFDC Commented
                     </div>
+                    {% endif %}
                     {% endif %}
                     {% if p.status %}
                     <span class="status-badge" style="background: {{ status_colors.get(p.status, '#8892a4') }}">
@@ -2101,6 +2108,7 @@ def index():
         url_with_category=url_with_category,
         annotations=annotations,
         commented_urls=commented_urls,
+        commented_urls_map=annotations.get("_commented_urls", {}),
     )
 
 
@@ -2213,8 +2221,10 @@ ADMIN_TEMPLATE = """
   .project-table tr.new-project:hover td { background: #fff0cc; }
   .proj-name-cell { color: #1a1a1a; }
   .proj-date-cell { color: #666; white-space: nowrap; }
-  .proj-check-cell { text-align: center; }
+  .proj-check-cell { text-align: center; width: 60px; }
   .proj-check-cell input[type=checkbox] { width: 16px; height: 16px; cursor: pointer; accent-color: #c94f1a; }
+  .proj-url-cell { min-width: 200px; }
+  .comment-url-input { width: 100%; padding: 4px 6px; font-size: 0.72rem; border: 1px solid #ccc; box-sizing: border-box; font-family: inherit; }
   .save-commented-btn { margin-top: 16px; padding: 8px 24px; background: #c94f1a; color: white; border: none; font-size: 0.88rem; cursor: pointer; font-family: inherit; font-weight: 600; }
   .save-commented-btn:hover { background: #a33d12; }
 </style>
@@ -2280,6 +2290,7 @@ ADMIN_TEMPLATE = """
           <th class="sortable" onclick="sortTable(this, 0)">Project <span class="sort-icon">↕</span></th>
           <th class="sortable" onclick="sortTable(this, 1)">Date Added <span class="sort-icon">↓</span></th>
           <th>LFDC Commented</th>
+          <th>Comment URL</th>
         </tr>
       </thead>
       <tbody>
@@ -2290,6 +2301,13 @@ ADMIN_TEMPLATE = """
           <td class="proj-check-cell">
             <input type="checkbox" name="commented" value="{{ p.project_url }}"
                    {{ 'checked' if p.project_url in commented_urls else '' }}>
+          </td>
+          <td class="proj-url-cell">
+            <input type="hidden" name="purl_{{ loop.index }}" value="{{ p.project_url }}">
+            <input type="text" name="commented_url_{{ loop.index }}"
+                   class="comment-url-input"
+                   placeholder="https://..."
+                   value="{{ commented_urls_map.get(p.project_url, '') }}">
           </td>
         </tr>
         {% endfor %}
@@ -2402,6 +2420,7 @@ def admin():
 
     flash = request.args.get("flash", "")
     flash_type = request.args.get("flash_type", "")
+    commented_urls_map = annotations.get("_commented_urls", {})
     return render_template_string(ADMIN_TEMPLATE,
         tcn_projects=tcn_projects,
         annotations=annotations,
@@ -2410,6 +2429,7 @@ def admin():
         all_projects_by_state=by_state,
         all_projects_by_forest=all_projects_by_forest,
         commented_urls=commented_urls,
+        commented_urls_map=commented_urls_map,
         recent_cutoff=admin_cutoff,
     )
 
@@ -2421,6 +2441,17 @@ def admin_save_commented():
     commented = request.form.getlist("commented")
     annotations = load_annotations()
     annotations["_commented"] = commented
+
+    # Build URL map: purl_N -> project URL, commented_url_N -> the URL to link to
+    commented_urls_map = {}
+    for key, project_url in request.form.items():
+        if key.startswith("purl_") and project_url.strip():
+            idx = key[5:]
+            link_url = request.form.get(f"commented_url_{idx}", "").strip()
+            if link_url:
+                commented_urls_map[project_url] = link_url
+
+    annotations["_commented_urls"] = commented_urls_map
     save_annotations_local(annotations)
     github_ok = save_annotations_github(annotations)
     flash = "LFDC Commented list saved and committed to GitHub ✓" if github_ok else "Saved locally (GitHub token not configured)"
