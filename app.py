@@ -767,6 +767,25 @@ PAGE_TEMPLATE = """
 
         .annotation-copy:hover { background: #1d4ed8; }
 
+        .wildfire-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #8fa68e !important;
+            color: white !important;
+            border: 2px solid #1a1a1a;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 200;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 4px 6px;
+            width: 255px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
         .lfdc-commented-badge {
             display: flex;
             align-items: center;
@@ -1843,6 +1862,16 @@ PAGE_TEMPLATE = """
 
                 <!-- RIGHT COLUMN (desktop only): status + analysis + milestone -->
                 <div class="card-body-right desktop-only">
+                    {% if p.project_url in thinning_urls %}
+                    <a href="{{ thinning_url }}" target="_blank" rel="noopener" class="wildfire-badge" style="text-decoration:none;">
+                        🌲 Learn About Thinning
+                    </a>
+                    {% endif %}
+                    {% if p.project_url in wildfire_urls %}
+                    <a href="{{ wildfire_url }}" target="_blank" rel="noopener" class="wildfire-badge" style="text-decoration:none;">
+                        🔥 Learn About Wildfire
+                    </a>
+                    {% endif %}
                     {% if p.project_url in commented_urls %}
                     {% set comment_link = commented_urls_map.get(p.project_url, '') %}
                     {% if comment_link %}
@@ -1975,6 +2004,8 @@ def index():
     all_projects, last_scraped = load_projects()
     annotations = load_annotations()
     commented_urls = set(annotations.get("_commented", []))
+    wildfire_urls = set(annotations.get("_wildfire", []))
+    thinning_urls = set(annotations.get("_thinning", []))
 
     recent_cutoff = (
         datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=72)
@@ -2110,6 +2141,10 @@ def index():
         annotations=annotations,
         commented_urls=commented_urls,
         commented_urls_map=annotations.get("_commented_urls", {}),
+        wildfire_urls=wildfire_urls,
+        thinning_urls=thinning_urls,
+        thinning_url="https://johnmuirproject.org/wp-content/uploads/2024/12/JMP-fact-sheet-thinning-and-fire-29Nov24.pdf",
+        wildfire_url="https://johnmuirproject.org/wp-content/uploads/2014/12/TheMythOfTheCatastrophicWildfireReport.pdf",
     )
 
 
@@ -2290,6 +2325,8 @@ ADMIN_TEMPLATE = """
         <tr>
           <th class="sortable" onclick="sortTable(this, 0)">Project <span class="sort-icon">↕</span></th>
           <th class="sortable" onclick="sortTable(this, 1)">Date Added <span class="sort-icon">↓</span></th>
+          <th>Thinning Factsheet</th>
+          <th>Wildfire Factsheet</th>
           <th>LFDC Commented</th>
           <th>Comment URL</th>
         </tr>
@@ -2299,6 +2336,14 @@ ADMIN_TEMPLATE = """
         <tr class="{{ 'new-project' if p.get('first_seen','')[:10] >= recent_cutoff else '' }}">
           <td class="proj-name-cell">{{ p.project_name }}</td>
           <td class="proj-date-cell" data-date="{{ p.get('first_seen','')[:10] }}">{{ p.get('first_seen','')[:10] }}</td>
+          <td class="proj-check-cell">
+            <input type="checkbox" name="thinning" value="{{ p.project_url }}"
+                   {{ 'checked' if p.project_url in thinning_urls else '' }}>
+          </td>
+          <td class="proj-check-cell">
+            <input type="checkbox" name="wildfire" value="{{ p.project_url }}"
+                   {{ 'checked' if p.project_url in wildfire_urls else '' }}>
+          </td>
           <td class="proj-check-cell">
             <input type="checkbox" name="commented" value="{{ p.project_url }}"
                    {{ 'checked' if p.project_url in commented_urls else '' }}>
@@ -2381,6 +2426,8 @@ def admin():
     tcn_projects = [p for p in projects if p.get("accepting_comments")]
     annotations  = load_annotations()
     commented_urls = set(annotations.get("_commented", []))
+    wildfire_urls = set(annotations.get("_wildfire", []))
+    thinning_urls = set(annotations.get("_thinning", []))
 
     # Organize all projects by forest (in state order), then alphabetically by project name
     STATE_ORDER = ["WA", "OR", "CA+OR", "CA", "AK"]
@@ -2422,6 +2469,9 @@ def admin():
     flash = request.args.get("flash", "")
     flash_type = request.args.get("flash_type", "")
     commented_urls_map = annotations.get("_commented_urls", {})
+    wildfire_urls = set(annotations.get("_wildfire", []))
+    thinning_urls = set(annotations.get("_thinning", []))
+    thinning_urls = set(annotations.get("_thinning", []))
     return render_template_string(ADMIN_TEMPLATE,
         tcn_projects=tcn_projects,
         annotations=annotations,
@@ -2431,6 +2481,10 @@ def admin():
         all_projects_by_forest=all_projects_by_forest,
         commented_urls=commented_urls,
         commented_urls_map=commented_urls_map,
+        wildfire_urls=wildfire_urls,
+        thinning_urls=thinning_urls,
+        thinning_url="https://johnmuirproject.org/wp-content/uploads/2024/12/JMP-fact-sheet-thinning-and-fire-29Nov24.pdf",
+        wildfire_url="https://johnmuirproject.org/wp-content/uploads/2014/12/TheMythOfTheCatastrophicWildfireReport.pdf",
         recent_cutoff=admin_cutoff,
     )
 
@@ -2440,8 +2494,12 @@ def admin_save_commented():
     if not session.get("admin_authed"):
         return redirect(url_for("admin_login"))
     commented = request.form.getlist("commented")
+    wildfire = request.form.getlist("wildfire")
+    thinning = request.form.getlist("thinning")
     annotations = load_annotations()
     annotations["_commented"] = commented
+    annotations["_wildfire"] = wildfire
+    annotations["_thinning"] = thinning
 
     # Build URL map: purl_N -> project URL, commented_url_N -> the URL to link to
     commented_urls_map = {}
