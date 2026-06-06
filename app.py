@@ -737,18 +737,20 @@ PAGE_TEMPLATE = """
         .annotation-copy:hover { background: #1d4ed8; }
 
         .lfdc-commented-badge {
-            display: inline-flex;
+            display: flex;
             align-items: center;
-            gap: 6px;
+            justify-content: center;
+            gap: 8px;
             background: #c94f1a;
             color: white;
             border: 2px solid #1a1a1a;
-            font-size: 0.72rem;
+            font-size: 0.78rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            padding: 4px 12px;
-            margin-top: 10px;
+            padding: 16px 12px;
+            width: 255px;
+            box-sizing: border-box;
         }
 
         @keyframes pulse-green {
@@ -1791,9 +1793,6 @@ PAGE_TEMPLATE = """
                             </div>
                         </div>
                         {% endif %}
-                        {% if p.project_url in commented_urls %}
-                        <div class="lfdc-commented-badge"><img src="/static/LFDC_Logo.png" style="height:16px; width:16px; object-fit:contain; vertical-align:middle;"> LFDC Commented</div>
-                        {% endif %}
                         <!-- Meta tags -->
                         <div class="meta">
                             {% if p.unit %}<span>📍 {{ p.unit }}</span>{% endif %}
@@ -1805,6 +1804,11 @@ PAGE_TEMPLATE = """
 
                 <!-- RIGHT COLUMN (desktop only): status + analysis + milestone -->
                 <div class="card-body-right desktop-only">
+                    {% if p.project_url in commented_urls %}
+                    <div class="lfdc-commented-badge">
+                        <img src="/static/LFDC_Logo.png" style="height:20px; width:20px; object-fit:contain; vertical-align:middle;"> LFDC Commented
+                    </div>
+                    {% endif %}
                     {% if p.status %}
                     <span class="status-badge" style="background: {{ status_colors.get(p.status, '#8892a4') }}">
                         {{ p.status }}
