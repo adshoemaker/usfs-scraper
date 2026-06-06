@@ -772,7 +772,7 @@ PAGE_TEMPLATE = """
             align-items: center;
             justify-content: center;
             gap: 8px;
-            background: #c94f1a !important;
+            background: #8fa68e !important;
             color: white !important;
             border: 2px solid #1a1a1a;
             font-family: 'Poppins', sans-serif;
