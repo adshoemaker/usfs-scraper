@@ -882,7 +882,7 @@ PAGE_TEMPLATE = """
 
         /* ── Project cards ── */
         .project-card {
-            font-family: 'Lexend', sans-serif;
+            font-family: 'Poppins', sans-serif;
             background: var(--bg2);
             border: 1px solid var(--border);
             border-radius: 0;
@@ -1196,7 +1196,7 @@ PAGE_TEMPLATE = """
         }
 
         .project-title-text {
-            font-family: 'Lexend', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 1.3rem;
             font-weight: 400;
             color: #1a1a1a;
@@ -1361,7 +1361,7 @@ PAGE_TEMPLATE = """
 
             .container { padding: 10px; }
             .project-card {
-            font-family: 'Lexend', sans-serif; padding: 12px 14px; }
+            font-family: 'Poppins', sans-serif; padding: 12px 14px; }
 
             /* ── Card layout: full vertical stack ── */
 
@@ -1424,7 +1424,7 @@ PAGE_TEMPLATE = """
 
             /* Mobile: single column */
             .project-card {
-            font-family: 'Lexend', sans-serif;
+            font-family: 'Poppins', sans-serif;
                 display: flex !important;
                 flex-direction: column !important;
                 padding-left: 16px !important;
