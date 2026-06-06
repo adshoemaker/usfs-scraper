@@ -710,9 +710,9 @@ PAGE_TEMPLATE = """
         .cat-btn.unclassified { border-color: #888; color: #555; background: rgba(128,128,128,0.07); }
         .cat-btn.unclassified.active { background: #888; color: white; border-width: 3px; }
         .cat-btn .dot.unclassified-dot { background: #888; }
-        .cat-btn.newly-added { border-color: #2563eb; border-width: 3px; color: #1d4ed8; background: rgba(37,99,235,0.1); padding: 6px 37px; font-size: 0.78rem; }
-        .cat-btn.newly-added.active { background: #2563eb; color: white; border: 3px solid #1d4ed8; }
-        .cat-btn .dot.newly-added-dot { background: #2563eb; }
+        .cat-btn.newly-added { border-color: #6b8fad; border-width: 3px; color: #5a7d9b; background: rgba(37,99,235,0.1); padding: 6px 37px; font-size: 0.78rem; }
+        .cat-btn.newly-added.active { background: #6b8fad; color: white; border: 3px solid #5a7d9b; }
+        .cat-btn .dot.newly-added-dot { background: #6b8fad; }
         .cat-btn.taking-comments { border-color: #cc1111; border-width: 3px; color: #cc1111; background: #e8e8e4; padding: 6px 37px; font-size: 0.78rem; }
         .cat-btn.taking-comments.active { background: #cc1111; color: white; border: 3px solid #cc1111; }
         .cat-btn.active-filter { border-color: #2d7a1f; border-width: 3px; color: #1a4f0f; background: rgba(45,122,31,0.15); padding: 6px 37px; font-size: 0.78rem; }
@@ -732,7 +732,7 @@ PAGE_TEMPLATE = """
         }
 
         .annotation-toggle {
-            background: #2563eb;
+            background: #6b8fad;
             color: white;
             border: none;
             padding: 5px 14px;
@@ -748,7 +748,7 @@ PAGE_TEMPLATE = """
             white-space: nowrap;
         }
 
-        .annotation-toggle:hover { background: #1d4ed8; }
+        .annotation-toggle:hover { background: #5a7d9b; }
 
         .ann-arrow {
             display: inline-block;
@@ -757,7 +757,7 @@ PAGE_TEMPLATE = """
         }
 
         .annotation-content {
-            border: 2px solid #2563eb;
+            border: 2px solid #6b8fad;
             border-top: none;
             background: #f0f4ff;
             padding: 10px 14px;
@@ -774,7 +774,7 @@ PAGE_TEMPLATE = """
         }
 
         .annotation-copy {
-            background: #2563eb;
+            background: #6b8fad;
             color: white;
             border: none;
             padding: 4px 12px;
@@ -783,7 +783,7 @@ PAGE_TEMPLATE = """
             font-family: 'Poppins', sans-serif;
         }
 
-        .annotation-copy:hover { background: #1d4ed8; }
+        .annotation-copy:hover { background: #5a7d9b; }
 
         .wildfire-badge:hover { background: #7a9079 !important; }
 
@@ -830,15 +830,15 @@ PAGE_TEMPLATE = """
         }
 
         @keyframes pulse-blue {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(37,99,235,0.7); }
-            50% { box-shadow: 0 0 0 10px rgba(37,99,235,0); }
+            0%, 100% { box-shadow: 0 0 0 0 rgba(107,143,173,0.7); }
+            50% { box-shadow: 0 0 0 10px rgba(107,143,173,0); }
         }
 
         .btn-comment.primary.pulsing {
             animation: pulse-blue 2s ease-in-out infinite;
             background: transparent !important;
-            color: #2563eb !important;
-            border: 1px solid #2563eb !important;
+            color: #6b8fad !important;
+            border: 1px solid #6b8fad !important;
         }
 
         .category-disclaimer {
@@ -1046,8 +1046,8 @@ PAGE_TEMPLATE = """
         .new-badge {
             display: inline-block;
             background: rgba(37,99,235,0.1);
-            color: #2563eb;
-            border: 2px solid #2563eb;
+            color: #6b8fad;
+            border: 2px solid #6b8fad;
             border-radius: 0;
             font-size: 0.78rem;
             font-weight: 700;
@@ -1280,9 +1280,9 @@ PAGE_TEMPLATE = """
         .btn-comment:hover { opacity: 0.82; }
 
         .btn-comment.primary {
-            background: #2563eb;
+            background: #6b8fad;
             color: white;
-            border: 1px solid #2563eb;
+            border: 1px solid #6b8fad;
         }
 
         .btn-comment.secondary {
