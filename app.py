@@ -1774,16 +1774,16 @@ PAGE_TEMPLATE = """
                     {% endif %}
                     {% set _fstate = forest_state_map.get(p.forest_code, '') %}
                     {% set _fcolor = state_colors.get(_fstate, {}).get('pill', '#2d7a1f') %}
-                    <div class="forest-tag" style="color: {{ _fcolor }};">{{ p.forest_name }}</div>
-                    {% if p.status %}
-                    <span class="status-badge" style="background: {{ status_colors.get(p.status, '#8892a4') }}; display:inline-block; margin-bottom:6px; width:auto;">{{ p.status }}</span>
-                    {% endif %}
-                    <div class="btn-title-wrap">
+                    <div class="forest-tag" style="color: {{ _fcolor }}; margin-bottom: 10px;">{{ p.forest_name }}</div>
+                    <div class="btn-title-wrap" style="margin-bottom: 10px;">
                         <span class="project-title-text">{{ p.project_name }}</span>
                         {% if p.get('first_seen') and p['first_seen'][:10] >= recent_cutoff %}
                         <span class="new-badge">NEW</span>
                         {% endif %}
                     </div>
+                    {% if p.status %}
+                    <span class="status-badge" style="background: {{ status_colors.get(p.status, '#8892a4') }}; display:inline-block; width:auto;">{{ p.status }}</span>
+                    {% endif %}
                 </div>
                 <div class="card-header-badge desktop-only">
                 {% if p.get('accepting_comments') %}
@@ -1895,11 +1895,6 @@ PAGE_TEMPLATE = """
                         <img src="/static/LFDC_Logo.png" style="height:30px; width:30px; object-fit:contain; vertical-align:middle;"> LFDC Commented <svg style="width:12px;height:12px;flex-shrink:0;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                     </div>
                     {% endif %}
-                    {% endif %}
-                    {% if p.status %}
-                    <span class="status-badge" style="background: {{ status_colors.get(p.status, '#8892a4') }}">
-                        {{ p.status }}
-                    </span>
                     {% endif %}
                     {% if has_milestones %}
                     <div class="milestone-section">
