@@ -2559,6 +2559,18 @@ def admin_login():
     return render_template_string(ADMIN_LOGIN_TEMPLATE, error=False)
 
 
+@app.route("/admin/login", methods=["GET", "POST"])
+def admin_login():
+    if request.method == "POST":
+        password = request.form.get("password", "")
+        admin_pw = os.environ.get("ADMIN_PASSWORD", "lfdc-admin")
+        if password == admin_pw:
+            session["admin_authed"] = True
+            return redirect(url_for("admin"))
+        return render_template_string(ADMIN_LOGIN_TEMPLATE, error=True)
+    return render_template_string(ADMIN_LOGIN_TEMPLATE, error=False)
+
+
 @app.route("/admin/logout")
 def admin_logout():
     session.pop("admin_authed", None)
