@@ -2456,8 +2456,8 @@ def admin():
     wildfire_urls_manual = set(annotations.get("_wildfire", []))
     thinning_urls_manual = set(annotations.get("_thinning", []))
     # Combine auto + manual
-    wildfire_urls = wildfire_urls_manual | {p["project_url"] for p in all_projects if has_wildfire_badge(p)}
-    thinning_urls = thinning_urls_manual | {p["project_url"] for p in all_projects if has_thinning_badge(p)}
+    wildfire_urls = wildfire_urls_manual | {p["project_url"] for p in projects if has_wildfire_badge(p)}
+    thinning_urls = thinning_urls_manual | {p["project_url"] for p in projects if has_thinning_badge(p)}
 
     # Organize all projects by forest (in state order), then alphabetically by project name
     STATE_ORDER = ["WA", "OR", "CA+OR", "CA", "AK"]
@@ -2502,8 +2502,8 @@ def admin():
     wildfire_urls_manual = set(annotations.get("_wildfire", []))
     thinning_urls_manual = set(annotations.get("_thinning", []))
     # Combine auto + manual
-    wildfire_urls = wildfire_urls_manual | {p["project_url"] for p in all_projects if has_wildfire_badge(p)}
-    thinning_urls = thinning_urls_manual | {p["project_url"] for p in all_projects if has_thinning_badge(p)}
+    wildfire_urls = wildfire_urls_manual | {p["project_url"] for p in projects if has_wildfire_badge(p)}
+    thinning_urls = thinning_urls_manual | {p["project_url"] for p in projects if has_thinning_badge(p)}
     thinning_urls = set(annotations.get("_thinning", []))
     return render_template_string(ADMIN_TEMPLATE,
         tcn_projects=tcn_projects,
