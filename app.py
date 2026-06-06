@@ -1639,7 +1639,7 @@ PAGE_TEMPLATE = """
         {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Unknown', 'taking_comments': 'Taking Comments Now', 'active': 'Active / In Development', 'newly_added': 'Newly Added'} %}
         {% if search or selected_forest or selected_status or selected_days or selected_category_str %}
             Showing <strong>{{ projects|length }}</strong> result{% if projects|length != 1 %}s{% endif %}
-            {% if selected_categories %} — <strong>{{ selected_categories|map('lower')|map('replace', '_', ' ')|map('title')|join(' · ') }}</strong>{% endif %}
+            {% if selected_categories %} — <strong>{% for cat in selected_categories %}{{ cat_labels.get(cat, cat) }}{% if not loop.last %} · {% endif %}{% endfor %}</strong>{% endif %}
             {% if selected_days %} added in the last <strong>{{ selected_days }} days</strong>{% endif %}
             {% if search %} matching "<strong>{{ search }}</strong>"{% endif %}
             {% if selected_status %} · status: <strong>{{ selected_status }}</strong>{% endif %}
