@@ -745,7 +745,7 @@ PAGE_TEMPLATE = """
             color: white;
             border: 2px solid #1a1a1a;
             font-size: 1.17rem;
-            font-weight: 400;
+            font-weight: 300;
             text-transform: uppercase;
             letter-spacing: 0.8px;
             padding: 8px 12px;
