@@ -56,6 +56,23 @@ STATE_COLUMNS = ["CA", "CA+OR", "OR", "OR+WA", "WA", "AK"]
 # Map forest code -> state for color lookup
 FOREST_STATE_MAP = {f["code"]: f["state"] for f in FORESTS}
 
+# Map forest code -> abbreviation used in multi-forest project names
+FOREST_CODE_TO_ABBREV = {
+    "mbs":                "MBS",
+    "olympic":            "ONF",
+    "okanogan-wenatchee": "Okan-Wen",
+    "giffordpinchot":     "GPNF",
+    "colville":           "Colville",
+    "rogue-siskiyou":     "RRS",
+    "wallowa-whitman":    "Wallowa-Whitman",
+    "fremont-winema":     "Fremont-Winema",
+    "shasta-trinity":     "Shasta-Trinity",
+    "inyo":               "Inyo",
+    "lospadres":          "Los Padres",
+    "klamath":            "Klamath",
+    "tongass":            "Tongass",
+}
+
 # Colors for each state column
 STATE_COLORS = {
     "CA":    {"pill": "#cc3333", "label": "#8b1a1a"},
@@ -191,8 +208,8 @@ def filter_projects(projects, search="", forest_code="", status="",
                 continue
             # For multi-forest projects, check if the forest name or code appears
             fn = p.get("forest_name", "")
-            forest_obj = next((f for f in FORESTS if f['code'] == forest_code), None)
-            if not (forest_code in fn or (forest_obj and forest_obj['name'] in fn)):
+            abbrev = FOREST_CODE_TO_ABBREV.get(forest_code, '')
+            if not abbrev or abbrev not in fn:
                 continue
         if status and p.get("status") != status:
             continue
@@ -748,6 +765,7 @@ PAGE_TEMPLATE = """
             background: #c94f1a;
             color: white;
             border: 2px solid #1a1a1a;
+            font-family: 'Poppins', sans-serif;
             font-size: 1.17rem;
             font-weight: 200;
             text-transform: uppercase;
@@ -1945,11 +1963,11 @@ def index():
         def matches_forest_filter(p, selected):
             if p.get('forest_code') in selected:
                 return True
-            if p.get('is_multi_forest'):
+            if p.get('is_multi_forest') or p.get('forest_code') == 'multi':
                 fn = p.get('forest_name', '')
                 return any(
-                    f['code'] in fn or f['name'] in fn
-                    for f in FORESTS if f['code'] in selected
+                    FOREST_CODE_TO_ABBREV.get(code, '') in fn
+                    for code in selected
                 )
             return False
         forest_visible = [p for p in all_projects if matches_forest_filter(p, selected_forests)]
