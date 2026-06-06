@@ -139,6 +139,16 @@ MIXED_KEYWORDS = [
 ]
 
 
+def has_thinning_badge(project):
+    purpose = (project.get("purpose") or "").lower()
+    return "forest products" in purpose or "fuels management" in purpose
+
+
+def has_wildfire_badge(project):
+    purpose = (project.get("purpose") or "").lower()
+    return "fuels management" in purpose or "vegetation management" in purpose
+
+
 def classify_project(project):
     # Match against individual purpose tags (pipe-separated)
     purpose_tags = [
@@ -2004,8 +2014,11 @@ def index():
     all_projects, last_scraped = load_projects()
     annotations = load_annotations()
     commented_urls = set(annotations.get("_commented", []))
-    wildfire_urls = set(annotations.get("_wildfire", []))
-    thinning_urls = set(annotations.get("_thinning", []))
+    wildfire_urls_manual = set(annotations.get("_wildfire", []))
+    thinning_urls_manual = set(annotations.get("_thinning", []))
+    # Combine auto + manual
+    wildfire_urls = wildfire_urls_manual | {p["project_url"] for p in all_projects if has_wildfire_badge(p)}
+    thinning_urls = thinning_urls_manual | {p["project_url"] for p in all_projects if has_thinning_badge(p)}
 
     recent_cutoff = (
         datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=72)
@@ -2261,6 +2274,7 @@ ADMIN_TEMPLATE = """
   .proj-check-cell input[type=checkbox] { width: 16px; height: 16px; cursor: pointer; accent-color: #c94f1a; }
   .proj-url-cell { min-width: 200px; }
   .comment-url-input { width: 100%; padding: 4px 6px; font-size: 0.72rem; border: 1px solid #ccc; box-sizing: border-box; font-family: inherit; }
+  .auto-check { color: #2d7a1f; font-weight: 700; font-size: 1rem; cursor: default; }
   .save-commented-btn { margin-top: 16px; padding: 8px 24px; background: #c94f1a; color: white; border: none; font-size: 0.88rem; cursor: pointer; font-family: inherit; font-weight: 600; }
   .save-commented-btn:hover { background: #a33d12; }
 </style>
@@ -2337,12 +2351,20 @@ ADMIN_TEMPLATE = """
           <td class="proj-name-cell">{{ p.project_name }}</td>
           <td class="proj-date-cell" data-date="{{ p.get('first_seen','')[:10] }}">{{ p.get('first_seen','')[:10] }}</td>
           <td class="proj-check-cell">
-            <input type="checkbox" name="thinning" value="{{ p.project_url }}"
-                   {{ 'checked' if p.project_url in thinning_urls else '' }}>
+            {% if p.project_url in thinning_urls and p.project_url not in thinning_urls_manual %}
+              <span class="auto-check" title="Auto: fuels management or forest products">✓</span>
+            {% else %}
+              <input type="checkbox" name="thinning" value="{{ p.project_url }}"
+                     {{ 'checked' if p.project_url in thinning_urls_manual else '' }}>
+            {% endif %}
           </td>
           <td class="proj-check-cell">
-            <input type="checkbox" name="wildfire" value="{{ p.project_url }}"
-                   {{ 'checked' if p.project_url in wildfire_urls else '' }}>
+            {% if p.project_url in wildfire_urls and p.project_url not in wildfire_urls_manual %}
+              <span class="auto-check" title="Auto: fuels management or vegetation management">✓</span>
+            {% else %}
+              <input type="checkbox" name="wildfire" value="{{ p.project_url }}"
+                     {{ 'checked' if p.project_url in wildfire_urls_manual else '' }}>
+            {% endif %}
           </td>
           <td class="proj-check-cell">
             <input type="checkbox" name="commented" value="{{ p.project_url }}"
@@ -2426,8 +2448,11 @@ def admin():
     tcn_projects = [p for p in projects if p.get("accepting_comments")]
     annotations  = load_annotations()
     commented_urls = set(annotations.get("_commented", []))
-    wildfire_urls = set(annotations.get("_wildfire", []))
-    thinning_urls = set(annotations.get("_thinning", []))
+    wildfire_urls_manual = set(annotations.get("_wildfire", []))
+    thinning_urls_manual = set(annotations.get("_thinning", []))
+    # Combine auto + manual
+    wildfire_urls = wildfire_urls_manual | {p["project_url"] for p in all_projects if has_wildfire_badge(p)}
+    thinning_urls = thinning_urls_manual | {p["project_url"] for p in all_projects if has_thinning_badge(p)}
 
     # Organize all projects by forest (in state order), then alphabetically by project name
     STATE_ORDER = ["WA", "OR", "CA+OR", "CA", "AK"]
@@ -2469,8 +2494,11 @@ def admin():
     flash = request.args.get("flash", "")
     flash_type = request.args.get("flash_type", "")
     commented_urls_map = annotations.get("_commented_urls", {})
-    wildfire_urls = set(annotations.get("_wildfire", []))
-    thinning_urls = set(annotations.get("_thinning", []))
+    wildfire_urls_manual = set(annotations.get("_wildfire", []))
+    thinning_urls_manual = set(annotations.get("_thinning", []))
+    # Combine auto + manual
+    wildfire_urls = wildfire_urls_manual | {p["project_url"] for p in all_projects if has_wildfire_badge(p)}
+    thinning_urls = thinning_urls_manual | {p["project_url"] for p in all_projects if has_thinning_badge(p)}
     thinning_urls = set(annotations.get("_thinning", []))
     return render_template_string(ADMIN_TEMPLATE,
         tcn_projects=tcn_projects,
