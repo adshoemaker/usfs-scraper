@@ -1872,17 +1872,35 @@ PAGE_TEMPLATE = """
 </footer>
 
 <script>
-// Live search — submit form 350ms after user stops typing
+// Client-side instant search — filters cards without page reload
 (function() {
     var input = document.querySelector('#searchform input[name="q"]');
     if (!input) return;
-    var timer;
-    input.addEventListener('input', function() {
-        clearTimeout(timer);
-        timer = setTimeout(function() {
-            document.getElementById('searchform').submit();
-        }, 350);
+
+    // Give each card a searchable text attribute on load
+    document.querySelectorAll('.project-card').forEach(function(card) {
+        var text = card.innerText.toLowerCase();
+        card.dataset.searchText = text;
     });
+
+    function doFilter() {
+        var term = input.value.toLowerCase().trim();
+        var cards = document.querySelectorAll('.project-card');
+        var visible = 0;
+        cards.forEach(function(card) {
+            var match = !term || card.dataset.searchText.indexOf(term) !== -1;
+            card.style.display = match ? '' : 'none';
+            if (match) visible++;
+        });
+        // Update results count if element exists
+        var countEl = document.querySelector('.results-header strong');
+        if (countEl && term) countEl.innerText = visible;
+    }
+
+    input.addEventListener('input', doFilter);
+
+    // Still allow form submit (e.g. hitting Enter) for full server filter
+    // but intercept if it's just a search with no other filters active
 })();
 </script>
 </body>
