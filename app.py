@@ -2127,16 +2127,25 @@ ADMIN_TEMPLATE = """
 
   /* LFDC Commented section */
   .commented-section { max-width: 900px; }
-  .state-block { margin-bottom: 24px; }
-  .state-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 8px; }
-  .state-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 24px; }
-  .project-row { display: flex; align-items: center; gap: 8px; padding: 5px 8px; background: white; border: 1px solid #e0e0d8; }
-  .project-row:hover { background: #faf9f4; }
-  .project-row input[type=checkbox] { width: 16px; height: 16px; flex-shrink: 0; cursor: pointer; accent-color: #c94f1a; }
-  .project-row-name { font-size: 0.78rem; color: #1a1a1a; flex: 1; }
-  .project-row-forest { font-size: 0.68rem; color: #888; }
-  .project-row.checked { background: #fff4ef; border-color: #c94f1a; }
-  .project-row.checked .project-row-name { color: #c94f1a; font-weight: 600; }
+  .forest-accordion { margin-bottom: 6px; border: 1px solid #ddd; }
+  .forest-accordion-header { width: 100%; text-align: left; background: #f0ede4; border: none; padding: 10px 14px; font-size: 0.88rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 10px; font-family: inherit; color: #1a1a1a; }
+  .forest-accordion-header:hover { background: #e8e4d8; }
+  .acc-arrow { font-size: 0.7rem; color: #888; }
+  .acc-count { margin-left: auto; font-size: 0.72rem; color: #888; font-weight: 400; }
+  .forest-accordion-body { padding: 0; }
+  .project-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+  .project-table th { background: #f7f7f0; padding: 7px 10px; text-align: left; border-bottom: 2px solid #ddd; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; color: #555; white-space: nowrap; }
+  .project-table th.sortable { cursor: pointer; user-select: none; }
+  .project-table th.sortable:hover { background: #ededde; }
+  .sort-icon { font-size: 0.65rem; margin-left: 3px; }
+  .project-table td { padding: 6px 10px; border-bottom: 1px solid #eee; vertical-align: middle; }
+  .project-table tr:hover td { background: #faf9f4; }
+  .project-table tr.new-project td { background: #fff8e6; }
+  .project-table tr.new-project:hover td { background: #fff0cc; }
+  .proj-name-cell { color: #1a1a1a; }
+  .proj-date-cell { color: #666; white-space: nowrap; }
+  .proj-check-cell { text-align: center; }
+  .proj-check-cell input[type=checkbox] { width: 16px; height: 16px; cursor: pointer; accent-color: #c94f1a; }
   .save-commented-btn { margin-top: 16px; padding: 8px 24px; background: #c94f1a; color: white; border: none; font-size: 0.88rem; cursor: pointer; font-family: inherit; font-weight: 600; }
   .save-commented-btn:hover { background: #a33d12; }
 </style>
@@ -2179,35 +2188,69 @@ ADMIN_TEMPLATE = """
 
 <!-- ── Section 2: LFDC Commented ── -->
 <h2>🟠 LFDC Commented</h2>
-<p class="subtitle">Check projects where LFDC has submitted formal comments. A badge will appear on the public tracker.</p>
+<p class="subtitle">Check projects where LFDC has submitted formal comments. Projects highlighted in amber were added in the last 72 hours.</p>
 
 <form method="POST" action="/admin/save-commented">
 <div class="commented-section">
-{% set state_order = ['WA', 'OR', 'CA+OR', 'CA', 'AK'] %}
-{% for state in state_order %}
-  {% set state_projects = all_projects_by_state.get(state, []) %}
-  {% if state_projects %}
-  <div class="state-block">
-    <div class="state-label">{{ state }}</div>
-    <div class="state-grid">
-    {% for p in state_projects %}
-      <label class="project-row {{ 'checked' if p.project_url in commented_urls else '' }}" style="cursor:pointer;">
-        <input type="checkbox" name="commented" value="{{ p.project_url }}"
-               {{ 'checked' if p.project_url in commented_urls else '' }}
-               onchange="this.closest('.project-row').classList.toggle('checked', this.checked)">
-        <div>
-          <div class="project-row-name">{{ p.project_name }}</div>
-          <div class="project-row-forest">{{ p.forest_name }}</div>
-        </div>
-      </label>
-    {% endfor %}
-    </div>
+{% for forest_name, forest_projects in all_projects_by_forest %}
+<div class="forest-accordion">
+  <button type="button" class="forest-accordion-header" onclick="
+    var body = this.nextElementSibling;
+    var isOpen = body.style.display !== 'none';
+    body.style.display = isOpen ? 'none' : 'block';
+    this.querySelector('.acc-arrow').innerText = isOpen ? '▶' : '▼';
+  ">
+    <span class="acc-arrow">▶</span>
+    {{ forest_name }}
+    <span class="acc-count">{{ forest_projects|length }} projects</span>
+  </button>
+  <div class="forest-accordion-body" style="display:none;">
+    <table class="project-table" data-sort-col="1" data-sort-dir="desc">
+      <thead>
+        <tr>
+          <th class="sortable" onclick="sortTable(this, 0)">Project <span class="sort-icon">↕</span></th>
+          <th class="sortable" onclick="sortTable(this, 1)">Date Added <span class="sort-icon">↓</span></th>
+          <th>LFDC Commented</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in forest_projects %}
+        <tr class="{{ 'new-project' if p.get('first_seen','')[:10] >= recent_cutoff else '' }}">
+          <td class="proj-name-cell">{{ p.project_name }}</td>
+          <td class="proj-date-cell" data-date="{{ p.get('first_seen','')[:10] }}">{{ p.get('first_seen','')[:10] }}</td>
+          <td class="proj-check-cell">
+            <input type="checkbox" name="commented" value="{{ p.project_url }}"
+                   {{ 'checked' if p.project_url in commented_urls else '' }}>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
-  {% endif %}
+</div>
 {% endfor %}
 </div>
 <button type="submit" class="save-commented-btn">Save LFDC Commented List</button>
 </form>
+
+<script>
+function sortTable(th, colIndex) {
+  var table = th.closest('table');
+  var tbody = table.querySelector('tbody');
+  var rows = Array.from(tbody.querySelectorAll('tr'));
+  var currentDir = table.dataset.sortDir === 'asc' && table.dataset.sortCol == colIndex ? 'desc' : 'asc';
+  table.dataset.sortDir = currentDir;
+  table.dataset.sortCol = colIndex;
+  rows.sort(function(a, b) {
+    var aVal = a.querySelectorAll('td')[colIndex].dataset.date || a.querySelectorAll('td')[colIndex].innerText.trim().toLowerCase();
+    var bVal = b.querySelectorAll('td')[colIndex].dataset.date || b.querySelectorAll('td')[colIndex].innerText.trim().toLowerCase();
+    return currentDir === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+  });
+  rows.forEach(function(r) { tbody.appendChild(r); });
+  table.querySelectorAll('th .sort-icon').forEach(function(icon) { icon.innerText = '↕'; });
+  th.querySelector('.sort-icon').innerText = currentDir === 'asc' ? '↑' : '↓';
+}
+</script>
 
 </body>
 </html>
@@ -2251,9 +2294,36 @@ def admin():
     annotations  = load_annotations()
     commented_urls = set(annotations.get("_commented", []))
 
-    # Organize all projects by state, then forest, then name
+    # Organize all projects by forest (in state order), then alphabetically by project name
     STATE_ORDER = ["WA", "OR", "CA+OR", "CA", "AK"]
-    by_state = {s: [] for s in STATE_ORDER}
+    forests_in_order = []
+    seen_forests = set()
+    for state in STATE_ORDER:
+        for p in projects:
+            fn = p.get("forest_name", "")
+            fs = FOREST_STATE_MAP.get(p.get("forest_code", ""), "")
+            if fs == state and fn not in seen_forests:
+                seen_forests.add(fn)
+                forests_in_order.append(fn)
+
+    by_forest = {}
+    for p in projects:
+        fn = p.get("forest_name", "")
+        if fn not in by_forest:
+            by_forest[fn] = []
+        by_forest[fn].append(p)
+    for fn in by_forest:
+        by_forest[fn].sort(key=lambda p: p.get("project_name", "").lower())
+
+    all_projects_by_forest = [(fn, by_forest[fn]) for fn in forests_in_order if fn in by_forest]
+
+    admin_cutoff = (
+        datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=72)
+    ).strftime("%Y-%m-%d")
+
+    # Also keep by_state for state labels
+    STATE_ORDER_FULL = ["WA", "OR", "CA+OR", "CA", "AK"]
+    by_state = {s: [] for s in STATE_ORDER_FULL}
     for p in projects:
         state = FOREST_STATE_MAP.get(p.get("forest_code", ""), "")
         if state in by_state:
@@ -2269,7 +2339,9 @@ def admin():
         flash=flash,
         flash_type=flash_type,
         all_projects_by_state=by_state,
+        all_projects_by_forest=all_projects_by_forest,
         commented_urls=commented_urls,
+        recent_cutoff=admin_cutoff,
     )
 
 
