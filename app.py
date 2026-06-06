@@ -787,7 +787,7 @@ PAGE_TEMPLATE = """
             background: #8fa68e !important;
             color: white !important;
             border: none;
-            border-radius: 4px;
+            border-radius: 0;
             font-family: 'Poppins', sans-serif;
             font-size: 1.02rem;
             font-weight: 200;
@@ -809,7 +809,7 @@ PAGE_TEMPLATE = """
             background: #8fa68e !important;
             color: white !important;
             border: none;
-            border-radius: 4px;
+            border-radius: 0;
             font-family: 'Poppins', sans-serif;
             font-size: 0.82rem;
             font-weight: 200;
@@ -1114,9 +1114,17 @@ PAGE_TEMPLATE = """
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            justify-content: flex-start;
+            justify-content: space-between;
             gap: 6px;
             flex-shrink: 0;
+            width: 255px;
+        }
+
+        .card-body-right-top {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
             width: 255px;
         }
 
@@ -1874,6 +1882,7 @@ PAGE_TEMPLATE = """
 
                 <!-- RIGHT COLUMN (desktop only): status + analysis + milestone -->
                 <div class="card-body-right desktop-only">
+                    <div class="card-body-right-top">
                     {% if p.project_url in thinning_urls %}
                     <a href="{{ thinning_url }}" target="_blank" rel="noopener" class="wildfire-badge" style="text-decoration:none;">
                         Learn About Thinning <svg style="width:14px;height:14px;flex-shrink:0;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -1896,6 +1905,7 @@ PAGE_TEMPLATE = """
                     </div>
                     {% endif %}
                     {% endif %}
+                    </div><!-- card-body-right-top -->
                     {% if has_milestones %}
                     <div class="milestone-section">
                         <table class="milestone-table">
