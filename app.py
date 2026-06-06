@@ -1637,7 +1637,7 @@ PAGE_TEMPLATE = """
 
     <div class="results-header">
         {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Unknown', 'taking_comments': 'Taking Comments Now', 'active': 'Active / In Development', 'newly_added': 'Newly Added'} %}
-        {% if search or selected_forest or selected_status or selected_days or selected_category %}
+        {% if search or selected_forest or selected_status or selected_days or selected_category_str %}
             Showing <strong>{{ projects|length }}</strong> result{% if projects|length != 1 %}s{% endif %}
             {% if selected_categories %} — <strong>{{ selected_categories|map('lower')|map('replace', '_', ' ')|map('title')|join(' · ') }}</strong>{% endif %}
             {% if selected_days %} added in the last <strong>{{ selected_days }} days</strong>{% endif %}
