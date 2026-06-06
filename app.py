@@ -772,8 +772,8 @@ PAGE_TEMPLATE = """
             align-items: center;
             justify-content: center;
             gap: 8px;
-            background: #c94f1a;
-            color: white;
+            background: #c94f1a !important;
+            color: white !important;
             border: 2px solid #1a1a1a;
             font-family: 'Poppins', sans-serif;
             font-size: 1.17rem;
@@ -783,6 +783,7 @@ PAGE_TEMPLATE = """
             padding: 4px 6px;
             width: 255px;
             box-sizing: border-box;
+            cursor: pointer;
         }
 
         @keyframes pulse-green {
