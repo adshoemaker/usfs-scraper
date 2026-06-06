@@ -28,7 +28,7 @@ STATUS_COLORS = {
 }
 
 ANALYSIS_COLORS = {
-    "Categorical Exclusion":          "#cc1111",
+    "Categorical Exclusion":          "#a83030",
     "Environmental Assessment":       "#c46a30",
     "Environmental Impact Statement": "#2d7a1f",
     "Unknown":                        "#999",
@@ -384,7 +384,7 @@ PAGE_TEMPLATE = """
             --text-dim:    #777777;
             --accent:      #2d7a1f;
             --link:        #1a4fa0;
-            --red:         #cc1111;
+            --red:         #a83030;
             --green:       #2d7a1f;
             --orange:      #c46a30;
             --purple:      #6d3eb0;
@@ -710,16 +710,16 @@ PAGE_TEMPLATE = """
         .cat-btn.unclassified { border-color: #888; color: #555; background: rgba(128,128,128,0.07); }
         .cat-btn.unclassified.active { background: #888; color: white; border-width: 3px; }
         .cat-btn .dot.unclassified-dot { background: #888; }
-        .cat-btn.newly-added { border-color: #6b8fad; border-width: 3px; color: #5a7d9b; background: rgba(37,99,235,0.1); padding: 6px 37px; font-size: 0.78rem; }
-        .cat-btn.newly-added.active { background: #6b8fad; color: white; border: 3px solid #5a7d9b; }
-        .cat-btn .dot.newly-added-dot { background: #6b8fad; }
-        .cat-btn.taking-comments { border-color: #cc1111; border-width: 3px; color: #cc1111; background: #e8e8e4; padding: 6px 37px; font-size: 0.78rem; }
-        .cat-btn.taking-comments.active { background: #cc1111; color: white; border: 3px solid #cc1111; }
+        .cat-btn.newly-added { border-color: #6aabdf; border-width: 3px; color: #5599cc; background: rgba(37,99,235,0.1); padding: 6px 37px; font-size: 0.78rem; }
+        .cat-btn.newly-added.active { background: #6aabdf; color: white; border: 3px solid #5599cc; }
+        .cat-btn .dot.newly-added-dot { background: #6aabdf; }
+        .cat-btn.taking-comments { border-color: #a83030; border-width: 3px; color: #a83030; background: #e8e8e4; padding: 6px 37px; font-size: 0.78rem; }
+        .cat-btn.taking-comments.active { background: #a83030; color: white; border: 3px solid #a83030; }
         .cat-btn.active-filter { border-color: #2d7a1f; border-width: 3px; color: #1a4f0f; background: rgba(45,122,31,0.15); padding: 6px 37px; font-size: 0.78rem; }
         .cat-btn.active-filter.active { background: #2d7a1f; color: white; border: 3px solid #1a4f0f; }
         .cat-btn .dot.active-filter-dot { background: #2d7a1f; }
-        .cat-btn.taking-comments.active { background: #cc1111; color: white; border: 3px solid #cc1111; }
-        .cat-btn .dot.taking-comments-dot { background: #fbbf24; border: 1px solid #cc1111; }
+        .cat-btn.taking-comments.active { background: #a83030; color: white; border: 3px solid #a83030; }
+        .cat-btn .dot.taking-comments-dot { background: #fbbf24; border: 1px solid #a83030; }
 
         .annotation-box {
             margin-top: 12px;
@@ -732,7 +732,7 @@ PAGE_TEMPLATE = """
         }
 
         .annotation-toggle {
-            background: #6b8fad;
+            background: #6aabdf;
             color: white;
             border: none;
             padding: 5px 14px;
@@ -748,7 +748,7 @@ PAGE_TEMPLATE = """
             white-space: nowrap;
         }
 
-        .annotation-toggle:hover { background: #5a7d9b; }
+        .annotation-toggle:hover { background: #5599cc; }
 
         .ann-arrow {
             display: inline-block;
@@ -757,7 +757,7 @@ PAGE_TEMPLATE = """
         }
 
         .annotation-content {
-            border: 2px solid #6b8fad;
+            border: 2px solid #6aabdf;
             border-top: none;
             background: #f0f4ff;
             padding: 10px 14px;
@@ -774,7 +774,7 @@ PAGE_TEMPLATE = """
         }
 
         .annotation-copy {
-            background: #6b8fad;
+            background: #6aabdf;
             color: white;
             border: none;
             padding: 4px 12px;
@@ -783,7 +783,7 @@ PAGE_TEMPLATE = """
             font-family: 'Poppins', sans-serif;
         }
 
-        .annotation-copy:hover { background: #5a7d9b; }
+        .annotation-copy:hover { background: #5599cc; }
 
         .wildfire-badge:hover { background: #7a9079 !important; }
 
@@ -830,15 +830,15 @@ PAGE_TEMPLATE = """
         }
 
         @keyframes pulse-blue {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(107,143,173,0.7); }
-            50% { box-shadow: 0 0 0 10px rgba(107,143,173,0); }
+            0%, 100% { box-shadow: 0 0 0 0 rgba(106,171,223,0.7); }
+            50% { box-shadow: 0 0 0 10px rgba(106,171,223,0); }
         }
 
         .btn-comment.primary.pulsing {
             animation: pulse-blue 2s ease-in-out infinite;
             background: transparent !important;
-            color: #6b8fad !important;
-            border: 1px solid #6b8fad !important;
+            color: #6aabdf !important;
+            border: 1px solid #6aabdf !important;
         }
 
         .category-disclaimer {
@@ -852,7 +852,7 @@ PAGE_TEMPLATE = """
             justify-content: flex-end;
             padding: 3px 0 6px 0;
         }
-        .cat-btn.extractive  { border-color: var(--red);    color: var(--red);    background: rgba(204,17,17,0.07); }
+        .cat-btn.extractive  { border-color: var(--red);    color: var(--red);    background: rgba(168,48,48,0.07); }
         .cat-btn.extractive.active  { background: var(--red);    color: white; border-width: 3px; }
         .cat-btn.restorative { border-color: var(--green);  color: var(--green);  background: rgba(45,122,31,0.07); }
         .cat-btn.restorative.active { background: var(--green);  color: white; border-width: 3px; }
@@ -1011,15 +1011,15 @@ PAGE_TEMPLATE = """
             padding: 3px 10px;
             border-radius: 0;
             background: #e8e8e4;
-            border: 3px solid #cc1111;
-            color: #cc1111;
+            border: 3px solid #a83030;
+            color: #a83030;
             font-weight: 700;
             font-size: 0.82rem;
             line-height: 1.2;
             text-align: center;
             animation: pulse-yellow 2.5s ease-in-out infinite;
             flex-shrink: 0;
-            box-shadow: 0 2px 8px rgba(204,17,17,0.2);
+            box-shadow: 0 2px 8px rgba(168,48,48,0.2);
             width: 475px;
             box-sizing: border-box;
         }
@@ -1039,15 +1039,15 @@ PAGE_TEMPLATE = """
         }
 
         @keyframes pulse-yellow {
-            0%, 100% { opacity: 1; box-shadow: 0 2px 8px rgba(204,17,17,0.2); }
-            50%       { opacity: 0.8; box-shadow: 0 2px 16px rgba(204,17,17,0.4); }
+            0%, 100% { opacity: 1; box-shadow: 0 2px 8px rgba(168,48,48,0.2); }
+            50%       { opacity: 0.8; box-shadow: 0 2px 16px rgba(168,48,48,0.4); }
         }
 
         .new-badge {
             display: inline-block;
             background: rgba(37,99,235,0.1);
-            color: #6b8fad;
-            border: 2px solid #6b8fad;
+            color: #6aabdf;
+            border: 2px solid #6aabdf;
             border-radius: 0;
             font-size: 0.78rem;
             font-weight: 700;
@@ -1280,9 +1280,9 @@ PAGE_TEMPLATE = """
         .btn-comment:hover { opacity: 0.82; }
 
         .btn-comment.primary {
-            background: #6b8fad;
+            background: #6aabdf;
             color: white;
-            border: 1px solid #6b8fad;
+            border: 1px solid #6aabdf;
         }
 
         .btn-comment.secondary {
@@ -1758,8 +1758,8 @@ PAGE_TEMPLATE = """
         {% for p in projects %}
         {% set has_milestones = p.get('milestones') and p['milestones']|length > 0 %}
         {% set status_color = status_colors.get(p.status, '#d0d0c8') %}
-        {% set cat_bg = {'extractive': 'rgba(204,17,17,0.18)', 'restorative': 'rgba(45,122,31,0.15)', 'mixed': 'rgba(196,106,48,0.16)'}.get(p.category or '', 'white') %}
-        {% set cat_border = {'extractive': '#cc1111', 'restorative': '#2d7a1f', 'mixed': '#c46a30'}.get(p.category or '', '#d0d0c8') %}
+        {% set cat_bg = {'extractive': 'rgba(168,48,48,0.18)', 'restorative': 'rgba(45,122,31,0.15)', 'mixed': 'rgba(196,106,48,0.16)'}.get(p.category or '', 'white') %}
+        {% set cat_border = {'extractive': '#a83030', 'restorative': '#2d7a1f', 'mixed': '#c46a30'}.get(p.category or '', '#d0d0c8') %}
         {% set cat_label = {'extractive': 'Significant Effect', 'restorative': 'Restorative Impact', 'mixed': 'Mixed Impact'}.get(p.category or '', '') %}
         {% set is_tcn = p.get('accepting_comments') %}
         <div class="project-card {{ p.category or '' }}"
@@ -2251,7 +2251,7 @@ ADMIN_TEMPLATE = """
   .project-card { background: white; border: 2px solid #e0c040; border-radius: 0; padding: 16px; }
   .project-name { font-weight: 600; font-size: 1rem; margin-bottom: 4px; }
   .forest-name { font-size: 0.78rem; color: #666; margin-bottom: 12px; }
-  .deadline { font-size: 0.78rem; color: #cc1111; font-weight: 600; margin-bottom: 12px; }
+  .deadline { font-size: 0.78rem; color: #a83030; font-weight: 600; margin-bottom: 12px; }
   label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #555; display: block; margin-bottom: 4px; }
   textarea { width: 100%; box-sizing: border-box; padding: 8px; font-family: inherit; font-size: 0.85rem; border: 1px solid #ccc; resize: vertical; min-height: 80px; }
   .save-btn { margin-top: 8px; padding: 6px 18px; background: #2d7a1f; color: white; border: none; font-size: 0.82rem; cursor: pointer; }
@@ -2260,7 +2260,7 @@ ADMIN_TEMPLATE = """
   .logout { float: right; font-size: 0.75rem; color: #888; text-decoration: none; }
   .logout:hover { color: #333; }
   .flash { background: #d4edda; border: 1px solid #2d7a1f; padding: 8px 14px; margin-bottom: 16px; font-size: 0.85rem; color: #1a4f0f; max-width: 900px; }
-  .flash.error { background: #fde8e8; border-color: #cc1111; color: #7c0000; }
+  .flash.error { background: #fde8e8; border-color: #a83030; color: #7c0000; }
 
   /* LFDC Commented section */
   .commented-section { max-width: 900px; }
@@ -2434,7 +2434,7 @@ ADMIN_LOGIN_TEMPLATE = """
   h1 { font-size: 1.1rem; margin-bottom: 20px; }
   input[type=password] { width: 100%; box-sizing: border-box; padding: 8px; font-size: 0.9rem; border: 1px solid #ccc; margin-bottom: 12px; }
   button { padding: 8px 20px; background: #2d7a1f; color: white; border: none; font-size: 0.9rem; cursor: pointer; }
-  .error { color: #cc1111; font-size: 0.82rem; margin-bottom: 10px; }
+  .error { color: #a83030; font-size: 0.82rem; margin-bottom: 10px; }
 </style>
 </head>
 <body>
