@@ -804,12 +804,12 @@ PAGE_TEMPLATE = """
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
             background: #8fa68e !important;
             color: white !important;
             border: 2px solid #1a1a1a;
             font-family: 'Poppins', sans-serif;
-            font-size: 1.17rem;
+            font-size: 0.82rem;
             font-weight: 200;
             text-transform: uppercase;
             letter-spacing: 0.8px;
@@ -1895,7 +1895,7 @@ PAGE_TEMPLATE = """
                     </a>
                     {% else %}
                     <div class="lfdc-commented-badge">
-                        <img src="/static/LFDC_Logo.png" style="height:30px; width:30px; object-fit:contain; vertical-align:middle;"> LFDC Commented
+                        <img src="/static/LFDC_Logo.png" style="height:30px; width:30px; object-fit:contain; vertical-align:middle;"> LFDC Commented <svg style="width:12px;height:12px;flex-shrink:0;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                     </div>
                     {% endif %}
                     {% endif %}
