@@ -1489,23 +1489,35 @@ ADMIN_TEMPLATE = """
           <td class="proj-check-cell">
             {% set thinning_auto = has_thinning_badge(p) %}
             {% set thinning_checked = p.project_url in thinning_urls %}
+            {% if thinning_auto %}
             <input type="checkbox" name="thinning" value="{{ p.project_url }}"
                    {{ 'checked' if thinning_checked else '' }}
-                   title="{{ 'Auto-assigned (uncheck to suppress)' if thinning_auto else 'Manual override' }}"
-                   style="{{ 'accent-color: #2d7a1f;' if thinning_auto else 'accent-color: #c94f1a;' }}">
-            {% if thinning_auto and not thinning_checked %}
-              <input type="hidden" name="thinning_suppress" value="{{ p.project_url }}">
+                   title="Auto-assigned (uncheck to suppress)"
+                   style="accent-color: #2d7a1f;"
+                   onchange="var h=this.nextElementSibling; h.disabled=this.checked;">
+            <input type="hidden" name="thinning_suppress" value="{{ p.project_url }}" {{ '' if not thinning_checked else 'disabled' }}>
+            {% else %}
+            <input type="checkbox" name="thinning" value="{{ p.project_url }}"
+                   {{ 'checked' if thinning_checked else '' }}
+                   title="Manual override"
+                   style="accent-color: #c94f1a;">
             {% endif %}
           </td>
           <td class="proj-check-cell">
             {% set wildfire_auto = has_wildfire_badge(p) %}
             {% set wildfire_checked = p.project_url in wildfire_urls %}
+            {% if wildfire_auto %}
             <input type="checkbox" name="wildfire" value="{{ p.project_url }}"
                    {{ 'checked' if wildfire_checked else '' }}
-                   title="{{ 'Auto-assigned (uncheck to suppress)' if wildfire_auto else 'Manual override' }}"
-                   style="{{ 'accent-color: #2d7a1f;' if wildfire_auto else 'accent-color: #c94f1a;' }}">
-            {% if wildfire_auto and not wildfire_checked %}
-              <input type="hidden" name="wildfire_suppress" value="{{ p.project_url }}">
+                   title="Auto-assigned (uncheck to suppress)"
+                   style="accent-color: #2d7a1f;"
+                   onchange="var h=this.nextElementSibling; h.disabled=this.checked;">
+            <input type="hidden" name="wildfire_suppress" value="{{ p.project_url }}" {{ '' if not wildfire_checked else 'disabled' }}>
+            {% else %}
+            <input type="checkbox" name="wildfire" value="{{ p.project_url }}"
+                   {{ 'checked' if wildfire_checked else '' }}
+                   title="Manual override"
+                   style="accent-color: #c94f1a;">
             {% endif %}
           </td>
           <td class="proj-check-cell">
