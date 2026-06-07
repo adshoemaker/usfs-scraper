@@ -200,6 +200,10 @@
     "https://www.fs.usda.gov/r10/tongass/projects/67529",
     "https://www.fs.usda.gov/r10/tongass/projects/68930"
   ],
-  "_wildfire_suppress": [],
-  "_thinning_suppress": []
+  "_wildfire_suppress": [
+    "https://www.fs.usda.gov/r06/okanogan-wenatchee/projects/64248"
+  ],
+  "_thinning_suppress": [
+    "https://www.fs.usda.gov/r06/okanogan-wenatchee/projects/64248"
+  ]
 }
