@@ -17,14 +17,69 @@ import urllib.error
 import urllib.parse
 from flask import Flask, request, render_template_string, session, redirect, url_for
 
+def format_deadline(deadline_str):
+    """Convert deadline string to short Pacific time format."""
+    import re
+    import datetime
+    if not deadline_str:
+        return deadline_str
+    # Timezone offsets to Pacific
+    tz_offsets = {
+        "Pacific Standard Time": 0, "PST": 0,
+        "Pacific Daylight Time": 0, "PDT": 0,
+        "Mountain Standard Time": 1, "MST": 1,
+        "Mountain Daylight Time": 1, "MDT": 1,
+        "Central Standard Time": 2, "CST": 2,
+        "Central Daylight Time": 2, "CDT": 2,
+        "Eastern Standard Time": 3, "EST": 3,
+        "Eastern Daylight Time": 3, "EDT": 3,
+        "Alaskan Standard Time": -1, "AKST": -1,
+        "Alaska Standard Time": -1,
+        "Alaskan Daylight Time": 0, "AKDT": 0,
+        "Alaska Daylight Time": 0,
+        "Hawaii-Aleutian Standard Time": -2, "HST": -2,
+    }
+    # Detect timezone
+    tz_name = ""
+    hours_diff = 0
+    for tz, diff in tz_offsets.items():
+        if tz.lower() in deadline_str.lower():
+            tz_name = tz
+            hours_diff = diff
+            break
+    # Determine if currently PDT or PST (rough: Mar-Nov = PDT)
+    now = datetime.datetime.now()
+    is_pdt = 3 <= now.month <= 11
+    pt_abbr = "PDT" if is_pdt else "PST"
+    # Parse datetime
+    # Format: M/D/YYYY H:MM:SS AM/PM
+    m = re.search(r'(\d{1,2})/(\d{1,2})/(\d{4})\s+(\d{1,2}):(\d{2}):(\d{2})\s*(AM|PM)', deadline_str, re.I)
+    if m:
+        mon, day, yr, hr, mn, sc, ampm = m.groups()
+        hr = int(hr)
+        if ampm.upper() == 'PM' and hr != 12:
+            hr += 12
+        elif ampm.upper() == 'AM' and hr == 12:
+            hr = 0
+        dt = datetime.datetime(int(yr), int(mon), int(day), hr, int(mn))
+        # Adjust to Pacific
+        dt = dt + datetime.timedelta(hours=hours_diff)
+        # Format short: M/D/YY H:MM AM/PM TZ
+        short_ampm = "PM" if dt.hour >= 12 else "AM"
+        short_hr = dt.hour % 12 or 12
+        short_yr = str(dt.year)[2:]
+        return f"{dt.month}/{dt.day}/{short_yr} {short_hr}:{dt.minute:02d} {short_ampm} {pt_abbr}"
+    return deadline_str
+
+
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static'))
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "dev-secret-change-in-production")
 
 STATUS_COLORS = {
-    "Developing Proposal": "#b4b2a9",
-    "In Progress":         "#b4b2a9",
-    "On Hold":             "#b4b2a9",
-    "Completed":           "#b4b2a9",
+    "Developing Proposal": "#9b72d8",
+    "In Progress":         "#4a90d9",
+    "On Hold":             "#e08848",
+    "Completed":           "#5aaa48",
 }
 
 ANALYSIS_COLORS = {
@@ -374,1153 +429,210 @@ PAGE_TEMPLATE = """
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         :root {
-            --bg:          #e8ede3;
-            --bg2:         #ffffff;
-            --bg3:         #f2f5ee;
-            --border:      #d0d0c8;
-            --border2:     #b8b8b0;
-            --text:        #111111;
-            --text-muted:  #444444;
-            --text-dim:    #777777;
-            --accent:      #2d7a1f;
-            --link:        #1a4fa0;
-            --red:         #a83030;
-            --green:       #2d7a1f;
-            --orange:      #c46a30;
-            --purple:      #6d3eb0;
-            --blue:        #1a4fa0;
+            --bg:       #e8ede3;
+            --bg2:      #ffffff;
+            --bg3:      #f2f5ee;
+            --border:   #d0d0c8;
+            --border2:  #b8b8b0;
+            --text:     #111111;
+            --text-muted: #444444;
+            --text-dim: #777777;
+            --accent:   #2d7a1f;
+            --green:    #2d7a1f;
+            --red:      #a83030;
+            --orange:   #c46a30;
         }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            font-size: 14px;
-            line-height: 1.6;
-        }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.6; }
 
-        /* ── Header ── */
-        .top-search-bar {
-            background: var(--bg3);
-            border-bottom: 1px solid var(--border);
-            padding: 8px 20px;
-        }
-
-        .top-search-inner {
-            max-width: 1150px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .header-search {
-            display: flex;
-            align-items: center;
-            gap: 0;
-        }
-
-        .header-search input[type="text"] {
-            flex: 1;
-        }
-
-        .header-search input[type="text"] {
-            padding: 7px 14px;
-            border: 1px solid #ccc;
-            border-radius: 0;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.88rem;
-            background: white;
-            color: #1a1a1a;
-            outline: none;
-        }
-
+        /* ── Search bar ── */
+        .top-search-bar { background: var(--bg3); border-bottom: 1px solid var(--border); padding: 8px 20px; }
+        .top-search-inner { max-width: 1150px; margin: 0 auto; display: flex; justify-content: flex-end; }
+        .header-search { display: flex; align-items: center; gap: 0; }
+        .header-search input[type="text"] { padding: 7px 14px; border: 1px solid #ccc; border-radius: 0; font-family: 'Poppins', sans-serif; font-size: 0.88rem; background: white; color: #1a1a1a; outline: none; flex: 1; }
         .header-search input[type="text"]::placeholder { color: #aaa; }
         .header-search input[type="text"]:focus { border-color: #888; }
-
-        .header-search button {
-            padding: 7px 18px;
-            background: #e05a2b;
-            color: white;
-            border: none;
-            border-radius: 0;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.88rem;
-            font-weight: 400;
-            cursor: pointer;
-            white-space: nowrap;
-        }
-
+        .header-search button { padding: 7px 18px; background: #e05a2b; color: white; border: none; border-radius: 0; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400; cursor: pointer; white-space: nowrap; }
         .header-search button:hover { background: #c44d22; }
 
-        /* ── Forest summary bar ── */
-        .forest-summary {
-            background: #f7f7f0;
-            border-bottom: 1px solid var(--border);
-            padding: 10px 20px;
-        }
-
-        .forest-summary-inner {
-            max-width: 1150px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .forest-cols-row {
-            display: flex;
-            gap: 0;
-            justify-content: center;
-            width: 100%;
-        }
-
-        .forest-totals-row {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 12px;
-            width: 100%;
-        }
-
-        .forest-reset-btn {
-            display: inline-block;
-            padding: 5px 12px;
-            background: #e05a2b;
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.62rem;
-            font-weight: 400;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-
-        .forest-reset-btn:hover {
-            background: #c44d22;
-        }
-
-        .forest-col {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            flex: 1;
-            min-width: 0;
-            padding: 0 8px;
-        }
-
-        .forest-col-label {
-            font-size: 0.6rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.6px;
-            color: var(--text-dim);
-            margin-bottom: 2px;
-        }
-
-        .forest-pill {
-            transition: opacity 0.15s, box-shadow 0.15s;
-        }
-
-        .forest-pill.pill-selected {
-            box-shadow: 0 0 0 2px white, 0 0 0 3px currentColor;
-        }
-
-        .forest-pill-link {
-            text-decoration: none;
-        }
-
-        /* Original forest-pill styles below */
-        .forest-pill {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 5px;
-            background: var(--accent);
-            border-radius: 20px;
-            padding: 3px 10px 3px 10px;
-            font-size: 0.7rem;
-            font-weight: 400;
-            color: white;
-            white-space: nowrap;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .forest-pill-count {
-            background: rgba(255,255,255,0.25);
-            border-radius: 10px;
-            padding: 0 5px;
-            font-size: 0.62rem;
-            font-weight: 700;
-            color: white;
-        }
-
-        .summary-totals {
-            color: var(--text-muted);
-            font-size: 0.72rem;
-            text-align: right;
-        }
-
-        .summary-totals strong {
-            color: var(--text);
-            font-weight: 700;
-        }
-
-        /* ── Search section ── */
-        .search-section {
-            border-bottom: 1px solid var(--border);
-            padding: 0;
-            position: relative;
-            height: 120px;
-            overflow: hidden;
-        }
-
-        .search-section-bg {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            filter: brightness(0.75);
-        }
-
-        .search-section-inner {
-            position: relative;
-            z-index: 1;
-            max-width: 1150px;
-            margin: 0 auto;
-            height: 100%;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            padding: 0 20px 14px 20px;
-        }
-
-        .search-section .header-search {
-            width: 100%;
-            max-width: 400px;
-        }
-        .search-section .header-search input[type="text"] {
-            flex: 1;
-            width: auto;
-        }
+        /* ── Forest summary ── */
+        .forest-summary { background: #f7f7f0; border-bottom: 1px solid var(--border); padding: 10px 20px; }
+        .forest-summary-inner { max-width: 1150px; margin: 0 auto; display: flex; flex-direction: column; gap: 6px; }
+        .forest-cols-row { display: flex; gap: 0; justify-content: center; width: 100%; }
+        .forest-totals-row { display: flex; flex-direction: row; align-items: center; justify-content: flex-end; gap: 12px; width: 100%; }
+        .forest-reset-btn { display: inline-block; padding: 5px 12px; background: #e05a2b; color: white; font-family: 'Poppins', sans-serif; font-size: 0.62rem; font-weight: 400; border: none; cursor: pointer; text-decoration: none; white-space: nowrap; }
+        .forest-reset-btn:hover { background: #c44d22; }
+        .forest-col { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; padding: 0 8px; }
+        .forest-col-label { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-dim); margin-bottom: 2px; }
+        .forest-pill { display: flex; align-items: center; justify-content: space-between; gap: 5px; background: var(--accent); border-radius: 20px; padding: 3px 10px; font-size: 0.7rem; font-weight: 400; color: white; white-space: nowrap; width: 100%; box-sizing: border-box; text-decoration: none; transition: opacity 0.15s, box-shadow 0.15s; }
+        .forest-pill.pill-selected { box-shadow: 0 0 0 2px white, 0 0 0 3px currentColor; }
+        .forest-pill-count { background: rgba(255,255,255,0.25); border-radius: 10px; padding: 0 5px; font-size: 0.62rem; font-weight: 700; color: white; }
+        .summary-totals { color: var(--text-muted); font-size: 0.72rem; text-align: right; }
+        .summary-totals strong { color: var(--text); font-weight: 700; }
 
         /* ── Container ── */
-        .container {
-            max-width: 1150px;
-            margin: 0 auto;
-            padding: 20px 20px;
-        }
+        .container { max-width: 1150px; margin: 0 auto; padding: 20px; }
 
         /* ── Filter bar ── */
-        .filters-wrapper {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 10px;
-        }
-
-        .filters {
-            background: var(--bg2);
-            border: 1px solid var(--border);
-            border-radius: 0;
-            padding: 8px 12px;
-            display: inline-flex;
-            gap: 10px;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
-
-        .filters label {
-            display: block;
-            font-size: 0.58rem;
-            font-weight: 600;
-            color: var(--text-dim);
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-        }
-
-        .filters select {
-            padding: 5px 8px;
-            border: 1px solid var(--border2);
-            border-radius: 0;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.82rem;
-            font-weight: 500;
-            background: var(--bg3);
-            color: var(--text);
-            width: 170px;
-            cursor: pointer;
-        }
-
+        .filters-wrapper { display: flex; justify-content: flex-end; margin-bottom: 10px; }
+        .filters { background: var(--bg2); border: 1px solid var(--border); padding: 8px 12px; display: inline-flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+        .filters label { display: block; font-size: 0.58rem; font-weight: 600; color: var(--text-dim); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.8px; }
+        .filters select { padding: 5px 8px; border: 1px solid var(--border2); font-family: 'Poppins', sans-serif; font-size: 0.82rem; font-weight: 500; background: var(--bg3); color: var(--text); width: 170px; cursor: pointer; }
         .filters select:focus { outline: none; border-color: var(--accent); }
-
-        .filters a.clear {
-            padding: 7px 12px;
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.15s;
-        }
-
+        .filters a.clear { padding: 7px 12px; color: var(--text-muted); font-size: 0.8rem; font-weight: 600; text-decoration: none; }
         .filters a.clear:hover { color: var(--text); }
 
-        /* ── Category buttons ── */
-        .category-filters {
-            display: flex;
-            gap: 10px;
-            padding: 0 0 0 24px;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            margin-bottom: 14px;
-        }
-
-        .category-filters span {
-            font-size: 0.62rem;
-            font-weight: 700;
-            color: var(--text-dim);
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-        }
-
-        .cat-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            padding: 5px 14px;
-            border-radius: 20px;
-            border: 1.5px solid transparent;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.78rem;
-            font-weight: 700;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.15s;
-            letter-spacing: 0.2px;
-        }
-
+        /* ── Category filter buttons ── */
+        .category-filters { display: flex; gap: 10px; padding: 0 0 0 24px; align-items: center; flex-wrap: wrap; justify-content: flex-end; margin-bottom: 14px; }
+        .category-filters span { font-size: 0.62rem; font-weight: 700; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.8px; }
+        .cat-btn { display: inline-flex; align-items: center; gap: 7px; padding: 5px 14px; border-radius: 20px; border: 1.5px solid transparent; font-family: 'Poppins', sans-serif; font-size: 0.78rem; font-weight: 700; cursor: pointer; text-decoration: none; transition: all 0.15s; letter-spacing: 0.2px; }
         .cat-btn .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-
+        .cat-btn.extractive  { border-color: var(--red);    color: var(--red);    background: rgba(168,48,48,0.07); }
+        .cat-btn.extractive.active  { background: var(--red);    color: white; border-width: 3px; }
+        .cat-btn .dot.extractive-dot  { background: var(--red); }
+        .cat-btn.restorative { border-color: var(--green);  color: var(--green);  background: rgba(45,122,31,0.07); }
+        .cat-btn.restorative.active { background: var(--green);  color: white; border-width: 3px; }
+        .cat-btn .dot.restorative-dot { background: var(--green); }
+        .cat-btn.mixed       { border-color: var(--orange); color: var(--orange); background: rgba(196,106,48,0.07); }
+        .cat-btn.mixed.active       { background: var(--orange); color: white; border-width: 3px; }
+        .cat-btn .dot.mixed-dot       { background: var(--orange); }
         .cat-btn.unclassified { border-color: #888; color: #555; background: rgba(128,128,128,0.07); }
         .cat-btn.unclassified.active { background: #888; color: white; border-width: 3px; }
         .cat-btn .dot.unclassified-dot { background: #888; }
-        .cat-btn.newly-added { border-color: #6aabdf; border-width: 3px; color: #5599cc; background: rgba(37,99,235,0.1); padding: 6px 37px; font-size: 0.78rem; }
-        .cat-btn.newly-added.active { background: #6aabdf; color: white; border: 3px solid #5599cc; }
+        .cat-btn.newly-added { border-color: #6aabdf; border-width: 3px; color: #5599cc; background: rgba(106,171,223,0.1); padding: 6px 37px; }
+        .cat-btn.newly-added.active { background: #6aabdf; color: white; }
         .cat-btn .dot.newly-added-dot { background: #6aabdf; }
-        .cat-btn.taking-comments { border-color: #a83030; border-width: 3px; color: #a83030; background: #e8e8e4; padding: 6px 37px; font-size: 0.78rem; }
-        .cat-btn.taking-comments.active { background: #a83030; color: white; border: 3px solid #a83030; }
-        .cat-btn.active-filter { border-color: #2d7a1f; border-width: 3px; color: #1a4f0f; background: rgba(45,122,31,0.15); padding: 6px 37px; font-size: 0.78rem; }
-        .cat-btn.active-filter.active { background: #2d7a1f; color: white; border: 3px solid #1a4f0f; }
-        .cat-btn .dot.active-filter-dot { background: #2d7a1f; }
-        .cat-btn.taking-comments.active { background: #a83030; color: white; border: 3px solid #a83030; }
-        .cat-btn .dot.taking-comments-dot { background: #fbbf24; border: 1px solid #a83030; }
-
-        .annotation-box {
-            margin-top: 12px;
-            display: inline-block;
-            width: auto;
-        }
-
-        .annotation-box.expanded {
-            width: 100%;
-        }
-
-        .annotation-toggle {
-            background: #6aabdf;
-            color: white;
-            border: none;
-            padding: 5px 14px;
-            font-size: 0.78rem;
-            font-family: 'Poppins', sans-serif;
-            cursor: pointer;
-            font-weight: 600;
-            width: auto;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            white-space: nowrap;
-        }
-
-        .annotation-toggle:hover { background: #5599cc; }
-
-        .ann-arrow {
-            display: inline-block;
-            transition: transform 0.2s;
-            font-style: normal;
-        }
-
-        .annotation-content {
-            border: 2px solid #6aabdf;
-            border-top: none;
-            background: #f0f4ff;
-            padding: 10px 14px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .annotation-text {
-            font-size: 0.82rem;
-            color: #1a1a1a;
-            line-height: 1.5;
-            white-space: pre-wrap;
-            margin-bottom: 8px;
-        }
-
-        .annotation-copy {
-            background: #6aabdf;
-            color: white;
-            border: none;
-            padding: 4px 12px;
-            font-size: 0.75rem;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .annotation-copy:hover { background: #5599cc; }
-
-        .wildfire-badge:hover { background: #7a9079 !important; }
-
-        .wildfire-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background: #8fa68e !important;
-            color: white !important;
-            border: none;
-            border-radius: 0;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.02rem;
-            font-weight: 200;
-            text-transform: none;
-            letter-spacing: 0.8px;
-            padding: 2px 4px;
-            width: 255px;
-            box-sizing: border-box;
-            cursor: pointer;
-        }
-
-        .lfdc-commented-badge:hover { background: #7a9079 !important; }
-
-        .lfdc-commented-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            background: #8fa68e !important;
-            color: white !important;
-            border: none;
-            border-radius: 0;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.82rem;
-            font-weight: 200;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            padding: 4px 6px;
-            width: 255px;
-            box-sizing: border-box;
-            cursor: pointer;
-        }
-
-        @keyframes pulse-blue {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(106,171,223,0.7); }
-            50% { box-shadow: 0 0 0 10px rgba(106,171,223,0); }
-        }
-
-        .btn-comment.primary.pulsing {
-            animation: pulse-blue 2s ease-in-out infinite;
-            background: transparent !important;
-            color: #6aabdf !important;
-            border: 1px solid #6aabdf !important;
-        }
-
-        .category-disclaimer {
-            font-size: 0.62rem;
-            color: var(--text-dim);
-            font-style: italic;
-        }
-
-        .category-disclaimer-row {
-            display: flex;
-            justify-content: flex-end;
-            padding: 3px 0 6px 0;
-        }
-        .cat-btn.extractive  { border-color: var(--red);    color: var(--red);    background: rgba(168,48,48,0.07); }
-        .cat-btn.extractive.active  { background: var(--red);    color: white; border-width: 3px; }
-        .cat-btn.restorative { border-color: var(--green);  color: var(--green);  background: rgba(45,122,31,0.07); }
-        .cat-btn.restorative.active { background: var(--green);  color: white; border-width: 3px; }
-        .cat-btn.mixed       { border-color: var(--orange); color: var(--orange); background: rgba(196,106,48,0.07); }
-        .cat-btn.mixed.active       { background: var(--orange); color: white; border-width: 3px; }
-
-
-        .cat-btn .dot.extractive-dot  { background: var(--red); }
-        .cat-btn .dot.restorative-dot { background: var(--green); }
-        .cat-btn .dot.mixed-dot       { background: var(--orange); }
-        .cat-btn.active .dot          { background: currentColor; }
-
-        /* ── Legend ── */
-        .legend {
-            display: flex;
-            gap: 18px;
-            font-size: 0.72rem;
-            color: var(--text-dim);
-            margin-bottom: 10px;
-            flex-wrap: wrap;
-            font-weight: 500;
-        }
-
-        .legend-item { display: flex; align-items: center; gap: 6px; }
-
-        .legend-stripe { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
+        .cat-btn.taking-comments { border-color: #a83030; border-width: 3px; color: #a83030; background: #e8e8e4; padding: 6px 37px; }
+        .cat-btn.taking-comments.active { background: #a83030; color: white; }
+        .cat-btn .dot.taking-comments-dot { background: #a83030; }
+        .cat-btn.active-filter { border-color: var(--green); border-width: 3px; color: #1a4f0f; background: rgba(45,122,31,0.15); padding: 6px 37px; }
+        .cat-btn.active-filter.active { background: var(--green); color: white; }
+        .cat-btn .dot.active-filter-dot { background: var(--green); }
+        .cat-btn.active .dot { background: currentColor; }
+        .category-disclaimer { font-size: 0.62rem; color: var(--text-dim); font-style: italic; }
+        .category-disclaimer-row { display: flex; justify-content: flex-end; padding: 3px 0 6px 0; }
 
         /* ── Results header ── */
-        .results-header {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-            margin-top: 4px;
-            font-weight: 500;
-        }
-
+        .results-header { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 12px; margin-top: 4px; font-weight: 500; }
         .results-header strong { color: var(--text); font-weight: 700; }
 
-        /* ── Project cards ── */
-        .project-card {
-            font-family: 'Poppins', sans-serif;
-            background: var(--bg2);
-            border: 1px solid var(--border);
-            border-radius: 0;
-            padding: 16px 18px 16px 46px;
-            margin-bottom: 10px;
-            transition: border-color 0.15s, box-shadow 0.15s;
-            position: relative;
-        }
+        /* ── Annotation (Suggested Comment) ── */
+        .annotation-box { margin: 0; display: inline-block; width: auto; padding-bottom: 25px; }
+        .annotation-box.expanded { width: 100%; }
+        .annotation-toggle { background: #6aabdf; color: white; border: none; padding: 5px 14px; font-size: 0.78rem; font-family: 'Poppins', sans-serif; cursor: pointer; font-weight: 600; width: auto; text-align: left; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+        .annotation-toggle:hover { background: #5599cc; }
+        .ann-arrow { display: inline-block; transition: transform 0.2s; font-style: normal; }
+        .annotation-content { border: 2px solid #6aabdf; border-top: none; background: #f0f4ff; padding: 10px 14px; width: 100%; box-sizing: border-box; }
+        .annotation-text { font-size: 0.82rem; color: #1a1a1a; line-height: 1.5; white-space: pre-wrap; margin-bottom: 8px; }
+        .annotation-copy { background: #6aabdf; color: white; border: none; padding: 4px 12px; font-size: 0.75rem; cursor: pointer; font-family: 'Poppins', sans-serif; }
+        .annotation-copy:hover { background: #5599cc; }
 
-        .card-category-bar {
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        /* ── Project card ── */
+        .project-card { font-family: 'Poppins', sans-serif; background: var(--bg2); border: 1px solid var(--border); border-radius: 0; padding: 0 0 0 28px; margin-bottom: 10px; transition: border-color 0.15s, box-shadow 0.15s; position: relative; overflow: hidden; }
+        .project-card:hover { border-color: var(--border2); box-shadow: 2px 2px 0 rgba(0,0,0,0.08); }
 
+        /* Impact bar (vertical left strip) */
+        .card-category-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 28px; display: flex; align-items: center; justify-content: center; }
+        .card-category-label { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 0.65rem; font-weight: 400; color: white; letter-spacing: 1.5px; text-transform: uppercase; white-space: nowrap; user-select: none; }
+        .card-category-top { display: none; font-size: 0.62rem; font-weight: 400; color: white; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 12px; }
 
+        /* Card body: center + right columns */
+        .card-body { display: flex; flex-direction: row; gap: 0; align-items: stretch; }
 
-        .card-category-label {
-            writing-mode: vertical-rl;
-            transform: rotate(180deg);
-            font-size: 0.65rem;
-            font-weight: 400;
-            color: white;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            white-space: nowrap;
-            user-select: none;
-        }
+        /* Center column */
+        .card-body-left { flex: 1; display: flex; flex-direction: column; min-width: 0; border-right: 1px solid var(--border); padding-left: 25px; }
+        .card-body-left .description { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; font-weight: 400; flex: 1; padding-top: 25px; padding-bottom: 25px; padding-right: 25px; }
+        .card-body-left .left-bottom { margin-top: auto; display: flex; flex-direction: column; gap: 0; }
 
-        .card-category-top {
-            display: none;
-            font-size: 0.62rem;
-            font-weight: 400;
-            color: white;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            padding: 3px 12px;
-            margin: -16px -16px 10px -16px;
-        }
+        /* Right column */
+        .card-body-right { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 6px; flex-shrink: 0; width: 305px; background: #f4f4f0; padding: 25px 0; box-sizing: border-box; align-self: stretch; margin: 0; overflow: hidden; }
+        .card-body-right-top { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 255px; flex: 1; }
 
-        .project-card:hover {
-            border-color: var(--border2);
-            box-shadow: 2px 2px 0 rgba(0,0,0,0.08);
-        }
+        /* Forest + project name */
+        .forest-tag { font-size: 1.3rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.8px; margin: 0; }
+        .btn-title-wrap { display: flex; align-items: center; gap: 8px; margin: 0; }
+        .project-title-text { font-family: 'Poppins', sans-serif; font-size: 1.3rem; font-weight: 400; color: #1a1a1a; letter-spacing: 0.8px; line-height: 1.3; display: block; }
 
-        /* border colors now set inline per card */
+        /* Status badge */
+        .status-badge { display: block; padding: 3px 10px; border-radius: 0; font-size: 0.65rem; font-weight: 700; color: white; white-space: nowrap; letter-spacing: 0.3px; text-align: center; width: 255px; box-sizing: border-box; }
 
-        .card-top {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 12px;
-            margin-bottom: 6px;
-        }
-
-        .forest-tag {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            margin-bottom: 30px;
-        }
-
-        .project-card h2 { font-size: 0.92rem; font-weight: 700; }
-
-        .project-card h2 a {
-            color: var(--link);
-            text-decoration: none;
-            transition: color 0.15s;
-        }
-
-        .project-card h2 a:hover { color: white; }
-
-        .status-badge {
-            display: block;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.65rem;
-            font-weight: 700;
-            color: white;
-            white-space: nowrap;
-            letter-spacing: 0.3px;
-            text-align: center;
-            width: 255px;
-            box-sizing: border-box;
-        }
-
-        .analysis-badge {
-            display: inline-block;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.62rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            background: var(--bg3);
-            border: 1px solid var(--border);
-            white-space: nowrap;
-            letter-spacing: 0.2px;
-            width: 255px;
-            text-align: center;
-            box-sizing: border-box;
-        }
+        /* NEW badge */
+        .new-badge { display: inline-block; background: rgba(106,171,223,0.1); color: #6aabdf; border: 2px solid #6aabdf; border-radius: 0; font-size: 0.78rem; font-weight: 700; padding: 3px 8px; vertical-align: middle; margin-left: 6px; letter-spacing: 0.3px; }
 
         /* Taking Comments Now badge */
-        .comment-open-badge {
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 3px 10px;
-            border-radius: 0;
-            background: #e8e8e4;
-            border: 3px solid #a83030;
-            color: #a83030;
-            font-weight: 700;
-            font-size: 0.82rem;
-            line-height: 1.2;
-            text-align: center;
-            animation: pulse-yellow 2.5s ease-in-out infinite;
-            flex-shrink: 0;
-            box-shadow: 0 2px 8px rgba(168,48,48,0.2);
-            width: 475px;
-            box-sizing: border-box;
-        }
+        .comment-open-badge { display: inline-flex; flex-direction: column; align-items: center; padding: 2px 6px; border-radius: 0; background: #e8e8e4; border: 3px solid #a83030; color: #a83030; font-weight: 700; font-size: 0.82rem; line-height: 1.2; text-align: center; animation: pulse-yellow 2.5s ease-in-out infinite; flex-shrink: 0; box-shadow: 0 2px 8px rgba(168,48,48,0.2); width: 255px; box-sizing: border-box; }
+        .comment-open-badge .badge-title { font-size: 0.88rem; font-weight: 800; letter-spacing: 0.4px; }
+        .comment-open-badge .badge-deadline { font-family: 'Poppins', sans-serif; font-size: 0.72rem; font-weight: 200; opacity: 0.9; margin-top: 2px; }
+        @keyframes pulse-yellow { 0%, 100% { opacity: 1; box-shadow: 0 2px 8px rgba(168,48,48,0.2); } 50% { opacity: 0.8; box-shadow: 0 2px 16px rgba(168,48,48,0.4); } }
 
-        .comment-open-badge .badge-title {
-            font-size: 0.88rem;
-            font-weight: 800;
-            letter-spacing: 0.4px;
-        }
+        /* Learn About badges */
+        .wildfire-badge { display: flex; align-items: center; justify-content: center; gap: 8px; background: #8fa68e; color: white; border: none; border-radius: 0; font-family: 'Poppins', sans-serif; font-size: 0.918rem; font-weight: 200; text-transform: none; letter-spacing: 0.8px; padding: 2px 4px; width: 230px; box-sizing: border-box; cursor: pointer; text-decoration: none; }
+        .wildfire-badge:hover { background: #7a9079; }
 
-        .comment-open-badge .badge-deadline {
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 200;
-            opacity: 0.9;
-            margin-top: 2px;
-        }
+        /* LFDC Commented badge */
+        .lfdc-commented-badge { display: flex; align-items: center; justify-content: center; gap: 6px; background: #8fa68e; color: white; border: none; border-radius: 0; font-family: 'Poppins', sans-serif; font-size: 0.82rem; font-weight: 200; text-transform: uppercase; letter-spacing: 0.8px; padding: 4px 6px; width: 255px; box-sizing: border-box; cursor: pointer; text-decoration: none; }
+        .lfdc-commented-badge:hover { background: #7a9079; }
 
-        @keyframes pulse-yellow {
-            0%, 100% { opacity: 1; box-shadow: 0 2px 8px rgba(168,48,48,0.2); }
-            50%       { opacity: 0.8; box-shadow: 0 2px 16px rgba(168,48,48,0.4); }
-        }
-
-        .new-badge {
-            display: inline-block;
-            background: rgba(37,99,235,0.1);
-            color: #6aabdf;
-            border: 2px solid #6aabdf;
-            border-radius: 0;
-            font-size: 0.78rem;
-            font-weight: 700;
-            padding: 3px 8px;
-            vertical-align: middle;
-            margin-left: 6px;
-            letter-spacing: 0.3px;
-        }
-
-        /* ── Card layout ── */
-
-        /* Card header: forest + title left, taking comments badge right */
-        .card-header-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 16px;
-            margin-bottom: 10px;
-        }
-
-        .card-header-left {
-            flex: 1;
-            min-width: 0;
-        }
-
-        /* Desktop: badge in header right, hidden on mobile */
-        .card-header-badge {
-            flex-shrink: 0;
-            width: 240px;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        /* Two-column body below header */
-        .card-body {
-            display: flex;
-            flex-direction: row;
-            gap: 16px;
-            min-height: 80px;
-        }
-
-        /* Left column: description fills, buttons pin to bottom */
-        .card-body-left {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            min-width: 0;
-        }
-
-        .card-body-left .description {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-            font-weight: 400;
-            flex: 1;
-        }
-
-        .card-body-left .left-bottom {
-            margin-top: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            padding-top: 10px;
-        }
-
-        .card-body .description {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-            font-weight: 400;
-        }
-
-        /* Right column: status + analysis + milestone, top-aligned */
-        .card-body-right {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 6px;
-            flex-shrink: 0;
-            width: 255px;
-        }
-
-        .card-body-right-top {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 6px;
-            width: 255px;
-        }
-
-        .card-body-right .status-badge,
-        .card-body-right .analysis-badge,
-        .card-body-right .milestone-section {
-            width: 255px;
-            box-sizing: border-box;
-        }
-
-        /* ── Milestone table ── */
-        .milestone-section {
-            width: 255px;
-            border: 1px solid var(--border2);
-            border-radius: 0;
-            overflow: hidden;
-            background: #e8e8e4;
-            flex-shrink: 0;
-        }
-
-        .milestone-section-label {
-            font-size: 0.6rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            color: #555;
-            padding: 5px 10px 4px;
-            background: #d0d0cc;
-            border-bottom: 1px solid #c0c0bc;
-            border-radius: 0;
-        }
-
-        .milestone-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.72rem;
-        }
-
-        .milestone-table th {
-            text-align: left;
-            padding: 4px 10px;
-            background: #d8d8d4;
-            color: #555;
-            font-weight: 700;
-            font-size: 0.6rem;
-            text-transform: uppercase;
-            letter-spacing: 0.6px;
-            border-bottom: 1px solid #c0c0bc;
-        }
-
-        .milestone-table td {
-            padding: 4px 10px;
-            border-bottom: 1px solid var(--border);
-            color: var(--text);
-            font-weight: 500;
-        }
-
+        /* Milestone table */
+        .milestone-section { width: 255px; border: 1px solid var(--border2); border-radius: 0; overflow: hidden; background: #e8e8e4; flex-shrink: 0; }
+        .card-body-right .milestone-section { width: 255px; box-sizing: border-box; margin: 0; }
+        .milestone-table { width: 100%; border-collapse: collapse; font-size: 0.72rem; }
+        .milestone-table th { text-align: left; padding: 4px 10px; background: #d8d8d4; color: #555; font-weight: 700; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #c0c0bc; }
+        .milestone-table td { padding: 4px 10px; border-bottom: 1px solid var(--border); color: var(--text); font-weight: 500; }
         .milestone-table tr:last-child td { border-bottom: none; }
+        .milestone-table td.date-cell { white-space: nowrap; color: var(--text-muted); text-align: right; }
+        .milestone-table td.date-cell.estimated { color: var(--text-dim); font-style: italic; }
 
-        .milestone-table td.date-cell {
-            white-space: nowrap;
-            color: var(--text-muted);
-            text-align: right;
-        }
-
-        .milestone-table td.date-cell.estimated {
-            color: var(--text-dim);
-            font-style: italic;
-        }
-
-        /* ── Title button ── */
-        .btn-title-wrap {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
-
-        .project-title-text {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 400;
-            color: #1a1a1a;
-            letter-spacing: 0.8px;
-            line-height: 1.3;
-            display: block;
-            padding-right: 10px;
-        }
-
-        .btn-comment.project-link {
-            background: white;
-            color: #c94f1a;
-            border: 1px solid #c94f1a;
-        }
-
-        .btn-comment.project-link:hover {
-            background: #fff4ef;
-            color: #a33d12;
-        }
-
-        .btn-title {
-            display: inline-flex;
-            align-items: center;
-            padding: 5px 12px;
-            border-radius: 0;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.88rem;
-            font-weight: 600;
-            text-decoration: none;
-            color: var(--text);
-            background: #e8e8e4;
-            border: 1px solid var(--border2);
-            transition: background 0.15s, border-color 0.15s;
-        }
-
-        .btn-title:hover {
-            background: #d8d8d4;
-            border-color: var(--text-dim);
-            color: var(--text);
-        }
-
-        /* ── Comment buttons ── */
-        .comment-buttons {
-            display: flex;
-            gap: 8px;
-            margin-top: 8px;
-            flex-wrap: wrap;
-        }
-
-        .btn-comment {
-            display: inline-block;
-            padding: 5px 12px;
-            border-radius: 0;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: opacity 0.15s;
-            white-space: nowrap;
-        }
-
+        /* Comment buttons */
+        .comment-buttons { display: flex; gap: 12px; margin: 0; flex-wrap: wrap; padding-bottom: 12px; }
+        .btn-comment { display: inline-block; padding: 5px 12px; border-radius: 0; font-family: 'Poppins', sans-serif; font-size: 0.72rem; font-weight: 600; text-decoration: none; transition: opacity 0.15s; white-space: nowrap; }
         .btn-comment:hover { opacity: 0.82; }
+        .btn-comment.project-link { background: white; color: #c94f1a; border: 1px solid #c94f1a; }
+        .btn-comment.project-link:hover { background: #fff4ef; color: #a33d12; }
+        .btn-comment.primary { background: #6aabdf; color: white; border: 1px solid #6aabdf; }
+        .btn-comment.secondary { background: white; color: #555; border: 1px solid var(--green); }
+        .btn-comment.secondary:hover { background: #f0fff0; color: #333; }
+        .btn-comment.primary-inactive { background: white; color: #999; border: 1px solid #b8b8b4; cursor: pointer; }
+        .btn-comment.primary-inactive:hover { background: #f8f8f8; color: #777; }
+        @keyframes pulse-blue { 0%, 100% { box-shadow: 0 0 0 0 rgba(106,171,223,0.7); } 50% { box-shadow: 0 0 0 10px rgba(106,171,223,0); } }
+        .btn-comment.primary.pulsing { animation: pulse-blue 2s ease-in-out infinite; background: transparent !important; color: #6aabdf !important; border: 1px solid #6aabdf !important; }
 
-        .btn-comment.primary {
-            background: #6aabdf;
-            color: white;
-            border: 1px solid #6aabdf;
-        }
+        /* Meta */
+        .meta { font-size: 0.68rem; color: var(--text-dim); display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding-bottom: 25px; }
 
-        .btn-comment.secondary {
-            background: white;
-            color: #555;
-            border: 1px solid var(--green);
-        }
+        /* Desktop/mobile visibility */
+        .desktop-only { display: flex; }
+        .mobile-only  { display: none; }
 
-        .btn-comment.secondary:hover {
-            background: #f0fff0;
-            color: #333;
-            border-color: var(--green);
-        }
-
-        .btn-comment.primary-inactive {
-            background: white !important;
-            color: #999 !important;
-            border: 1px solid #b8b8b4 !important;
-            cursor: pointer;
-        }
-
-        .btn-comment.primary-inactive:hover {
-            background: #f8f8f8 !important;
-            color: #777 !important;
-        }
-
-        /* ── Mobile layout ── */
+        /* ── Mobile ── */
         @media (max-width: 680px) {
-
-            /* Scale down all fonts by 15% on mobile */
             html { font-size: 85%; }
-
-            /* Prevent horizontal overflow in iFrame */
             html, body { max-width: 100%; overflow-x: hidden; }
-            * { box-sizing: border-box; }
-
-            /* Header stacks vertically */
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-                padding: 12px 16px;
-            }
-
-            .header-search { width: 100%; }
-            .header-search input[type="text"] { width: 100%; }
-
-            .forest-summary-inner { gap: 6px; }
-            .summary-totals { margin-left: 0; width: 100%; }
-
-            /* Mobile: 2-column forest summary */
-            .forest-cols-row {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 12px;
-                width: 100%;
-            }
-
-            .forest-col {
-                width: 100% !important;
-                flex: unset !important;
-                padding: 0 !important;
-            }
-
-            .forest-pill {
-            transition: opacity 0.15s, box-shadow 0.15s;
-        }
-
-        .forest-pill.pill-selected {
-            box-shadow: 0 0 0 2px white, 0 0 0 3px currentColor;
-        }
-
-        .forest-pill-link {
-            text-decoration: none;
-        }
-
-        /* Original forest-pill styles below */
-        .forest-pill {
-                width: 100%;
-                box-sizing: border-box;
-            }
-
-            /* Column grouping for mobile */
-            .forest-col-group {
-                display: flex;
-                flex-direction: column;
-                gap: 4px;
-            }
-
+            .forest-cols-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; }
+            .forest-col { width: 100% !important; flex: unset !important; padding: 0 !important; }
+            .forest-pill { width: 100%; box-sizing: border-box; }
+            .forest-col-group { display: flex; flex-direction: column; gap: 4px; }
             .filters { gap: 8px; }
             .filters select { width: 100%; }
-
             .container { padding: 10px; }
-            .project-card {
-            font-family: 'Poppins', sans-serif; padding: 12px 14px; }
-
-            /* ── Card layout: full vertical stack ── */
-
-            /* Comment badge — mobile: full width, smaller */
-            .comment-open-badge {
-                width: 100% !important;
-                box-sizing: border-box;
-                font-size: 0.72rem !important;
-                padding: 5px 10px !important;
-                margin-bottom: 6px;
-                align-self: stretch;
-            }
-            .comment-open-badge .badge-title { font-size: 0.76rem !important; }
-            .comment-open-badge .badge-deadline { font-size: 0.65rem !important; }
-
-            /* Card top: forest + title full width, then status/analysis right */
-            .card-top {
-                display: flex;
-                flex-direction: column;
-                gap: 6px;
-            }
-
-            .card-top-left {
-                width: 100%;
-            }
-
-            .card-top-left .forest-tag {
-                font-size: 0.7rem;
-            }
-
-            .card-top-left .btn-title {
-                width: 100%;
-                display: block;
-                box-sizing: border-box;
-            }
-
-            .card-top-right {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: flex-end;
-                gap: 6px;
-                flex-wrap: wrap;
-                width: 100%;
-            }
-
-            /* Show/hide desktop vs mobile elements */
             .desktop-only { display: none !important; }
             .mobile-only  { display: flex !important; }
             div.mobile-only { display: flex !important; }
             .forest-col-group.mobile-only { display: flex !important; flex-direction: column; gap: 8px; }
             .forest-col.desktop-only { display: none !important; visibility: hidden !important; pointer-events: none !important; }
-
-            /* Comment badge centered on mobile */
-            .mobile-only.comment-open-badge {
-                align-self: center;
-                margin: 0 auto 8px auto;
-                width: fit-content;
-            }
-
-            /* Mobile: single column */
-            .project-card {
-            font-family: 'Poppins', sans-serif;
-                display: flex !important;
-                flex-direction: column !important;
-                padding-left: 16px !important;
-            }
-
-            /* Hide vertical left bar on mobile */
             .card-category-bar { display: none !important; }
-
-            /* Show horizontal top label on mobile */
             .card-category-top { display: block !important; }
-
-            .card-header-row {
-                flex-direction: column;
-            }
-
-            .card-header-left { width: 100%; }
-
-            .card-header-badge { display: none !important; }
-
-            .card-body {
-                flex-direction: column;
-                gap: 10px;
-                width: 100%;
-            }
-
-            .card-body-left { width: 100%; }
-
-            .card-body .description { width: 100%; }
-
-            .milestone-section {
-                width: 100% !important;
-            }
-
-            /* Comment buttons stack vertically */
-            .comment-buttons {
-                flex-direction: column;
-                gap: 6px;
-            }
-
-            .btn-comment {
-                width: 100%;
-                text-align: center;
-                justify-content: center;
-            }
-
-            /* Meta at very bottom */
+            .project-card { display: flex !important; flex-direction: column !important; padding: 0 !important; }
+            .card-body { flex-direction: column; width: 100%; }
+            .card-body-left { width: 100%; padding: 12px; }
+            .card-body-right { display: none !important; }
+            .milestone-section { width: 100% !important; }
+            .comment-buttons { flex-direction: column; gap: 6px; }
+            .btn-comment { width: 100%; text-align: center; justify-content: center; }
+            .comment-open-badge { width: 100% !important; box-sizing: border-box; font-size: 0.72rem !important; padding: 5px 10px !important; margin-bottom: 6px; }
+            .comment-open-badge .badge-title { font-size: 0.76rem !important; }
+            .comment-open-badge .badge-deadline { font-size: 0.65rem !important; }
             .meta { margin-top: 10px; }
-        }
-
-        /* Desktop/mobile visibility helpers */
-        .desktop-only { display: flex; }
-        .mobile-only  { display: none; }
-
-        /* ── Meta ── */
-        .meta {
-            font-size: 0.7rem;
-            color: var(--text-dim);
-            margin-top: 10px;
-            font-weight: 500;
-        }
-
-        .meta span { margin-right: 14px; }
-
-        /* ── No results ── */
-        .no-results {
-            text-align: center;
-            padding: 60px 20px;
-            color: var(--text-dim);
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        /* ── Footer ── */
-        footer {
-            text-align: center;
-            padding: 28px;
-            font-size: 0.7rem;
-            color: var(--text-dim);
-            margin-top: 20px;
-            font-weight: 500;
         }
     </style>
 </head>
@@ -1771,67 +883,75 @@ PAGE_TEMPLATE = """
                 {% endif %}
             </div>
 
+            <!-- Mobile: horizontal category top bar -->
             {% if cat_label %}
             <div class="card-category-top" style="background: {{ cat_border }};">
                 {{ cat_label }}
             </div>
             {% endif %}
 
-            <!-- CARD HEADER: forest name + title left, taking comments badge right -->
-            <div class="card-header-row">
-                <div class="card-header-left">
-                    {% if p.get('accepting_comments') %}
-                    <div class="comment-open-badge mobile-only" style="margin-bottom:8px;">
-                        <span class="badge-title">💬 Taking Comments Now!</span>
-                        {% if p.get('comment_deadline') %}
-                        <span class="badge-deadline">Deadline: {{ p.comment_deadline }}</span>
-                        {% endif %}
-                    </div>
-                    {% endif %}
+            <!-- 3-COLUMN CARD BODY -->
+            <div class="card-body">
+
+                <!-- CENTER: main content -->
+                <div class="card-body-left">
                     {% set _fstate = forest_state_map.get(p.forest_code, '') %}
                     {% set _fcolor = state_colors.get(_fstate, {}).get('pill', '#2d7a1f') %}
-                    <div class="forest-tag" style="color: {{ _fcolor }}; margin-bottom: 10px;">{{ p.forest_name }}</div>
-                    <div class="btn-title-wrap" style="margin-bottom: 10px;">
-                        <span class="project-title-text">{{ p.project_name }}</span>
-                        {% if p.get('first_seen') and p['first_seen'][:10] >= recent_cutoff %}
-                        <span class="new-badge">NEW</span>
-                        {% endif %}
-                    </div>
-                    {% if p.status %}
-                    <span class="status-badge" style="background: {{ status_colors.get(p.status, '#b4b2a9') }}; display:inline-block; width:auto;">{{ p.status }}</span>
-                    {% endif %}
-                </div>
-                <div class="card-header-badge desktop-only">
-                {% if p.get('accepting_comments') %}
-                <div class="comment-open-badge">
-                    <span class="badge-title">💬 Taking Comments Now!</span>
-                    {% if p.get('comment_deadline') %}
-                    <span class="badge-deadline">Deadline: {{ p.comment_deadline }}</span>
-                    {% endif %}
-                </div>
-                {% endif %}
-                </div>
-            </div>
 
-            <!-- LEFT BOTTOM: description + buttons + meta (grid row 2) -->
-            <div class="card-body">
-                <div class="card-body-left">
+                    <!-- Forest name + NEW badge -->
+                    <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
+                        <div style="display:flex; align-items:center; gap:8px; padding-top:25px;">
+                            <div class="forest-tag" style="color: {{ _fcolor }}; margin:0;">{{ p.forest_name }}</div>
+                            {% if p.get('first_seen') and p['first_seen'][:10] >= recent_cutoff %}
+                            <span class="new-badge">NEW</span>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Project name -->
+                    <div class="btn-title-wrap" style="margin-bottom:0; padding-top:0;">
+                        <span class="project-title-text">{{ p.project_name }}</span>
+                    </div>
+
+                    <!-- Status badge -->
+
+                    <!-- Description -->
                     {% if p.description %}
                     <div class="description">{{ p.description }}</div>
                     {% endif %}
-                    <div class="left-bottom">
-                        <!-- Mobile: status + analysis above buttons -->
-                        <div class="mobile-only" style="display:none; justify-content:flex-end; gap:6px; flex-wrap:wrap;">
-                            {% if p.status %}
-                            <span class="status-badge" style="background: {{ status_colors.get(p.status, '#b4b2a9') }}; width:auto;">
-                                {{ p.status }}
-                            </span>
-                            {% endif %}
+
+
+                    <!-- Badges row: LFDC Commented · Learn About Wildfire · Learn About Thinning -->
+                    {% if p.project_url in commented_urls or p.project_url in wildfire_urls or p.project_url in thinning_urls %}
+                    <div style="display:flex; flex-direction:row; gap:12px; flex-wrap:wrap; padding-top:12px; padding-bottom:12px;">
+                        {% if p.project_url in commented_urls %}
+                        {% set comment_link = commented_urls_map.get(p.project_url, '') %}
+                        {% if comment_link %}
+                        <a href="{{ comment_link }}" target="_blank" rel="noopener" class="lfdc-commented-badge" style="text-decoration:none; width:auto;">
+                            <img src="/static/LFDC_Logo.png" style="height:24px; width:24px; object-fit:contain; vertical-align:middle;"> LFDC Commented <svg style="width:12px;height:12px;flex-shrink:0;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        </a>
+                        {% else %}
+                        <div class="lfdc-commented-badge" style="width:auto;">
+                            <img src="/static/LFDC_Logo.png" style="height:24px; width:24px; object-fit:contain; vertical-align:middle;"> LFDC Commented <svg style="width:12px;height:12px;flex-shrink:0;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                         </div>
+                        {% endif %}
+                        {% endif %}
+                        {% if p.project_url in wildfire_urls %}
+                        <a href="{{ wildfire_url }}" target="_blank" rel="noopener" class="wildfire-badge" style="text-decoration:none;">
+                            Learn About Wildfire <svg style="width:12px;height:12px;flex-shrink:0;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        </a>
+                        {% endif %}
+                        {% if p.project_url in thinning_urls %}
+                        <a href="{{ thinning_url }}" target="_blank" rel="noopener" class="wildfire-badge" style="text-decoration:none;">
+                            Learn About Thinning <svg style="width:12px;height:12px;flex-shrink:0;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        </a>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                    <div class="left-bottom">
                         <!-- Mobile milestone table -->
                         {% if has_milestones %}
                         <div class="milestone-section mobile-only" style="width:100%;">
-                            <div class="milestone-section-label">Project Milestones</div>
                             <table class="milestone-table">
                                 <thead><tr><th>Milestone</th><th>Date</th></tr></thead>
                                 <tbody>
@@ -1845,7 +965,8 @@ PAGE_TEMPLATE = """
                             </table>
                         </div>
                         {% endif %}
-                        <!-- Comment buttons (desktop: side by side; mobile: stacked) -->
+
+                        <!-- Comment buttons -->
                         {% set project_id = p.project_url.rstrip('/').split('/')[-1] %}
                         <div class="comment-buttons">
                             <a class="btn-comment project-link"
@@ -1860,7 +981,8 @@ PAGE_TEMPLATE = """
                                target="_blank" rel="noopener">📖 View Prior Comments</a>
                             {% endif %}
                         </div>
-        {% set ann = annotations.get(p.project_url, {}) %}
+
+                        {% set ann = annotations.get(p.project_url, {}) %}
                         {% if ann.get('annotation') %}
                         <div class="annotation-box">
                             <button class="annotation-toggle" onclick="
@@ -1881,7 +1003,8 @@ PAGE_TEMPLATE = """
                             </div>
                         </div>
                         {% endif %}
-                        <!-- Meta tags -->
+
+                        <!-- Meta -->
                         <div class="meta">
                             {% if p.unit %}<span>📍 {{ p.unit }}</span>{% endif %}
                             {% if p.purpose %}<span>🏷 {{ p.purpose.replace('|', ' · ') }}</span>{% endif %}
@@ -1890,30 +1013,19 @@ PAGE_TEMPLATE = """
                     </div>
                 </div><!-- card-body-left -->
 
-                <!-- RIGHT COLUMN (desktop only): status + analysis + milestone -->
+                <!-- RIGHT COLUMN (desktop only) -->
                 <div class="card-body-right desktop-only">
                     <div class="card-body-right-top">
-                    {% if p.project_url in thinning_urls %}
-                    <a href="{{ thinning_url }}" target="_blank" rel="noopener" class="wildfire-badge" style="text-decoration:none;">
-                        Learn About Thinning <svg style="width:14px;height:14px;flex-shrink:0;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    </a>
-                    {% endif %}
-                    {% if p.project_url in wildfire_urls %}
-                    <a href="{{ wildfire_url }}" target="_blank" rel="noopener" class="wildfire-badge" style="text-decoration:none;">
-                        Learn About Wildfire <svg style="width:14px;height:14px;flex-shrink:0;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    </a>
-                    {% endif %}
-                    {% if p.project_url in commented_urls %}
-                    {% set comment_link = commented_urls_map.get(p.project_url, '') %}
-                    {% if comment_link %}
-                    <a href="{{ comment_link }}" target="_blank" rel="noopener" class="lfdc-commented-badge" style="text-decoration:none;">
-                        <img src="/static/LFDC_Logo.png" style="height:30px; width:30px; object-fit:contain; vertical-align:middle;"> LFDC Commented <svg style="width:14px;height:14px;flex-shrink:0;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    </a>
-                    {% else %}
-                    <div class="lfdc-commented-badge">
-                        <img src="/static/LFDC_Logo.png" style="height:30px; width:30px; object-fit:contain; vertical-align:middle;"> LFDC Commented <svg style="width:12px;height:12px;flex-shrink:0;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    {% if p.get('accepting_comments') %}
+                    <div class="comment-open-badge">
+                        <span class="badge-title">Taking Comments Now!</span>
+                        {% if p.get('comment_deadline') %}
+                        <span class="badge-deadline">{{ format_deadline(p.comment_deadline) }}</span>
+                        {% endif %}
                     </div>
                     {% endif %}
+                    {% if p.status %}
+                    <span class="status-badge" style="background: {{ status_colors.get(p.status, '#b4b2a9') }};">{{ p.status }}</span>
                     {% endif %}
                     </div><!-- card-body-right-top -->
                     {% if has_milestones %}
@@ -2142,6 +1254,7 @@ def index():
         selected_sort=selected_sort,
         selected_sort2=selected_sort2,
         status_colors=STATUS_COLORS,
+        format_deadline=format_deadline,
         analysis_colors=ANALYSIS_COLORS,
         analysis_tooltips={
             "Categorical Exclusion": "Lowest rigor of analysis",
