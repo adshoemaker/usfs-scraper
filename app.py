@@ -86,7 +86,7 @@ ANALYSIS_COLORS = {
     "Categorical Exclusion":          "#a83030",
     "Environmental Assessment":       "#c46a30",
     "Environmental Impact Statement": "#2d7a1f",
-    "Unknown":                        "#999",
+    "Uncategorized":                        "#999",
 }
 
 FORESTS = [
@@ -830,7 +830,7 @@ PAGE_TEMPLATE = """
         <a href="{{ url_with_category('unclassified') }}"
            class="cat-btn unclassified {{ 'active' if 'unclassified' in selected_categories else '' }}">
             <span class="dot unclassified-dot"></span>
-            Unknown ({{ filtered_counts.unclassified }} of {{ counts.unclassified }})
+            Uncategorized ({{ filtered_counts.unclassified }} of {{ counts.unclassified }})
         </a>
         <a href="{{ url_with_category('newly_added') }}"
            class="cat-btn newly-added {{ 'active' if 'newly_added' in selected_categories else '' }}">
@@ -853,7 +853,7 @@ PAGE_TEMPLATE = """
     </div>
 
     <div class="results-header">
-        {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Unknown', 'taking_comments': 'Taking Comments Now', 'active': 'Active / In Development', 'newly_added': 'Newly Added'} %}
+        {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Uncategorized', 'taking_comments': 'Taking Comments Now', 'active': 'Active / In Development', 'newly_added': 'Newly Added'} %}
         {% if search or selected_forest or selected_status or selected_days or selected_category_str %}
             Showing <strong>{{ projects|length }}</strong> result{% if projects|length != 1 %}s{% endif %}
             {% if selected_categories %} — <strong>{% for cat in selected_categories %}{{ cat_labels.get(cat, cat) }}{% if not loop.last %} · {% endif %}{% endfor %}</strong>{% endif %}
@@ -872,7 +872,7 @@ PAGE_TEMPLATE = """
         {% set status_color = status_colors.get(p.status, '#d0d0c8') %}
         {% set cat_bg = {'extractive': 'rgba(168,48,48,0.18)', 'restorative': 'rgba(45,122,31,0.15)', 'mixed': 'rgba(196,106,48,0.16)'}.get(p.category or '', 'white') %}
         {% set cat_border = {'extractive': '#a83030', 'restorative': '#2d7a1f', 'mixed': '#c46a30'}.get(p.category or '', '#d0d0c8') %}
-        {% set cat_label = {'extractive': 'Significant Effect', 'restorative': 'Restorative Impact', 'mixed': 'Mixed Impact'}.get(p.category or '', '') %}
+        {% set cat_label = {'extractive': 'Significant Effect', 'restorative': 'Restorative Impact', 'mixed': 'Mixed Impact', '': 'Uncategorized', None: 'Uncategorized'}.get(p.category or '', 'Uncategorized') %}
         {% set is_tcn = p.get('accepting_comments') %}
         <div class="project-card {{ p.category or '' }}"
              style="background: {{ 'white' if is_tcn else cat_bg }};
