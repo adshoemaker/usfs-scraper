@@ -979,7 +979,7 @@ PAGE_TEMPLATE = """
                                target="_blank" rel="noopener">{{ '✍️ ' if p.get('accepting_comments') else '' }}Submit New Comments</a>
                             <a class="btn-comment secondary"
                                href="https://cara.fs2c.usda.gov/Public/ReadingRoom?Project={{ project_id }}"
-                               target="_blank" rel="noopener">📖 View Prior Comments</a>
+                               target="_blank" rel="noopener">📖 Read Prior Comments</a>
                             {% endif %}
                         </div>
 
@@ -997,7 +997,7 @@ PAGE_TEMPLATE = """
                                 var card = this.closest('.project-card');
                                 var submitBtn = card ? card.querySelector('.btn-comment.primary') : null;
                                 if (submitBtn) submitBtn.classList.toggle('pulsing', isHidden);
-                            "><i class="ann-arrow">▶</i> View and Copy Suggested Comment</button>
+                            "><i class="ann-arrow">▶</i> Read and Copy Suggested Comment</button>
                             <div class="annotation-content" style="display:none;">
                                         {% if ann.get('intro') %}
                                 <div class="annotation-intro">{{ ann.intro }}</div>
