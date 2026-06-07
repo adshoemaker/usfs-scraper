@@ -519,7 +519,7 @@ PAGE_TEMPLATE = """
         /* ── Annotation (Suggested Comment) ── */
         .annotation-box { margin: 0; display: inline-block; width: auto; padding-bottom: 25px; }
         .annotation-box.expanded { width: 100%; }
-        .annotation-toggle { background: #6aabdf; color: white; border: none; padding: 5px 14px; font-size: 0.78rem; font-family: 'Poppins', sans-serif; cursor: pointer; font-weight: 600; width: auto; text-align: left; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+        .annotation-toggle { background: #6aabdf; color: white; border: none; padding: 5px 14px; font-size: 0.918rem; font-family: 'Poppins', sans-serif; cursor: pointer; font-weight: 200; width: auto; text-align: left; display: flex; align-items: center; gap: 8px; white-space: nowrap; letter-spacing: 0.8px; }
         .annotation-toggle:hover { background: #5599cc; }
         .ann-arrow { display: inline-block; transition: transform 0.2s; font-style: normal; }
         .annotation-content { border: 2px solid #6aabdf; border-top: none; background: #f0f4ff; padding: 10px 14px; width: 100%; box-sizing: border-box; }
