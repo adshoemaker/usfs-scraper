@@ -1147,9 +1147,10 @@ def index():
     commented_urls = set(annotations.get("_commented", []))
     wildfire_urls_manual = set(annotations.get("_wildfire", []))
     thinning_urls_manual = set(annotations.get("_thinning", []))
-    # Combine auto + manual
-    wildfire_urls = wildfire_urls_manual | {p["project_url"] for p in all_projects if has_wildfire_badge(p)}
-    thinning_urls = thinning_urls_manual | {p["project_url"] for p in all_projects if has_thinning_badge(p)}
+    wildfire_suppress = set(annotations.get("_wildfire_suppress", []))
+    thinning_suppress = set(annotations.get("_thinning_suppress", []))
+    wildfire_urls = (wildfire_urls_manual | {p["project_url"] for p in all_projects if has_wildfire_badge(p)}) - wildfire_suppress
+    thinning_urls = (thinning_urls_manual | {p["project_url"] for p in all_projects if has_thinning_badge(p)}) - thinning_suppress
 
     recent_cutoff = (
         datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=72)
@@ -1464,11 +1465,11 @@ ADMIN_TEMPLATE = """
     body.style.display = isOpen ? 'none' : 'block';
     this.querySelector('.acc-arrow').innerText = isOpen ? '▶' : '▼';
   ">
-    <span class="acc-arrow">▶</span>
+    <span class="acc-arrow">▼</span>
     {{ forest_name }}
     <span class="acc-count">{{ forest_projects|length }} projects</span>
   </button>
-  <div class="forest-accordion-body" style="display:none;">
+  <div class="forest-accordion-body" style="display:block;">
     <table class="project-table" data-sort-col="1" data-sort-dir="desc">
       <thead>
         <tr>
@@ -1486,19 +1487,25 @@ ADMIN_TEMPLATE = """
           <td class="proj-name-cell">{{ p.project_name }}</td>
           <td class="proj-date-cell" data-date="{{ p.get('first_seen','')[:10] }}">{{ p.get('first_seen','')[:10] }}</td>
           <td class="proj-check-cell">
-            {% if p.project_url in thinning_urls and p.project_url not in thinning_urls_manual %}
-              <span class="auto-check" title="Auto: fuels management or forest products">✓</span>
-            {% else %}
-              <input type="checkbox" name="thinning" value="{{ p.project_url }}"
-                     {{ 'checked' if p.project_url in thinning_urls_manual else '' }}>
+            {% set thinning_auto = has_thinning_badge(p) %}
+            {% set thinning_checked = p.project_url in thinning_urls %}
+            <input type="checkbox" name="thinning" value="{{ p.project_url }}"
+                   {{ 'checked' if thinning_checked else '' }}
+                   title="{{ 'Auto-assigned (uncheck to suppress)' if thinning_auto else 'Manual override' }}"
+                   style="{{ 'accent-color: #2d7a1f;' if thinning_auto else 'accent-color: #c94f1a;' }}">
+            {% if thinning_auto and not thinning_checked %}
+              <input type="hidden" name="thinning_suppress" value="{{ p.project_url }}">
             {% endif %}
           </td>
           <td class="proj-check-cell">
-            {% if p.project_url in wildfire_urls and p.project_url not in wildfire_urls_manual %}
-              <span class="auto-check" title="Auto: fuels management or vegetation management">✓</span>
-            {% else %}
-              <input type="checkbox" name="wildfire" value="{{ p.project_url }}"
-                     {{ 'checked' if p.project_url in wildfire_urls_manual else '' }}>
+            {% set wildfire_auto = has_wildfire_badge(p) %}
+            {% set wildfire_checked = p.project_url in wildfire_urls %}
+            <input type="checkbox" name="wildfire" value="{{ p.project_url }}"
+                   {{ 'checked' if wildfire_checked else '' }}
+                   title="{{ 'Auto-assigned (uncheck to suppress)' if wildfire_auto else 'Manual override' }}"
+                   style="{{ 'accent-color: #2d7a1f;' if wildfire_auto else 'accent-color: #c94f1a;' }}">
+            {% if wildfire_auto and not wildfire_checked %}
+              <input type="hidden" name="wildfire_suppress" value="{{ p.project_url }}">
             {% endif %}
           </td>
           <td class="proj-check-cell">
@@ -1630,11 +1637,12 @@ def admin():
     flash_type = request.args.get("flash_type", "")
     commented_urls_map = annotations.get("_commented_urls", {})
     wildfire_urls_manual = set(annotations.get("_wildfire", []))
+    wildfire_urls_manual = set(annotations.get("_wildfire", []))
     thinning_urls_manual = set(annotations.get("_thinning", []))
-    # Combine auto + manual
-    wildfire_urls = wildfire_urls_manual | {p["project_url"] for p in projects if has_wildfire_badge(p)}
-    thinning_urls = thinning_urls_manual | {p["project_url"] for p in projects if has_thinning_badge(p)}
-    thinning_urls = set(annotations.get("_thinning", []))
+    wildfire_suppress = set(annotations.get("_wildfire_suppress", []))
+    thinning_suppress = set(annotations.get("_thinning_suppress", []))
+    wildfire_urls = (wildfire_urls_manual | {p["project_url"] for p in projects if has_wildfire_badge(p)}) - wildfire_suppress
+    thinning_urls = (thinning_urls_manual | {p["project_url"] for p in projects if has_thinning_badge(p)}) - thinning_suppress
     return render_template_string(ADMIN_TEMPLATE,
         tcn_projects=tcn_projects,
         annotations=annotations,
@@ -1646,6 +1654,12 @@ def admin():
         commented_urls_map=commented_urls_map,
         wildfire_urls=wildfire_urls,
         thinning_urls=thinning_urls,
+        wildfire_urls_manual=wildfire_urls_manual,
+        thinning_urls_manual=thinning_urls_manual,
+        wildfire_suppress=wildfire_suppress,
+        thinning_suppress=thinning_suppress,
+        has_thinning_badge=has_thinning_badge,
+        has_wildfire_badge=has_wildfire_badge,
         thinning_url="https://johnmuirproject.org/wp-content/uploads/2024/12/JMP-fact-sheet-thinning-and-fire-29Nov24.pdf",
         wildfire_url="https://www.forestclimatealliance.org/s/Final-Wildfire-in-the-Age-of-Climate-Change-compressed.pdf",
         recent_cutoff=admin_cutoff,
@@ -1659,10 +1673,15 @@ def admin_save_commented():
     commented = request.form.getlist("commented")
     wildfire = request.form.getlist("wildfire")
     thinning = request.form.getlist("thinning")
+    # Projects that were auto-qualified but explicitly unchecked = suppressed
+    wildfire_suppress = request.form.getlist("wildfire_suppress")
+    thinning_suppress = request.form.getlist("thinning_suppress")
     annotations = load_annotations()
     annotations["_commented"] = commented
     annotations["_wildfire"] = wildfire
     annotations["_thinning"] = thinning
+    annotations["_wildfire_suppress"] = wildfire_suppress
+    annotations["_thinning_suppress"] = thinning_suppress
 
     # Build URL map: purl_N -> project URL, commented_url_N -> the URL to link to
     commented_urls_map = {}
