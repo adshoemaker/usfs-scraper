@@ -211,7 +211,10 @@ def classify_project(project):
         for t in (project.get("purpose") or "").split("|")
         if t.strip()
     ]
-    # Road management always forces mixed regardless of other tags
+    # Forest products always wins as extractive
+    if "forest products" in purpose_tags:
+        return "extractive"
+    # Road management forces mixed unless already extractive
     if any(kw in purpose_tags for kw in MIXED_KEYWORDS):
         return "mixed"
     has_extractive  = any(kw in purpose_tags for kw in EXTRACTIVE_KEYWORDS)
