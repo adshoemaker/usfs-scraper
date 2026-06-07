@@ -591,7 +591,7 @@ PAGE_TEMPLATE = """
         .btn-comment.project-link { background: white; color: #c94f1a; border: 1px solid #c94f1a; }
         .btn-comment.project-link:hover { background: #fff4ef; color: #a33d12; }
         .btn-comment.primary { background: transparent; color: #6aabdf; border: 1px solid #6aabdf; }
-        .btn-comment.secondary { background: white; color: #555; border: 1px solid #d4b800; }
+        .btn-comment.secondary { background: white; color: #d4b800; border: 1px solid #d4b800; }
         .btn-comment.secondary:hover { background: #fffde6; color: #333; }
         .btn-comment.primary-inactive { background: white; color: #999; border: 1px solid #b8b8b4; cursor: pointer; }
         .btn-comment.primary-inactive:hover { background: #f8f8f8; color: #777; }
@@ -633,7 +633,8 @@ PAGE_TEMPLATE = """
             .comment-open-badge { width: 100% !important; box-sizing: border-box; font-size: 0.72rem !important; padding: 5px 10px !important; margin-bottom: 6px; }
             .comment-open-badge .badge-title { font-size: 0.76rem !important; }
             .comment-open-badge .badge-deadline { font-size: 0.65rem !important; }
-            .meta { margin-top: 10px; }
+            .meta { margin-top: 10px; padding-bottom: 8px; }
+            .milestone-table tr:last-child td { padding-bottom: 2px; }
         }
     </style>
 </head>
