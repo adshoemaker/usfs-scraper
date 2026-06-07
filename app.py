@@ -988,7 +988,7 @@ PAGE_TEMPLATE = """
                         </div>
 
                         {% set ann = annotations.get(p.project_url, {}) %}
-                        {% if ann.get('annotation') %}
+                        {% if ann.get('annotation') or ann.get('intro') %}
                         <div class="annotation-box">
                             <button class="annotation-toggle" onclick="
                                 var box = this.nextElementSibling;
