@@ -555,7 +555,7 @@ PAGE_TEMPLATE = """
         .project-title-text { font-family: 'Poppins', sans-serif; font-size: 1.3rem; font-weight: 400; color: #1a1a1a; letter-spacing: 0.8px; line-height: 1.3; display: block; }
 
         /* Status badge */
-        .status-badge { display: block; padding: 3px 10px; border-radius: 0; font-size: 0.65rem; font-weight: 700; color: white; white-space: nowrap; letter-spacing: 0.3px; text-align: center; width: 255px; box-sizing: border-box; }
+        .status-badge { display: block; padding: 3px 10px; border-radius: 0; font-size: 0.918rem; font-weight: 200; font-family: 'Poppins', sans-serif; color: white; white-space: nowrap; letter-spacing: 0.8px; text-align: center; width: 255px; box-sizing: border-box; }
 
         /* NEW badge */
         .new-badge { display: inline-block; background: rgba(106,171,223,0.1); color: #6aabdf; border: 2px solid #6aabdf; border-radius: 0; font-size: 0.78rem; font-weight: 700; padding: 3px 8px; vertical-align: middle; margin-left: 6px; letter-spacing: 0.3px; }
@@ -577,9 +577,9 @@ PAGE_TEMPLATE = """
         /* Milestone table */
         .milestone-section { width: 255px; border: 1px solid var(--border2); border-radius: 0; overflow: hidden; background: #e8e8e4; flex-shrink: 0; }
         .card-body-right .milestone-section { width: 255px; box-sizing: border-box; margin: 0; }
-        .milestone-table { width: 100%; border-collapse: collapse; font-size: 0.72rem; }
-        .milestone-table th { text-align: left; padding: 4px 10px; background: #d8d8d4; color: #555; font-weight: 700; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #c0c0bc; }
-        .milestone-table td { padding: 4px 10px; border-bottom: 1px solid var(--border); color: var(--text); font-weight: 500; }
+        .milestone-table { width: 100%; border-collapse: collapse; font-size: 0.918rem; font-family: 'Poppins', sans-serif; font-weight: 200; letter-spacing: 0.8px; }
+        .milestone-table th { text-align: left; padding: 4px 10px; background: #d8d8d4; color: #555; font-weight: 400; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.8px; border-bottom: 1px solid #c0c0bc; }
+        .milestone-table td { padding: 4px 10px; border-bottom: 1px solid var(--border); color: var(--text); font-weight: 200; }
         .milestone-table tr:last-child td { border-bottom: none; }
         .milestone-table td.date-cell { white-space: nowrap; color: var(--text-muted); text-align: right; }
         .milestone-table td.date-cell.estimated { color: var(--text-dim); font-style: italic; }
