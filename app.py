@@ -582,7 +582,7 @@ PAGE_TEMPLATE = """
         .card-body-right .milestone-section { width: 255px; box-sizing: border-box; margin: 0; }
         .milestone-table { width: 100%; border-collapse: collapse; font-size: 0.918rem; font-family: 'Poppins', sans-serif; font-weight: 200; letter-spacing: 0.8px; }
         .milestone-table th { text-align: left; padding: 4px 10px; background: #d8d8d4; color: #555; font-weight: 400; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.8px; border-bottom: 1px solid #c0c0bc; }
-        .milestone-table td { padding: 4px 10px; border-bottom: 1px solid var(--border); color: var(--text); font-weight: 200; }
+        .milestone-table td { padding: 4px 10px; border-bottom: 1px solid var(--border); color: var(--text); font-weight: 200; font-size: 0.6rem; }
         .milestone-table tr:last-child td { border-bottom: none; }
         .milestone-table td.date-cell { white-space: nowrap; color: var(--text-muted); text-align: right; }
         .milestone-table td.date-cell.estimated { color: var(--text-dim); font-style: italic; }
