@@ -586,7 +586,7 @@ PAGE_TEMPLATE = """
 
         /* Comment buttons */
         .comment-buttons { display: flex; gap: 12px; margin: 0; flex-wrap: wrap; padding-bottom: 12px; }
-        .btn-comment { display: inline-block; padding: 5px 12px; border-radius: 0; font-family: 'Poppins', sans-serif; font-size: 0.72rem; font-weight: 600; text-decoration: none; transition: opacity 0.15s; white-space: nowrap; }
+        .btn-comment { display: inline-block; padding: 5px 12px; border-radius: 0; font-family: 'Poppins', sans-serif; font-size: 0.918rem; font-weight: 200; text-decoration: none; transition: opacity 0.15s; white-space: nowrap; letter-spacing: 0.8px; }
         .btn-comment:hover { opacity: 0.82; }
         .btn-comment.project-link { background: white; color: #c94f1a; border: 1px solid #c94f1a; }
         .btn-comment.project-link:hover { background: #fff4ef; color: #a33d12; }
@@ -841,7 +841,7 @@ PAGE_TEMPLATE = """
         <a href="{{ url_with_category('taking_comments') }}"
            class="cat-btn taking-comments {{ 'active' if 'taking_comments' in selected_categories else '' }}">
             <span class="dot taking-comments-dot"></span>
-            💬 Taking Comments Now ({{ filtered_counts.taking_comments }} of {{ counts.taking_comments }})
+            Taking Comments Now ({{ filtered_counts.taking_comments }} of {{ counts.taking_comments }})
         </a>
         <a href="{{ url_with_category('active') }}"
            class="cat-btn active-filter {{ 'active' if 'active' in selected_categories else '' }}">
@@ -972,14 +972,14 @@ PAGE_TEMPLATE = """
                         <div class="comment-buttons">
                             <a class="btn-comment project-link"
                                href="{{ p.project_url }}"
-                               target="_blank" rel="noopener">🔗 View Project Page</a>
+                               target="_blank" rel="noopener">View Project Page</a>
                             {% if has_milestones %}
                             <a class="btn-comment {{ 'primary' if p.get('accepting_comments') else 'primary-inactive' }}"
                                href="https://cara.fs2c.usda.gov/Public/CommentInput?Project={{ project_id }}"
-                               target="_blank" rel="noopener">{{ '✍️ ' if p.get('accepting_comments') else '' }}Submit New Comments</a>
+                               target="_blank" rel="noopener">Submit New Comments</a>
                             <a class="btn-comment secondary"
                                href="https://cara.fs2c.usda.gov/Public/ReadingRoom?Project={{ project_id }}"
-                               target="_blank" rel="noopener">📖 Read Prior Comments</a>
+                               target="_blank" rel="noopener">Read Prior Comments</a>
                             {% endif %}
                         </div>
 
