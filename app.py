@@ -570,7 +570,7 @@ PAGE_TEMPLATE = """
         .wildfire-badge:hover { background: #7a9079; }
 
         /* LFDC Commented badge */
-        .lfdc-commented-badge { display: flex; align-items: center; justify-content: center; gap: 6px; background: #8fa68e; color: white; border: none; border-radius: 0; font-family: 'Poppins', sans-serif; font-size: 0.82rem; font-weight: 200; text-transform: uppercase; letter-spacing: 0.8px; padding: 4px 6px; width: 255px; box-sizing: border-box; cursor: pointer; text-decoration: none; }
+        .lfdc-commented-badge { display: flex; align-items: center; justify-content: center; gap: 6px; background: #8fa68e; color: white; border: none; border-radius: 0; font-family: 'Poppins', sans-serif; font-size: 0.918rem; font-weight: 200; text-transform: uppercase; letter-spacing: 0.8px; padding: 4px 6px; width: 255px; box-sizing: border-box; cursor: pointer; text-decoration: none; }
         .lfdc-commented-badge:hover { background: #7a9079; }
 
         /* Milestone table */
@@ -626,7 +626,7 @@ PAGE_TEMPLATE = """
             .card-body { flex-direction: column; width: 100%; }
             .card-body-left { width: 100%; padding: 12px; }
             .card-body-right { display: none !important; }
-            .milestone-section { width: 100% !important; }
+            .milestone-section { width: 100% !important; padding-bottom: 12px; }
             .comment-buttons { flex-direction: column; gap: 6px; }
             .btn-comment { width: 100%; text-align: center; justify-content: center; }
             .comment-open-badge { width: 100% !important; box-sizing: border-box; font-size: 0.72rem !important; padding: 5px 10px !important; margin-bottom: 6px; }
