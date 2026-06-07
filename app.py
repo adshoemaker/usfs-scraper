@@ -523,6 +523,7 @@ PAGE_TEMPLATE = """
         .annotation-toggle:hover { background: #5599cc; }
         .ann-arrow { display: inline-block; transition: transform 0.2s; font-style: normal; }
         .annotation-content { border: 2px solid #6aabdf; border-top: none; background: #f0f4ff; padding: 10px 14px; width: 100%; box-sizing: border-box; }
+        .annotation-intro { font-size: 0.82rem; color: #1a1a1a; line-height: 1.5; font-weight: 700; margin-bottom: 8px; }
         .annotation-text { font-size: 0.82rem; color: #1a1a1a; line-height: 1.5; white-space: pre-wrap; margin-bottom: 8px; }
         .annotation-copy { background: #6aabdf; color: white; border: none; padding: 4px 12px; font-size: 0.75rem; cursor: pointer; font-family: 'Poppins', sans-serif; }
         .annotation-copy:hover { background: #5599cc; }
@@ -998,8 +999,11 @@ PAGE_TEMPLATE = """
                                 if (submitBtn) submitBtn.classList.toggle('pulsing', isHidden);
                             "><i class="ann-arrow">▶</i> View and Copy Suggested Comment</button>
                             <div class="annotation-content" style="display:none;">
-                                <div class="annotation-text">{{ ann.annotation }}</div>
-                                <button class="annotation-copy" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy to clipboard',2000)">Copy to clipboard</button>
+                                        {% if ann.get('intro') %}
+                                <div class="annotation-intro">{{ ann.intro }}</div>
+                                {% endif %}
+                                <div class="annotation-text" id="ann-text-{{ loop.index }}">{{ ann.annotation }}</div>
+                                <button class="annotation-copy" onclick="navigator.clipboard.writeText(document.getElementById('ann-text-{{ loop.index }}').innerText); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy to clipboard',2000)">Copy to clipboard</button>
                             </div>
                         </div>
                         {% endif %}
@@ -1424,7 +1428,10 @@ ADMIN_TEMPLATE = """
   {% if p.comment_deadline %}<div class="deadline">Comments due: {{ p.comment_deadline }}</div>{% endif %}
   <form method="POST" action="/admin/save">
     <input type="hidden" name="project_url" value="{{ p.project_url }}">
-    <label>Suggested Comment Text</label>
+    <label>Intro Paragraph (bold, shown above comment, not copyable)</label>
+    <textarea name="intro" placeholder="Enter bold intro text shown above the suggested comment...">{{ annotations.get(p.project_url, {}).get('intro', '') }}</textarea>
+    <br>
+    <label style="margin-top:10px;">Suggested Comment Text (copyable)</label>
     <textarea name="annotation" placeholder="Enter suggested comment text for users to copy...">{{ annotations.get(p.project_url, {}).get('annotation', '') }}</textarea>
     <br>
     <label style="margin-top:10px;">Internal Notes (not shown to public)</label>
@@ -1703,14 +1710,16 @@ def admin_save():
 
     project_url = request.form.get("project_url", "").strip()
     annotation  = request.form.get("annotation", "").strip()
+    intro       = request.form.get("intro", "").strip()
     notes       = request.form.get("notes", "").strip()
 
     if not project_url:
         return redirect(url_for("admin"))
 
     annotations = load_annotations()
-    if annotation or notes:
+    if annotation or intro or notes:
         annotations[project_url] = {
+            "intro":      intro,
             "annotation": annotation,
             "notes":      notes,
             "updated":    datetime.datetime.utcnow().isoformat(),
