@@ -599,13 +599,14 @@ PAGE_TEMPLATE = """
         .btn-comment.project-link { background: white; color: #c94f1a; border: 1px solid #c94f1a; }
         .btn-comment.project-link:hover { background: #fff4ef; color: #a33d12; }
         .btn-comment.primary { background: transparent; color: #6aabdf; border: 1px solid #6aabdf; }
-        .btn-comment.primary:hover { background: #6aabdf; color: white; }
+        .btn-comment.primary:hover { background: #6aabdf !important; color: white !important; opacity: 1; }
         .btn-comment.secondary { background: white; color: #d4b800; border: 1px solid #d4b800; }
         .btn-comment.secondary:hover { background: #fffde6; color: #333; }
         .btn-comment.primary-inactive { background: white; color: #999; border: 1px solid #b8b8b4; cursor: pointer; }
         .btn-comment.primary-inactive:hover { background: #f8f8f8; color: #777; }
         @keyframes pulse-blue { 0%, 100% { box-shadow: 0 0 0 0 rgba(106,171,223,0.7); } 50% { box-shadow: 0 0 0 10px rgba(106,171,223,0); } }
         .btn-comment.primary.pulsing { animation: pulse-blue 2s ease-in-out infinite; background: transparent !important; color: #6aabdf !important; border: 1px solid #6aabdf !important; }
+        .btn-comment.primary.pulsing:hover { background: #6aabdf !important; color: white !important; }
 
         /* Meta */
         .meta { font-size: 0.68rem; color: var(--text-dim); display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding-bottom: 25px; }
