@@ -747,7 +747,7 @@ PAGE_TEMPLATE = """
         </div>
         <div class="forest-totals-row">
             <span class="summary-totals">
-                <strong>{{ total }}</strong> total
+                <strong>{{ forest_counts.values()|sum(attribute='total') }}</strong> total
             </span>
             <a href="/" class="forest-reset-btn">Reset</a>
         </div>
@@ -864,7 +864,9 @@ PAGE_TEMPLATE = """
 
     <div class="results-header">
         {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Uncategorized', 'taking_comments': 'Taking Comments Now', 'active': 'Show Inactive Projects', 'newly_added': 'Newly Added'} %}
-        {% if search or selected_forest or selected_status or selected_days or selected_category_str %}
+        {% if show_inactive and not (search or selected_forest or selected_status or selected_days or selected_category_str) %}
+            <strong>{{ projects|length }}</strong> of <strong>{{ total }}</strong>
+        {% elif search or selected_forest or selected_status or selected_days or selected_category_str %}
             <strong>{{ projects|length }}</strong> of <strong>{{ active_total }}</strong>
             {% if selected_categories %} — <strong>{% for cat in selected_categories %}{{ cat_labels.get(cat, cat) }}{% if not loop.last %} · {% endif %}{% endfor %}</strong>{% endif %}
             {% if selected_days %} added in the last <strong>{{ selected_days }} days</strong>{% endif %}
