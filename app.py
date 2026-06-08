@@ -598,7 +598,7 @@ PAGE_TEMPLATE = """
         .btn-comment:hover { opacity: 0.82; }
         .btn-comment.project-link { background: white; color: #c94f1a; border: 1px solid #c94f1a; }
         .btn-comment.project-link:hover { background: #fff4ef; color: #a33d12; }
-        .btn-comment.primary { background: transparent; color: #6aabdf; border: 1px solid #6aabdf; }
+        .btn-comment.primary { background: white; color: #6aabdf; border: 1px solid #6aabdf; }
         .btn-comment.primary:hover { background: #6aabdf !important; color: white !important; opacity: 1; }
         .btn-comment.secondary { background: white; color: #d4b800; border: 1px solid #d4b800; }
         .btn-comment.secondary:hover { background: #fffde6; color: #333; }
