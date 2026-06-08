@@ -1422,6 +1422,19 @@ ADMIN_TEMPLATE = """
 <a href="/admin/logout" class="logout">Log out</a>
 <h1>LFDC Tracker — Admin</h1>
 
+<div style="background:#f7f7f0; border:1px solid #ddd; padding:12px 18px; margin-bottom:24px; display:flex; align-items:center; gap:16px;">
+  <strong style="font-size:0.88rem;">NEW Badge</strong>
+  <span style="font-size:0.78rem; color:#666;">Show "NEW" badge on projects added in the last 72 hours</span>
+  <form method="POST" action="/admin/save-commented" style="margin:0; margin-left:auto;">
+    <input type="hidden" name="new_badge_enabled" value="off">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.82rem; font-weight:600;">
+      <input type="checkbox" name="new_badge_enabled" value="on" {{ 'checked' if new_badge_enabled else '' }}
+             onchange="this.form.submit()">
+      {{ 'Enabled' if new_badge_enabled else 'Disabled' }}
+    </label>
+  </form>
+</div>
+
 {% if flash %}
 <div class="flash {{ 'error' if flash_type == 'error' else '' }}">{{ flash }}</div>
 {% endif %}
@@ -1433,23 +1446,35 @@ ADMIN_TEMPLATE = """
 {% if tcn_projects %}
 <div class="project-list">
 {% for p in tcn_projects %}
-<div class="project-card">
-  <div class="project-name">{{ p.project_name }}</div>
-  <div class="forest-name">{{ p.forest_name }}</div>
-  {% if p.comment_deadline %}<div class="deadline">Comments due: {{ p.comment_deadline }}</div>{% endif %}
-  <form method="POST" action="/admin/save">
-    <input type="hidden" name="project_url" value="{{ p.project_url }}">
-    <label>Intro Paragraph (bold, shown above comment, not copyable)</label>
-    <textarea name="intro" placeholder="Enter bold intro text shown above the suggested comment...">{{ annotations.get(p.project_url, {}).get('intro', '') }}</textarea>
-    <br>
-    <label style="margin-top:10px;">Suggested Comment Text (copyable)</label>
-    <textarea name="annotation" placeholder="Enter suggested comment text for users to copy...">{{ annotations.get(p.project_url, {}).get('annotation', '') }}</textarea>
-    <br>
-    <label style="margin-top:10px;">Internal Notes (not shown to public)</label>
-    <textarea name="notes" placeholder="Internal notes for LFDC staff only...">{{ annotations.get(p.project_url, {}).get('notes', '') }}</textarea>
-    <br>
-    <button type="submit" class="save-btn">Save</button>
-  </form>
+{% set has_annotation = annotations.get(p.project_url, {}).get('annotation', '') %}
+<div class="project-card" style="border: 2px solid {{ '#2d7a1f' if has_annotation else '#a83030' }}; margin-bottom:6px;">
+  <button type="button" class="project-card-header" onclick="
+    var body = this.nextElementSibling;
+    var isOpen = body.style.display !== 'none';
+    body.style.display = isOpen ? 'none' : 'block';
+    this.querySelector('.acc-arrow').innerText = isOpen ? '▶' : '▼';
+  " style="width:100%; text-align:left; background:none; border:none; padding:10px 14px; cursor:pointer; display:flex; align-items:center; gap:10px; font-family:inherit;">
+    <span class="acc-arrow">▶</span>
+    <span style="font-weight:600; font-size:0.88rem;">{{ p.project_name }}</span>
+    <span style="font-size:0.75rem; color:#888; margin-left:6px;">{{ p.forest_name }}</span>
+    <span style="margin-left:auto; font-size:0.7rem; color:{{ '#2d7a1f' if has_annotation else '#a83030' }}; font-weight:600;">{{ '✓ Has comment' if has_annotation else '✗ No comment' }}</span>
+  </button>
+  <div class="project-card-body" style="display:none; padding:0 14px 14px 14px;">
+    {% if p.comment_deadline %}<div class="deadline" style="margin-bottom:8px;">Comments due: {{ p.comment_deadline }}</div>{% endif %}
+    <form method="POST" action="/admin/save">
+      <input type="hidden" name="project_url" value="{{ p.project_url }}">
+      <label>Intro Paragraph (bold, shown above comment, not copyable)</label>
+      <textarea name="intro" placeholder="Enter bold intro text shown above the suggested comment...">{{ annotations.get(p.project_url, {}).get('intro', '') }}</textarea>
+      <br>
+      <label style="margin-top:10px;">Suggested Comment Text (copyable)</label>
+      <textarea name="annotation" placeholder="Enter suggested comment text for users to copy...">{{ annotations.get(p.project_url, {}).get('annotation', '') }}</textarea>
+      <br>
+      <label style="margin-top:10px;">Internal Notes (not shown to public)</label>
+      <textarea name="notes" placeholder="Internal notes for LFDC staff only...">{{ annotations.get(p.project_url, {}).get('notes', '') }}</textarea>
+      <br>
+      <button type="submit" class="save-btn">Save</button>
+    </form>
+  </div>
 </div>
 {% endfor %}
 </div>
