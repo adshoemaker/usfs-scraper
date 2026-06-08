@@ -98,10 +98,13 @@ FORESTS = [
     {"name": "Rogue River-Siskiyou National Forest", "code": "rogue-siskiyou",   "state": "CA+OR"},
     {"name": "Wallowa-Whitman National Forest",      "code": "wallowa-whitman",  "state": "OR"},
     {"name": "Fremont-Winema National Forest",       "code": "fremont-winema",   "state": "OR"},
+    {"name": "Deschutes National Forest",             "code": "deschutes",        "state": "OR"},
+    {"name": "Mt. Hood National Forest",              "code": "mthood",           "state": "OR"},
     {"name": "Shasta-Trinity National Forest",       "code": "shasta-trinity",   "state": "CA"},
     {"name": "Inyo National Forest",                 "code": "inyo",              "state": "CA"},
     {"name": "Los Padres National Forest",           "code": "lospadres",         "state": "CA"},
     {"name": "Klamath National Forest",              "code": "klamath",           "state": "CA+OR"},
+    {"name": "Chugach National Forest",              "code": "chugach",           "state": "AK"},
     {"name": "Tongass National Forest",              "code": "tongass",           "state": "AK"},
 ]
 
@@ -121,6 +124,8 @@ FOREST_CODE_TO_ABBREV = {
     "rogue-siskiyou":     "RRS",
     "wallowa-whitman":    "Wallowa-Whitman",
     "fremont-winema":     "Fremont-Winema",
+    "deschutes":          "Deschutes",
+    "mthood":             "Mt. Hood",
     "shasta-trinity":     "Shasta-Trinity",
     "inyo":               "Inyo",
     "lospadres":          "Los Padres",

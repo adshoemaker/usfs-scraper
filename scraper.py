@@ -376,13 +376,33 @@ def scrape_forest(session: requests.Session, forest: dict,
     except Exception:
         pass
 
-    to_fetch = []
+    # Load project-level hash cache
+    project_hash_cache = {}
+    try:
+        with open("project_hashes.json", encoding="utf-8") as _hf:
+            project_hash_cache = json.load(_hf)
+    except Exception:
+        pass
+
+    CARA_STATUSES = {"In Progress", "Developing Proposal"}
+    to_fetch = []      # needs full detail page fetch
+    to_cara  = []      # only needs CARA re-check, detail cached
+    dead_urls = set()
+
     for p in milestone_projects:
-        is_new = p["project_url"] not in existing_milestones
-        if do_full or is_new:
+        url = p["project_url"]
+        # Hash the project's listing entry to detect changes
+        entry_str = f"{p['project_name']}|{p['status']}|{p['description'][:100]}"
+        entry_hash = hashlib.md5(entry_str.encode()).hexdigest()
+        is_new      = url not in existing_milestones
+        hash_changed = project_hash_cache.get(url) != entry_hash
+
+        if is_new or hash_changed:
             to_fetch.append(p)
+            project_hash_cache[url] = entry_hash
         else:
-            cached = existing_milestones[p["project_url"]]
+            # Restore from cache
+            cached = existing_milestones[url]
             if isinstance(cached, dict):
                 p["milestones"]         = cached.get("milestones", [])
                 p["analysis_type"]      = cached.get("analysis_type", "")
@@ -393,26 +413,14 @@ def scrape_forest(session: requests.Session, forest: dict,
                 p["analysis_type"]      = ""
                 p["accepting_comments"] = False
                 p["comment_deadline"]   = ""
+            # Still re-check CARA daily for active projects
+            if p["status"] in CARA_STATUSES:
+                to_cara.append(p)
 
-    # Always check ALL projects for dead pages regardless of fetch/cache status
-    print(f"  Checking all {len(projects)} projects for dead pages...")
-    dead_urls = set()
-    for p in projects:
-        # Skip if already in to_fetch — fetch_detail handles it there
-        if p in to_fetch:
-            continue
-        polite_sleep()
-        try:
-            r = fetch_with_retry(session, p["project_url"], timeout=60)
-            if is_dead_page(r.text):
-                print(f"    💀 DEAD PAGE: {p['project_name'][:50]}")
-                dead_urls.add(p["project_url"])
-        except Exception:
-            pass
+    print(f"  {len(to_fetch)} projects need detail fetch, {len(to_cara)} need CARA re-check only")
 
     if to_fetch:
-        reason = "full refresh" if do_full else "new projects only"
-        print(f"  Fetching details for {len(to_fetch)} projects ({reason}) with 5 workers...")
+        print(f"  Fetching details for {len(to_fetch)} projects with 2 workers...")
 
         def fetch_one(p):
             polite_sleep()
@@ -436,10 +444,36 @@ def scrape_forest(session: requests.Session, forest: dict,
                     print(f"    ✓ {p['project_name'][:50]} — {len(detail['milestones'])} milestones, type: {detail['analysis_type'] or 'n/a'}")
                 elif detail["analysis_type"]:
                     print(f"    ✓ {p['project_name'][:50]} — type: {detail['analysis_type']}")
-    else:
-        print(f"  Details: using cached data ({len(milestone_projects)} projects, non-refresh day)")
 
-    # Remove all dead projects found in either pass
+    if to_cara:
+        print(f"  Re-checking CARA for {len(to_cara)} active projects...")
+        def check_cara(p):
+            polite_sleep()
+            final_url = p.get("redirect_url", p["project_url"])
+            project_id = final_url.rstrip("/").split("/")[-1]
+            if project_id.isdigit():
+                info = parse_comment_period(session, project_id)
+                return p, info
+            return p, {}
+
+        with ThreadPoolExecutor(max_workers=2) as executor:
+            futures = {executor.submit(check_cara, p): p for p in to_cara}
+            for future in as_completed(futures):
+                p, info = future.result()
+                if info:
+                    p["accepting_comments"] = info.get("accepting_comments", False)
+                    p["comment_deadline"]   = info.get("comment_deadline", "")
+                    if info.get("accepting_comments"):
+                        print(f"    💬 COMMENTS OPEN: {p['project_name'][:50]}")
+
+    # Save updated project hash cache
+    try:
+        with open("project_hashes.json", "w", encoding="utf-8") as _hf:
+            json.dump(project_hash_cache, _hf)
+    except Exception:
+        pass
+
+    # Remove all dead projects found
     if dead_urls:
         projects[:] = [p for p in projects if p["project_url"] not in dead_urls]
         print(f"  Removed {len(dead_urls)} dead page(s)")
@@ -465,10 +499,13 @@ FOREST_ABBREVS = {
     "Rogue River-Siskiyou National Forest":  "RRS",
     "Wallowa-Whitman National Forest":       "Wallowa-Whitman",
     "Fremont-Winema National Forest":        "Fremont-Winema",
+    "Deschutes National Forest":             "Deschutes",
+    "Mt. Hood National Forest":              "Mt. Hood",
     "Shasta-Trinity National Forest":        "Shasta-Trinity",
     "Inyo National Forest":                  "Inyo",
     "Los Padres National Forest":            "Los Padres",
     "Klamath National Forest":              "Klamath",
+    "Chugach National Forest":               "Chugach",
     "Tongass National Forest":               "Tongass",
 }
 

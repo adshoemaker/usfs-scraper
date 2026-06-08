@@ -67,6 +67,20 @@ FORESTS = [
         "state": "OR",
         "projects_url": "https://www.fs.usda.gov/r06/fremont-winema/projects",
     },
+    {
+        "name": "Deschutes National Forest",
+        "code": "deschutes",
+        "region": "R06",
+        "state": "OR",
+        "projects_url": "https://www.fs.usda.gov/r06/deschutes/projects",
+    },
+    {
+        "name": "Mt. Hood National Forest",
+        "code": "mthood",
+        "region": "R06",
+        "state": "OR",
+        "projects_url": "https://www.fs.usda.gov/r06/mthood/projects",
+    },
 
     # ── California (Region 5) ──────────────────────────────────
 
@@ -101,6 +115,13 @@ FORESTS = [
 
     # ── Alaska (Region 10) ─────────────────────────────────────
 
+    {
+        "name": "Chugach National Forest",
+        "code": "chugach",
+        "region": "R10",
+        "state": "AK",
+        "projects_url": "https://www.fs.usda.gov/r10/chugach/projects",
+    },
     {
         "name": "Tongass National Forest",
         "code": "tongass",
