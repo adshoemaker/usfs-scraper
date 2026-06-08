@@ -853,9 +853,9 @@ PAGE_TEMPLATE = """
             <span class="dot taking-comments-dot"></span>
             Taking Comments Now ({{ filtered_counts.taking_comments }} of {{ counts.taking_comments }})
         </a>
-        <a href="{{ url_with_category('active') }}"
-           class="cat-btn active-filter {{ 'active' if 'active' in selected_categories else '' }}">
-            Show Inactive Projects ({{ filtered_counts.active }} of {{ counts.active }})
+        <a href="{{ url_with_show_inactive }}"
+           class="cat-btn active-filter {{ 'active' if show_inactive else '' }}">
+            Show Inactive Projects
         </a>
     </div>
     <div class="category-disclaimer-row">
@@ -865,14 +865,14 @@ PAGE_TEMPLATE = """
     <div class="results-header">
         {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Uncategorized', 'taking_comments': 'Taking Comments Now', 'active': 'Show Inactive Projects', 'newly_added': 'Newly Added'} %}
         {% if search or selected_forest or selected_status or selected_days or selected_category_str %}
-            Showing <strong>{{ projects|length }}</strong> result{% if projects|length != 1 %}s{% endif %}
+            <strong>{{ projects|length }}</strong> of <strong>{{ active_total }}</strong>
             {% if selected_categories %} — <strong>{% for cat in selected_categories %}{{ cat_labels.get(cat, cat) }}{% if not loop.last %} · {% endif %}{% endfor %}</strong>{% endif %}
             {% if selected_days %} added in the last <strong>{{ selected_days }} days</strong>{% endif %}
             {% if search %} matching "<strong>{{ search }}</strong>"{% endif %}
             {% if selected_status %} · status: <strong>{{ selected_status }}</strong>{% endif %}
             {% if selected_forest %} · <strong>{{ selected_forest_name }}</strong>{% endif %}
         {% else %}
-            Showing all <strong>{{ projects|length }}</strong> active projects
+            <strong>{{ projects|length }}</strong> of <strong>{{ active_total }}</strong> active projects
         {% endif %}
     </div>
 
@@ -1213,8 +1213,12 @@ def index():
     }
     selected_category = selected_categories[0] if len(selected_categories) == 1 else ""
 
-    # Filter out inactive unless show_inactive is set
+    # Capture totals before filtering
+    grand_total = len(all_projects)
     INACTIVE_STATUSES = {"On Hold", "Completed"}
+    active_total = sum(1 for p in all_projects if p.get("status") not in INACTIVE_STATUSES)
+
+    # Filter out inactive unless show_inactive is set
     if not show_inactive:
         all_projects = [p for p in all_projects if p.get("status") not in INACTIVE_STATUSES]
         forest_visible = [p for p in forest_visible if p.get("status") not in INACTIVE_STATUSES]
@@ -1299,7 +1303,8 @@ def index():
             "Environmental Assessment": "Medium rigor of analysis",
             "Environmental Impact Statement": "Highest rigor of analysis",
         },
-        total=len(all_projects),
+        total=grand_total,
+        active_total=active_total,
         last_scraped=last_scraped,
         recent_cutoff=recent_cutoff,
         counts=counts,
