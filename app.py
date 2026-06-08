@@ -599,6 +599,7 @@ PAGE_TEMPLATE = """
         .btn-comment.project-link { background: white; color: #c94f1a; border: 1px solid #c94f1a; }
         .btn-comment.project-link:hover { background: #fff4ef; color: #a33d12; }
         .btn-comment.primary { background: transparent; color: #6aabdf; border: 1px solid #6aabdf; }
+        .btn-comment.primary:hover { background: #6aabdf; color: white; }
         .btn-comment.secondary { background: white; color: #d4b800; border: 1px solid #d4b800; }
         .btn-comment.secondary:hover { background: #fffde6; color: #333; }
         .btn-comment.primary-inactive { background: white; color: #999; border: 1px solid #b8b8b4; cursor: pointer; }
@@ -887,7 +888,7 @@ PAGE_TEMPLATE = """
         {% set cat_label = {'extractive': 'Significant Effect', 'restorative': 'Restorative Impact', 'mixed': 'Mixed Impact', '': 'Uncategorized', None: 'Uncategorized'}.get(p.category or '', 'Uncategorized') %}
         {% set is_tcn = p.get('accepting_comments') %}
         <div class="project-card {{ p.category or '' }}"
-             style="background: {{ 'white' if is_tcn else cat_bg }};
+             style="background: {{ cat_bg }};
                     border: {{ '2px' if is_tcn else '1px' }} solid {{ cat_border }};">
             <div class="card-category-bar" style="background: {{ cat_border }};">
                 {% if cat_label %}
