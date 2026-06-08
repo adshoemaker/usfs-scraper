@@ -747,7 +747,7 @@ PAGE_TEMPLATE = """
         </div>
         <div class="forest-totals-row">
             <span class="summary-totals">
-                <strong>{{ forest_counts.values()|sum(attribute='total') }}</strong> total
+                <strong>{{ forest_counts.values()|sum(attribute='total') + multi_count }}</strong> total
             </span>
             <a href="/" class="forest-reset-btn">Reset</a>
         </div>
@@ -1182,6 +1182,9 @@ def index():
         forest_counts[f["code"]] = {
             "total": len(forest_projects) if show_inactive else len(active_forest_projects),
         }
+    multi_projects = [p for p in all_projects if p.get("forest_code") == "multi"]
+    active_multi = [p for p in multi_projects if p.get("status") not in {"On Hold", "Completed"}]
+    multi_count = len(multi_projects) if show_inactive else len(active_multi)
 
     # Active = In Progress + Developing Proposal
     active_count = sum(
@@ -1313,6 +1316,7 @@ def index():
         counts=counts,
         filtered_counts=filtered_counts,
         forest_counts=forest_counts,
+        multi_count=multi_count,
         state_columns=STATE_COLUMNS,
         state_colors=STATE_COLORS,
         forest_state_map=FOREST_STATE_MAP,
