@@ -657,6 +657,7 @@ PAGE_TEMPLATE = """
             <input type="hidden" name="sort"     value="{{ selected_sort }}">
             <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
             <input type="hidden" name="category" value="{{ selected_category_str }}">
+            <input type="hidden" name="show_inactive" value="{{ '1' if show_inactive else '0' }}">
             <input type="hidden" name="forests"  value="{{ selected_forests_str }}">
             <div style="position:relative; display:inline-block;">
                 <input type="text" name="q" id="search-q"
@@ -1141,8 +1142,9 @@ def index():
     selected_forest   = request.args.get("forest", "").strip()
     selected_status   = request.args.get("status", "").strip()
     selected_days     = request.args.get("days", "").strip()
-    selected_category_str = request.args.get("category", "active").strip()
+    selected_category_str = request.args.get("category", "").strip()
     selected_categories = [c.strip() for c in selected_category_str.split(",") if c.strip()]
+    show_inactive = request.args.get("show_inactive", "0") == "1"
     selected_sort     = request.args.get("sort", "cara_newest").strip()
     selected_sort2    = request.args.get("sort2", "").strip()
 
@@ -1211,6 +1213,12 @@ def index():
     }
     selected_category = selected_categories[0] if len(selected_categories) == 1 else ""
 
+    # Filter out inactive unless show_inactive is set
+    INACTIVE_STATUSES = {"On Hold", "Completed"}
+    if not show_inactive:
+        all_projects = [p for p in all_projects if p.get("status") not in INACTIVE_STATUSES]
+        forest_visible = [p for p in forest_visible if p.get("status") not in INACTIVE_STATUSES]
+
     projects = filter_projects(
         forest_visible,
         search=search,
@@ -1230,6 +1238,21 @@ def index():
         if f["code"] == selected_forest:
             selected_forest_name = f["name"]
             break
+
+    def url_with_show_inactive_fn():
+        from urllib.parse import urlencode
+        args = {}
+        if search:                args["q"]       = search
+        if selected_forest:       args["forest"]  = selected_forest
+        if selected_status:       args["status"]  = selected_status
+        if selected_days:         args["days"]    = selected_days
+        if selected_sort:         args["sort"]    = selected_sort
+        if selected_sort2:        args["sort2"]   = selected_sort2
+        if selected_forests_str:  args["forests"] = selected_forests_str
+        if selected_category_str: args["category"] = selected_category_str
+        if not show_inactive:     args["show_inactive"] = "1"
+        qs = urlencode(args)
+        return f"/?{qs}" if qs else "/"
 
     def url_with_category(cat):
         from urllib.parse import urlencode
@@ -1264,6 +1287,8 @@ def index():
         selected_category=selected_category,
         selected_categories=selected_categories,
         selected_category_str=selected_category_str,
+        show_inactive=show_inactive,
+        url_with_show_inactive=url_with_show_inactive_fn(),
         selected_sort=selected_sort,
         selected_sort2=selected_sort2,
         status_colors=STATUS_COLORS,
