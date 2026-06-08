@@ -63,7 +63,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch origin main
-          git checkout origin/main -- .
+          git rebase origin/main
           git add projects.json
           git diff --staged --quiet || git commit -m "Scrape: $(date -u '+%Y-%m-%d')"
-          git push origin HEAD:main
+          git push origin HEAD:main --force-with-lease
