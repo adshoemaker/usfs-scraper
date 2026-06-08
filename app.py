@@ -912,7 +912,7 @@ PAGE_TEMPLATE = """
                     <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
                         <div style="display:flex; align-items:center; gap:8px; padding-top:25px;">
                             <div class="forest-tag" style="color: {{ _fcolor }}; margin:0;">{{ p.forest_name }}</div>
-                            {% if p.get('first_seen') and p['first_seen'][:10] >= recent_cutoff %}
+                            {% if new_badge_enabled and p.get('first_seen') and p['first_seen'][:10] >= recent_cutoff %}
                             <span class="new-badge">NEW</span>
                             {% endif %}
                         </div>
@@ -1462,6 +1462,16 @@ ADMIN_TEMPLATE = """
 <p class="subtitle">Check projects where LFDC has submitted formal comments. Projects highlighted in amber were added in the last 72 hours.</p>
 
 <form method="POST" action="/admin/save-commented">
+<div style="margin-bottom:10px;">
+  <button type="button" onclick="
+    var bodies = document.querySelectorAll('.forest-accordion-body');
+    var arrows = document.querySelectorAll('.acc-arrow');
+    var allOpen = Array.from(bodies).every(b => b.style.display !== 'none');
+    bodies.forEach(function(b) { b.style.display = allOpen ? 'none' : 'block'; });
+    arrows.forEach(function(a) { a.innerText = allOpen ? '▶' : '▼'; });
+    this.innerText = allOpen ? 'Expand All' : 'Collapse All';
+  " style="padding:6px 16px; background:#f0ede4; border:1px solid #ccc; font-family:inherit; font-size:0.82rem; cursor:pointer;">Collapse All</button>
+</div>
 <div class="commented-section">
 {% for forest_name, forest_projects in all_projects_by_forest %}
 <div class="forest-accordion">
