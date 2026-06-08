@@ -63,7 +63,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch origin main
-          git rebase origin/main
+          git checkout origin/main
+          cp projects.json /tmp/projects.json
+          git checkout -b scrape-update
+          cp /tmp/projects.json projects.json
           git add projects.json
           git diff --staged --quiet || git commit -m "Scrape: $(date -u '+%Y-%m-%d')"
-          git push origin HEAD:main --force-with-lease
+          git push origin scrape-update:main --force-with-lease=refs/remotes/origin/main
