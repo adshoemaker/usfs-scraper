@@ -1290,6 +1290,7 @@ def index():
         active_count=active_count,
         url_with_category=url_with_category,
         annotations=annotations,
+        new_badge_enabled=annotations.get("_new_badge_enabled", True),
         commented_urls=commented_urls,
         commented_urls_map=annotations.get("_commented_urls", {}),
         wildfire_urls=wildfire_urls,
@@ -1652,6 +1653,7 @@ def admin():
 
     flash = request.args.get("flash", "")
     flash_type = request.args.get("flash_type", "")
+    new_badge_enabled = annotations.get("_new_badge_enabled", True)
     commented_urls_map = annotations.get("_commented_urls", {})
     wildfire_urls_manual = set(annotations.get("_wildfire", []))
     wildfire_urls_manual = set(annotations.get("_wildfire", []))
@@ -1668,6 +1670,7 @@ def admin():
         all_projects_by_state=by_state,
         all_projects_by_forest=all_projects_by_forest,
         commented_urls=commented_urls,
+        new_badge_enabled=new_badge_enabled,
         commented_urls_map=commented_urls_map,
         wildfire_urls=wildfire_urls,
         thinning_urls=thinning_urls,
@@ -1687,6 +1690,7 @@ def admin():
 def admin_save_commented():
     if not session.get("admin_authed"):
         return redirect(url_for("admin_login"))
+    new_badge_enabled = request.form.get("new_badge_enabled", "off") == "on"
     commented = request.form.getlist("commented")
     wildfire = request.form.getlist("wildfire")
     thinning = request.form.getlist("thinning")
@@ -1694,6 +1698,7 @@ def admin_save_commented():
     wildfire_suppress = request.form.getlist("wildfire_suppress")
     thinning_suppress = request.form.getlist("thinning_suppress")
     annotations = load_annotations()
+    annotations["_new_badge_enabled"] = new_badge_enabled
     annotations["_commented"] = commented
     annotations["_wildfire"] = wildfire
     annotations["_thinning"] = thinning
