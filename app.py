@@ -72,6 +72,38 @@ def format_deadline(deadline_str):
     return deadline_str
 
 
+def days_left_to_comment(deadline_str):
+    """Return days left to comment, or None if unparseable."""
+    import re, datetime
+    if not deadline_str:
+        return None
+    tz_offsets = {
+        "Pacific Standard Time": 0, "PST": 0, "Pacific Daylight Time": 0, "PDT": 0,
+        "Alaskan Standard Time": -1, "AKST": -1, "Alaska Standard Time": -1,
+        "Alaskan Daylight Time": 0, "AKDT": 0, "Alaska Daylight Time": 0,
+        "Mountain Standard Time": 1, "MST": 1, "Mountain Daylight Time": 1, "MDT": 1,
+        "Central Standard Time": 2, "CST": 2, "Central Daylight Time": 2, "CDT": 2,
+        "Eastern Standard Time": 3, "EST": 3, "Eastern Daylight Time": 3, "EDT": 3,
+    }
+    hours_diff = 0
+    for tz, diff in tz_offsets.items():
+        if tz.lower() in deadline_str.lower():
+            hours_diff = diff
+            break
+    m = re.search(r'(\d{1,2})/(\d{1,2})/(\d{4})\s+(\d{1,2}):(\d{2}):(\d{2})\s*(AM|PM)', deadline_str, re.I)
+    if not m:
+        return None
+    mon, day, yr, hr, mn, sc, ampm = m.groups()
+    hr = int(hr)
+    if ampm.upper() == 'PM' and hr != 12: hr += 12
+    elif ampm.upper() == 'AM' and hr == 12: hr = 0
+    deadline_dt = datetime.datetime(int(yr), int(mon), int(day), hr, int(mn))
+    deadline_dt += datetime.timedelta(hours=hours_diff)
+    now = datetime.datetime.now()
+    delta = (deadline_dt.date() - now.date()).days
+    return delta
+
+
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static'))
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "dev-secret-change-in-production")
 
@@ -912,14 +944,27 @@ PAGE_TEMPLATE = """
                     {% set _fstate = forest_state_map.get(p.forest_code, '') %}
                     {% set _fcolor = state_colors.get(_fstate, {}).get('pill', '#2d7a1f') %}
 
-                    <!-- Forest name + NEW badge -->
-                    <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
+                    <!-- Forest name + NEW badge + share button -->
+                    <div style="display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; margin-bottom:8px;">
                         <div style="display:flex; align-items:center; gap:8px; padding-top:25px;">
                             <div class="forest-tag" style="color: {{ _fcolor }}; margin:0;">{{ p.forest_name }}</div>
                             {% if new_badge_enabled and p.get('first_seen') and p['first_seen'][:10] >= recent_cutoff %}
                             <span class="new-badge">NEW</span>
                             {% endif %}
                         </div>
+                        {% if p.get('accepting_comments') %}
+                        <button onclick="
+                            var url = 'https://web-production-295ec.up.railway.app/?sort=cara_newest&category=taking_comments';
+                            if (navigator.share) {{
+                                navigator.share({{ title: 'LFDC NEPA Tracker — Projects Taking Comments', url: url }});
+                            }} else {{
+                                navigator.clipboard.writeText(url);
+                                this.innerText = 'Link Copied!';
+                                var btn = this;
+                                setTimeout(function() {{ btn.innerText = 'Share'; }}, 2000);
+                            }}
+                        " style="margin-top:25px; padding:3px 10px; background:white; border:1px solid #b4b2a9; color:#666; font-family:'Poppins',sans-serif; font-size:0.65rem; cursor:pointer; white-space:nowrap; flex-shrink:0;">Share</button>
+                        {% endif %}
                     </div>
 
                     <!-- Project name -->
@@ -1034,6 +1079,14 @@ PAGE_TEMPLATE = """
                 <div class="card-body-right desktop-only">
                     <div class="card-body-right-top">
                     {% if p.get('accepting_comments') %}
+                    {% if p.get('comment_deadline') %}
+                    {% set _days = days_left_to_comment(p.comment_deadline) %}
+                    {% if _days is not none %}
+                    <div style="font-size:0.7rem; font-weight:600; color:#a83030; text-align:center; width:255px; padding-bottom:4px; font-family:'Poppins',sans-serif; letter-spacing:0.5px;">
+                        {% if _days == 0 %}Last Day to Comment{% elif _days == 1 %}1 Day Left to Comment{% elif _days > 0 %}{{ _days }} Days Left to Comment{% endif %}
+                    </div>
+                    {% endif %}
+                    {% endif %}
                     <div class="comment-open-badge">
                         <span class="badge-title">Taking Comments Now!</span>
                         {% if p.get('comment_deadline') %}
@@ -1305,6 +1358,7 @@ def index():
         selected_sort2=selected_sort2,
         status_colors=STATUS_COLORS,
         format_deadline=format_deadline,
+        days_left_to_comment=days_left_to_comment,
         analysis_colors=ANALYSIS_COLORS,
         analysis_tooltips={
             "Categorical Exclusion": "Lowest rigor of analysis",
