@@ -1176,8 +1176,9 @@ def index():
     forest_counts = {}
     for f in FORESTS:
         forest_projects = [p for p in all_projects if p.get("forest_code") == f["code"]]
+        active_forest_projects = [p for p in forest_projects if p.get("status") not in {"On Hold", "Completed"}]
         forest_counts[f["code"]] = {
-            "total": len(forest_projects),
+            "total": len(forest_projects) if show_inactive else len(active_forest_projects),
         }
 
     # Active = In Progress + Developing Proposal
