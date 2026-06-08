@@ -1,17 +1,8 @@
 # .github/workflows/daily-scrape.yml
-# ---------------------------------------------------------------
-# Schedule:
-#   Monday      — full scrape including completed projects + milestones
-#   Tue & Fri   — active projects + fresh milestones, skip completed
-#   Wed/Thu/Sat/Sun — lightweight: new projects only, skip completed,
-#                     hash cache skips unchanged forests
-#
-# Manual trigger available from Actions tab with optional full fetch.
-# ---------------------------------------------------------------
 name: USFS Project Scraper
 on:
   schedule:
-    - cron: "0 14 * * *"   # Daily at 6:00am Pacific (14:00 UTC)
+    - cron: "0 14 * * *"
   workflow_dispatch:
     inputs:
       full_scrape:
@@ -62,8 +53,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch origin
-          git reset --soft origin/main
+          git fetch origin main
+          git checkout origin/main -- .
           git add projects.json
           git diff --staged --quiet || git commit -m "Scrape: $(date -u '+%Y-%m-%d')"
-          git push
+          git push origin HEAD:main
