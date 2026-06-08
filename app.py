@@ -854,8 +854,7 @@ PAGE_TEMPLATE = """
         </a>
         <a href="{{ url_with_category('active') }}"
            class="cat-btn active-filter {{ 'active' if 'active' in selected_categories else '' }}">
-            <span class="dot active-filter-dot"></span>
-            Active / In Development ({{ filtered_counts.active }} of {{ counts.active }})
+            Show Inactive Projects ({{ filtered_counts.active }} of {{ counts.active }})
         </a>
     </div>
     <div class="category-disclaimer-row">
@@ -863,7 +862,7 @@ PAGE_TEMPLATE = """
     </div>
 
     <div class="results-header">
-        {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Uncategorized', 'taking_comments': 'Taking Comments Now', 'active': 'Active / In Development', 'newly_added': 'Newly Added'} %}
+        {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Uncategorized', 'taking_comments': 'Taking Comments Now', 'active': 'Show Inactive Projects', 'newly_added': 'Newly Added'} %}
         {% if search or selected_forest or selected_status or selected_days or selected_category_str %}
             Showing <strong>{{ projects|length }}</strong> result{% if projects|length != 1 %}s{% endif %}
             {% if selected_categories %} — <strong>{% for cat in selected_categories %}{{ cat_labels.get(cat, cat) }}{% if not loop.last %} · {% endif %}{% endfor %}</strong>{% endif %}
@@ -1142,7 +1141,7 @@ def index():
     selected_forest   = request.args.get("forest", "").strip()
     selected_status   = request.args.get("status", "").strip()
     selected_days     = request.args.get("days", "").strip()
-    selected_category_str = request.args.get("category", "").strip()
+    selected_category_str = request.args.get("category", "active").strip()
     selected_categories = [c.strip() for c in selected_category_str.split(",") if c.strip()]
     selected_sort     = request.args.get("sort", "cara_newest").strip()
     selected_sort2    = request.args.get("sort2", "").strip()
