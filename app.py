@@ -897,12 +897,17 @@ PAGE_TEMPLATE = """
     </div>
 
     <div class="results-header">
-        {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Uncategorized', 'taking_comments': 'Taking Comments Now', 'active': 'Show Inactive Projects', 'newly_added': 'Newly Added'} %}
+        {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Uncategorized', 'taking_comments': 'Taking Comments Now', 'active': 'Active Projects', 'newly_added': 'Newly Added'} %}
         {% if show_inactive and not (search or selected_forest or selected_status or selected_days or selected_category_str) %}
             <strong>{{ projects|length }}</strong> of <strong>{{ total }}</strong>
-        {% elif search or selected_forest or selected_status or selected_days or selected_category_str %}
+        {% elif selected_categories %}
+            Showing: <strong>{% for cat in selected_categories %}{{ cat_labels.get(cat, cat) }}{% if not loop.last %} · {% endif %}{% endfor %}</strong>
+            {% if selected_forest %} · <strong>{{ selected_forest_name }}</strong>{% endif %}
+            {% if selected_days %} · added in the last <strong>{{ selected_days }} days</strong>{% endif %}
+            {% if search %} · matching "<strong>{{ search }}</strong>"{% endif %}
+            {% if selected_status %} · status: <strong>{{ selected_status }}</strong>{% endif %}
+        {% elif search or selected_forest or selected_status or selected_days %}
             <strong>{{ projects|length }}</strong> of <strong>{{ active_total }}</strong>
-            {% if selected_categories %} — <strong>{% for cat in selected_categories %}{{ cat_labels.get(cat, cat) }}{% if not loop.last %} · {% endif %}{% endfor %}</strong>{% endif %}
             {% if selected_days %} added in the last <strong>{{ selected_days }} days</strong>{% endif %}
             {% if search %} matching "<strong>{{ search }}</strong>"{% endif %}
             {% if selected_status %} · status: <strong>{{ selected_status }}</strong>{% endif %}
@@ -954,15 +959,15 @@ PAGE_TEMPLATE = """
                         </div>
                         {% if p.get('accepting_comments') %}
                         <button onclick="
-                            var url = 'https://web-production-295ec.up.railway.app/?sort=cara_newest&category=taking_comments';
-                            if (navigator.share) {{
-                                navigator.share({{ title: 'LFDC NEPA Tracker — Projects Taking Comments', url: url }});
-                            }} else {{
+                            var url = 'https://web-production-295ec.up.railway.app/?sort=cara_newest&amp;category=taking_comments';
+                            if (navigator.share) {
+                                navigator.share({title: 'LFDC NEPA Tracker — Projects Taking Comments', url: url});
+                            } else {
                                 navigator.clipboard.writeText(url);
                                 this.innerText = 'Link Copied!';
                                 var btn = this;
-                                setTimeout(function() {{ btn.innerText = 'Share'; }}, 2000);
-                            }}
+                                setTimeout(function() { btn.innerText = 'Share'; }, 2000);
+                            }
                         " style="margin-top:25px; padding:3px 10px; background:white; border:1px solid #b4b2a9; color:#666; font-family:'Poppins',sans-serif; font-size:0.65rem; cursor:pointer; white-space:nowrap; flex-shrink:0;">Share</button>
                         {% endif %}
                     </div>
