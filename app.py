@@ -860,32 +860,32 @@ PAGE_TEMPLATE = """
         <a href="{{ url_with_category('extractive') }}"
            class="cat-btn extractive {{ 'active' if 'extractive' in selected_categories else '' }}">
             <span class="dot extractive-dot"></span>
-            Significant Effect ({{ filtered_counts.extractive }} of {{ counts.extractive }})
+            Significant Effect
         </a>
         <a href="{{ url_with_category('mixed') }}"
            class="cat-btn mixed {{ 'active' if 'mixed' in selected_categories else '' }}">
             <span class="dot mixed-dot"></span>
-            Mixed Impact ({{ filtered_counts.mixed }} of {{ counts.mixed }})
+            Mixed Impact
         </a>
         <a href="{{ url_with_category('restorative') }}"
            class="cat-btn restorative {{ 'active' if 'restorative' in selected_categories else '' }}">
             <span class="dot restorative-dot"></span>
-            Restorative Impact ({{ filtered_counts.restorative }} of {{ counts.restorative }})
+            Restorative Impact
         </a>
         <a href="{{ url_with_category('unclassified') }}"
            class="cat-btn unclassified {{ 'active' if 'unclassified' in selected_categories else '' }}">
             <span class="dot unclassified-dot"></span>
-            Uncategorized ({{ filtered_counts.unclassified }} of {{ counts.unclassified }})
+            Uncategorized
         </a>
         <a href="{{ url_with_category('newly_added') }}"
            class="cat-btn newly-added {{ 'active' if 'newly_added' in selected_categories else '' }}">
             <span class="dot newly-added-dot"></span>
-            Newly Added ({{ filtered_counts.newly_added }} of {{ counts.newly_added }})
+            Newly Added
         </a>
         <a href="{{ url_with_category('taking_comments') }}"
            class="cat-btn taking-comments {{ 'active' if 'taking_comments' in selected_categories else '' }}">
             <span class="dot taking-comments-dot"></span>
-            Taking Comments Now ({{ filtered_counts.taking_comments }} of {{ counts.taking_comments }})
+            Taking Comments Now
         </a>
         <a href="{{ url_with_show_inactive }}"
            class="cat-btn active-filter {{ 'active' if show_inactive else '' }}">
