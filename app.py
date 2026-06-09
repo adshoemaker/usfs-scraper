@@ -968,7 +968,7 @@ PAGE_TEMPLATE = """
                                 var btn = this;
                                 setTimeout(function() { btn.innerText = 'Share'; }, 2000);
                             }
-                        " style="margin-top:25px; padding:3px 10px; background:white; border:1px solid #b4b2a9; color:#666; font-family:'Poppins',sans-serif; font-size:0.65rem; cursor:pointer; white-space:nowrap; flex-shrink:0;">Share</button>
+                        " style="margin-top:25px; padding:5px 14px; background:#e05a2b; border:none; color:white; font-family:'Poppins',sans-serif; font-size:0.78rem; font-weight:400; cursor:pointer; white-space:nowrap; flex-shrink:0; letter-spacing:0.5px;">Share</button>
                         {% endif %}
                     </div>
 
