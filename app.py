@@ -960,14 +960,12 @@ PAGE_TEMPLATE = """
                         {% if p.get('accepting_comments') %}
                         <button onclick="
                             var url = 'https://web-production-295ec.up.railway.app/?sort=cara_newest&amp;category=taking_comments';
-                            if (navigator.share) {
-                                navigator.share({title: 'LFDC NEPA Tracker — Projects Taking Comments', url: url});
-                            } else {
-                                navigator.clipboard.writeText(url);
-                                this.innerText = 'Link Copied!';
-                                var btn = this;
-                                setTimeout(function() { btn.innerText = 'Share'; }, 2000);
-                            }
+                            navigator.clipboard.writeText(url).then(function() {
+                                var btn = document.activeElement;
+                                btn.innerText = '✓ Link Copied!';
+                                btn.style.background = '#2d7a1f';
+                                setTimeout(function() { btn.innerText = 'Share'; btn.style.background = '#e05a2b'; }, 2500);
+                            });
                         " style="margin-top:25px; padding:5px 14px; background:#e05a2b; border:none; color:white; font-family:'Poppins',sans-serif; font-size:0.78rem; font-weight:400; cursor:pointer; white-space:nowrap; flex-shrink:0; letter-spacing:0.5px;">Share</button>
                         {% endif %}
                     </div>
