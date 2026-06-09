@@ -1258,6 +1258,17 @@ def index():
         forest_visible = all_projects
 
     # Filtered counts based on forest selection, before category filter
+    # Capture totals before filtering
+    grand_total = len(all_projects)
+    INACTIVE_STATUSES = {"On Hold", "Completed"}
+    active_total = sum(1 for p in all_projects if p.get("status") not in INACTIVE_STATUSES)
+
+    # Filter out inactive unless show_inactive is set
+    if not show_inactive:
+        all_projects = [p for p in all_projects if p.get("status") not in INACTIVE_STATUSES]
+        forest_visible = [p for p in forest_visible if p.get("status") not in INACTIVE_STATUSES]
+
+    # Both counts use already-filtered lists
     filtered_counts = {
         "extractive":      sum(1 for p in forest_visible if p.get("category") == "extractive"),
         "restorative":     sum(1 for p in forest_visible if p.get("category") == "restorative"),
@@ -1268,16 +1279,6 @@ def index():
         "newly_added":     sum(1 for p in forest_visible if p.get("first_seen", "")[:10] >= recent_cutoff),
     }
     selected_category = selected_categories[0] if len(selected_categories) == 1 else ""
-
-    # Capture totals before filtering
-    grand_total = len(all_projects)
-    INACTIVE_STATUSES = {"On Hold", "Completed"}
-    active_total = sum(1 for p in all_projects if p.get("status") not in INACTIVE_STATUSES)
-
-    # Filter out inactive unless show_inactive is set
-    if not show_inactive:
-        all_projects = [p for p in all_projects if p.get("status") not in INACTIVE_STATUSES]
-        forest_visible = [p for p in forest_visible if p.get("status") not in INACTIVE_STATUSES]
 
     # Counts use the already-filtered all_projects as denominator
     counts = {
