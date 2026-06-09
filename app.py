@@ -877,6 +877,9 @@ PAGE_TEMPLATE = """
             <span class="dot unclassified-dot"></span>
             Uncategorized
         </a>
+    </div>
+    <div class="category-filters" style="margin-top:6px;">
+        <span style="visibility:hidden;">Show only:</span>
         <a href="{{ url_with_category('newly_added') }}"
            class="cat-btn newly-added {{ 'active' if 'newly_added' in selected_categories else '' }}">
             <span class="dot newly-added-dot"></span>
