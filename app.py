@@ -1224,16 +1224,6 @@ def index():
         datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=72)
     ).strftime("%Y-%m-%d")
 
-    counts = {
-        "extractive":      sum(1 for p in all_projects if p.get("category") == "extractive"),
-        "restorative":     sum(1 for p in all_projects if p.get("category") == "restorative"),
-        "mixed":           sum(1 for p in all_projects if p.get("category") == "mixed"),
-        "unclassified":    sum(1 for p in all_projects if not p.get("category")),
-        "taking_comments": sum(1 for p in all_projects if p.get("accepting_comments")),
-        "active":          sum(1 for p in all_projects if p.get("status") in ("In Progress", "Developing Proposal")),
-        "newly_added":     sum(1 for p in all_projects if p.get("first_seen", "")[:10] >= recent_cutoff),
-    }
-
     # Per-forest project counts for the summary bar
     forest_counts = {}
     for f in FORESTS:
@@ -1288,6 +1278,17 @@ def index():
     if not show_inactive:
         all_projects = [p for p in all_projects if p.get("status") not in INACTIVE_STATUSES]
         forest_visible = [p for p in forest_visible if p.get("status") not in INACTIVE_STATUSES]
+
+    # Counts use the already-filtered all_projects as denominator
+    counts = {
+        "extractive":      sum(1 for p in all_projects if p.get("category") == "extractive"),
+        "restorative":     sum(1 for p in all_projects if p.get("category") == "restorative"),
+        "mixed":           sum(1 for p in all_projects if p.get("category") == "mixed"),
+        "unclassified":    sum(1 for p in all_projects if not p.get("category")),
+        "taking_comments": sum(1 for p in all_projects if p.get("accepting_comments")),
+        "active":          sum(1 for p in all_projects if p.get("status") in ("In Progress", "Developing Proposal")),
+        "newly_added":     sum(1 for p in all_projects if p.get("first_seen", "")[:10] >= recent_cutoff),
+    }
 
     projects = filter_projects(
         forest_visible,
