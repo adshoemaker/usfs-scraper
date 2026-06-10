@@ -1976,6 +1976,17 @@ def admin_ledger():
     current_urls = {p["project_url"] for p in projects}
     project_map  = {p["project_url"]: p for p in projects}
 
+    # Multi-forest project URLs
+    multi_urls = {p["project_url"] for p in projects if p.get("forest_code") == "multi"}
+
+    # Detect duplicates by project ID
+    id_map = {}
+    for url in ledger:
+        pid = url.rstrip("/").split("/")[-1]
+        id_map.setdefault(pid, []).append(url)
+    dupe_ids = {pid for pid, urls in id_map.items() if len(urls) > 1}
+    dupe_urls = {url for url in ledger for pid in [url.rstrip("/").split("/")[-1]] if pid in dupe_ids}
+
     # 1. All ledger entries
     all_entries = sorted(ledger.items(), key=lambda x: x[1].get("first_seen", ""), reverse=True)
 
@@ -1985,12 +1996,10 @@ def admin_ledger():
     # 3. In projects.json but not in ledger
     missing_from_ledger = [p for p in projects if p["project_url"] not in ledger]
 
-    # 4. Suspected duplicates — same project ID in different URLs (shouldn't happen, edge case)
-    id_map = {}
-    for url in ledger:
-        pid = url.rstrip("/").split("/")[-1]
-        id_map.setdefault(pid, []).append(url)
+    # 4. Suspected duplicates
     suspected_dupes = [(pid, urls) for pid, urls in id_map.items() if len(urls) > 1]
+
+    flash = request.args.get("flash", "")
 
     AUDIT_TEMPLATE = """
 <!DOCTYPE html>
@@ -2002,17 +2011,22 @@ def admin_ledger():
   h1 { font-size: 1.2rem; font-weight: 600; margin-bottom: 4px; }
   h2 { font-size: 0.95rem; font-weight: 600; margin: 24px 0 8px; border-bottom: 2px solid #ccc; padding-bottom: 4px; }
   .back { display: inline-block; margin-bottom: 16px; color: #c94f1a; font-size: 0.78rem; }
+  .flash { background: #d4edda; border: 1px solid #2d7a1f; color: #2d7a1f; padding: 8px 14px; margin-bottom: 16px; font-size: 0.78rem; }
   table { width: 100%; border-collapse: collapse; background: white; margin-bottom: 16px; }
   th { background: #d8d8d4; padding: 6px 10px; text-align: left; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; }
-  td { padding: 5px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+  td { padding: 5px 10px; border-bottom: 1px solid #eee; vertical-align: middle; }
   tr:hover td { background: #f9f9f6; }
-  .tag { display: inline-block; padding: 1px 6px; font-size: 0.65rem; border-radius: 2px; }
+  .tag { display: inline-block; padding: 1px 6px; font-size: 0.65rem; border-radius: 2px; margin-right: 3px; }
   .tag.active { background: #d4edda; color: #2d7a1f; }
   .tag.inactive { background: #f8d7da; color: #a83030; }
-  .tag.missing { background: #fff3cd; color: #856404; }
+  .tag.multi { background: #cce5ff; color: #3a7aad; }
+  .tag.dupe { background: #fff3cd; color: #856404; }
   .count { font-size: 0.72rem; color: #888; margin-left: 6px; }
   form.delete-form { display: inline; }
+  form.edit-form { display: inline-flex; gap: 4px; align-items: center; }
+  input.date-input { padding: 2px 6px; font-size: 0.72rem; border: 1px solid #ccc; font-family: inherit; width: 110px; }
   button.del { background: #a83030; color: white; border: none; padding: 2px 8px; font-size: 0.65rem; cursor: pointer; }
+  button.save { background: #2d7a1f; color: white; border: none; padding: 2px 8px; font-size: 0.65rem; cursor: pointer; }
   a { color: #3a7aad; }
   .none { color: #999; font-style: italic; padding: 10px; }
 </style>
@@ -2020,26 +2034,38 @@ def admin_ledger():
 <body>
 <a href="/admin" class="back">← Back to Admin</a>
 <h1>Ledger Audit <span class="count">({{ all_entries|length }} total entries)</span></h1>
-<p style="color:#666; font-size:0.75rem;">Monthly audit tool — verify first_seen dates, check for missing or duplicate projects.</p>
+{% if flash %}<div class="flash">{{ flash }}</div>{% endif %}
+<p style="color:#666; font-size:0.75rem;">Monthly audit tool — verify first_seen dates, check for missing or duplicate projects. Edit dates inline and click Save.</p>
 
 <h2>1. All Ledger Entries <span class="count">{{ all_entries|length }}</span></h2>
 <table>
-  <tr><th>Project Name</th><th>First Seen</th><th>Status</th><th>URL</th><th></th></tr>
+  <tr><th>Project Name</th><th>First Seen</th><th></th><th>Flags</th><th>Status</th><th>ID</th><th></th></tr>
   {% for url, data in all_entries %}
   <tr>
     <td>{{ data.name }}</td>
-    <td>{{ data.first_seen }}</td>
+    <td>
+      <form class="edit-form" method="POST" action="/admin/ledger/edit">
+        <input type="hidden" name="project_url" value="{{ url }}">
+        <input type="date" class="date-input" name="first_seen" value="{{ data.first_seen }}">
+        <button class="save" type="submit">Save</button>
+      </form>
+    </td>
+    <td></td>
+    <td>
+      {% if url in multi_urls %}<span class="tag multi">Multi-forest</span>{% endif %}
+      {% if url in dupe_urls %}<span class="tag dupe">Duplicate ID</span>{% endif %}
+    </td>
     <td>
       {% if url in current_urls %}
         {% set p = project_map[url] %}
         <span class="tag active">{{ p.status or 'Active' }}</span>
       {% else %}
-        <span class="tag inactive">Not in current scrape</span>
+        <span class="tag inactive">Not in scrape</span>
       {% endif %}
     </td>
     <td><a href="{{ url }}" target="_blank">{{ url.split('/')[-1] }}</a></td>
     <td>
-      <form class="delete-form" method="POST" action="/admin/ledger/delete" onsubmit="return confirm('Remove this entry from ledger?')">
+      <form class="delete-form" method="POST" action="/admin/ledger/delete" onsubmit="return confirm('Remove this entry?')">
         <input type="hidden" name="project_url" value="{{ url }}">
         <button class="del" type="submit">Remove</button>
       </form>
@@ -2058,7 +2084,7 @@ def admin_ledger():
     <td>{{ data.first_seen }}</td>
     <td><a href="{{ url }}" target="_blank">{{ url }}</a></td>
     <td>
-      <form class="delete-form" method="POST" action="/admin/ledger/delete" onsubmit="return confirm('Remove this entry from ledger?')">
+      <form class="delete-form" method="POST" action="/admin/ledger/delete" onsubmit="return confirm('Remove this entry?')">
         <input type="hidden" name="project_url" value="{{ url }}">
         <button class="del" type="submit">Remove</button>
       </form>
@@ -2096,8 +2122,8 @@ def admin_ledger():
 </table>
 {% else %}<p class="none">None found.</p>{% endif %}
 
-<h2>5. Manual Ledger Edits</h2>
-<p style="color:#666; font-size:0.75rem;">To correct a first_seen date, remove the entry above and it will be re-added on the next scrape with today's date. Or edit ledger.json directly in GitHub.</p>
+<h2>5. Manual Notes</h2>
+<p style="color:#666; font-size:0.75rem;">Edit any first_seen date using the date picker in Section 1 and click Save. To remove an entry entirely, use the Remove button — it will be re-added on the next scrape with today's date.</p>
 
 </body>
 </html>
@@ -2109,7 +2135,65 @@ def admin_ledger():
         suspected_dupes=suspected_dupes,
         current_urls=current_urls,
         project_map=project_map,
+        multi_urls=multi_urls,
+        dupe_urls=dupe_urls,
+        flash=flash,
     )
+
+
+def _push_json_via_api(token: str, filename: str, message: str) -> bool:
+    """Push any JSON file to GitHub root via API."""
+    repo = "adshoemaker/usfs-scraper"
+    api_url = f"https://api.github.com/repos/{repo}/contents/{filename}"
+    with open(os.path.join(os.path.dirname(__file__), filename), "rb") as f:
+        import base64
+        content_b64 = base64.b64encode(f.read()).decode("utf-8")
+    req = urllib.request.Request(api_url, headers={
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    })
+    sha = None
+    try:
+        with urllib.request.urlopen(req) as resp:
+            sha = json.loads(resp.read())["sha"]
+    except urllib.error.HTTPError:
+        pass
+    payload_data = {"message": message, "content": content_b64}
+    if sha:
+        payload_data["sha"] = sha
+    payload = json.dumps(payload_data).encode("utf-8")
+    req2 = urllib.request.Request(api_url, data=payload, method="PUT", headers={
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "Content-Type": "application/json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    })
+    try:
+        with urllib.request.urlopen(req2) as resp:
+            return True
+    except urllib.error.HTTPError:
+        return False
+
+
+
+@app.route("/admin/ledger/edit", methods=["POST"])
+def admin_ledger_edit():
+    if not session.get("admin_authed"):
+        return redirect(url_for("admin_login"))
+    project_url = request.form.get("project_url", "").strip()
+    first_seen  = request.form.get("first_seen", "").strip()
+    if project_url and first_seen:
+        ledger = load_ledger()
+        if project_url in ledger:
+            ledger[project_url]["first_seen"] = first_seen
+            path = os.path.join(os.path.dirname(__file__), "ledger.json")
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(ledger, f, indent=2, ensure_ascii=False, sort_keys=True)
+            token = os.environ.get("GITHUB_TOKEN")
+            if token:
+                _push_json_via_api(token, "ledger.json", f"Ledger edit: {project_url.split('/')[-1]}")
+    return redirect(url_for("admin_ledger") + "?flash=Date+updated+✓")
 
 
 @app.route("/admin/ledger/delete", methods=["POST"])
@@ -2123,10 +2207,9 @@ def admin_ledger_delete():
         path = os.path.join(os.path.dirname(__file__), "ledger.json")
         with open(path, "w", encoding="utf-8") as f:
             json.dump(ledger, f, indent=2, ensure_ascii=False, sort_keys=True)
-        # Push to GitHub
         token = os.environ.get("GITHUB_TOKEN")
         if token:
-            save_annotations_github(ledger)  # reuse API pattern
+            _push_json_via_api(token, "ledger.json", f"Ledger delete: {project_url.split('/')[-1]}")
     return redirect(url_for("admin_ledger") + "?flash=Entry+removed")
 
 
