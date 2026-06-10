@@ -637,6 +637,7 @@ def run_scraper():
 
     all_projects = []
     skipped_forests = 0
+    failed_forests = []
 
     for i, forest in enumerate(FORESTS):
         print(f"\n[{i+1}/{len(FORESTS)}] {forest['name']}")
@@ -658,6 +659,26 @@ def run_scraper():
                 pass
             continue
 
+        if not projects:
+            # Empty result likely means fetch error/timeout
+            failed_forests.append(forest['name'])
+            print(f"  !! No projects returned — possible fetch failure")
+            # Fall back to cached data
+            try:
+                with open("projects.json", encoding="utf-8") as f:
+                    existing = json.load(f)
+                forest_projects = [
+                    p for p in existing.get("projects", [])
+                    if p.get("forest_code") == forest["code"]
+                ]
+                all_projects.extend(forest_projects)
+                print(f"  Using {len(forest_projects)} cached projects as fallback")
+            except Exception:
+                pass
+            if i < len(FORESTS) - 1:
+                polite_sleep()
+            continue
+
         if projects:
             for p in projects:
                 # Skip re-processing completed projects on non-Monday runs
@@ -675,6 +696,10 @@ def run_scraper():
 
     save_hash_cache(hash_cache)
     print(f"\nForests skipped (unchanged): {skipped_forests}/{len(FORESTS)}")
+    if failed_forests:
+        print(f"Forests with fetch errors: {len(failed_forests)}/{len(FORESTS)}")
+        for f in failed_forests:
+            print(f"  !! {f}")
 
     # Deduplicate multi-forest projects
     all_projects = deduplicate_projects(all_projects)
@@ -707,6 +732,74 @@ def run_scraper():
     print_summary()
     print("=" * 60)
 
+    # Push projects.json to GitHub via API (bypasses git conflicts entirely)
+    github_token = os.environ.get("GITHUB_TOKEN")
+    if github_token:
+        push_ok = push_projects_json_via_api(github_token)
+        if not push_ok:
+            print("!! GitHub API push failed — projects.json saved locally only")
+
+    return {"failed_forests": failed_forests, "total_forests": len(FORESTS)}
+
+
+def push_projects_json_via_api(token: str) -> bool:
+    """Push projects.json to GitHub using the REST API. Always succeeds regardless of git state."""
+    import base64
+    import urllib.request
+    import urllib.error
+
+    repo  = "adshoemaker/usfs-scraper"
+    path  = "projects.json"
+    url   = f"https://api.github.com/repos/{repo}/contents/{path}"
+    today = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
+
+    with open(path, "rb") as f:
+        content_b64 = base64.b64encode(f.read()).decode("utf-8")
+
+    # Get current SHA of the file (required for update)
+    req = urllib.request.Request(url, headers={
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    })
+    try:
+        with urllib.request.urlopen(req) as resp:
+            current = json.loads(resp.read())
+            sha = current["sha"]
+    except urllib.error.HTTPError as e:
+        print(f"!! GitHub API: could not get file SHA: {e}")
+        return False
+
+    # Push updated file
+    payload = json.dumps({
+        "message": f"Scrape: {today}",
+        "content": content_b64,
+        "sha":     sha,
+    }).encode("utf-8")
+
+    req2 = urllib.request.Request(url, data=payload, method="PUT", headers={
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "Content-Type": "application/json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    })
+    try:
+        with urllib.request.urlopen(req2) as resp:
+            result = json.loads(resp.read())
+            print(f"  ✓ projects.json pushed via GitHub API: {result['commit']['sha'][:7]}")
+            return True
+    except urllib.error.HTTPError as e:
+        print(f"!! GitHub API push failed: {e} — {e.read().decode()}")
+        return False
+
 
 if __name__ == "__main__":
-    run_scraper()
+    import sys
+    result = run_scraper()
+    if result and result.get("failed_forests"):
+        failed = result["failed_forests"]
+        total = result["total_forests"]
+        # Fail if more than half the forests had errors
+        if len(failed) > total // 2:
+            print(f"\n!! Too many forests failed ({len(failed)}/{total}) — exiting with error")
+            sys.exit(1)
