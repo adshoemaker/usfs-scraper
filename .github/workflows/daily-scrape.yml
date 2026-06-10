@@ -44,10 +44,21 @@ jobs:
           path: page_hashes.json
           key: page-hashes
           restore-keys: page-hashes
-      - name: Run scraper
+      - name: Run scraper (with retries)
         env:
           SCRAPE_MODE: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.full_scrape == 'yes') && 'full' || '' }}
-        run: python scraper.py
+        run: |
+          for attempt in 1 2 3; do
+            echo "=== Scraper attempt $attempt of 3 ==="
+            python scraper.py && break
+            if [ $attempt -lt 3 ]; then
+              echo "Scraper failed, waiting 60s before retry..."
+              sleep 60
+            else
+              echo "All 3 attempts failed."
+              exit 1
+            fi
+          done
       - name: Save database cache
         uses: actions/cache@v4
         with:
@@ -64,7 +75,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           cp projects.json /tmp/projects.json
           git fetch origin main
-          git checkout origin/main
+          git checkout -f origin/main
           git checkout -b scrape-update
           cp /tmp/projects.json projects.json
           git add projects.json
