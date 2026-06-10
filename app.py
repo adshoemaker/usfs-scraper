@@ -1841,13 +1841,22 @@ def admin_save_commented():
     annotations["_thinning_suppress"] = thinning_suppress
 
     # Build URL map: purl_N -> project URL, commented_url_N -> the URL to link to
-    commented_urls_map = {}
+    # Start with existing map so URLs for projects not in the form are preserved
+    existing_urls_map = annotations.get("_commented_urls", {})
+    commented_urls_map = dict(existing_urls_map)
+
+    # Track which project URLs were actually submitted in this form
+    submitted_purls = set()
     for key, project_url in request.form.items():
         if key.startswith("purl_") and project_url.strip():
+            submitted_purls.add(project_url)
             idx = key[5:]
             link_url = request.form.get(f"commented_url_{idx}", "").strip()
             if link_url:
                 commented_urls_map[project_url] = link_url
+            else:
+                # URL was cleared for this project
+                commented_urls_map.pop(project_url, None)
 
     annotations["_commented_urls"] = commented_urls_map
     save_annotations_local(annotations)
