@@ -1666,11 +1666,14 @@ ADMIN_TEMPLATE = """
                    {{ 'checked' if p.project_url in commented_urls else '' }}>
           </td>
           <td class="proj-url-cell">
-            <input type="hidden" name="purl_{{ loop.index }}" value="{{ p.project_url }}">
-            <input type="text" name="commented_url_{{ loop.index }}"
-                   class="comment-url-input"
-                   placeholder="https://..."
-                   value="{{ commented_urls_map.get(p.project_url, '') }}">
+            <form method="POST" action="/admin/save-url" style="display:flex; gap:4px; align-items:center;">
+              <input type="hidden" name="project_url" value="{{ p.project_url }}">
+              <input type="text" name="comment_url"
+                     class="comment-url-input"
+                     placeholder="https://..."
+                     value="{{ commented_urls_map.get(p.project_url, '') }}">
+              <button type="submit" style="padding:3px 8px; background:#2d7a1f; color:white; border:none; font-size:0.7rem; cursor:pointer; white-space:nowrap;">Save</button>
+            </form>
           </td>
         </tr>
         {% endfor %}
@@ -1772,6 +1775,12 @@ def admin():
 
     all_projects_by_forest = [(fn, by_forest[fn]) for fn in forests_in_order if fn in by_forest]
 
+    # Add multi-forest projects as a separate group
+    multi_projects = [p for p in projects if p.get("forest_code") == "multi"]
+    if multi_projects:
+        multi_projects.sort(key=lambda p: p.get("project_name", "").lower())
+        all_projects_by_forest.append(("Multi-Forest Projects", multi_projects))
+
     admin_cutoff = (
         datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=72)
     ).strftime("%Y-%m-%d")
@@ -1819,6 +1828,25 @@ def admin():
         wildfire_url="https://www.forestclimatealliance.org/s/Final-Wildfire-in-the-Age-of-Climate-Change-compressed.pdf",
         recent_cutoff=admin_cutoff,
     )
+
+
+@app.route("/admin/save-url", methods=["POST"])
+def admin_save_url():
+    if not session.get("admin_authed"):
+        return redirect(url_for("admin_login"))
+    project_url = request.form.get("project_url", "").strip()
+    comment_url = request.form.get("comment_url", "").strip()
+    if project_url:
+        annotations = load_annotations()
+        urls_map = annotations.get("_commented_urls", {})
+        if comment_url:
+            urls_map[project_url] = comment_url
+        else:
+            urls_map.pop(project_url, None)
+        annotations["_commented_urls"] = urls_map
+        save_annotations_local(annotations)
+        save_annotations_github(annotations)
+    return redirect(url_for("admin") + "?flash=URL+saved+%E2%9C%93")
 
 
 @app.route("/admin/save-commented", methods=["POST"])
