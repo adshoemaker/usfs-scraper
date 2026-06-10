@@ -718,6 +718,17 @@ def run_scraper():
         # Add computed most_recent_activity summary
         p["most_recent_activity"] = most_recent_activity(p.get("milestones", []))
 
+    # Update ledger — permanent record of first_seen dates
+    ledger = update_ledger(all_projects)
+    save_ledger(ledger)
+    print(f"  Ledger updated: {len(ledger)} total projects tracked")
+
+    # Overwrite first_seen from ledger (authoritative source)
+    for p in all_projects:
+        url = p.get("project_url", "")
+        if url in ledger:
+            p["first_seen"] = ledger[url]["first_seen"]
+
     output = {
         "scraped_at":      datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "total_projects":  len(all_projects),
@@ -732,12 +743,15 @@ def run_scraper():
     print_summary()
     print("=" * 60)
 
-    # Push projects.json to GitHub via API (bypasses git conflicts entirely)
+    # Push projects.json and ledger.json to GitHub via API
     github_token = os.environ.get("GITHUB_TOKEN")
     if github_token:
         push_ok = push_projects_json_via_api(github_token)
         if not push_ok:
             print("!! GitHub API push failed — projects.json saved locally only")
+        ledger_ok = push_ledger_via_api(github_token)
+        if not ledger_ok:
+            print("!! GitHub API push failed — ledger.json saved locally only")
 
     return {"failed_forests": failed_forests, "total_forests": len(FORESTS)}
 
@@ -792,6 +806,99 @@ def push_projects_json_via_api(token: str) -> bool:
         print(f"!! GitHub API push failed: {e} — {e.read().decode()}")
         return False
 
+
+
+
+def load_ledger() -> dict:
+    """Load ledger.json — maps project_url -> {name, first_seen}."""
+    if os.path.exists("ledger.json"):
+        with open("ledger.json", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def save_ledger(ledger: dict):
+    """Save ledger.json locally."""
+    with open("ledger.json", "w", encoding="utf-8") as f:
+        json.dump(ledger, f, indent=2, ensure_ascii=False, sort_keys=True)
+
+
+def update_ledger(projects: list) -> dict:
+    """Update ledger with current projects. Never removes entries. Returns updated ledger."""
+    ledger = load_ledger()
+    today = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
+
+    for p in projects:
+        url  = p.get("project_url", "")
+        name = p.get("project_name", "")
+        if not url:
+            continue
+        if url in ledger:
+            # Update name if it changed, but never change first_seen
+            ledger[url]["name"] = name
+        else:
+            # New project — use existing first_seen if available, else today
+            first_seen = p.get("first_seen", "")
+            if first_seen:
+                first_seen = first_seen[:10]  # trim to YYYY-MM-DD
+            else:
+                first_seen = today
+            ledger[url] = {
+                "name":       name,
+                "first_seen": first_seen,
+            }
+
+    return ledger
+
+
+def push_ledger_via_api(token: str) -> bool:
+    """Push ledger.json to GitHub using the REST API."""
+    import base64
+    import urllib.request
+    import urllib.error
+
+    repo  = "adshoemaker/usfs-scraper"
+    path  = "ledger.json"
+    url   = f"https://api.github.com/repos/{repo}/contents/{path}"
+    today = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
+
+    with open(path, "rb") as f:
+        content_b64 = base64.b64encode(f.read()).decode("utf-8")
+
+    # Get current SHA (None if file doesn't exist yet)
+    req = urllib.request.Request(url, headers={
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    })
+    sha = None
+    try:
+        with urllib.request.urlopen(req) as resp:
+            sha = json.loads(resp.read())["sha"]
+    except urllib.error.HTTPError as e:
+        if e.code != 404:
+            print(f"!! GitHub API: could not get ledger SHA: {e}")
+            return False
+
+    payload_data = {"message": f"Ledger: {today}", "content": content_b64}
+    if sha:
+        payload_data["sha"] = sha
+
+    payload = json.dumps(payload_data).encode("utf-8")
+    req2 = urllib.request.Request(url, data=payload, method="PUT", headers={
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "Content-Type": "application/json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    })
+    try:
+        with urllib.request.urlopen(req2) as resp:
+            result = json.loads(resp.read())
+            print(f"  ✓ ledger.json pushed via GitHub API: {result['commit']['sha'][:7]}")
+            return True
+    except urllib.error.HTTPError as e:
+        print(f"!! GitHub API ledger push failed: {e} — {e.read().decode()}")
+        return False
 
 if __name__ == "__main__":
     import sys

@@ -265,6 +265,15 @@ def classify_project(project):
     return None
 
 
+def load_ledger():
+    """Load ledger.json — maps project_url -> {name, first_seen}."""
+    path = os.path.join(os.path.dirname(__file__), "ledger.json")
+    if not os.path.exists(path):
+        return {}
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
 def load_projects():
     json_path = os.path.join(os.path.dirname(__file__), "projects.json")
     if not os.path.exists(json_path):
@@ -273,7 +282,11 @@ def load_projects():
         data = json.load(f)
     scraped_at = data.get("scraped_at", "")[:10]
     projects = data.get("projects", [])
+    ledger = load_ledger()
     for p in projects:
+        url = p.get("project_url", "")
+        if url in ledger and ledger[url].get("first_seen"):
+            p["first_seen"] = ledger[url]["first_seen"]
         p["category"] = classify_project(p)
         if p.get("analysis_type") == "Decision Memo":
             p["analysis_type"] = "Environmental Assessment"
@@ -1521,6 +1534,7 @@ ADMIN_TEMPLATE = """
 <body>
 <a href="/admin/logout" class="logout">Log out</a>
 <h1>LFDC Tracker — Admin</h1>
+<p style="margin-top:0; font-size:0.78rem;"><a href="/admin/ledger" style="color:#3a7aad;">📋 Ledger Audit</a> &nbsp;|&nbsp; <a href="/admin/logout" style="color:#a83030;">Logout</a></p>
 
 <div style="background:#f7f7f0; border:1px solid #ddd; padding:12px 18px; margin-bottom:24px; display:flex; align-items:center; gap:16px;">
   <strong style="font-size:0.88rem;">NEW Badge</strong>
@@ -1951,7 +1965,178 @@ def admin_save():
     return redirect(url_for("admin") + f"?flash={urllib.parse.quote(flash)}")
 
 
-if __name__ == "__main__":
+    save_annotations_local(annotations)
+    github_ok = save_annotations_github(annotations)
+
+    flash = "Saved and committed to GitHub ✓" if github_ok else "Saved locally (GitHub token not configured)"
+    return redirect(url_for("admin") + f"?flash={urllib.parse.quote(flash)}")
+
+
+@app.route("/admin/ledger")
+def admin_ledger():
+    if not session.get("admin_authed"):
+        return redirect(url_for("admin_login"))
+
+    ledger = load_ledger()
+    projects, _ = load_projects()
+    current_urls = {p["project_url"] for p in projects}
+    project_map  = {p["project_url"]: p for p in projects}
+
+    # 1. All ledger entries
+    all_entries = sorted(ledger.items(), key=lambda x: x[1].get("first_seen", ""), reverse=True)
+
+    # 2. In ledger but not in current projects.json
+    missing_from_projects = [(url, data) for url, data in all_entries if url not in current_urls]
+
+    # 3. In projects.json but not in ledger
+    missing_from_ledger = [p for p in projects if p["project_url"] not in ledger]
+
+    # 4. Suspected duplicates — same project ID in different URLs (shouldn't happen, edge case)
+    id_map = {}
+    for url in ledger:
+        pid = url.rstrip("/").split("/")[-1]
+        id_map.setdefault(pid, []).append(url)
+    suspected_dupes = [(pid, urls) for pid, urls in id_map.items() if len(urls) > 1]
+
+    AUDIT_TEMPLATE = """
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ledger Audit — LFDC Admin</title>
+<style>
+  body { font-family: 'Poppins', sans-serif; background: #e8ede3; padding: 24px; font-size: 0.82rem; }
+  h1 { font-size: 1.2rem; font-weight: 600; margin-bottom: 4px; }
+  h2 { font-size: 0.95rem; font-weight: 600; margin: 24px 0 8px; border-bottom: 2px solid #ccc; padding-bottom: 4px; }
+  .back { display: inline-block; margin-bottom: 16px; color: #c94f1a; font-size: 0.78rem; }
+  table { width: 100%; border-collapse: collapse; background: white; margin-bottom: 16px; }
+  th { background: #d8d8d4; padding: 6px 10px; text-align: left; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  td { padding: 5px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+  tr:hover td { background: #f9f9f6; }
+  .tag { display: inline-block; padding: 1px 6px; font-size: 0.65rem; border-radius: 2px; }
+  .tag.active { background: #d4edda; color: #2d7a1f; }
+  .tag.inactive { background: #f8d7da; color: #a83030; }
+  .tag.missing { background: #fff3cd; color: #856404; }
+  .count { font-size: 0.72rem; color: #888; margin-left: 6px; }
+  form.delete-form { display: inline; }
+  button.del { background: #a83030; color: white; border: none; padding: 2px 8px; font-size: 0.65rem; cursor: pointer; }
+  a { color: #3a7aad; }
+  .none { color: #999; font-style: italic; padding: 10px; }
+</style>
+</head>
+<body>
+<a href="/admin" class="back">← Back to Admin</a>
+<h1>Ledger Audit <span class="count">({{ all_entries|length }} total entries)</span></h1>
+<p style="color:#666; font-size:0.75rem;">Monthly audit tool — verify first_seen dates, check for missing or duplicate projects.</p>
+
+<h2>1. All Ledger Entries <span class="count">{{ all_entries|length }}</span></h2>
+<table>
+  <tr><th>Project Name</th><th>First Seen</th><th>Status</th><th>URL</th><th></th></tr>
+  {% for url, data in all_entries %}
+  <tr>
+    <td>{{ data.name }}</td>
+    <td>{{ data.first_seen }}</td>
+    <td>
+      {% if url in current_urls %}
+        {% set p = project_map[url] %}
+        <span class="tag active">{{ p.status or 'Active' }}</span>
+      {% else %}
+        <span class="tag inactive">Not in current scrape</span>
+      {% endif %}
+    </td>
+    <td><a href="{{ url }}" target="_blank">{{ url.split('/')[-1] }}</a></td>
+    <td>
+      <form class="delete-form" method="POST" action="/admin/ledger/delete" onsubmit="return confirm('Remove this entry from ledger?')">
+        <input type="hidden" name="project_url" value="{{ url }}">
+        <button class="del" type="submit">Remove</button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+<h2>2. In Ledger but Missing from Current projects.json <span class="count">{{ missing_from_projects|length }}</span></h2>
+{% if missing_from_projects %}
+<table>
+  <tr><th>Project Name</th><th>First Seen</th><th>URL</th><th></th></tr>
+  {% for url, data in missing_from_projects %}
+  <tr>
+    <td>{{ data.name }}</td>
+    <td>{{ data.first_seen }}</td>
+    <td><a href="{{ url }}" target="_blank">{{ url }}</a></td>
+    <td>
+      <form class="delete-form" method="POST" action="/admin/ledger/delete" onsubmit="return confirm('Remove this entry from ledger?')">
+        <input type="hidden" name="project_url" value="{{ url }}">
+        <button class="del" type="submit">Remove</button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %}<p class="none">None — ledger and projects.json are in sync.</p>{% endif %}
+
+<h2>3. In projects.json but Missing from Ledger <span class="count">{{ missing_from_ledger|length }}</span></h2>
+{% if missing_from_ledger %}
+<table>
+  <tr><th>Project Name</th><th>Forest</th><th>First Seen (from scraper)</th><th>URL</th></tr>
+  {% for p in missing_from_ledger %}
+  <tr>
+    <td>{{ p.project_name }}</td>
+    <td>{{ p.forest_name }}</td>
+    <td>{{ p.first_seen or '—' }}</td>
+    <td><a href="{{ p.project_url }}" target="_blank">{{ p.project_url.split('/')[-1] }}</a></td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %}<p class="none">None — all current projects are in the ledger.</p>{% endif %}
+
+<h2>4. Suspected Duplicate Project IDs <span class="count">{{ suspected_dupes|length }}</span></h2>
+{% if suspected_dupes %}
+<table>
+  <tr><th>Project ID</th><th>URLs</th></tr>
+  {% for pid, urls in suspected_dupes %}
+  <tr>
+    <td>{{ pid }}</td>
+    <td>{% for u in urls %}<a href="{{ u }}" target="_blank">{{ u }}</a><br>{% endfor %}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %}<p class="none">None found.</p>{% endif %}
+
+<h2>5. Manual Ledger Edits</h2>
+<p style="color:#666; font-size:0.75rem;">To correct a first_seen date, remove the entry above and it will be re-added on the next scrape with today's date. Or edit ledger.json directly in GitHub.</p>
+
+</body>
+</html>
+"""
+    return render_template_string(AUDIT_TEMPLATE,
+        all_entries=all_entries,
+        missing_from_projects=missing_from_projects,
+        missing_from_ledger=missing_from_ledger,
+        suspected_dupes=suspected_dupes,
+        current_urls=current_urls,
+        project_map=project_map,
+    )
+
+
+@app.route("/admin/ledger/delete", methods=["POST"])
+def admin_ledger_delete():
+    if not session.get("admin_authed"):
+        return redirect(url_for("admin_login"))
+    project_url = request.form.get("project_url", "").strip()
+    if project_url:
+        ledger = load_ledger()
+        ledger.pop(project_url, None)
+        path = os.path.join(os.path.dirname(__file__), "ledger.json")
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(ledger, f, indent=2, ensure_ascii=False, sort_keys=True)
+        # Push to GitHub
+        token = os.environ.get("GITHUB_TOKEN")
+        if token:
+            save_annotations_github(ledger)  # reuse API pattern
+    return redirect(url_for("admin_ledger") + "?flash=Entry+removed")
+
+
+
     port = int(os.environ.get("PORT", 5000))
     print(f"Starting USFS NEPA Project Tracker on port {port}...")
     if port == 5000:
