@@ -2130,7 +2130,7 @@ def admin_ledger_delete():
     return redirect(url_for("admin_ledger") + "?flash=Entry+removed")
 
 
-
+if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     print(f"Starting USFS NEPA Project Tracker on port {port}...")
     if port == 5000:
