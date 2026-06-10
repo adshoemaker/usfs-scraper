@@ -1534,19 +1534,22 @@ ADMIN_TEMPLATE = """
 <body>
 <a href="/admin/logout" class="logout">Log out</a>
 <h1>LFDC Tracker — Admin</h1>
-<p style="margin-top:0; font-size:0.78rem;"><a href="/admin/ledger" style="color:#3a7aad;">📋 Ledger Audit</a> &nbsp;|&nbsp; <a href="/admin/logout" style="color:#a83030;">Logout</a></p>
 
-<div style="background:#f7f7f0; border:1px solid #ddd; padding:12px 18px; margin-bottom:24px; display:flex; align-items:center; gap:16px;">
-  <strong style="font-size:0.88rem;">NEW Badge</strong>
-  <span style="font-size:0.78rem; color:#666;">Show "NEW" badge on projects added in the last 72 hours</span>
-  <form method="POST" action="/admin/save-commented" style="margin:0; margin-left:auto;">
-    <input type="hidden" name="new_badge_enabled" value="off">
-    <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.82rem; font-weight:600;">
-      <input type="checkbox" name="new_badge_enabled" value="on" {{ 'checked' if new_badge_enabled else '' }}
-             onchange="this.form.submit()">
-      {{ 'Enabled' if new_badge_enabled else 'Disabled' }}
-    </label>
-  </form>
+<div style="background:#f7f7f0; border:1px solid #ddd; padding:12px 18px; margin-bottom:24px; display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+  <strong style="font-size:0.82rem; color:#555; letter-spacing:0.3px;">TOOLS</strong>
+  <div style="display:flex; align-items:center; gap:8px;">
+    <span style="font-size:0.78rem; color:#444; font-weight:600;">NEW Badge</span>
+    <form method="POST" action="/admin/save-commented" style="margin:0;">
+      <input type="hidden" name="new_badge_enabled" value="off">
+      <label style="display:flex; align-items:center; gap:6px; cursor:pointer; font-size:0.75rem;">
+        <input type="checkbox" name="new_badge_enabled" value="on" {{ 'checked' if new_badge_enabled else '' }}
+               onchange="this.form.submit()">
+        {{ 'On' if new_badge_enabled else 'Off' }}
+      </label>
+    </form>
+  </div>
+  <div style="width:1px; height:20px; background:#ddd;"></div>
+  <a href="/admin/ledger" style="font-size:0.78rem; font-weight:600; color:#3a7aad; text-decoration:none; padding:4px 12px; border:1px solid #3a7aad; background:white;">📋 Ledger Audit</a>
 </div>
 
 {% if flash %}
@@ -1905,15 +1908,6 @@ def admin_save_commented():
     github_ok = save_annotations_github(annotations)
     flash = "LFDC Commented list saved and committed to GitHub ✓" if github_ok else "Saved locally (GitHub token not configured)"
     return redirect(url_for("admin") + f"?flash={urllib.parse.quote(flash)}")
-def admin_login():
-    if request.method == "POST":
-        password = request.form.get("password", "")
-        admin_pw = os.environ.get("ADMIN_PASSWORD", "lfdc-admin")
-        if password == admin_pw:
-            session["admin_authed"] = True
-            return redirect(url_for("admin"))
-        return render_template_string(ADMIN_LOGIN_TEMPLATE, error=True)
-    return render_template_string(ADMIN_LOGIN_TEMPLATE, error=False)
 
 
 @app.route("/admin/login", methods=["GET", "POST"])
