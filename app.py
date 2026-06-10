@@ -982,7 +982,7 @@ PAGE_TEMPLATE = """
                                 btn.style.background = '#2d7a1f';
                                 setTimeout(function() { btn.innerText = 'Share'; btn.style.background = '#e05a2b'; }, 2500);
                             });
-                        " style="margin-top:25px; padding:5px 14px; background:#e05a2b; border:none; color:white; font-family:'Poppins',sans-serif; font-size:0.78rem; font-weight:400; cursor:pointer; white-space:nowrap; flex-shrink:0; letter-spacing:0.5px;">Share</button>
+                        " style="margin-top:25px; margin-right:25px; padding:5px 14px; background:#e05a2b; border:none; color:white; font-family:'Poppins',sans-serif; font-size:0.78rem; font-weight:400; cursor:pointer; white-space:nowrap; flex-shrink:0; letter-spacing:0.5px;">Share</button>
                         {% endif %}
                     </div>
 
