@@ -7,6 +7,8 @@
 #                     hash cache skips unchanged forests
 #
 # Manual trigger available from Actions tab with optional full fetch.
+# projects.json is pushed via GitHub API inside scraper.py —
+# no git commit step needed.
 # ---------------------------------------------------------------
 name: USFS Project Scraper
 on:
@@ -21,6 +23,8 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -47,6 +51,7 @@ jobs:
       - name: Run scraper (with retries)
         env:
           SCRAPE_MODE: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.full_scrape == 'yes') && 'full' || '' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           for attempt in 1 2 3; do
             echo "=== Scraper attempt $attempt of 3 ==="
@@ -69,15 +74,3 @@ jobs:
         with:
           path: page_hashes.json
           key: page-hashes
-      - name: Commit updated projects.json
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          cp projects.json /tmp/projects.json
-          git fetch origin main
-          git checkout -f origin/main
-          git checkout -b scrape-update
-          cp /tmp/projects.json projects.json
-          git add projects.json
-          git diff --staged --quiet || git commit -m "Scrape: $(date -u '+%Y-%m-%d')"
-          git push origin scrape-update:main --force-with-lease=refs/remotes/origin/main
