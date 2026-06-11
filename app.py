@@ -378,8 +378,6 @@ def load_projects():
             p["first_seen"] = ledger[url]["first_seen"]
         p["category"] = classify_project(p)
         p["_scraped_resources"] = extract_resource_data(p)
-        if p.get("analysis_type") == "Decision Memo":
-            p["analysis_type"] = "Environmental Assessment"
         # Extract key milestone dates
         scoping = decision = implementation = ""
         for m in p.get("milestones", []):
@@ -699,6 +697,7 @@ PAGE_TEMPLATE = """
 
         /* Status badge */
         .status-badge { display: block; padding: 3px 10px; border-radius: 0; font-size: 0.918rem; font-weight: 200; font-family: 'Poppins', sans-serif; color: white; white-space: nowrap; letter-spacing: 0.8px; text-align: center; width: 255px; box-sizing: border-box; }
+        .ce-badge { display: block; padding: 3px 10px; border-radius: 0; font-size: 0.918rem; font-weight: 200; font-family: 'Poppins', sans-serif; color: #6b5000; white-space: nowrap; letter-spacing: 0.8px; text-align: center; width: 255px; box-sizing: border-box; background: #d4b800; margin-top: 6px; }
 
         /* NEW badge */
         .new-badge { display: inline-block; background: rgba(106,171,223,0.1); color: #6aabdf; border: 2px solid #6aabdf; border-radius: 0; font-size: 0.78rem; font-weight: 700; padding: 3px 8px; vertical-align: middle; margin-left: 6px; letter-spacing: 0.3px; }
@@ -1226,6 +1225,9 @@ PAGE_TEMPLATE = """
                     {% endif %}
                     {% if p.status %}
                     <span class="status-badge" style="background: {{ status_colors.get(p.status, '#b4b2a9') }};">{{ p.status }}</span>
+                    {% endif %}
+                    {% if p.get('analysis_type') in ('Categorical Exclusion', 'Decision Memo') %}
+                    <span class="ce-badge">{{ p.analysis_type }}</span>
                     {% endif %}
                     </div><!-- card-body-right-top -->
                     {% set resources = annotations.get(p.project_url, {}).get('resources') or p.get('_scraped_resources', []) %}
