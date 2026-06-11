@@ -381,6 +381,7 @@ def scrape_forest(session: requests.Session, forest: dict,
                 existing_milestones[_p["project_url"]] = {
                     "milestones":         _p.get("milestones", []),
                     "analysis_type":      _p.get("analysis_type", ""),
+                    "location_summary":   _p.get("location_summary", ""),
                     "accepting_comments": _p.get("accepting_comments", False),
                     "comment_deadline":   _p.get("comment_deadline", ""),
                 }
@@ -417,6 +418,7 @@ def scrape_forest(session: requests.Session, forest: dict,
             if isinstance(cached, dict):
                 p["milestones"]         = cached.get("milestones", [])
                 p["analysis_type"]      = cached.get("analysis_type", "")
+                p["location_summary"]   = cached.get("location_summary", "")
                 p["accepting_comments"] = cached.get("accepting_comments", False)
                 p["comment_deadline"]   = cached.get("comment_deadline", "")
             else:
@@ -449,6 +451,7 @@ def scrape_forest(session: requests.Session, forest: dict,
                     p["project_url"] = detail["redirect_url"]
                 p["milestones"]          = detail["milestones"]
                 p["analysis_type"]       = detail["analysis_type"]
+                p["location_summary"]    = detail.get("location_summary", "")
                 p["accepting_comments"]  = detail["accepting_comments"]
                 p["comment_deadline"]    = detail["comment_deadline"]
                 if detail["milestones"]:
