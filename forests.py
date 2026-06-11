@@ -82,6 +82,35 @@ FORESTS = [
         "projects_url": "https://www.fs.usda.gov/r06/mthood/projects",
     },
 
+    {
+        "name": "Umatilla National Forest",
+        "code": "umatilla",
+        "region": "R06",
+        "state": "OR",
+        "projects_url": "https://www.fs.usda.gov/r06/umatilla/projects",
+    },
+    {
+        "name": "Willamette National Forest",
+        "code": "willamette",
+        "region": "R06",
+        "state": "OR",
+        "projects_url": "https://www.fs.usda.gov/r06/willamette/projects",
+    },
+    {
+        "name": "Malheur National Forest",
+        "code": "malheur",
+        "region": "R06",
+        "state": "OR",
+        "projects_url": "https://www.fs.usda.gov/r06/malheur/projects",
+    },
+    {
+        "name": "Siuslaw National Forest",
+        "code": "siuslaw",
+        "region": "R06",
+        "state": "OR",
+        "projects_url": "https://www.fs.usda.gov/r06/siuslaw/projects",
+    },
+
     # ── California (Region 5) ──────────────────────────────────
 
     {
