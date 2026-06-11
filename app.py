@@ -267,42 +267,90 @@ def classify_project(project):
 
 
 def extract_resource_data(project: dict) -> list:
-    """Extract acres and MMBF mentions from project description and purpose.
-    Returns list of {descriptor, value} dicts."""
+    """Extract acres and board feet mentions from project description and purpose.
+    Returns list of {descriptor, value} dicts, deduped by value."""
     import re
-    text = (project.get("description") or "") + " " + (project.get("purpose") or "")
-    results = []
-    seen = set()
 
-    # Number pattern: handles 1,200 / 1200 / 2.3 / 26.8
+    text = (project.get("description") or "") + " " + (project.get("purpose") or "")
+
     NUM = r"([\d,]+(?:\.\d+)?)"
 
+    # Terms that indicate the "of X" context is a place/land designation, not a treatment type
+    SKIP_CONTEXTS = {
+        "national forest system lands", "national forest system land",
+        "forest system lands", "forest system land",
+        "national forest lands", "national forest land",
+        "nfs lands", "nfs land", "the project area", "project area",
+        "the fire perimeter", "fire perimeter",
+    }
+
+    # Patterns: (regex, descriptor, priority)
+    # Lower priority = preferred when values identical
     patterns = [
-        # MMBF patterns
-        (r"(?i)" + NUM + r"\s*(?:million board feet|MMBF)\s+of\s+(old.?growth)", lambda m: (f"MMBF of Old Growth", m.group(1))),
-        (r"(?i)" + NUM + r"\s*(?:million board feet|MMBF)\s+of\s+(second.?growth|young.?growth)", lambda m: (f"MMBF of Young/Second Growth", m.group(1))),
-        (r"(?i)" + NUM + r"\s*(?:million board feet|MMBF)(?:\s+of\s+timber)?", lambda m: (f"MMBF Timber", m.group(1))),
-        (r"(?i)([\d,]+(?:\.\d+)?)\s*(?:thousand board feet|MBF|mbf)", lambda m: (f"MBF Timber", m.group(1))),
-        # Acres patterns
-        (r"(?i)" + NUM + r"\s*acres?\s+of\s+(old.?growth)", lambda m: (f"Acres of Old Growth", m.group(1))),
-        (r"(?i)" + NUM + r"\s*acres?\s+of\s+(young.?growth|second.?growth)", lambda m: (f"Acres of Young/Second Growth", m.group(1))),
-        (r"(?i)" + NUM + r"\s*acres?\s+of\s+(?:live\s+)?(timber|trees)", lambda m: (f"Acres of Timber", m.group(1))),
-        (r"(?i)" + NUM + r"\s*acres?\s+(?:of\s+)?(?:forest\s+)?(?:health\s+)?treatments?", lambda m: (f"Acres Treated", m.group(1))),
-        (r"(?i)" + NUM + r"\s*acres?\s+of\s+(thinning|harvest|salvage|underburn|prescribed.?burn)", lambda m: (f"Acres of " + m.group(2).title(), m.group(1))),
-        (r"(?i)(?:approximately|about|up to|approx\.?)\s+" + NUM + r"\s*acres?", lambda m: (f"Acres (approx.)", m.group(1))),
-        (r"(?i)" + NUM + r"\s*acres?", lambda m: (f"Acres", m.group(1))),
+        # Board feet — specific first
+        (r"(?i)" + NUM + r"\s*(?:million board feet|MMBF)\s+of\s+old.?growth",           "Million Board Feet of Old Growth",         1),
+        (r"(?i)" + NUM + r"\s*(?:million board feet|MMBF)\s+of\s+(?:second|young).?growth","Million Board Feet of Young/Second Growth", 1),
+        (r"(?i)" + NUM + r"\s*(?:million board feet|MMBF)(?:\s+of\s+timber)?",            "Million Board Feet",                       3),
+        (r"(?i)" + NUM + r"\s*(?:thousand board feet|MBF)\b",                             "Thousand Board Feet",                      2),
+        # Acres — specific first
+        (r"(?i)" + NUM + r"\s*acres?\s+of\s+old.?growth(?:\s+live\s+trees?)?",            "Acres of Old Growth",                      1),
+        (r"(?i)" + NUM + r"\s*acres?\s+of\s+(?:second|young).?growth",                    "Acres of Young/Second Growth",             1),
+        (r"(?i)" + NUM + r"\s*acres?\s+of\s+(?:live\s+)?(?:timber|trees)",                "Acres of Timber",                          1),
+        (r"(?i)" + NUM + r"\s*acres?\s+of\s+(?:fire\s+)?salvage",                         "Acres of Salvage",                         1),
+        (r"(?i)" + NUM + r"\s*acres?\s+of\s+commercial\s+thinning",                       "Acres of Commercial Thinning",             1),
+        (r"(?i)" + NUM + r"\s*acres?\s+of\s+thinning",                                    "Acres of Thinning",                        1),
+        (r"(?i)" + NUM + r"\s*acres?\s+of\s+(?:prescribed.?burn|underburn)",              "Acres of Prescribed Burn",                 1),
+        (r"(?i)" + NUM + r"\s*acres?\s+of\s+(?:forest\s+)?(?:health\s+)?treatments?",    "Acres Treated",                            1),
+        (r"(?i)" + NUM + r"\s*acres?\s+(?:of\s+)?(?:forest\s+)?(?:health\s+)?treatments?","Acres Treated",                           1),
+        # Context capture — grab what follows "X acres of [context]"
+        # Lookahead stops at sentence boundary or common conjunctions
+        (r"(?i)" + NUM + r"\s*acres?\s+of\s+([\w,\s/]+?)(?=\s*(?:\.|,\s*for\b|,\s*and\b|\s+for\b|\s+to\b|$))", None, 2),
+        # Reverse pattern: "X acres proposed for Y" or "X acres for Y"
+        (r"(?i)" + NUM + r"\s*acres?\s+proposed\s+for\s+([\w,\s/]+?)(?=\.|$)", None, 2),
+        # Approx before generic
+        (r"(?i)(?:approximately|about|up to|approx\.?)\s+" + NUM + r"\s*acres?",          "Acres (approx.)",                          2),
+        # Generic fallback
+        (r"(?i)" + NUM + r"\s*acres?",                                                     "Acres",                                    4),
     ]
 
-    for pattern, formatter in patterns:
-        for m in re.finditer(pattern, text):
-            try:
-                descriptor, value = formatter(m)
-                key = (descriptor, value.replace(",", ""))
-                if key not in seen:
-                    seen.add(key)
-                    results.append({"descriptor": descriptor, "value": value})
-            except Exception:
-                continue
+    hits = {}  # norm_value -> (descriptor, priority, raw_value)
+
+    for pat, descriptor, priority in patterns:
+        for m in re.finditer(pat, text):
+            raw_value = m.group(1)
+            norm = raw_value.replace(",", "")
+
+            if descriptor is None:
+                # Dynamic context
+                try:
+                    context = m.group(2).strip().rstrip(".,;")
+                    context_lower = context.lower().strip()
+                    # Skip generic land designations
+                    if any(skip in context_lower for skip in SKIP_CONTEXTS):
+                        continue
+                    if len(context) < 3 or len(context) > 60:
+                        continue
+                    desc = "Acres of " + context.title()
+                except Exception:
+                    continue
+            else:
+                desc = descriptor
+
+            if norm not in hits or priority < hits[norm][1]:
+                hits[norm] = (desc, priority, raw_value)
+
+    # Build result sorted by value descending
+    results = []
+    seen = set()
+    for norm, (desc, priority, raw_value) in sorted(
+        hits.items(),
+        key=lambda x: float(x[0].replace(",", "") or 0),
+        reverse=True
+    ):
+        key = (desc.lower(), norm)
+        if key not in seen:
+            seen.add(key)
+            results.append({"descriptor": desc, "value": raw_value})
 
     return results
 
