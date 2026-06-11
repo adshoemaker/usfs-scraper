@@ -1615,7 +1615,7 @@ ADMIN_TEMPLATE = """
   h1 { font-size: 1.3rem; font-weight: 600; margin-bottom: 6px; }
   h2 { font-size: 1.05rem; font-weight: 600; margin: 28px 0 10px 0; border-bottom: 2px solid #ccc; padding-bottom: 6px; max-width: 900px; }
   .subtitle { font-size: 0.8rem; color: #666; margin-bottom: 24px; }
-  .project-list { display: flex; flex-direction: column; gap: 16px; max-width: 800px; }
+  .project-list { display: flex; flex-direction: column; gap: 16px; max-width: 1400px; }
   .project-card { background: white; border: 2px solid #e0c040; border-radius: 0; padding: 16px; }
   .project-name { font-weight: 600; font-size: 1rem; margin-bottom: 4px; }
   .forest-name { font-size: 0.78rem; color: #666; margin-bottom: 12px; }
@@ -1631,7 +1631,7 @@ ADMIN_TEMPLATE = """
   .flash.error { background: #fde8e8; border-color: #a83030; color: #7c0000; }
 
   /* LFDC Commented section */
-  .commented-section { max-width: 900px; }
+  .commented-section { max-width: 1400px; }
   .forest-accordion { margin-bottom: 6px; border: 1px solid #ddd; }
   .forest-accordion-header { width: 100%; text-align: left; background: #f0ede4; border: none; padding: 10px 14px; font-size: 0.88rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 10px; font-family: inherit; color: #1a1a1a; }
   .forest-accordion-header:hover { background: #e8e4d8; }
@@ -1873,6 +1873,33 @@ function sortTable(th, colIndex) {
   table.querySelectorAll('th .sort-icon').forEach(function(icon) { icon.innerText = '↕'; });
   th.querySelector('.sort-icon').innerText = currentDir === 'asc' ? '↑' : '↓';
 }
+
+// Column resize
+(function() {
+  function makeResizable(table) {
+    var ths = table.querySelectorAll('th');
+    ths.forEach(function(th) {
+      var handle = document.createElement('div');
+      handle.style.cssText = 'position:absolute;right:0;top:0;width:6px;height:100%;cursor:col-resize;user-select:none;z-index:10;';
+      th.style.position = 'relative';
+      th.appendChild(handle);
+      var startX, startW;
+      handle.addEventListener('mousedown', function(e) {
+        startX = e.pageX;
+        startW = th.offsetWidth;
+        e.preventDefault();
+        document.addEventListener('mousemove', onMove);
+        document.addEventListener('mouseup', onUp);
+      });
+      function onMove(e) { th.style.width = Math.max(40, startW + e.pageX - startX) + 'px'; }
+      function onUp() {
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('mouseup', onUp);
+      }
+    });
+  }
+  document.querySelectorAll('.project-table').forEach(makeResizable);
+})();
 </script>
 
 </body>
