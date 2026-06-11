@@ -1647,7 +1647,7 @@ ADMIN_TEMPLATE = """
   .project-table tr:hover td { background: #faf9f4; }
   .project-table tr.new-project td { background: #fff8e6; }
   .project-table tr.new-project:hover td { background: #fff0cc; }
-  .proj-name-cell { color: #1a1a1a; }
+  .proj-name-cell { color: #1a1a1a; width: 200px; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .proj-date-cell { color: #666; white-space: nowrap; }
   .proj-check-cell { text-align: center; width: 60px; }
   .proj-check-cell input[type=checkbox] { width: 16px; height: 16px; cursor: pointer; accent-color: #c94f1a; }
@@ -1666,7 +1666,7 @@ ADMIN_TEMPLATE = """
   <strong style="font-size:0.82rem; color:#555; letter-spacing:0.3px;">TOOLS</strong>
   <div style="display:flex; align-items:center; gap:8px;">
     <span style="font-size:0.78rem; color:#444; font-weight:600;">NEW Badge</span>
-    <form method="POST" action="/admin/save-commented" style="margin:0;">
+    <form method="POST" action="/admin/save-new-badge" style="margin:0;">
       <input type="hidden" name="new_badge_enabled" value="off">
       <label style="display:flex; align-items:center; gap:6px; cursor:pointer; font-size:0.75rem;">
         <input type="checkbox" name="new_badge_enabled" value="on" {{ 'checked' if new_badge_enabled else '' }}
@@ -2050,6 +2050,18 @@ def admin_save_resources():
         save_annotations_local(annotations)
         save_annotations_github(annotations)
     return redirect(url_for("admin") + "?flash=Resources+saved+✓")
+
+
+@app.route("/admin/save-new-badge", methods=["POST"])
+def admin_save_new_badge():
+    if not session.get("admin_authed"):
+        return redirect(url_for("admin_login"))
+    new_badge_enabled = request.form.get("new_badge_enabled", "off") == "on"
+    annotations = load_annotations()
+    annotations["_new_badge_enabled"] = new_badge_enabled
+    save_annotations_local(annotations)
+    save_annotations_github(annotations)
+    return redirect(url_for("admin"))
 
 
 @app.route("/admin/save-url", methods=["POST"])
