@@ -154,7 +154,18 @@ def parse_detail_page(html: str) -> dict:
                 analysis_type = value
             break
 
-    return {"milestones": milestones, "analysis_type": analysis_type}
+    # Find Location Summary
+    location_summary = ""
+    for strong in soup.find_all(["strong", "b"]):
+        if "Location Summary" in strong.get_text():
+            parent = strong.parent
+            full_text = parent.get_text(strip=True)
+            value = full_text.replace("Location Summary:", "").strip()
+            if value:
+                location_summary = value
+            break
+
+    return {"milestones": milestones, "analysis_type": analysis_type, "location_summary": location_summary}
 
 
 def most_recent_activity(milestones: list[dict]) -> list[dict]:
@@ -559,6 +570,7 @@ def deduplicate_projects(projects: list[dict]) -> list[dict]:
                 if g.get("milestones"):
                     base["milestones"] = g["milestones"]
                     base["analysis_type"] = g.get("analysis_type", "")
+                    base["location_summary"] = g.get("location_summary", "")
                     break
 
             first_seens = [g.get("first_seen", "") for g in group if g.get("first_seen")]
