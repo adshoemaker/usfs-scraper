@@ -132,6 +132,7 @@ FORESTS = [
     {"name": "Fremont-Winema National Forest",       "code": "fremont-winema",   "state": "OR"},
     {"name": "Deschutes National Forest",             "code": "deschutes",        "state": "OR"},
     {"name": "Mt. Hood National Forest",              "code": "mthood",           "state": "OR"},
+    {"name": "Ochoco National Forest", "code": "ochoco", "state": "OR"},
     {"name": "Umatilla National Forest", "code": "umatilla", "state": "OR"},
     {"name": "Willamette National Forest", "code": "willamette", "state": "OR"},
     {"name": "Malheur National Forest", "code": "malheur", "state": "OR"},
@@ -162,6 +163,7 @@ FOREST_CODE_TO_ABBREV = {
     "fremont-winema":     "Fremont-Winema",
     "deschutes":          "Deschutes",
     "mthood":             "Mt. Hood",
+    "ochoco": "Ochoco",
     "umatilla": "Umatilla",
     "willamette": "Willamette",
     "malheur": "Malheur",
@@ -1134,7 +1136,6 @@ PAGE_TEMPLATE = """
                         {% if resources %}
                         <div class="milestone-section mobile-only" style="width:100%; margin-bottom:6px;">
                             <table class="resource-table">
-                                <thead><tr><th>Resource</th><th>Amount</th></tr></thead>
                                 <tbody>
                                     {% for r in resources %}
                                     <tr>
@@ -1242,7 +1243,6 @@ PAGE_TEMPLATE = """
                     {% if resources %}
                     <div class="milestone-section" style="margin-bottom:6px;">
                         <table class="resource-table">
-                            <thead><tr><th>Resource</th><th>Amount</th></tr></thead>
                             <tbody>
                                 {% for r in resources %}
                                 <tr>

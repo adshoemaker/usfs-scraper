@@ -515,6 +515,7 @@ FOREST_ABBREVS = {
     "Fremont-Winema National Forest":        "Fremont-Winema",
     "Deschutes National Forest":             "Deschutes",
     "Mt. Hood National Forest":              "Mt. Hood",
+    "Ochoco National Forest": "Ochoco",
     "Umatilla National Forest": "Umatilla",
     "Willamette National Forest": "Willamette",
     "Malheur National Forest": "Malheur",

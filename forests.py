@@ -83,6 +83,13 @@ FORESTS = [
     },
 
     {
+        "name": "Ochoco National Forest",
+        "code": "ochoco",
+        "region": "R06",
+        "state": "OR",
+        "projects_url": "https://www.fs.usda.gov/r06/ochoco/projects",
+    },
+    {
         "name": "Umatilla National Forest",
         "code": "umatilla",
         "region": "R06",
