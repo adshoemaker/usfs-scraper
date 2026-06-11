@@ -722,6 +722,11 @@ PAGE_TEMPLATE = """
         .card-body-right .milestone-section { width: 255px; box-sizing: border-box; margin: 0; }
         .milestone-table { width: 100%; border-collapse: collapse; font-size: 0.918rem; font-family: 'Poppins', sans-serif; font-weight: 200; letter-spacing: 0.8px; }
         .milestone-table th { text-align: left; padding: 4px 10px; background: #d8d8d4; color: #555; font-weight: 400; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.8px; border-bottom: 1px solid #c0c0bc; }
+        .resource-table { width: 100%; border-collapse: collapse; font-size: 0.6rem; font-family: 'Poppins', sans-serif; font-weight: 200; letter-spacing: 0.8px; }
+        .resource-table th { text-align: left; padding: 4px 10px; background: #8fa68e; color: white; font-weight: 400; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.8px; border-bottom: 1px solid #7a9479; }
+        .resource-table td { padding: 4px 10px; border-bottom: 1px solid #b0c4af; color: #2a3a2a; font-weight: 200; background: #c5d4c4; }
+        .resource-table tr:last-child td { border-bottom: none; }
+        .resource-table td.amount-cell { white-space: nowrap; text-align: right; }
         .milestone-table td { padding: 4px 10px; border-bottom: 1px solid var(--border); color: var(--text); font-weight: 200; font-size: 0.6rem; }
         .milestone-table tr:last-child td { border-bottom: none; }
         .milestone-table td.date-cell { white-space: nowrap; color: var(--text-muted); text-align: right; }
@@ -1121,13 +1126,13 @@ PAGE_TEMPLATE = """
                         {% set resources = annotations.get(p.project_url, {}).get('resources') or p.get('_scraped_resources', []) %}
                         {% if resources %}
                         <div class="milestone-section mobile-only" style="width:100%; margin-bottom:6px;">
-                            <table class="milestone-table">
+                            <table class="resource-table">
                                 <thead><tr><th>Resource</th><th>Amount</th></tr></thead>
                                 <tbody>
                                     {% for r in resources %}
                                     <tr>
                                         <td>{{ r.descriptor }}</td>
-                                        <td class="date-cell">{{ r.value }}</td>
+                                        <td class="amount-cell">{{ r.value }}</td>
                                     </tr>
                                     {% endfor %}
                                 </tbody>
@@ -1226,13 +1231,13 @@ PAGE_TEMPLATE = """
                     {% set resources = annotations.get(p.project_url, {}).get('resources') or p.get('_scraped_resources', []) %}
                     {% if resources %}
                     <div class="milestone-section" style="margin-bottom:6px;">
-                        <table class="milestone-table">
+                        <table class="resource-table">
                             <thead><tr><th>Resource</th><th>Amount</th></tr></thead>
                             <tbody>
                                 {% for r in resources %}
                                 <tr>
                                     <td>{{ r.descriptor }}</td>
-                                    <td class="date-cell">{{ r.value }}</td>
+                                    <td class="amount-cell">{{ r.value }}</td>
                                 </tr>
                                 {% endfor %}
                             </tbody>
@@ -1749,7 +1754,7 @@ ADMIN_TEMPLATE = """
     {{ forest_name }}
     <span class="acc-count">{{ forest_projects|length }} projects</span>
   </button>
-  <div class="forest-accordion-body" style="display:block;">
+  <div class="forest-accordion-body admin-table-wrap" style="display:block;">
     <table class="project-table" data-sort-col="1" data-sort-dir="desc">
       <thead>
         <tr>
