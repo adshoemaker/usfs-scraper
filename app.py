@@ -1638,7 +1638,7 @@ ADMIN_TEMPLATE = """
   .acc-arrow { font-size: 0.7rem; color: #888; }
   .acc-count { margin-left: auto; font-size: 0.72rem; color: #888; font-weight: 400; }
   .forest-accordion-body { padding: 0; overflow-x: auto; }
-  .project-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; min-width: 1400px; }
+  .project-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; min-width: 1600px; }
   .project-table th { background: #f7f7f0; padding: 7px 10px; text-align: left; border-bottom: 2px solid #ddd; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; color: #555; white-space: nowrap; resize: horizontal; overflow: hidden; }
   .project-table th.sortable { cursor: pointer; user-select: none; }
   .project-table th.sortable:hover { background: #ededde; }
