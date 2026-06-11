@@ -265,6 +265,47 @@ def classify_project(project):
     return None
 
 
+
+def extract_resource_data(project: dict) -> list:
+    """Extract acres and MMBF mentions from project description and purpose.
+    Returns list of {descriptor, value} dicts."""
+    import re
+    text = (project.get("description") or "") + " " + (project.get("purpose") or "")
+    results = []
+    seen = set()
+
+    # Number pattern: handles 1,200 / 1200 / 2.3 / 26.8
+    NUM = r"([\d,]+(?:\.\d+)?)"
+
+    patterns = [
+        # MMBF patterns
+        (r"(?i)" + NUM + r"\s*(?:million board feet|MMBF)\s+of\s+(old.?growth)", lambda m: (f"MMBF of Old Growth", m.group(1))),
+        (r"(?i)" + NUM + r"\s*(?:million board feet|MMBF)\s+of\s+(second.?growth|young.?growth)", lambda m: (f"MMBF of Young/Second Growth", m.group(1))),
+        (r"(?i)" + NUM + r"\s*(?:million board feet|MMBF)(?:\s+of\s+timber)?", lambda m: (f"MMBF Timber", m.group(1))),
+        (r"(?i)([\d,]+(?:\.\d+)?)\s*(?:thousand board feet|MBF|mbf)", lambda m: (f"MBF Timber", m.group(1))),
+        # Acres patterns
+        (r"(?i)" + NUM + r"\s*acres?\s+of\s+(old.?growth)", lambda m: (f"Acres of Old Growth", m.group(1))),
+        (r"(?i)" + NUM + r"\s*acres?\s+of\s+(young.?growth|second.?growth)", lambda m: (f"Acres of Young/Second Growth", m.group(1))),
+        (r"(?i)" + NUM + r"\s*acres?\s+of\s+(?:live\s+)?(timber|trees)", lambda m: (f"Acres of Timber", m.group(1))),
+        (r"(?i)" + NUM + r"\s*acres?\s+(?:of\s+)?(?:forest\s+)?(?:health\s+)?treatments?", lambda m: (f"Acres Treated", m.group(1))),
+        (r"(?i)" + NUM + r"\s*acres?\s+of\s+(thinning|harvest|salvage|underburn|prescribed.?burn)", lambda m: (f"Acres of " + m.group(2).title(), m.group(1))),
+        (r"(?i)(?:approximately|about|up to|approx\.?)\s+" + NUM + r"\s*acres?", lambda m: (f"Acres (approx.)", m.group(1))),
+        (r"(?i)" + NUM + r"\s*acres?", lambda m: (f"Acres", m.group(1))),
+    ]
+
+    for pattern, formatter in patterns:
+        for m in re.finditer(pattern, text):
+            try:
+                descriptor, value = formatter(m)
+                key = (descriptor, value.replace(",", ""))
+                if key not in seen:
+                    seen.add(key)
+                    results.append({"descriptor": descriptor, "value": value})
+            except Exception:
+                continue
+
+    return results
+
 def load_ledger():
     """Load ledger.json — maps project_url -> {name, first_seen}."""
     path = os.path.join(os.path.dirname(__file__), "ledger.json")
@@ -288,6 +329,7 @@ def load_projects():
         if url in ledger and ledger[url].get("first_seen"):
             p["first_seen"] = ledger[url]["first_seen"]
         p["category"] = classify_project(p)
+        p["_scraped_resources"] = extract_resource_data(p)
         if p.get("analysis_type") == "Decision Memo":
             p["analysis_type"] = "Environmental Assessment"
         # Extract key milestone dates
@@ -1028,6 +1070,22 @@ PAGE_TEMPLATE = """
                     {% endif %}
                     <div class="left-bottom">
                         <!-- Mobile milestone table -->
+                        {% set resources = annotations.get(p.project_url, {}).get('resources') or p.get('_scraped_resources', []) %}
+                        {% if resources %}
+                        <div class="milestone-section mobile-only" style="width:100%; margin-bottom:6px;">
+                            <table class="milestone-table">
+                                <thead><tr><th>Resource</th><th>Amount</th></tr></thead>
+                                <tbody>
+                                    {% for r in resources %}
+                                    <tr>
+                                        <td>{{ r.descriptor }}</td>
+                                        <td class="date-cell">{{ r.value }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        {% endif %}
                         {% if has_milestones %}
                         <div class="milestone-section mobile-only" style="width:100%; margin-bottom:12px;">
                             <table class="milestone-table">
@@ -1117,6 +1175,22 @@ PAGE_TEMPLATE = """
                     <span class="status-badge" style="background: {{ status_colors.get(p.status, '#b4b2a9') }};">{{ p.status }}</span>
                     {% endif %}
                     </div><!-- card-body-right-top -->
+                    {% set resources = annotations.get(p.project_url, {}).get('resources') or p.get('_scraped_resources', []) %}
+                    {% if resources %}
+                    <div class="milestone-section" style="margin-bottom:6px;">
+                        <table class="milestone-table">
+                            <thead><tr><th>Resource</th><th>Amount</th></tr></thead>
+                            <tbody>
+                                {% for r in resources %}
+                                <tr>
+                                    <td>{{ r.descriptor }}</td>
+                                    <td class="date-cell">{{ r.value }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% endif %}
                     {% if has_milestones %}
                     <div class="milestone-section">
                         <table class="milestone-table">
@@ -1637,6 +1711,8 @@ ADMIN_TEMPLATE = """
           <th>Wildfire Factsheet</th>
           <th>LFDC Commented</th>
           <th>Comment URL</th>
+          <th>Resource Descriptor</th>
+          <th>Amount</th>
         </tr>
       </thead>
       <tbody>
@@ -1692,7 +1768,31 @@ ADMIN_TEMPLATE = """
               <button type="submit" style="padding:3px 8px; background:#2d7a1f; color:white; border:none; font-size:0.7rem; cursor:pointer; white-space:nowrap;">Save</button>
             </form>
           </td>
-        </tr>
+          <td class="proj-url-cell" style="min-width:160px;">
+            {% set ann_resources = annotations.get(p.project_url, {}).get('resources', []) %}
+            {% set scraped_resources = p.get('_scraped_resources', []) %}
+            {% set display_resources = ann_resources if ann_resources else scraped_resources %}
+            <form method="POST" action="/admin/save-resources" style="margin:0;">
+              <input type="hidden" name="project_url" value="{{ p.project_url }}">
+              {% for r in display_resources %}
+              <div style="display:flex; gap:4px; margin-bottom:3px;">
+                <input type="text" name="res_descriptor" value="{{ r.descriptor }}" placeholder="e.g. Acres of Old Growth" style="width:130px; padding:2px 4px; font-size:0.65rem; border:1px solid #ccc; font-family:inherit;">
+                <input type="text" name="res_value" value="{{ r.value }}" placeholder="e.g. 1,655" style="width:60px; padding:2px 4px; font-size:0.65rem; border:1px solid #ccc; font-family:inherit;">
+              </div>
+              {% else %}
+              <div style="display:flex; gap:4px; margin-bottom:3px;">
+                <input type="text" name="res_descriptor" value="" placeholder="e.g. Acres of Old Growth" style="width:130px; padding:2px 4px; font-size:0.65rem; border:1px solid #ccc; font-family:inherit;">
+                <input type="text" name="res_value" value="" placeholder="e.g. 1,655" style="width:60px; padding:2px 4px; font-size:0.65rem; border:1px solid #ccc; font-family:inherit;">
+              </div>
+              {% endfor %}
+              <div style="display:flex; gap:4px; margin-bottom:3px;" id="extra-row-{{ loop.index }}">
+                <input type="text" name="res_descriptor" value="" placeholder="+ add row" style="width:130px; padding:2px 4px; font-size:0.65rem; border:1px solid #ccc; font-family:inherit; color:#aaa;">
+                <input type="text" name="res_value" value="" placeholder="" style="width:60px; padding:2px 4px; font-size:0.65rem; border:1px solid #ccc; font-family:inherit;">
+              </div>
+              <button type="submit" style="padding:2px 8px; background:#3a7aad; color:white; border:none; font-size:0.65rem; cursor:pointer; margin-top:2px;">Save</button>
+            </form>
+          </td>
+          <td></td>
         {% endfor %}
       </tbody>
     </table>
@@ -1845,6 +1945,31 @@ def admin():
         wildfire_url="https://www.forestclimatealliance.org/s/Final-Wildfire-in-the-Age-of-Climate-Change-compressed.pdf",
         recent_cutoff=admin_cutoff,
     )
+
+
+@app.route("/admin/save-resources", methods=["POST"])
+def admin_save_resources():
+    if not session.get("admin_authed"):
+        return redirect(url_for("admin_login"))
+    project_url  = request.form.get("project_url", "").strip()
+    descriptors  = request.form.getlist("res_descriptor")
+    values       = request.form.getlist("res_value")
+    if project_url:
+        resources = [
+            {"descriptor": d.strip(), "value": v.strip()}
+            for d, v in zip(descriptors, values)
+            if d.strip() and v.strip()
+        ]
+        annotations = load_annotations()
+        if project_url not in annotations:
+            annotations[project_url] = {}
+        if resources:
+            annotations[project_url]["resources"] = resources
+        else:
+            annotations[project_url].pop("resources", None)
+        save_annotations_local(annotations)
+        save_annotations_github(annotations)
+    return redirect(url_for("admin") + "?flash=Resources+saved+✓")
 
 
 @app.route("/admin/save-url", methods=["POST"])
