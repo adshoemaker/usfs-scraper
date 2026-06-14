@@ -145,11 +145,20 @@ def parse_detail_page(html: str) -> dict:
     # Find Expected Analysis Type
     for strong in soup.find_all(["strong", "b"]):
         if "Expected Analysis Type" in strong.get_text():
-            # Value is in the next sibling text or parent's next sibling
             parent = strong.parent
             full_text = parent.get_text(strip=True)
-            # Strip the label to get just the value
             value = full_text.replace("Expected Analysis Type:", "").strip()
+            if not value:
+                # Try next sibling text node
+                sibling = strong.next_sibling
+                while sibling:
+                    if hasattr(sibling, 'get_text'):
+                        value = sibling.get_text(strip=True)
+                    elif isinstance(sibling, str):
+                        value = sibling.strip()
+                    if value:
+                        break
+                    sibling = sibling.next_sibling
             if value:
                 analysis_type = value
             break
@@ -377,7 +386,7 @@ def scrape_forest(session: requests.Session, forest: dict,
         with open("projects.json", encoding="utf-8") as _f:
             _existing = json.load(_f)
         for _p in _existing.get("projects", []):
-            if _p.get("milestones") or _p.get("accepting_comments") or _p.get("analysis_type"):
+            if (_p.get("milestones") or _p.get("accepting_comments")) and _p.get("analysis_type"):
                 existing_milestones[_p["project_url"]] = {
                     "milestones":         _p.get("milestones", []),
                     "analysis_type":      _p.get("analysis_type", ""),
