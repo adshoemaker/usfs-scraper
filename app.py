@@ -473,8 +473,8 @@ def filter_projects(projects, search="", forest_code="", status="",
             if not first_seen_str:
                 continue
             try:
-                fs = first_seen_str.replace("Z", "+00:00")
-                first_seen_dt = datetime.datetime.fromisoformat(fs)
+                fs = first_seen_str[:10]  # trim to YYYY-MM-DD
+                first_seen_dt = datetime.datetime.strptime(fs, "%Y-%m-%d").replace(tzinfo=datetime.timezone.utc)
                 if first_seen_dt < cutoff:
                     continue
             except ValueError:
