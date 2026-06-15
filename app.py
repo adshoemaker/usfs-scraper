@@ -613,6 +613,9 @@ PAGE_TEMPLATE = """
         .forest-totals-row { display: flex; flex-direction: row; align-items: center; justify-content: flex-end; gap: 12px; width: 100%; }
         .forest-reset-btn { display: inline-block; padding: 5px 12px; background: #e05a2b; color: white; font-family: 'Poppins', sans-serif; font-size: 0.62rem; font-weight: 400; border: none; cursor: pointer; text-decoration: none; white-space: nowrap; }
         .forest-reset-btn:hover { background: #c44d22; }
+        .about-btn { display: inline-block; padding: 5px 12px; background: #e05a2b; color: white; font-family: 'Poppins', sans-serif; font-size: 0.62rem; font-weight: 400; border: none; cursor: pointer; white-space: nowrap; }
+        .about-btn.open { background: white; color: #e05a2b; border: 1px solid #e05a2b; }
+        .about-panel { display: none; background: white; border: 1px solid #ddd; padding: 16px 20px; margin-top: 8px; font-size: 0.82rem; color: #1a1a1a; line-height: 1.6; width: 100%; box-sizing: border-box; }
         .forest-col { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; padding: 0 8px; }
         .forest-col-label { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-dim); margin-bottom: 2px; }
         .forest-pill { display: flex; align-items: center; justify-content: space-between; gap: 5px; background: var(--accent); border-radius: 20px; padding: 3px 10px; font-size: 0.7rem; font-weight: 400; color: white; white-space: nowrap; width: 100%; box-sizing: border-box; text-decoration: none; transition: opacity 0.15s, box-shadow 0.15s; }
@@ -801,7 +804,7 @@ PAGE_TEMPLATE = """
 
 <div class="top-search-bar">
     <div class="top-search-inner">
-        <a href="mailto:andrew@wlfdc.org?subject=LFDC%20Tracker%20Feedback%20%2F%20Feature%20Suggestion" style="font-family:'Poppins',sans-serif; font-size:0.75rem; font-weight:400; color:#6aabdf; text-decoration:none; border:1px solid #6aabdf; padding:5px 12px; white-space:nowrap; letter-spacing:0.3px;">Submit Feedback — Suggest Features</a>
+        <a href="mailto:andrew@wlfdc.org?subject=LFDC%20Tracker%20Feedback%20%2F%20Feature%20Suggestion" style="font-family:'Poppins',sans-serif; font-size:0.88rem; font-weight:400; color:white; text-decoration:none; background:#e05a2b; padding:7px 18px; white-space:nowrap;">Submit Feedback — Suggest Features</a>
         <form class="header-search" method="GET" action="/" id="searchform" style="position:relative;">
             <input type="hidden" name="forest"   value="{{ selected_forest }}">
             <input type="hidden" name="status"   value="{{ selected_status }}">
@@ -901,8 +904,17 @@ PAGE_TEMPLATE = """
             <span class="summary-totals">
                 <strong>{{ forest_counts.values()|sum(attribute='total') + multi_count }}</strong> total
             </span>
+            {% if annotations.get('_about_text') %}
+            <button type="button" class="about-btn" id="about-toggle"
+                onclick="var p=document.getElementById('about-panel'); var open=p.style.display==='block'; p.style.display=open?'none':'block'; this.classList.toggle('open',!open);">
+                About the LFDC NEPA Tracker
+            </button>
+            {% endif %}
             <a href="/" class="forest-reset-btn">Reset</a>
         </div>
+        {% if annotations.get('_about_text') %}
+        <div id="about-panel" class="about-panel">{{ annotations.get('_about_text') }}</div>
+        {% endif %}
     </div>
 </div>
 
@@ -1690,6 +1702,16 @@ ADMIN_TEMPLATE = """
   <a href="/admin/ledger" style="font-size:0.78rem; font-weight:600; color:#3a7aad; text-decoration:none; padding:4px 12px; border:1px solid #3a7aad; background:white;">📋 Ledger Audit</a>
 </div>
 
+<div style="background:#f7f7f0; border:1px solid #ddd; padding:12px 18px; margin-bottom:24px; max-width:900px;">
+  <strong style="font-size:0.82rem; color:#555;">About the LFDC NEPA Tracker</strong>
+  <p style="font-size:0.75rem; color:#666; margin:4px 0 8px;">Text shown when users click the "About" button on the main page. Leave blank to hide the button.</p>
+  <form method="POST" action="/admin/save-about">
+    <textarea name="about_text" style="width:100%; height:100px; font-family:inherit; font-size:0.82rem; padding:8px; border:1px solid #ccc; box-sizing:border-box;">{{ annotations.get('_about_text', '') }}</textarea>
+    <br>
+    <button type="submit" style="margin-top:8px; padding:5px 16px; background:#2d7a1f; color:white; border:none; font-family:inherit; font-size:0.78rem; cursor:pointer;">Save</button>
+  </form>
+</div>
+
 {% if flash %}
 <div class="flash {{ 'error' if flash_type == 'error' else '' }}">{{ flash }}</div>
 {% endif %}
@@ -2065,6 +2087,18 @@ def admin_save_resources():
         save_annotations_local(annotations)
         save_annotations_github(annotations)
     return redirect(url_for("admin") + "?flash=Resources+saved+✓")
+
+
+@app.route("/admin/save-about", methods=["POST"])
+def admin_save_about():
+    if not session.get("admin_authed"):
+        return redirect(url_for("admin_login"))
+    about_text = request.form.get("about_text", "").strip()
+    annotations = load_annotations()
+    annotations["_about_text"] = about_text
+    save_annotations_local(annotations)
+    save_annotations_github(annotations)
+    return redirect(url_for("admin") + "?flash=About+text+saved+✓")
 
 
 @app.route("/admin/save-new-badge", methods=["POST"])
