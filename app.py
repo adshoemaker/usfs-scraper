@@ -598,7 +598,7 @@ PAGE_TEMPLATE = """
 
         /* ── Search bar ── */
         .top-search-bar { background: var(--bg3); border-bottom: 1px solid var(--border); padding: 8px 20px; }
-        .top-search-inner { max-width: 1150px; margin: 0 auto; display: flex; justify-content: flex-end; }
+        .top-search-inner { max-width: 1150px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
         .header-search { display: flex; align-items: center; gap: 0; }
         .header-search input[type="text"] { padding: 7px 14px; border: 1px solid #ccc; border-radius: 0; font-family: 'Poppins', sans-serif; font-size: 0.88rem; background: white; color: #1a1a1a; outline: none; flex: 1; }
         .header-search input[type="text"]::placeholder { color: #aaa; }
@@ -801,6 +801,7 @@ PAGE_TEMPLATE = """
 
 <div class="top-search-bar">
     <div class="top-search-inner">
+        <a href="mailto:andrew@wlfdc.org?subject=LFDC%20Tracker%20Feedback%20%2F%20Feature%20Suggestion" style="font-family:'Poppins',sans-serif; font-size:0.75rem; font-weight:400; color:#6aabdf; text-decoration:none; border:1px solid #6aabdf; padding:5px 12px; white-space:nowrap; letter-spacing:0.3px;">Submit Feedback — Suggest Features</a>
         <form class="header-search" method="GET" action="/" id="searchform" style="position:relative;">
             <input type="hidden" name="forest"   value="{{ selected_forest }}">
             <input type="hidden" name="status"   value="{{ selected_status }}">
