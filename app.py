@@ -846,6 +846,18 @@ PAGE_TEMPLATE = """
                 <div class="forest-col">
                     <div class="forest-col-label" style="color:{{ sc.get('label','var(--text-dim)') }};">{{ state }}</div>
                     {% for f in col_forests %}
+                    {% if f.code == 'ochoco' %}
+                    {% set combo_sel = ('ochoco' in selected_forests) and ('malheur' in selected_forests) %}
+                    {% set combo_total = (forest_counts.get('ochoco', {}).get('total', 0) or 0) + (forest_counts.get('malheur', {}).get('total', 0) or 0) %}
+                    <a href="{{ toggle_multi_forest_url(['ochoco','malheur'], selected_forests_str) }}"
+                       class="forest-pill {{ 'pill-selected' if combo_sel else '' }}"
+                       style="background:{{ sc.get('pill','var(--accent)') }}; opacity:{{ '1' if (not selected_forests or combo_sel) else '0.4' }}; text-decoration:none;">
+                        Ochoco &amp; Malheur NF
+                        <span class="forest-pill-count">{{ combo_total }}</span>
+                    </a>
+                    {% elif f.code == 'malheur' %}
+                    {# Skip — combined with Ochoco #}
+                    {% else %}
                     {% set is_sel = f.code in selected_forests %}
                     <a href="{{ toggle_forest_url(f.code, selected_forests_str) }}"
                        class="forest-pill {{ 'pill-selected' if is_sel else '' }}"
@@ -853,6 +865,7 @@ PAGE_TEMPLATE = """
                         {{ f.name.replace('National Forest', 'NF') }}
                         <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
                     </a>
+                    {% endif %}
                     {% endfor %}
                 </div>
                 {% endif %}
@@ -868,6 +881,18 @@ PAGE_TEMPLATE = """
                 <div class="forest-col">
                     <div class="forest-col-label" style="color:{{ sc.get('label','var(--text-dim)') }};">{{ state }}</div>
                     {% for f in col_forests %}
+                    {% if f.code == 'ochoco' %}
+                    {% set combo_sel = ('ochoco' in selected_forests) and ('malheur' in selected_forests) %}
+                    {% set combo_total = (forest_counts.get('ochoco', {}).get('total', 0) or 0) + (forest_counts.get('malheur', {}).get('total', 0) or 0) %}
+                    <a href="{{ toggle_multi_forest_url(['ochoco','malheur'], selected_forests_str) }}"
+                       class="forest-pill {{ 'pill-selected' if combo_sel else '' }}"
+                       style="background:{{ sc.get('pill','var(--accent)') }}; opacity:{{ '1' if (not selected_forests or combo_sel) else '0.4' }}; text-decoration:none;">
+                        Ochoco &amp; Malheur NF
+                        <span class="forest-pill-count">{{ combo_total }}</span>
+                    </a>
+                    {% elif f.code == 'malheur' %}
+                    {# Skip — combined with Ochoco #}
+                    {% else %}
                     {% set is_sel = f.code in selected_forests %}
                     <a href="{{ toggle_forest_url(f.code, selected_forests_str) }}"
                        class="forest-pill {{ 'pill-selected' if is_sel else '' }}"
@@ -875,6 +900,7 @@ PAGE_TEMPLATE = """
                         {{ f.name.replace('National Forest', 'NF') }}
                         <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
                     </a>
+                    {% endif %}
                     {% endfor %}
                 </div>
                 {% endif %}
@@ -889,6 +915,19 @@ PAGE_TEMPLATE = """
             <div class="forest-col desktop-only" style="display:flex;">
                 <div class="forest-col-label" style="color:{{ sc.get('label','var(--text-dim)') }};">{{ state }}</div>
                 {% for f in col_forests %}
+                {% if f.code == 'ochoco' %}
+                {% set combo_codes = ['ochoco','malheur'] %}
+                {% set combo_sel = ('ochoco' in selected_forests) and ('malheur' in selected_forests) %}
+                {% set combo_total = (forest_counts.get('ochoco', {}).get('total', 0) or 0) + (forest_counts.get('malheur', {}).get('total', 0) or 0) %}
+                <a href="{{ toggle_multi_forest_url(['ochoco','malheur'], selected_forests_str) }}"
+                   class="forest-pill {{ 'pill-selected' if combo_sel else '' }}"
+                   style="background:{{ sc.get('pill','var(--accent)') }}; opacity:{{ '1' if (not selected_forests or combo_sel) else '0.4' }}; text-decoration:none;">
+                    Ochoco &amp; Malheur NF
+                    <span class="forest-pill-count">{{ combo_total }}</span>
+                </a>
+                {% elif f.code == 'malheur' %}
+                {# Skip — combined with Ochoco #}
+                {% else %}
                 {% set is_sel = f.code in selected_forests %}
                 <a href="{{ toggle_forest_url(f.code, selected_forests_str) }}"
                    class="forest-pill {{ 'pill-selected' if is_sel else '' }}"
@@ -896,6 +935,7 @@ PAGE_TEMPLATE = """
                     {{ f.name.replace('National Forest', 'NF') }}
                     <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
                 </a>
+                {% endif %}
                 {% endfor %}
             </div>
             {% endif %}
@@ -1345,6 +1385,26 @@ PAGE_TEMPLATE = """
 """
 
 
+def toggle_multi_forest_url_fn(codes, current_str):
+    """Toggle multiple forest codes together as a group."""
+    from flask import request as req
+    from urllib.parse import urlencode
+    current = [f.strip() for f in current_str.split(",") if f.strip()]
+    all_selected = all(c in current for c in codes)
+    if all_selected:
+        new = [c for c in current if c not in codes]
+    else:
+        new = current + [c for c in codes if c not in current]
+    args = {}
+    if req.args.get("q"):      args["q"]       = req.args.get("q")
+    if req.args.get("status"): args["status"]  = req.args.get("status")
+    if req.args.get("days"):   args["days"]    = req.args.get("days")
+    if req.args.get("sort"):   args["sort"]    = req.args.get("sort")
+    if req.args.get("sort2"):  args["sort2"]   = req.args.get("sort2")
+    if new:                    args["forests"] = ",".join(new)
+    return "/?" + urlencode(args) if args else "/"
+
+
 def toggle_forest_url_fn(code, current_str):
     """Return URL with the given forest code toggled in the forests param."""
     from flask import request as req
@@ -1555,6 +1615,7 @@ def index():
         selected_forests=selected_forests,
         selected_forests_str=selected_forests_str,
         toggle_forest_url=toggle_forest_url_fn,
+        toggle_multi_forest_url=toggle_multi_forest_url_fn,
         active_count=active_count,
         url_with_category=url_with_category,
         annotations=annotations,
