@@ -1125,16 +1125,6 @@ PAGE_TEMPLATE = """
             </div>
             {% endif %}
 
-            <!-- Mobile: Taking Comments Now badge (very top of card) -->
-            {% if p.get('accepting_comments') %}
-            <div class="comment-open-badge mobile-only" style="width:calc(100% - 24px); margin:0 12px; box-sizing:border-box; animation:pulse-yellow 2.5s ease-in-out infinite;">
-                <span class="badge-title">{{ 'Taking Objections Now!' if annotations.get(p.project_url, {}).get('taking_objections') else 'Taking Comments Now!' }}</span>
-                {% if p.get('comment_deadline') %}
-                <span class="badge-deadline">{{ format_deadline(p.comment_deadline) }}</span>
-                {% endif %}
-            </div>
-            {% endif %}
-
             <!-- 3-COLUMN CARD BODY -->
             <div class="card-body">
 
@@ -1142,6 +1132,16 @@ PAGE_TEMPLATE = """
                 <div class="card-body-left">
                     {% set _fstate = forest_state_map.get(p.forest_code, '') %}
                     {% set _fcolor = state_colors.get(_fstate, {}).get('pill', '#2d7a1f') %}
+
+                    <!-- Mobile: Taking Comments Now badge -->
+                    {% if p.get('accepting_comments') %}
+                    <div class="comment-open-badge mobile-only">
+                        <span class="badge-title">{{ 'Taking Objections Now!' if annotations.get(p.project_url, {}).get('taking_objections') else 'Taking Comments Now!' }}</span>
+                        {% if p.get('comment_deadline') %}
+                        <span class="badge-deadline">{{ format_deadline(p.comment_deadline) }}</span>
+                        {% endif %}
+                    </div>
+                    {% endif %}
 
                     <!-- Forest name + NEW badge + share button -->
                     <div style="display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; margin-bottom:8px;">
