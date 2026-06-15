@@ -805,7 +805,7 @@ PAGE_TEMPLATE = """
 
 <div class="top-search-bar">
     <div class="top-search-inner">
-        <a href="mailto:andrew@wlfdc.org?subject=LFDC%20Tracker%20Feedback%20%2F%20Feature%20Suggestion" style="font-family:'Poppins',sans-serif; font-size:0.88rem; font-weight:400; color:white; text-decoration:none; background:#e05a2b; padding:7px 18px; white-space:nowrap;">Submit Feedback — Suggest Features</a>
+        <a href="mailto:andrew@wlfdc.org?subject=LFDC%20Tracker%20Feedback%20%2F%20Feature%20Suggestion" style="font-family:'Poppins',sans-serif; font-size:0.88rem; font-weight:400; color:white; text-decoration:none; background:#e05a2b; padding:7px 18px; white-space:nowrap;" class="desktop-only">Submit Feedback — Suggest Features</a>
         <form class="header-search" method="GET" action="/" id="searchform" style="position:relative;">
             <input type="hidden" name="forest"   value="{{ selected_forest }}">
             <input type="hidden" name="status"   value="{{ selected_status }}">
@@ -960,6 +960,12 @@ PAGE_TEMPLATE = """
         {% if annotations.get('_about_text') %}
         <div id="about-panel" class="about-panel">{{ annotations.get('_about_text') | safe }}</div>
         {% endif %}
+        <div class="mobile-only" style="padding-top:6px;">
+            <a href="mailto:andrew@wlfdc.org?subject=LFDC%20Tracker%20Feedback%20%2F%20Feature%20Suggestion"
+               style="font-family:'Poppins',sans-serif; font-size:0.82rem; font-weight:400; color:white; text-decoration:none; background:#e05a2b; padding:6px 16px; white-space:nowrap;">
+                Submit Feedback — Suggest Features
+            </a>
+        </div>
     </div>
 </div>
 
@@ -1121,7 +1127,7 @@ PAGE_TEMPLATE = """
 
             <!-- Mobile: Taking Comments Now badge (very top of card) -->
             {% if p.get('accepting_comments') %}
-            <div class="comment-open-badge mobile-only" style="width:100%; box-sizing:border-box; animation:pulse-yellow 2.5s ease-in-out infinite;">
+            <div class="comment-open-badge mobile-only" style="width:calc(100% - 24px); margin:0 12px; box-sizing:border-box; animation:pulse-yellow 2.5s ease-in-out infinite;">
                 <span class="badge-title">{{ 'Taking Objections Now!' if annotations.get(p.project_url, {}).get('taking_objections') else 'Taking Comments Now!' }}</span>
                 {% if p.get('comment_deadline') %}
                 <span class="badge-deadline">{{ format_deadline(p.comment_deadline) }}</span>
