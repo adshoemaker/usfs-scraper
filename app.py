@@ -612,9 +612,9 @@ PAGE_TEMPLATE = """
         .forest-cols-row { display: flex; gap: 0; justify-content: center; width: 100%; }
         .forest-totals-row { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; width: 100%; }
         .forest-totals-right { display: flex; align-items: center; gap: 12px; }
-        .forest-reset-btn { display: inline-block; padding: 5px 12px; background: #e05a2b; color: white; font-family: 'Poppins', sans-serif; font-size: 0.62rem; font-weight: 400; border: none; cursor: pointer; text-decoration: none; white-space: nowrap; }
+        .forest-reset-btn { display: inline-block; padding: 7px 18px; background: #e05a2b; color: white; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400; border: none; cursor: pointer; text-decoration: none; white-space: nowrap; }
         .forest-reset-btn:hover { background: #c44d22; }
-        .about-btn { display: inline-block; padding: 5px 12px; background: #e05a2b; color: white; font-family: 'Poppins', sans-serif; font-size: 0.62rem; font-weight: 400; border: none; cursor: pointer; white-space: nowrap; }
+        .about-btn { display: inline-block; padding: 7px 18px; background: #e05a2b; color: white; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400; border: none; cursor: pointer; white-space: nowrap; }
         .about-btn.open { background: white; color: #e05a2b; border: 1px solid #e05a2b; }
         .about-panel { display: none; background: white; border: 1px solid #ddd; padding: 16px 20px; margin-top: 8px; font-size: 0.82rem; color: #1a1a1a; line-height: 1.6; width: 100%; box-sizing: border-box; }
         .forest-col { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; padding: 0 8px; }
