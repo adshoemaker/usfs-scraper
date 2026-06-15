@@ -805,7 +805,8 @@ PAGE_TEMPLATE = """
 
 <div class="top-search-bar">
     <div class="top-search-inner">
-        <form class="header-search" method="GET" action="/" id="searchform" style="position:relative; flex:1;">
+        <a href="mailto:andrew@wlfdc.org?subject=LFDC%20Tracker%20Feedback%20%2F%20Feature%20Suggestion" style="font-family:'Poppins',sans-serif; font-size:0.88rem; font-weight:400; color:white; text-decoration:none; background:#e05a2b; padding:7px 18px; white-space:nowrap;">Submit Feedback — Suggest Features</a>
+        <form class="header-search" method="GET" action="/" id="searchform" style="position:relative;">
             <input type="hidden" name="forest"   value="{{ selected_forest }}">
             <input type="hidden" name="status"   value="{{ selected_status }}">
             <input type="hidden" name="days"     value="{{ selected_days }}">
@@ -959,12 +960,6 @@ PAGE_TEMPLATE = """
         {% if annotations.get('_about_text') %}
         <div id="about-panel" class="about-panel">{{ annotations.get('_about_text') | safe }}</div>
         {% endif %}
-        <div style="display:flex; justify-content:flex-start; padding-top:6px;">
-            <a href="mailto:andrew@wlfdc.org?subject=LFDC%20Tracker%20Feedback%20%2F%20Feature%20Suggestion"
-               style="font-family:'Poppins',sans-serif; font-size:0.82rem; font-weight:400; color:white; text-decoration:none; background:#e05a2b; padding:6px 16px; white-space:nowrap;">
-                Submit Feedback — Suggest Features
-            </a>
-        </div>
     </div>
 </div>
 
@@ -1124,6 +1119,16 @@ PAGE_TEMPLATE = """
             </div>
             {% endif %}
 
+            <!-- Mobile: Taking Comments Now badge (very top of card) -->
+            {% if p.get('accepting_comments') %}
+            <div class="comment-open-badge mobile-only" style="width:100%; box-sizing:border-box; animation:pulse-yellow 2.5s ease-in-out infinite;">
+                <span class="badge-title">{{ 'Taking Objections Now!' if annotations.get(p.project_url, {}).get('taking_objections') else 'Taking Comments Now!' }}</span>
+                {% if p.get('comment_deadline') %}
+                <span class="badge-deadline">{{ format_deadline(p.comment_deadline) }}</span>
+                {% endif %}
+            </div>
+            {% endif %}
+
             <!-- 3-COLUMN CARD BODY -->
             <div class="card-body">
 
@@ -1191,23 +1196,6 @@ PAGE_TEMPLATE = """
                             Learn About Thinning <svg style="width:12px;height:12px;flex-shrink:0;margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                         </a>
                         {% endif %}
-                    </div>
-                    {% endif %}
-                    <!-- Mobile: Taking Comments Now badge -->
-                    {% if p.get('accepting_comments') %}
-                    <div class="mobile-only" style="padding-top:10px; padding-bottom:4px;">
-                        {% set _days = days_left_to_comment(p.comment_deadline) if p.get('comment_deadline') else none %}
-                        {% if _days is not none %}
-                        <div style="font-size:0.7rem; font-weight:600; color:#a83030; padding-bottom:4px; font-family:'Poppins',sans-serif; letter-spacing:0.5px;">
-                            {% if _days == 0 %}Last Day to Comment{% elif _days == 1 %}1 Day Left to Comment{% elif _days > 0 %}{{ _days }} Days Left to Comment{% endif %}
-                        </div>
-                        {% endif %}
-                        <div class="comment-open-badge" style="width:100%; box-sizing:border-box;">
-                            <span class="badge-title">{{ 'Taking Objections Now!' if annotations.get(p.project_url, {}).get('taking_objections') else 'Taking Comments Now!' }}</span>
-                            {% if p.get('comment_deadline') %}
-                            <span class="badge-deadline">{{ format_deadline(p.comment_deadline) }}</span>
-                            {% endif %}
-                        </div>
                     </div>
                     {% endif %}
                     <div class="left-bottom">
