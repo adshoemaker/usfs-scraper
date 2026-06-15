@@ -1226,7 +1226,7 @@ PAGE_TEMPLATE = """
                     {% endif %}
                     {% endif %}
                     <div class="comment-open-badge">
-                        <span class="badge-title">Taking Comments Now!</span>
+                        <span class="badge-title">{{ 'Taking Objections Now!' if annotations.get(p.project_url, {}).get('taking_objections') else 'Taking Comments Now!' }}</span>
                         {% if p.get('comment_deadline') %}
                         <span class="badge-deadline">{{ format_deadline(p.comment_deadline) }}</span>
                         {% endif %}
@@ -1717,6 +1717,10 @@ ADMIN_TEMPLATE = """
     {% if p.comment_deadline %}<div class="deadline" style="margin-bottom:8px;">Comments due: {{ p.comment_deadline }}</div>{% endif %}
     <form method="POST" action="/admin/save">
       <input type="hidden" name="project_url" value="{{ p.project_url }}">
+      <label style="display:flex; align-items:center; gap:8px; margin-bottom:10px; font-size:0.82rem; cursor:pointer;">
+        <input type="checkbox" name="taking_objections" value="1" {{ 'checked' if annotations.get(p.project_url, {}).get('taking_objections') else '' }}>
+        Show badge as <strong>"Taking Objections Now"</strong> instead of "Taking Comments Now"
+      </label>
       <label>Intro Paragraph (bold, shown above comment, not copyable)</label>
       <textarea name="intro" placeholder="Enter bold intro text shown above the suggested comment...">{{ annotations.get(p.project_url, {}).get('intro', '') }}</textarea>
       <br>
@@ -2160,22 +2164,26 @@ def admin_save():
     if not session.get("admin_authed"):
         return redirect(url_for("admin_login"))
 
-    project_url = request.form.get("project_url", "").strip()
-    annotation  = request.form.get("annotation", "").strip()
-    intro       = request.form.get("intro", "").strip()
-    notes       = request.form.get("notes", "").strip()
+    project_url      = request.form.get("project_url", "").strip()
+    annotation       = request.form.get("annotation", "").strip()
+    intro            = request.form.get("intro", "").strip()
+    notes            = request.form.get("notes", "").strip()
+    taking_objections = request.form.get("taking_objections") == "1"
 
     if not project_url:
         return redirect(url_for("admin"))
 
     annotations = load_annotations()
-    if annotation or intro or notes:
-        annotations[project_url] = {
-            "intro":      intro,
-            "annotation": annotation,
-            "notes":      notes,
-            "updated":    datetime.datetime.utcnow().isoformat(),
-        }
+    if annotation or intro or notes or taking_objections:
+        existing = annotations.get(project_url, {})
+        existing.update({
+            "intro":             intro,
+            "annotation":        annotation,
+            "notes":             notes,
+            "taking_objections": taking_objections,
+            "updated":           datetime.datetime.utcnow().isoformat(),
+        })
+        annotations[project_url] = existing
     elif project_url in annotations:
         del annotations[project_url]
 
