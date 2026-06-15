@@ -610,7 +610,8 @@ PAGE_TEMPLATE = """
         .forest-summary { background: #f7f7f0; border-bottom: 1px solid var(--border); padding: 10px 20px; }
         .forest-summary-inner { max-width: 1150px; margin: 0 auto; display: flex; flex-direction: column; gap: 6px; }
         .forest-cols-row { display: flex; gap: 0; justify-content: center; width: 100%; }
-        .forest-totals-row { display: flex; flex-direction: row; align-items: center; justify-content: flex-end; gap: 12px; width: 100%; }
+        .forest-totals-row { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; width: 100%; }
+        .forest-totals-right { display: flex; align-items: center; gap: 12px; }
         .forest-reset-btn { display: inline-block; padding: 5px 12px; background: #e05a2b; color: white; font-family: 'Poppins', sans-serif; font-size: 0.62rem; font-weight: 400; border: none; cursor: pointer; text-decoration: none; white-space: nowrap; }
         .forest-reset-btn:hover { background: #c44d22; }
         .about-btn { display: inline-block; padding: 5px 12px; background: #e05a2b; color: white; font-family: 'Poppins', sans-serif; font-size: 0.62rem; font-weight: 400; border: none; cursor: pointer; white-space: nowrap; }
@@ -901,19 +902,23 @@ PAGE_TEMPLATE = """
             {% endfor %}
         </div>
         <div class="forest-totals-row">
-            <span class="summary-totals">
-                <strong>{{ forest_counts.values()|sum(attribute='total') + multi_count }}</strong> total
-            </span>
             {% if annotations.get('_about_text') %}
             <button type="button" class="about-btn" id="about-toggle"
                 onclick="var p=document.getElementById('about-panel'); var open=p.style.display==='block'; p.style.display=open?'none':'block'; this.classList.toggle('open',!open);">
                 About the LFDC NEPA Tracker
             </button>
+            {% else %}
+            <span></span>
             {% endif %}
-            <a href="/" class="forest-reset-btn">Reset</a>
+            <div class="forest-totals-right">
+                <span class="summary-totals">
+                    <strong>{{ forest_counts.values()|sum(attribute='total') + multi_count }}</strong> total
+                </span>
+                <a href="/" class="forest-reset-btn">Reset</a>
+            </div>
         </div>
         {% if annotations.get('_about_text') %}
-        <div id="about-panel" class="about-panel">{{ annotations.get('_about_text') }}</div>
+        <div id="about-panel" class="about-panel">{{ annotations.get('_about_text') | safe }}</div>
         {% endif %}
     </div>
 </div>
@@ -1706,10 +1711,52 @@ ADMIN_TEMPLATE = """
   <strong style="font-size:0.82rem; color:#555;">About the LFDC NEPA Tracker</strong>
   <p style="font-size:0.75rem; color:#666; margin:4px 0 8px;">Text shown when users click the "About" button on the main page. Leave blank to hide the button.</p>
   <form method="POST" action="/admin/save-about">
-    <textarea name="about_text" style="width:100%; height:100px; font-family:inherit; font-size:0.82rem; padding:8px; border:1px solid #ccc; box-sizing:border-box;">{{ annotations.get('_about_text', '') }}</textarea>
+    <div style="display:flex; gap:4px; margin-bottom:4px;">
+      <button type="button" onclick="wrapSelection('about_text','<b>','</b>')" style="padding:2px 8px; font-size:0.72rem; font-weight:700; border:1px solid #ccc; background:white; cursor:pointer;">B</button>
+      <button type="button" onclick="insertAt('about_text','<br>')" style="padding:2px 8px; font-size:0.72rem; border:1px solid #ccc; background:white; cursor:pointer;">↵ Line Break</button>
+      <button type="button" onclick="insertBullet('about_text')" style="padding:2px 8px; font-size:0.72rem; border:1px solid #ccc; background:white; cursor:pointer;">• Bullet</button>
+    </div>
+    <textarea name="about_text" id="about_text" style="width:100%; height:120px; font-family:inherit; font-size:0.82rem; padding:8px; border:1px solid #ccc; box-sizing:border-box;">{{ annotations.get('_about_text', '') }}</textarea>
     <br>
     <button type="submit" style="margin-top:8px; padding:5px 16px; background:#2d7a1f; color:white; border:none; font-family:inherit; font-size:0.78rem; cursor:pointer;">Save</button>
   </form>
+  <script>
+  function wrapSelection(id, before, after) {
+    var ta = document.getElementById(id);
+    var s = ta.selectionStart, e = ta.selectionEnd;
+    var sel = ta.value.substring(s, e);
+    ta.value = ta.value.substring(0, s) + before + sel + after + ta.value.substring(e);
+    ta.selectionStart = s + before.length;
+    ta.selectionEnd = e + before.length;
+    ta.focus();
+  }
+  function insertAt(id, text) {
+    var ta = document.getElementById(id);
+    var s = ta.selectionStart;
+    ta.value = ta.value.substring(0, s) + text + ta.value.substring(s);
+    ta.selectionStart = ta.selectionEnd = s + text.length;
+    ta.focus();
+  }
+  function insertBullet(id) {
+    var ta = document.getElementById(id);
+    var s = ta.selectionStart;
+    var before = ta.value.substring(0, s);
+    var after = ta.value.substring(s);
+    // Check if we're already inside a <ul>
+    var lastUlOpen = before.lastIndexOf('<ul>');
+    var lastUlClose = before.lastIndexOf('</ul>');
+    if (lastUlOpen > lastUlClose) {
+      // Already in a list — just add a new <li>
+      ta.value = before + '<li></li>' + after;
+      ta.selectionStart = ta.selectionEnd = s + 4;
+    } else {
+      // Start a new list
+      ta.value = before + '<ul><li></li></ul>' + after;
+      ta.selectionStart = ta.selectionEnd = s + 8;
+    }
+    ta.focus();
+  }
+  </script>
 </div>
 
 {% if flash %}
