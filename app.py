@@ -603,8 +603,8 @@ PAGE_TEMPLATE = """
         .header-search input[type="text"] { padding: 7px 14px; border: 1px solid #ccc; border-radius: 0; font-family: 'Poppins', sans-serif; font-size: 0.88rem; background: white; color: #1a1a1a; outline: none; flex: 1; }
         .header-search input[type="text"]::placeholder { color: #aaa; }
         .header-search input[type="text"]:focus { border-color: #888; }
-        .header-search button { padding: 7px 18px; background: #e05a2b; color: white; border: none; border-radius: 0; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400; cursor: pointer; white-space: nowrap; }
-        .header-search button:hover { background: #c44d22; }
+        .header-search button { padding: 7px 18px; background: #8fa68e; color: white; border: none; border-radius: 0; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400; cursor: pointer; white-space: nowrap; }
+        .header-search button:hover { background: #7a9079; }
 
         /* ── Forest summary ── */
         .forest-summary { background: #f7f7f0; border-bottom: 1px solid var(--border); padding: 10px 20px; }
@@ -614,8 +614,9 @@ PAGE_TEMPLATE = """
         .forest-totals-right { display: flex; align-items: center; gap: 12px; }
         .forest-reset-btn { display: inline-block; padding: 7px 18px; background: #e05a2b; color: white; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400; border: none; cursor: pointer; text-decoration: none; white-space: nowrap; }
         .forest-reset-btn:hover { background: #c44d22; }
-        .about-btn { display: inline-block; padding: 7px 18px; background: #e05a2b; color: white; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400; border: none; cursor: pointer; white-space: nowrap; }
-        .about-btn.open { background: white; color: #e05a2b; border: 1px solid #e05a2b; }
+        .about-btn { display: inline-block; padding: 7px 18px; background: #8fa68e; color: white; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400; border: none; cursor: pointer; white-space: nowrap; }
+        .about-btn.open { background: white; color: #8fa68e; border: 1px solid #8fa68e; }
+        .about-btn:hover { background: #7a9079; }
         .about-panel { display: none; background: white; border: 1px solid #ddd; padding: 16px 20px; margin-top: 8px; font-size: 0.82rem; color: #1a1a1a; line-height: 1.6; width: 100%; box-sizing: border-box; }
         .forest-col { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; padding: 0 8px; }
         .forest-col-label { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-dim); margin-bottom: 2px; }
@@ -805,7 +806,7 @@ PAGE_TEMPLATE = """
 
 <div class="top-search-bar">
     <div class="top-search-inner">
-        <a href="mailto:andrew@wlfdc.org?subject=LFDC%20Tracker%20Feedback%20%2F%20Feature%20Suggestion" style="font-family:'Poppins',sans-serif; font-size:0.88rem; font-weight:400; color:white; text-decoration:none; background:#e05a2b; padding:7px 18px; white-space:nowrap;" class="desktop-only">Submit Feedback — Suggest Features</a>
+        <a href="mailto:andrew@wlfdc.org?subject=LFDC%20Tracker%20Feedback%20%2F%20Feature%20Suggestion" style="font-family:'Poppins',sans-serif; font-size:0.88rem; font-weight:400; color:white; text-decoration:none; background:#8fa68e; padding:7px 18px; white-space:nowrap;" class="desktop-only">Submit Feedback — Suggest Features</a>
         <form class="header-search" method="GET" action="/" id="searchform" style="position:relative;">
             <input type="hidden" name="forest"   value="{{ selected_forest }}">
             <input type="hidden" name="status"   value="{{ selected_status }}">
@@ -962,7 +963,7 @@ PAGE_TEMPLATE = """
         {% endif %}
         <div class="mobile-only" style="padding-top:6px;">
             <a href="mailto:andrew@wlfdc.org?subject=LFDC%20Tracker%20Feedback%20%2F%20Feature%20Suggestion"
-               style="font-family:'Poppins',sans-serif; font-size:0.82rem; font-weight:400; color:white; text-decoration:none; background:#e05a2b; padding:6px 16px; white-space:nowrap;">
+               style="font-family:'Poppins',sans-serif; font-size:0.82rem; font-weight:400; color:white; text-decoration:none; background:#8fa68e; padding:6px 16px; white-space:nowrap;">
                 Submit Feedback — Suggest Features
             </a>
         </div>
