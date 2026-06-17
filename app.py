@@ -1355,7 +1355,7 @@ PAGE_TEMPLATE = """
 </div>
 
 <footer>
-    Data scraped from fs.usda.gov &nbsp;·&nbsp; Last updated: {{ last_scraped }}
+    Last updated: {{ last_scraped }}
 </footer>
 
 <script>
