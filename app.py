@@ -15,7 +15,9 @@ import base64
 import urllib.request
 import urllib.error
 import urllib.parse
-from flask import Flask, request, render_template_string, session, redirect, url_for
+from flask import Flask, request, render_template_string, session, redirect, url_for, Response
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 
 def format_deadline(deadline_str):
     """Convert deadline string to short Pacific time format."""
@@ -106,6 +108,13 @@ def days_left_to_comment(deadline_str):
 
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static'))
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "dev-secret-change-in-production")
+
+limiter = Limiter(
+    get_remote_address,
+    app=app,
+    default_limits=["60 per minute", "500 per hour"],
+    storage_uri="memory://",
+)
 
 STATUS_COLORS = {
     "Developing Proposal": "#9b72d8",
@@ -1440,6 +1449,43 @@ def toggle_forest_url_fn(code, current_str):
     # Don't carry category when toggling forest — avoids zero results
     if new:                       args["forests"]  = ",".join(new)
     return "/?" + urlencode(args) if args else "/"
+
+
+@app.before_request
+def exempt_admin_from_limiter():
+    if request.path.startswith("/admin"):
+        limiter.exempt(request.endpoint)
+
+
+@app.route("/robots.txt")
+@limiter.exempt
+def robots_txt():
+    content = "\n".join([
+        "User-agent: *",
+        "Disallow: /",
+        "",
+        "User-agent: GPTBot",
+        "Disallow: /",
+        "",
+        "User-agent: ClaudeBot",
+        "Disallow: /",
+        "",
+        "User-agent: Amazonbot",
+        "Disallow: /",
+        "",
+        "User-agent: anthropic-ai",
+        "Disallow: /",
+        "",
+        "User-agent: Google-Extended",
+        "Disallow: /",
+        "",
+        "User-agent: CCBot",
+        "Disallow: /",
+        "",
+        "User-agent: Bytespider",
+        "Disallow: /",
+    ])
+    return Response(content, mimetype="text/plain")
 
 
 @app.route("/")
