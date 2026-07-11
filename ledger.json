@@ -627,6 +627,10 @@
     "first_seen": "2026-05-28",
     "name": "Forest Wide Thinning & Potential Control Line Treatments"
   },
+  "https://www.fs.usda.gov/r06/giffordpinchot/projects/309399": {
+    "first_seen": "2026-07-11",
+    "name": "Pine Tree Spring Off-Stream Livestock Watering Infrastructure"
+  },
   "https://www.fs.usda.gov/r06/giffordpinchot/projects/65234": {
     "first_seen": "2026-05-28",
     "name": "2020 Flood Damage ERFO Repairs"
@@ -1557,7 +1561,7 @@
   },
   "https://www.fs.usda.gov/r10/tongass/projects/163423": {
     "first_seen": "2026-05-28",
-    "name": "R10 TNF HRD 2025 Chichagof Small Sales"
+    "name": "Tongass - Chichagof Small Sales - HRD"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/164223": {
     "first_seen": "2026-05-28",
@@ -1573,7 +1577,7 @@
   },
   "https://www.fs.usda.gov/r10/tongass/projects/209379": {
     "first_seen": "2026-07-01",
-    "name": "R10 TNF KMRD 2026 Lemon Lake Landslide Road Realignment"
+    "name": "Tongass - Lemon Lake Landslide Road Realignment - KMRD"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/209835": {
     "first_seen": "2026-05-28",
@@ -1605,7 +1609,7 @@
   },
   "https://www.fs.usda.gov/r10/tongass/projects/301827": {
     "first_seen": "2026-05-28",
-    "name": "R10 TNF TBRD Twin Mountain II Timber Sale"
+    "name": "Tongass NF Twin Mountain II Timber Sale (Thorne Bay RD)"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/302697": {
     "first_seen": "2026-05-28",
@@ -1617,15 +1621,15 @@
   },
   "https://www.fs.usda.gov/r10/tongass/projects/303899": {
     "first_seen": "2026-05-28",
-    "name": "R10 TNF KMRD South Revillagigedo Integrated Resource Project"
+    "name": "Tongass NF South Revillagigedo Integrated Resource Project (Ketchikan Misty Fjords RD)"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/305292": {
     "first_seen": "2026-05-28",
-    "name": "R10 TNF SRD Deer Lake Coho Rearing Facility Permit Re-Issuance (NSRAA)"
+    "name": "Tongass - Deer Lake Coho Rearing Facility Permit Re-Issuance (for NSRAA on SRD)"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/305293": {
     "first_seen": "2026-05-28",
-    "name": "R10 TNF SRD Hidden Falls Fish Hatchery Alaska Department of Fish and Game"
+    "name": "Tongass - Hidden Falls Fish Hatchery Alaska Department of Fish and Game (SRD)"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/311939": {
     "first_seen": "2026-05-28",
