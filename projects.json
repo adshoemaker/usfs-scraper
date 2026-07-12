@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-11T14:57:37.380531+00:00",
+  "scraped_at": "2026-07-12T15:01:12.507430+00:00",
   "total_projects": 410,
   "forests_scraped": 21,
   "projects": [
@@ -14,7 +14,7 @@
       "status": "Developing Proposal",
       "unit": "Mt. Baker Ranger District",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-07-11T14:44:43.384344+00:00",
+      "scraped_at": "2026-07-12T14:47:59.908807+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -51,7 +51,7 @@
       "status": "On Hold",
       "unit": "Mt Baker Ranger District",
       "purpose": "Recreation management|Wildlife, fish, rare plants|Forest products|Road management",
-      "scraped_at": "2026-07-11T14:44:43.384416+00:00",
+      "scraped_at": "2026-07-12T14:47:59.908909+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -108,7 +108,7 @@
       "status": "Completed",
       "unit": "Darrington Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:44:43.384469+00:00",
+      "scraped_at": "2026-07-12T14:47:59.908992+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -124,7 +124,7 @@
       "status": "In Progress",
       "unit": "Skykomish Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:44:43.384516+00:00",
+      "scraped_at": "2026-07-12T14:47:59.909060+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -161,7 +161,7 @@
       "status": "Completed",
       "unit": "Skykomish Ranger District",
       "purpose": "Regulations, directives, orders",
-      "scraped_at": "2026-07-11T14:44:43.384559+00:00",
+      "scraped_at": "2026-07-12T14:47:59.909124+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -177,7 +177,7 @@
       "status": "Developing Proposal",
       "unit": "Mt. Baker-Snoqualmie National Forest",
       "purpose": "Forest products",
-      "scraped_at": "2026-07-11T14:44:43.384602+00:00",
+      "scraped_at": "2026-07-12T14:47:59.909193+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -214,7 +214,7 @@
       "status": "Completed",
       "unit": "Darrington Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:44:43.384642+00:00",
+      "scraped_at": "2026-07-12T14:47:59.909256+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -230,7 +230,7 @@
       "status": "Completed",
       "unit": "Darrington Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:44:43.384700+00:00",
+      "scraped_at": "2026-07-12T14:47:59.909327+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -246,7 +246,7 @@
       "status": "Completed",
       "unit": "Mt Baker Ranger District",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:44:43.384749+00:00",
+      "scraped_at": "2026-07-12T14:47:59.909399+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -262,7 +262,7 @@
       "status": "Completed",
       "unit": "Mt. Baker Ranger District",
       "purpose": "Road management",
-      "scraped_at": "2026-07-11T14:44:43.384788+00:00",
+      "scraped_at": "2026-07-12T14:47:59.909460+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -278,7 +278,7 @@
       "status": "Developing Proposal",
       "unit": "Snoqualmie Ranger District",
       "purpose": "Vegetation management (other than forest products)|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:44:43.384830+00:00",
+      "scraped_at": "2026-07-12T14:47:59.909519+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -315,7 +315,7 @@
       "status": "Completed",
       "unit": "Snoqualmie Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:44:43.384871+00:00",
+      "scraped_at": "2026-07-12T14:47:59.909578+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -331,7 +331,7 @@
       "status": "Completed",
       "unit": "Mt Baker Ranger District",
       "purpose": "Road management",
-      "scraped_at": "2026-07-11T14:44:43.384909+00:00",
+      "scraped_at": "2026-07-12T14:47:59.909637+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -347,7 +347,7 @@
       "status": "Developing Proposal",
       "unit": "Mt. Baker-Snoqualmie National Forest",
       "purpose": "",
-      "scraped_at": "2026-07-11T14:44:43.384946+00:00",
+      "scraped_at": "2026-07-12T14:47:59.909700+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -384,7 +384,7 @@
       "status": "Completed",
       "unit": "R6 - Pacific Northwest Region All Units",
       "purpose": "Recreation management|Special area management",
-      "scraped_at": "2026-07-11T14:44:43.384985+00:00",
+      "scraped_at": "2026-07-12T14:47:59.909763+00:00",
       "milestones": [],
       "is_multi_forest": true,
       "first_seen": "2026-05-28",
@@ -401,7 +401,7 @@
       "status": "Completed",
       "unit": "Mt Baker Ranger District",
       "purpose": "Recreation management|Facility management",
-      "scraped_at": "2026-07-11T14:44:43.385022+00:00",
+      "scraped_at": "2026-07-12T14:47:59.909821+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -417,7 +417,7 @@
       "status": "Developing Proposal",
       "unit": "R6 - Pacific Northwest Region All Units",
       "purpose": "Wildlife, fish, rare plants|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:44:43.385058+00:00",
+      "scraped_at": "2026-07-12T14:47:59.909879+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -465,7 +465,7 @@
       "status": "Completed",
       "unit": "Skykomish Ranger District",
       "purpose": "Road management|Recreation management",
-      "scraped_at": "2026-07-11T14:44:43.385097+00:00",
+      "scraped_at": "2026-07-12T14:47:59.909963+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -481,7 +481,7 @@
       "status": "Completed",
       "unit": "Darrington Ranger District",
       "purpose": "Special use management|Recreation management",
-      "scraped_at": "2026-07-11T14:44:43.385136+00:00",
+      "scraped_at": "2026-07-12T14:47:59.910029+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -497,7 +497,7 @@
       "status": "Completed",
       "unit": "Snoqualmie Ranger District",
       "purpose": "Road management|Recreation management",
-      "scraped_at": "2026-07-11T14:44:43.385174+00:00",
+      "scraped_at": "2026-07-12T14:47:59.910089+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -513,7 +513,7 @@
       "status": "Completed",
       "unit": "Snoqualmie Ranger District",
       "purpose": "Road management",
-      "scraped_at": "2026-07-11T14:44:43.385211+00:00",
+      "scraped_at": "2026-07-12T14:47:59.910157+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -529,7 +529,7 @@
       "status": "Completed",
       "unit": "Snoqualmie Ranger District",
       "purpose": "Road management|Recreation management",
-      "scraped_at": "2026-07-11T14:44:43.385246+00:00",
+      "scraped_at": "2026-07-12T14:47:59.910215+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -545,7 +545,7 @@
       "status": "Completed",
       "unit": "Snoqualmie Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:44:43.385282+00:00",
+      "scraped_at": "2026-07-12T14:47:59.910272+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -561,7 +561,7 @@
       "status": "On Hold",
       "unit": "Skykomish Ranger District",
       "purpose": "Wildlife, fish, rare plants|Vegetation management (other than forest products)|Watershed management",
-      "scraped_at": "2026-07-11T14:44:43.385320+00:00",
+      "scraped_at": "2026-07-12T14:47:59.910333+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -608,7 +608,7 @@
       "status": "Developing Proposal",
       "unit": "Darrington Ranger District",
       "purpose": "Recreation management|Road management",
-      "scraped_at": "2026-07-11T14:44:43.385355+00:00",
+      "scraped_at": "2026-07-12T14:47:59.910395+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -645,7 +645,7 @@
       "status": "Completed",
       "unit": "Skykomish Ranger District",
       "purpose": "Recreation management|Facility management",
-      "scraped_at": "2026-07-11T14:44:43.385391+00:00",
+      "scraped_at": "2026-07-12T14:47:59.910457+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -661,7 +661,7 @@
       "status": "In Progress",
       "unit": "Darrington Ranger District",
       "purpose": "Road management|Watershed management",
-      "scraped_at": "2026-07-11T14:44:43.385427+00:00",
+      "scraped_at": "2026-07-12T14:47:59.910515+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -698,7 +698,7 @@
       "status": "Completed",
       "unit": "Snoqualmie Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:44:43.385465+00:00",
+      "scraped_at": "2026-07-12T14:47:59.910574+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -714,7 +714,7 @@
       "status": "Completed",
       "unit": "Mt Baker-Snoqualmie National Forest All Units",
       "purpose": "Special use management|Research",
-      "scraped_at": "2026-07-11T14:44:43.385506+00:00",
+      "scraped_at": "2026-07-12T14:47:59.910637+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -730,7 +730,7 @@
       "status": "Developing Proposal",
       "unit": "Olympic National Forest",
       "purpose": "Vegetation management (other than forest products)|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:45:21.149978+00:00",
+      "scraped_at": "2026-07-12T14:48:43.478662+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -767,7 +767,7 @@
       "status": "In Progress",
       "unit": "Olympic National Forest All Units",
       "purpose": "Road management",
-      "scraped_at": "2026-07-11T14:45:21.150034+00:00",
+      "scraped_at": "2026-07-12T14:48:43.478737+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -819,7 +819,7 @@
       "status": "Completed",
       "unit": "Olympic National Forest All Units",
       "purpose": "Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:45:21.150074+00:00",
+      "scraped_at": "2026-07-12T14:48:43.478800+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -835,7 +835,7 @@
       "status": "Completed",
       "unit": "Olympic National Forest All Units",
       "purpose": "Recreation management|Facility management",
-      "scraped_at": "2026-07-11T14:45:21.150114+00:00",
+      "scraped_at": "2026-07-12T14:48:43.478862+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -851,7 +851,7 @@
       "status": "In Progress",
       "unit": "Methow Valley Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:45:38.515630+00:00",
+      "scraped_at": "2026-07-12T14:48:56.982356+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -903,7 +903,7 @@
       "status": "Developing Proposal",
       "unit": "Wenatchee River Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:45:38.515686+00:00",
+      "scraped_at": "2026-07-12T14:48:56.982444+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -950,7 +950,7 @@
       "status": "On Hold",
       "unit": "Wenatchee River Ranger District",
       "purpose": "Fuels management|Watershed management",
-      "scraped_at": "2026-07-11T14:45:38.515738+00:00",
+      "scraped_at": "2026-07-12T14:48:56.982508+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1007,7 +1007,7 @@
       "status": "Completed",
       "unit": "Entiat Ranger District",
       "purpose": "Road management|Fuels management",
-      "scraped_at": "2026-07-11T14:45:38.515779+00:00",
+      "scraped_at": "2026-07-12T14:48:56.982569+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -1023,7 +1023,7 @@
       "status": "Completed",
       "unit": "Wenatchee River Ranger District",
       "purpose": "Forest products|Fuels management|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:45:38.515816+00:00",
+      "scraped_at": "2026-07-12T14:48:56.982629+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -1039,7 +1039,7 @@
       "status": "Completed",
       "unit": "Entiat Ranger District",
       "purpose": "Road management",
-      "scraped_at": "2026-07-11T14:45:38.515853+00:00",
+      "scraped_at": "2026-07-12T14:48:56.982689+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -1055,7 +1055,7 @@
       "status": "Completed",
       "unit": "Wenatchee River Ranger District",
       "purpose": "Road management",
-      "scraped_at": "2026-07-11T14:45:38.515889+00:00",
+      "scraped_at": "2026-07-12T14:48:56.982749+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -1071,7 +1071,7 @@
       "status": "In Progress",
       "unit": "Okanogan-Wenatchee National Forest All Units",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:45:38.515925+00:00",
+      "scraped_at": "2026-07-12T14:48:56.982808+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1123,7 +1123,7 @@
       "status": "In Progress",
       "unit": "Methow Valley Ranger District",
       "purpose": "Special use management|Watershed management",
-      "scraped_at": "2026-07-11T14:45:38.515963+00:00",
+      "scraped_at": "2026-07-12T14:48:56.982868+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1160,7 +1160,7 @@
       "status": "Completed",
       "unit": "Cle Elum Ranger District",
       "purpose": "Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:45:38.516000+00:00",
+      "scraped_at": "2026-07-12T14:48:56.982952+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -1176,7 +1176,7 @@
       "status": "Developing Proposal",
       "unit": "Okanogan-Wenatchee National Forest",
       "purpose": "Regulations, directives, orders",
-      "scraped_at": "2026-07-11T14:45:38.516037+00:00",
+      "scraped_at": "2026-07-12T14:48:56.983013+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1213,7 +1213,7 @@
       "status": "In Progress",
       "unit": "Wenatchee River Ranger District",
       "purpose": "Road management",
-      "scraped_at": "2026-07-11T14:45:38.516073+00:00",
+      "scraped_at": "2026-07-12T14:48:56.983072+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1265,7 +1265,7 @@
       "status": "Completed",
       "unit": "Cle Elum Ranger District",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:45:38.516109+00:00",
+      "scraped_at": "2026-07-12T14:48:56.983131+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -1281,7 +1281,7 @@
       "status": "Developing Proposal",
       "unit": "Methow Valley Ranger District",
       "purpose": "Forest products|Fuels management|Road management|Vegetation management (other than forest products)|Watershed management|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:45:38.516145+00:00",
+      "scraped_at": "2026-07-12T14:48:56.983189+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1318,7 +1318,7 @@
       "status": "Developing Proposal",
       "unit": "Cle Elum Ranger District",
       "purpose": "Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:45:38.516180+00:00",
+      "scraped_at": "2026-07-12T14:48:56.983249+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1375,7 +1375,7 @@
       "status": "Developing Proposal",
       "unit": "Okanogan-Wenatchee National Forest",
       "purpose": "Grazing management|Land management planning|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:45:38.516248+00:00",
+      "scraped_at": "2026-07-12T14:48:56.983369+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1412,7 +1412,7 @@
       "status": "Completed",
       "unit": "Chelan Ranger District",
       "purpose": "Watershed management",
-      "scraped_at": "2026-07-11T14:45:38.516283+00:00",
+      "scraped_at": "2026-07-12T14:48:56.983430+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -1428,7 +1428,7 @@
       "status": "Developing Proposal",
       "unit": "Naches Ranger District",
       "purpose": "Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:45:38.516355+00:00",
+      "scraped_at": "2026-07-12T14:48:56.983549+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1465,7 +1465,7 @@
       "status": "Developing Proposal",
       "unit": "Methow Valley Ranger District",
       "purpose": "Forest products|Vegetation management (other than forest products)|Watershed management|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:45:38.516392+00:00",
+      "scraped_at": "2026-07-12T14:48:56.983608+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1502,7 +1502,7 @@
       "status": "Developing Proposal",
       "unit": "Cle Elum Ranger District",
       "purpose": "Forest products|Fuels management|Road management|Watershed management|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:45:38.516427+00:00",
+      "scraped_at": "2026-07-12T14:48:56.983667+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1539,7 +1539,7 @@
       "status": "Completed",
       "unit": "Cle Elum Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:45:38.516462+00:00",
+      "scraped_at": "2026-07-12T14:48:56.983726+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -1555,7 +1555,7 @@
       "status": "In Progress",
       "unit": "Naches Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:45:38.516499+00:00",
+      "scraped_at": "2026-07-12T14:48:56.983785+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1607,7 +1607,7 @@
       "status": "Completed",
       "unit": "Cowlitz Ranger District",
       "purpose": "Road management",
-      "scraped_at": "2026-07-11T14:46:37.100038+00:00",
+      "scraped_at": "2026-07-12T14:49:57.299658+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -1623,7 +1623,7 @@
       "status": "Completed",
       "unit": "Mount St. Helens National Volcanic Monument",
       "purpose": "Wildlife, fish, rare plants|Watershed management",
-      "scraped_at": "2026-07-11T14:46:37.100097+00:00",
+      "scraped_at": "2026-07-12T14:49:57.299735+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -1639,7 +1639,7 @@
       "status": "Developing Proposal",
       "unit": "Gifford Pinchot National Forest",
       "purpose": "",
-      "scraped_at": "2026-07-11T14:46:37.100137+00:00",
+      "scraped_at": "2026-07-12T14:49:57.299798+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1676,7 +1676,7 @@
       "status": "Completed",
       "unit": "Mt. Adams Ranger District",
       "purpose": "Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:46:37.100174+00:00",
+      "scraped_at": "2026-07-12T14:49:57.299863+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -1692,7 +1692,7 @@
       "status": "Developing Proposal",
       "unit": "Mt. Adams Ranger District",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:46:37.100212+00:00",
+      "scraped_at": "2026-07-12T14:49:57.299948+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1729,7 +1729,7 @@
       "status": "Developing Proposal",
       "unit": "Mt. Adams Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:46:37.100251+00:00",
+      "scraped_at": "2026-07-12T14:49:57.300012+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1766,7 +1766,7 @@
       "status": "In Progress",
       "unit": "Mount St. Helens National Volcanic Monument",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:46:37.100289+00:00",
+      "scraped_at": "2026-07-12T14:49:57.300075+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1803,7 +1803,7 @@
       "status": "Developing Proposal",
       "unit": "Mt. Adams Ranger District",
       "purpose": "Grazing management",
-      "scraped_at": "2026-07-11T14:46:37.100327+00:00",
+      "scraped_at": "2026-07-12T14:49:57.300138+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1840,7 +1840,7 @@
       "status": "Developing Proposal",
       "unit": "Gifford Pinchot National Forest",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-07-11T14:46:37.100363+00:00",
+      "scraped_at": "2026-07-12T14:49:57.300200+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1877,7 +1877,7 @@
       "status": "Completed",
       "unit": "Gifford Pinchot National Forest All Units",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:46:37.100400+00:00",
+      "scraped_at": "2026-07-12T14:49:57.300261+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -1893,7 +1893,7 @@
       "status": "Developing Proposal",
       "unit": "Gifford Pinchot National Forest",
       "purpose": "Regulations, directives, orders",
-      "scraped_at": "2026-07-11T14:46:37.100436+00:00",
+      "scraped_at": "2026-07-12T14:49:57.300321+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1930,7 +1930,7 @@
       "status": "Developing Proposal",
       "unit": "Newport Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:47:08.311565+00:00",
+      "scraped_at": "2026-07-12T14:50:21.705541+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1967,7 +1967,7 @@
       "status": "Developing Proposal",
       "unit": "Newport Ranger District",
       "purpose": "",
-      "scraped_at": "2026-07-11T14:47:08.311622+00:00",
+      "scraped_at": "2026-07-12T14:50:21.705617+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2004,7 +2004,7 @@
       "status": "Developing Proposal",
       "unit": "Tonasket Ranger District",
       "purpose": "Fuels management|Vegetation management (other than forest products)|Watershed management",
-      "scraped_at": "2026-07-11T14:47:08.311662+00:00",
+      "scraped_at": "2026-07-12T14:50:21.705678+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2041,7 +2041,7 @@
       "status": "Developing Proposal",
       "unit": "Three Rivers Ranger District",
       "purpose": "",
-      "scraped_at": "2026-07-11T14:47:08.311711+00:00",
+      "scraped_at": "2026-07-12T14:50:21.705737+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2078,7 +2078,7 @@
       "status": "Developing Proposal",
       "unit": "Three Rivers Ranger District",
       "purpose": "",
-      "scraped_at": "2026-07-11T14:47:08.311755+00:00",
+      "scraped_at": "2026-07-12T14:50:21.705795+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2115,7 +2115,7 @@
       "status": "Completed",
       "unit": "Newport Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-07-11T14:47:08.311798+00:00",
+      "scraped_at": "2026-07-12T14:50:21.705853+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -2131,7 +2131,7 @@
       "status": "Developing Proposal",
       "unit": "Three Rivers Ranger District",
       "purpose": "",
-      "scraped_at": "2026-07-11T14:47:08.311839+00:00",
+      "scraped_at": "2026-07-12T14:50:21.705931+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2168,7 +2168,7 @@
       "status": "Completed",
       "unit": "Colville National Forest All Units",
       "purpose": "Fuels management|Recreation management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:47:08.311878+00:00",
+      "scraped_at": "2026-07-12T14:50:21.705993+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -2184,7 +2184,7 @@
       "status": "Developing Proposal",
       "unit": "Newport Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-07-11T14:47:08.311916+00:00",
+      "scraped_at": "2026-07-12T14:50:21.706052+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2221,7 +2221,7 @@
       "status": "Completed",
       "unit": "Three Rivers Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-07-11T14:47:08.311955+00:00",
+      "scraped_at": "2026-07-12T14:50:21.706111+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -2237,7 +2237,7 @@
       "status": "Cancelled",
       "unit": "Sullivan Lake Ranger District",
       "purpose": "Grazing management",
-      "scraped_at": "2026-07-11T14:47:08.311995+00:00",
+      "scraped_at": "2026-07-12T14:50:21.706168+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -2304,7 +2304,7 @@
       "status": "Developing Proposal",
       "unit": "Three Rivers Ranger District",
       "purpose": "",
-      "scraped_at": "2026-07-11T14:47:08.312034+00:00",
+      "scraped_at": "2026-07-12T14:50:21.706226+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2341,7 +2341,7 @@
       "status": "Developing Proposal",
       "unit": "Newport Ranger District",
       "purpose": "Vegetation management (other than forest products)|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:47:08.312071+00:00",
+      "scraped_at": "2026-07-12T14:50:21.706283+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2378,7 +2378,7 @@
       "status": "Developing Proposal",
       "unit": "Republic Ranger District",
       "purpose": "Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:47:08.312148+00:00",
+      "scraped_at": "2026-07-12T14:50:21.706398+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2415,7 +2415,7 @@
       "status": "On Hold",
       "unit": "Three Rivers Ranger District",
       "purpose": "Wildlife, fish, rare plants|Watershed management|Road management",
-      "scraped_at": "2026-07-11T14:47:08.312222+00:00",
+      "scraped_at": "2026-07-12T14:50:21.706513+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2467,7 +2467,7 @@
       "status": "Developing Proposal",
       "unit": "Newport Ranger District",
       "purpose": "",
-      "scraped_at": "2026-07-11T14:47:08.312261+00:00",
+      "scraped_at": "2026-07-12T14:50:21.706570+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2504,7 +2504,7 @@
       "status": "Developing Proposal",
       "unit": "Newport Ranger District",
       "purpose": "Forest products|Fuels management|Grazing management|Heritage resource management|Recreation management|Road management|Vegetation management (other than forest products)|Watershed management|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:47:08.312297+00:00",
+      "scraped_at": "2026-07-12T14:50:21.706627+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2541,7 +2541,7 @@
       "status": "Developing Proposal",
       "unit": "Newport Ranger District",
       "purpose": "",
-      "scraped_at": "2026-07-11T14:47:08.312336+00:00",
+      "scraped_at": "2026-07-12T14:50:21.706691+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2578,7 +2578,7 @@
       "status": "Developing Proposal",
       "unit": "Newport Ranger District",
       "purpose": "",
-      "scraped_at": "2026-07-11T14:47:08.312373+00:00",
+      "scraped_at": "2026-07-12T14:50:21.706750+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2615,7 +2615,7 @@
       "status": "Developing Proposal",
       "unit": "Republic Ranger District",
       "purpose": "Fuels management|Recreation management|Vegetation management (other than forest products)|Watershed management",
-      "scraped_at": "2026-07-11T14:47:08.312409+00:00",
+      "scraped_at": "2026-07-12T14:50:21.706807+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2652,7 +2652,7 @@
       "status": "Developing Proposal",
       "unit": "Newport Ranger District",
       "purpose": "",
-      "scraped_at": "2026-07-11T14:47:08.312447+00:00",
+      "scraped_at": "2026-07-12T14:50:21.706865+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2689,7 +2689,7 @@
       "status": "On Hold",
       "unit": "Rogue River-Siskiyou National Forest All Units",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:48:09.121064+00:00",
+      "scraped_at": "2026-07-12T14:51:26.103225+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2741,7 +2741,7 @@
       "status": "In Progress",
       "unit": "Rogue River-Siskiyou National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:48:09.121120+00:00",
+      "scraped_at": "2026-07-12T14:51:26.103298+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2793,7 +2793,7 @@
       "status": "On Hold",
       "unit": "Rogue River-Siskiyou National Forest All Units",
       "purpose": "Facility management",
-      "scraped_at": "2026-07-11T14:48:09.121160+00:00",
+      "scraped_at": "2026-07-12T14:51:26.103360+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2845,7 +2845,7 @@
       "status": "Completed",
       "unit": "Gold Beach Ranger District",
       "purpose": "Forest products|Fuels management|Watershed management|Road management",
-      "scraped_at": "2026-07-11T14:48:09.121198+00:00",
+      "scraped_at": "2026-07-12T14:51:26.103419+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -2861,7 +2861,7 @@
       "status": "Completed",
       "unit": "Rogue River-Siskiyou National Forest All Units",
       "purpose": "Recreation management|Vegetation management (other than forest products)|Special use management",
-      "scraped_at": "2026-07-11T14:48:09.121234+00:00",
+      "scraped_at": "2026-07-12T14:51:26.103478+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -2877,7 +2877,7 @@
       "status": "Developing Proposal",
       "unit": "Wild Rivers Ranger District",
       "purpose": "",
-      "scraped_at": "2026-07-11T14:48:09.121270+00:00",
+      "scraped_at": "2026-07-12T14:51:26.103537+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2914,7 +2914,7 @@
       "status": "Developing Proposal",
       "unit": "High Cascades Ranger District",
       "purpose": "Forest products|Fuels management|Grazing management|Heritage resource management|Recreation management|Special area management|Vegetation management (other than forest products)|Watershed management|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:48:09.121305+00:00",
+      "scraped_at": "2026-07-12T14:51:26.103595+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2951,7 +2951,7 @@
       "status": "Developing Proposal",
       "unit": "Siskiyou Mountains Ranger District",
       "purpose": "Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:48:09.121342+00:00",
+      "scraped_at": "2026-07-12T14:51:26.103652+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2988,7 +2988,7 @@
       "status": "Developing Proposal",
       "unit": "Siskiyou Mountains Ranger District",
       "purpose": "Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:48:09.121378+00:00",
+      "scraped_at": "2026-07-12T14:51:26.103709+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -3025,7 +3025,7 @@
       "status": "In Progress",
       "unit": "Blue Mountain Ranger District",
       "purpose": "Forest products|Vegetation management (other than forest products)|Fuels management|Watershed management",
-      "scraped_at": "2026-07-11T14:48:29.704642+00:00",
+      "scraped_at": "2026-07-12T14:51:58.118349+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -3088,7 +3088,7 @@
       "status": "Completed",
       "unit": "Whitman Ranger District",
       "purpose": "Forest products|Fuels management|Watershed management",
-      "scraped_at": "2026-07-11T14:48:29.704706+00:00",
+      "scraped_at": "2026-07-12T14:51:58.118425+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -3104,7 +3104,7 @@
       "status": "Completed",
       "unit": "Wallowa-Whitman National Forest All Units",
       "purpose": "Facility management",
-      "scraped_at": "2026-07-11T14:48:29.704750+00:00",
+      "scraped_at": "2026-07-12T14:51:58.118488+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -3120,7 +3120,7 @@
       "status": "In Progress",
       "unit": "Wallowa-Whitman National Forest All Units",
       "purpose": "Wildlife, fish, rare plants|Minerals and geology",
-      "scraped_at": "2026-07-11T14:48:29.704791+00:00",
+      "scraped_at": "2026-07-12T14:51:58.118548+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3172,7 +3172,7 @@
       "status": "On Hold",
       "unit": "Whitman Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:48:29.704831+00:00",
+      "scraped_at": "2026-07-12T14:51:58.118607+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3219,7 +3219,7 @@
       "status": "In Progress",
       "unit": "Whitman Ranger District",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:48:29.704870+00:00",
+      "scraped_at": "2026-07-12T14:51:58.118665+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3271,7 +3271,7 @@
       "status": "Developing Proposal",
       "unit": "WHITMAN RANGER DISTRICT",
       "purpose": "Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:48:29.704906+00:00",
+      "scraped_at": "2026-07-12T14:51:58.118721+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -3308,7 +3308,7 @@
       "status": "Developing Proposal",
       "unit": "La Grande Ranger District",
       "purpose": "Fuels management|Regulations, directives, orders|Vegetation management (other than forest products)|Watershed management|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:48:29.704942+00:00",
+      "scraped_at": "2026-07-12T14:51:58.118779+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -3345,7 +3345,7 @@
       "status": "Completed",
       "unit": "Wallowa Valley Ranger District",
       "purpose": "Forest products|Fuels management|Watershed management|Road management",
-      "scraped_at": "2026-07-11T14:48:29.704977+00:00",
+      "scraped_at": "2026-07-12T14:51:58.118837+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -3361,7 +3361,7 @@
       "status": "Completed",
       "unit": "La Grande Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:48:29.705013+00:00",
+      "scraped_at": "2026-07-12T14:51:58.118912+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -3377,7 +3377,7 @@
       "status": "In Progress",
       "unit": "Whitman Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:48:29.705050+00:00",
+      "scraped_at": "2026-07-12T14:51:58.118978+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3429,7 +3429,7 @@
       "status": "Completed",
       "unit": "La Grande Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:48:29.705085+00:00",
+      "scraped_at": "2026-07-12T14:51:58.119038+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -3445,7 +3445,7 @@
       "status": "Completed",
       "unit": "Whitman Ranger District",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-07-11T14:48:29.705122+00:00",
+      "scraped_at": "2026-07-12T14:51:58.119095+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -3461,7 +3461,7 @@
       "status": "Developing Proposal",
       "unit": "Salmon River Ranger District",
       "purpose": "Wildlife, fish, rare plants|Forest products|Vegetation management (other than forest products)|Fuels management|Road management",
-      "scraped_at": "2026-07-11T14:48:29.705157+00:00",
+      "scraped_at": "2026-07-12T14:51:58.119151+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3508,7 +3508,7 @@
       "status": "Developing Proposal",
       "unit": "WHITMAN RANGER DISTRICT",
       "purpose": "Fuels management|Regulations, directives, orders|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:48:29.705192+00:00",
+      "scraped_at": "2026-07-12T14:51:58.119207+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -3545,7 +3545,7 @@
       "status": "Developing Proposal",
       "unit": "La Grande Ranger District",
       "purpose": "Fuels management|Regulations, directives, orders|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:48:29.705264+00:00",
+      "scraped_at": "2026-07-12T14:51:58.119321+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -3582,7 +3582,7 @@
       "status": "Completed",
       "unit": "Wallowa-Whitman National Forest All Units",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:48:29.705300+00:00",
+      "scraped_at": "2026-07-12T14:51:58.119378+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -3598,7 +3598,7 @@
       "status": "Completed",
       "unit": "La Grande Ranger District",
       "purpose": "Wildlife, fish, rare plants|Watershed management",
-      "scraped_at": "2026-07-11T14:48:29.705343+00:00",
+      "scraped_at": "2026-07-12T14:51:58.119434+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -3614,7 +3614,7 @@
       "status": "Completed",
       "unit": "Whitman Ranger District",
       "purpose": "Forest products|Vegetation management (other than forest products)|Fuels management",
-      "scraped_at": "2026-07-11T14:48:29.705384+00:00",
+      "scraped_at": "2026-07-12T14:51:58.119491+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -3630,7 +3630,7 @@
       "status": "Completed",
       "unit": "Fremont-Winema National Forest All Units",
       "purpose": "Vegetation management (other than forest products)|Fuels management",
-      "scraped_at": "2026-07-11T14:49:12.080521+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400032+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -3646,7 +3646,7 @@
       "status": "In Progress",
       "unit": "Chemult Ranger District",
       "purpose": "Special use management|Road management",
-      "scraped_at": "2026-07-11T14:49:12.080575+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400105+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3698,7 +3698,7 @@
       "status": "Completed",
       "unit": "Chiloquin Ranger District",
       "purpose": "Forest products|Vegetation management (other than forest products)|Fuels management",
-      "scraped_at": "2026-07-11T14:49:12.080614+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400164+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -3714,7 +3714,7 @@
       "status": "In Progress",
       "unit": "Klamath Ranger District",
       "purpose": "Grazing management",
-      "scraped_at": "2026-07-11T14:49:12.080649+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400222+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3766,7 +3766,7 @@
       "status": "In Progress",
       "unit": "Klamath Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:49:12.080686+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400278+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3818,7 +3818,7 @@
       "status": "In Progress",
       "unit": "Chiloquin Ranger District",
       "purpose": "Facility management",
-      "scraped_at": "2026-07-11T14:49:12.080737+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400336+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3870,7 +3870,7 @@
       "status": "Completed",
       "unit": "Klamath Ranger District",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:49:12.080777+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400394+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -3886,7 +3886,7 @@
       "status": "Completed",
       "unit": "Lakeview Ranger District",
       "purpose": "Road management|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:49:12.080815+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400451+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -3902,7 +3902,7 @@
       "status": "On Hold",
       "unit": "Bly Ranger District",
       "purpose": "Grazing management",
-      "scraped_at": "2026-07-11T14:49:12.080851+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400507+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3954,7 +3954,7 @@
       "status": "Completed",
       "unit": "Chiloquin Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:49:12.080888+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400563+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -3970,7 +3970,7 @@
       "status": "Completed",
       "unit": "Klamath Ranger District",
       "purpose": "Forest products|Vegetation management (other than forest products)|Fuels management",
-      "scraped_at": "2026-07-11T14:49:12.080923+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400618+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -3986,7 +3986,7 @@
       "status": "Developing Proposal",
       "unit": "Klamath Ranger District",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:49:12.080957+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400672+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4023,7 +4023,7 @@
       "status": "Completed",
       "unit": "Klamath Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:49:12.080994+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400727+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4039,7 +4039,7 @@
       "status": "Completed",
       "unit": "Chemult Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:49:12.081029+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400783+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4055,7 +4055,7 @@
       "status": "Completed",
       "unit": "Chemult Ranger District",
       "purpose": "Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:49:12.081064+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400839+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4071,7 +4071,7 @@
       "status": "Developing Proposal",
       "unit": "Klamath Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:49:12.081098+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400910+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4128,7 +4128,7 @@
       "status": "In Progress",
       "unit": "Bly Ranger District",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:49:12.081132+00:00",
+      "scraped_at": "2026-07-12T14:52:45.400975+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4180,7 +4180,7 @@
       "status": "Developing Proposal",
       "unit": "Bly Ranger District",
       "purpose": "Forest products|Fuels management|Land management planning|Vegetation management (other than forest products)|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:49:12.081166+00:00",
+      "scraped_at": "2026-07-12T14:52:45.401032+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4217,7 +4217,7 @@
       "status": "Developing Proposal",
       "unit": "Fremont-Winema National Forest",
       "purpose": "Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:49:12.081200+00:00",
+      "scraped_at": "2026-07-12T14:52:45.401088+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4254,7 +4254,7 @@
       "status": "Completed",
       "unit": "Bly Ranger District",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-07-11T14:49:12.081234+00:00",
+      "scraped_at": "2026-07-12T14:52:45.401145+00:00",
       "milestones": [],
       "first_seen": "2026-06-12",
       "most_recent_activity": []
@@ -4270,7 +4270,7 @@
       "status": "Completed",
       "unit": "Klamath Ranger District",
       "purpose": "Research",
-      "scraped_at": "2026-07-11T14:49:12.081302+00:00",
+      "scraped_at": "2026-07-12T14:52:45.401259+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4286,7 +4286,7 @@
       "status": "Completed",
       "unit": "Silver Lake Ranger District",
       "purpose": "Forest products|Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:49:12.081336+00:00",
+      "scraped_at": "2026-07-12T14:52:45.401317+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4302,7 +4302,7 @@
       "status": "Completed",
       "unit": "Chiloquin Ranger District",
       "purpose": "Forest products|Vegetation management (other than forest products)|Fuels management",
-      "scraped_at": "2026-07-11T14:49:12.081371+00:00",
+      "scraped_at": "2026-07-12T14:52:45.401374+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4318,7 +4318,7 @@
       "status": "Completed",
       "unit": "Crescent Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:49:54.904182+00:00",
+      "scraped_at": "2026-07-12T14:53:30.049465+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4334,7 +4334,7 @@
       "status": "In Progress",
       "unit": "Crescent Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:49:54.904240+00:00",
+      "scraped_at": "2026-07-12T14:53:30.049539+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4386,7 +4386,7 @@
       "status": "Developing Proposal",
       "unit": "Bend/Fort Rock Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:49:54.904282+00:00",
+      "scraped_at": "2026-07-12T14:53:30.049600+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4423,7 +4423,7 @@
       "status": "Completed",
       "unit": "Sisters Ranger District",
       "purpose": "Vegetation management (other than forest products)|Fuels management",
-      "scraped_at": "2026-07-11T14:49:54.904322+00:00",
+      "scraped_at": "2026-07-12T14:53:30.049659+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4439,7 +4439,7 @@
       "status": "Completed",
       "unit": "Bend/Fort Rock Ranger District",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:49:54.904361+00:00",
+      "scraped_at": "2026-07-12T14:53:30.049718+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4455,7 +4455,7 @@
       "status": "Completed",
       "unit": "Deschutes National Forest",
       "purpose": "Land ownership management",
-      "scraped_at": "2026-07-11T14:49:54.904397+00:00",
+      "scraped_at": "2026-07-12T14:53:30.049774+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4471,7 +4471,7 @@
       "status": "Developing Proposal",
       "unit": "Deschutes National Forest",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:49:54.904434+00:00",
+      "scraped_at": "2026-07-12T14:53:30.049832+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4508,7 +4508,7 @@
       "status": "Developing Proposal",
       "unit": "Sisters Ranger District",
       "purpose": "Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:49:54.904471+00:00",
+      "scraped_at": "2026-07-12T14:53:30.049891+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4545,7 +4545,7 @@
       "status": "Developing Proposal",
       "unit": "Bend/Fort Rock Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-07-11T14:49:54.904507+00:00",
+      "scraped_at": "2026-07-12T14:53:30.049972+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4582,7 +4582,7 @@
       "status": "Completed",
       "unit": "Deschutes National Forest",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:49:54.904543+00:00",
+      "scraped_at": "2026-07-12T14:53:30.050031+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4598,7 +4598,7 @@
       "status": "In Progress",
       "unit": "Deschutes National Forest All Units",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:49:54.904579+00:00",
+      "scraped_at": "2026-07-12T14:53:30.050088+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4655,7 +4655,7 @@
       "status": "Developing Proposal",
       "unit": "Sisters Ranger District",
       "purpose": "Forest products|Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:49:54.904614+00:00",
+      "scraped_at": "2026-07-12T14:53:30.050145+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4692,7 +4692,7 @@
       "status": "On Hold",
       "unit": "Crescent Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:49:54.904648+00:00",
+      "scraped_at": "2026-07-12T14:53:30.050203+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4744,7 +4744,7 @@
       "status": "Developing Proposal",
       "unit": "Crescent Ranger District",
       "purpose": "Forest products|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:49:54.904683+00:00",
+      "scraped_at": "2026-07-12T14:53:30.050260+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4781,7 +4781,7 @@
       "status": "Completed",
       "unit": "Crescent Ranger District",
       "purpose": "Vegetation management (other than forest products)|Fuels management",
-      "scraped_at": "2026-07-11T14:49:54.904731+00:00",
+      "scraped_at": "2026-07-12T14:53:30.050318+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4797,7 +4797,7 @@
       "status": "Completed",
       "unit": "Bend/Fort Rock Ranger District",
       "purpose": "Facility management|Recreation management",
-      "scraped_at": "2026-07-11T14:49:54.904768+00:00",
+      "scraped_at": "2026-07-12T14:53:30.050374+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4813,7 +4813,7 @@
       "status": "Completed",
       "unit": "Bend/Fort Rock Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:49:54.904804+00:00",
+      "scraped_at": "2026-07-12T14:53:30.050431+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4829,7 +4829,7 @@
       "status": "Completed",
       "unit": "Bend/Fort Rock Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:49:54.904842+00:00",
+      "scraped_at": "2026-07-12T14:53:30.050489+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4845,7 +4845,7 @@
       "status": "Completed",
       "unit": "Bend/Fort Rock Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:49:54.904878+00:00",
+      "scraped_at": "2026-07-12T14:53:30.050545+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4861,7 +4861,7 @@
       "status": "Completed",
       "unit": "Bend/Fort Rock Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:49:54.904913+00:00",
+      "scraped_at": "2026-07-12T14:53:30.050603+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -4877,7 +4877,7 @@
       "status": "Developing Proposal",
       "unit": "Sisters Ranger District",
       "purpose": "Forest products|Fuels management",
-      "scraped_at": "2026-07-11T14:49:54.904950+00:00",
+      "scraped_at": "2026-07-12T14:53:30.050661+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4914,7 +4914,7 @@
       "status": "On Hold",
       "unit": "Crescent Ranger District",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:49:54.905021+00:00",
+      "scraped_at": "2026-07-12T14:53:30.050773+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4966,7 +4966,7 @@
       "status": "Developing Proposal",
       "unit": "Sisters Ranger District",
       "purpose": "Forest products|Fuels management|Recreation management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:49:54.905055+00:00",
+      "scraped_at": "2026-07-12T14:53:30.050829+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5003,7 +5003,7 @@
       "status": "Completed",
       "unit": "Sisters Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:49:54.905090+00:00",
+      "scraped_at": "2026-07-12T14:53:30.050886+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5019,7 +5019,7 @@
       "status": "Developing Proposal",
       "unit": "Sisters Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:49:54.905127+00:00",
+      "scraped_at": "2026-07-12T14:53:30.050965+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5056,7 +5056,7 @@
       "status": "Developing Proposal",
       "unit": "Sisters Ranger District",
       "purpose": "Vegetation management (other than forest products)|Watershed management|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:49:54.905162+00:00",
+      "scraped_at": "2026-07-12T14:53:30.051023+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5093,7 +5093,7 @@
       "status": "Developing Proposal",
       "unit": "Bend/Fort Rock Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:49:54.905195+00:00",
+      "scraped_at": "2026-07-12T14:53:30.051079+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5130,7 +5130,7 @@
       "status": "Developing Proposal",
       "unit": "Bend/Fort Rock Ranger District",
       "purpose": "Forest products|Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:49:54.905231+00:00",
+      "scraped_at": "2026-07-12T14:53:30.051135+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5167,7 +5167,7 @@
       "status": "Completed",
       "unit": "Zigzag Ranger District",
       "purpose": "Forest products|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:50:56.045773+00:00",
+      "scraped_at": "2026-07-12T14:54:30.232388+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5183,7 +5183,7 @@
       "status": "Completed",
       "unit": "Mt. Hood National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:50:56.045829+00:00",
+      "scraped_at": "2026-07-12T14:54:30.232463+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5199,7 +5199,7 @@
       "status": "Completed",
       "unit": "Clackamas River Ranger District",
       "purpose": "Special use management|Projects that may affect wilderness (for mailing list contacts)",
-      "scraped_at": "2026-07-11T14:50:56.045868+00:00",
+      "scraped_at": "2026-07-12T14:54:30.232525+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5215,7 +5215,7 @@
       "status": "Completed",
       "unit": "Hood River Ranger District",
       "purpose": "Facility management",
-      "scraped_at": "2026-07-11T14:50:56.045905+00:00",
+      "scraped_at": "2026-07-12T14:54:30.232583+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5231,7 +5231,7 @@
       "status": "Completed",
       "unit": "Clackamas River Ranger District",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-07-11T14:50:56.045942+00:00",
+      "scraped_at": "2026-07-12T14:54:30.232639+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5247,7 +5247,7 @@
       "status": "Completed",
       "unit": "Barlow Ranger District",
       "purpose": "Forest products|Vegetation management (other than forest products)|Fuels management",
-      "scraped_at": "2026-07-11T14:50:56.045977+00:00",
+      "scraped_at": "2026-07-12T14:54:30.232697+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5263,7 +5263,7 @@
       "status": "Developing Proposal",
       "unit": "Clackamas River Ranger District",
       "purpose": "Forest products|Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:50:56.046013+00:00",
+      "scraped_at": "2026-07-12T14:54:30.232754+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5300,7 +5300,7 @@
       "status": "Completed",
       "unit": "Clackamas River Ranger District",
       "purpose": "Forest products|Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:50:56.046048+00:00",
+      "scraped_at": "2026-07-12T14:54:30.232810+00:00",
       "milestones": [],
       "first_seen": "2026-06-26",
       "most_recent_activity": []
@@ -5316,7 +5316,7 @@
       "status": "Completed",
       "unit": "Mt. Hood National Forest",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:50:56.046083+00:00",
+      "scraped_at": "2026-07-12T14:54:30.232864+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5332,7 +5332,7 @@
       "status": "Developing Proposal",
       "unit": "Mt. Hood National Forest",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:50:56.046118+00:00",
+      "scraped_at": "2026-07-12T14:54:30.232940+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5369,7 +5369,7 @@
       "status": "Completed",
       "unit": "Hood River Ranger District",
       "purpose": "Grazing management",
-      "scraped_at": "2026-07-11T14:50:56.046152+00:00",
+      "scraped_at": "2026-07-12T14:54:30.233000+00:00",
       "milestones": [],
       "first_seen": "2026-06-24",
       "most_recent_activity": []
@@ -5385,7 +5385,7 @@
       "status": "Developing Proposal",
       "unit": "Mt. Hood National Forest",
       "purpose": "Land management planning",
-      "scraped_at": "2026-07-11T14:50:56.046187+00:00",
+      "scraped_at": "2026-07-12T14:54:30.233055+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5422,7 +5422,7 @@
       "status": "Developing Proposal",
       "unit": "Mt. Hood National Forest",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:50:56.046222+00:00",
+      "scraped_at": "2026-07-12T14:54:30.233111+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5459,7 +5459,7 @@
       "status": "Completed",
       "unit": "Zigzag Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:50:56.046258+00:00",
+      "scraped_at": "2026-07-12T14:54:30.233166+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5475,7 +5475,7 @@
       "status": "Developing Proposal",
       "unit": "Mt. Hood National Forest",
       "purpose": "Forest products|Fuels management|Regulations, directives, orders|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:50:56.046293+00:00",
+      "scraped_at": "2026-07-12T14:54:30.233220+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5512,7 +5512,7 @@
       "status": "Completed",
       "unit": "Clackamas River Ranger District",
       "purpose": "Forest products|Vegetation management (other than forest products)|Fuels management|Road management",
-      "scraped_at": "2026-07-11T14:50:56.046326+00:00",
+      "scraped_at": "2026-07-12T14:54:30.233275+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5528,7 +5528,7 @@
       "status": "Completed",
       "unit": "Zigzag Ranger District",
       "purpose": "Recreation management|Special use management",
-      "scraped_at": "2026-07-11T14:50:56.046360+00:00",
+      "scraped_at": "2026-07-12T14:54:30.233330+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5544,7 +5544,7 @@
       "status": "Completed",
       "unit": "Zigzag Ranger District",
       "purpose": "Vegetation management (other than forest products)|Fuels management",
-      "scraped_at": "2026-07-11T14:50:56.046395+00:00",
+      "scraped_at": "2026-07-12T14:54:30.233385+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5560,7 +5560,7 @@
       "status": "Completed",
       "unit": "Paulina Ranger District",
       "purpose": "Vegetation management (other than forest products)|Watershed management",
-      "scraped_at": "2026-07-11T14:51:22.222490+00:00",
+      "scraped_at": "2026-07-12T14:54:49.086528+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5576,7 +5576,7 @@
       "status": "In Progress",
       "unit": "Crooked River Natl Grassland",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:51:22.222548+00:00",
+      "scraped_at": "2026-07-12T14:54:49.086600+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -5628,7 +5628,7 @@
       "status": "Developing Proposal",
       "unit": "Crooked River Natl Grassland",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:51:22.222588+00:00",
+      "scraped_at": "2026-07-12T14:54:49.086660+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -5675,7 +5675,7 @@
       "status": "Developing Proposal",
       "unit": "Paulina Ranger District",
       "purpose": "Facility management|Grazing management|Recreation management|Special area management|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:51:22.222628+00:00",
+      "scraped_at": "2026-07-12T14:54:49.086720+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5712,7 +5712,7 @@
       "status": "Completed",
       "unit": "Crooked River National Grassland",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:51:22.222666+00:00",
+      "scraped_at": "2026-07-12T14:54:49.086780+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5728,7 +5728,7 @@
       "status": "Developing Proposal",
       "unit": "Ochoco National Forest",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:51:22.222717+00:00",
+      "scraped_at": "2026-07-12T14:54:49.086840+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5765,7 +5765,7 @@
       "status": "Completed",
       "unit": "Ochoco National Forest All Units",
       "purpose": "Watershed management",
-      "scraped_at": "2026-07-11T14:51:22.222761+00:00",
+      "scraped_at": "2026-07-12T14:54:49.086916+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5781,7 +5781,7 @@
       "status": "Completed",
       "unit": "Paulina Ranger District",
       "purpose": "Special area management|Wildlife, fish, rare plants|Forest products|Vegetation management (other than forest products)|Fuels management",
-      "scraped_at": "2026-07-11T14:51:22.222803+00:00",
+      "scraped_at": "2026-07-12T14:54:49.086981+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5797,7 +5797,7 @@
       "status": "Developing Proposal",
       "unit": "Ochoco National Forest",
       "purpose": "Forest products|Fuels management",
-      "scraped_at": "2026-07-11T14:51:22.222842+00:00",
+      "scraped_at": "2026-07-12T14:54:49.087039+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5834,7 +5834,7 @@
       "status": "Developing Proposal",
       "unit": "Paulina Ranger District",
       "purpose": "Grazing management|Recreation management",
-      "scraped_at": "2026-07-11T14:51:22.222880+00:00",
+      "scraped_at": "2026-07-12T14:54:49.087096+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5871,7 +5871,7 @@
       "status": "Developing Proposal",
       "unit": "Crooked River Natl Grassland",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:51:22.222918+00:00",
+      "scraped_at": "2026-07-12T14:54:49.087152+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -5918,7 +5918,7 @@
       "status": "Developing Proposal",
       "unit": "Ochoco National Forest",
       "purpose": "Forest products|Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:51:22.222956+00:00",
+      "scraped_at": "2026-07-12T14:54:49.087213+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5955,7 +5955,7 @@
       "status": "Completed",
       "unit": "Lookout Mountain Ranger District",
       "purpose": "Road management",
-      "scraped_at": "2026-07-11T14:51:22.222993+00:00",
+      "scraped_at": "2026-07-12T14:54:49.087270+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -5971,7 +5971,7 @@
       "status": "Developing Proposal",
       "unit": "North Fork John Day Ranger District",
       "purpose": "Fuels management|Heritage resource management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:52:00.366389+00:00",
+      "scraped_at": "2026-07-12T14:55:26.434629+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6008,7 +6008,7 @@
       "status": "Developing Proposal",
       "unit": "North Fork John Day Ranger District",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:52:00.366445+00:00",
+      "scraped_at": "2026-07-12T14:55:26.434703+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6045,7 +6045,7 @@
       "status": "Developing Proposal",
       "unit": "Umatilla National Forest",
       "purpose": "Land management planning",
-      "scraped_at": "2026-07-11T14:52:00.366485+00:00",
+      "scraped_at": "2026-07-12T14:55:26.434764+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6082,7 +6082,7 @@
       "status": "Completed",
       "unit": "North Fork John Day Ranger District",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:52:00.366525+00:00",
+      "scraped_at": "2026-07-12T14:55:26.434823+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6098,7 +6098,7 @@
       "status": "Completed",
       "unit": "North Fork John Day Ranger District",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:52:00.366565+00:00",
+      "scraped_at": "2026-07-12T14:55:26.434881+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6114,7 +6114,7 @@
       "status": "Completed",
       "unit": "North Fork John Day Ranger District",
       "purpose": "Forest products|Fuels management",
-      "scraped_at": "2026-07-11T14:52:00.366602+00:00",
+      "scraped_at": "2026-07-12T14:55:26.434959+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6130,7 +6130,7 @@
       "status": "Completed",
       "unit": "Umatilla National Forest All Units",
       "purpose": "Watershed management|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:52:00.366640+00:00",
+      "scraped_at": "2026-07-12T14:55:26.435017+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6146,7 +6146,7 @@
       "status": "Completed",
       "unit": "North Fork John Day Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:52:00.366677+00:00",
+      "scraped_at": "2026-07-12T14:55:26.435074+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6162,7 +6162,7 @@
       "status": "Completed",
       "unit": "Heppner Ranger District",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:52:00.366724+00:00",
+      "scraped_at": "2026-07-12T14:55:26.435131+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6178,7 +6178,7 @@
       "status": "Developing Proposal",
       "unit": "Walla Walla Ranger District",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:52:00.366765+00:00",
+      "scraped_at": "2026-07-12T14:55:26.435188+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6215,7 +6215,7 @@
       "status": "Developing Proposal",
       "unit": "Pomeroy Ranger District",
       "purpose": "",
-      "scraped_at": "2026-07-11T14:52:00.366804+00:00",
+      "scraped_at": "2026-07-12T14:55:26.435244+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6252,7 +6252,7 @@
       "status": "Completed",
       "unit": "North Fork John Day Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:52:00.366842+00:00",
+      "scraped_at": "2026-07-12T14:55:26.435301+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6268,7 +6268,7 @@
       "status": "Completed",
       "unit": "Umatilla National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:52:00.366880+00:00",
+      "scraped_at": "2026-07-12T14:55:26.435359+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6284,7 +6284,7 @@
       "status": "Completed",
       "unit": "Walla Walla Ranger District",
       "purpose": "Vegetation management (other than forest products)|Fuels management|Watershed management",
-      "scraped_at": "2026-07-11T14:52:00.366954+00:00",
+      "scraped_at": "2026-07-12T14:55:26.435472+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6300,7 +6300,7 @@
       "status": "Developing Proposal",
       "unit": "Umatilla National Forest All Units",
       "purpose": "Watershed management",
-      "scraped_at": "2026-07-11T14:52:00.366992+00:00",
+      "scraped_at": "2026-07-12T14:55:26.435528+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6347,7 +6347,7 @@
       "status": "Completed",
       "unit": "Walla Walla Ranger District",
       "purpose": "Forest products|Road management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:52:00.367028+00:00",
+      "scraped_at": "2026-07-12T14:55:26.435585+00:00",
       "milestones": [],
       "first_seen": "2026-07-01",
       "most_recent_activity": []
@@ -6363,7 +6363,7 @@
       "status": "Completed",
       "unit": "Heppner Ranger District",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:52:00.367063+00:00",
+      "scraped_at": "2026-07-12T14:55:26.435642+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6379,7 +6379,7 @@
       "status": "Developing Proposal",
       "unit": "McKenzie River Ranger District",
       "purpose": "",
-      "scraped_at": "2026-07-11T14:52:36.977525+00:00",
+      "scraped_at": "2026-07-12T14:55:55.711493+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6416,7 +6416,7 @@
       "status": "Completed",
       "unit": "McKenzie River Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:52:36.977583+00:00",
+      "scraped_at": "2026-07-12T14:55:55.711566+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6432,7 +6432,7 @@
       "status": "In Progress",
       "unit": "McKenzie River Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:52:36.977624+00:00",
+      "scraped_at": "2026-07-12T14:55:55.711629+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6484,7 +6484,7 @@
       "status": "Completed",
       "unit": "McKenzie River Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:52:36.977661+00:00",
+      "scraped_at": "2026-07-12T14:55:55.711690+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6500,7 +6500,7 @@
       "status": "Completed",
       "unit": "McKenzie River Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:52:36.977708+00:00",
+      "scraped_at": "2026-07-12T14:55:55.711747+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6516,7 +6516,7 @@
       "status": "Completed",
       "unit": "Detroit Ranger District",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:52:36.977751+00:00",
+      "scraped_at": "2026-07-12T14:55:55.711806+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6532,7 +6532,7 @@
       "status": "In Progress",
       "unit": "McKenzie River Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:52:36.977790+00:00",
+      "scraped_at": "2026-07-12T14:55:55.711863+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6584,7 +6584,7 @@
       "status": "Completed",
       "unit": "Middle Fork Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:52:36.977831+00:00",
+      "scraped_at": "2026-07-12T14:55:55.711940+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6600,7 +6600,7 @@
       "status": "Completed",
       "unit": "Detroit Ranger District",
       "purpose": "Watershed management",
-      "scraped_at": "2026-07-11T14:52:36.977869+00:00",
+      "scraped_at": "2026-07-12T14:55:55.711998+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6616,7 +6616,7 @@
       "status": "Developing Proposal",
       "unit": "McKenzie River Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-07-11T14:52:36.977907+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712054+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6653,7 +6653,7 @@
       "status": "Developing Proposal",
       "unit": "Sweet Home Ranger District",
       "purpose": "Forest products|Fuels management",
-      "scraped_at": "2026-07-11T14:52:36.977945+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712111+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6690,7 +6690,7 @@
       "status": "Completed",
       "unit": "McKenzie River Ranger District",
       "purpose": "Forest products|Vegetation management (other than forest products)|Fuels management|Watershed management|Road management",
-      "scraped_at": "2026-07-11T14:52:36.977984+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712168+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6706,7 +6706,7 @@
       "status": "In Progress",
       "unit": "Middle Fork Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:52:36.978021+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712226+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6758,7 +6758,7 @@
       "status": "Completed",
       "unit": "Middle Fork Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:52:36.978059+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712283+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -6774,7 +6774,7 @@
       "status": "On Hold",
       "unit": "Middle Fork Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:52:36.978097+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712340+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6826,7 +6826,7 @@
       "status": "Developing Proposal",
       "unit": "Middle Fork Ranger District",
       "purpose": "Forest products|Fuels management",
-      "scraped_at": "2026-07-11T14:52:36.978133+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712398+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6863,7 +6863,7 @@
       "status": "On Hold",
       "unit": "Detroit Ranger District",
       "purpose": "Recreation management|Special area management|Special use management",
-      "scraped_at": "2026-07-11T14:52:36.978170+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712453+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6910,7 +6910,7 @@
       "status": "In Progress",
       "unit": "Willamette National Forest",
       "purpose": "Forest products|Vegetation management (other than forest products)|Watershed management",
-      "scraped_at": "2026-07-11T14:52:36.978205+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712509+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6947,7 +6947,7 @@
       "status": "Developing Proposal",
       "unit": "Middle Fork Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-07-11T14:52:36.978240+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712564+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6984,7 +6984,7 @@
       "status": "Developing Proposal",
       "unit": "McKenzie River Ranger District",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:52:36.978273+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712619+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7021,7 +7021,7 @@
       "status": "Completed",
       "unit": "McKenzie River Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-07-11T14:52:36.978307+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712675+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7037,7 +7037,7 @@
       "status": "Completed",
       "unit": "Detroit Ranger District",
       "purpose": "Road management",
-      "scraped_at": "2026-07-11T14:52:36.978341+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712731+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7053,7 +7053,7 @@
       "status": "Completed",
       "unit": "Detroit Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:52:36.978375+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712787+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7069,7 +7069,7 @@
       "status": "Developing Proposal",
       "unit": "Detroit Ranger District",
       "purpose": "Forest products|Land management planning|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:52:36.978409+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712843+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7106,7 +7106,7 @@
       "status": "Developing Proposal",
       "unit": "Sweet Home Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-07-11T14:52:36.978443+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712914+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7143,7 +7143,7 @@
       "status": "In Progress",
       "unit": "Sweet Home Ranger District",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:52:36.978479+00:00",
+      "scraped_at": "2026-07-12T14:55:55.712975+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7180,7 +7180,7 @@
       "status": "Completed",
       "unit": "Middle Fork Ranger District",
       "purpose": "Vegetation management (other than forest products)|Road management",
-      "scraped_at": "2026-07-11T14:52:36.978513+00:00",
+      "scraped_at": "2026-07-12T14:55:55.713031+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7196,7 +7196,7 @@
       "status": "Completed",
       "unit": "Sweet Home Ranger District",
       "purpose": "Research",
-      "scraped_at": "2026-07-11T14:52:36.978549+00:00",
+      "scraped_at": "2026-07-12T14:55:55.713087+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7212,7 +7212,7 @@
       "status": "Completed",
       "unit": "Willamette National Forest All Units",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:52:36.978584+00:00",
+      "scraped_at": "2026-07-12T14:55:55.713143+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7228,7 +7228,7 @@
       "status": "Developing Proposal",
       "unit": "Detroit Ranger District",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:52:36.978618+00:00",
+      "scraped_at": "2026-07-12T14:55:55.713197+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7265,7 +7265,7 @@
       "status": "Developing Proposal",
       "unit": "McKenzie River Ranger District",
       "purpose": "Forest products|Fuels management",
-      "scraped_at": "2026-07-11T14:52:36.978653+00:00",
+      "scraped_at": "2026-07-12T14:55:55.713251+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7302,7 +7302,7 @@
       "status": "In Progress",
       "unit": "McKenzie River Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:52:36.978692+00:00",
+      "scraped_at": "2026-07-12T14:55:55.713308+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7354,7 +7354,7 @@
       "status": "Completed",
       "unit": "Sweet Home Ranger District",
       "purpose": "Wildlife, fish, rare plants|Watershed management",
-      "scraped_at": "2026-07-11T14:52:36.978741+00:00",
+      "scraped_at": "2026-07-12T14:55:55.713363+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7370,7 +7370,7 @@
       "status": "Completed",
       "unit": "McKenzie River Ranger District",
       "purpose": "Watershed management",
-      "scraped_at": "2026-07-11T14:52:36.978777+00:00",
+      "scraped_at": "2026-07-12T14:55:55.713418+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7386,7 +7386,7 @@
       "status": "Completed",
       "unit": "Sweet Home Ranger District",
       "purpose": "Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:52:36.978814+00:00",
+      "scraped_at": "2026-07-12T14:55:55.713472+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7402,7 +7402,7 @@
       "status": "Developing Proposal",
       "unit": "Middle Fork Ranger District",
       "purpose": "Forest products|Watershed management",
-      "scraped_at": "2026-07-11T14:52:36.978850+00:00",
+      "scraped_at": "2026-07-12T14:55:55.713526+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7439,7 +7439,7 @@
       "status": "Completed",
       "unit": "Middle Fork Ranger District",
       "purpose": "Recreation management|Forest products|Vegetation management (other than forest products)|Fuels management|Watershed management|Road management",
-      "scraped_at": "2026-07-11T14:52:36.978886+00:00",
+      "scraped_at": "2026-07-12T14:55:55.713581+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7455,7 +7455,7 @@
       "status": "Developing Proposal",
       "unit": "McKenzie River Ranger District",
       "purpose": "Land management planning|Road management",
-      "scraped_at": "2026-07-11T14:52:36.978924+00:00",
+      "scraped_at": "2026-07-12T14:55:55.713635+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7492,7 +7492,7 @@
       "status": "Developing Proposal",
       "unit": "McKenzie River Ranger District",
       "purpose": "Forest products|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:52:36.978961+00:00",
+      "scraped_at": "2026-07-12T14:55:55.713691+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7529,7 +7529,7 @@
       "status": "Completed",
       "unit": "Willamette National Forest All Units",
       "purpose": "Forest products|Fuels management|Road management",
-      "scraped_at": "2026-07-11T14:52:36.978997+00:00",
+      "scraped_at": "2026-07-12T14:55:55.713746+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7545,7 +7545,7 @@
       "status": "Completed",
       "unit": "Sweet Home Ranger District",
       "purpose": "Forest products|Vegetation management (other than forest products)|Road management",
-      "scraped_at": "2026-07-11T14:52:36.979044+00:00",
+      "scraped_at": "2026-07-12T14:55:55.713817+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7561,7 +7561,7 @@
       "status": "Completed",
       "unit": "Middle Fork Ranger District",
       "purpose": "Recreation management|Heritage resource management|Special area management|Wildlife, fish, rare plants|Forest products|Vegetation management (other than forest products)|Fuels management|Watershed management|Road management",
-      "scraped_at": "2026-07-11T14:52:36.979080+00:00",
+      "scraped_at": "2026-07-12T14:55:55.713873+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7577,7 +7577,7 @@
       "status": "On Hold",
       "unit": "Prairie City Ranger District",
       "purpose": "Forest products|Fuels management",
-      "scraped_at": "2026-07-11T14:53:41.849532+00:00",
+      "scraped_at": "2026-07-12T14:57:14.306104+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7624,7 +7624,7 @@
       "status": "Completed",
       "unit": "Malheur National Forest All Units",
       "purpose": "Wildlife, fish, rare plants|Forest products|Vegetation management (other than forest products)|Fuels management",
-      "scraped_at": "2026-07-11T14:53:41.849638+00:00",
+      "scraped_at": "2026-07-12T14:57:14.306260+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7640,7 +7640,7 @@
       "status": "Completed",
       "unit": "Malheur National Forest All Units",
       "purpose": "Special area management",
-      "scraped_at": "2026-07-11T14:53:41.849674+00:00",
+      "scraped_at": "2026-07-12T14:57:14.306321+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7656,7 +7656,7 @@
       "status": "Completed",
       "unit": "Prairie City Ranger District",
       "purpose": "Grazing management",
-      "scraped_at": "2026-07-11T14:53:41.849722+00:00",
+      "scraped_at": "2026-07-12T14:57:14.306379+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7672,7 +7672,7 @@
       "status": "Completed",
       "unit": "Emigrant Creek Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:53:41.849762+00:00",
+      "scraped_at": "2026-07-12T14:57:14.306438+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7688,7 +7688,7 @@
       "status": "Completed",
       "unit": "Prairie City Ranger District",
       "purpose": "Forest products|Vegetation management (other than forest products)|Fuels management|Road management",
-      "scraped_at": "2026-07-11T14:53:41.849839+00:00",
+      "scraped_at": "2026-07-12T14:57:14.306556+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7704,7 +7704,7 @@
       "status": "Developing Proposal",
       "unit": "Central Coast Ranger District-ODNRA",
       "purpose": "Forest products|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:53:59.786460+00:00",
+      "scraped_at": "2026-07-12T14:57:35.050764+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7741,7 +7741,7 @@
       "status": "Developing Proposal",
       "unit": "Siuslaw National Forest All Units",
       "purpose": "Land management planning|Special area management|Projects that may affect wilderness (for mailing list contacts)",
-      "scraped_at": "2026-07-11T14:53:59.786517+00:00",
+      "scraped_at": "2026-07-12T14:57:35.050839+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7798,7 +7798,7 @@
       "status": "Developing Proposal",
       "unit": "Siuslaw National Forest All Units",
       "purpose": "Land management planning|Wildlife, fish, rare plants|Vegetation management (other than forest products)|Projects that may affect wilderness (for mailing list contacts)",
-      "scraped_at": "2026-07-11T14:53:59.786553+00:00",
+      "scraped_at": "2026-07-12T14:57:35.050918+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7855,7 +7855,7 @@
       "status": "On Hold",
       "unit": "Hebo Ranger District",
       "purpose": "Recreation management|Road management",
-      "scraped_at": "2026-07-11T14:53:59.786589+00:00",
+      "scraped_at": "2026-07-12T14:57:35.050982+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7902,7 +7902,7 @@
       "status": "Completed",
       "unit": "Central Coast Ranger District/Oregon Dunes National Recreation Area",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:53:59.786624+00:00",
+      "scraped_at": "2026-07-12T14:57:35.051041+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7918,7 +7918,7 @@
       "status": "In Progress",
       "unit": "Central Coast Ranger District/Oregon Dunes National Recreation Area",
       "purpose": "Wildlife, fish, rare plants|Forest products|Vegetation management (other than forest products)|Road management",
-      "scraped_at": "2026-07-11T14:53:59.786662+00:00",
+      "scraped_at": "2026-07-12T14:57:35.051101+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7980,7 +7980,7 @@
       "status": "Completed",
       "unit": "Central Coast Ranger District/Oregon Dunes National Recreation Area",
       "purpose": "Facility management",
-      "scraped_at": "2026-07-11T14:53:59.786713+00:00",
+      "scraped_at": "2026-07-12T14:57:35.051158+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -7996,7 +7996,7 @@
       "status": "On Hold",
       "unit": "Siuslaw National Forest All Units",
       "purpose": "Land management planning|Recreation management",
-      "scraped_at": "2026-07-11T14:53:59.786753+00:00",
+      "scraped_at": "2026-07-12T14:57:35.051215+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8058,7 +8058,7 @@
       "status": "Completed",
       "unit": "Hebo Ranger District",
       "purpose": "Recreation management|Special area management|Wildlife, fish, rare plants|Forest products|Vegetation management (other than forest products)|Road management",
-      "scraped_at": "2026-07-11T14:53:59.786793+00:00",
+      "scraped_at": "2026-07-12T14:57:35.051273+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -8074,7 +8074,7 @@
       "status": "Developing Proposal",
       "unit": "Hebo Ranger District",
       "purpose": "Forest products|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:53:59.786832+00:00",
+      "scraped_at": "2026-07-12T14:57:35.051331+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8111,7 +8111,7 @@
       "status": "Completed",
       "unit": "Shasta Lake Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:54:31.490507+00:00",
+      "scraped_at": "2026-07-12T14:58:04.162540+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -8127,7 +8127,7 @@
       "status": "Developing Proposal",
       "unit": "McCloud Ranger District",
       "purpose": "Forest products|Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:54:31.490570+00:00",
+      "scraped_at": "2026-07-12T14:58:04.162615+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8164,7 +8164,7 @@
       "status": "On Hold",
       "unit": "Yolla Bolla Ranger District",
       "purpose": "Recreation management|Watershed management",
-      "scraped_at": "2026-07-11T14:54:31.490615+00:00",
+      "scraped_at": "2026-07-12T14:58:04.162677+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8226,7 +8226,7 @@
       "status": "Developing Proposal",
       "unit": "Shasta-Trinity National Forest",
       "purpose": "Forest products|Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:54:31.490656+00:00",
+      "scraped_at": "2026-07-12T14:58:04.162737+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8263,7 +8263,7 @@
       "status": "On Hold",
       "unit": "Shasta Lake Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:54:31.490707+00:00",
+      "scraped_at": "2026-07-12T14:58:04.162797+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8315,7 +8315,7 @@
       "status": "Completed",
       "unit": "Shasta Trinity National Forest All Units",
       "purpose": "Wildlife, fish, rare plants|Forest products|Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:54:31.490756+00:00",
+      "scraped_at": "2026-07-12T14:58:04.162855+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -8331,7 +8331,7 @@
       "status": "Completed",
       "unit": "Shasta Trinity National Forest All Units",
       "purpose": "Forest products|Vegetation management (other than forest products)|Fuels management",
-      "scraped_at": "2026-07-11T14:54:31.490796+00:00",
+      "scraped_at": "2026-07-12T14:58:04.162933+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -8347,7 +8347,7 @@
       "status": "Developing Proposal",
       "unit": "Weaverville Ranger District",
       "purpose": "Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:54:31.490836+00:00",
+      "scraped_at": "2026-07-12T14:58:04.162994+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8384,7 +8384,7 @@
       "status": "In Progress",
       "unit": "Shasta Trinity National Forest All Units",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:54:31.490876+00:00",
+      "scraped_at": "2026-07-12T14:58:04.163054+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8441,7 +8441,7 @@
       "status": "Completed",
       "unit": "Shasta Lake Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:54:31.490917+00:00",
+      "scraped_at": "2026-07-12T14:58:04.163112+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -8457,7 +8457,7 @@
       "status": "Completed",
       "unit": "Mt. Shasta Ranger District",
       "purpose": "Road management",
-      "scraped_at": "2026-07-11T14:54:31.490977+00:00",
+      "scraped_at": "2026-07-12T14:58:04.163169+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -8473,7 +8473,7 @@
       "status": "Developing Proposal",
       "unit": "Shasta Lake Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:54:31.491030+00:00",
+      "scraped_at": "2026-07-12T14:58:04.163229+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8520,7 +8520,7 @@
       "status": "Developing Proposal",
       "unit": "Shasta-Trinity National Forest",
       "purpose": "Forest products|Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:54:31.491071+00:00",
+      "scraped_at": "2026-07-12T14:58:04.163298+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8557,7 +8557,7 @@
       "status": "Completed",
       "unit": "Shasta Lake Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:54:31.491111+00:00",
+      "scraped_at": "2026-07-12T14:58:04.163359+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -8573,7 +8573,7 @@
       "status": "Developing Proposal",
       "unit": "Shasta Lake Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:54:31.491150+00:00",
+      "scraped_at": "2026-07-12T14:58:04.163421+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8620,7 +8620,7 @@
       "status": "Developing Proposal",
       "unit": "Shasta Lake Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:54:31.491189+00:00",
+      "scraped_at": "2026-07-12T14:58:04.163480+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8667,7 +8667,7 @@
       "status": "Completed",
       "unit": "Mt. Shasta Ranger District",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:54:31.491225+00:00",
+      "scraped_at": "2026-07-12T14:58:04.163537+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -8683,7 +8683,7 @@
       "status": "Developing Proposal",
       "unit": "Shasta-Trinity National Forest",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:54:31.491261+00:00",
+      "scraped_at": "2026-07-12T14:58:04.163594+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8720,7 +8720,7 @@
       "status": "Developing Proposal",
       "unit": "Mt. Shasta Ranger District",
       "purpose": "Forest products|Fuels management|Regulations, directives, orders|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:54:31.491298+00:00",
+      "scraped_at": "2026-07-12T14:58:04.163651+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8757,7 +8757,7 @@
       "status": "Completed",
       "unit": "Shasta Trinity National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:54:31.491334+00:00",
+      "scraped_at": "2026-07-12T14:58:04.163709+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -8773,7 +8773,7 @@
       "status": "On Hold",
       "unit": "Shasta Trinity National Forest All Units",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:54:31.491371+00:00",
+      "scraped_at": "2026-07-12T14:58:04.163767+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8825,7 +8825,7 @@
       "status": "Completed",
       "unit": "Mt. Shasta Ranger District",
       "purpose": "Recreation management|Vegetation management (other than forest products)|Fuels management",
-      "scraped_at": "2026-07-11T14:54:31.491406+00:00",
+      "scraped_at": "2026-07-12T14:58:04.163824+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -8841,7 +8841,7 @@
       "status": "Developing Proposal",
       "unit": "Shasta-Trinity National Forest",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:54:31.491442+00:00",
+      "scraped_at": "2026-07-12T14:58:04.163882+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8878,7 +8878,7 @@
       "status": "Completed",
       "unit": "Shasta Trinity National Forest All Units",
       "purpose": "Wildlife, fish, rare plants|Watershed management|Climate change adaptation",
-      "scraped_at": "2026-07-11T14:54:31.491479+00:00",
+      "scraped_at": "2026-07-12T14:58:04.163962+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -8894,7 +8894,7 @@
       "status": "In Progress",
       "unit": "Shasta Trinity National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:54:31.491516+00:00",
+      "scraped_at": "2026-07-12T14:58:04.164023+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -8961,7 +8961,7 @@
       "status": "On Hold",
       "unit": "Inyo National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:55:26.721603+00:00",
+      "scraped_at": "2026-07-12T14:59:00.177542+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9008,7 +9008,7 @@
       "status": "On Hold",
       "unit": "Inyo National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:55:26.721677+00:00",
+      "scraped_at": "2026-07-12T14:59:00.177618+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -9075,7 +9075,7 @@
       "status": "Completed",
       "unit": "Inyo National Forest All Units",
       "purpose": "Recreation management|Road management",
-      "scraped_at": "2026-07-11T14:55:26.721731+00:00",
+      "scraped_at": "2026-07-12T14:59:00.177682+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -9091,7 +9091,7 @@
       "status": "Developing Proposal",
       "unit": "Inyo National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:55:26.721773+00:00",
+      "scraped_at": "2026-07-12T14:59:00.177742+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9138,7 +9138,7 @@
       "status": "In Progress",
       "unit": "Mammoth Ranger District",
       "purpose": "Heritage resource management",
-      "scraped_at": "2026-07-11T14:55:26.721810+00:00",
+      "scraped_at": "2026-07-12T14:59:00.177802+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9190,7 +9190,7 @@
       "status": "Completed",
       "unit": "Inyo National Forest All Units",
       "purpose": "Fuels management|Climate change adaptation",
-      "scraped_at": "2026-07-11T14:55:26.721847+00:00",
+      "scraped_at": "2026-07-12T14:59:00.177862+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -9206,7 +9206,7 @@
       "status": "On Hold",
       "unit": "Inyo National Forest All Units",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:55:26.721885+00:00",
+      "scraped_at": "2026-07-12T14:59:00.177941+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9263,7 +9263,7 @@
       "status": "Developing Proposal",
       "unit": "Inyo National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:55:26.721921+00:00",
+      "scraped_at": "2026-07-12T14:59:00.178001+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9310,7 +9310,7 @@
       "status": "Developing Proposal",
       "unit": "Inyo National Forest",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-07-11T14:55:26.721958+00:00",
+      "scraped_at": "2026-07-12T14:59:00.178060+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9347,7 +9347,7 @@
       "status": "In Progress",
       "unit": "Inyo National Forest All Units",
       "purpose": "Recreation management|Special use management",
-      "scraped_at": "2026-07-11T14:55:26.721996+00:00",
+      "scraped_at": "2026-07-12T14:59:00.178121+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -9414,7 +9414,7 @@
       "status": "On Hold",
       "unit": "Inyo National Forest All Units",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-07-11T14:55:26.722034+00:00",
+      "scraped_at": "2026-07-12T14:59:00.178181+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9466,7 +9466,7 @@
       "status": "In Progress",
       "unit": "Inyo National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:55:26.722070+00:00",
+      "scraped_at": "2026-07-12T14:59:00.178241+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9518,7 +9518,7 @@
       "status": "In Progress",
       "unit": "Mammoth Ranger District",
       "purpose": "Recreation management|Watershed management",
-      "scraped_at": "2026-07-11T14:55:26.722108+00:00",
+      "scraped_at": "2026-07-12T14:59:00.178301+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9570,7 +9570,7 @@
       "status": "Completed",
       "unit": "Mono Ranger District",
       "purpose": "Special area management",
-      "scraped_at": "2026-07-11T14:55:26.722168+00:00",
+      "scraped_at": "2026-07-12T14:59:00.178361+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -9586,7 +9586,7 @@
       "status": "In Progress",
       "unit": "Inyo National Forest All Units",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:55:26.722209+00:00",
+      "scraped_at": "2026-07-12T14:59:00.178421+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9638,7 +9638,7 @@
       "status": "Developing Proposal",
       "unit": "Mammoth Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:55:26.722247+00:00",
+      "scraped_at": "2026-07-12T14:59:00.178480+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9685,7 +9685,7 @@
       "status": "On Hold",
       "unit": "Inyo National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:55:26.722284+00:00",
+      "scraped_at": "2026-07-12T14:59:00.178539+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -9747,7 +9747,7 @@
       "status": "On Hold",
       "unit": "Inyo National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:55:26.722321+00:00",
+      "scraped_at": "2026-07-12T14:59:00.178598+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9794,7 +9794,7 @@
       "status": "Completed",
       "unit": "Santa Lucia Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:56:17.150150+00:00",
+      "scraped_at": "2026-07-12T14:59:50.080192+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -9810,7 +9810,7 @@
       "status": "Completed",
       "unit": "Santa Barbara Ranger District",
       "purpose": "Vegetation management (other than forest products)|Fuels management",
-      "scraped_at": "2026-07-11T14:56:17.150205+00:00",
+      "scraped_at": "2026-07-12T14:59:50.080268+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -9826,7 +9826,7 @@
       "status": "Developing Proposal",
       "unit": "Los Padres National Forest",
       "purpose": "Land management planning",
-      "scraped_at": "2026-07-11T14:56:17.150244+00:00",
+      "scraped_at": "2026-07-12T14:59:50.080330+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9863,7 +9863,7 @@
       "status": "Completed",
       "unit": "Monterey Ranger District",
       "purpose": "Facility management",
-      "scraped_at": "2026-07-11T14:56:17.150283+00:00",
+      "scraped_at": "2026-07-12T14:59:50.080390+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -9879,7 +9879,7 @@
       "status": "Completed",
       "unit": "Los Padres National Forest All Units",
       "purpose": "Wildlife, fish, rare plants|Watershed management|Road management",
-      "scraped_at": "2026-07-11T14:56:17.150319+00:00",
+      "scraped_at": "2026-07-12T14:59:50.080448+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -9895,7 +9895,7 @@
       "status": "Developing Proposal",
       "unit": "Santa Barbara Ranger District",
       "purpose": "Facility management",
-      "scraped_at": "2026-07-11T14:56:17.150355+00:00",
+      "scraped_at": "2026-07-12T14:59:50.080506+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9932,7 +9932,7 @@
       "status": "Completed",
       "unit": "Santa Lucia Ranger District",
       "purpose": "Wildlife, fish, rare plants|Watershed management|Road management",
-      "scraped_at": "2026-07-11T14:56:17.150392+00:00",
+      "scraped_at": "2026-07-12T14:59:50.080563+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -9948,7 +9948,7 @@
       "status": "Developing Proposal",
       "unit": "Los Padres National Forest",
       "purpose": "Forest products|Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:56:17.150431+00:00",
+      "scraped_at": "2026-07-12T14:59:50.080622+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9985,7 +9985,7 @@
       "status": "Completed",
       "unit": "Angeles National Forest All Units",
       "purpose": "Land management planning",
-      "scraped_at": "2026-07-11T14:56:17.150467+00:00",
+      "scraped_at": "2026-07-12T14:59:50.080679+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10001,7 +10001,7 @@
       "status": "Completed",
       "unit": "Ojai Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:56:17.150502+00:00",
+      "scraped_at": "2026-07-12T14:59:50.080736+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10017,7 +10017,7 @@
       "status": "Completed",
       "unit": "Los Padres National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:56:17.150538+00:00",
+      "scraped_at": "2026-07-12T14:59:50.080793+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10033,7 +10033,7 @@
       "status": "In Progress",
       "unit": "Ojai Ranger District",
       "purpose": "Wildlife, fish, rare plants|Watershed management",
-      "scraped_at": "2026-07-11T14:56:17.150574+00:00",
+      "scraped_at": "2026-07-12T14:59:50.080850+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10090,7 +10090,7 @@
       "status": "Completed",
       "unit": "Ojai Ranger District",
       "purpose": "Recreation management|Wildlife, fish, rare plants|Watershed management",
-      "scraped_at": "2026-07-11T14:56:17.150610+00:00",
+      "scraped_at": "2026-07-12T14:59:50.080927+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10106,7 +10106,7 @@
       "status": "Developing Proposal",
       "unit": "Los Padres National Forest",
       "purpose": "Fuels management|Vegetation management (other than forest products)|Watershed management|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:56:17.150648+00:00",
+      "scraped_at": "2026-07-12T14:59:50.080989+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10143,7 +10143,7 @@
       "status": "Completed",
       "unit": "Klamath National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:56:42.791144+00:00",
+      "scraped_at": "2026-07-12T15:00:20.490508+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10159,7 +10159,7 @@
       "status": "Completed",
       "unit": "Goosenest Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:56:42.791199+00:00",
+      "scraped_at": "2026-07-12T15:00:20.490583+00:00",
       "milestones": [],
       "first_seen": "2026-06-26",
       "most_recent_activity": []
@@ -10175,7 +10175,7 @@
       "status": "Completed",
       "unit": "Klamath National Forest",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:56:42.791238+00:00",
+      "scraped_at": "2026-07-12T15:00:20.490644+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10191,7 +10191,7 @@
       "status": "Completed",
       "unit": "Klamath National Forest",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:56:42.791276+00:00",
+      "scraped_at": "2026-07-12T15:00:20.490705+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10207,7 +10207,7 @@
       "status": "Developing Proposal",
       "unit": "Salmon River Ranger District",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-07-11T14:56:42.791313+00:00",
+      "scraped_at": "2026-07-12T15:00:20.490771+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10244,7 +10244,7 @@
       "status": "Completed",
       "unit": "Happy Camp Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:56:42.791393+00:00",
+      "scraped_at": "2026-07-12T15:00:20.490879+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10260,7 +10260,7 @@
       "status": "Completed",
       "unit": "Klamath National Forest All Units",
       "purpose": "Recreation management|Fuels management",
-      "scraped_at": "2026-07-11T14:56:42.791432+00:00",
+      "scraped_at": "2026-07-12T15:00:20.490960+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10276,7 +10276,7 @@
       "status": "Developing Proposal",
       "unit": "Klamath National Forest",
       "purpose": "Fuels management",
-      "scraped_at": "2026-07-11T14:56:42.791470+00:00",
+      "scraped_at": "2026-07-12T15:00:20.491021+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10313,7 +10313,7 @@
       "status": "Completed",
       "unit": "Happy Camp Ranger District",
       "purpose": "Wildlife, fish, rare plants|Watershed management",
-      "scraped_at": "2026-07-11T14:56:42.791508+00:00",
+      "scraped_at": "2026-07-12T15:00:20.491080+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10329,7 +10329,7 @@
       "status": "Developing Proposal",
       "unit": "Oak Knoll Ranger District",
       "purpose": "Fuels management|Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:56:42.791546+00:00",
+      "scraped_at": "2026-07-12T15:00:20.491139+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10366,7 +10366,7 @@
       "status": "Completed",
       "unit": "Klamath National Forest",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:56:42.791585+00:00",
+      "scraped_at": "2026-07-12T15:00:20.491196+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10382,7 +10382,7 @@
       "status": "Completed",
       "unit": "Salmon River Ranger District",
       "purpose": "Vegetation management (other than forest products)|Fuels management|Watershed management",
-      "scraped_at": "2026-07-11T14:56:42.791623+00:00",
+      "scraped_at": "2026-07-12T15:00:20.491253+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10398,7 +10398,7 @@
       "status": "Developing Proposal",
       "unit": "Klamath National Forest",
       "purpose": "Forest products|Fuels management",
-      "scraped_at": "2026-07-11T14:56:42.791660+00:00",
+      "scraped_at": "2026-07-12T15:00:20.491311+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10435,7 +10435,7 @@
       "status": "Completed",
       "unit": "Goosenest Ranger District",
       "purpose": "Wildlife, fish, rare plants|Vegetation management (other than forest products)|Fuels management|Watershed management",
-      "scraped_at": "2026-07-11T14:56:42.791705+00:00",
+      "scraped_at": "2026-07-12T15:00:20.491367+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10451,7 +10451,7 @@
       "status": "Developing Proposal",
       "unit": "Klamath National Forest All Units",
       "purpose": "Forest products|Fuels management",
-      "scraped_at": "2026-07-11T14:56:42.791750+00:00",
+      "scraped_at": "2026-07-12T15:00:20.491423+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10503,7 +10503,7 @@
       "status": "Completed",
       "unit": "Goosenest Ranger District",
       "purpose": "Grazing management",
-      "scraped_at": "2026-07-11T14:56:42.791795+00:00",
+      "scraped_at": "2026-07-12T15:00:20.491481+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10519,7 +10519,7 @@
       "status": "Developing Proposal",
       "unit": "Salmon River Ranger District",
       "purpose": "Watershed management|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:56:42.791839+00:00",
+      "scraped_at": "2026-07-12T15:00:20.491537+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10556,7 +10556,7 @@
       "status": "Completed",
       "unit": "Chugach National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:57:03.619084+00:00",
+      "scraped_at": "2026-07-12T15:00:41.509419+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10572,7 +10572,7 @@
       "status": "Completed",
       "unit": "Chugach National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:57:03.619138+00:00",
+      "scraped_at": "2026-07-12T15:00:41.509493+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10588,7 +10588,7 @@
       "status": "Completed",
       "unit": "Cordova Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:57:03.619177+00:00",
+      "scraped_at": "2026-07-12T15:00:41.509554+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10604,7 +10604,7 @@
       "status": "Completed",
       "unit": "Chugach National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:57:03.619215+00:00",
+      "scraped_at": "2026-07-12T15:00:41.509614+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10620,7 +10620,7 @@
       "status": "Completed",
       "unit": "Chugach National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:57:03.619251+00:00",
+      "scraped_at": "2026-07-12T15:00:41.509674+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10636,7 +10636,7 @@
       "status": "Completed",
       "unit": "Chugach National Forest All Units",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:57:03.619286+00:00",
+      "scraped_at": "2026-07-12T15:00:41.509732+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10652,7 +10652,7 @@
       "status": "Completed",
       "unit": "Cordova Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:57:03.619322+00:00",
+      "scraped_at": "2026-07-12T15:00:41.509789+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10668,7 +10668,7 @@
       "status": "Completed",
       "unit": "Cordova Ranger District",
       "purpose": "Road management",
-      "scraped_at": "2026-07-11T14:57:03.619358+00:00",
+      "scraped_at": "2026-07-12T15:00:41.509847+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10684,7 +10684,7 @@
       "status": "Completed",
       "unit": "Chugach National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:57:03.619396+00:00",
+      "scraped_at": "2026-07-12T15:00:41.509923+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10700,7 +10700,7 @@
       "status": "Completed",
       "unit": "Cordova Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:57:03.619432+00:00",
+      "scraped_at": "2026-07-12T15:00:41.509984+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10716,7 +10716,7 @@
       "status": "Completed",
       "unit": "Glacier Ranger District",
       "purpose": "Special area management",
-      "scraped_at": "2026-07-11T14:57:03.619468+00:00",
+      "scraped_at": "2026-07-12T15:00:41.510041+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10732,7 +10732,7 @@
       "status": "Completed",
       "unit": "Glacier Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:57:03.619502+00:00",
+      "scraped_at": "2026-07-12T15:00:41.510099+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10748,7 +10748,7 @@
       "status": "Completed",
       "unit": "Glacier Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:57:03.619538+00:00",
+      "scraped_at": "2026-07-12T15:00:41.510156+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10764,7 +10764,7 @@
       "status": "Completed",
       "unit": "Glacier Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:57:03.619573+00:00",
+      "scraped_at": "2026-07-12T15:00:41.510212+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10780,7 +10780,7 @@
       "status": "Completed",
       "unit": "Glacier Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:57:03.619609+00:00",
+      "scraped_at": "2026-07-12T15:00:41.510270+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10796,7 +10796,7 @@
       "status": "Completed",
       "unit": "Glacier Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:57:03.619645+00:00",
+      "scraped_at": "2026-07-12T15:00:41.510327+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10812,7 +10812,7 @@
       "status": "Completed",
       "unit": "Glacier Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:57:03.619682+00:00",
+      "scraped_at": "2026-07-12T15:00:41.510384+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10828,7 +10828,7 @@
       "status": "Completed",
       "unit": "Glacier Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:57:03.619732+00:00",
+      "scraped_at": "2026-07-12T15:00:41.510440+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10844,7 +10844,7 @@
       "status": "Completed",
       "unit": "Chugach National Forest All Units",
       "purpose": "Land management planning",
-      "scraped_at": "2026-07-11T14:57:03.619771+00:00",
+      "scraped_at": "2026-07-12T15:00:41.510497+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10860,7 +10860,7 @@
       "status": "Completed",
       "unit": "Chugach National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:57:03.619808+00:00",
+      "scraped_at": "2026-07-12T15:00:41.510553+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10876,7 +10876,7 @@
       "status": "Completed",
       "unit": "Chugach National Forest All Units",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:57:03.619846+00:00",
+      "scraped_at": "2026-07-12T15:00:41.510611+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10892,7 +10892,7 @@
       "status": "Completed",
       "unit": "Juneau Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:57:07.966968+00:00",
+      "scraped_at": "2026-07-12T15:00:47.243478+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10908,7 +10908,7 @@
       "status": "Completed",
       "unit": "Yakutat Ranger District",
       "purpose": "Wildlife, fish, rare plants|Watershed management",
-      "scraped_at": "2026-07-11T14:57:07.967027+00:00",
+      "scraped_at": "2026-07-12T15:00:47.243555+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10924,7 +10924,7 @@
       "status": "Cancelled",
       "unit": "Petersburg Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:57:07.967067+00:00",
+      "scraped_at": "2026-07-12T15:00:47.243618+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10976,7 +10976,7 @@
       "status": "Completed",
       "unit": "Yakutat Ranger District",
       "purpose": "Recreation management|Road management",
-      "scraped_at": "2026-07-11T14:57:07.967104+00:00",
+      "scraped_at": "2026-07-12T15:00:47.243678+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -10992,7 +10992,7 @@
       "status": "Completed",
       "unit": "Hoonah Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-07-11T14:57:07.967140+00:00",
+      "scraped_at": "2026-07-12T15:00:47.243737+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11008,7 +11008,7 @@
       "status": "Cancelled",
       "unit": "Wrangell Ranger District",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-07-11T14:57:07.967180+00:00",
+      "scraped_at": "2026-07-12T15:00:47.243795+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11060,7 +11060,7 @@
       "status": "Completed",
       "unit": "Admiralty Island National Monument",
       "purpose": "Watershed management|Wildlife, fish, rare plants|Projects that may affect wilderness (for mailing list contacts)",
-      "scraped_at": "2026-07-11T14:57:07.967217+00:00",
+      "scraped_at": "2026-07-12T15:00:47.243856+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11076,7 +11076,7 @@
       "status": "Completed",
       "unit": "Hoonah Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:57:07.967253+00:00",
+      "scraped_at": "2026-07-12T15:00:47.243942+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11092,7 +11092,7 @@
       "status": "Completed",
       "unit": "Admiralty Island National Monument",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-07-11T14:57:07.967291+00:00",
+      "scraped_at": "2026-07-12T15:00:47.244006+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11108,7 +11108,7 @@
       "status": "Completed",
       "unit": "Admiralty Island National Monument",
       "purpose": "Minerals and geology",
-      "scraped_at": "2026-07-11T14:57:07.967371+00:00",
+      "scraped_at": "2026-07-12T15:00:47.244113+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11124,7 +11124,7 @@
       "status": "Completed",
       "unit": "Wrangell Ranger District",
       "purpose": "Facility management",
-      "scraped_at": "2026-07-11T14:57:07.967412+00:00",
+      "scraped_at": "2026-07-12T15:00:47.244176+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11140,7 +11140,7 @@
       "status": "Completed",
       "unit": "Juneau Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:57:07.967452+00:00",
+      "scraped_at": "2026-07-12T15:00:47.244240+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11156,7 +11156,7 @@
       "status": "Completed",
       "unit": "Juneau Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:57:07.967488+00:00",
+      "scraped_at": "2026-07-12T15:00:47.244298+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11172,7 +11172,7 @@
       "status": "Completed",
       "unit": "Juneau Ranger District",
       "purpose": "Facility management",
-      "scraped_at": "2026-07-11T14:57:07.967523+00:00",
+      "scraped_at": "2026-07-12T15:00:47.244356+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11188,7 +11188,7 @@
       "status": "Completed",
       "unit": "Petersburg Ranger District",
       "purpose": "Vegetation management (other than forest products)",
-      "scraped_at": "2026-07-11T14:57:07.967560+00:00",
+      "scraped_at": "2026-07-12T15:00:47.244416+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11204,7 +11204,7 @@
       "status": "Completed",
       "unit": "Craig Ranger District",
       "purpose": "Facility management|Research",
-      "scraped_at": "2026-07-11T14:57:07.967597+00:00",
+      "scraped_at": "2026-07-12T15:00:47.244475+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11220,7 +11220,7 @@
       "status": "Completed",
       "unit": "Juneau Ranger District",
       "purpose": "Recreation management|Special area management|Facility management",
-      "scraped_at": "2026-07-11T14:57:07.967634+00:00",
+      "scraped_at": "2026-07-12T15:00:47.244532+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11236,7 +11236,7 @@
       "status": "Completed",
       "unit": "Wrangell Ranger District",
       "purpose": "Road management",
-      "scraped_at": "2026-07-11T14:57:07.967671+00:00",
+      "scraped_at": "2026-07-12T15:00:47.244590+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11252,7 +11252,7 @@
       "status": "Completed",
       "unit": "Wrangell Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:57:07.967721+00:00",
+      "scraped_at": "2026-07-12T15:00:47.244648+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11268,7 +11268,7 @@
       "status": "Completed",
       "unit": "Wrangell Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:57:07.967763+00:00",
+      "scraped_at": "2026-07-12T15:00:47.244706+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11284,7 +11284,7 @@
       "status": "Completed",
       "unit": "Admiralty National Monument",
       "purpose": "Minerals and geology|Special use management",
-      "scraped_at": "2026-07-11T14:57:07.967801+00:00",
+      "scraped_at": "2026-07-12T15:00:47.244765+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11300,47 +11300,10 @@
       "status": "Completed",
       "unit": "Hoonah Ranger District",
       "purpose": "Projects that may affect wilderness (for mailing list contacts)|Regulations, directives, orders|Research and development|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:57:07.967839+00:00",
+      "scraped_at": "2026-07-12T15:00:47.244822+00:00",
       "milestones": [],
       "first_seen": "2026-07-02",
       "most_recent_activity": []
-    },
-    {
-      "forest_name": "Tongass National Forest",
-      "forest_code": "tongass",
-      "region": "R10",
-      "state": "AK",
-      "project_name": "R10 TNF HRD Millrock Exploration Corp - Apex El Nido Project",
-      "project_url": "https://www.fs.usda.gov/r10/tongass/projects/302697",
-      "description": "The activity for the Apex-El Nido Exploration project entails conducting hard rock exploration through diamond core drilling. It is anticipated a maximum of 15 holes will be drilled.",
-      "status": "Developing Proposal",
-      "unit": "Hoonah Ranger District",
-      "purpose": "Minerals and geology",
-      "scraped_at": "2026-07-11T14:57:07.967875+00:00",
-      "milestones": [
-        {
-          "milestone": "NEPA Start Date",
-          "date": "",
-          "estimated": false
-        },
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "",
-          "estimated": false
-        }
-      ],
-      "analysis_type": "Categorical Exclusion",
-      "location_summary": "The exploration project is located on the Hoonah Ranger District of the Tongass National Forest on Chichagof Island, approximately two miles southwest of the town of Pelican, Alaska.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-05-28",
-      "most_recent_activity": [
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "",
-          "estimated": false
-        }
-      ]
     },
     {
       "forest_name": "Tongass National Forest",
@@ -11353,7 +11316,7 @@
       "status": "Completed",
       "unit": "Juneau Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:57:07.967911+00:00",
+      "scraped_at": "2026-07-12T15:00:47.244880+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11369,7 +11332,7 @@
       "status": "Completed",
       "unit": "Juneau Ranger District",
       "purpose": "Land management planning",
-      "scraped_at": "2026-07-11T14:57:07.967947+00:00",
+      "scraped_at": "2026-07-12T15:00:47.244960+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11385,7 +11348,7 @@
       "status": "Completed",
       "unit": "Ketchikan - Misty Ranger District",
       "purpose": "Recreation management",
-      "scraped_at": "2026-07-11T14:57:07.967985+00:00",
+      "scraped_at": "2026-07-12T15:00:47.245020+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11401,7 +11364,7 @@
       "status": "Completed",
       "unit": "Sitka Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:57:07.968022+00:00",
+      "scraped_at": "2026-07-12T15:00:47.245080+00:00",
       "milestones": [],
       "first_seen": "2026-06-16",
       "most_recent_activity": []
@@ -11417,7 +11380,7 @@
       "status": "Completed",
       "unit": "Sitka Ranger District",
       "purpose": "Facility management",
-      "scraped_at": "2026-07-11T14:57:07.968059+00:00",
+      "scraped_at": "2026-07-12T15:00:47.245145+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11433,7 +11396,7 @@
       "status": "Completed",
       "unit": "Thorne Bay Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:57:07.968098+00:00",
+      "scraped_at": "2026-07-12T15:00:47.245205+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11449,7 +11412,7 @@
       "status": "Developing Proposal",
       "unit": "Tongass National Forest",
       "purpose": "Land management planning",
-      "scraped_at": "2026-07-11T14:57:07.968135+00:00",
+      "scraped_at": "2026-07-12T15:00:47.245263+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11486,7 +11449,7 @@
       "status": "Completed",
       "unit": "Tongass National Forest",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:57:07.968171+00:00",
+      "scraped_at": "2026-07-12T15:00:47.245321+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11502,7 +11465,7 @@
       "status": "Completed",
       "unit": "Tongass National Forest",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:57:07.968207+00:00",
+      "scraped_at": "2026-07-12T15:00:47.245378+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11518,7 +11481,7 @@
       "status": "Completed",
       "unit": "Yakutat Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-07-11T14:57:07.968243+00:00",
+      "scraped_at": "2026-07-12T15:00:47.245434+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11534,7 +11497,7 @@
       "status": "Completed",
       "unit": "Thorne Bay Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-07-11T14:57:07.968279+00:00",
+      "scraped_at": "2026-07-12T15:00:47.245492+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11550,7 +11513,7 @@
       "status": "Completed",
       "unit": "Thorne Bay Ranger District",
       "purpose": "Special use management",
-      "scraped_at": "2026-07-11T14:57:07.968314+00:00",
+      "scraped_at": "2026-07-12T15:00:47.245549+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
@@ -11566,10 +11529,47 @@
       "status": "Completed",
       "unit": "Thorne Bay Ranger District",
       "purpose": "Wildlife, fish, rare plants|Forest products|Vegetation management (other than forest products)|Watershed management|Road management|Climate change adaptation",
-      "scraped_at": "2026-07-11T14:57:07.968348+00:00",
+      "scraped_at": "2026-07-12T15:00:47.245606+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
+    },
+    {
+      "forest_name": "Tongass National Forest",
+      "forest_code": "tongass",
+      "region": "R10",
+      "state": "AK",
+      "project_name": "Tongass -  Millrock Exploration Corp - Apex El Nido Project - HRD",
+      "project_url": "https://www.fs.usda.gov/r10/tongass/projects/302697",
+      "description": "The activity for the Apex-El Nido Exploration project entails conducting hard rock exploration through diamond core drilling. It is anticipated a maximum of 15 holes will be drilled.",
+      "status": "Developing Proposal",
+      "unit": "Hoonah Ranger District",
+      "purpose": "Minerals and geology",
+      "scraped_at": "2026-07-12T15:00:47.245663+00:00",
+      "milestones": [
+        {
+          "milestone": "NEPA Start Date",
+          "date": "",
+          "estimated": false
+        },
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "",
+          "estimated": false
+        }
+      ],
+      "analysis_type": "Categorical Exclusion",
+      "location_summary": "The exploration project is located on the Hoonah Ranger District of the Tongass National Forest on Chichagof Island, approximately two miles southwest of the town of Pelican, Alaska.",
+      "accepting_comments": false,
+      "comment_deadline": "",
+      "first_seen": "2026-05-28",
+      "most_recent_activity": [
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "",
+          "estimated": false
+        }
+      ]
     },
     {
       "forest_name": "Tongass National Forest",
@@ -11582,7 +11582,7 @@
       "status": "Developing Proposal",
       "unit": "Hoonah Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-07-11T14:57:07.968384+00:00",
+      "scraped_at": "2026-07-12T15:00:47.245720+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11619,7 +11619,7 @@
       "status": "Developing Proposal",
       "unit": "Sitka Ranger District",
       "purpose": "",
-      "scraped_at": "2026-07-11T14:57:07.968420+00:00",
+      "scraped_at": "2026-07-12T15:00:47.245776+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11650,13 +11650,13 @@
       "forest_code": "tongass",
       "region": "R10",
       "state": "AK",
-      "project_name": "Tongass - Hidden Falls Fish Hatchery Alaska Department of Fish and Game (SRD)",
+      "project_name": "Tongass - Hidden Falls Fish Hatchery Alaska Department of Fish and Game - SRD",
       "project_url": "https://www.fs.usda.gov/r10/tongass/projects/305293",
       "description": "Re-Issue of special use permit for a salmon hatchery run by Northern Southeast Regional Aquaculture Association.",
       "status": "Developing Proposal",
       "unit": "Sitka Ranger District",
       "purpose": "",
-      "scraped_at": "2026-07-11T14:57:07.968457+00:00",
+      "scraped_at": "2026-07-12T15:00:47.245834+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11690,47 +11690,26 @@
       "project_name": "Tongass - Lemon Lake Landslide Road Realignment - KMRD",
       "project_url": "https://www.fs.usda.gov/r10/tongass/projects/209379",
       "description": "Project involves the repair of road post-landslide. Work requires less than one mile of new road construction to realign the road around the section affected by the landslide. Includes drilling and blasting and development of rock pits located at: NFSR 8337000 MPs 0.497 & 1.824 and 8300300 MP 0.223.",
-      "status": "Developing Proposal",
+      "status": "Completed",
       "unit": "Ketchikan - Misty Ranger District",
       "purpose": "Road management",
-      "scraped_at": "2026-07-11T14:57:07.968492+00:00",
-      "milestones": [
-        {
-          "milestone": "NEPA Start Date",
-          "date": "1/30/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "",
-          "estimated": false
-        }
-      ],
-      "analysis_type": "Categorical Exclusion",
-      "location_summary": "Ketchikan Misty Fjords Ranger District, Revillagigedo Island on NFS Road 8337000 (Lemon Lake Road) at approximately mile post 1",
-      "accepting_comments": false,
-      "comment_deadline": "",
+      "scraped_at": "2026-07-12T15:00:47.245906+00:00",
+      "milestones": [],
       "first_seen": "2026-07-01",
-      "most_recent_activity": [
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "",
-          "estimated": false
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Tongass National Forest",
       "forest_code": "tongass",
       "region": "R10",
       "state": "AK",
-      "project_name": "Tongass NF South Revillagigedo Integrated Resource Project (Ketchikan Misty Fjords RD)",
+      "project_name": "Tongass - South Revillagigedo Integrated Resource Project - KMRD",
       "project_url": "https://www.fs.usda.gov/r10/tongass/projects/303899",
       "description": "The Forest Service is proposing a multi-year project involving a variety of timber harvest, road construction, watershed restoration and recreation activities.",
       "status": "Developing Proposal",
       "unit": "Ketchikan - Misty Ranger District",
       "purpose": "Forest products|Recreation management|Road management|Wildlife, fish, rare plants",
-      "scraped_at": "2026-07-11T14:57:07.968527+00:00",
+      "scraped_at": "2026-07-12T15:00:47.245969+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11761,13 +11740,13 @@
       "forest_code": "tongass",
       "region": "R10",
       "state": "AK",
-      "project_name": "Tongass NF Twin Mountain II Timber Sale (Thorne Bay RD)",
+      "project_name": "Tongass - Twin Mountain II Timber Sale - TBRD",
       "project_url": "https://www.fs.usda.gov/r10/tongass/projects/301827",
       "description": "The proposed action is expected to produce about 26.8 million board feet of timber from approximately 1,655 acres of National Forest System lands in the Staney and Red Bay areas within the Thorne Bay RD. Other activities include road construction, reconstruction, maintenance and decommissioning.",
       "status": "Developing Proposal",
       "unit": "Thorne Bay Ranger District",
       "purpose": "Forest products|Road management",
-      "scraped_at": "2026-07-11T14:57:07.968563+00:00",
+      "scraped_at": "2026-07-12T15:00:47.246027+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11804,7 +11783,7 @@
       "status": "Completed",
       "unit": "Thorne Bay Ranger District",
       "purpose": "Forest products",
-      "scraped_at": "2026-07-11T14:57:07.968598+00:00",
+      "scraped_at": "2026-07-12T15:00:47.246084+00:00",
       "milestones": [],
       "first_seen": "2026-05-28",
       "most_recent_activity": []
