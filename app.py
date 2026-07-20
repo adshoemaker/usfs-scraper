@@ -16,8 +16,12 @@ import urllib.request
 import urllib.error
 import urllib.parse
 from flask import Flask, request, render_template_string, session, redirect, url_for, Response
-from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
+try:
+    from flask_limiter import Limiter
+    from flask_limiter.util import get_remote_address
+    LIMITER_AVAILABLE = True
+except ImportError:
+    LIMITER_AVAILABLE = False
 
 def format_deadline(deadline_str):
     """Convert deadline string to short Pacific time format."""
@@ -109,12 +113,21 @@ def days_left_to_comment(deadline_str):
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static'))
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "dev-secret-change-in-production")
 
-limiter = Limiter(
-    get_remote_address,
-    app=app,
-    default_limits=["60 per minute", "500 per hour"],
-    storage_uri="memory://",
-)
+if LIMITER_AVAILABLE:
+    limiter = Limiter(
+        get_remote_address,
+        app=app,
+        default_limits=["60 per minute", "500 per hour"],
+        storage_uri="memory://",
+    )
+else:
+    # Dummy limiter so decorators don't break if package not installed
+    class _NoopLimiter:
+        def exempt(self, f): return f
+        def limit(self, *a, **kw):
+            def decorator(f): return f
+            return decorator
+    limiter = _NoopLimiter()
 
 STATUS_COLORS = {
     "Developing Proposal": "#9b72d8",
@@ -1451,11 +1464,6 @@ def toggle_forest_url_fn(code, current_str):
     return "/?" + urlencode(args) if args else "/"
 
 
-@app.before_request
-def exempt_admin_from_limiter():
-    if request.path.startswith("/admin"):
-        limiter.exempt(request.endpoint)
-
 
 @app.route("/robots.txt")
 @limiter.exempt
@@ -2143,6 +2151,7 @@ ADMIN_LOGIN_TEMPLATE = """
 """
 
 
+@limiter.exempt
 @app.route("/admin", methods=["GET"])
 def admin():
     if not session.get("admin_authed"):
@@ -2235,6 +2244,7 @@ def admin():
     )
 
 
+@limiter.exempt
 @app.route("/admin/save-resources", methods=["POST"])
 def admin_save_resources():
     if not session.get("admin_authed"):
@@ -2260,6 +2270,7 @@ def admin_save_resources():
     return redirect(url_for("admin") + "?flash=Resources+saved+✓")
 
 
+@limiter.exempt
 @app.route("/admin/save-about", methods=["POST"])
 def admin_save_about():
     if not session.get("admin_authed"):
@@ -2272,6 +2283,7 @@ def admin_save_about():
     return redirect(url_for("admin") + "?flash=About+text+saved+✓")
 
 
+@limiter.exempt
 @app.route("/admin/save-new-badge", methods=["POST"])
 def admin_save_new_badge():
     if not session.get("admin_authed"):
@@ -2284,6 +2296,7 @@ def admin_save_new_badge():
     return redirect(url_for("admin"))
 
 
+@limiter.exempt
 @app.route("/admin/save-url", methods=["POST"])
 def admin_save_url():
     if not session.get("admin_authed"):
@@ -2303,6 +2316,7 @@ def admin_save_url():
     return redirect(url_for("admin") + "?flash=URL+saved+%E2%9C%93")
 
 
+@limiter.exempt
 @app.route("/admin/save-commented", methods=["POST"])
 def admin_save_commented():
     if not session.get("admin_authed"):
@@ -2347,6 +2361,7 @@ def admin_save_commented():
     return redirect(url_for("admin") + f"?flash={urllib.parse.quote(flash)}")
 
 
+@limiter.exempt
 @app.route("/admin/login", methods=["GET", "POST"])
 def admin_login():
     if request.method == "POST":
@@ -2359,12 +2374,14 @@ def admin_login():
     return render_template_string(ADMIN_LOGIN_TEMPLATE, error=False)
 
 
+@limiter.exempt
 @app.route("/admin/logout")
 def admin_logout():
     session.pop("admin_authed", None)
     return redirect(url_for("admin_login"))
 
 
+@limiter.exempt
 @app.route("/admin/save", methods=["POST"])
 def admin_save():
     if not session.get("admin_authed"):
@@ -2407,6 +2424,7 @@ def admin_save():
     return redirect(url_for("admin") + f"?flash={urllib.parse.quote(flash)}")
 
 
+@limiter.exempt
 @app.route("/admin/ledger")
 def admin_ledger():
     if not session.get("admin_authed"):
@@ -2618,6 +2636,7 @@ def _push_json_via_api(token: str, filename: str, message: str) -> bool:
 
 
 
+@limiter.exempt
 @app.route("/admin/ledger/edit", methods=["POST"])
 def admin_ledger_edit():
     if not session.get("admin_authed"):
@@ -2637,6 +2656,7 @@ def admin_ledger_edit():
     return redirect(url_for("admin_ledger") + "?flash=Date+updated+✓")
 
 
+@limiter.exempt
 @app.route("/admin/ledger/delete", methods=["POST"])
 def admin_ledger_delete():
     if not session.get("admin_authed"):
