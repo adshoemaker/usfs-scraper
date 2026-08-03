@@ -740,6 +740,8 @@ PAGE_TEMPLATE = """
         /* Status badge */
         .status-badge { display: block; padding: 3px 10px; border-radius: 0; font-size: 0.918rem; font-weight: 200; font-family: 'Poppins', sans-serif; color: white; white-space: nowrap; letter-spacing: 0.8px; text-align: center; width: 255px; box-sizing: border-box; }
         .ce-badge { display: block; padding: 3px 10px; border-radius: 0; font-size: 0.918rem; font-weight: 200; font-family: 'Poppins', sans-serif; color: white; white-space: nowrap; letter-spacing: 0.8px; text-align: center; width: 255px; box-sizing: border-box; background: #d4b800; margin-top: 6px; }
+        .ea-badge { display: block; padding: 3px 10px; border-radius: 0; font-size: 0.918rem; font-weight: 200; font-family: 'Poppins', sans-serif; color: white; white-space: nowrap; letter-spacing: 0.8px; text-align: center; width: 255px; box-sizing: border-box; background: #4a90d9; margin-top: 6px; }
+        .eis-badge { display: block; padding: 3px 10px; border-radius: 0; font-size: 0.918rem; font-weight: 200; font-family: 'Poppins', sans-serif; color: white; white-space: nowrap; letter-spacing: 0.8px; text-align: center; width: 255px; box-sizing: border-box; background: #9b72d8; margin-top: 6px; }
 
         /* NEW badge */
         .new-badge { display: inline-block; background: rgba(106,171,223,0.1); color: #6aabdf; border: 2px solid #6aabdf; border-radius: 0; font-size: 0.78rem; font-weight: 700; padding: 3px 8px; vertical-align: middle; margin-left: 6px; letter-spacing: 0.3px; }
@@ -1344,6 +1346,10 @@ PAGE_TEMPLATE = """
                     {% endif %}
                     {% if p.get('analysis_type') in ('Categorical Exclusion', 'Decision Memo') %}
                     <span class="ce-badge">Categorical Exclusion</span>
+                    {% elif p.get('analysis_type') == 'Environmental Assessment' %}
+                    <span class="ea-badge">Environmental Assessment</span>
+                    {% elif p.get('analysis_type') == 'Environmental Impact Statement' %}
+                    <span class="eis-badge">Environmental Impact Statement</span>
                     {% endif %}
                     </div><!-- card-body-right-top -->
                     {% set resources = annotations.get(p.project_url, {}).get('resources') or p.get('_scraped_resources', []) %}
