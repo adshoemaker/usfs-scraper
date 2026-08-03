@@ -453,7 +453,7 @@ def filter_projects(projects, search="", forest_code="", status="",
             continue
         if categories:
             IMPACT_CATS = {"extractive", "mixed", "restorative", "unclassified"}
-            UNIQUE_CATS = {"taking_comments", "active", "newly_added"}
+            UNIQUE_CATS = {"taking_comments", "active", "newly_added", "ce_only"}
             selected_impact = [c for c in categories if c in IMPACT_CATS]
             selected_unique = [c for c in categories if c in UNIQUE_CATS]
 
@@ -487,6 +487,8 @@ def filter_projects(projects, search="", forest_code="", status="",
                 if cat == "active" and p.get("status") not in ("In Progress", "Developing Proposal"):
                     unique_match = False; break
                 if cat == "newly_added" and not (p.get("first_seen", "")[:10] >= recent_cutoff):
+                    unique_match = False; break
+                if cat == "ce_only" and p.get("analysis_type") != "Categorical Exclusion":
                     unique_match = False; break
             if not unique_match:
                 continue
@@ -683,6 +685,9 @@ PAGE_TEMPLATE = """
         .cat-btn.taking-comments { border-color: #a83030; border-width: 3px; color: #a83030; background: #e8e8e4; padding: 6px 37px; }
         .cat-btn.taking-comments.active { background: #a83030; color: white; }
         .cat-btn .dot.taking-comments-dot { background: #a83030; }
+        .cat-btn.ce-only { border-color: #7a6a3a; border-width: 3px; color: #7a6a3a; background: rgba(122,106,58,0.08); padding: 6px 37px; }
+        .cat-btn.ce-only.active { background: #7a6a3a; color: white; }
+        .cat-btn .dot.ce-only-dot { background: #7a6a3a; }
         .cat-btn.active-filter { border-color: var(--green); border-width: 3px; color: #1a4f0f; background: rgba(45,122,31,0.15); padding: 6px 37px; }
         .cat-btn.active-filter.active { background: var(--green); color: white; }
         .cat-btn .dot.active-filter-dot { background: var(--green); }
@@ -836,7 +841,6 @@ PAGE_TEMPLATE = """
             <input type="hidden" name="sort"     value="{{ selected_sort }}">
             <input type="hidden" name="sort2"    value="{{ selected_sort2 }}">
             <input type="hidden" name="category" value="{{ selected_category_str }}">
-            <input type="hidden" name="show_inactive" value="{{ '1' if show_inactive else '0' }}">
             <input type="hidden" name="forests"  value="{{ selected_forests_str }}">
             <div style="position:relative; display:inline-block;">
                 <input type="text" name="q" id="search-q"
@@ -977,7 +981,12 @@ PAGE_TEMPLATE = """
                 <span class="summary-totals">
                     <strong>{{ forest_counts.values()|sum(attribute='total') + multi_count }}</strong> total
                 </span>
-                <a href="/" class="forest-reset-btn">Reset</a>
+                <a href="{{ url_with_show_inactive }}"
+                   class="cat-btn active-filter {{ 'active' if show_inactive else '' }}"
+                   style="padding:5px 14px; font-size:0.82rem;">
+                    Show Inactive
+                </a>
+                <a href="/?reset_inactive=1" class="forest-reset-btn">Reset</a>
             </div>
         </div>
         {% if annotations.get('_about_text') %}
@@ -1094,9 +1103,10 @@ PAGE_TEMPLATE = """
             <span class="dot taking-comments-dot"></span>
             Taking Comments Now
         </a>
-        <a href="{{ url_with_show_inactive }}"
-           class="cat-btn active-filter {{ 'active' if show_inactive else '' }}">
-            Show Inactive Projects
+        <a href="{{ url_with_category('ce_only') }}"
+           class="cat-btn ce-only {{ 'active' if 'ce_only' in selected_categories else '' }}">
+            <span class="dot ce-only-dot"></span>
+            Categorical Exclusions
         </a>
     </div>
     <div class="category-disclaimer-row">
@@ -1506,7 +1516,13 @@ def index():
     selected_days     = request.args.get("days", "").strip()
     selected_category_str = request.args.get("category", "").strip()
     selected_categories = [c.strip() for c in selected_category_str.split(",") if c.strip()]
-    show_inactive = request.args.get("show_inactive", "0") == "1"
+    # show_inactive is cookie-based for durability — toggle via ?toggle_inactive=1, cleared by Reset (/?reset_inactive=1)
+    if request.args.get("toggle_inactive") == "1":
+        show_inactive = request.cookies.get("show_inactive", "0") != "1"
+    elif request.args.get("reset_inactive") == "1" or request.path == "/" and not request.query_string:
+        show_inactive = False
+    else:
+        show_inactive = request.cookies.get("show_inactive", "0") == "1"
     selected_sort     = request.args.get("sort", "cara_newest").strip()
     selected_sort2    = request.args.get("sort2", "").strip()
 
@@ -1622,16 +1638,20 @@ def index():
         if selected_sort2:        args["sort2"]   = selected_sort2
         if selected_forests_str:  args["forests"] = selected_forests_str
         if selected_category_str: args["category"] = selected_category_str
-        if not show_inactive:     args["show_inactive"] = "1"
+        args["toggle_inactive"] = "1"
         qs = urlencode(args)
-        return f"/?{qs}" if qs else "/"
+        return f"/?{qs}"
 
     def url_with_category(cat):
         from urllib.parse import urlencode
+        QUICK_FILTERS = {"newly_added", "taking_comments", "ce_only"}
         cats = list(selected_categories)
         if cat in cats:
             cats.remove(cat)
         else:
+            # If toggling a quick-filter on, remove the other two quick-filters
+            if cat in QUICK_FILTERS:
+                cats = [c for c in cats if c not in QUICK_FILTERS]
             cats.append(cat)
         args = {}
         if search:                args["q"]       = search
@@ -1645,7 +1665,7 @@ def index():
         qs = urlencode(args)
         return f"/?{qs}" if qs else "/"
 
-    return render_template_string(
+    rendered = render_template_string(
         PAGE_TEMPLATE,
         projects=projects,
         forests=FORESTS,
@@ -1698,6 +1718,9 @@ def index():
         thinning_url="https://johnmuirproject.org/wp-content/uploads/2024/12/JMP-fact-sheet-thinning-and-fire-29Nov24.pdf",
         wildfire_url="https://www.forestclimatealliance.org/s/Final-Wildfire-in-the-Age-of-Climate-Change-compressed.pdf",
     )
+    resp = Response(rendered, mimetype="text/html")
+    resp.set_cookie("show_inactive", "1" if show_inactive else "0", max_age=60*60*24*365, samesite="Lax")
+    return resp
 
 
 # ── Annotations ──────────────────────────────────────────────
