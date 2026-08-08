@@ -1116,15 +1116,10 @@ PAGE_TEMPLATE = """
     </div>
 
     <div class="results-header">
-        {% set cat_labels = {'extractive': 'Significant Effect', 'mixed': 'Mixed Impact', 'restorative': 'Restorative Impact', 'unclassified': 'Uncategorized', 'taking_comments': 'Taking Comments Now', 'active': 'Active Projects', 'newly_added': 'Newly Added'} %}
         {% if show_inactive and not (search or selected_forest or selected_status or selected_days or selected_category_str) %}
             <strong>{{ projects|length }}</strong> of <strong>{{ total }}</strong>
         {% elif selected_categories %}
-            Showing: <strong>{% for cat in selected_categories %}{{ cat_labels.get(cat, cat) }}{% if not loop.last %} · {% endif %}{% endfor %}</strong>
-            {% if selected_forest %} · <strong>{{ selected_forest_name }}</strong>{% endif %}
-            {% if selected_days %} · added in the last <strong>{{ selected_days }} days</strong>{% endif %}
-            {% if search %} · matching "<strong>{{ search }}</strong>"{% endif %}
-            {% if selected_status %} · status: <strong>{{ selected_status }}</strong>{% endif %}
+            Showing: <strong>{{ projects|length }}</strong>
         {% elif search or selected_forest or selected_status or selected_days %}
             <strong>{{ projects|length }}</strong> of <strong>{{ active_total }}</strong>
             {% if selected_days %} added in the last <strong>{{ selected_days }} days</strong>{% endif %}
