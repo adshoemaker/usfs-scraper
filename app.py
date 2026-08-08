@@ -644,9 +644,9 @@ PAGE_TEMPLATE = """
         .about-panel { display: none; background: white; border: 1px solid #ddd; padding: 16px 20px; margin-top: 8px; font-size: 0.82rem; color: #1a1a1a; line-height: 1.6; width: 100%; box-sizing: border-box; }
         .forest-col { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; padding: 0 8px; }
         .forest-col-label { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-dim); margin-bottom: 2px; }
-        .forest-pill { display: flex; align-items: center; justify-content: space-between; gap: 5px; background: transparent; border: 1.5px solid var(--accent); border-radius: 20px; padding: 3px 10px; font-size: 0.7rem; font-weight: 400; color: var(--accent); white-space: nowrap; width: 100%; box-sizing: border-box; text-decoration: none; transition: opacity 0.15s, box-shadow 0.15s; }
-        .forest-pill.pill-selected { background: var(--accent); color: white; box-shadow: 0 0 0 2px white, 0 0 0 3px var(--accent); }
-        .forest-pill-count { background: rgba(45,122,31,0.15); border-radius: 10px; padding: 0 5px; font-size: 0.62rem; font-weight: 700; color: var(--accent); }
+        .forest-pill { display: flex; align-items: center; justify-content: space-between; gap: 5px; background: transparent; border: 1.5px solid; border-radius: 20px; padding: 3px 10px; font-size: 0.7rem; font-weight: 400; white-space: nowrap; width: 100%; box-sizing: border-box; text-decoration: none; transition: opacity 0.15s, box-shadow 0.15s; }
+        .forest-pill.pill-selected { box-shadow: 0 0 0 2px white, 0 0 0 3px currentColor; }
+        .forest-pill-count { background: rgba(0,0,0,0.08); border-radius: 10px; padding: 0 5px; font-size: 0.62rem; font-weight: 700; }
         .forest-pill.pill-selected .forest-pill-count { background: rgba(255,255,255,0.25); color: white; }
         .summary-totals { color: var(--text-muted); font-size: 0.72rem; text-align: right; }
         .summary-totals strong { color: var(--text); font-weight: 700; }
@@ -881,7 +881,7 @@ PAGE_TEMPLATE = """
                     {% set combo_total = (forest_counts.get('ochoco', {}).get('total', 0) or 0) + (forest_counts.get('malheur', {}).get('total', 0) or 0) %}
                     <a href="{{ toggle_multi_forest_url(['ochoco','malheur'], selected_forests_str) }}"
                        class="forest-pill {{ 'pill-selected' if combo_sel else '' }}"
-                       style="background:{{ sc.get('pill','var(--accent)') }}; opacity:{{ '1' if (not selected_forests or combo_sel) else '0.4' }}; text-decoration:none;">
+                       style="{{ 'background:' + sc.get('pill','var(--accent)') + '; color:white; border-color:' + sc.get('pill','var(--accent)') + ';' if combo_sel else 'background:transparent; color:' + sc.get('pill','var(--accent)') + '; border-color:' + sc.get('pill','var(--accent)') + ';' }} opacity:{{ '1' if (not selected_forests or combo_sel) else '0.4' }}; text-decoration:none;">
                         Ochoco &amp; Malheur NF
                         <span class="forest-pill-count">{{ combo_total }}</span>
                     </a>
@@ -891,7 +891,7 @@ PAGE_TEMPLATE = """
                     {% set is_sel = f.code in selected_forests %}
                     <a href="{{ toggle_forest_url(f.code, selected_forests_str) }}"
                        class="forest-pill {{ 'pill-selected' if is_sel else '' }}"
-                       style="background:{{ sc.get('pill','var(--accent)') }}; opacity:{{ '1' if (not selected_forests or is_sel) else '0.4' }}; text-decoration:none;">
+                       style="{{ 'background:' + sc.get('pill','var(--accent)') + '; color:white; border-color:' + sc.get('pill','var(--accent)') + ';' if is_sel else 'background:transparent; color:' + sc.get('pill','var(--accent)') + '; border-color:' + sc.get('pill','var(--accent)') + ';' }} opacity:{{ '1' if (not selected_forests or is_sel) else '0.4' }}; text-decoration:none;">
                         {{ f.name.replace('National Forest', 'NF') }}
                         <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
                     </a>
@@ -916,7 +916,7 @@ PAGE_TEMPLATE = """
                     {% set combo_total = (forest_counts.get('ochoco', {}).get('total', 0) or 0) + (forest_counts.get('malheur', {}).get('total', 0) or 0) %}
                     <a href="{{ toggle_multi_forest_url(['ochoco','malheur'], selected_forests_str) }}"
                        class="forest-pill {{ 'pill-selected' if combo_sel else '' }}"
-                       style="background:{{ sc.get('pill','var(--accent)') }}; opacity:{{ '1' if (not selected_forests or combo_sel) else '0.4' }}; text-decoration:none;">
+                       style="{{ 'background:' + sc.get('pill','var(--accent)') + '; color:white; border-color:' + sc.get('pill','var(--accent)') + ';' if combo_sel else 'background:transparent; color:' + sc.get('pill','var(--accent)') + '; border-color:' + sc.get('pill','var(--accent)') + ';' }} opacity:{{ '1' if (not selected_forests or combo_sel) else '0.4' }}; text-decoration:none;">
                         Ochoco &amp; Malheur NF
                         <span class="forest-pill-count">{{ combo_total }}</span>
                     </a>
@@ -926,7 +926,7 @@ PAGE_TEMPLATE = """
                     {% set is_sel = f.code in selected_forests %}
                     <a href="{{ toggle_forest_url(f.code, selected_forests_str) }}"
                        class="forest-pill {{ 'pill-selected' if is_sel else '' }}"
-                       style="background:{{ sc.get('pill','var(--accent)') }}; opacity:{{ '1' if (not selected_forests or is_sel) else '0.4' }}; text-decoration:none;">
+                       style="{{ 'background:' + sc.get('pill','var(--accent)') + '; color:white; border-color:' + sc.get('pill','var(--accent)') + ';' if is_sel else 'background:transparent; color:' + sc.get('pill','var(--accent)') + '; border-color:' + sc.get('pill','var(--accent)') + ';' }} opacity:{{ '1' if (not selected_forests or is_sel) else '0.4' }}; text-decoration:none;">
                         {{ f.name.replace('National Forest', 'NF') }}
                         <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
                     </a>
@@ -951,7 +951,7 @@ PAGE_TEMPLATE = """
                 {% set combo_total = (forest_counts.get('ochoco', {}).get('total', 0) or 0) + (forest_counts.get('malheur', {}).get('total', 0) or 0) %}
                 <a href="{{ toggle_multi_forest_url(['ochoco','malheur'], selected_forests_str) }}"
                    class="forest-pill {{ 'pill-selected' if combo_sel else '' }}"
-                   style="background:{{ sc.get('pill','var(--accent)') }}; opacity:{{ '1' if (not selected_forests or combo_sel) else '0.4' }}; text-decoration:none;">
+                   style="{{ 'background:' + sc.get('pill','var(--accent)') + '; color:white; border-color:' + sc.get('pill','var(--accent)') + ';' if combo_sel else 'background:transparent; color:' + sc.get('pill','var(--accent)') + '; border-color:' + sc.get('pill','var(--accent)') + ';' }} opacity:{{ '1' if (not selected_forests or combo_sel) else '0.4' }}; text-decoration:none;">
                     Ochoco &amp; Malheur NF
                     <span class="forest-pill-count">{{ combo_total }}</span>
                 </a>
@@ -961,7 +961,7 @@ PAGE_TEMPLATE = """
                 {% set is_sel = f.code in selected_forests %}
                 <a href="{{ toggle_forest_url(f.code, selected_forests_str) }}"
                    class="forest-pill {{ 'pill-selected' if is_sel else '' }}"
-                   style="background:{{ sc.get('pill','var(--accent)') }}; opacity:{{ '1' if (not selected_forests or is_sel) else '0.4' }}; text-decoration:none;">
+                   style="{{ 'background:' + sc.get('pill','var(--accent)') + '; color:white; border-color:' + sc.get('pill','var(--accent)') + ';' if is_sel else 'background:transparent; color:' + sc.get('pill','var(--accent)') + '; border-color:' + sc.get('pill','var(--accent)') + ';' }} opacity:{{ '1' if (not selected_forests or is_sel) else '0.4' }}; text-decoration:none;">
                     {{ f.name.replace('National Forest', 'NF') }}
                     <span class="forest-pill-count">{{ forest_counts[f.code].total }}</span>
                 </a>
