@@ -627,8 +627,8 @@ PAGE_TEMPLATE = """
         .header-search input[type="text"] { padding: 7px 14px; border: 1px solid #ccc; border-radius: 0; font-family: 'Poppins', sans-serif; font-size: 0.88rem; background: white; color: #1a1a1a; outline: none; flex: 1; }
         .header-search input[type="text"]::placeholder { color: #aaa; }
         .header-search input[type="text"]:focus { border-color: #888; }
-        .header-search button { padding: 7px 18px; background: #8fa68e; color: white; border: none; border-radius: 0; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400; cursor: pointer; white-space: nowrap; }
-        .header-search button:hover { background: #7a9079; }
+        .header-search button { padding: 7px 18px; background: transparent; color: #8fa68e; border: 1.5px solid #8fa68e; border-radius: 0; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400; cursor: pointer; white-space: nowrap; }
+        .header-search button:hover { background: #8fa68e; color: white; }
 
         /* ── Forest summary ── */
         .forest-summary { background: #f7f7f0; border-bottom: 1px solid var(--border); padding: 10px 20px; }
@@ -636,17 +636,18 @@ PAGE_TEMPLATE = """
         .forest-cols-row { display: flex; gap: 0; justify-content: center; width: 100%; }
         .forest-totals-row { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; width: 100%; }
         .forest-totals-right { display: flex; align-items: center; gap: 12px; }
-        .forest-reset-btn { display: inline-block; padding: 7px 18px; background: #e05a2b; color: white; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400; border: none; cursor: pointer; text-decoration: none; white-space: nowrap; }
-        .forest-reset-btn:hover { background: #c44d22; }
-        .about-btn { display: inline-block; padding: 7px 18px; background: #8fa68e; color: white; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400; border: none; cursor: pointer; white-space: nowrap; }
-        .about-btn.open { background: white; color: #8fa68e; border: 1px solid #8fa68e; }
-        .about-btn:hover { background: #7a9079; }
+        .forest-reset-btn { display: inline-block; padding: 7px 18px; background: transparent; color: #e05a2b; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400; border: 1.5px solid #e05a2b; cursor: pointer; text-decoration: none; white-space: nowrap; }
+        .forest-reset-btn:hover { background: #e05a2b; color: white; }
+        .about-btn { display: inline-block; padding: 7px 18px; background: transparent; color: #8fa68e; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400; border: 1.5px solid #8fa68e; cursor: pointer; white-space: nowrap; }
+        .about-btn.open { background: #8fa68e; color: white; }
+        .about-btn:hover { background: #8fa68e; color: white; }
         .about-panel { display: none; background: white; border: 1px solid #ddd; padding: 16px 20px; margin-top: 8px; font-size: 0.82rem; color: #1a1a1a; line-height: 1.6; width: 100%; box-sizing: border-box; }
         .forest-col { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; padding: 0 8px; }
         .forest-col-label { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-dim); margin-bottom: 2px; }
-        .forest-pill { display: flex; align-items: center; justify-content: space-between; gap: 5px; background: var(--accent); border-radius: 20px; padding: 3px 10px; font-size: 0.7rem; font-weight: 400; color: white; white-space: nowrap; width: 100%; box-sizing: border-box; text-decoration: none; transition: opacity 0.15s, box-shadow 0.15s; }
-        .forest-pill.pill-selected { box-shadow: 0 0 0 2px white, 0 0 0 3px currentColor; }
-        .forest-pill-count { background: rgba(255,255,255,0.25); border-radius: 10px; padding: 0 5px; font-size: 0.62rem; font-weight: 700; color: white; }
+        .forest-pill { display: flex; align-items: center; justify-content: space-between; gap: 5px; background: transparent; border: 1.5px solid var(--accent); border-radius: 20px; padding: 3px 10px; font-size: 0.7rem; font-weight: 400; color: var(--accent); white-space: nowrap; width: 100%; box-sizing: border-box; text-decoration: none; transition: opacity 0.15s, box-shadow 0.15s; }
+        .forest-pill.pill-selected { background: var(--accent); color: white; border-width: 2px; }
+        .forest-pill-count { background: rgba(45,122,31,0.15); border-radius: 10px; padding: 0 5px; font-size: 0.62rem; font-weight: 700; color: var(--accent); }
+        .forest-pill.pill-selected .forest-pill-count { background: rgba(255,255,255,0.25); color: white; }
         .summary-totals { color: var(--text-muted); font-size: 0.72rem; text-align: right; }
         .summary-totals strong { color: var(--text); font-weight: 700; }
 
@@ -667,28 +668,28 @@ PAGE_TEMPLATE = """
         .category-filters span { font-size: 0.62rem; font-weight: 700; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.8px; }
         .cat-btn { display: inline-flex; align-items: center; gap: 7px; padding: 5px 14px; border-radius: 20px; border: 1.5px solid transparent; font-family: 'Poppins', sans-serif; font-size: 0.78rem; font-weight: 700; cursor: pointer; text-decoration: none; transition: all 0.15s; letter-spacing: 0.2px; }
         .cat-btn .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-        .cat-btn.extractive  { border-color: var(--red);    color: var(--red);    background: rgba(168,48,48,0.07); }
+        .cat-btn.extractive  { border-color: var(--red);    color: var(--red);    background: transparent; }
         .cat-btn.extractive.active  { background: var(--red);    color: white; border-width: 3px; }
         .cat-btn .dot.extractive-dot  { background: var(--red); }
-        .cat-btn.restorative { border-color: var(--green);  color: var(--green);  background: rgba(45,122,31,0.07); }
+        .cat-btn.restorative { border-color: var(--green);  color: var(--green);  background: transparent; }
         .cat-btn.restorative.active { background: var(--green);  color: white; border-width: 3px; }
         .cat-btn .dot.restorative-dot { background: var(--green); }
-        .cat-btn.mixed       { border-color: var(--orange); color: var(--orange); background: rgba(196,106,48,0.07); }
+        .cat-btn.mixed       { border-color: var(--orange); color: var(--orange); background: transparent; }
         .cat-btn.mixed.active       { background: var(--orange); color: white; border-width: 3px; }
         .cat-btn .dot.mixed-dot       { background: var(--orange); }
-        .cat-btn.unclassified { border-color: #888; color: #555; background: rgba(128,128,128,0.07); }
+        .cat-btn.unclassified { border-color: #888; color: #555; background: transparent; }
         .cat-btn.unclassified.active { background: #888; color: white; border-width: 3px; }
         .cat-btn .dot.unclassified-dot { background: #888; }
-        .cat-btn.newly-added { border-color: #6aabdf; border-width: 3px; color: #5599cc; background: rgba(106,171,223,0.1); padding: 6px 37px; }
+        .cat-btn.newly-added { border-color: #6aabdf; border-width: 3px; color: #5599cc; background: transparent; padding: 6px 37px; }
         .cat-btn.newly-added.active { background: #6aabdf; color: white; }
         .cat-btn .dot.newly-added-dot { background: #6aabdf; }
-        .cat-btn.taking-comments { border-color: #a83030; border-width: 3px; color: #a83030; background: #e8e8e4; padding: 6px 37px; }
+        .cat-btn.taking-comments { border-color: #a83030; border-width: 3px; color: #a83030; background: transparent; padding: 6px 37px; }
         .cat-btn.taking-comments.active { background: #a83030; color: white; }
         .cat-btn .dot.taking-comments-dot { background: #a83030; }
-        .cat-btn.ce-only { border-color: #7a6a3a; border-width: 3px; color: #7a6a3a; background: rgba(122,106,58,0.08); padding: 6px 37px; }
+        .cat-btn.ce-only { border-color: #7a6a3a; border-width: 3px; color: #7a6a3a; background: transparent; padding: 6px 37px; }
         .cat-btn.ce-only.active { background: #7a6a3a; color: white; }
         .cat-btn .dot.ce-only-dot { background: #7a6a3a; }
-        .cat-btn.active-filter { border-color: var(--green); border-width: 3px; color: #1a4f0f; background: rgba(45,122,31,0.15); padding: 6px 37px; }
+        .cat-btn.active-filter { border-color: var(--green); border-width: 3px; color: var(--green); background: transparent; padding: 6px 37px; }
         .cat-btn.active-filter.active { background: var(--green); color: white; }
         .cat-btn .dot.active-filter-dot { background: var(--green); }
         .cat-btn.active .dot { background: currentColor; }
@@ -835,7 +836,7 @@ PAGE_TEMPLATE = """
 
 <div class="top-search-bar">
     <div class="top-search-inner">
-        <a href="mailto:andrew@wlfdc.org?subject=LFDC%20Tracker%20Feedback%20%2F%20Feature%20Suggestion" style="font-family:'Poppins',sans-serif; font-size:0.88rem; font-weight:400; color:white; text-decoration:none; background:#8fa68e; padding:7px 18px; white-space:nowrap;" class="desktop-only">Submit Feedback — Suggest Features</a>
+        <a href="mailto:andrew@wlfdc.org?subject=LFDC%20Tracker%20Feedback%20%2F%20Feature%20Suggestion" style="font-family:'Poppins',sans-serif; font-size:0.88rem; font-weight:400; color:#8fa68e; text-decoration:none; background:transparent; border:1.5px solid #8fa68e; padding:7px 18px; white-space:nowrap;" class="desktop-only">Submit Feedback — Suggest Features</a>
         <form class="header-search" method="GET" action="/" id="searchform" style="position:relative;">
             <input type="hidden" name="forest"   value="{{ selected_forest }}">
             <input type="hidden" name="status"   value="{{ selected_status }}">
@@ -984,8 +985,8 @@ PAGE_TEMPLATE = """
                     <strong>{{ forest_counts.values()|sum(attribute='total') + multi_count }}</strong> total
                 </span>
                 <a href="{{ url_with_show_inactive }}"
-                   class="forest-reset-btn {{ 'inactive-btn-on' if show_inactive else 'inactive-btn-off' }}"
-                   style="background: {{ '#5a7a58' if show_inactive else '#888' }};">
+                   class="forest-reset-btn"
+                   style="{{ 'background:#5a7a58; color:white; border-color:#5a7a58;' if show_inactive else 'background:transparent; color:#888; border-color:#888;' }}">
                     Show Inactive
                 </a>
                 <a href="/?reset_inactive=1" class="forest-reset-btn">Reset</a>
@@ -996,7 +997,7 @@ PAGE_TEMPLATE = """
         {% endif %}
         <div class="mobile-only" style="padding-top:6px;">
             <a href="mailto:andrew@wlfdc.org?subject=LFDC%20Tracker%20Feedback%20%2F%20Feature%20Suggestion"
-               style="font-family:'Poppins',sans-serif; font-size:0.82rem; font-weight:400; color:white; text-decoration:none; background:#8fa68e; padding:6px 16px; white-space:nowrap;">
+               style="font-family:'Poppins',sans-serif; font-size:0.82rem; font-weight:400; color:#8fa68e; text-decoration:none; background:transparent; border:1.5px solid #8fa68e; padding:6px 16px; white-space:nowrap;">
                 Submit Feedback — Suggest Features
             </a>
         </div>
