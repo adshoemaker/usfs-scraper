@@ -1447,12 +1447,13 @@ def toggle_multi_forest_url_fn(codes, current_str):
     else:
         new = current + [c for c in codes if c not in current]
     args = {}
-    if req.args.get("q"):      args["q"]       = req.args.get("q")
-    if req.args.get("status"): args["status"]  = req.args.get("status")
-    if req.args.get("days"):   args["days"]    = req.args.get("days")
-    if req.args.get("sort"):   args["sort"]    = req.args.get("sort")
-    if req.args.get("sort2"):  args["sort2"]   = req.args.get("sort2")
-    if new:                    args["forests"] = ",".join(new)
+    if req.args.get("q"):      args["q"]        = req.args.get("q")
+    if req.args.get("status"): args["status"]   = req.args.get("status")
+    if req.args.get("days"):   args["days"]     = req.args.get("days")
+    if req.args.get("sort"):   args["sort"]     = req.args.get("sort")
+    if req.args.get("sort2"):  args["sort2"]    = req.args.get("sort2")
+    if req.args.get("category"): args["category"] = req.args.get("category")
+    if new:                    args["forests"]  = ",".join(new)
     return "/?" + urlencode(args) if args else "/"
 
 
@@ -1471,7 +1472,7 @@ def toggle_forest_url_fn(code, current_str):
     if req.args.get("days"):      args["days"]     = req.args.get("days")
     if req.args.get("sort"):      args["sort"]     = req.args.get("sort")
     if req.args.get("sort2"):     args["sort2"]    = req.args.get("sort2")
-    # Don't carry category when toggling forest — avoids zero results
+    if req.args.get("category"):  args["category"] = req.args.get("category")
     if new:                       args["forests"]  = ",".join(new)
     return "/?" + urlencode(args) if args else "/"
 
