@@ -386,7 +386,7 @@ def scrape_forest(session: requests.Session, forest: dict,
         with open("projects.json", encoding="utf-8") as _f:
             _existing = json.load(_f)
         for _p in _existing.get("projects", []):
-            if (_p.get("milestones") or _p.get("accepting_comments")) and _p.get("analysis_type"):
+            if _p.get("milestones") or _p.get("accepting_comments"):
                 existing_milestones[_p["project_url"]] = {
                     "milestones":         _p.get("milestones", []),
                     "analysis_type":      _p.get("analysis_type", ""),
@@ -417,8 +417,9 @@ def scrape_forest(session: requests.Session, forest: dict,
         entry_hash = hashlib.md5(entry_str.encode()).hexdigest()
         is_new      = url not in existing_milestones
         hash_changed = project_hash_cache.get(url) != entry_hash
+        missing_type = url in existing_milestones and not existing_milestones[url].get("analysis_type")
 
-        if is_new or hash_changed:
+        if is_new or hash_changed or missing_type:
             to_fetch.append(p)
             project_hash_cache[url] = entry_hash
         else:
