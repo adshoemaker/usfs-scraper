@@ -645,7 +645,7 @@ PAGE_TEMPLATE = """
         .forest-col { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; padding: 0 8px; }
         .forest-col-label { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-dim); margin-bottom: 2px; }
         .forest-pill { display: flex; align-items: center; justify-content: space-between; gap: 5px; background: transparent; border: 1.5px solid var(--accent); border-radius: 20px; padding: 3px 10px; font-size: 0.7rem; font-weight: 400; color: var(--accent); white-space: nowrap; width: 100%; box-sizing: border-box; text-decoration: none; transition: opacity 0.15s, box-shadow 0.15s; }
-        .forest-pill.pill-selected { background: var(--accent); color: white; border-width: 2px; }
+        .forest-pill.pill-selected { background: var(--accent); color: white; box-shadow: 0 0 0 2px white, 0 0 0 3px var(--accent); }
         .forest-pill-count { background: rgba(45,122,31,0.15); border-radius: 10px; padding: 0 5px; font-size: 0.62rem; font-weight: 700; color: var(--accent); }
         .forest-pill.pill-selected .forest-pill-count { background: rgba(255,255,255,0.25); color: white; }
         .summary-totals { color: var(--text-muted); font-size: 0.72rem; text-align: right; }
