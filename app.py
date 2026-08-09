@@ -640,6 +640,13 @@ PAGE_TEMPLATE = """
         .forest-totals-right { display: flex; align-items: center; gap: 12px; }
         .forest-reset-btn { display: inline-block; padding: 7px 18px; background: transparent; color: #e05a2b; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400; border: 1.5px solid #e05a2b; cursor: pointer; text-decoration: none; white-space: nowrap; }
         .forest-reset-btn:hover { background: #e05a2b; color: white; }
+        .inactive-toggle { display: inline-flex; align-items: center; gap: 7px; text-decoration: none; cursor: pointer; }
+        .inactive-toggle-track { display: inline-flex; align-items: center; width: 36px; height: 20px; border-radius: 10px; border: 1.5px solid #aaa; background: transparent; padding: 2px; box-sizing: border-box; transition: background 0.2s, border-color 0.2s; }
+        .inactive-toggle-track.on { background: #5a7a58; border-color: #5a7a58; }
+        .inactive-toggle-thumb { width: 14px; height: 14px; border-radius: 50%; background: #aaa; transition: transform 0.2s, background 0.2s; flex-shrink: 0; }
+        .inactive-toggle-track.on .inactive-toggle-thumb { transform: translateX(16px); background: white; }
+        .inactive-toggle-label { font-family: 'Poppins', sans-serif; font-size: 0.82rem; font-weight: 400; color: #888; white-space: nowrap; }
+        .inactive-toggle-track.on + .inactive-toggle-label { color: #5a7a58; }
         .about-btn { display: inline-block; padding: 7px 18px; background: transparent; color: #8fa68e; font-family: 'Poppins', sans-serif; font-size: 0.88rem; font-weight: 400; border: 1.5px solid #8fa68e; cursor: pointer; white-space: nowrap; }
         .about-btn.open { background: #8fa68e; color: white; }
         .about-btn:hover { background: #8fa68e; color: white; }
@@ -974,22 +981,16 @@ PAGE_TEMPLATE = """
             {% endfor %}
         </div>
         <div class="forest-totals-row">
-            {% if annotations.get('_about_text') %}
-            <button type="button" class="about-btn" id="about-toggle"
-                onclick="var p=document.getElementById('about-panel'); var open=p.style.display==='block'; p.style.display=open?'none':'block'; this.classList.toggle('open',!open);">
-                About the LFDC NEPA Tracker
-            </button>
-            {% else %}
             <span></span>
-            {% endif %}
             <div class="forest-totals-right">
                 <span class="summary-totals">
                     <strong>{{ forest_counts.values()|sum(attribute='total') + multi_count }}</strong> total
                 </span>
-                <a href="{{ url_with_show_inactive }}"
-                   class="forest-reset-btn"
-                   style="{{ 'background:#5a7a58; color:white; border-color:#5a7a58;' if show_inactive else 'background:transparent; color:#888; border-color:#888;' }}">
-                    Show Inactive
+                <a href="{{ url_with_show_inactive }}" class="inactive-toggle" title="Show inactive projects">
+                    <span class="inactive-toggle-track {{ 'on' if show_inactive else '' }}">
+                        <span class="inactive-toggle-thumb"></span>
+                    </span>
+                    <span class="inactive-toggle-label">Inactive</span>
                 </a>
                 <a href="/?reset_inactive=1" class="forest-reset-btn">Reset</a>
             </div>
@@ -1007,6 +1008,16 @@ PAGE_TEMPLATE = """
 </div>
 
 <div class="container">
+
+    {% if annotations.get('_about_text') %}
+    <div style="padding: 10px 0 0 0; display:flex; align-items:center; gap:12px;">
+        <button type="button" class="about-btn" id="about-toggle"
+            onclick="var p=document.getElementById('about-panel2'); var open=p.style.display==='block'; p.style.display=open?'none':'block'; this.classList.toggle('open',!open);">
+            About the LFDC NEPA Tracker
+        </button>
+    </div>
+    <div id="about-panel2" class="about-panel" style="display:none;">{{ annotations.get('_about_text') | safe }}</div>
+    {% endif %}
 
     <div class="filters-wrapper">
     <form class="filters" method="GET" action="/">
