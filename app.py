@@ -992,27 +992,29 @@ PAGE_TEMPLATE = """
 <div class="container">
 
     {% if annotations.get('_about_text') %}
-    <div style="padding: 10px 0 0 0; display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+    <div style="padding: 10px 0 0 0; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
         <button type="button" class="about-btn" id="about-toggle"
             onclick="var p=document.getElementById('about-panel2'); var open=p.style.display==='block'; p.style.display=open?'none':'block'; this.classList.toggle('open',!open);">
             About the LFDC NEPA Tracker
         </button>
-        <a href="{{ url_with_show_inactive }}" class="inactive-toggle" title="Show inactive projects">
-            <span class="inactive-toggle-track {{ 'on' if show_inactive else '' }}">
-                <span class="inactive-toggle-thumb"></span>
-            </span>
-            <span class="inactive-toggle-label">Inactive</span>
-        </a>
-        <a href="/?reset_inactive=1" class="forest-reset-btn">Reset</a>
+        <div style="display:flex; align-items:center; gap:12px;">
+            <a href="{{ url_with_show_inactive }}" class="inactive-toggle" title="Show inactive projects">
+                <span class="inactive-toggle-track {{ 'on' if show_inactive else '' }}">
+                    <span class="inactive-toggle-thumb"></span>
+                </span>
+                <span class="inactive-toggle-label">Show / Hide Inactive</span>
+            </a>
+            <a href="/?reset_inactive=1" class="forest-reset-btn">Reset</a>
+        </div>
     </div>
     <div id="about-panel2" class="about-panel" style="display:none;">{{ annotations.get('_about_text') | safe }}</div>
     {% else %}
-    <div style="padding: 10px 0 0 0; display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+    <div style="padding: 10px 0 0 0; display:flex; align-items:center; justify-content:flex-end; gap:12px; flex-wrap:wrap;">
         <a href="{{ url_with_show_inactive }}" class="inactive-toggle" title="Show inactive projects">
             <span class="inactive-toggle-track {{ 'on' if show_inactive else '' }}">
                 <span class="inactive-toggle-thumb"></span>
             </span>
-            <span class="inactive-toggle-label">Inactive</span>
+            <span class="inactive-toggle-label">Show / Hide Inactive</span>
         </a>
         <a href="/?reset_inactive=1" class="forest-reset-btn">Reset</a>
     </div>
