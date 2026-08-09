@@ -373,11 +373,18 @@ def scrape_forest(session: requests.Session, forest: dict,
 
     print(f"  Found {len(projects)} projects")
 
-    # Fetch milestones and detail for ALL projects
-    milestone_projects = [
-        p for p in projects
-        if flags.get("include_completed") or p["status"] != "Completed"
-    ]
+    # Fetch milestones and detail for relevant projects
+    # Always include completed projects that are missing analysis_type (need re-fetch)
+    def needs_fetch(p):
+        if flags.get("include_completed"):
+            return True
+        if p["status"] != "Completed":
+            return True
+        # Completed but missing analysis_type — include regardless of day
+        cached = existing_milestones.get(p["project_url"], {})
+        return not cached.get("analysis_type")
+
+    milestone_projects = [p for p in projects if needs_fetch(p)]
     do_full = should_fetch_milestones()
 
     # Load existing milestone/detail data to identify new projects
@@ -386,14 +393,13 @@ def scrape_forest(session: requests.Session, forest: dict,
         with open("projects.json", encoding="utf-8") as _f:
             _existing = json.load(_f)
         for _p in _existing.get("projects", []):
-            if _p.get("milestones") or _p.get("accepting_comments"):
-                existing_milestones[_p["project_url"]] = {
-                    "milestones":         _p.get("milestones", []),
-                    "analysis_type":      _p.get("analysis_type", ""),
-                    "location_summary":   _p.get("location_summary", ""),
-                    "accepting_comments": _p.get("accepting_comments", False),
-                    "comment_deadline":   _p.get("comment_deadline", ""),
-                }
+            existing_milestones[_p["project_url"]] = {
+                "milestones":         _p.get("milestones", []),
+                "analysis_type":      _p.get("analysis_type", ""),
+                "location_summary":   _p.get("location_summary", ""),
+                "accepting_comments": _p.get("accepting_comments", False),
+                "comment_deadline":   _p.get("comment_deadline", ""),
+            }
     except Exception:
         pass
 
@@ -415,9 +421,9 @@ def scrape_forest(session: requests.Session, forest: dict,
         # Hash the project's listing entry to detect changes
         entry_str = f"{p['project_name']}|{p['status']}|{p['description'][:100]}"
         entry_hash = hashlib.md5(entry_str.encode()).hexdigest()
-        is_new      = url not in existing_milestones
-        hash_changed = project_hash_cache.get(url) != entry_hash
-        missing_type = url in existing_milestones and not existing_milestones[url].get("analysis_type")
+        is_new        = url not in existing_milestones
+        hash_changed  = project_hash_cache.get(url) != entry_hash
+        missing_type  = not existing_milestones.get(url, {}).get("analysis_type")
 
         if is_new or hash_changed or missing_type:
             to_fetch.append(p)
