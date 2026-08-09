@@ -488,7 +488,7 @@ def filter_projects(projects, search="", forest_code="", status="",
                     unique_match = False; break
                 if cat == "newly_added" and not (p.get("first_seen", "")[:10] >= recent_cutoff):
                     unique_match = False; break
-                if cat == "ce_only" and p.get("analysis_type") != "Categorical Exclusion":
+                if cat == "ce_only" and p.get("analysis_type") not in ("Categorical Exclusion", "Decision Memo"):
                     unique_match = False; break
             if not unique_match:
                 continue
