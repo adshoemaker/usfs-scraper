@@ -996,25 +996,11 @@ PAGE_TEMPLATE = """
             onclick="var p=document.getElementById('about-panel2'); var open=p.style.display==='block'; p.style.display=open?'none':'block'; this.classList.toggle('open',!open);">
             About the LFDC NEPA Tracker
         </button>
-        <div style="display:flex; align-items:center; gap:12px;">
-            <a href="{{ url_with_show_inactive }}" class="inactive-toggle" title="Show inactive projects">
-                <span class="inactive-toggle-track {{ 'on' if show_inactive else '' }}">
-                    <span class="inactive-toggle-thumb"></span>
-                </span>
-                <span class="inactive-toggle-label">Show / Hide Inactive</span>
-            </a>
-            <a href="/?reset_inactive=1" class="forest-reset-btn">Reset</a>
-        </div>
+        <a href="/?reset_inactive=1" class="forest-reset-btn">Reset</a>
     </div>
     <div id="about-panel2" class="about-panel" style="display:none;">{{ annotations.get('_about_text') | safe }}</div>
     {% else %}
     <div style="padding: 10px 0 0 0; display:flex; align-items:center; justify-content:flex-end; gap:12px; flex-wrap:wrap;">
-        <a href="{{ url_with_show_inactive }}" class="inactive-toggle" title="Show inactive projects">
-            <span class="inactive-toggle-track {{ 'on' if show_inactive else '' }}">
-                <span class="inactive-toggle-thumb"></span>
-            </span>
-            <span class="inactive-toggle-label">Show / Hide Inactive</span>
-        </a>
         <a href="/?reset_inactive=1" class="forest-reset-btn">Reset</a>
     </div>
     {% endif %}
@@ -1532,13 +1518,11 @@ def index():
     selected_days     = request.args.get("days", "").strip()
     selected_category_str = request.args.get("category", "").strip()
     selected_categories = [c.strip() for c in selected_category_str.split(",") if c.strip()]
-    # show_inactive is cookie-based for durability — toggle via ?toggle_inactive=1, cleared by Reset (/?reset_inactive=1)
-    if request.args.get("toggle_inactive") == "1":
-        show_inactive = request.cookies.get("show_inactive", "0") != "1"
-    elif request.args.get("reset_inactive") == "1" or request.path == "/" and not request.query_string:
-        show_inactive = False
+    # show_inactive defaults to True — Reset clears to default (still True)
+    if request.args.get("reset_inactive") == "1" or request.args.get("toggle_inactive") == "1":
+        show_inactive = True
     else:
-        show_inactive = request.cookies.get("show_inactive", "0") == "1"
+        show_inactive = request.cookies.get("show_inactive", "1") == "1"
     selected_sort     = request.args.get("sort", "cara_newest").strip()
     selected_sort2    = request.args.get("sort2", "").strip()
 
