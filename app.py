@@ -1316,7 +1316,7 @@ PAGE_TEMPLATE = """
                                         {% if ann.get('intro') %}
                                 <div class="annotation-intro">{{ ann.intro }}</div>
                                 {% endif %}
-                                <div class="annotation-text" id="ann-text-{{ loop.index }}">{{ ann.annotation }}</div>
+                                <div class="annotation-text" id="ann-text-{{ loop.index }}">{{ ann.annotation | safe }}</div>
                                 <button class="annotation-copy" onclick="navigator.clipboard.writeText(document.getElementById('ann-text-{{ loop.index }}').innerText); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy to clipboard',2000)">Copy to clipboard</button>
                             </div>
                         </div>
