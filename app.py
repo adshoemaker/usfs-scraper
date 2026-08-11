@@ -748,7 +748,7 @@ PAGE_TEMPLATE = """
 
         /* Status badge */
         .status-badge { display: block; padding: 3px 10px; border-radius: 0; font-size: 0.918rem; font-weight: 200; font-family: 'Poppins', sans-serif; color: white; white-space: nowrap; letter-spacing: 0.8px; text-align: center; width: 255px; box-sizing: border-box; }
-        .ce-badge { display: block; padding: 3px 10px; border-radius: 0; font-size: 0.918rem; font-weight: 200; font-family: 'Poppins', sans-serif; color: white; white-space: nowrap; letter-spacing: 0.8px; text-align: center; width: 255px; box-sizing: border-box; background: #d4b800; margin-top: 6px; }
+        .ce-badge { display: block; padding: 3px 10px; border-radius: 0; font-size: 0.918rem; font-weight: 200; font-family: 'Poppins', sans-serif; color: white; white-space: normal; letter-spacing: 0.8px; text-align: center; min-width: 255px; box-sizing: border-box; background: #d4b800; margin-top: 6px; }
         .ea-badge { display: block; padding: 3px 10px; border-radius: 0; font-size: 0.918rem; font-weight: 200; font-family: 'Poppins', sans-serif; color: #555; white-space: nowrap; letter-spacing: 0.8px; text-align: center; width: 255px; box-sizing: border-box; background: #e0e0dc; margin-top: 6px; }
         .eis-badge { display: block; padding: 3px 10px; border-radius: 0; font-size: 0.918rem; font-weight: 200; font-family: 'Poppins', sans-serif; color: #555; white-space: nowrap; letter-spacing: 0.8px; text-align: center; width: 255px; box-sizing: border-box; background: #e0e0dc; margin-top: 6px; }
 
@@ -1116,18 +1116,16 @@ PAGE_TEMPLATE = """
     </div>
 
     <div class="results-header">
-        {% if show_inactive and not (search or selected_forest or selected_status or selected_days or selected_category_str) %}
-            <strong>{{ projects|length }}</strong> of <strong>{{ total }}</strong>
-        {% elif selected_categories %}
+        {% if selected_categories %}
             Showing: <strong>{{ projects|length }}</strong>
         {% elif search or selected_forest or selected_status or selected_days %}
-            <strong>{{ projects|length }}</strong> of <strong>{{ active_total }}</strong>
+            <strong>{{ projects|length }}</strong> of <strong>{{ total }}</strong>
             {% if selected_days %} added in the last <strong>{{ selected_days }} days</strong>{% endif %}
             {% if search %} matching "<strong>{{ search }}</strong>"{% endif %}
             {% if selected_status %} · status: <strong>{{ selected_status }}</strong>{% endif %}
             {% if selected_forest %} · <strong>{{ selected_forest_name }}</strong>{% endif %}
         {% else %}
-            <strong>{{ projects|length }}</strong> of <strong>{{ active_total }}</strong> active projects
+            <strong>{{ projects|length }}</strong> of <strong>{{ total }}</strong> projects
         {% endif %}
     </div>
 
@@ -1340,7 +1338,7 @@ PAGE_TEMPLATE = """
                     <span class="status-badge" style="background: {{ status_colors.get(p.status, '#b4b2a9') }};">{{ p.status }}</span>
                     {% endif %}
                     {% if p.get('analysis_type') in ('Categorical Exclusion', 'Decision Memo') %}
-                    <span class="ce-badge">Categorical Exclusion</span>
+                    <span class="ce-badge">Categorical Exclusion{% if p.get('ce_citation') %} · {{ p.ce_citation }}{% endif %}</span>
                     {% elif p.get('analysis_type') == 'Environmental Assessment' %}
                     <span class="ea-badge">Environmental Assessment</span>
                     {% elif p.get('analysis_type') == 'Environmental Impact Statement' %}
