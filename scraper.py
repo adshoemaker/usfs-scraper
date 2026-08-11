@@ -174,7 +174,29 @@ def parse_detail_page(html: str) -> dict:
                 location_summary = value
             break
 
-    return {"milestones": milestones, "analysis_type": analysis_type, "location_summary": location_summary}
+    # Find Categorical Exclusion citation
+    ce_citation = ""
+    for strong in soup.find_all(["strong", "b"]):
+        text = strong.get_text(strip=True)
+        if text == "Categorical Exclusion:" or text == "Categorical Exclusion":
+            parent = strong.parent
+            full_text = parent.get_text(strip=True)
+            value = full_text.replace("Categorical Exclusion:", "").strip()
+            if not value:
+                sibling = strong.next_sibling
+                while sibling:
+                    if hasattr(sibling, 'get_text'):
+                        value = sibling.get_text(strip=True)
+                    elif isinstance(sibling, str):
+                        value = sibling.strip()
+                    if value:
+                        break
+                    sibling = sibling.next_sibling
+            if value:
+                ce_citation = value
+            break
+
+    return {"milestones": milestones, "analysis_type": analysis_type, "location_summary": location_summary, "ce_citation": ce_citation}
 
 
 def most_recent_activity(milestones: list[dict]) -> list[dict]:
@@ -263,7 +285,7 @@ def fetch_detail(session: requests.Session, project_url: str, status: str = "") 
     """Fetch a project detail page and return milestones, analysis type, and comment status.
     Returns None if the page is dead (USFS unavailable message).
     Retries once on timeout."""
-    result = {"milestones": [], "analysis_type": "", "accepting_comments": False, "comment_deadline": "", "_status": status}
+    result = {"milestones": [], "analysis_type": "", "ce_citation": "", "accepting_comments": False, "comment_deadline": "", "_status": status}
 
     try:
         r = fetch_with_retry(session, project_url)
@@ -373,18 +395,6 @@ def scrape_forest(session: requests.Session, forest: dict,
 
     print(f"  Found {len(projects)} projects")
 
-    # Fetch milestones and detail for relevant projects
-    # Always include completed projects that are missing analysis_type (need re-fetch)
-    def needs_fetch(p):
-        if flags.get("include_completed"):
-            return True
-        if p["status"] != "Completed":
-            return True
-        # Completed but missing analysis_type — include regardless of day
-        cached = existing_milestones.get(p["project_url"], {})
-        return not cached.get("analysis_type")
-
-    milestone_projects = [p for p in projects if needs_fetch(p)]
     do_full = should_fetch_milestones()
 
     # Load existing milestone/detail data to identify new projects
@@ -396,12 +406,24 @@ def scrape_forest(session: requests.Session, forest: dict,
             existing_milestones[_p["project_url"]] = {
                 "milestones":         _p.get("milestones", []),
                 "analysis_type":      _p.get("analysis_type", ""),
+                "ce_citation":        _p.get("ce_citation", ""),
                 "location_summary":   _p.get("location_summary", ""),
                 "accepting_comments": _p.get("accepting_comments", False),
                 "comment_deadline":   _p.get("comment_deadline", ""),
             }
     except Exception:
         pass
+
+    # Include completed projects that are missing analysis_type so they get re-fetched
+    def needs_fetch(p):
+        if flags.get("include_completed"):
+            return True
+        if p["status"] != "Completed":
+            return True
+        cached = existing_milestones.get(p["project_url"], {})
+        return not cached.get("analysis_type")
+
+    milestone_projects = [p for p in projects if needs_fetch(p)]
 
     # Load project-level hash cache
     project_hash_cache = {}
@@ -421,11 +443,10 @@ def scrape_forest(session: requests.Session, forest: dict,
         # Hash the project's listing entry to detect changes
         entry_str = f"{p['project_name']}|{p['status']}|{p['description'][:100]}"
         entry_hash = hashlib.md5(entry_str.encode()).hexdigest()
-        is_new        = url not in existing_milestones
-        hash_changed  = project_hash_cache.get(url) != entry_hash
-        missing_type  = not existing_milestones.get(url, {}).get("analysis_type")
+        is_new      = url not in existing_milestones
+        hash_changed = project_hash_cache.get(url) != entry_hash
 
-        if is_new or hash_changed or missing_type:
+        if is_new or hash_changed:
             to_fetch.append(p)
             project_hash_cache[url] = entry_hash
         else:
@@ -434,12 +455,14 @@ def scrape_forest(session: requests.Session, forest: dict,
             if isinstance(cached, dict):
                 p["milestones"]         = cached.get("milestones", [])
                 p["analysis_type"]      = cached.get("analysis_type", "")
+                p["ce_citation"]        = cached.get("ce_citation", "")
                 p["location_summary"]   = cached.get("location_summary", "")
                 p["accepting_comments"] = cached.get("accepting_comments", False)
                 p["comment_deadline"]   = cached.get("comment_deadline", "")
             else:
                 p["milestones"]         = cached
                 p["analysis_type"]      = ""
+                p["ce_citation"]        = ""
                 p["accepting_comments"] = False
                 p["comment_deadline"]   = ""
             # Still re-check CARA daily for active projects
@@ -467,6 +490,7 @@ def scrape_forest(session: requests.Session, forest: dict,
                     p["project_url"] = detail["redirect_url"]
                 p["milestones"]          = detail["milestones"]
                 p["analysis_type"]       = detail["analysis_type"]
+                p["ce_citation"]         = detail.get("ce_citation", "")
                 p["location_summary"]    = detail.get("location_summary", "")
                 p["accepting_comments"]  = detail["accepting_comments"]
                 p["comment_deadline"]    = detail["comment_deadline"]
