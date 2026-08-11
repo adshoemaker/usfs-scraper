@@ -415,15 +415,13 @@ def scrape_forest(session: requests.Session, forest: dict,
         pass
 
     # Include completed projects that are missing analysis_type so they get re-fetched
-    def needs_fetch(p):
-        if flags.get("include_completed"):
-            return True
-        if p["status"] != "Completed":
-            return True
-        cached = existing_milestones.get(p["project_url"], {})
-        return not cached.get("analysis_type")
-
-    milestone_projects = [p for p in projects if needs_fetch(p)]
+    _em = existing_milestones  # local alias to avoid closure issues
+    milestone_projects = [
+        p for p in projects
+        if flags.get("include_completed")
+        or p["status"] != "Completed"
+        or not _em.get(p["project_url"], {}).get("analysis_type")
+    ]
 
     # Load project-level hash cache
     project_hash_cache = {}
