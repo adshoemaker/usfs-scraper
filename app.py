@@ -506,11 +506,16 @@ def filter_projects(projects, search="", forest_code="", status="",
         results.append(p)
 
     if sort == "cara_newest":
-        results.sort(key=lambda p: (0 if p.get("accepting_comments") else 1, p.get("first_seen", "") + "z" if not p.get("accepting_comments") else ""), reverse=False)
-        results.sort(key=lambda p: (0 if p.get("accepting_comments") else 1,))
-        # stable secondary: newest within each group
-        from operator import itemgetter
-        cara = sorted([p for p in results if p.get("accepting_comments")], key=lambda p: p.get("first_seen",""), reverse=True)
+        def comment_sort_key(p):
+            if not p.get("accepting_comments"):
+                return (1, 9999, "")
+            days = days_left_to_comment(p.get("comment_deadline", ""))
+            if days is None:
+                return (0, 9998, "")  # open but no deadline — after dated ones
+            return (0, days, "")
+        results.sort(key=comment_sort_key)
+        # Within non-comment projects, sort by newest first
+        cara = [p for p in results if p.get("accepting_comments")]
         rest = sorted([p for p in results if not p.get("accepting_comments")], key=lambda p: p.get("first_seen",""), reverse=True)
         results[:] = cara + rest
     elif sort == "newest":

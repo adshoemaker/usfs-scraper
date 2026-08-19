@@ -178,7 +178,7 @@ def parse_detail_page(html: str) -> dict:
     ce_citation = ""
     for strong in soup.find_all(["strong", "b"]):
         text = strong.get_text(strip=True)
-        if text == "Categorical Exclusion:" or text == "Categorical Exclusion":
+        if text in ("Categorical Exclusion:", "Categorical Exclusion"):
             parent = strong.parent
             full_text = parent.get_text(strip=True)
             value = full_text.replace("Categorical Exclusion:", "").strip()
@@ -395,8 +395,6 @@ def scrape_forest(session: requests.Session, forest: dict,
 
     print(f"  Found {len(projects)} projects")
 
-    do_full = should_fetch_milestones()
-
     # Load existing milestone/detail data to identify new projects
     existing_milestones = {}
     try:
@@ -414,13 +412,15 @@ def scrape_forest(session: requests.Session, forest: dict,
     except Exception:
         pass
 
-    # Include completed projects that are missing analysis_type so they get re-fetched
-    _em = existing_milestones  # local alias to avoid closure issues
+    do_full = should_fetch_milestones()
+
+    # Include completed projects missing analysis_type or with open comment periods
     milestone_projects = [
         p for p in projects
         if flags.get("include_completed")
         or p["status"] != "Completed"
-        or not _em.get(p["project_url"], {}).get("analysis_type")
+        or not existing_milestones.get(p["project_url"], {}).get("analysis_type")
+        or existing_milestones.get(p["project_url"], {}).get("accepting_comments")
     ]
 
     # Load project-level hash cache
@@ -463,8 +463,8 @@ def scrape_forest(session: requests.Session, forest: dict,
                 p["ce_citation"]        = ""
                 p["accepting_comments"] = False
                 p["comment_deadline"]   = ""
-            # Still re-check CARA daily for active projects
-            if p["status"] in CARA_STATUSES:
+            # Re-check CARA if active, OR if previously accepting comments (to catch closed periods)
+            if p["status"] in CARA_STATUSES or cached.get("accepting_comments"):
                 to_cara.append(p)
 
     print(f"  {len(to_fetch)} projects need detail fetch, {len(to_cara)} need CARA re-check only")
