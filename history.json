@@ -1,0 +1,206 @@
+[
+  {
+    "date": "2026-09-06",
+    "total": 166,
+    "taking_comments": 0,
+    "by_analysis_type": {
+      "Environmental Assessment": 60,
+      "Categorical Exclusion": 91,
+      "Environmental Impact Statement": 9,
+      "Decision Memo": 1,
+      "Unknown": 5
+    },
+    "by_forest": {
+      "mbs": {
+        "name": "Mt. Baker-Snoqualmie National Forest",
+        "total": 8,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 3,
+          "Categorical Exclusion": 5
+        }
+      },
+      "olympic": {
+        "name": "Olympic National Forest",
+        "total": 1,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 1
+        }
+      },
+      "okanogan-wenatchee": {
+        "name": "Okanogan-Wenatchee National Forest",
+        "total": 8,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 6,
+          "Categorical Exclusion": 1,
+          "Environmental Impact Statement": 1
+        }
+      },
+      "giffordpinchot": {
+        "name": "Gifford Pinchot National Forest",
+        "total": 10,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 3,
+          "Categorical Exclusion": 6,
+          "Environmental Impact Statement": 1
+        }
+      },
+      "colville": {
+        "name": "Colville National Forest",
+        "total": 13,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 4,
+          "Environmental Assessment": 9
+        }
+      },
+      "rogue-siskiyou": {
+        "name": "Rogue River-Siskiyou National Forest",
+        "total": 4,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 2,
+          "Environmental Assessment": 2
+        }
+      },
+      "wallowa-whitman": {
+        "name": "Wallowa-Whitman National Forest",
+        "total": 7,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 4,
+          "Environmental Assessment": 3
+        }
+      },
+      "fremont-winema": {
+        "name": "Fremont-Winema National Forest",
+        "total": 6,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 4,
+          "Environmental Assessment": 2
+        }
+      },
+      "deschutes": {
+        "name": "Deschutes National Forest",
+        "total": 15,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 9,
+          "Categorical Exclusion": 5,
+          "Environmental Impact Statement": 1
+        }
+      },
+      "mthood": {
+        "name": "Mt. Hood National Forest",
+        "total": 12,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 2,
+          "Categorical Exclusion": 8,
+          "Environmental Impact Statement": 2
+        }
+      },
+      "ochoco": {
+        "name": "Ochoco National Forest",
+        "total": 7,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 6,
+          "Environmental Assessment": 1
+        }
+      },
+      "umatilla": {
+        "name": "Umatilla National Forest",
+        "total": 6,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 3,
+          "Environmental Impact Statement": 1,
+          "Categorical Exclusion": 2
+        }
+      },
+      "willamette": {
+        "name": "Willamette National Forest",
+        "total": 15,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 8,
+          "Environmental Assessment": 7
+        }
+      },
+      "malheur": {
+        "name": "Malheur National Forest",
+        "total": 6,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Decision Memo": 1,
+          "Unknown": 5
+        }
+      },
+      "siuslaw": {
+        "name": "Siuslaw National Forest",
+        "total": 2,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 2
+        }
+      },
+      "shasta-trinity": {
+        "name": "Shasta-Trinity National Forest",
+        "total": 8,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 4,
+          "Environmental Assessment": 4
+        }
+      },
+      "inyo": {
+        "name": "Inyo National Forest",
+        "total": 1,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 1
+        }
+      },
+      "lospadres": {
+        "name": "Los Padres National Forest",
+        "total": 4,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 3,
+          "Environmental Assessment": 1
+        }
+      },
+      "klamath": {
+        "name": "Klamath National Forest",
+        "total": 10,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 6,
+          "Environmental Assessment": 4
+        }
+      },
+      "chugach": {
+        "name": "Chugach National Forest",
+        "total": 2,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 2
+        }
+      },
+      "tongass": {
+        "name": "Tongass National Forest",
+        "total": 21,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 18,
+          "Environmental Impact Statement": 3
+        }
+      }
+    }
+  }
+]
