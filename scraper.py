@@ -354,35 +354,37 @@ def scrape_forest(session: requests.Session, forest: dict,
         all_unchanged = False
         soup = BeautifulSoup(response.text, "html.parser")
 
-        for wrapper in soup.find_all("div", class_="wfs-project__teaser"):
-            status  = wrapper.get("data-status", "").strip()
-            unit    = wrapper.get("data-unit", "").strip()
-            purpose = wrapper.get("data-purposeid", "").strip()
-
-            link_tag = wrapper.find("a", href=True)
+        # Primary parser: current USFS template uses h3>a project links
+        for h3 in soup.find_all("h3"):
+            link_tag = h3.find("a", href=True)
             if not link_tag:
                 continue
-
-            name = link_tag.get_text(strip=True)
             href = link_tag["href"]
-
             if "/projects/" not in href:
                 continue
+            if any(x in href for x in ["/projects/archive", "/projects/signup"]):
+                continue
+            name = link_tag.get_text(strip=True)
             if not name or len(name) < 5:
                 continue
-
             project_url = (
                 "https://www.fs.usda.gov" + href
                 if href.startswith("/") else href
             )
-
             description = ""
-            body = wrapper.find("div", class_="usa-card__body")
-            if body:
-                p = body.find("p")
-                if p:
-                    description = p.get_text(strip=True)
-
+            for sibling in h3.next_siblings:
+                if hasattr(sibling, "name"):
+                    if sibling.name in ("h3", "h2", "h1", "section"):
+                        break
+                    text = sibling.get_text(strip=True)
+                    if text:
+                        description = text
+                        break
+                elif isinstance(sibling, str):
+                    text = sibling.strip()
+                    if text:
+                        description = text
+                        break
             projects.append({
                 "forest_name":  forest["name"],
                 "forest_code":  forest["code"],
@@ -391,12 +393,52 @@ def scrape_forest(session: requests.Session, forest: dict,
                 "project_name": name,
                 "project_url":  project_url,
                 "description":  description,
-                "status":       status,
-                "unit":         unit,
-                "purpose":      purpose,
+                "status":       "",
+                "unit":         "",
+                "purpose":      "",
                 "scraped_at":   datetime.datetime.now(datetime.timezone.utc).isoformat(),
-                "milestones":   [],  # filled in below for active projects
+                "milestones":   [],
             })
+
+        # Fallback: legacy wfs-project__teaser template
+        if not projects:
+            for wrapper in soup.find_all("div", class_="wfs-project__teaser"):
+                status  = wrapper.get("data-status", "").strip()
+                unit    = wrapper.get("data-unit", "").strip()
+                purpose = wrapper.get("data-purposeid", "").strip()
+                link_tag = wrapper.find("a", href=True)
+                if not link_tag:
+                    continue
+                name = link_tag.get_text(strip=True)
+                href = link_tag["href"]
+                if "/projects/" not in href:
+                    continue
+                if not name or len(name) < 5:
+                    continue
+                project_url = (
+                    "https://www.fs.usda.gov" + href
+                    if href.startswith("/") else href
+                )
+                description = ""
+                body = wrapper.find("div", class_="usa-card__body")
+                if body:
+                    p = body.find("p")
+                    if p:
+                        description = p.get_text(strip=True)
+                projects.append({
+                    "forest_name":  forest["name"],
+                    "forest_code":  forest["code"],
+                    "region":       forest["region"],
+                    "state":        forest["state"],
+                    "project_name": name,
+                    "project_url":  project_url,
+                    "description":  description,
+                    "status":       status,
+                    "unit":         unit,
+                    "purpose":      purpose,
+                    "scraped_at":   datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                    "milestones":   [],
+                })
 
     if all_unchanged:
         return None
