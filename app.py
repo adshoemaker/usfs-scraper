@@ -146,7 +146,7 @@ ANALYSIS_COLORS = {
 FORESTS = [
     {"name": "Mt. Baker-Snoqualmie NF",   "code": "mbs",               "state": "WA"},
     {"name": "Olympic NF",                "code": "olympic",            "state": "WA"},
-    {"name": "Okanogan-Wenatchee NF",                  "code": "okanogan-wenatchee", "state": "WA"},
+    {"name": "Okan-Wenatchee",                  "code": "okanogan-wenatchee", "state": "WA"},
     {"name": "Gifford Pinchot NF",        "code": "giffordpinchot",     "state": "WA"},
     {"name": "Colville NF",               "code": "colville",           "state": "WA"},
     {"name": "NPC & Idaho Panhandle",        "code": "nezperce-ipnf",      "state": "ID"},
@@ -157,14 +157,14 @@ FORESTS = [
     {"name": "Rogue-Siskiyou NF",   "code": "rogue-siskiyou",     "state": "CA+OR"},
     {"name": "Klamath NF",                "code": "klamath",            "state": "CA+OR"},
     {"name": "Wallowa-Whitman NF",        "code": "wallowa-whitman",    "state": "OR"},
-    {"name": "Fremont-Winema & Umatilla",              "code": "fremont-umatilla",   "state": "OR"},
+    {"name": "Fremont/Umatilla",              "code": "fremont-umatilla",   "state": "OR"},
     {"name": "Deschutes NF",              "code": "deschutes",          "state": "OR"},
     {"name": "Mt. Hood NF",               "code": "mthood",             "state": "OR"},
     {"name": "Ochoco NF",                 "code": "ochoco",             "state": "OR"},
     {"name": "Willamette NF",             "code": "willamette",         "state": "OR"},
     {"name": "Malheur NF",                "code": "malheur",            "state": "OR"},
     {"name": "Siuslaw NF",                "code": "siuslaw",            "state": "OR"},
-    {"name": "Six Rivers & Mendocino NFs",             "code": "sixrivers-mendocino","state": "CA"},
+    {"name": "6 Rivers/Mendocino",             "code": "sixrivers-mendocino","state": "CA"},
     {"name": "Shasta-Trinity NF",         "code": "shasta-trinity",     "state": "CA"},
     {"name": "Lassen & Modoc NFs",        "code": "lassen-modoc",       "state": "CA"},
     {"name": "Plumas NF",                 "code": "plumas",             "state": "CA"},
@@ -318,6 +318,43 @@ def classify_project(project):
         return "extractive"
     elif has_restorative:
         return "restorative"
+
+    # Fallback: classify from description + project name when purpose is empty
+    # (new USFS template pages don't expose purpose tags)
+    text = " ".join([
+        (project.get("project_name") or ""),
+        (project.get("description") or ""),
+        (project.get("location_summary") or ""),
+    ]).lower()
+
+    EXTRACTIVE_TEXT = [
+        "timber harvest", "timber sale", "salvage", "logging", "thinning",
+        "forest products", "fuels management", "fuels reduction", "fuel break",
+        "fuelbreak", "prescribed burn", "prescribed fire", "grazing",
+        "mining", "minerals", "vegetation management", "hazardous fuels",
+        "hazardous fuel", "blowdown", "insect and disease",
+    ]
+    RESTORATIVE_TEXT = [
+        "restoration", "watershed", "riparian", "wildlife habitat",
+        "rare plant", "endangered", "fish passage", "stream", "wetland",
+        "climate", "old growth", "late-seral", "late seral",
+    ]
+    MIXED_TEXT = [
+        "road", "trail",
+    ]
+
+    has_ext = any(kw in text for kw in EXTRACTIVE_TEXT)
+    has_res = any(kw in text for kw in RESTORATIVE_TEXT)
+    has_mix = any(kw in text for kw in MIXED_TEXT)
+
+    if has_ext and has_res:
+        return "mixed"
+    elif has_ext:
+        return "extractive"
+    elif has_res:
+        return "restorative"
+    elif has_mix:
+        return "mixed"
     return None
 
 
