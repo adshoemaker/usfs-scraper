@@ -327,71 +327,79 @@ def scrape_forest(session: requests.Session, forest: dict,
                   flags: dict, hash_cache: dict) -> list[dict] | None:
     """
     Fetch one forest's projects page and return a list of projects.
-    Returns None if the page is unchanged (hash cache hit).
+    Supports extra_urls for combined forests (e.g. Tahoe+Eldorado).
+    Returns None if ALL pages are unchanged (hash cache hit).
     """
-    url = forest["projects_url"]
-    print(f"  Fetching: {url}")
-
-    try:
-        response = fetch_with_retry(session, url)
-    except requests.RequestException as e:
-        print(f"  !! ERROR fetching {url}: {e}")
-        return []
-
-    # Hash check — skip if page content hasn't changed since last run
-    if flags.get("use_hash_cache"):
-        current_hash = page_hash(response.text)
-        if hash_cache.get(url) == current_hash:
-            print(f"  Unchanged since last run — skipping")
-            return None
-        hash_cache[url] = current_hash
-
-    soup = BeautifulSoup(response.text, "html.parser")
+    all_urls = [forest["projects_url"]] + forest.get("extra_urls", [])
     projects = []
+    all_unchanged = True
 
-    for wrapper in soup.find_all("div", class_="wfs-project__teaser"):
-        status  = wrapper.get("data-status", "").strip()
-        unit    = wrapper.get("data-unit", "").strip()
-        purpose = wrapper.get("data-purposeid", "").strip()
+    for url in all_urls:
+        print(f"  Fetching: {url}")
 
-        link_tag = wrapper.find("a", href=True)
-        if not link_tag:
+        try:
+            response = fetch_with_retry(session, url)
+        except requests.RequestException as e:
+            print(f"  !! ERROR fetching {url}: {e}")
             continue
 
-        name = link_tag.get_text(strip=True)
-        href = link_tag["href"]
+        # Hash check — skip if page content hasn't changed since last run
+        if flags.get("use_hash_cache"):
+            current_hash = page_hash(response.text)
+            if hash_cache.get(url) == current_hash:
+                print(f"  Unchanged since last run — skipping")
+                continue
+            hash_cache[url] = current_hash
 
-        if "/projects/" not in href:
-            continue
-        if not name or len(name) < 5:
-            continue
+        all_unchanged = False
+        soup = BeautifulSoup(response.text, "html.parser")
 
-        project_url = (
-            "https://www.fs.usda.gov" + href
-            if href.startswith("/") else href
-        )
+        for wrapper in soup.find_all("div", class_="wfs-project__teaser"):
+            status  = wrapper.get("data-status", "").strip()
+            unit    = wrapper.get("data-unit", "").strip()
+            purpose = wrapper.get("data-purposeid", "").strip()
 
-        description = ""
-        body = wrapper.find("div", class_="usa-card__body")
-        if body:
-            p = body.find("p")
-            if p:
-                description = p.get_text(strip=True)
+            link_tag = wrapper.find("a", href=True)
+            if not link_tag:
+                continue
 
-        projects.append({
-            "forest_name":  forest["name"],
-            "forest_code":  forest["code"],
-            "region":       forest["region"],
-            "state":        forest["state"],
-            "project_name": name,
-            "project_url":  project_url,
-            "description":  description,
-            "status":       status,
-            "unit":         unit,
-            "purpose":      purpose,
-            "scraped_at":   datetime.datetime.now(datetime.timezone.utc).isoformat(),
-            "milestones":   [],  # filled in below for active projects
-        })
+            name = link_tag.get_text(strip=True)
+            href = link_tag["href"]
+
+            if "/projects/" not in href:
+                continue
+            if not name or len(name) < 5:
+                continue
+
+            project_url = (
+                "https://www.fs.usda.gov" + href
+                if href.startswith("/") else href
+            )
+
+            description = ""
+            body = wrapper.find("div", class_="usa-card__body")
+            if body:
+                p = body.find("p")
+                if p:
+                    description = p.get_text(strip=True)
+
+            projects.append({
+                "forest_name":  forest["name"],
+                "forest_code":  forest["code"],
+                "region":       forest["region"],
+                "state":        forest["state"],
+                "project_name": name,
+                "project_url":  project_url,
+                "description":  description,
+                "status":       status,
+                "unit":         unit,
+                "purpose":      purpose,
+                "scraped_at":   datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                "milestones":   [],  # filled in below for active projects
+            })
+
+    if all_unchanged:
+        return None
 
     print(f"  Found {len(projects)} projects")
 

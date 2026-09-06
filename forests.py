@@ -44,6 +44,58 @@ FORESTS = [
         "projects_url": "https://www.fs.usda.gov/r06/colville/projects",
     },
 
+    # ── Idaho (Region 1 + Region 4) ────────────────────────────
+
+    {
+        "name": "Idaho Panhandle National Forests",
+        "code": "idaho-panhandle",
+        "region": "R01",
+        "state": "ID",
+        "projects_url": "https://www.fs.usda.gov/r01/ipnf/projects",
+    },
+    {
+        "name": "Nez Perce-Clearwater National Forests",
+        "code": "nezperce-clearwater",
+        "region": "R01",
+        "state": "ID",
+        "projects_url": "https://www.fs.usda.gov/r01/nezperce-clearwater/projects",
+    },
+    {
+        "name": "Boise National Forest",
+        "code": "boise",
+        "region": "R04",
+        "state": "ID",
+        "projects_url": "https://www.fs.usda.gov/r04/boise/projects",
+    },
+    {
+        "name": "Caribou-Targhee National Forests",
+        "code": "caribou-targhee",
+        "region": "R04",
+        "state": "ID",
+        "projects_url": "https://www.fs.usda.gov/r04/caribou-targhee/projects",
+    },
+    {
+        "name": "Payette National Forest",
+        "code": "payette",
+        "region": "R04",
+        "state": "ID",
+        "projects_url": "https://www.fs.usda.gov/r04/payette/projects",
+    },
+    {
+        "name": "Salmon-Challis National Forest",
+        "code": "salmon-challis",
+        "region": "R04",
+        "state": "ID",
+        "projects_url": "https://www.fs.usda.gov/r04/salmon-challis/projects",
+    },
+    {
+        "name": "Sawtooth National Forest",
+        "code": "sawtooth",
+        "region": "R04",
+        "state": "ID",
+        "projects_url": "https://www.fs.usda.gov/r04/sawtooth/projects",
+    },
+
     # ── Oregon (Region 6) ──────────────────────────────────────
 
     {
@@ -81,7 +133,6 @@ FORESTS = [
         "state": "OR",
         "projects_url": "https://www.fs.usda.gov/r06/mthood/projects",
     },
-
     {
         "name": "Ochoco National Forest",
         "code": "ochoco",
@@ -121,11 +172,75 @@ FORESTS = [
     # ── California (Region 5) ──────────────────────────────────
 
     {
+        "name": "Six Rivers National Forest",
+        "code": "sixrivers",
+        "region": "R05",
+        "state": "CA",
+        "projects_url": "https://www.fs.usda.gov/r05/sixrivers/projects",
+    },
+    {
         "name": "Shasta-Trinity National Forest",
         "code": "shasta-trinity",
         "region": "R05",
         "state": "CA",
         "projects_url": "https://www.fs.usda.gov/r05/shasta-trinity/projects",
+    },
+    {
+        "name": "Klamath National Forest",
+        "code": "klamath",
+        "region": "R05",
+        "state": "CA",
+        "projects_url": "https://www.fs.usda.gov/r05/klamath/projects",
+    },
+    {
+        "name": "Mendocino National Forest",
+        "code": "mendocino",
+        "region": "R05",
+        "state": "CA",
+        "projects_url": "https://www.fs.usda.gov/r05/mendocino/projects",
+    },
+    {
+        "name": "Lassen National Forest",
+        "code": "lassen",
+        "region": "R05",
+        "state": "CA",
+        "projects_url": "https://www.fs.usda.gov/r05/lassen/projects",
+    },
+    {
+        "name": "Modoc National Forest",
+        "code": "modoc",
+        "region": "R05",
+        "state": "CA",
+        "projects_url": "https://www.fs.usda.gov/r05/modoc/projects",
+    },
+    {
+        "name": "Plumas National Forest",
+        "code": "plumas",
+        "region": "R05",
+        "state": "CA",
+        "projects_url": "https://www.fs.usda.gov/r05/plumas/projects",
+    },
+    {
+        "name": "Tahoe & Eldorado National Forests",
+        "code": "tahoe-eldorado",
+        "region": "R05",
+        "state": "CA",
+        "projects_url": "https://www.fs.usda.gov/r05/tahoe/projects",
+        "extra_urls": ["https://www.fs.usda.gov/r05/eldorado/projects"],
+    },
+    {
+        "name": "Stanislaus National Forest",
+        "code": "stanislaus",
+        "region": "R05",
+        "state": "CA",
+        "projects_url": "https://www.fs.usda.gov/r05/stanislaus/projects",
+    },
+    {
+        "name": "Sierra National Forest",
+        "code": "sierra",
+        "region": "R05",
+        "state": "CA",
+        "projects_url": "https://www.fs.usda.gov/r05/sierra/projects",
     },
     {
         "name": "Inyo National Forest",
@@ -135,6 +250,13 @@ FORESTS = [
         "projects_url": "https://www.fs.usda.gov/r05/inyo/projects",
     },
     {
+        "name": "Sequoia National Forest",
+        "code": "sequoia",
+        "region": "R05",
+        "state": "CA",
+        "projects_url": "https://www.fs.usda.gov/r05/sequoia/projects",
+    },
+    {
         "name": "Los Padres National Forest",
         "code": "lospadres",
         "region": "R05",
@@ -142,11 +264,15 @@ FORESTS = [
         "projects_url": "https://www.fs.usda.gov/r05/lospadres/projects",
     },
     {
-        "name": "Klamath National Forest",
-        "code": "klamath",
+        "name": "Southern CA National Forests",
+        "code": "socal",
         "region": "R05",
         "state": "CA",
-        "projects_url": "https://www.fs.usda.gov/r05/klamath/projects",
+        "projects_url": "https://www.fs.usda.gov/r05/angeles/projects",
+        "extra_urls": [
+            "https://www.fs.usda.gov/r05/cleveland/projects",
+            "https://www.fs.usda.gov/r05/sanbernardino/projects",
+        ],
     },
 
     # ── Alaska (Region 10) ─────────────────────────────────────
@@ -169,8 +295,8 @@ FORESTS = [
 
 
 if __name__ == "__main__":
-    print(f"{'Forest':<45} {'Region':<6} {'State':<5} URL")
-    print("-" * 120)
+    print(f"{'Forest':<50} {'Region':<6} {'State':<5} URL")
+    print("-" * 130)
     for f in FORESTS:
-        print(f"{f['name']:<45} {f['region']:<6} {f['state']:<5} {f['projects_url']}")
+        print(f"{f['name']:<50} {f['region']:<6} {f['state']:<5} {f['projects_url']}")
     print(f"\nTotal forests: {len(FORESTS)}")

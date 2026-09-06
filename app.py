@@ -168,7 +168,7 @@ FORESTS = [
 ]
 
 # Column order for forest summary
-STATE_COLUMNS = ["CA", "CA+OR", "OR", "OR+WA", "WA", "AK"]
+STATE_COLUMNS = ["CA", "CA+OR", "OR", "OR+WA", "WA", "ID", "AK"]
 
 # Map forest code -> state for color lookup
 FOREST_STATE_MAP = {f["code"]: f["state"] for f in FORESTS}
@@ -204,6 +204,7 @@ STATE_COLORS = {
     "OR":    {"pill": "#d4bc00", "label": "#6b5f00"},
     "OR+WA": {"pill": "#7a9a2f", "label": "#445a18"},
     "WA":    {"pill": "#2d7a1f", "label": "#1a4f0f"},
+    "ID":    {"pill": "#3a7aad", "label": "#1f4d72"},
     "AK":    {"pill": "#5b4fa8", "label": "#352d6e"},
 }
 
@@ -876,9 +877,9 @@ PAGE_TEMPLATE = """
 <div class="forest-summary">
     <div class="forest-summary-inner">
         <div class="forest-cols-row">
-            <!-- Desktop: individual columns. Mobile: left group (CA/CA+OR/OR), right group (WA/AK) -->
+            <!-- Desktop: individual columns. Mobile: left group (CA/CA+OR/OR), right group (WA/ID/AK) -->
             {% set left_states = ['CA', 'CA+OR', 'OR'] %}
-            {% set right_states = ['WA', 'AK'] %}
+            {% set right_states = ['WA', 'ID', 'AK'] %}
 
             <!-- Left mobile group -->
             <div class="forest-col-group mobile-only" style="display:none;">
@@ -2388,7 +2389,7 @@ def admin():
     thinning_urls = thinning_urls_manual | {p["project_url"] for p in projects if has_thinning_badge(p)}
 
     # Organize all projects by forest (in state order), then alphabetically by project name
-    STATE_ORDER = ["WA", "OR", "CA+OR", "CA", "AK"]
+    STATE_ORDER = ["WA", "ID", "OR", "CA+OR", "CA", "AK"]
     forests_in_order = []
     seen_forests = set()
     for state in STATE_ORDER:
@@ -2421,7 +2422,7 @@ def admin():
     ).strftime("%Y-%m-%d")
 
     # Also keep by_state for state labels
-    STATE_ORDER_FULL = ["WA", "OR", "CA+OR", "CA", "AK"]
+    STATE_ORDER_FULL = ["WA", "ID", "OR", "CA+OR", "CA", "AK"]
     by_state = {s: [] for s in STATE_ORDER_FULL}
     for p in projects:
         state = FOREST_STATE_MAP.get(p.get("forest_code", ""), "")
