@@ -47,12 +47,12 @@ FORESTS = [
     # ── Idaho (Region 1 + Region 4) ────────────────────────────
 
     {
-        "name": "Nez Perce-Clearwater & Idaho Panhandle",
+        "name": "Nez Perce-CW & Idaho Panhandle",
         "code": "nezperce-ipnf",
         "region": "R01",
         "state": "ID",
         "projects_url": "https://www.fs.usda.gov/r01/nezperce-clearwater/projects",
-        "extra_urls": ["https://www.fs.usda.gov/r01/ipnf/projects"],
+        "extra_urls": ["https://www.fs.usda.gov/r01/idahopanhandle/projects"],
     },
     {
         "name": "Boise & Payette National Forests",
