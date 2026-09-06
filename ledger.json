@@ -1,7 +1,11 @@
 {
   "https://www.fs.usda.gov/r05/inyo/projects/310789": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Long Valley Exploration Drilling"
+    "forest_code": "inyo",
+    "forest_name": "Inyo National Forest",
+    "name": "Long Valley Exploration Drilling",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r05/inyo/projects/47317": {
     "first_seen": "2026-05-28",
@@ -84,44 +88,84 @@
     "name": "Cal-Ore Reconnect 3"
   },
   "https://www.fs.usda.gov/r05/klamath/projects/154225": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Middle Mile Broadband Initiative"
+    "forest_code": "klamath",
+    "forest_name": "Klamath National Forest",
+    "name": "Middle Mile Broadband Initiative",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r05/klamath/projects/238323": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Cal-Ore IMA 2502"
+    "forest_code": "klamath",
+    "forest_name": "Klamath National Forest",
+    "name": "Cal-Ore IMA 2502",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r05/klamath/projects/287041": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Windler Bar Habitat Enhancement"
+    "forest_code": "klamath",
+    "forest_name": "Klamath National Forest",
+    "name": "Windler Bar Habitat Enhancement",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r05/klamath/projects/301826": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Klamath and Shasta-Trinity National Forests' Prescribed Fire Project"
+    "forest_code": "klamath",
+    "forest_name": "Klamath National Forest",
+    "name": "Klamath and Shasta-Trinity National Forests' Prescribed Fire Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r05/klamath/projects/306270": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "McKinney Fire Restoration EA_Veg/Fuels"
+    "forest_code": "klamath",
+    "forest_name": "Klamath National Forest",
+    "name": "McKinney Fire Restoration EA_Veg/Fuels",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r05/klamath/projects/309802": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Seiad Restoration Thin"
+    "forest_code": "klamath",
+    "forest_name": "Klamath National Forest",
+    "name": "Seiad Restoration Thin",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r05/klamath/projects/309804": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Discovery Day Mine"
+    "forest_code": "klamath",
+    "forest_name": "Klamath National Forest",
+    "name": "Discovery Day Mine",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r05/klamath/projects/342312": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-06-26",
-    "name": "Cal-Ore A-Cam"
+    "forest_code": "klamath",
+    "forest_name": "Klamath National Forest",
+    "name": "Cal-Ore A-Cam",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r05/klamath/projects/367218": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-07-29",
-    "name": "Callahan Water District SUP Amendment 3"
+    "forest_code": "klamath",
+    "forest_name": "Klamath National Forest",
+    "name": "Callahan Water District SUP Amendment 3",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r05/klamath/projects/394014": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-08-25",
-    "name": "Cecilville Fire & Hose Company DBA Salmon River Volunteer Fire and Rescue Permit Amendment"
+    "forest_code": "klamath",
+    "forest_name": "Klamath National Forest",
+    "name": "Cecilville Fire & Hose Company DBA Salmon River Volunteer Fire and Rescue Permit Amendment",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r05/klamath/projects/54174": {
     "first_seen": "2026-05-28",
@@ -152,24 +196,40 @@
     "name": "South Fork"
   },
   "https://www.fs.usda.gov/r05/lospadres/projects/144224": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Establishing Interim Direction for Oil & Gas Leasing Management"
+    "forest_code": "lospadres",
+    "forest_name": "Los Padres National Forest",
+    "name": "Establishing Interim Direction for Oil & Gas Leasing Management",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r05/lospadres/projects/213429": {
     "first_seen": "2026-05-28",
     "name": "King City Fire Station"
   },
   "https://www.fs.usda.gov/r05/lospadres/projects/251159": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Los Prietos Helibase"
+    "forest_code": "lospadres",
+    "forest_name": "Los Padres National Forest",
+    "name": "Los Prietos Helibase",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r05/lospadres/projects/288602": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Wildfire Risk Reduction Project PALS # 62369"
+    "forest_code": "lospadres",
+    "forest_name": "Los Padres National Forest",
+    "name": "Wildfire Risk Reduction Project PALS # 62369",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r05/lospadres/projects/293807": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Mount Pinos Forest Health Project -  PALS #58380"
+    "forest_code": "lospadres",
+    "forest_name": "Los Padres National Forest",
+    "name": "Mount Pinos Forest Health Project -  PALS #58380",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r05/lospadres/projects/58213": {
     "first_seen": "2026-05-28",
@@ -212,40 +272,72 @@
     "name": "Gemmill Thin"
   },
   "https://www.fs.usda.gov/r05/shasta-trinity/projects/166624": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Root Fire Hazard Abatement Project"
+    "forest_code": "shasta-trinity",
+    "forest_name": "Shasta-Trinity National Forest",
+    "name": "Root Fire Hazard Abatement Project",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r05/shasta-trinity/projects/261934": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Trinity Divide / Lakehead Cooperative Fuel Break Project"
+    "forest_code": "shasta-trinity",
+    "forest_name": "Shasta-Trinity National Forest",
+    "name": "Trinity Divide / Lakehead Cooperative Fuel Break Project",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r05/shasta-trinity/projects/261937": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Pit/Curl Cooperative Fuel Break Project"
+    "forest_code": "shasta-trinity",
+    "forest_name": "Shasta-Trinity National Forest",
+    "name": "Pit/Curl Cooperative Fuel Break Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r05/shasta-trinity/projects/285593": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Junction City Community Risk Reduction Project PALS #68960"
+    "forest_code": "shasta-trinity",
+    "forest_name": "Shasta-Trinity National Forest",
+    "name": "Junction City Community Risk Reduction Project PALS #68960",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r05/shasta-trinity/projects/305816": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Ash Creek Forest Health and Fuels Reduction Project"
+    "forest_code": "shasta-trinity",
+    "forest_name": "Shasta-Trinity National Forest",
+    "name": "Ash Creek Forest Health and Fuels Reduction Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r05/shasta-trinity/projects/309384": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Big Ranch Community Risk Reduction"
+    "forest_code": "shasta-trinity",
+    "forest_name": "Shasta-Trinity National Forest",
+    "name": "Big Ranch Community Risk Reduction",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r05/shasta-trinity/projects/309395": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "North Trinity Community Risk Reduction"
+    "forest_code": "shasta-trinity",
+    "forest_name": "Shasta-Trinity National Forest",
+    "name": "North Trinity Community Risk Reduction",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r05/shasta-trinity/projects/35256": {
     "first_seen": "2026-05-28",
     "name": "Beegum Watershed Restoration"
   },
   "https://www.fs.usda.gov/r05/shasta-trinity/projects/371776": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-07-28",
-    "name": "American Dark Fiber Middle Mile Broadband Project (ADF-F12-USFS-EN1)"
+    "forest_code": "shasta-trinity",
+    "forest_name": "Shasta-Trinity National Forest",
+    "name": "American Dark Fiber Middle Mile Broadband Project (ADF-F12-USFS-EN1)",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r05/shasta-trinity/projects/44237": {
     "first_seen": "2026-05-28",
@@ -324,64 +416,116 @@
     "name": "Burnt Taco Salvage"
   },
   "https://www.fs.usda.gov/r06/colville/projects/305830": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Meadow Lakes"
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "Meadow Lakes",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/colville/projects/306269": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Chewelah A-Z"
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "Chewelah A-Z",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/colville/projects/306271": {
     "first_seen": "2026-06-15",
     "name": "Buckhorn Project"
   },
   "https://www.fs.usda.gov/r06/colville/projects/307835": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Sweet-Ione Integrated Resources Improvement Project"
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "Sweet-Ione Integrated Resources Improvement Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/colville/projects/307836": {
     "first_seen": "2026-05-28",
     "name": "Tonata Trout"
   },
   "https://www.fs.usda.gov/r06/colville/projects/307849": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Bulldog"
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "Bulldog",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/colville/projects/308235": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Quartz"
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "Quartz",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/colville/projects/308243": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Sxwuytn-Kaniksu Connections (Trail) Project"
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "Sxwuytn-Kaniksu Connections (Trail) Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/colville/projects/308253": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Bulldog supplemental"
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "Bulldog supplemental",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/colville/projects/309398": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Meadow Maintenance"
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "Meadow Maintenance",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/colville/projects/309791": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Boulder Park Ecological Resotration Project"
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "Boulder Park Ecological Resotration Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/colville/projects/309792": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Slate"
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "Slate",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/colville/projects/309798": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Harvey Creek Subwatershed Restoration"
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "Harvey Creek Subwatershed Restoration",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/colville/projects/309799": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "49 Degrees North Mountain Resort Enhancement"
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "49 Degrees North Mountain Resort Enhancement",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/colville/projects/309801": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Upper West Branch LeClerc Creek fish Management Structure"
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "Upper West Branch LeClerc Creek fish Management Structure",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/colville/projects/309803": {
     "first_seen": "2026-05-28",
@@ -408,72 +552,132 @@
     "name": "Katy Creek Salvage"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/277766": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Meissner Groomer Garage Number 2"
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "Meissner Groomer Garage Number 2",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/292349": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Mt. Bachelor Sunrise Deck Expansion, Little Pine Power Distribution, and West Village Base Area Powe"
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "Mt. Bachelor Sunrise Deck Expansion, Little Pine Power Distribution, and West Village Base Area Powe",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/296049": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Deschutes Fuels Maintenance Project"
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "Deschutes Fuels Maintenance Project",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/296521": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Crate Vegetation Management Project and Site-Specific Forest Plan Amendment"
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "Crate Vegetation Management Project and Site-Specific Forest Plan Amendment",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/296931": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "City of Bend Outback Site Conveyance"
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "City of Bend Outback Site Conveyance",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/301821": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "MODA Active Management Project"
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "MODA Active Management Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/306265": {
     "first_seen": "2026-05-28",
     "name": "Class 1, Pedal-assist E-bikes on Select Trails"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/306273": {
+    "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-05-28",
-    "name": "West Bend Vegetation Management Project"
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "West Bend Vegetation Management Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/307414": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "West Bend Trails Project"
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "West Bend Trails Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/307843": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Upper Black Butte Swamp Restoration"
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "Upper Black Butte Swamp Restoration",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/308226": {
     "first_seen": "2026-05-28",
     "name": "Green Ridge Landscape Restoration"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/308238": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Cougar Rock Restoration Project"
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "Cougar Rock Restoration Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/308239": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Bend to Lava Lands Paved Path"
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "Bend to Lava Lands Paved Path",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/308258": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Sisters Trail Additions and Realignments (STAR)"
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "Sisters Trail Additions and Realignments (STAR)",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/349476": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-07-10",
-    "name": "North Basin"
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "North Basin",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/351294": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-07-09",
-    "name": "Sisters Canyons Active Restoration Project"
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "Sisters Canyons Active Restoration Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/387325": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-08-22",
-    "name": "2026 Newberry Geothermal Consent to Lease"
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "2026 Newberry Geothermal Consent to Lease",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/66207": {
     "first_seen": "2026-05-28",
@@ -528,28 +732,52 @@
     "name": "Flat Top Fire Site Preparation and Reforestation Project"
   },
   "https://www.fs.usda.gov/r06/fremont-winema/projects/227263": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Klamath County-Summers Quarry Operations"
+    "forest_code": "fremont-winema",
+    "forest_name": "Fremont-Winema National Forest",
+    "name": "Klamath County-Summers Quarry Operations",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/fremont-winema/projects/231629": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Stams Restoration Project"
+    "forest_code": "fremont-winema",
+    "forest_name": "Fremont-Winema National Forest",
+    "name": "Stams Restoration Project",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/fremont-winema/projects/291546": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-06-12",
-    "name": "QGold Exploration"
+    "forest_code": "fremont-winema",
+    "forest_name": "Fremont-Winema National Forest",
+    "name": "QGold Exploration",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/fremont-winema/projects/292874": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Paradise Restoration Project"
+    "forest_code": "fremont-winema",
+    "forest_name": "Fremont-Winema National Forest",
+    "name": "Paradise Restoration Project",
+    "status": "In Progress"
   },
   "https://www.fs.usda.gov/r06/fremont-winema/projects/308250": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Post-fire Competing Vegetation Management"
+    "forest_code": "fremont-winema",
+    "forest_name": "Fremont-Winema National Forest",
+    "name": "Post-fire Competing Vegetation Management",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/fremont-winema/projects/331704": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-06-18",
-    "name": "Lake of the Woods Fuel Break"
+    "forest_code": "fremont-winema",
+    "forest_name": "Fremont-Winema National Forest",
+    "name": "Lake of the Woods Fuel Break",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/fremont-winema/projects/46243": {
     "first_seen": "2026-05-28",
@@ -620,44 +848,84 @@
     "name": "Switchback Restoration Project (Bly Mountain Phase Two)"
   },
   "https://www.fs.usda.gov/r06/giffordpinchot/projects/219729": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "King Underburn"
+    "forest_code": "giffordpinchot",
+    "forest_name": "Gifford Pinchot National Forest",
+    "name": "King Underburn",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/giffordpinchot/projects/263720": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Mount Margaret Backcountry Toilet Replacement"
+    "forest_code": "giffordpinchot",
+    "forest_name": "Gifford Pinchot National Forest",
+    "name": "Mount Margaret Backcountry Toilet Replacement",
+    "status": "In Progress"
   },
   "https://www.fs.usda.gov/r06/giffordpinchot/projects/303890": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Little White Salmon Forest Resiliency and Fire Risk Mitigation Project"
+    "forest_code": "giffordpinchot",
+    "forest_name": "Gifford Pinchot National Forest",
+    "name": "Little White Salmon Forest Resiliency and Fire Risk Mitigation Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/giffordpinchot/projects/303892": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Mount Adams South Climb / Cold Springs Trailhead Improvements"
+    "forest_code": "giffordpinchot",
+    "forest_name": "Gifford Pinchot National Forest",
+    "name": "Mount Adams South Climb / Cold Springs Trailhead Improvements",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/giffordpinchot/projects/304297": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Review of Wind River Consent to Geothermal Lease Request"
+    "forest_code": "giffordpinchot",
+    "forest_name": "Gifford Pinchot National Forest",
+    "name": "Review of Wind River Consent to Geothermal Lease Request",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/giffordpinchot/projects/305289": {
+    "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-05-28",
-    "name": "Spirit Lake Outflow Safety Improvement Project"
+    "forest_code": "giffordpinchot",
+    "forest_name": "Gifford Pinchot National Forest",
+    "name": "Spirit Lake Outflow Safety Improvement Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/giffordpinchot/projects/305823": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Forest Wide Thinning & Potential Control Line Treatments"
+    "forest_code": "giffordpinchot",
+    "forest_name": "Gifford Pinchot National Forest",
+    "name": "Forest Wide Thinning & Potential Control Line Treatments",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/giffordpinchot/projects/309399": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-07-11",
-    "name": "Pine Tree Spring Off-Stream Livestock Watering Infrastructure"
+    "forest_code": "giffordpinchot",
+    "forest_name": "Gifford Pinchot National Forest",
+    "name": "Pine Tree Spring Off-Stream Livestock Watering Infrastructure",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/giffordpinchot/projects/370723": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-07-26",
-    "name": "Upper Trout Creek Restoration Project"
+    "forest_code": "giffordpinchot",
+    "forest_name": "Gifford Pinchot National Forest",
+    "name": "Upper Trout Creek Restoration Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/giffordpinchot/projects/397634": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-08-27",
-    "name": "Williams Mine Fire Reforestation"
+    "forest_code": "giffordpinchot",
+    "forest_name": "Gifford Pinchot National Forest",
+    "name": "Williams Mine Fire Reforestation",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/giffordpinchot/projects/65234": {
     "first_seen": "2026-05-28",
@@ -677,19 +945,32 @@
   },
   "https://www.fs.usda.gov/r06/malheur/projects/44570": {
     "first_seen": "2026-05-28",
-    "name": "Murderers Creek Wild Horse Joint Management Area, Herd Management Area Plan"
+    "forest_code": "malheur",
+    "forest_name": "Malheur National Forest",
+    "name": "Murderers Creek Wild Horse Joint Management Area, Herd Management Area Plan",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/malheur/projects/62352": {
     "first_seen": "2026-05-28",
-    "name": "Emigrant Creek Ranger District Aspen Project"
+    "forest_code": "malheur",
+    "forest_name": "Malheur National Forest",
+    "name": "Emigrant Creek Ranger District Aspen Project",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/malheur/projects/65008": {
     "first_seen": "2026-05-28",
-    "name": "Upper Bear Lake"
+    "forest_code": "malheur",
+    "forest_name": "Malheur National Forest",
+    "name": "Upper Bear Lake",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/malheur/projects/65009": {
+    "analysis_type": "Decision Memo",
     "first_seen": "2026-05-28",
-    "name": "62 Road Fuel Break"
+    "forest_code": "malheur",
+    "forest_name": "Malheur National Forest",
+    "name": "62 Road Fuel Break",
+    "status": "On Hold"
   },
   "https://www.fs.usda.gov/r06/malheur/projects/68063": {
     "first_seen": "2026-05-28",
@@ -697,43 +978,81 @@
   },
   "https://www.fs.usda.gov/r06/malheur/projects/68393": {
     "first_seen": "2026-05-28",
-    "name": "North Fork Allotment Range Improvements and Maintenance"
+    "forest_code": "malheur",
+    "forest_name": "Malheur National Forest",
+    "name": "North Fork Allotment Range Improvements and Maintenance",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/malheur/projects/68668": {
     "first_seen": "2026-05-28",
-    "name": "OTEC Power Pole Replacement Project"
+    "forest_code": "malheur",
+    "forest_name": "Malheur National Forest",
+    "name": "OTEC Power Pole Replacement Project",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/mbs/projects/145023": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Martin Gap Restoration Thinning Project"
+    "forest_code": "mbs",
+    "forest_name": "Mt. Baker-Snoqualmie National Forest",
+    "name": "Martin Gap Restoration Thinning Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/mbs/projects/284163": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "2025 Mt. Baker Geothermal Consent to Lease"
+    "forest_code": "mbs",
+    "forest_name": "Mt. Baker-Snoqualmie National Forest",
+    "name": "2025 Mt. Baker Geothermal Consent to Lease",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/mbs/projects/284167": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Horseshoe Bend Bypass for Deadhorse Project Access"
+    "forest_code": "mbs",
+    "forest_name": "Mt. Baker-Snoqualmie National Forest",
+    "name": "Horseshoe Bend Bypass for Deadhorse Project Access",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/mbs/projects/298757": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Forestwide Thinning Analysis"
+    "forest_code": "mbs",
+    "forest_name": "Mt. Baker-Snoqualmie National Forest",
+    "name": "Forestwide Thinning Analysis",
+    "status": "In Progress"
   },
   "https://www.fs.usda.gov/r06/mbs/projects/298760": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Deception Falls Trail Bridge Replacements"
+    "forest_code": "mbs",
+    "forest_name": "Mt. Baker-Snoqualmie National Forest",
+    "name": "Deception Falls Trail Bridge Replacements",
+    "status": "In Progress"
   },
   "https://www.fs.usda.gov/r06/mbs/projects/299262": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Tenas Creek Restoration Project"
+    "forest_code": "mbs",
+    "forest_name": "Mt. Baker-Snoqualmie National Forest",
+    "name": "Tenas Creek Restoration Project",
+    "status": "In Progress"
   },
   "https://www.fs.usda.gov/r06/mbs/projects/299275": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "South Fork Canyon Creek Road Bridge Removal and Footbridge Install"
+    "forest_code": "mbs",
+    "forest_name": "Mt. Baker-Snoqualmie National Forest",
+    "name": "South Fork Canyon Creek Road Bridge Removal and Footbridge Install",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/mbs/projects/308241": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "North Fork Stillaguamish Landscape Analysis"
+    "forest_code": "mbs",
+    "forest_name": "Mt. Baker-Snoqualmie National Forest",
+    "name": "North Fork Stillaguamish Landscape Analysis",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/mbs/projects/308245": {
     "first_seen": "2026-05-28",
@@ -824,52 +1143,100 @@
     "name": "Heather Lake Trail Bridge Replacement"
   },
   "https://www.fs.usda.gov/r06/mthood/projects/271151": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "MTH Cascade Utilities Fiber Optic at Ripplebrook"
+    "forest_code": "mthood",
+    "forest_name": "Mt. Hood National Forest",
+    "name": "MTH Cascade Utilities Fiber Optic at Ripplebrook",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/mthood/projects/294998": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "MTH Anvil Vegetation Management Project"
+    "forest_code": "mthood",
+    "forest_name": "Mt. Hood National Forest",
+    "name": "MTH Anvil Vegetation Management Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/mthood/projects/298767": {
+    "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-05-28",
-    "name": "MTH Clear Branch Dam Remediation"
+    "forest_code": "mthood",
+    "forest_name": "Mt. Hood National Forest",
+    "name": "MTH Clear Branch Dam Remediation",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/mthood/projects/298769": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "MTH Lost Lake Late Successional Reserve Acre Swap"
+    "forest_code": "mthood",
+    "forest_name": "Mt. Hood National Forest",
+    "name": "MTH Lost Lake Late Successional Reserve Acre Swap",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/mthood/projects/305291": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "MTH Timberline Chairlifts and Improvements"
+    "forest_code": "mthood",
+    "forest_name": "Mt. Hood National Forest",
+    "name": "MTH Timberline Chairlifts and Improvements",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/mthood/projects/318700": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-06-26",
-    "name": "MTH Blowdown Insect and Disease Management"
+    "forest_code": "mthood",
+    "forest_name": "Mt. Hood National Forest",
+    "name": "MTH Blowdown Insect and Disease Management",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/mthood/projects/321700": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-08-27",
-    "name": "MTH Wildcat Good Neighbor Authority (GNA) Project"
+    "forest_code": "mthood",
+    "forest_name": "Mt. Hood National Forest",
+    "name": "MTH Wildcat Good Neighbor Authority (GNA) Project",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/mthood/projects/328087": {
+    "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-06-15",
-    "name": "South Wasco Ecosystem Resiliency"
+    "forest_code": "mthood",
+    "forest_name": "Mt. Hood National Forest",
+    "name": "South Wasco Ecosystem Resiliency",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/mthood/projects/328515": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-06-24",
-    "name": "MTH Long Prairie Allotment - Reevaluation of Environmental Documents"
+    "forest_code": "mthood",
+    "forest_name": "Mt. Hood National Forest",
+    "name": "MTH Long Prairie Allotment - Reevaluation of Environmental Documents",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/mthood/projects/352304": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-08-19",
-    "name": "MTH Skibowl Trail Widening"
+    "forest_code": "mthood",
+    "forest_name": "Mt. Hood National Forest",
+    "name": "MTH Skibowl Trail Widening",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/mthood/projects/359823": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-08-19",
-    "name": "MTH Timberline Tree Removal at Jeff Flood Chairlift"
+    "forest_code": "mthood",
+    "forest_name": "Mt. Hood National Forest",
+    "name": "MTH Timberline Tree Removal at Jeff Flood Chairlift",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/mthood/projects/375800": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-08-19",
-    "name": "MTH PGE Brightwood-Rhododendron Right-of-Way Access"
+    "forest_code": "mthood",
+    "forest_name": "Mt. Hood National Forest",
+    "name": "MTH PGE Brightwood-Rhododendron Right-of-Way Access",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/mthood/projects/62378": {
     "first_seen": "2026-05-28",
@@ -920,36 +1287,64 @@
     "name": "Basin Thinning Project"
   },
   "https://www.fs.usda.gov/r06/ochoco/projects/247895": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Day Wireless Gray Butte Tower Addition Special Use Permit"
+    "forest_code": "ochoco",
+    "forest_name": "Ochoco National Forest",
+    "name": "Day Wireless Gray Butte Tower Addition Special Use Permit",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/ochoco/projects/300085": {
     "first_seen": "2026-05-28",
     "name": "Upper Trout and Bridge Creeks Vegetation Management Project"
   },
   "https://www.fs.usda.gov/r06/ochoco/projects/300086": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Mountain Creek Vegetation Management Project"
+    "forest_code": "ochoco",
+    "forest_name": "Ochoco National Forest",
+    "name": "Mountain Creek Vegetation Management Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/ochoco/projects/303879": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Jordan Road Stockpile Expansion and Reissuance of Special Uses Permit"
+    "forest_code": "ochoco",
+    "forest_name": "Ochoco National Forest",
+    "name": "Jordan Road Stockpile Expansion and Reissuance of Special Uses Permit",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/ochoco/projects/314365": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-07-01",
-    "name": "Crazy Creek Post Fire Recovery"
+    "forest_code": "ochoco",
+    "forest_name": "Ochoco National Forest",
+    "name": "Crazy Creek Post Fire Recovery",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/ochoco/projects/322951": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-07-01",
-    "name": "Rail Ridge Post Fire Recovery"
+    "forest_code": "ochoco",
+    "forest_name": "Ochoco National Forest",
+    "name": "Rail Ridge Post Fire Recovery",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/ochoco/projects/329270": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-08-28",
-    "name": "Wiley Flat Fire Aspen Stand Protection"
+    "forest_code": "ochoco",
+    "forest_name": "Ochoco National Forest",
+    "name": "Wiley Flat Fire Aspen Stand Protection",
+    "status": "In Progress"
   },
   "https://www.fs.usda.gov/r06/ochoco/projects/380071": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-09-01",
-    "name": "Juniper Fire BAR- Drill Seeding"
+    "forest_code": "ochoco",
+    "forest_name": "Ochoco National Forest",
+    "name": "Juniper Fire BAR- Drill Seeding",
+    "status": "In Progress"
   },
   "https://www.fs.usda.gov/r06/ochoco/projects/61651": {
     "first_seen": "2026-05-28",
@@ -984,36 +1379,68 @@
     "name": "Lower Derr Restoration"
   },
   "https://www.fs.usda.gov/r06/okanogan-wenatchee/projects/281509": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-06-24",
-    "name": "Frazer Creek BDA 2026"
+    "forest_code": "okanogan-wenatchee",
+    "forest_name": "Okanogan-Wenatchee National Forest",
+    "name": "Frazer Creek BDA 2026",
+    "status": "In Progress"
   },
   "https://www.fs.usda.gov/r06/okanogan-wenatchee/projects/301399": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "South Fork Tieton Prescribed Fire Project"
+    "forest_code": "okanogan-wenatchee",
+    "forest_name": "Okanogan-Wenatchee National Forest",
+    "name": "South Fork Tieton Prescribed Fire Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/okanogan-wenatchee/projects/301825": {
+    "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-05-28",
-    "name": "Planning and Management of Domestic Sheep and Goat Grazing within the Range of Bighorn Sheep"
+    "forest_code": "okanogan-wenatchee",
+    "forest_name": "Okanogan-Wenatchee National Forest",
+    "name": "Planning and Management of Domestic Sheep and Goat Grazing within the Range of Bighorn Sheep",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/okanogan-wenatchee/projects/303872": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Eagle Creek Project"
+    "forest_code": "okanogan-wenatchee",
+    "forest_name": "Okanogan-Wenatchee National Forest",
+    "name": "Eagle Creek Project",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/okanogan-wenatchee/projects/304268": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Midnight Restoration"
+    "forest_code": "okanogan-wenatchee",
+    "forest_name": "Okanogan-Wenatchee National Forest",
+    "name": "Midnight Restoration",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/okanogan-wenatchee/projects/304269": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Upper Methow"
+    "forest_code": "okanogan-wenatchee",
+    "forest_name": "Okanogan-Wenatchee National Forest",
+    "name": "Upper Methow",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/okanogan-wenatchee/projects/304284": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Upper Swauk Restoration Project"
+    "forest_code": "okanogan-wenatchee",
+    "forest_name": "Okanogan-Wenatchee National Forest",
+    "name": "Upper Swauk Restoration Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/okanogan-wenatchee/projects/349472": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-07-08",
-    "name": "I-90 Snoqualmie Pass East - Public Safety/Wildlife Closure Area"
+    "forest_code": "okanogan-wenatchee",
+    "forest_name": "Okanogan-Wenatchee National Forest",
+    "name": "I-90 Snoqualmie Pass East - Public Safety/Wildlife Closure Area",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/okanogan-wenatchee/projects/54502": {
     "first_seen": "2026-05-28",
@@ -1072,8 +1499,12 @@
     "name": "Chelan PUD Fiber Optic Installation Project"
   },
   "https://www.fs.usda.gov/r06/olympic/projects/307852": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Canyon Forest Restoration"
+    "forest_code": "olympic",
+    "forest_name": "Olympic National Forest",
+    "name": "Canyon Forest Restoration",
+    "status": "In Progress"
   },
   "https://www.fs.usda.gov/r06/olympic/projects/61801": {
     "first_seen": "2026-05-28",
@@ -1088,20 +1519,36 @@
     "name": "Mt Walker North Restroom Decommissioning"
   },
   "https://www.fs.usda.gov/r06/rogue-siskiyou/projects/305800": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Snowy Butte Landscape Restoration Project"
+    "forest_code": "rogue-siskiyou",
+    "forest_name": "Rogue River-Siskiyou National Forest",
+    "name": "Snowy Butte Landscape Restoration Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/rogue-siskiyou/projects/305804": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "North Fork Diamond Bridge Replacement"
+    "forest_code": "rogue-siskiyou",
+    "forest_name": "Rogue River-Siskiyou National Forest",
+    "name": "North Fork Diamond Bridge Replacement",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/rogue-siskiyou/projects/305837": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Yellowjacket"
+    "forest_code": "rogue-siskiyou",
+    "forest_name": "Rogue River-Siskiyou National Forest",
+    "name": "Yellowjacket",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/rogue-siskiyou/projects/306246": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Thompson Creek Fuel Break"
+    "forest_code": "rogue-siskiyou",
+    "forest_name": "Rogue River-Siskiyou National Forest",
+    "name": "Thompson Creek Fuel Break",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/rogue-siskiyou/projects/53521": {
     "first_seen": "2026-05-28",
@@ -1132,12 +1579,20 @@
     "name": "Moon Fire Recovery"
   },
   "https://www.fs.usda.gov/r06/siuslaw/projects/135423": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Yamina (Yamhill-Willamina) Restoration Project"
+    "forest_code": "siuslaw",
+    "forest_name": "Siuslaw National Forest",
+    "name": "Yamina (Yamhill-Willamina) Restoration Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/siuslaw/projects/275836": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Five Green Restoration Project"
+    "forest_code": "siuslaw",
+    "forest_name": "Siuslaw National Forest",
+    "name": "Five Green Restoration Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/siuslaw/projects/53176": {
     "first_seen": "2026-05-28",
@@ -1180,28 +1635,52 @@
     "name": "Double Snag Planting CE"
   },
   "https://www.fs.usda.gov/r06/umatilla/projects/274338": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-07-01",
-    "name": "Winter Wind Salvage CE"
+    "forest_code": "umatilla",
+    "forest_name": "Umatilla National Forest",
+    "name": "Winter Wind Salvage CE",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/umatilla/projects/277309": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Mt. Misery Snowshelter Relocation"
+    "forest_code": "umatilla",
+    "forest_name": "Umatilla National Forest",
+    "name": "Mt. Misery Snowshelter Relocation",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/umatilla/projects/285597": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Battle Bruin Integrated Vegetation Management Project"
+    "forest_code": "umatilla",
+    "forest_name": "Umatilla National Forest",
+    "name": "Battle Bruin Integrated Vegetation Management Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/umatilla/projects/285608": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Mottet Vegetation Management Project"
+    "forest_code": "umatilla",
+    "forest_name": "Umatilla National Forest",
+    "name": "Mottet Vegetation Management Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/umatilla/projects/300082": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "54 North Fuels Reduction and Huckleberry Restoration Project"
+    "forest_code": "umatilla",
+    "forest_name": "Umatilla National Forest",
+    "name": "54 North Fuels Reduction and Huckleberry Restoration Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/umatilla/projects/301397": {
+    "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-05-28",
-    "name": "Blue Mountains Forest Plan Revision"
+    "forest_code": "umatilla",
+    "forest_name": "Umatilla National Forest",
+    "name": "Blue Mountains Forest Plan Revision",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/umatilla/projects/41350": {
     "first_seen": "2026-05-28",
@@ -1252,32 +1731,60 @@
     "name": "Penland Lake Water Tank"
   },
   "https://www.fs.usda.gov/r06/wallowa-whitman/projects/303877": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Sufferin' Springs Vegetation Management Project"
+    "forest_code": "wallowa-whitman",
+    "forest_name": "Wallowa-Whitman National Forest",
+    "name": "Sufferin' Springs Vegetation Management Project",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/wallowa-whitman/projects/303898": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Meadow Creek Watershed Restoration"
+    "forest_code": "wallowa-whitman",
+    "forest_name": "Wallowa-Whitman National Forest",
+    "name": "Meadow Creek Watershed Restoration",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/wallowa-whitman/projects/304275": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Huckleberry Defensible Fuels Profile Zone"
+    "forest_code": "wallowa-whitman",
+    "forest_name": "Wallowa-Whitman National Forest",
+    "name": "Huckleberry Defensible Fuels Profile Zone",
+    "status": "In Progress"
   },
   "https://www.fs.usda.gov/r06/wallowa-whitman/projects/304298": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Red Cougar Integrated Vegetation Management"
+    "forest_code": "wallowa-whitman",
+    "forest_name": "Wallowa-Whitman National Forest",
+    "name": "Red Cougar Integrated Vegetation Management",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/wallowa-whitman/projects/358854": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-07-14",
-    "name": "Huckleberry to Minam Fuel Breaks"
+    "forest_code": "wallowa-whitman",
+    "forest_name": "Wallowa-Whitman National Forest",
+    "name": "Huckleberry to Minam Fuel Breaks",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/wallowa-whitman/projects/359331": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-07-14",
-    "name": "Upper Wallowa Valley Fuel Breaks"
+    "forest_code": "wallowa-whitman",
+    "forest_name": "Wallowa-Whitman National Forest",
+    "name": "Upper Wallowa Valley Fuel Breaks",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/wallowa-whitman/projects/361640": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-07-17",
-    "name": "Horse Memaloose Salvage"
+    "forest_code": "wallowa-whitman",
+    "forest_name": "Wallowa-Whitman National Forest",
+    "name": "Horse Memaloose Salvage",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/wallowa-whitman/projects/45945": {
     "first_seen": "2026-05-28",
@@ -1344,64 +1851,124 @@
     "name": "Meadow Creek Piezometer and Stream Gauge Installation"
   },
   "https://www.fs.usda.gov/r06/willamette/projects/166223": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Little Owl Small Sale"
+    "forest_code": "willamette",
+    "forest_name": "Willamette National Forest",
+    "name": "Little Owl Small Sale",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/willamette/projects/252657": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-07-07",
-    "name": "Rook Thin"
+    "forest_code": "willamette",
+    "forest_name": "Willamette National Forest",
+    "name": "Rook Thin",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/willamette/projects/297953": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Divide"
+    "forest_code": "willamette",
+    "forest_name": "Willamette National Forest",
+    "name": "Divide",
+    "status": "In Progress"
   },
   "https://www.fs.usda.gov/r06/willamette/projects/297957": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Sunny Thin"
+    "forest_code": "willamette",
+    "forest_name": "Willamette National Forest",
+    "name": "Sunny Thin",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/willamette/projects/298772": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "2022 ODOT rock stockpile"
+    "forest_code": "willamette",
+    "forest_name": "Willamette National Forest",
+    "name": "2022 ODOT rock stockpile",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/willamette/projects/298776": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "CF Thin"
+    "forest_code": "willamette",
+    "forest_name": "Willamette National Forest",
+    "name": "CF Thin",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/willamette/projects/298777": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Fish Lake Fire Resilience"
+    "forest_code": "willamette",
+    "forest_name": "Willamette National Forest",
+    "name": "Fish Lake Fire Resilience",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/willamette/projects/298778": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Roadside Hazardous Fuels Reduction"
+    "forest_code": "willamette",
+    "forest_name": "Willamette National Forest",
+    "name": "Roadside Hazardous Fuels Reduction",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/willamette/projects/298779": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Strube Flats Fire Camp"
+    "forest_code": "willamette",
+    "forest_name": "Willamette National Forest",
+    "name": "Strube Flats Fire Camp",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/willamette/projects/301396": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Fall Creek"
+    "forest_code": "willamette",
+    "forest_name": "Willamette National Forest",
+    "name": "Fall Creek",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/willamette/projects/301398": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Station Butte"
+    "forest_code": "willamette",
+    "forest_name": "Willamette National Forest",
+    "name": "Station Butte",
+    "status": "In Progress"
   },
   "https://www.fs.usda.gov/r06/willamette/projects/301814": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Cala-Wiley"
+    "forest_code": "willamette",
+    "forest_name": "Willamette National Forest",
+    "name": "Cala-Wiley",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/willamette/projects/301815": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Dead Mountain"
+    "forest_code": "willamette",
+    "forest_name": "Willamette National Forest",
+    "name": "Dead Mountain",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r06/willamette/projects/301816": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Ivy Cliff"
+    "forest_code": "willamette",
+    "forest_name": "Willamette National Forest",
+    "name": "Ivy Cliff",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/willamette/projects/301817": {
+    "analysis_type": "Environmental Assessment",
     "first_seen": "2026-05-28",
-    "name": "Lava Parks"
+    "forest_code": "willamette",
+    "forest_name": "Willamette National Forest",
+    "name": "Lava Parks",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r06/willamette/projects/41718": {
     "first_seen": "2026-05-28",
@@ -1556,12 +2123,20 @@
     "name": "R10 CNF GRD Red Lake Portage Trail Decomission 2026"
   },
   "https://www.fs.usda.gov/r10/chugach/projects/235841": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "R10 CNF GRD Trinity Point Recreation Area 2026"
+    "forest_code": "chugach",
+    "forest_name": "Chugach National Forest",
+    "name": "R10 CNF GRD Trinity Point Recreation Area 2026",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/chugach/projects/251160": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "R10 CNF GRD TOBI Extension Project"
+    "forest_code": "chugach",
+    "forest_name": "Chugach National Forest",
+    "name": "R10 CNF GRD TOBI Extension Project",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/chugach/projects/46987": {
     "first_seen": "2026-05-28",
@@ -1628,40 +2203,76 @@
     "name": "Alaska Energy Authority Transmission Line Rebuild Russian River to Cooper Creek"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/163423": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Tongass - Chichagof Small Sales - HRD"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "Tongass - Chichagof Small Sales - HRD",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/164223": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "R10 TNF YRD 2026 Yakutat Community Needs"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "R10 TNF YRD 2026 Yakutat Community Needs",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/201034": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-08-27",
-    "name": "Tongass - Suemez Island State Access - CRD"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "Tongass - Suemez Island State Access - CRD",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/204374": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "R10 TNF TBRD 2026 North Thorne Bay State Access"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "R10 TNF TBRD 2026 North Thorne Bay State Access",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/207837": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-06-16",
-    "name": "R10 TNF SRD 2026 Harbor Mountain USGS Landslide Monitoring Equipment"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "R10 TNF SRD 2026 Harbor Mountain USGS Landslide Monitoring Equipment",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/209379": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-07-01",
-    "name": "Tongass - Lemon Lake Landslide Road Realignment - KMRD"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "Tongass - Lemon Lake Landslide Road Realignment - KMRD",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/209835": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "R10 TNF KMRD 2026 Deer Mountain Trail Maintenance"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "R10 TNF KMRD 2026 Deer Mountain Trail Maintenance",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/227783": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-08-04",
-    "name": "Tongass - Indian River Trail Bridges Replacement - SRD"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "Tongass - Indian River Trail Bridges Replacement - SRD",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/237297": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-07-02",
-    "name": "R10 TNF HRD 2026 Hoonah Indian Association Hoktaheen Creek Weir Project"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "R10 TNF HRD 2026 Hoonah Indian Association Hoktaheen Creek Weir Project",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/243671": {
     "first_seen": "2026-05-28",
@@ -1672,52 +2283,100 @@
     "name": "R10 TNF YRD 2026 Alsek River Special Use Facilities"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/253188": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "R10 TNF SRD 2026 Remote Admin Camp Improvements"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "R10 TNF SRD 2026 Remote Admin Camp Improvements",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/270672": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "R10 TNF ANM Hecla Greens Creek Mine Treated Wastewater Outfall Line 002A 2026"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "R10 TNF ANM Hecla Greens Creek Mine Treated Wastewater Outfall Line 002A 2026",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/272188": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "R10 TNF JRD Glacial outburst flood barrier along Backloop Road 2026"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "R10 TNF JRD Glacial outburst flood barrier along Backloop Road 2026",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/301827": {
+    "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-05-28",
-    "name": "Tongass - Twin Mountain II Timber Sale - TBRD"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "Tongass - Twin Mountain II Timber Sale - TBRD",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/302697": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Tongass -  Millrock Exploration Corp - Apex El Nido Project - HRD"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "Tongass -  Millrock Exploration Corp - Apex El Nido Project - HRD",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/303897": {
+    "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-05-28",
-    "name": "Tongass National Forest Land Management Plan Revision"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "Tongass National Forest Land Management Plan Revision",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/303899": {
+    "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-05-28",
-    "name": "Tongass - South Revillagigedo Integrated Resource Project - KMRD"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "Tongass - South Revillagigedo Integrated Resource Project - KMRD",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/305292": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Tongass - Deer Lake Coho Rearing Facility Permit Re-Issuance (for NSRAA on SRD)"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "Tongass - Deer Lake Coho Rearing Facility Permit Re-Issuance (for NSRAA on SRD)",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/305293": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "Tongass - Hidden Falls Fish Hatchery Alaska Department of Fish and Game - SRD"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "Tongass - Hidden Falls Fish Hatchery Alaska Department of Fish and Game - SRD",
+    "status": "Developing Proposal"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/311939": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-05-28",
-    "name": "R10 TNF JRD 2026 Bonnie Brae Trail Rehabilitation"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "R10 TNF JRD 2026 Bonnie Brae Trail Rehabilitation",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/312966": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-08-27",
-    "name": "Tongass - El Capitan North State Access - TBRD"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "Tongass - El Capitan North State Access - TBRD",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/353945": {
+    "analysis_type": "Categorical Exclusion",
     "first_seen": "2026-07-14",
-    "name": "Tongass - East Island Outhouse Replacement - PRD"
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "Tongass - East Island Outhouse Replacement - PRD",
+    "status": "Completed"
   },
   "https://www.fs.usda.gov/r10/tongass/projects/53780": {
     "first_seen": "2026-05-28",
