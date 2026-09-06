@@ -1,14 +1,14 @@
 [
   {
     "date": "2026-09-06",
-    "total": 294,
+    "total": 297,
     "taking_comments": 0,
     "by_analysis_type": {
       "Environmental Assessment": 89,
       "Categorical Exclusion": 185,
-      "Environmental Impact Statement": 14,
-      "Decision Memo": 1,
-      "Unknown": 5
+      "Environmental Impact Statement": 15,
+      "Unknown": 7,
+      "Decision Memo": 1
     },
     "by_forest": {
       "mbs": {
@@ -50,28 +50,29 @@
       },
       "colville": {
         "name": "Colville National Forest",
-        "total": 13,
+        "total": 14,
         "taking_comments": 0,
         "by_analysis_type": {
+          "Unknown": 1,
           "Categorical Exclusion": 4,
           "Environmental Assessment": 9
         }
       },
-      "nezperce-clearwater": {
-        "name": "Nez Perce-Clearwater National Forests",
+      "nezperce-ipnf": {
+        "name": "Nez Perce-Clearwater & Idaho Panhandle",
         "total": 2,
         "taking_comments": 0,
         "by_analysis_type": {
           "Environmental Assessment": 2
         }
       },
-      "boise": {
-        "name": "Boise National Forest",
-        "total": 4,
+      "boise-payette": {
+        "name": "Boise & Payette National Forests",
+        "total": 13,
         "taking_comments": 0,
         "by_analysis_type": {
-          "Environmental Assessment": 2,
-          "Categorical Exclusion": 2
+          "Environmental Assessment": 3,
+          "Categorical Exclusion": 10
         }
       },
       "caribou-targhee": {
@@ -82,15 +83,6 @@
           "Categorical Exclusion": 14,
           "Environmental Assessment": 5,
           "Environmental Impact Statement": 1
-        }
-      },
-      "payette": {
-        "name": "Payette National Forest",
-        "total": 9,
-        "taking_comments": 0,
-        "by_analysis_type": {
-          "Categorical Exclusion": 8,
-          "Environmental Assessment": 1
         }
       },
       "salmon-challis": {
@@ -130,13 +122,14 @@
           "Environmental Assessment": 3
         }
       },
-      "fremont-winema": {
-        "name": "Fremont-Winema National Forest",
-        "total": 6,
+      "fremont-umatilla": {
+        "name": "Fremont-Winema & Umatilla NFs",
+        "total": 12,
         "taking_comments": 0,
         "by_analysis_type": {
-          "Categorical Exclusion": 4,
-          "Environmental Assessment": 2
+          "Categorical Exclusion": 6,
+          "Environmental Assessment": 5,
+          "Environmental Impact Statement": 1
         }
       },
       "deschutes": {
@@ -168,16 +161,6 @@
           "Environmental Assessment": 1
         }
       },
-      "umatilla": {
-        "name": "Umatilla National Forest",
-        "total": 6,
-        "taking_comments": 0,
-        "by_analysis_type": {
-          "Environmental Assessment": 3,
-          "Environmental Impact Statement": 1,
-          "Categorical Exclusion": 2
-        }
-      },
       "willamette": {
         "name": "Willamette National Forest",
         "total": 15,
@@ -204,13 +187,13 @@
           "Categorical Exclusion": 2
         }
       },
-      "sixrivers": {
-        "name": "Six Rivers National Forest",
-        "total": 4,
+      "sixrivers-mendocino": {
+        "name": "Six Rivers & Mendocino NFs",
+        "total": 9,
         "taking_comments": 0,
         "by_analysis_type": {
-          "Categorical Exclusion": 2,
-          "Environmental Assessment": 2
+          "Categorical Exclusion": 5,
+          "Environmental Assessment": 4
         }
       },
       "shasta-trinity": {
@@ -231,28 +214,12 @@
           "Environmental Assessment": 4
         }
       },
-      "mendocino": {
-        "name": "Mendocino National Forest",
-        "total": 5,
+      "lassen-modoc": {
+        "name": "Lassen & Modoc National Forests",
+        "total": 4,
         "taking_comments": 0,
         "by_analysis_type": {
           "Categorical Exclusion": 3,
-          "Environmental Assessment": 2
-        }
-      },
-      "lassen": {
-        "name": "Lassen National Forest",
-        "total": 3,
-        "taking_comments": 0,
-        "by_analysis_type": {
-          "Categorical Exclusion": 3
-        }
-      },
-      "modoc": {
-        "name": "Modoc National Forest",
-        "total": 1,
-        "taking_comments": 0,
-        "by_analysis_type": {
           "Environmental Assessment": 1
         }
       },
@@ -267,12 +234,13 @@
       },
       "tahoe-eldorado": {
         "name": "Tahoe & Eldorado National Forests",
-        "total": 19,
+        "total": 20,
         "taking_comments": 0,
         "by_analysis_type": {
           "Categorical Exclusion": 12,
           "Environmental Assessment": 4,
-          "Environmental Impact Statement": 3
+          "Environmental Impact Statement": 3,
+          "Unknown": 1
         }
       },
       "stanislaus": {
@@ -293,20 +261,12 @@
           "Environmental Assessment": 3
         }
       },
-      "inyo": {
-        "name": "Inyo National Forest",
-        "total": 1,
+      "inyo-sequoia": {
+        "name": "Inyo & Sequoia National Forests",
+        "total": 4,
         "taking_comments": 0,
         "by_analysis_type": {
-          "Categorical Exclusion": 1
-        }
-      },
-      "sequoia": {
-        "name": "Sequoia National Forest",
-        "total": 3,
-        "taking_comments": 0,
-        "by_analysis_type": {
-          "Categorical Exclusion": 2,
+          "Categorical Exclusion": 3,
           "Environmental Assessment": 1
         }
       },
@@ -338,11 +298,11 @@
       },
       "tongass": {
         "name": "Tongass National Forest",
-        "total": 20,
+        "total": 21,
         "taking_comments": 0,
         "by_analysis_type": {
           "Categorical Exclusion": 18,
-          "Environmental Impact Statement": 2
+          "Environmental Impact Statement": 3
         }
       }
     }
