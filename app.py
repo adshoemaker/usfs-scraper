@@ -1790,6 +1790,199 @@ def save_annotations_github(annotations: dict) -> bool:
         return False
 
 
+HISTORY_TEMPLATE = """
+<!DOCTYPE html>
+<html>
+<head>
+<title>History Graphs — LFDC Admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  body { font-family: 'Poppins', sans-serif; background: #e8ede3; padding: 24px; font-size: 0.82rem; }
+  h1 { font-size: 1.2rem; font-weight: 600; margin-bottom: 4px; }
+  h2 { font-size: 0.95rem; font-weight: 600; margin: 32px 0 8px; border-bottom: 2px solid #ccc; padding-bottom: 4px; }
+  .back { display: inline-block; margin-bottom: 16px; color: #c94f1a; font-size: 0.78rem; text-decoration: none; }
+  .chart-box { background: white; padding: 20px; margin-bottom: 24px; max-width: 900px; }
+  .controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
+  select { padding: 4px 8px; font-family: inherit; font-size: 0.78rem; border: 1px solid #ccc; }
+  label { font-size: 0.78rem; color: #555; }
+  .no-data { color: #999; font-style: italic; padding: 20px; text-align: center; }
+</style>
+</head>
+<body>
+<a href="/admin" class="back">← Back to Admin</a>
+<h1>📈 History Graphs</h1>
+<p style="color:#666; font-size:0.78rem; margin-bottom:8px;">Daily snapshots start from when history.json was first created. Cumulative charts use the full ledger.</p>
+
+{% if not history %}
+<div class="chart-box"><div class="no-data">No snapshot history yet — will appear after next scrape run.</div></div>
+{% else %}
+
+<h2>Total Projects Over Time (Daily Snapshots)</h2>
+<div class="chart-box">
+  <canvas id="totalChart" height="80"></canvas>
+</div>
+
+<h2>Taking Comments Over Time (Daily Snapshots)</h2>
+<div class="chart-box">
+  <canvas id="commentsChart" height="80"></canvas>
+</div>
+
+<h2>Projects by Forest Over Time</h2>
+<div class="chart-box">
+  <div class="controls">
+    <label>Forest:
+      <select id="forestSelect" onchange="updateForestChart()">
+        {% for f in forests %}
+        <option value="{{ f.code }}">{{ f.name.replace('National Forest','NF') }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  </div>
+  <canvas id="forestChart" height="80"></canvas>
+</div>
+
+<h2>Projects by Analysis Type Over Time</h2>
+<div class="chart-box">
+  <div class="controls">
+    <label>Analysis Type:
+      <select id="typeSelect" onchange="updateTypeChart()">
+        {% set all_types = [] %}
+        {% for snap in history %}
+          {% for atype in snap.by_analysis_type.keys() %}
+            {% if atype not in all_types %}{% set _ = all_types.append(atype) %}{% endif %}
+          {% endfor %}
+        {% endfor %}
+        {% for atype in all_types|sort %}
+        <option value="{{ atype }}">{{ atype }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  </div>
+  <canvas id="typeChart" height="80"></canvas>
+</div>
+
+{% endif %}
+
+<h2>Cumulative New Projects Added (from Ledger)</h2>
+<div class="chart-box">
+  <canvas id="cumulativeChart" height="80"></canvas>
+</div>
+
+<h2>Cumulative by Analysis Type (from Ledger)</h2>
+<div class="chart-box">
+  <div class="controls">
+    <label>Analysis Type:
+      <select id="cumTypeSelect" onchange="updateCumTypeChart()">
+        {% for atype in daily_new_by_type.keys()|sort %}
+        <option value="{{ atype }}">{{ atype }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  </div>
+  <canvas id="cumTypeChart" height="80"></canvas>
+</div>
+
+<script>
+const history = {{ history | tojson }};
+const dailyNew = {{ daily_new | tojson }};
+const dailyNewByForest = {{ daily_new_by_forest | tojson }};
+const dailyNewByType = {{ daily_new_by_type | tojson }};
+
+const COLORS = ['#2d7a1f','#a83030','#4a90d9','#d4b800','#9b72d8','#e05a2b','#8fa68e','#c46a30','#6aabdf','#7a6a3a'];
+
+function makeLineChart(ctx, labels, datasets) {
+  return new Chart(ctx, {
+    type: 'line',
+    data: { labels, datasets },
+    options: {
+      responsive: true,
+      interaction: { mode: 'index', intersect: false },
+      plugins: { legend: { position: 'bottom', labels: { font: { family: 'Poppins', size: 11 } } } },
+      scales: {
+        x: { ticks: { font: { family: 'Poppins', size: 10 }, maxTicksLimit: 12 } },
+        y: { beginAtZero: true, ticks: { font: { family: 'Poppins', size: 10 } } }
+      }
+    }
+  });
+}
+
+{% if history %}
+// Total projects
+const snapDates = history.map(h => h.date);
+const snapTotals = history.map(h => h.total);
+const snapComments = history.map(h => h.taking_comments);
+
+makeLineChart(document.getElementById('totalChart'), snapDates, [{
+  label: 'Total Projects', data: snapTotals,
+  borderColor: '#2d7a1f', backgroundColor: 'rgba(45,122,31,0.08)', tension: 0.3, fill: true
+}]);
+
+makeLineChart(document.getElementById('commentsChart'), snapDates, [{
+  label: 'Taking Comments', data: snapComments,
+  borderColor: '#a83030', backgroundColor: 'rgba(168,48,48,0.08)', tension: 0.3, fill: true
+}]);
+
+// Forest chart
+let forestChart = null;
+function updateForestChart() {
+  const fc = document.getElementById('forestSelect').value;
+  const data = snapDates.map(d => (history.find(h => h.date === d)?.by_forest?.[fc]?.total || 0));
+  if (forestChart) forestChart.destroy();
+  forestChart = makeLineChart(document.getElementById('forestChart'), snapDates, [{
+    label: 'Projects', data,
+    borderColor: '#4a90d9', backgroundColor: 'rgba(74,144,217,0.08)', tension: 0.3, fill: true
+  }]);
+}
+updateForestChart();
+
+// Type chart
+let typeChart = null;
+function updateTypeChart() {
+  const atype = document.getElementById('typeSelect').value;
+  const data = snapDates.map(d => (history.find(h => h.date === d)?.by_analysis_type?.[atype] || 0));
+  if (typeChart) typeChart.destroy();
+  typeChart = makeLineChart(document.getElementById('typeChart'), snapDates, [{
+    label: atype, data,
+    borderColor: '#9b72d8', backgroundColor: 'rgba(155,114,216,0.08)', tension: 0.3, fill: true
+  }]);
+}
+updateTypeChart();
+{% endif %}
+
+// Cumulative new projects from ledger
+(function() {
+  const sorted = Object.keys(dailyNew).sort();
+  let cum = 0;
+  const labels = [], data = [];
+  sorted.forEach(d => { cum += dailyNew[d]; labels.push(d); data.push(cum); });
+  makeLineChart(document.getElementById('cumulativeChart'), labels, [{
+    label: 'Cumulative Projects Added', data,
+    borderColor: '#2d7a1f', backgroundColor: 'rgba(45,122,31,0.08)', tension: 0.3, fill: true
+  }]);
+})();
+
+// Cumulative by analysis type
+let cumTypeChart = null;
+function updateCumTypeChart() {
+  const atype = document.getElementById('cumTypeSelect').value;
+  const byDate = dailyNewByType[atype] || {};
+  const sorted = Object.keys(byDate).sort();
+  let cum = 0;
+  const labels = [], data = [];
+  sorted.forEach(d => { cum += byDate[d]; labels.push(d); data.push(cum); });
+  if (cumTypeChart) cumTypeChart.destroy();
+  cumTypeChart = makeLineChart(document.getElementById('cumTypeChart'), labels, [{
+    label: atype, data,
+    borderColor: '#d4b800', backgroundColor: 'rgba(212,184,0,0.08)', tension: 0.3, fill: true
+  }]);
+}
+updateCumTypeChart();
+</script>
+</body>
+</html>
+"""
+
 ADMIN_TEMPLATE = """
 <!DOCTYPE html>
 <html>
@@ -1863,6 +2056,8 @@ ADMIN_TEMPLATE = """
   </div>
   <div style="width:1px; height:20px; background:#ddd;"></div>
   <a href="/admin/ledger" style="font-size:0.78rem; font-weight:600; color:#3a7aad; text-decoration:none; padding:4px 12px; border:1px solid #3a7aad; background:white;">📋 Ledger Audit</a>
+  <div style="width:1px; height:20px; background:#ddd;"></div>
+  <a href="/admin/history" style="font-size:0.78rem; font-weight:600; color:#5a7a58; text-decoration:none; padding:4px 12px; border:1px solid #5a7a58; background:white;">📈 History Graphs</a>
 </div>
 
 <div style="background:#f7f7f0; border:1px solid #ddd; padding:12px 18px; margin-bottom:24px; max-width:900px;">
@@ -2448,6 +2643,54 @@ def admin_save():
 
     flash = "Saved and committed to GitHub ✓" if github_ok else "Saved locally (GitHub token not configured)"
     return redirect(url_for("admin") + f"?flash={urllib.parse.quote(flash)}")
+
+
+@limiter.exempt
+@app.route("/admin/history")
+def admin_history():
+    if not session.get("admin_authed"):
+        return redirect(url_for("admin_login"))
+
+    # Load history.json
+    history = []
+    history_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "history.json")
+    try:
+        with open(history_path, encoding="utf-8") as f:
+            history = json.load(f)
+    except Exception:
+        pass
+
+    # Load ledger for cumulative charts
+    ledger = {}
+    ledger_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ledger.json")
+    try:
+        with open(ledger_path, encoding="utf-8") as f:
+            ledger = json.load(f)
+    except Exception:
+        pass
+
+    # Build cumulative first_seen data from ledger
+    from collections import defaultdict
+    daily_new = defaultdict(int)
+    daily_new_by_forest = defaultdict(lambda: defaultdict(int))
+    daily_new_by_type   = defaultdict(lambda: defaultdict(int))
+    for url, entry in ledger.items():
+        date = (entry.get("first_seen") or "")[:10]
+        if not date:
+            continue
+        daily_new[date] += 1
+        fc    = entry.get("forest_code", "unknown")
+        atype = entry.get("analysis_type") or "Unknown"
+        daily_new_by_forest[fc][date] += 1
+        daily_new_by_type[atype][date] += 1
+
+    return render_template_string(HISTORY_TEMPLATE,
+        history=history,
+        daily_new=dict(daily_new),
+        daily_new_by_forest={k: dict(v) for k, v in daily_new_by_forest.items()},
+        daily_new_by_type={k: dict(v) for k, v in daily_new_by_type.items()},
+        forests=FORESTS,
+    )
 
 
 @limiter.exempt

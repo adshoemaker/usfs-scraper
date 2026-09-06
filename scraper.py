@@ -796,12 +796,59 @@ def run_scraper():
     with open("projects.json", "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
+    # Write daily snapshot for historical graphing
+    today = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
+    snapshot = {
+        "date":             today,
+        "total":            len(all_projects),
+        "taking_comments":  sum(1 for p in all_projects if p.get("accepting_comments")),
+        "by_analysis_type": {},
+        "by_forest":        {},
+    }
+    # Count by analysis type
+    for p in all_projects:
+        atype = p.get("analysis_type") or "Unknown"
+        snapshot["by_analysis_type"][atype] = snapshot["by_analysis_type"].get(atype, 0) + 1
+    # Count by forest
+    for p in all_projects:
+        fc = p.get("forest_code", "unknown")
+        fn = p.get("forest_name", fc)
+        if fc not in snapshot["by_forest"]:
+            snapshot["by_forest"][fc] = {
+                "name":            fn,
+                "total":           0,
+                "taking_comments": 0,
+                "by_analysis_type": {},
+            }
+        snapshot["by_forest"][fc]["total"] += 1
+        if p.get("accepting_comments"):
+            snapshot["by_forest"][fc]["taking_comments"] += 1
+        atype = p.get("analysis_type") or "Unknown"
+        fbt = snapshot["by_forest"][fc]["by_analysis_type"]
+        fbt[atype] = fbt.get(atype, 0) + 1
+
+    # Load existing history, update today's entry, save
+    history = []
+    if os.path.exists("history.json"):
+        try:
+            with open("history.json", encoding="utf-8") as f:
+                history = json.load(f)
+        except Exception:
+            history = []
+    # Replace today's entry if it exists, otherwise append
+    history = [h for h in history if h.get("date") != today]
+    history.append(snapshot)
+    history.sort(key=lambda h: h.get("date", ""))
+    with open("history.json", "w", encoding="utf-8") as f:
+        json.dump(history, f, indent=2, ensure_ascii=False)
+    print(f"  Snapshot saved: {today} — {snapshot['total']} projects, {snapshot['taking_comments']} taking comments")
+
     print("\n" + "=" * 60)
     print(f"Done. {len(all_projects)} total projects collected.")
     print_summary()
     print("=" * 60)
 
-    # Push projects.json and ledger.json to GitHub via API
+    # Push projects.json, ledger.json, and history.json to GitHub via API
     github_token = os.environ.get("GITHUB_TOKEN")
     if github_token:
         push_ok = push_projects_json_via_api(github_token)
@@ -810,6 +857,9 @@ def run_scraper():
         ledger_ok = push_ledger_via_api(github_token)
         if not ledger_ok:
             print("!! GitHub API push failed — ledger.json saved locally only")
+        history_ok = push_history_via_api(github_token)
+        if not history_ok:
+            print("!! GitHub API push failed — history.json saved locally only")
 
     return {"failed_forests": failed_forests, "total_forests": len(FORESTS)}
 
@@ -867,6 +917,55 @@ def push_projects_json_via_api(token: str) -> bool:
 
 
 
+def push_history_via_api(token: str) -> bool:
+    """Push history.json to GitHub using the REST API."""
+    import base64
+    import urllib.request
+    import urllib.error
+
+    repo  = "adshoemaker/usfs-scraper"
+    path  = "history.json"
+    url   = f"https://api.github.com/repos/{repo}/contents/{path}"
+    today = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
+
+    with open(path, "rb") as f:
+        content_b64 = base64.b64encode(f.read()).decode("utf-8")
+
+    req = urllib.request.Request(url, headers={
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    })
+    sha = None
+    try:
+        with urllib.request.urlopen(req) as resp:
+            sha = json.loads(resp.read())["sha"]
+    except urllib.error.HTTPError as e:
+        if e.code != 404:
+            print(f"!! GitHub API: could not get history SHA: {e}")
+            return False
+
+    payload_data = {"message": f"History: {today}", "content": content_b64}
+    if sha:
+        payload_data["sha"] = sha
+
+    payload = json.dumps(payload_data).encode("utf-8")
+    req2 = urllib.request.Request(url, data=payload, method="PUT", headers={
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "Content-Type": "application/json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    })
+    try:
+        with urllib.request.urlopen(req2) as resp:
+            result = json.loads(resp.read())
+            print(f"  ✓ history.json pushed via GitHub API: {result['commit']['sha'][:7]}")
+            return True
+    except urllib.error.HTTPError as e:
+        print(f"!! GitHub API history push failed: {e} — {e.read().decode()}")
+        return False
+
+
 def load_ledger() -> dict:
     """Load ledger.json — maps project_url -> {name, first_seen}."""
     if os.path.exists("ledger.json"):
@@ -892,8 +991,13 @@ def update_ledger(projects: list) -> dict:
         if not url:
             continue
         if url in ledger:
-            # Update name if it changed, but never change first_seen
+            # Update mutable fields but never change first_seen
             ledger[url]["name"] = name
+            if p.get("analysis_type"):
+                ledger[url]["analysis_type"] = p.get("analysis_type", "")
+            ledger[url]["forest_code"] = p.get("forest_code", "")
+            ledger[url]["forest_name"] = p.get("forest_name", "")
+            ledger[url]["status"]      = p.get("status", "")
         else:
             # New project — use existing first_seen if available, else today
             first_seen = p.get("first_seen", "")
@@ -902,8 +1006,12 @@ def update_ledger(projects: list) -> dict:
             else:
                 first_seen = today
             ledger[url] = {
-                "name":       name,
-                "first_seen": first_seen,
+                "name":          name,
+                "first_seen":    first_seen,
+                "analysis_type": p.get("analysis_type", ""),
+                "forest_code":   p.get("forest_code", ""),
+                "forest_name":   p.get("forest_name", ""),
+                "status":        p.get("status", ""),
             }
 
     return ledger
