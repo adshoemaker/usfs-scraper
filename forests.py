@@ -47,25 +47,20 @@ FORESTS = [
     # ── Idaho (Region 1 + Region 4) ────────────────────────────
 
     {
-        "name": "Idaho Panhandle National Forests",
-        "code": "idaho-panhandle",
-        "region": "R01",
-        "state": "ID",
-        "projects_url": "https://www.fs.usda.gov/r01/ipnf/projects",
-    },
-    {
-        "name": "Nez Perce-Clearwater National Forests",
-        "code": "nezperce-clearwater",
+        "name": "Nez Perce-Clearwater & Idaho Panhandle",
+        "code": "nezperce-ipnf",
         "region": "R01",
         "state": "ID",
         "projects_url": "https://www.fs.usda.gov/r01/nezperce-clearwater/projects",
+        "extra_urls": ["https://www.fs.usda.gov/r01/ipnf/projects"],
     },
     {
-        "name": "Boise National Forest",
-        "code": "boise",
+        "name": "Boise & Payette National Forests",
+        "code": "boise-payette",
         "region": "R04",
         "state": "ID",
         "projects_url": "https://www.fs.usda.gov/r04/boise/projects",
+        "extra_urls": ["https://www.fs.usda.gov/r04/payette/projects"],
     },
     {
         "name": "Caribou-Targhee National Forests",
@@ -73,13 +68,6 @@ FORESTS = [
         "region": "R04",
         "state": "ID",
         "projects_url": "https://www.fs.usda.gov/r04/caribou-targhee/projects",
-    },
-    {
-        "name": "Payette National Forest",
-        "code": "payette",
-        "region": "R04",
-        "state": "ID",
-        "projects_url": "https://www.fs.usda.gov/r04/payette/projects",
     },
     {
         "name": "Salmon-Challis National Forest",
@@ -102,7 +90,7 @@ FORESTS = [
         "name": "Rogue River-Siskiyou National Forest",
         "code": "rogue-siskiyou",
         "region": "R06",
-        "state": "OR",
+        "state": "CA+OR",
         "projects_url": "https://www.fs.usda.gov/r06/rogue-siskiyou/projects",
     },
     {
@@ -113,11 +101,12 @@ FORESTS = [
         "projects_url": "https://www.fs.usda.gov/r06/wallowa-whitman/projects",
     },
     {
-        "name": "Fremont-Winema National Forest",
-        "code": "fremont-winema",
+        "name": "Fremont-Winema & Umatilla NFs",
+        "code": "fremont-umatilla",
         "region": "R06",
         "state": "OR",
         "projects_url": "https://www.fs.usda.gov/r06/fremont-winema/projects",
+        "extra_urls": ["https://www.fs.usda.gov/r06/umatilla/projects"],
     },
     {
         "name": "Deschutes National Forest",
@@ -139,13 +128,6 @@ FORESTS = [
         "region": "R06",
         "state": "OR",
         "projects_url": "https://www.fs.usda.gov/r06/ochoco/projects",
-    },
-    {
-        "name": "Umatilla National Forest",
-        "code": "umatilla",
-        "region": "R06",
-        "state": "OR",
-        "projects_url": "https://www.fs.usda.gov/r06/umatilla/projects",
     },
     {
         "name": "Willamette National Forest",
@@ -172,11 +154,12 @@ FORESTS = [
     # ── California (Region 5) ──────────────────────────────────
 
     {
-        "name": "Six Rivers National Forest",
-        "code": "sixrivers",
+        "name": "Six Rivers & Mendocino NFs",
+        "code": "sixrivers-mendocino",
         "region": "R05",
         "state": "CA",
         "projects_url": "https://www.fs.usda.gov/r05/sixrivers/projects",
+        "extra_urls": ["https://www.fs.usda.gov/r05/mendocino/projects"],
     },
     {
         "name": "Shasta-Trinity National Forest",
@@ -189,29 +172,16 @@ FORESTS = [
         "name": "Klamath National Forest",
         "code": "klamath",
         "region": "R05",
-        "state": "CA",
+        "state": "CA+OR",
         "projects_url": "https://www.fs.usda.gov/r05/klamath/projects",
     },
     {
-        "name": "Mendocino National Forest",
-        "code": "mendocino",
-        "region": "R05",
-        "state": "CA",
-        "projects_url": "https://www.fs.usda.gov/r05/mendocino/projects",
-    },
-    {
-        "name": "Lassen National Forest",
-        "code": "lassen",
+        "name": "Lassen & Modoc National Forests",
+        "code": "lassen-modoc",
         "region": "R05",
         "state": "CA",
         "projects_url": "https://www.fs.usda.gov/r05/lassen/projects",
-    },
-    {
-        "name": "Modoc National Forest",
-        "code": "modoc",
-        "region": "R05",
-        "state": "CA",
-        "projects_url": "https://www.fs.usda.gov/r05/modoc/projects",
+        "extra_urls": ["https://www.fs.usda.gov/r05/modoc/projects"],
     },
     {
         "name": "Plumas National Forest",
@@ -243,18 +213,12 @@ FORESTS = [
         "projects_url": "https://www.fs.usda.gov/r05/sierra/projects",
     },
     {
-        "name": "Inyo National Forest",
-        "code": "inyo",
+        "name": "Inyo & Sequoia National Forests",
+        "code": "inyo-sequoia",
         "region": "R05",
         "state": "CA",
         "projects_url": "https://www.fs.usda.gov/r05/inyo/projects",
-    },
-    {
-        "name": "Sequoia National Forest",
-        "code": "sequoia",
-        "region": "R05",
-        "state": "CA",
-        "projects_url": "https://www.fs.usda.gov/r05/sequoia/projects",
+        "extra_urls": ["https://www.fs.usda.gov/r05/sequoia/projects"],
     },
     {
         "name": "Los Padres National Forest",
@@ -295,8 +259,8 @@ FORESTS = [
 
 
 if __name__ == "__main__":
-    print(f"{'Forest':<50} {'Region':<6} {'State':<5} URL")
-    print("-" * 130)
+    print(f"{'Forest':<55} {'Region':<6} {'State':<5} URL")
+    print("-" * 140)
     for f in FORESTS:
-        print(f"{f['name']:<50} {f['region']:<6} {f['state']:<5} {f['projects_url']}")
+        print(f"{f['name']:<55} {f['region']:<6} {f['state']:<5} {f['projects_url']}")
     print(f"\nTotal forests: {len(FORESTS)}")
