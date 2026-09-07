@@ -309,20 +309,20 @@
   },
   {
     "date": "2026-09-07",
-    "total": 303,
-    "taking_comments": 0,
+    "total": 305,
+    "taking_comments": 7,
     "by_analysis_type": {
       "Environmental Assessment": 92,
-      "Categorical Exclusion": 188,
+      "Categorical Exclusion": 186,
       "Environmental Impact Statement": 15,
-      "Unknown": 7,
+      "Unknown": 11,
       "Decision Memo": 1
     },
     "by_forest": {
       "mbs": {
         "name": "Mt. Baker-Snoqualmie National Forest",
         "total": 8,
-        "taking_comments": 0,
+        "taking_comments": 1,
         "by_analysis_type": {
           "Environmental Assessment": 3,
           "Categorical Exclusion": 5
@@ -349,7 +349,7 @@
       "giffordpinchot": {
         "name": "Gifford Pinchot National Forest",
         "total": 10,
-        "taking_comments": 0,
+        "taking_comments": 1,
         "by_analysis_type": {
           "Environmental Assessment": 3,
           "Categorical Exclusion": 6,
@@ -368,10 +368,11 @@
       },
       "nezperce-ipnf": {
         "name": "Nez Perce-CW & Idaho Panhandle",
-        "total": 8,
+        "total": 12,
         "taking_comments": 0,
         "by_analysis_type": {
           "Environmental Assessment": 5,
+          "Unknown": 4,
           "Categorical Exclusion": 3
         }
       },
@@ -386,10 +387,10 @@
       },
       "caribou-targhee": {
         "name": "Caribou-Targhee National Forests",
-        "total": 20,
+        "total": 19,
         "taking_comments": 0,
         "by_analysis_type": {
-          "Categorical Exclusion": 14,
+          "Categorical Exclusion": 13,
           "Environmental Assessment": 5,
           "Environmental Impact Statement": 1
         }
@@ -397,7 +398,7 @@
       "salmon-challis": {
         "name": "Salmon-Challis National Forest",
         "total": 14,
-        "taking_comments": 0,
+        "taking_comments": 1,
         "by_analysis_type": {
           "Environmental Assessment": 1,
           "Categorical Exclusion": 13
@@ -434,7 +435,7 @@
       "fremont-umatilla": {
         "name": "Fremont-Winema & Umatilla NFs",
         "total": 12,
-        "taking_comments": 0,
+        "taking_comments": 2,
         "by_analysis_type": {
           "Categorical Exclusion": 6,
           "Environmental Assessment": 5,
@@ -473,7 +474,7 @@
       "willamette": {
         "name": "Willamette National Forest",
         "total": 15,
-        "taking_comments": 0,
+        "taking_comments": 1,
         "by_analysis_type": {
           "Categorical Exclusion": 8,
           "Environmental Assessment": 7
@@ -591,7 +592,7 @@
       "socal": {
         "name": "Southern CA National Forests",
         "total": 5,
-        "taking_comments": 0,
+        "taking_comments": 1,
         "by_analysis_type": {
           "Environmental Assessment": 2,
           "Categorical Exclusion": 3
@@ -599,10 +600,10 @@
       },
       "chugach": {
         "name": "Chugach National Forest",
-        "total": 2,
+        "total": 1,
         "taking_comments": 0,
         "by_analysis_type": {
-          "Categorical Exclusion": 2
+          "Categorical Exclusion": 1
         }
       },
       "tongass": {
