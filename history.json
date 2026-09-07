@@ -306,5 +306,314 @@
         }
       }
     }
+  },
+  {
+    "date": "2026-09-07",
+    "total": 303,
+    "taking_comments": 0,
+    "by_analysis_type": {
+      "Environmental Assessment": 92,
+      "Categorical Exclusion": 188,
+      "Environmental Impact Statement": 15,
+      "Unknown": 7,
+      "Decision Memo": 1
+    },
+    "by_forest": {
+      "mbs": {
+        "name": "Mt. Baker-Snoqualmie National Forest",
+        "total": 8,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 3,
+          "Categorical Exclusion": 5
+        }
+      },
+      "olympic": {
+        "name": "Olympic National Forest",
+        "total": 1,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 1
+        }
+      },
+      "okanogan-wenatchee": {
+        "name": "Okanogan-Wenatchee National Forest",
+        "total": 8,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 6,
+          "Categorical Exclusion": 1,
+          "Environmental Impact Statement": 1
+        }
+      },
+      "giffordpinchot": {
+        "name": "Gifford Pinchot National Forest",
+        "total": 10,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 3,
+          "Categorical Exclusion": 6,
+          "Environmental Impact Statement": 1
+        }
+      },
+      "colville": {
+        "name": "Colville National Forest",
+        "total": 14,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Unknown": 1,
+          "Categorical Exclusion": 4,
+          "Environmental Assessment": 9
+        }
+      },
+      "nezperce-ipnf": {
+        "name": "Nez Perce-CW & Idaho Panhandle",
+        "total": 8,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 5,
+          "Categorical Exclusion": 3
+        }
+      },
+      "boise-payette": {
+        "name": "Boise & Payette National Forests",
+        "total": 13,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 3,
+          "Categorical Exclusion": 10
+        }
+      },
+      "caribou-targhee": {
+        "name": "Caribou-Targhee National Forests",
+        "total": 20,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 14,
+          "Environmental Assessment": 5,
+          "Environmental Impact Statement": 1
+        }
+      },
+      "salmon-challis": {
+        "name": "Salmon-Challis National Forest",
+        "total": 14,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 1,
+          "Categorical Exclusion": 13
+        }
+      },
+      "sawtooth": {
+        "name": "Sawtooth National Forest",
+        "total": 13,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Impact Statement": 1,
+          "Categorical Exclusion": 11,
+          "Environmental Assessment": 1
+        }
+      },
+      "rogue-siskiyou": {
+        "name": "Rogue River-Siskiyou National Forest",
+        "total": 4,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 2,
+          "Environmental Assessment": 2
+        }
+      },
+      "wallowa-whitman": {
+        "name": "Wallowa-Whitman National Forest",
+        "total": 7,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 4,
+          "Environmental Assessment": 3
+        }
+      },
+      "fremont-umatilla": {
+        "name": "Fremont-Winema & Umatilla NFs",
+        "total": 12,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 6,
+          "Environmental Assessment": 5,
+          "Environmental Impact Statement": 1
+        }
+      },
+      "deschutes": {
+        "name": "Deschutes National Forest",
+        "total": 15,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 9,
+          "Categorical Exclusion": 5,
+          "Environmental Impact Statement": 1
+        }
+      },
+      "mthood": {
+        "name": "Mt. Hood National Forest",
+        "total": 12,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 2,
+          "Categorical Exclusion": 8,
+          "Environmental Impact Statement": 2
+        }
+      },
+      "ochoco": {
+        "name": "Ochoco National Forest",
+        "total": 7,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 6,
+          "Environmental Assessment": 1
+        }
+      },
+      "willamette": {
+        "name": "Willamette National Forest",
+        "total": 15,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 8,
+          "Environmental Assessment": 7
+        }
+      },
+      "malheur": {
+        "name": "Malheur National Forest",
+        "total": 6,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Decision Memo": 1,
+          "Unknown": 5
+        }
+      },
+      "siuslaw": {
+        "name": "Siuslaw National Forest",
+        "total": 2,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 2
+        }
+      },
+      "sixrivers-mendocino": {
+        "name": "Six Rivers & Mendocino NFs",
+        "total": 9,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 5,
+          "Environmental Assessment": 4
+        }
+      },
+      "shasta-trinity": {
+        "name": "Shasta-Trinity National Forest",
+        "total": 8,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 4,
+          "Environmental Assessment": 4
+        }
+      },
+      "klamath": {
+        "name": "Klamath National Forest",
+        "total": 10,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 6,
+          "Environmental Assessment": 4
+        }
+      },
+      "lassen-modoc": {
+        "name": "Lassen & Modoc National Forests",
+        "total": 4,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 3,
+          "Environmental Assessment": 1
+        }
+      },
+      "plumas": {
+        "name": "Plumas National Forest",
+        "total": 7,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 6,
+          "Environmental Impact Statement": 1
+        }
+      },
+      "tahoe-eldorado": {
+        "name": "Tahoe & Eldorado National Forests",
+        "total": 20,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 12,
+          "Environmental Assessment": 4,
+          "Environmental Impact Statement": 3,
+          "Unknown": 1
+        }
+      },
+      "stanislaus": {
+        "name": "Stanislaus National Forest",
+        "total": 10,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 8,
+          "Environmental Assessment": 2
+        }
+      },
+      "sierra": {
+        "name": "Sierra National Forest",
+        "total": 10,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 7,
+          "Environmental Assessment": 3
+        }
+      },
+      "inyo-sequoia": {
+        "name": "Inyo & Sequoia National Forests",
+        "total": 4,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 3,
+          "Environmental Assessment": 1
+        }
+      },
+      "lospadres": {
+        "name": "Los Padres National Forest",
+        "total": 4,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 3,
+          "Environmental Assessment": 1
+        }
+      },
+      "socal": {
+        "name": "Southern CA National Forests",
+        "total": 5,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Environmental Assessment": 2,
+          "Categorical Exclusion": 3
+        }
+      },
+      "chugach": {
+        "name": "Chugach National Forest",
+        "total": 2,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 2
+        }
+      },
+      "tongass": {
+        "name": "Tongass National Forest",
+        "total": 21,
+        "taking_comments": 0,
+        "by_analysis_type": {
+          "Categorical Exclusion": 18,
+          "Environmental Impact Statement": 3
+        }
+      }
+    }
   }
 ]
