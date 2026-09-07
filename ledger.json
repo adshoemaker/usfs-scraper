@@ -1,9 +1,57 @@
 {
+  "https://www.fs.usda.gov/r01/idahopanhandle/projects/135823": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-09-06",
+    "forest_code": "nezperce-ipnf",
+    "forest_name": "Nez Perce-CW & Idaho Panhandle",
+    "name": "Moyie Meadow",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r01/idahopanhandle/projects/251744": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-09-06",
+    "forest_code": "nezperce-ipnf",
+    "forest_name": "Nez Perce-CW & Idaho Panhandle",
+    "name": "Halfway Malin Blowdown Salvage",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r01/idahopanhandle/projects/274339": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-09-06",
+    "forest_code": "nezperce-ipnf",
+    "forest_name": "Nez Perce-CW & Idaho Panhandle",
+    "name": "Lookout Fuels Management",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r01/idahopanhandle/projects/294259": {
+    "analysis_type": "Environmental Assessment",
+    "first_seen": "2026-09-06",
+    "forest_code": "nezperce-ipnf",
+    "forest_name": "Nez Perce-CW & Idaho Panhandle",
+    "name": "Bonehead Hill Blowdown Salvage",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r01/idahopanhandle/projects/305838": {
+    "analysis_type": "Environmental Assessment",
+    "first_seen": "2026-09-06",
+    "forest_code": "nezperce-ipnf",
+    "forest_name": "Nez Perce-CW & Idaho Panhandle",
+    "name": "Chloride Gold Restoration",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r01/idahopanhandle/projects/306272": {
+    "analysis_type": "Environmental Assessment",
+    "first_seen": "2026-09-06",
+    "forest_code": "nezperce-ipnf",
+    "forest_name": "Nez Perce-CW & Idaho Panhandle",
+    "name": "IPNF Forest-wide Prescribed Fire",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r01/nezperce-clearwater/projects/328084": {
     "analysis_type": "Environmental Assessment",
     "first_seen": "2026-09-06",
     "forest_code": "nezperce-ipnf",
-    "forest_name": "Nez Perce-Clearwater & Idaho Panhandle",
+    "forest_name": "Nez Perce-CW & Idaho Panhandle",
     "name": "2026 Blowdown Emergency",
     "status": ""
   },
@@ -11,7 +59,7 @@
     "analysis_type": "Environmental Assessment",
     "first_seen": "2026-09-06",
     "forest_code": "nezperce-ipnf",
-    "forest_name": "Nez Perce-Clearwater & Idaho Panhandle",
+    "forest_name": "Nez Perce-CW & Idaho Panhandle",
     "name": "Wepah Salvage",
     "status": ""
   },
