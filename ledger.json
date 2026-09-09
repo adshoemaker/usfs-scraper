@@ -2895,6 +2895,110 @@
     "name": "Star Crest Mine",
     "status": ""
   },
+  "https://www.fs.usda.gov/r05/tahoe/projects/45914": {
+    "analysis_type": "Environmental Impact Statement",
+    "first_seen": "2026-09-09",
+    "forest_code": "tahoe-eldorado",
+    "forest_name": "Tahoe & Eldorado National Forests",
+    "name": "Tahoe National Forest Over-snow Vehicle Use Designation",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/tahoe/projects/55778": {
+    "analysis_type": "Decision Memo",
+    "first_seen": "2026-09-09",
+    "forest_code": "tahoe-eldorado",
+    "forest_name": "Tahoe & Eldorado National Forests",
+    "name": "Kinder Morgan LS-12 Pipeline Van Norden Meadow Encroachment Project",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/tahoe/projects/60451": {
+    "analysis_type": "Decision Memo",
+    "first_seen": "2026-09-09",
+    "forest_code": "tahoe-eldorado",
+    "forest_name": "Tahoe & Eldorado National Forests",
+    "name": "T-Mobile Generator Install",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/tahoe/projects/61318": {
+    "analysis_type": "Decision Memo",
+    "first_seen": "2026-09-09",
+    "forest_code": "tahoe-eldorado",
+    "forest_name": "Tahoe & Eldorado National Forests",
+    "name": "Palisades Tahoe Temporary Residential Use Granite Flat Campground",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/tahoe/projects/65719": {
+    "analysis_type": "Decision Memo",
+    "first_seen": "2026-09-09",
+    "forest_code": "tahoe-eldorado",
+    "forest_name": "Tahoe & Eldorado National Forests",
+    "name": "Sierra Pacific Power Company (NV Energy) Powerline Rebuild Project - Lines 101 and 102",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/tahoe/projects/66292": {
+    "analysis_type": "Decision Memo",
+    "first_seen": "2026-09-09",
+    "forest_code": "tahoe-eldorado",
+    "forest_name": "Tahoe & Eldorado National Forests",
+    "name": "Sierra Pacific Power Company (NV Energy) Powerline Rebuild Project - Line 133",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/tahoe/projects/66456": {
+    "analysis_type": "Decision Memo",
+    "first_seen": "2026-09-09",
+    "forest_code": "tahoe-eldorado",
+    "forest_name": "Tahoe & Eldorado National Forests",
+    "name": "PG&E MPE Submittal: PN-006019, III, 35052978_Summit 1101/1102 Circuit Tie, 35052978",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/tahoe/projects/66500": {
+    "analysis_type": "Decision Memo",
+    "first_seen": "2026-09-09",
+    "forest_code": "tahoe-eldorado",
+    "forest_name": "Tahoe & Eldorado National Forests",
+    "name": "Boca Forest Health project",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/tahoe/projects/67362": {
+    "analysis_type": "Decision Memo",
+    "first_seen": "2026-09-09",
+    "forest_code": "tahoe-eldorado",
+    "forest_name": "Tahoe & Eldorado National Forests",
+    "name": "Pioneer Trail Bridge and Realignment Project",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/tahoe/projects/67777": {
+    "analysis_type": "Decision Memo",
+    "first_seen": "2026-09-09",
+    "forest_code": "tahoe-eldorado",
+    "forest_name": "Tahoe & Eldorado National Forests",
+    "name": "Pliocene Ridge Roadside Fuel Break",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/tahoe/projects/68326": {
+    "analysis_type": "Decision Memo",
+    "first_seen": "2026-09-09",
+    "forest_code": "tahoe-eldorado",
+    "forest_name": "Tahoe & Eldorado National Forests",
+    "name": "The East Zone Infrastructure Improvement Project",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/tahoe/projects/68328": {
+    "analysis_type": "Decision Memo",
+    "first_seen": "2026-09-09",
+    "forest_code": "tahoe-eldorado",
+    "forest_name": "Tahoe & Eldorado National Forests",
+    "name": "Truckee Fire Lookout Cameras Project",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/tahoe/projects/68362": {
+    "analysis_type": "Decision Memo",
+    "first_seen": "2026-09-09",
+    "forest_code": "tahoe-eldorado",
+    "forest_name": "Tahoe & Eldorado National Forests",
+    "name": "Steep Slopes Forest Plan Amendment",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r06/colville/projects/184135": {
     "first_seen": "2026-05-28",
     "name": "Burnt Taco Salvage"
@@ -2960,7 +3064,7 @@
     "first_seen": "2026-05-28",
     "forest_code": "colville",
     "forest_name": "Colville National Forest",
-    "name": "Bulldog supplemental",
+    "name": "Bulldog Supplemental",
     "status": ""
   },
   "https://www.fs.usda.gov/r06/colville/projects/309398": {
@@ -3020,20 +3124,32 @@
     "name": "Leclerc Creek Grazing Allotment Management Planning"
   },
   "https://www.fs.usda.gov/r06/colville/projects/58832": {
+    "analysis_type": "Decision Memo",
     "first_seen": "2026-05-28",
-    "name": "Sherman Highway Aquatic Restoration"
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "Sherman Highway Aquatic Restoration",
+    "status": ""
   },
   "https://www.fs.usda.gov/r06/colville/projects/62259": {
+    "analysis_type": "Decision Memo",
     "first_seen": "2026-05-28",
-    "name": "Ferry Lake Campground Hazard Tree Removal"
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "Ferry Lake Campground Hazard Tree Removal",
+    "status": ""
   },
   "https://www.fs.usda.gov/r06/colville/projects/63727": {
     "first_seen": "2026-05-28",
     "name": "Region 6 Elite Tree Protection Project"
   },
   "https://www.fs.usda.gov/r06/colville/projects/68767": {
+    "analysis_type": "Decision Memo",
     "first_seen": "2026-05-28",
-    "name": "Katy Creek Salvage"
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "Katy Creek Salvage",
+    "status": ""
   },
   "https://www.fs.usda.gov/r06/colville/projects/collaborative-forest-landscape-restoration-program-cflrp": {
     "analysis_type": "",
