@@ -3287,6 +3287,22 @@
     "name": "2026 Newberry Geothermal Consent to Lease",
     "status": ""
   },
+  "https://www.fs.usda.gov/r06/deschutes/projects/389492": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-09-12",
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "GTN Compressor Station 12 Vegetation Manangement",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r06/deschutes/projects/411684": {
+    "analysis_type": "Environmental Assessment",
+    "first_seen": "2026-09-12",
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "Akawa Butte Fire Recovery",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r06/deschutes/projects/66207": {
     "analysis_type": "Decision Memo",
     "first_seen": "2026-05-28",
