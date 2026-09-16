@@ -4434,6 +4434,14 @@
     "name": "Canyon Forest Restoration",
     "status": ""
   },
+  "https://www.fs.usda.gov/r06/olympic/projects/399089": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-09-16",
+    "forest_code": "olympic",
+    "forest_name": "Olympic National Forest",
+    "name": "Satsop CE Campground Rebuild",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r06/olympic/projects/61801": {
     "analysis_type": "Decision Memo",
     "first_seen": "2026-05-28",
@@ -5513,6 +5521,14 @@
   "https://www.fs.usda.gov/r10/tongass/projects/246934": {
     "first_seen": "2026-05-28",
     "name": "R10 TNF YRD 2026 Alsek River Special Use Facilities"
+  },
+  "https://www.fs.usda.gov/r10/tongass/projects/250002": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-09-16",
+    "forest_code": "tongass",
+    "forest_name": "Tongass National Forest",
+    "name": "Tongass - Gilbert Point Camera Installation - YakutatRD",
+    "status": ""
   },
   "https://www.fs.usda.gov/r10/tongass/projects/253188": {
     "analysis_type": "Categorical Exclusion",
