@@ -1583,6 +1583,14 @@
     "name": "Rust Resistant Sugar Pine Mainenance",
     "status": ""
   },
+  "https://www.fs.usda.gov/r05/lassen/projects/406824": {
+    "analysis_type": "Environmental Assessment",
+    "first_seen": "2026-09-18",
+    "forest_code": "lassen-modoc",
+    "forest_name": "Lassen & Modoc National Forests",
+    "name": "Dixie Postfire Restoration and Recovery Project - Decision 2",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r05/lassen/projects/50770": {
     "analysis_type": "Environmental Assessment",
     "first_seen": "2026-09-08",
@@ -3445,6 +3453,14 @@
     "forest_code": "fremont-umatilla",
     "forest_name": "Fremont-Winema & Umatilla NFs",
     "name": "Lake of the Woods Fuel Break",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r06/fremont-winema/projects/416274": {
+    "analysis_type": "Environmental Assessment",
+    "first_seen": "2026-09-18",
+    "forest_code": "fremont-umatilla",
+    "forest_name": "Fremont-Winema & Umatilla NFs",
+    "name": "Wrights Spring Post-Fire Recovery",
     "status": ""
   },
   "https://www.fs.usda.gov/r06/fremont-winema/projects/46243": {
