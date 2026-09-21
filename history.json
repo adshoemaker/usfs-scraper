@@ -5306,10 +5306,10 @@
   },
   {
     "date": "2026-09-21",
-    "total": 652,
+    "total": 651,
     "taking_comments": 10,
     "by_analysis_type": {
-      "Environmental Assessment": 185,
+      "Environmental Assessment": 184,
       "Decision Memo": 247,
       "Categorical Exclusion": 187,
       "Environmental Impact Statement": 31,
@@ -5601,11 +5601,11 @@
       },
       "sierra": {
         "name": "Sierra National Forest",
-        "total": 17,
+        "total": 16,
         "taking_comments": 0,
         "by_analysis_type": {
           "Categorical Exclusion": 7,
-          "Environmental Assessment": 4,
+          "Environmental Assessment": 3,
           "Decision Memo": 6
         }
       },
