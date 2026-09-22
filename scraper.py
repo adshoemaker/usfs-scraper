@@ -384,26 +384,40 @@ def scrape_forest(session: requests.Session, forest: dict,
                 if href.startswith("/") else href
             )
             description = ""
-            # Description is typically in a sibling div of h3's parent container
-            # Try h3 siblings first, then parent siblings, then grandparent siblings
+
+            def clean_text(t):
+                return t.replace('\xa0', ' ').strip()
+
             def find_description_text(element):
                 for sibling in element.next_siblings:
-                    if hasattr(sibling, "name"):
-                        if sibling.name in ("h3", "h2", "h1"):
-                            return ""
-                        # Skip if sibling contains another project h3
-                        if sibling.find("h3"):
-                            return ""
-                        text = sibling.get_text(strip=True)
+                    if not hasattr(sibling, "name"):
+                        text = clean_text(str(sibling))
                         if text:
                             return text
-                    elif isinstance(sibling, str):
-                        text = sibling.strip()
-                        if text:
-                            return text
+                        continue
+                    if sibling.name in ("h3", "h2", "h1"):
+                        return ""
+                    body = sibling.find(class_="usa-card__body")
+                    if body:
+                        p = body.find("p")
+                        if p:
+                            return clean_text(p.get_text())
+                        return clean_text(body.get_text())
+                    text = clean_text(sibling.get_text())
+                    if text:
+                        return text
                 return ""
 
-            description = find_description_text(h3)
+            # Check inside h3 after the link (description may be a text node inside h3)
+            for node in link_tag.next_siblings:
+                if not hasattr(node, "name"):
+                    text = clean_text(str(node))
+                    if text:
+                        description = text
+                        break
+
+            if not description:
+                description = find_description_text(h3)
             if not description and h3.parent:
                 description = find_description_text(h3.parent)
             if not description and h3.parent and h3.parent.parent:

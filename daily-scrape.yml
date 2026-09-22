@@ -7,6 +7,8 @@
 #                     hash cache skips unchanged forests
 #
 # Manual trigger available from Actions tab with optional full fetch.
+# projects.json is pushed via GitHub API inside scraper.py —
+# no git commit step needed.
 # ---------------------------------------------------------------
 name: USFS Project Scraper
 on:
@@ -18,9 +20,15 @@ on:
         description: 'Force full scrape including completed projects (yes/no)'
         required: false
         default: 'no'
+      bust_cache:
+        description: 'Clear page hash cache to force re-scrape of all pages (yes/no)'
+        required: false
+        default: 'no'
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -39,15 +47,28 @@ jobs:
           key: projects-db
           restore-keys: projects-db
       - name: Restore page hash cache
+        if: ${{ github.event.inputs.bust_cache != 'yes' }}
         uses: actions/cache@v4
         with:
           path: page_hashes.json
           key: page-hashes
           restore-keys: page-hashes
-      - name: Run scraper
+      - name: Run scraper (with retries)
         env:
           SCRAPE_MODE: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.full_scrape == 'yes') && 'full' || '' }}
-        run: python scraper.py
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for attempt in 1 2 3; do
+            echo "=== Scraper attempt $attempt of 3 ==="
+            python scraper.py && break
+            if [ $attempt -lt 3 ]; then
+              echo "Scraper failed, waiting 60s before retry..."
+              sleep 60
+            else
+              echo "All 3 attempts failed."
+              exit 1
+            fi
+          done
       - name: Save database cache
         uses: actions/cache@v4
         with:
@@ -58,12 +79,3 @@ jobs:
         with:
           path: page_hashes.json
           key: page-hashes
-      - name: Commit updated projects.json
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch origin main
-          git checkout origin/main -- .
-          git add projects.json
-          git diff --staged --quiet || git commit -m "Scrape: $(date -u '+%Y-%m-%d')"
-          git push origin HEAD:main
