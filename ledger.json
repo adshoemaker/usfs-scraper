@@ -234,8 +234,8 @@
   "https://www.fs.usda.gov/r04/boise/projects/52904": {
     "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-09-08",
-    "forest_code": "boise-payette",
-    "forest_name": "Boise & Payette National Forests",
+    "forest_code": "multi",
+    "forest_name": "Boise & Payette National Forests, Caribou-Targhee National Forests, Sawtooth National Forest",
     "name": "Amendments to Land Management Plans Regarding Sage-grouse Conservation",
     "status": ""
   },
@@ -1226,8 +1226,8 @@
   "https://www.fs.usda.gov/r05/eldorado/projects/65796": {
     "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-09-08",
-    "forest_code": "multi",
-    "forest_name": "Tahoe & Eldorado National Forests, Stanislaus National Forest",
+    "forest_code": "tahoe-eldorado",
+    "forest_name": "Tahoe & Eldorado National Forests",
     "name": "Mokelumne Amador Calaveras Forest Resilience Project",
     "status": ""
   },
@@ -3697,6 +3697,14 @@
     "forest_code": "malheur",
     "forest_name": "Malheur National Forest",
     "name": "Murderers Creek Wild Horse Joint Management Area, Herd Management Area Plan",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r06/malheur/projects/53678": {
+    "analysis_type": "",
+    "first_seen": "2026-09-22",
+    "forest_code": "malheur",
+    "forest_name": "Malheur National Forest",
+    "name": "Austin",
     "status": ""
   },
   "https://www.fs.usda.gov/r06/malheur/projects/62352": {
