@@ -384,46 +384,30 @@ def scrape_forest(session: requests.Session, forest: dict,
                 if href.startswith("/") else href
             )
             description = ""
-            # DEBUG: print sibling structure for first 3 projects
-            if len(projects) < 3:
-                print(f"    DEBUG h3 parent tag: {h3.parent.name if h3.parent else 'none'}")
-                for i, sib in enumerate(list(h3.next_siblings)[:5]):
-                    if hasattr(sib, 'name'):
-                        print(f"    DEBUG sib[{i}]: <{sib.name}> text='{sib.get_text(strip=True)[:50]}'")
-                    else:
-                        print(f"    DEBUG sib[{i}]: str='{str(sib).strip()[:50]}'")
-            # First try h3's own next siblings
-            for sibling in h3.next_siblings:
-                if hasattr(sibling, "name"):
-                    if sibling.name in ("h3", "h2", "h1", "section"):
-                        break
-                    text = sibling.get_text(strip=True)
-                    if text:
-                        description = text
-                        break
-                elif isinstance(sibling, str):
-                    text = sibling.strip()
-                    if text:
-                        description = text
-                        break
-            # If not found, try parent's next siblings (description may be outside h3's container)
-            if not description and h3.parent:
-                for sibling in h3.parent.next_siblings:
+            # Description is typically in a sibling div of h3's parent container
+            # Try h3 siblings first, then parent siblings, then grandparent siblings
+            def find_description_text(element):
+                for sibling in element.next_siblings:
                     if hasattr(sibling, "name"):
-                        if sibling.name in ("h3", "h2", "h1", "section"):
-                            break
-                        # Skip if this sibling itself contains a project h3
+                        if sibling.name in ("h3", "h2", "h1"):
+                            return ""
+                        # Skip if sibling contains another project h3
                         if sibling.find("h3"):
-                            break
+                            return ""
                         text = sibling.get_text(strip=True)
                         if text:
-                            description = text
-                            break
+                            return text
                     elif isinstance(sibling, str):
                         text = sibling.strip()
                         if text:
-                            description = text
-                            break
+                            return text
+                return ""
+
+            description = find_description_text(h3)
+            if not description and h3.parent:
+                description = find_description_text(h3.parent)
+            if not description and h3.parent and h3.parent.parent:
+                description = find_description_text(h3.parent.parent)
             projects.append({
                 "forest_name":  forest["name"],
                 "forest_code":  forest["code"],
