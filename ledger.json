@@ -154,8 +154,8 @@
   "https://www.fs.usda.gov/r01/nezperce-clearwater/projects/61303": {
     "analysis_type": "Environmental Assessment",
     "first_seen": "2026-09-08",
-    "forest_code": "multi",
-    "forest_name": "Nez Perce-CW & Idaho Panhandle, Wallowa-Whitman",
+    "forest_code": "nezperce-ipnf",
+    "forest_name": "Nez Perce-CW & Idaho Panhandle",
     "name": "Race Cow Project",
     "status": ""
   },
@@ -234,8 +234,8 @@
   "https://www.fs.usda.gov/r04/boise/projects/52904": {
     "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-09-08",
-    "forest_code": "multi",
-    "forest_name": "Boise & Payette National Forests, Caribou-Targhee National Forests, Salmon-Challis National Forest, Sawtooth National Forest",
+    "forest_code": "boise-payette",
+    "forest_name": "Boise & Payette National Forests",
     "name": "Amendments to Land Management Plans Regarding Sage-grouse Conservation",
     "status": ""
   },
