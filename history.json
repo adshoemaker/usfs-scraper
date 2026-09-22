@@ -5665,14 +5665,14 @@
   },
   {
     "date": "2026-09-22",
-    "total": 483,
+    "total": 479,
     "taking_comments": 8,
     "by_analysis_type": {
       "Environmental Assessment": 94,
-      "Categorical Exclusion": 186,
+      "Categorical Exclusion": 187,
       "Unknown": 176,
-      "Decision Memo": 12,
-      "Environmental Impact Statement": 15
+      "Decision Memo": 8,
+      "Environmental Impact Statement": 14
     },
     "by_forest": {
       "mbs": {
@@ -5686,10 +5686,11 @@
       },
       "olympic": {
         "name": "Olympic National Forest",
-        "total": 2,
+        "total": 5,
         "taking_comments": 0,
         "by_analysis_type": {
           "Environmental Assessment": 1,
+          "Unknown": 3,
           "Categorical Exclusion": 1
         }
       },
@@ -5698,20 +5699,20 @@
         "total": 23,
         "taking_comments": 1,
         "by_analysis_type": {
-          "Unknown": 12,
+          "Unknown": 13,
           "Environmental Assessment": 7,
           "Categorical Exclusion": 1,
-          "Decision Memo": 2,
+          "Decision Memo": 1,
           "Environmental Impact Statement": 1
         }
       },
       "giffordpinchot": {
         "name": "Gifford Pinchot National Forest",
-        "total": 9,
+        "total": 10,
         "taking_comments": 1,
         "by_analysis_type": {
           "Environmental Assessment": 3,
-          "Categorical Exclusion": 5,
+          "Categorical Exclusion": 6,
           "Environmental Impact Statement": 1
         }
       },
@@ -5740,10 +5741,9 @@
         "total": 40,
         "taking_comments": 0,
         "by_analysis_type": {
-          "Unknown": 25,
+          "Unknown": 26,
           "Environmental Assessment": 4,
-          "Categorical Exclusion": 10,
-          "Decision Memo": 1
+          "Categorical Exclusion": 10
         }
       },
       "multi": {
@@ -5791,8 +5791,7 @@
         "total": 9,
         "taking_comments": 0,
         "by_analysis_type": {
-          "Unknown": 4,
-          "Decision Memo": 1,
+          "Unknown": 5,
           "Categorical Exclusion": 2,
           "Environmental Assessment": 2
         }
@@ -5818,20 +5817,20 @@
       },
       "deschutes": {
         "name": "Deschutes National Forest",
-        "total": 17,
+        "total": 18,
         "taking_comments": 1,
         "by_analysis_type": {
           "Environmental Assessment": 10,
           "Categorical Exclusion": 6,
+          "Unknown": 1,
           "Environmental Impact Statement": 1
         }
       },
       "mthood": {
         "name": "Mt. Hood National Forest",
-        "total": 19,
+        "total": 12,
         "taking_comments": 0,
         "by_analysis_type": {
-          "Unknown": 7,
           "Environmental Assessment": 2,
           "Categorical Exclusion": 8,
           "Environmental Impact Statement": 2
@@ -5839,21 +5838,21 @@
       },
       "ochoco": {
         "name": "Ochoco National Forest",
-        "total": 14,
+        "total": 7,
         "taking_comments": 0,
         "by_analysis_type": {
-          "Unknown": 7,
           "Categorical Exclusion": 6,
           "Environmental Assessment": 1
         }
       },
       "willamette": {
         "name": "Willamette National Forest",
-        "total": 15,
+        "total": 38,
         "taking_comments": 0,
         "by_analysis_type": {
           "Categorical Exclusion": 8,
-          "Environmental Assessment": 7
+          "Unknown": 21,
+          "Environmental Assessment": 9
         }
       },
       "malheur": {
@@ -5866,11 +5865,10 @@
       },
       "siuslaw": {
         "name": "Siuslaw National Forest",
-        "total": 10,
+        "total": 2,
         "taking_comments": 0,
         "by_analysis_type": {
-          "Categorical Exclusion": 2,
-          "Unknown": 8
+          "Categorical Exclusion": 2
         }
       },
       "sixrivers-mendocino": {
@@ -5895,9 +5893,10 @@
       },
       "klamath": {
         "name": "Klamath National Forest",
-        "total": 10,
+        "total": 15,
         "taking_comments": 0,
         "by_analysis_type": {
+          "Unknown": 5,
           "Categorical Exclusion": 6,
           "Environmental Assessment": 4
         }
@@ -5913,60 +5912,63 @@
       },
       "plumas": {
         "name": "Plumas National Forest",
-        "total": 12,
+        "total": 7,
         "taking_comments": 0,
         "by_analysis_type": {
           "Categorical Exclusion": 6,
-          "Unknown": 5,
           "Environmental Impact Statement": 1
         }
       },
       "tahoe-eldorado": {
         "name": "Tahoe & Eldorado National Forests",
-        "total": 39,
+        "total": 32,
         "taking_comments": 0,
         "by_analysis_type": {
-          "Unknown": 17,
+          "Unknown": 10,
           "Categorical Exclusion": 12,
-          "Decision Memo": 3,
-          "Environmental Assessment": 4,
+          "Decision Memo": 4,
+          "Environmental Assessment": 3,
           "Environmental Impact Statement": 3
         }
       },
       "stanislaus": {
         "name": "Stanislaus National Forest",
-        "total": 9,
+        "total": 16,
         "taking_comments": 0,
         "by_analysis_type": {
           "Categorical Exclusion": 7,
+          "Unknown": 7,
           "Environmental Assessment": 2
         }
       },
       "sierra": {
         "name": "Sierra National Forest",
-        "total": 10,
+        "total": 17,
         "taking_comments": 0,
         "by_analysis_type": {
           "Categorical Exclusion": 7,
-          "Environmental Assessment": 3
+          "Environmental Assessment": 3,
+          "Unknown": 6,
+          "Decision Memo": 1
         }
       },
       "inyo-sequoia": {
         "name": "Inyo & Sequoia National Forests",
-        "total": 26,
+        "total": 18,
         "taking_comments": 0,
         "by_analysis_type": {
-          "Decision Memo": 3,
-          "Environmental Assessment": 2,
-          "Unknown": 18,
-          "Categorical Exclusion": 3
+          "Unknown": 13,
+          "Categorical Exclusion": 3,
+          "Decision Memo": 1,
+          "Environmental Assessment": 1
         }
       },
       "lospadres": {
         "name": "Los Padres National Forest",
-        "total": 4,
+        "total": 12,
         "taking_comments": 0,
         "by_analysis_type": {
+          "Unknown": 8,
           "Categorical Exclusion": 3,
           "Environmental Assessment": 1
         }
@@ -5992,13 +5994,11 @@
       },
       "tongass": {
         "name": "Tongass National Forest",
-        "total": 39,
+        "total": 22,
         "taking_comments": 0,
         "by_analysis_type": {
-          "Unknown": 15,
-          "Decision Memo": 1,
           "Categorical Exclusion": 20,
-          "Environmental Impact Statement": 3
+          "Environmental Impact Statement": 2
         }
       }
     }
