@@ -235,7 +235,7 @@
     "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-09-08",
     "forest_code": "multi",
-    "forest_name": "Boise & Payette National Forests, Caribou-Targhee National Forests, Sawtooth National Forest",
+    "forest_name": "Boise & Payette National Forests, Caribou-Targhee National Forests",
     "name": "Amendments to Land Management Plans Regarding Sage-grouse Conservation",
     "status": ""
   },
@@ -1226,8 +1226,8 @@
   "https://www.fs.usda.gov/r05/eldorado/projects/65796": {
     "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-09-08",
-    "forest_code": "tahoe-eldorado",
-    "forest_name": "Tahoe & Eldorado National Forests",
+    "forest_code": "multi",
+    "forest_name": "Tahoe & Eldorado National Forests, Stanislaus National Forest",
     "name": "Mokelumne Amador Calaveras Forest Resilience Project",
     "status": ""
   },
@@ -3708,7 +3708,7 @@
     "status": ""
   },
   "https://www.fs.usda.gov/r06/malheur/projects/53678": {
-    "analysis_type": "",
+    "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-09-22",
     "forest_code": "malheur",
     "forest_name": "Malheur National Forest",
