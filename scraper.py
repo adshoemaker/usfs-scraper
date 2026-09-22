@@ -347,8 +347,20 @@ def scrape_forest(session: requests.Session, forest: dict,
         if flags.get("use_hash_cache"):
             current_hash = page_hash(response.text)
             if hash_cache.get(url) == current_hash:
-                print(f"  Unchanged since last run — skipping")
-                continue
+                # Still re-parse if any projects for this forest have empty descriptions
+                try:
+                    with open("projects.json", encoding="utf-8") as _chk:
+                        _existing_check = json.load(_chk)
+                    _forest_projects = [p for p in _existing_check.get("projects", [])
+                                        if p.get("forest_code") == forest["code"]]
+                    if _forest_projects and any(not p.get("description") for p in _forest_projects):
+                        pass  # fall through to re-parse
+                    else:
+                        print(f"  Unchanged since last run — skipping")
+                        continue
+                except Exception:
+                    print(f"  Unchanged since last run — skipping")
+                    continue
             hash_cache[url] = current_hash
 
         all_unchanged = False
@@ -372,6 +384,15 @@ def scrape_forest(session: requests.Session, forest: dict,
                 if href.startswith("/") else href
             )
             description = ""
+            # DEBUG: print sibling structure for first 3 projects
+            if len(projects) < 3:
+                print(f"    DEBUG h3 parent tag: {h3.parent.name if h3.parent else 'none'}")
+                for i, sib in enumerate(list(h3.next_siblings)[:5]):
+                    if hasattr(sib, 'name'):
+                        print(f"    DEBUG sib[{i}]: <{sib.name}> text='{sib.get_text(strip=True)[:50]}'")
+                    else:
+                        print(f"    DEBUG sib[{i}]: str='{str(sib).strip()[:50]}'")
+            # First try h3's own next siblings
             for sibling in h3.next_siblings:
                 if hasattr(sibling, "name"):
                     if sibling.name in ("h3", "h2", "h1", "section"):
@@ -385,6 +406,24 @@ def scrape_forest(session: requests.Session, forest: dict,
                     if text:
                         description = text
                         break
+            # If not found, try parent's next siblings (description may be outside h3's container)
+            if not description and h3.parent:
+                for sibling in h3.parent.next_siblings:
+                    if hasattr(sibling, "name"):
+                        if sibling.name in ("h3", "h2", "h1", "section"):
+                            break
+                        # Skip if this sibling itself contains a project h3
+                        if sibling.find("h3"):
+                            break
+                        text = sibling.get_text(strip=True)
+                        if text:
+                            description = text
+                            break
+                    elif isinstance(sibling, str):
+                        text = sibling.strip()
+                        if text:
+                            description = text
+                            break
             projects.append({
                 "forest_name":  forest["name"],
                 "forest_code":  forest["code"],
@@ -458,6 +497,7 @@ def scrape_forest(session: requests.Session, forest: dict,
                 "location_summary":   _p.get("location_summary", ""),
                 "accepting_comments": _p.get("accepting_comments", False),
                 "comment_deadline":   _p.get("comment_deadline", ""),
+                "description":        _p.get("description", ""),
             }
     except Exception:
         pass
@@ -761,6 +801,12 @@ def run_scraper():
                     p for p in existing.get("projects", [])
                     if p.get("forest_code") == forest["code"]
                 ]
+                # Backfill description from existing_milestones if currently empty
+                for p in forest_projects:
+                    if not p.get("description"):
+                        cached_desc = existing_milestones.get(p.get("project_url", ""), {}).get("description", "")
+                        if cached_desc:
+                            p["description"] = cached_desc
                 all_projects.extend(forest_projects)
                 print(f"  Using {len(forest_projects)} cached projects")
             except Exception:
