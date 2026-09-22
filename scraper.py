@@ -18,7 +18,7 @@ import hashlib
 import random
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 
 from forests import FORESTS
 from database import (create_tables, upsert_project, mark_inactive_projects,
@@ -390,27 +390,27 @@ def scrape_forest(session: requests.Session, forest: dict,
 
             def find_description_text(element):
                 for sibling in element.next_siblings:
-                    if not hasattr(sibling, "name"):
+                    if not isinstance(sibling, Tag):
                         text = clean_text(str(sibling))
                         if text:
                             return text
                         continue
                     if sibling.name in ("h3", "h2", "h1"):
                         return ""
-                    body = sibling.find(class_="usa-card__body") if hasattr(sibling, "find") else None
+                    body = sibling.find(class_="usa-card__body")
                     if body:
                         p = body.find("p")
                         if p:
                             return clean_text(p.get_text())
                         return clean_text(body.get_text())
-                    text = clean_text(sibling.get_text()) if hasattr(sibling, "get_text") else clean_text(str(sibling))
+                    text = clean_text(sibling.get_text())
                     if text:
                         return text
                 return ""
 
             # Check inside h3 after the link (description may be a text node inside h3)
             for node in link_tag.next_siblings:
-                if not hasattr(node, "name"):
+                if not isinstance(node, Tag):
                     text = clean_text(str(node))
                     if text:
                         description = text
