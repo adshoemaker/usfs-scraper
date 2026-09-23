@@ -154,8 +154,8 @@
   "https://www.fs.usda.gov/r01/nezperce-clearwater/projects/61303": {
     "analysis_type": "Environmental Assessment",
     "first_seen": "2026-09-08",
-    "forest_code": "nezperce-ipnf",
-    "forest_name": "Nez Perce-CW & Idaho Panhandle",
+    "forest_code": "multi",
+    "forest_name": "Nez Perce-CW & Idaho Panhandle, Wallowa-Whitman",
     "name": "Race Cow Project",
     "status": ""
   },
@@ -487,6 +487,14 @@
     "name": "Middle Creek and West Indian Creek Grazing Analysis",
     "status": ""
   },
+  "https://www.fs.usda.gov/r04/caribou-targhee/projects/52904": {
+    "analysis_type": "Environmental Impact Statement",
+    "first_seen": "2026-09-23",
+    "forest_code": "multi",
+    "forest_name": "Caribou-Targhee National Forests, Salmon-Challis National Forest, Sawtooth National Forest",
+    "name": "Amendments to Land Management Plans Regarding Sage-grouse Conservation",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r04/caribou-targhee/projects/63218": {
     "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-09-08",
@@ -541,6 +549,14 @@
     "forest_code": "boise-payette",
     "forest_name": "Boise & Payette National Forests",
     "name": "Payette National Forest Noxious Weed and Poisonous Plant Control Program",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r04/payette/projects/2698": {
+    "analysis_type": "Environmental Impact Statement",
+    "first_seen": "2026-09-23",
+    "forest_code": "boise-payette",
+    "forest_name": "Boise & Payette National Forests",
+    "name": "SFSR Subbasin Noxious Weed Management Plan [80]",
     "status": ""
   },
   "https://www.fs.usda.gov/r04/payette/projects/287045": {
@@ -4528,6 +4544,22 @@
     "forest_code": "rogue-siskiyou",
     "forest_name": "Rogue River-Siskiyou National Forest",
     "name": "Thompson Creek Fuel Break",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r06/rogue-siskiyou/projects/413996": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-09-23",
+    "forest_code": "rogue-siskiyou",
+    "forest_name": "Rogue River-Siskiyou National Forest",
+    "name": "Minerals Research Partners Bulk Sampling",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r06/rogue-siskiyou/projects/420105": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-09-23",
+    "forest_code": "rogue-siskiyou",
+    "forest_name": "Rogue River-Siskiyou National Forest",
+    "name": "Anunnaki Mining Claim Bulk Sampling",
     "status": ""
   },
   "https://www.fs.usda.gov/r06/rogue-siskiyou/projects/53521": {
