@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-09-23T18:34:07.152206+00:00",
-  "total_projects": 595,
+  "scraped_at": "2026-09-24T18:36:57.819858+00:00",
+  "total_projects": 576,
   "forests_scraped": 32,
   "projects": [
     {
@@ -14,7 +14,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.162844+00:00",
+      "scraped_at": "2026-09-24T18:05:13.353686+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -52,15 +52,52 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.162922+00:00",
-      "milestones": [],
-      "analysis_type": "",
+      "scraped_at": "2026-09-24T18:05:13.353764+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "11/2025 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Comment Period",
+          "date": "06/2026 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Objection Period Start",
+          "date": "10/2026 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Decision",
+          "date": "02/2027 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "05/2027 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Environmental Assessment",
       "ce_citation": "",
-      "location_summary": "",
+      "location_summary": "Located in Whatcom County, Washington, the project boundary encompasses approximately 106,000 acres to the east of Sedro-Woolley, WA.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "11/2025 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Comment Period",
+          "date": "06/2026 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -73,15 +110,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163024+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-09-24T18:05:13.353837+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "04/24/2017",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2019 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "05/2021 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (5), 36 Cfr 220.6(D)(5)",
+      "location_summary": "Township 30N; Range 10E; Section 22.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "04/24/2017",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2019 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "05/2021 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -94,7 +163,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163086+00:00",
+      "scraped_at": "2026-09-24T18:05:13.353891+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -132,15 +201,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163137+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-09-24T18:05:13.353941+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "07/28/2017",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "12/2017 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "01/2018 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (1), 36 Cfr 220.6(D)(1)",
+      "location_summary": "Road 6020-110, the Lake Serene Trailhead, National Forest System land in T 27 N, R 10 E, Section 19,30,31,32 the Lake Serene Trail #1068, including the Bridal Veil Falls Trail.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "07/28/2017",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "12/2017 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "01/2018 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -153,7 +254,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163184+00:00",
+      "scraped_at": "2026-09-24T18:05:13.353988+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -191,15 +292,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163234+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-09-24T18:05:13.354035+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "04/24/2017",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "04/2018 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2018 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (4), 36 Cfr 220.6(D)(4)",
+      "location_summary": "Township 32N; Range 12E; Section 10.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "04/24/2017",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "04/2018 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2018 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -212,15 +345,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163280+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-09-24T18:05:13.354088+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "06/30/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "08/2025 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "08/2025 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (4), 36 Cfr 220.6(D)(4)",
+      "location_summary": "The project area is located on the northwest shore of Heather Lake, at the outflow to Heather Creek. The trail starts near the intersection of Forest Road 42 and the Mountain Loop Highway.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "06/30/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "08/2025 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "08/2025 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -233,15 +398,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163327+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-09-24T18:05:13.354134+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "07/10/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "09/2025 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "09/2025 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.2 (20), 36 Cfr 220.6(E)(20)",
+      "location_summary": "The project is located at the Artist Point Trailhead, southeast of the parking area along the trail to Huntoon Point, northeast of Mt. Baker",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "07/10/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "09/2025 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "09/2025 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -254,7 +451,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163376+00:00",
+      "scraped_at": "2026-09-24T18:05:13.354190+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -292,7 +489,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163422+00:00",
+      "scraped_at": "2026-09-24T18:05:13.354262+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -330,15 +527,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163469+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-09-24T18:05:13.354314+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "09/30/2013",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "06/2014 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "08/2014 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.2 (1), 36 Cfr 220.6(E)(1)",
+      "location_summary": "Adjacent to Middle Fork Snoqualmie River and Forest Service Road 56",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "09/30/2013",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "06/2014 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "08/2014 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -351,15 +580,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163516+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-09-24T18:05:13.354360+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "09/27/2017",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "03/2018 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "07/2018 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (4), 36 Cfr 220.6(D)(4)",
+      "location_summary": "East Church Road (Fossil Creek)",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "09/27/2017",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "03/2018 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "07/2018 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -372,7 +633,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163562+00:00",
+      "scraped_at": "2026-09-24T18:05:13.354406+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -410,15 +671,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163607+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-09-24T18:05:13.354451+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "03/03/2014",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2015 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2015 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (5), 36 Cfr 220.6(D)(5)",
+      "location_summary": "This project is approximately 13 miles north of Concrete, WA and is accessed from the Baker Lake Highway.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "03/03/2014",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2015 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2015 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -431,15 +724,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163651+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-09-24T18:05:13.354496+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "12/11/2017",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "03/2018 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (4), 36 Cfr 220.6(D)(4)",
+      "location_summary": "FSR 6835, southeast of Skykomish, in the West Fork Foss River drainage.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "12/11/2017",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "03/2018 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -452,15 +777,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163700+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-09-24T18:05:13.354540+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "08/01/2018",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2019 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2019 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (10)",
+      "location_summary": "1)Suiattle River, Green Mtn. Lookout, T32N, R12E, Sec.3; 2)Miner's Ridge, T31N, R15E, Sec. 5; 3)Lost Creek, T30N, R10E, Sec. 6. 4)Barlow, T30N, R10E, Sec. 24; 5)Jack Pass, T27N, R12E, Sec 16.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "08/01/2018",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2019 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2019 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -473,15 +830,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163749+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-09-24T18:05:13.354588+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "02/06/2018",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (4), 36 Cfr 220.6(D)(4)",
+      "location_summary": "Gold Creek Pond Trail Bridge (Trail 1250)",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "02/06/2018",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -494,15 +883,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163795+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-09-24T18:05:13.354632+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "02/05/2018",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (4), 36 Cfr 220.6(D)(4)",
+      "location_summary": "Cedar Mainline Road, National Forest System Road 50, at Mile Post 23.38",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "02/05/2018",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -515,15 +936,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163840+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-09-24T18:05:13.354675+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "02/05/2018",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (4), 36 Cfr 220.6(D)(4)",
+      "location_summary": "Upper Snow Creek Road, NFS Road 5078 at MP 1.4",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "02/05/2018",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -536,15 +989,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163888+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-09-24T18:05:13.354720+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "09/25/2013",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "06/2014 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "08/2014 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.2 (1), 36 Cfr 220.6(E)(1)",
+      "location_summary": "The Snoqualmie Lake Trailhead is located at the end of Forest Service Road 5640 in the Middle Fork Snoqualmie River corridor",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "09/25/2013",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "06/2014 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "08/2014 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -557,15 +1042,42 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163933+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-09-24T18:05:13.354764+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "09/2024 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Decision",
+          "date": "10/2024 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "01/2025 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.2 (5), 36 Cfr 220.6(E)(5)",
+      "location_summary": "South Fork Skykomish River Miles 6.5-20, 4 parcels on USFS land. Closest community is the town of Grotto.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "09/2024 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Decision",
+          "date": "10/2024 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -578,7 +1090,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.163997+00:00",
+      "scraped_at": "2026-09-24T18:05:13.354807+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -616,7 +1128,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.164043+00:00",
+      "scraped_at": "2026-09-24T18:05:13.354851+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -654,15 +1166,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T21:38:47.164088+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-09-24T18:05:13.354895+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "04/04/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "06/2025 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "07/2025 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.11, 7 Cfr 1B.3(A) (3)",
+      "location_summary": "Camera stations dispersed widely across multiple forests in Washington state.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "04/04/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "06/2025 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "07/2025 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Olympic National Forest",
@@ -675,7 +1219,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:05:55.295392+00:00",
+      "scraped_at": "2026-09-24T18:07:19.152196+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -713,7 +1257,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:05:55.295473+00:00",
+      "scraped_at": "2026-09-24T18:07:19.152280+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -766,7 +1310,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:05:55.295528+00:00",
+      "scraped_at": "2026-09-24T18:07:19.152328+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -819,7 +1363,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:05:55.295574+00:00",
+      "scraped_at": "2026-09-24T18:07:19.152372+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -872,7 +1416,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:05:55.295617+00:00",
+      "scraped_at": "2026-09-24T18:07:19.152416+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -910,7 +1454,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.829635+00:00",
+      "scraped_at": "2026-09-24T18:07:41.705487+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -963,7 +1507,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.829696+00:00",
+      "scraped_at": "2026-09-24T18:07:41.705552+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1011,7 +1555,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.829740+00:00",
+      "scraped_at": "2026-09-24T18:07:41.705599+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1069,7 +1613,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.829782+00:00",
+      "scraped_at": "2026-09-24T18:07:41.705645+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1122,7 +1666,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.829836+00:00",
+      "scraped_at": "2026-09-24T18:07:41.705690+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1160,7 +1704,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.829877+00:00",
+      "scraped_at": "2026-09-24T18:07:41.705734+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1213,7 +1757,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.829916+00:00",
+      "scraped_at": "2026-09-24T18:07:41.705778+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1266,7 +1810,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.829956+00:00",
+      "scraped_at": "2026-09-24T18:07:41.705823+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1319,7 +1863,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.829994+00:00",
+      "scraped_at": "2026-09-24T18:07:41.705866+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1357,7 +1901,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.830033+00:00",
+      "scraped_at": "2026-09-24T18:07:41.705910+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1420,7 +1964,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.830071+00:00",
+      "scraped_at": "2026-09-24T18:07:41.705953+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1458,7 +2002,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.830110+00:00",
+      "scraped_at": "2026-09-24T18:07:41.705996+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1511,7 +2055,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.830147+00:00",
+      "scraped_at": "2026-09-24T18:07:41.706039+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1564,7 +2108,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.830184+00:00",
+      "scraped_at": "2026-09-24T18:07:41.706083+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1602,7 +2146,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.830222+00:00",
+      "scraped_at": "2026-09-24T18:07:41.706127+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1640,7 +2184,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.830259+00:00",
+      "scraped_at": "2026-09-24T18:07:41.706170+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1698,7 +2242,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.830297+00:00",
+      "scraped_at": "2026-09-24T18:07:41.706212+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1736,7 +2280,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.830335+00:00",
+      "scraped_at": "2026-09-24T18:07:41.706277+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1789,7 +2333,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.830373+00:00",
+      "scraped_at": "2026-09-24T18:07:41.706324+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1827,7 +2371,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.830411+00:00",
+      "scraped_at": "2026-09-24T18:07:41.706367+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1865,7 +2409,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.830447+00:00",
+      "scraped_at": "2026-09-24T18:07:41.706410+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1903,7 +2447,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.830484+00:00",
+      "scraped_at": "2026-09-24T18:07:41.706453+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1956,7 +2500,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:06:17.830521+00:00",
+      "scraped_at": "2026-09-24T18:07:41.706495+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2009,7 +2553,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:09.524493+00:00",
+      "scraped_at": "2026-09-24T18:09:13.058696+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2062,7 +2606,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:09.524551+00:00",
+      "scraped_at": "2026-09-24T18:09:13.058757+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2115,7 +2659,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:09.524593+00:00",
+      "scraped_at": "2026-09-24T18:09:13.058804+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2153,7 +2697,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:09.524632+00:00",
+      "scraped_at": "2026-09-24T18:09:13.058848+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2191,7 +2735,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:09.524670+00:00",
+      "scraped_at": "2026-09-24T18:09:13.058891+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2229,7 +2773,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:09.524710+00:00",
+      "scraped_at": "2026-09-24T18:09:13.058937+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2267,7 +2811,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:09.524749+00:00",
+      "scraped_at": "2026-09-24T18:09:13.058981+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2305,7 +2849,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:09.524787+00:00",
+      "scraped_at": "2026-09-24T18:09:13.059024+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2343,7 +2887,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:09.524845+00:00",
+      "scraped_at": "2026-09-24T18:09:13.059067+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2381,7 +2925,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:09.524885+00:00",
+      "scraped_at": "2026-09-24T18:09:13.059110+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2419,7 +2963,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:09.524924+00:00",
+      "scraped_at": "2026-09-24T18:09:13.059154+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2457,7 +3001,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:09.524962+00:00",
+      "scraped_at": "2026-09-24T18:09:13.059197+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2900,7 +3444,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:57.439536+00:00",
+      "scraped_at": "2026-09-24T18:10:00.208816+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2938,7 +3482,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:57.439698+00:00",
+      "scraped_at": "2026-09-24T18:10:00.208952+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2991,7 +3535,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:57.439741+00:00",
+      "scraped_at": "2026-09-24T18:10:00.208996+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3054,7 +3598,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:57.439779+00:00",
+      "scraped_at": "2026-09-24T18:10:00.209040+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3107,7 +3651,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:57.439833+00:00",
+      "scraped_at": "2026-09-24T18:10:00.209084+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3160,7 +3704,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:57.439871+00:00",
+      "scraped_at": "2026-09-24T18:10:00.209129+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -3223,7 +3767,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:57.439910+00:00",
+      "scraped_at": "2026-09-24T18:10:00.209172+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -3291,7 +3835,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:57.439947+00:00",
+      "scraped_at": "2026-09-24T18:10:00.209216+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3354,7 +3898,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:57.439986+00:00",
+      "scraped_at": "2026-09-24T18:10:00.209283+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -3422,7 +3966,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:57.440023+00:00",
+      "scraped_at": "2026-09-24T18:10:00.209330+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3475,7 +4019,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:57.440060+00:00",
+      "scraped_at": "2026-09-24T18:10:00.209374+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3524,7 +4068,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:57.440098+00:00",
+      "scraped_at": "2026-09-24T18:10:00.209417+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3587,7 +4131,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:57.440136+00:00",
+      "scraped_at": "2026-09-24T18:10:00.209460+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3640,7 +4184,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:08:57.440173+00:00",
+      "scraped_at": "2026-09-24T18:10:00.209503+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -3678,7 +4222,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.560854+00:00",
+      "scraped_at": "2026-09-24T18:11:00.659705+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -3716,7 +4260,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.560909+00:00",
+      "scraped_at": "2026-09-24T18:11:00.659767+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3769,7 +4313,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.560950+00:00",
+      "scraped_at": "2026-09-24T18:11:00.659864+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -3807,7 +4351,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.560991+00:00",
+      "scraped_at": "2026-09-24T18:11:00.659912+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3860,7 +4404,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561030+00:00",
+      "scraped_at": "2026-09-24T18:11:00.659957+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -3898,7 +4442,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561070+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660001+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3951,7 +4495,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561108+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660046+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4014,7 +4558,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561146+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660091+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4067,7 +4611,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561183+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660137+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4105,7 +4649,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561223+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660182+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4143,7 +4687,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561260+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660226+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4196,7 +4740,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561299+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660294+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4234,7 +4778,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561337+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660339+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4272,7 +4816,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561376+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660384+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4325,7 +4869,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561413+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660428+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4378,7 +4922,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561450+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660471+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4431,7 +4975,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561486+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660514+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4484,7 +5028,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561524+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660556+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4542,7 +5086,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561562+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660599+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4605,7 +5149,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561599+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660642+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4658,7 +5202,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561636+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660685+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -4721,7 +5265,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561672+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660727+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4774,7 +5318,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561709+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660770+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4812,7 +5356,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561746+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660812+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4850,7 +5394,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:10:00.561784+00:00",
+      "scraped_at": "2026-09-24T18:11:00.660854+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4903,7 +5447,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496133+00:00",
+      "scraped_at": "2026-09-24T18:12:42.738822+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4941,7 +5485,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496191+00:00",
+      "scraped_at": "2026-09-24T18:12:42.738885+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -5010,7 +5554,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496232+00:00",
+      "scraped_at": "2026-09-24T18:12:42.738934+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5048,7 +5592,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496270+00:00",
+      "scraped_at": "2026-09-24T18:12:42.738980+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5086,7 +5630,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496311+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739024+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5124,7 +5668,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496349+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739068+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5162,7 +5706,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496389+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739111+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -5215,7 +5759,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496427+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739154+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -5283,7 +5827,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496465+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739197+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5321,7 +5865,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496503+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739263+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5359,7 +5903,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496577+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739353+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5397,7 +5941,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496615+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739396+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5435,7 +5979,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496654+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739438+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5473,7 +6017,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496692+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739480+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5511,7 +6055,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496730+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739523+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5549,7 +6093,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496770+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739564+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5587,7 +6131,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496816+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739607+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5625,7 +6169,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496856+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739651+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5663,7 +6207,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496893+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739693+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5701,7 +6245,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496930+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739735+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -5754,7 +6298,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.496968+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739777+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -5807,7 +6351,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.497005+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739819+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -5860,7 +6404,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.497042+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739860+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5898,7 +6442,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.497078+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739902+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5936,7 +6480,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:11:47.497115+00:00",
+      "scraped_at": "2026-09-24T18:12:42.739943+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5974,7 +6518,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.452493+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400202+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6012,7 +6556,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.452595+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400335+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6050,7 +6594,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.452633+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400379+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6103,7 +6647,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.452672+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400422+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6156,7 +6700,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.452711+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400467+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6214,7 +6758,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.452749+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400510+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6272,7 +6816,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.452787+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400553+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6325,7 +6869,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.452837+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400597+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6383,7 +6927,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.452878+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400640+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6421,7 +6965,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.452917+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400683+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6459,7 +7003,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.452955+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400726+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6512,7 +7056,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.452991+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400768+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6570,7 +7114,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.453029+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400810+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6608,7 +7152,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.453068+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400853+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6617,7 +7161,7 @@
         },
         {
           "milestone": "Finding/Decision Date",
-          "date": "",
+          "date": "9/23/2026",
           "estimated": false
         }
       ],
@@ -6630,7 +7174,7 @@
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
-          "date": "",
+          "date": "9/23/2026",
           "estimated": false
         }
       ]
@@ -6646,7 +7190,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.453107+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400895+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6699,7 +7243,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.453145+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400936+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6752,7 +7296,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.453183+00:00",
+      "scraped_at": "2026-09-24T18:14:17.400979+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6790,7 +7334,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.453222+00:00",
+      "scraped_at": "2026-09-24T18:14:17.401022+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6843,7 +7387,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.453261+00:00",
+      "scraped_at": "2026-09-24T18:14:17.401063+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6881,7 +7425,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.453299+00:00",
+      "scraped_at": "2026-09-24T18:14:17.401104+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6919,7 +7463,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.453336+00:00",
+      "scraped_at": "2026-09-24T18:14:17.401145+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6957,7 +7501,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.453374+00:00",
+      "scraped_at": "2026-09-24T18:14:17.401188+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7015,7 +7559,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.453410+00:00",
+      "scraped_at": "2026-09-24T18:14:17.401248+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7053,7 +7597,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.453447+00:00",
+      "scraped_at": "2026-09-24T18:14:17.401295+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7111,7 +7655,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.453485+00:00",
+      "scraped_at": "2026-09-24T18:14:17.401337+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7149,7 +7693,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:13:24.453521+00:00",
+      "scraped_at": "2026-09-24T18:14:17.401379+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7187,7 +7731,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.954766+00:00",
+      "scraped_at": "2026-09-24T18:16:01.938332+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7240,7 +7784,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.954836+00:00",
+      "scraped_at": "2026-09-24T18:16:01.938392+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7293,7 +7837,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.954919+00:00",
+      "scraped_at": "2026-09-24T18:16:01.938481+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7331,7 +7875,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.954956+00:00",
+      "scraped_at": "2026-09-24T18:16:01.938525+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7369,7 +7913,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.954995+00:00",
+      "scraped_at": "2026-09-24T18:16:01.938569+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7407,7 +7951,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.955034+00:00",
+      "scraped_at": "2026-09-24T18:16:01.938613+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7445,7 +7989,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.955072+00:00",
+      "scraped_at": "2026-09-24T18:16:01.938656+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7498,7 +8042,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.955110+00:00",
+      "scraped_at": "2026-09-24T18:16:01.938698+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7536,7 +8080,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.955149+00:00",
+      "scraped_at": "2026-09-24T18:16:01.938741+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7574,7 +8118,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.955186+00:00",
+      "scraped_at": "2026-09-24T18:16:01.938784+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7637,7 +8181,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.955223+00:00",
+      "scraped_at": "2026-09-24T18:16:01.938827+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7646,7 +8190,7 @@
         },
         {
           "milestone": "Finding/Decision Date",
-          "date": "",
+          "date": "9/23/2026",
           "estimated": false
         }
       ],
@@ -7659,7 +8203,7 @@
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
-          "date": "",
+          "date": "9/23/2026",
           "estimated": false
         }
       ]
@@ -7675,7 +8219,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.955261+00:00",
+      "scraped_at": "2026-09-24T18:16:01.938870+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7713,7 +8257,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.955299+00:00",
+      "scraped_at": "2026-09-24T18:16:01.938913+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7751,7 +8295,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.955337+00:00",
+      "scraped_at": "2026-09-24T18:16:01.938955+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7804,7 +8348,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.955374+00:00",
+      "scraped_at": "2026-09-24T18:16:01.938998+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7842,7 +8386,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.955410+00:00",
+      "scraped_at": "2026-09-24T18:16:01.939040+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7880,7 +8424,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.955451+00:00",
+      "scraped_at": "2026-09-24T18:16:01.939084+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7918,7 +8462,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:15:01.955488+00:00",
+      "scraped_at": "2026-09-24T18:16:01.939127+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7927,7 +8471,7 @@
         },
         {
           "milestone": "Finding/Decision Date",
-          "date": "",
+          "date": "9/23/2026",
           "estimated": false
         }
       ],
@@ -7940,7 +8484,7 @@
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
-          "date": "",
+          "date": "9/23/2026",
           "estimated": false
         }
       ]
@@ -7956,7 +8500,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:16:14.748875+00:00",
+      "scraped_at": "2026-09-24T18:17:16.915753+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8009,7 +8553,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:16:14.748933+00:00",
+      "scraped_at": "2026-09-24T18:17:16.915815+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8062,7 +8606,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:16:14.748974+00:00",
+      "scraped_at": "2026-09-24T18:17:16.915862+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8100,7 +8644,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:16:14.749012+00:00",
+      "scraped_at": "2026-09-24T18:17:16.915906+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8153,7 +8697,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:16:14.749050+00:00",
+      "scraped_at": "2026-09-24T18:17:16.915949+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8191,7 +8735,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:16:14.749091+00:00",
+      "scraped_at": "2026-09-24T18:17:16.915994+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8249,7 +8793,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:16:14.749130+00:00",
+      "scraped_at": "2026-09-24T18:17:16.916037+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8302,7 +8846,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:16:14.749169+00:00",
+      "scraped_at": "2026-09-24T18:17:16.916081+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8340,7 +8884,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:16:14.749209+00:00",
+      "scraped_at": "2026-09-24T18:17:16.916125+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8378,7 +8922,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:16:14.749247+00:00",
+      "scraped_at": "2026-09-24T18:17:16.916167+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8416,7 +8960,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:16:14.749285+00:00",
+      "scraped_at": "2026-09-24T18:17:16.916211+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8454,7 +8998,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.499880+00:00",
+      "scraped_at": "2026-09-24T18:18:05.135437+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -8518,7 +9062,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.499939+00:00",
+      "scraped_at": "2026-09-24T18:18:05.135499+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8581,7 +9125,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.499980+00:00",
+      "scraped_at": "2026-09-24T18:18:05.135547+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8634,7 +9178,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500022+00:00",
+      "scraped_at": "2026-09-24T18:18:05.135594+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8687,7 +9231,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500060+00:00",
+      "scraped_at": "2026-09-24T18:18:05.135639+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8735,7 +9279,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500101+00:00",
+      "scraped_at": "2026-09-24T18:18:05.135684+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8773,7 +9317,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500141+00:00",
+      "scraped_at": "2026-09-24T18:18:05.135730+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8826,7 +9370,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500181+00:00",
+      "scraped_at": "2026-09-24T18:18:05.135775+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8864,7 +9408,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500220+00:00",
+      "scraped_at": "2026-09-24T18:18:05.135819+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8902,7 +9446,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500259+00:00",
+      "scraped_at": "2026-09-24T18:18:05.135863+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8940,7 +9484,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500298+00:00",
+      "scraped_at": "2026-09-24T18:18:05.135907+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9003,7 +9547,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500336+00:00",
+      "scraped_at": "2026-09-24T18:18:05.135950+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9056,7 +9600,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500375+00:00",
+      "scraped_at": "2026-09-24T18:18:05.135994+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9109,7 +9653,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500413+00:00",
+      "scraped_at": "2026-09-24T18:18:05.136037+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9162,7 +9706,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500451+00:00",
+      "scraped_at": "2026-09-24T18:18:05.136080+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -9230,7 +9774,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500525+00:00",
+      "scraped_at": "2026-09-24T18:18:05.136166+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9268,7 +9812,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500562+00:00",
+      "scraped_at": "2026-09-24T18:18:05.136208+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9306,7 +9850,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500601+00:00",
+      "scraped_at": "2026-09-24T18:18:05.136323+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9359,7 +9903,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500638+00:00",
+      "scraped_at": "2026-09-24T18:18:05.136373+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9422,7 +9966,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500719+00:00",
+      "scraped_at": "2026-09-24T18:18:05.136418+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9460,7 +10004,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:17:03.500760+00:00",
+      "scraped_at": "2026-09-24T18:18:05.136462+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9513,7 +10057,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:18:33.985039+00:00",
+      "scraped_at": "2026-09-24T18:19:31.787841+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9551,7 +10095,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:18:33.985096+00:00",
+      "scraped_at": "2026-09-24T18:19:31.787902+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9589,7 +10133,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:18:33.985138+00:00",
+      "scraped_at": "2026-09-24T18:19:31.787949+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9627,7 +10171,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:18:33.985178+00:00",
+      "scraped_at": "2026-09-24T18:19:31.787993+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -9695,7 +10239,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:18:33.985218+00:00",
+      "scraped_at": "2026-09-24T18:19:31.788037+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9758,7 +10302,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:18:33.985256+00:00",
+      "scraped_at": "2026-09-24T18:19:31.788081+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9811,7 +10355,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:18:33.985293+00:00",
+      "scraped_at": "2026-09-24T18:19:31.788171+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9864,7 +10408,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:18:33.985333+00:00",
+      "scraped_at": "2026-09-24T18:19:31.788220+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9902,7 +10446,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:18:33.985372+00:00",
+      "scraped_at": "2026-09-24T18:19:31.788290+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9940,7 +10484,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:18:33.985410+00:00",
+      "scraped_at": "2026-09-24T18:19:31.788337+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9993,7 +10537,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:18:33.985448+00:00",
+      "scraped_at": "2026-09-24T18:19:31.788380+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10046,7 +10590,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:18:33.985487+00:00",
+      "scraped_at": "2026-09-24T18:19:31.788424+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10109,7 +10653,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:18:33.985525+00:00",
+      "scraped_at": "2026-09-24T18:19:31.788467+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10157,7 +10701,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:18:33.985563+00:00",
+      "scraped_at": "2026-09-24T18:19:31.788509+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10195,7 +10739,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:18:33.985600+00:00",
+      "scraped_at": "2026-09-24T18:19:31.788552+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10248,7 +10792,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.855789+00:00",
+      "scraped_at": "2026-09-24T18:20:33.681773+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10286,7 +10830,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.855860+00:00",
+      "scraped_at": "2026-09-24T18:20:33.681836+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10324,7 +10868,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.855900+00:00",
+      "scraped_at": "2026-09-24T18:20:33.681884+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10362,7 +10906,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.855939+00:00",
+      "scraped_at": "2026-09-24T18:20:33.681929+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10400,7 +10944,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.855977+00:00",
+      "scraped_at": "2026-09-24T18:20:33.681973+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10438,7 +10982,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.856017+00:00",
+      "scraped_at": "2026-09-24T18:20:33.682017+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10476,7 +11020,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.856054+00:00",
+      "scraped_at": "2026-09-24T18:20:33.682060+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10514,7 +11058,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.856092+00:00",
+      "scraped_at": "2026-09-24T18:20:33.682104+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10552,7 +11096,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.856130+00:00",
+      "scraped_at": "2026-09-24T18:20:33.682147+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10590,7 +11134,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.856169+00:00",
+      "scraped_at": "2026-09-24T18:20:33.682190+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10653,7 +11197,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.856206+00:00",
+      "scraped_at": "2026-09-24T18:20:33.682255+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10691,7 +11235,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.856244+00:00",
+      "scraped_at": "2026-09-24T18:20:33.682308+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10729,7 +11273,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.856281+00:00",
+      "scraped_at": "2026-09-24T18:20:33.682353+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10767,7 +11311,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.856320+00:00",
+      "scraped_at": "2026-09-24T18:20:33.682398+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10805,7 +11349,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.856358+00:00",
+      "scraped_at": "2026-09-24T18:20:33.682440+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10843,7 +11387,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.856397+00:00",
+      "scraped_at": "2026-09-24T18:20:33.682484+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10881,7 +11425,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.856435+00:00",
+      "scraped_at": "2026-09-24T18:20:33.682526+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10919,7 +11463,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:19:38.856473+00:00",
+      "scraped_at": "2026-09-24T18:20:33.682568+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10957,7 +11501,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931009+00:00",
+      "scraped_at": "2026-09-24T18:21:32.753560+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11015,7 +11559,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931068+00:00",
+      "scraped_at": "2026-09-24T18:21:32.753621+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11068,7 +11612,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931110+00:00",
+      "scraped_at": "2026-09-24T18:21:32.753668+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11121,7 +11665,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931151+00:00",
+      "scraped_at": "2026-09-24T18:21:32.753715+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11184,7 +11728,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931189+00:00",
+      "scraped_at": "2026-09-24T18:21:32.753759+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11237,7 +11781,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931229+00:00",
+      "scraped_at": "2026-09-24T18:21:32.753805+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11275,7 +11819,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931267+00:00",
+      "scraped_at": "2026-09-24T18:21:32.753850+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11313,7 +11857,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931306+00:00",
+      "scraped_at": "2026-09-24T18:21:32.753893+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11351,7 +11895,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931345+00:00",
+      "scraped_at": "2026-09-24T18:21:32.753937+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11389,7 +11933,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931384+00:00",
+      "scraped_at": "2026-09-24T18:21:32.753980+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11427,7 +11971,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931422+00:00",
+      "scraped_at": "2026-09-24T18:21:32.754022+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11465,7 +12009,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931459+00:00",
+      "scraped_at": "2026-09-24T18:21:32.754064+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11503,7 +12047,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931496+00:00",
+      "scraped_at": "2026-09-24T18:21:32.754108+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11541,7 +12085,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931533+00:00",
+      "scraped_at": "2026-09-24T18:21:32.754151+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11579,7 +12123,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931570+00:00",
+      "scraped_at": "2026-09-24T18:21:32.754194+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11617,7 +12161,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931607+00:00",
+      "scraped_at": "2026-09-24T18:21:32.754254+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11655,7 +12199,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931646+00:00",
+      "scraped_at": "2026-09-24T18:21:32.754302+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11693,7 +12237,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931684+00:00",
+      "scraped_at": "2026-09-24T18:21:32.754345+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11751,7 +12295,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:20:44.931721+00:00",
+      "scraped_at": "2026-09-24T18:21:32.754388+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11804,7 +12348,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:22:06.911430+00:00",
+      "scraped_at": "2026-09-24T18:22:48.862062+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11857,7 +12401,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:22:06.911486+00:00",
+      "scraped_at": "2026-09-24T18:22:48.862123+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11910,7 +12454,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:22:06.911525+00:00",
+      "scraped_at": "2026-09-24T18:22:48.862168+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11958,7 +12502,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:22:06.911610+00:00",
+      "scraped_at": "2026-09-24T18:22:48.862212+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11996,7 +12540,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:22:06.911652+00:00",
+      "scraped_at": "2026-09-24T18:22:48.862279+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12034,7 +12578,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:22:06.911691+00:00",
+      "scraped_at": "2026-09-24T18:22:48.862326+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12072,7 +12616,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:22:06.911730+00:00",
+      "scraped_at": "2026-09-24T18:22:48.862370+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12110,7 +12654,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:22:06.911768+00:00",
+      "scraped_at": "2026-09-24T18:22:48.862412+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12163,7 +12707,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:22:06.911806+00:00",
+      "scraped_at": "2026-09-24T18:22:48.862455+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12201,7 +12745,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:22:06.911859+00:00",
+      "scraped_at": "2026-09-24T18:22:48.862498+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12264,7 +12808,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:22:06.911898+00:00",
+      "scraped_at": "2026-09-24T18:22:48.862541+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12302,7 +12846,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:22:06.911936+00:00",
+      "scraped_at": "2026-09-24T18:22:48.862584+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12350,7 +12894,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:22:06.911973+00:00",
+      "scraped_at": "2026-09-24T18:22:48.862627+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12388,7 +12932,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:22:06.912010+00:00",
+      "scraped_at": "2026-09-24T18:22:48.862670+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12441,7 +12985,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.855488+00:00",
+      "scraped_at": "2026-09-24T18:23:47.919714+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12479,7 +13023,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.855548+00:00",
+      "scraped_at": "2026-09-24T18:23:47.919776+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12532,7 +13076,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.855591+00:00",
+      "scraped_at": "2026-09-24T18:23:47.919823+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12585,7 +13129,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.855631+00:00",
+      "scraped_at": "2026-09-24T18:23:47.919867+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12638,7 +13182,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.855671+00:00",
+      "scraped_at": "2026-09-24T18:23:47.919964+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12691,7 +13235,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.855756+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920009+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12744,7 +13288,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.855799+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920052+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12797,7 +13341,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.855854+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920094+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12835,7 +13379,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.855894+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920138+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12873,7 +13417,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.855932+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920181+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12936,7 +13480,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.855970+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920223+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12989,7 +13533,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856009+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920290+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13042,7 +13586,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856045+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920334+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13095,7 +13639,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856082+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920376+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13133,7 +13677,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856119+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920419+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13181,7 +13725,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856157+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920460+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13219,7 +13763,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856194+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920501+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13257,7 +13801,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856232+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920543+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13295,7 +13839,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856269+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920586+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13348,7 +13892,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856306+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920628+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13401,7 +13945,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856343+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920671+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13439,7 +13983,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856380+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920713+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13477,7 +14021,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856424+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920754+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13515,7 +14059,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856465+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920797+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13578,7 +14122,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856505+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920838+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13631,7 +14175,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856544+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920880+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13669,7 +14213,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856584+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920923+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13707,7 +14251,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856622+00:00",
+      "scraped_at": "2026-09-24T18:23:47.920965+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13760,7 +14304,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856660+00:00",
+      "scraped_at": "2026-09-24T18:23:47.921006+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13818,7 +14362,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856699+00:00",
+      "scraped_at": "2026-09-24T18:23:47.921046+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13881,7 +14425,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856738+00:00",
+      "scraped_at": "2026-09-24T18:23:47.921087+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13934,7 +14478,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856777+00:00",
+      "scraped_at": "2026-09-24T18:23:47.921129+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13972,7 +14516,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856823+00:00",
+      "scraped_at": "2026-09-24T18:23:47.921171+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14035,7 +14579,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856864+00:00",
+      "scraped_at": "2026-09-24T18:23:47.921213+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -14073,7 +14617,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856904+00:00",
+      "scraped_at": "2026-09-24T18:23:47.921275+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -14111,7 +14655,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.856945+00:00",
+      "scraped_at": "2026-09-24T18:23:47.921320+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14174,7 +14718,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.857001+00:00",
+      "scraped_at": "2026-09-24T18:23:47.921380+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14237,7 +14781,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:23:09.857038+00:00",
+      "scraped_at": "2026-09-24T18:23:47.921422+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -14305,7 +14849,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:25:35.077072+00:00",
+      "scraped_at": "2026-09-24T18:26:15.373954+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14353,7 +14897,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:25:35.077184+00:00",
+      "scraped_at": "2026-09-24T18:26:15.374076+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14416,7 +14960,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:25:35.077223+00:00",
+      "scraped_at": "2026-09-24T18:26:15.374123+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14479,7 +15023,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:25:35.077265+00:00",
+      "scraped_at": "2026-09-24T18:26:15.374166+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14532,7 +15076,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:25:35.077306+00:00",
+      "scraped_at": "2026-09-24T18:26:15.374209+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15130,7 +15674,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:07.887083+00:00",
+      "scraped_at": "2026-09-24T18:26:49.674024+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -15168,7 +15712,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:07.887140+00:00",
+      "scraped_at": "2026-09-24T18:26:49.674084+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15221,7 +15765,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:07.887181+00:00",
+      "scraped_at": "2026-09-24T18:26:49.674129+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -15259,7 +15803,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:07.887220+00:00",
+      "scraped_at": "2026-09-24T18:26:49.674173+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -15297,7 +15841,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:07.887258+00:00",
+      "scraped_at": "2026-09-24T18:26:49.674216+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -15335,7 +15879,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:07.887299+00:00",
+      "scraped_at": "2026-09-24T18:26:49.674286+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15388,7 +15932,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:07.887338+00:00",
+      "scraped_at": "2026-09-24T18:26:49.674332+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -15426,7 +15970,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:07.887375+00:00",
+      "scraped_at": "2026-09-24T18:26:49.674377+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15479,7 +16023,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.139928+00:00",
+      "scraped_at": "2026-09-24T18:27:28.512466+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -15494,7 +16038,7 @@
       ],
       "analysis_type": "Categorical Exclusion",
       "ce_citation": "USDA-28d-USFS",
-      "location_summary": "T40N R4W sec 6; T42N R4W secs 4, 8, and 18; T43N R3W secs 20, 30, and 31; Mount Diablo Meridian, Siskiyou County, California",
+      "location_summary": "Along highway 97, approximately 5 miles northeast of Weed, California. T40N R4W sec 6; T42N R4W secs 4, 8, and 18; T43N R3W secs 20, 30, and 31; Mount Diablo Meridian, Siskiyou County, California",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-07-28",
@@ -15517,7 +16061,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.139985+00:00",
+      "scraped_at": "2026-09-24T18:27:28.512530+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15570,7 +16114,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140026+00:00",
+      "scraped_at": "2026-09-24T18:27:28.512576+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -15608,7 +16152,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140065+00:00",
+      "scraped_at": "2026-09-24T18:27:28.512622+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -15646,7 +16190,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140103+00:00",
+      "scraped_at": "2026-09-24T18:27:28.512667+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15699,7 +16243,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140144+00:00",
+      "scraped_at": "2026-09-24T18:27:28.512713+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15757,7 +16301,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140183+00:00",
+      "scraped_at": "2026-09-24T18:27:28.512757+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -15795,7 +16339,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140221+00:00",
+      "scraped_at": "2026-09-24T18:27:28.512801+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15853,7 +16397,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140260+00:00",
+      "scraped_at": "2026-09-24T18:27:28.512845+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15906,7 +16450,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140299+00:00",
+      "scraped_at": "2026-09-24T18:27:28.512889+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15969,7 +16513,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140337+00:00",
+      "scraped_at": "2026-09-24T18:27:28.512932+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16017,7 +16561,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140376+00:00",
+      "scraped_at": "2026-09-24T18:27:28.512974+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -16055,7 +16599,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140415+00:00",
+      "scraped_at": "2026-09-24T18:27:28.513016+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16103,7 +16647,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140453+00:00",
+      "scraped_at": "2026-09-24T18:27:28.513064+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16151,7 +16695,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140491+00:00",
+      "scraped_at": "2026-09-24T18:27:28.513107+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16204,7 +16748,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140529+00:00",
+      "scraped_at": "2026-09-24T18:27:28.513195+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -16242,7 +16786,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140568+00:00",
+      "scraped_at": "2026-09-24T18:27:28.513262+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -16280,7 +16824,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140607+00:00",
+      "scraped_at": "2026-09-24T18:27:28.513312+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16343,7 +16887,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140645+00:00",
+      "scraped_at": "2026-09-24T18:27:28.513356+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16396,7 +16940,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140684+00:00",
+      "scraped_at": "2026-09-24T18:27:28.513399+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16454,7 +16998,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140722+00:00",
+      "scraped_at": "2026-09-24T18:27:28.513444+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -16492,7 +17036,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:26:40.140760+00:00",
+      "scraped_at": "2026-09-24T18:27:28.513486+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17200,7 +17744,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419229+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690251+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17263,7 +17807,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419288+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690318+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -17301,7 +17845,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419330+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690365+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -17339,7 +17883,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419374+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690410+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17402,7 +17946,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419415+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690453+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17465,7 +18009,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419454+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690497+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17523,7 +18067,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419494+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690540+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -17561,7 +18105,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419533+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690582+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17614,7 +18158,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419571+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690625+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -17652,7 +18196,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419610+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690669+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17710,7 +18254,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419647+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690711+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17763,7 +18307,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419684+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690754+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17816,7 +18360,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419722+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690797+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17869,7 +18413,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419761+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690840+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17922,7 +18466,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419798+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690881+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17975,7 +18519,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419846+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690923+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18033,7 +18577,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419883+00:00",
+      "scraped_at": "2026-09-24T18:28:58.690965+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18091,7 +18635,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419921+00:00",
+      "scraped_at": "2026-09-24T18:28:58.691006+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18154,7 +18698,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:14.419959+00:00",
+      "scraped_at": "2026-09-24T18:28:58.691047+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18207,7 +18751,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:18.036404+00:00",
+      "scraped_at": "2026-09-24T18:29:02.729118+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18265,7 +18809,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:18.036459+00:00",
+      "scraped_at": "2026-09-24T18:29:02.729179+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -18303,7 +18847,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:18.036500+00:00",
+      "scraped_at": "2026-09-24T18:29:02.729226+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18356,7 +18900,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:18.036539+00:00",
+      "scraped_at": "2026-09-24T18:29:02.729295+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18409,7 +18953,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:18.036577+00:00",
+      "scraped_at": "2026-09-24T18:29:02.729339+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18472,7 +19016,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:18.036615+00:00",
+      "scraped_at": "2026-09-24T18:29:02.729383+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18520,7 +19064,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:18.036654+00:00",
+      "scraped_at": "2026-09-24T18:29:02.729428+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18573,7 +19117,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:28:18.036690+00:00",
+      "scraped_at": "2026-09-24T18:29:02.729472+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18621,7 +19165,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:30:01.824954+00:00",
+      "scraped_at": "2026-09-24T18:30:47.091105+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -18659,7 +19203,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:30:01.825012+00:00",
+      "scraped_at": "2026-09-24T18:30:47.091164+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -18697,7 +19241,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:30:01.825053+00:00",
+      "scraped_at": "2026-09-24T18:30:47.091211+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18755,7 +19299,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:30:01.825093+00:00",
+      "scraped_at": "2026-09-24T18:30:47.091279+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -18793,7 +19337,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:30:01.825132+00:00",
+      "scraped_at": "2026-09-24T18:30:47.091326+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18846,7 +19390,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:30:01.825173+00:00",
+      "scraped_at": "2026-09-24T18:30:47.091371+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -18884,7 +19428,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:30:01.825213+00:00",
+      "scraped_at": "2026-09-24T18:30:47.091414+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18947,7 +19491,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:30:01.825253+00:00",
+      "scraped_at": "2026-09-24T18:30:47.091458+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -18985,7 +19529,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:30:01.825292+00:00",
+      "scraped_at": "2026-09-24T18:30:47.091502+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19023,7 +19567,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:30:01.825331+00:00",
+      "scraped_at": "2026-09-24T18:30:47.091546+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19061,7 +19605,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:30:01.825370+00:00",
+      "scraped_at": "2026-09-24T18:30:47.091589+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19124,7 +19668,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:30:01.825408+00:00",
+      "scraped_at": "2026-09-24T18:30:47.091631+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19177,7 +19721,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585219+00:00",
+      "scraped_at": "2026-09-24T18:31:38.702622+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19230,7 +19774,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585284+00:00",
+      "scraped_at": "2026-09-24T18:31:38.702685+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19268,7 +19812,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585335+00:00",
+      "scraped_at": "2026-09-24T18:31:38.702733+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19306,7 +19850,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585382+00:00",
+      "scraped_at": "2026-09-24T18:31:38.702779+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19344,7 +19888,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585427+00:00",
+      "scraped_at": "2026-09-24T18:31:38.702822+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19382,7 +19926,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585474+00:00",
+      "scraped_at": "2026-09-24T18:31:38.702867+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19420,7 +19964,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585520+00:00",
+      "scraped_at": "2026-09-24T18:31:38.702911+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19458,7 +20002,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585565+00:00",
+      "scraped_at": "2026-09-24T18:31:38.702956+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19511,7 +20055,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585611+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703001+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19549,7 +20093,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585658+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703045+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19587,7 +20131,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585703+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703089+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19625,7 +20169,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585748+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703132+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19678,7 +20222,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585793+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703175+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19716,7 +20260,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585838+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703220+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19754,7 +20298,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585882+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703289+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19807,7 +20351,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585928+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703334+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19854,66 +20398,13 @@
       "forest_code": "tahoe-eldorado",
       "region": "R05",
       "state": "CA",
-      "project_name": "Pliocene Ridge Roadside Fuel Break",
-      "project_url": "https://www.fs.usda.gov/r05/tahoe/projects/67777",
-      "description": "Implement a combination of treatments to construct fuel breaks and remove hazard trees across approximately 3,000 acres of NFS lands along 35 miles of roads throughout the YRRD to mitigate the risk of wildfire to protect nearby communities.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.585993+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "03/27/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "08/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "08/2025 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Decision Memo",
-      "ce_citation": "32.3(11)",
-      "location_summary": "Located east of Pike City, California along approximately 34 miles of the Pliocene Ridge, Henness Pass and Mountain House Roads and along NFS Roads 07, 12, 54, and 98.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-09",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "03/27/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "08/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "08/2025 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "Tahoe & Eldorado National Forests",
-      "forest_code": "tahoe-eldorado",
-      "region": "R05",
-      "state": "CA",
       "project_name": "Shirttail Forest Restoration Project",
       "project_url": "https://www.fs.usda.gov/r05/tahoe/projects/298775",
       "description": "Thinning and sanitation harvest, road actions, remove hazardous fuels, reforestation, control competing vegetation, restore water sources or infrastructure, and Project-specific amendments to the Forest Plan.",
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.586041+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703378+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19951,7 +20442,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.586086+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703420+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -20004,7 +20495,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.586130+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703468+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -20057,7 +20548,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.586174+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703511+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20095,7 +20586,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.586218+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703554+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -20153,7 +20644,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.586264+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703596+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20191,7 +20682,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.586309+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703639+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20229,7 +20720,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.586354+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703682+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -20283,11 +20774,11 @@
       "state": "CA",
       "project_name": "Tahoe National Forest E-Bike Trail Designation",
       "project_url": "https://www.fs.usda.gov/r05/tahoe/projects/302695",
-      "description": "Proposed designation of select trails as open to Class 1 E-Bikes within Tahoe National Forest. ELMS Project ID# 302695. (Was originally PALS Project ID# 66218.)",
+      "description": "Proposed designation of select trails as open to Class 1 E-Bikes within Tahoe National Forest. ELMS Project ID# 302695. (Was originally PALS Project ID# 66218.) https://www.fs.usda.gov/r05/tahoe/projects/302695",
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.586399+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703725+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20296,7 +20787,7 @@
         },
         {
           "milestone": "Finding/Decision Date",
-          "date": "",
+          "date": "9/23/2026",
           "estimated": false
         }
       ],
@@ -20309,7 +20800,7 @@
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
-          "date": "",
+          "date": "9/23/2026",
           "estimated": false
         }
       ]
@@ -20325,7 +20816,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.586444+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703768+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -20393,7 +20884,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.586488+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703810+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -20446,7 +20937,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.586532+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703852+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -20494,7 +20985,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:08:24.586576+00:00",
+      "scraped_at": "2026-09-24T18:31:38.703894+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20518,378 +21009,6 @@
           "milestone": "Finding/Decision Date",
           "date": "6/12/2026",
           "estimated": false
-        }
-      ]
-    },
-    {
-      "forest_name": "Tahoe & Eldorado National Forests",
-      "forest_code": "tahoe-eldorado",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Caldor Fire Restoration Project & Herbicide Use",
-      "project_url": "https://www.fs.usda.gov/r05/eldorado/projects/caldor-fire-restoration-project-herbicide-use",
-      "description": "Due to hazardous and rapidly deteriorating post-fire conditions, the Caldor Fire Restoration Project received an Emergency Action Determination that allows an estimated 42,431 acres may be treated with herbicides and other treatments to support reforestation and hazardous fuels mitigation in fuel breaks.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:08:30.709491+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-06",
-      "most_recent_activity": []
-    },
-    {
-      "forest_name": "Tahoe & Eldorado National Forests",
-      "forest_code": "tahoe-eldorado",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Amador Aspen Restoration Project",
-      "project_url": "https://www.fs.usda.gov/r05/eldorado/projects/66709",
-      "description": "Remove encroaching conifers to reestablish historic Aspen stands on the Amador Ranger District of the Eldorado National Forest.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:08:30.709578+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "12/13/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "06/2026 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Decision Memo",
-      "ce_citation": "32.2 (25), 36 Cfr 220.6(E)(25)",
-      "location_summary": "Aspen stands eligible for treatment activities are generally at the edge of meadows throughout the Amador Ranger District.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "12/13/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "06/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "06/2026 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "Tahoe & Eldorado National Forests",
-      "forest_code": "tahoe-eldorado",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Caldor Fire Restoration Project",
-      "project_url": "https://www.fs.usda.gov/r05/eldorado/projects/63359",
-      "description": "The Project will reduce the risk of uncharacteristic or catastrophic wildfires, restore severely burned areas, and repair fire damaged infrastructure. Maximum Extent Scenario decision under Forest Health and Fuels ESD signed December 2025.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:08:30.709625+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "05/17/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Comment Period",
-          "date": "08/28/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2025 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
-      "ce_citation": "",
-      "location_summary": "Within and adjacent to the Caldor Fire burn area within the Eldorado National Forest",
-      "accepting_comments": true,
-      "comment_deadline": "9/27/2024 11:59:59 PM (Pacific Standard Time)",
-      "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Comment Period",
-          "date": "08/28/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2025 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "Tahoe & Eldorado National Forests",
-      "forest_code": "tahoe-eldorado",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Caples Lake Snowmaking Line Replacement at Kirkwood Mountain Resort",
-      "project_url": "https://www.fs.usda.gov/r05/eldorado/projects/65297",
-      "description": "The project would replace approximately 2.2 miles (11,402 linear feet) of existing steel water line used to supply Kirkwood Mountain Resort with water for on-mountain snowmaking from Caples Lake to Chair 1.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:08:30.709673+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "07/10/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "04/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2026 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Decision Memo",
-      "ce_citation": "32.2 (3), 36 Cfr 220.6(E)(3)",
-      "location_summary": "The existing line lies between Caples Lake and Chair 1 of Kirkwood Mountain Resort, on the Amador Ranger District of the Eldorado National Forest, in Amador County, California.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "07/10/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "04/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2026 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "Tahoe & Eldorado National Forests",
-      "forest_code": "tahoe-eldorado",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Eldorado National Forest Over Snow Vehicle Use Designation",
-      "project_url": "https://www.fs.usda.gov/r05/eldorado/projects/299279",
-      "description": "Proposal to designate over-snow vehicle (OSV) areas and trails for public OSV use, consistent with Subpart C of the Travel Management Regulations, and identify OSV trails where grooming will occur.  PALS # 46034.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:08:30.709718+00:00",
-      "milestones": [
-        {
-          "milestone": "NEPA Start Date",
-          "date": "2/27/2015",
-          "estimated": false
-        },
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "",
-          "estimated": false
-        }
-      ],
-      "analysis_type": "Environmental Impact Statement",
-      "ce_citation": "",
-      "location_summary": "Approximately 337,000 acres of National Forest System lands within the Eldorado National Forest would be designated for public cross-country OSV use.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-06",
-      "most_recent_activity": [
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "",
-          "estimated": false
-        }
-      ]
-    },
-    {
-      "forest_name": "Tahoe & Eldorado National Forests",
-      "forest_code": "tahoe-eldorado",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Elkins Flat Trail Maintenance",
-      "project_url": "https://www.fs.usda.gov/r05/eldorado/projects/66351",
-      "description": "Trail maintenance work using hand tools and a mini excavator to trim overgrown vegetation, conduct trail tread work, construct drainages, and minor trail realignment where necessary due to extensive erosion.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:08:30.709762+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "06/04/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "06/2024 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "06/2024 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Decision Memo",
-      "ce_citation": "32.12 (4), 36 Cfr 220.6(D)(4)",
-      "location_summary": "Elkins Flat OHV Trail is located within the Placerville Ranger District of the Eldorado National Forest in El Dorado County, California.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "06/04/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "06/2024 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "06/2024 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "Tahoe & Eldorado National Forests",
-      "forest_code": "tahoe-eldorado",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Long Canyon Watershed Protection",
-      "project_url": "https://www.fs.usda.gov/r05/eldorado/projects/291548",
-      "description": "Eldorado NF with PCWA propose a landscape project in the MF American River watershed headwaters for long-term forest health, resilience, & sustainability; to protect natural & cultural resources; & to protect utility infrastructure. https://usfs-public.box.com/s/m4u1mz1bk4a19yhr6winapo3t4x27v5m",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:08:30.709809+00:00",
-      "milestones": [
-        {
-          "milestone": "NEPA Start Date",
-          "date": "8/3/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "",
-          "estimated": false
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
-      "ce_citation": "",
-      "location_summary": "Long Canyon watershed, headwaters of the Middle Fork American River",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-06",
-      "most_recent_activity": [
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "",
-          "estimated": false
-        }
-      ]
-    },
-    {
-      "forest_name": "Tahoe & Eldorado National Forests",
-      "forest_code": "tahoe-eldorado",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Mosquito Wildfire Resilience Project",
-      "project_url": "https://www.fs.usda.gov/r05/eldorado/projects/66160",
-      "description": "Fuels & Forest Health EAD approved. Restoration activities: fuels management, harvest & disposal of fire killed trees, reforestation, repair of damaged roads infrastructure. Landscape-level prescribed fire includes mechanical txts & weed txts.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:08:30.709898+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "07/14/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Comment Period",
-          "date": "02/09/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "04/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2026 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
-      "ce_citation": "",
-      "location_summary": "Primarily within Mosquito Fire footprint on the Eldorado NF.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Comment Period",
-          "date": "02/09/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "04/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2026 (Estimated)",
-          "estimated": true
         }
       ]
     },
@@ -23698,7 +23817,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:04.252345+00:00",
+      "scraped_at": "2026-09-24T18:33:23.629059+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -23751,7 +23870,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:04.252400+00:00",
+      "scraped_at": "2026-09-24T18:33:23.629120+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -23804,7 +23923,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:04.252442+00:00",
+      "scraped_at": "2026-09-24T18:33:23.629169+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -23842,7 +23961,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:04.252481+00:00",
+      "scraped_at": "2026-09-24T18:33:23.629216+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -23895,7 +24014,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:04.252520+00:00",
+      "scraped_at": "2026-09-24T18:33:23.629285+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -23933,7 +24052,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:04.252559+00:00",
+      "scraped_at": "2026-09-24T18:33:23.629334+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -23980,13 +24099,51 @@
       "forest_code": "lospadres",
       "region": "R05",
       "state": "CA",
+      "project_name": "Mount Pinos Forest Health Project -  PALS #58380",
+      "project_url": "https://www.fs.usda.gov/r05/lospadres/projects/293807",
+      "description": "Healthy Forest thinning project designed to improve the health and vigor of the existing stands and to make the stands more resilient to stressors such as drought, insects & wildfire.",
+      "status": "",
+      "unit": "",
+      "purpose": "",
+      "scraped_at": "2026-09-24T18:33:23.629379+00:00",
+      "milestones": [
+        {
+          "milestone": "NEPA Start Date",
+          "date": "3/30/2021",
+          "estimated": false
+        },
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "",
+          "estimated": false
+        }
+      ],
+      "analysis_type": "Categorical Exclusion",
+      "ce_citation": "Section 605 of HFRA (16 U.S.C.6591d)",
+      "location_summary": "The project is located on the Mount Pinos Ranger District with the western most boundary being near the Chula Vista Campground the eastern boundary which is close to Cuddy Valley.",
+      "accepting_comments": false,
+      "comment_deadline": "",
+      "first_seen": "2026-05-28",
+      "most_recent_activity": [
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "",
+          "estimated": false
+        }
+      ]
+    },
+    {
+      "forest_name": "Los Padres National Forest",
+      "forest_code": "lospadres",
+      "region": "R05",
+      "state": "CA",
       "project_name": "Pothole Trail (18W04) Reroute",
       "project_url": "https://www.fs.usda.gov/r05/lospadres/projects/67492",
       "description": "Reroute 3.1 miles of the existing Pothole Trail from it's junction with Piru Canyon Road to the Sespe Wilderness boundary to create a more sustainable, user-friendly trailway that meets Forest Service trail standards.",
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:04.252634+00:00",
+      "scraped_at": "2026-09-24T18:33:23.629424+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -24039,7 +24196,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:04.252670+00:00",
+      "scraped_at": "2026-09-24T18:33:23.629469+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -24092,7 +24249,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:04.252707+00:00",
+      "scraped_at": "2026-09-24T18:33:23.629515+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -24150,7 +24307,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:04.252745+00:00",
+      "scraped_at": "2026-09-24T18:33:23.629561+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -24203,7 +24360,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:04.252785+00:00",
+      "scraped_at": "2026-09-24T18:33:23.629606+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -24235,551 +24392,13 @@
       "forest_code": "socal",
       "region": "R05",
       "state": "CA",
-      "project_name": "Administrative Sites Defense Zones Project",
-      "project_url": "https://www.fs.usda.gov/r05/angeles/projects/52442",
-      "description": "ANF proposes to improve and maintain defense zones for administrative sites.  Sites include recreation residences, communication sites, and campgrounds that currently lack adequate defensible space for protection from unwanted effects of wildfire.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:16:14.908276+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "11/03/2017",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "11/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "01/2026 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Decision Memo",
-      "ce_citation": "32.12 (3), 36 Cfr 220.6(D)(3); 32.12 (4), 36 Cfr 220.6(D)(4); 32.12 (5), 36 Cfr 220.6(D)(5)",
-      "location_summary": "See map on project page.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "11/03/2017",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "11/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "01/2026 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "Southern CA National Forests",
-      "forest_code": "socal",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Angeles National Forest Recreation Site Improvements",
-      "project_url": "https://www.fs.usda.gov/r05/angeles/projects/67813",
-      "description": "Forest will demolish and remove buildings at Chilao, Wildwood and Oak Flat.   Los Cantiles Site will be removed and decommissioned. Toilet buildings will be replaced at Horse Flat, Bandido, and Millard.  All work occurs within existing devloped sites",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:16:14.908340+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "04/14/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "10/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "11/2025 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Decision Memo",
-      "ce_citation": "32.2 (22), 36 Cfr 220.6(E)(22)",
-      "location_summary": "Project occurs at sites across the Angeles National Forest, from Interstate 5, to the Pasadena front country, to the higher elevations along Angeles Crest Highway.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "04/14/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "10/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "11/2025 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "Southern CA National Forests",
-      "forest_code": "socal",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Chantry Flat Recreation Area Rehabilitation Project",
-      "project_url": "https://www.fs.usda.gov/r05/angeles/projects/64184",
-      "description": "Parking lot asphalt and restriping, accessibility improvements, Rec Site amenity maintenance/replacements, water well head system improvement, roof replacement for NRHP eligible restroom building, & repair of fencing and signage damaged by fire",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:16:14.908388+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "05/2023 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Decision",
-          "date": "05/2023 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "08/2023 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Decision Memo",
-      "ce_citation": "32.12 (5), 36 Cfr 220.6(D)(5); 32.2 (11), 36 Cfr 220.6(E)(11); 32.2 (22), 36 Cfr 220.6(E)(22)",
-      "location_summary": "Angeles National Forest (ANF) on the Los Angeles Gateway Ranger District on Santa Anita Canyon Road, approximately 5.1 miles north of the ANF Headquarters. Lat/Long: 34?11'44.24\"N, 118? 1'21.14\"W",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "05/2023 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Decision",
-          "date": "05/2023 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "Southern CA National Forests",
-      "forest_code": "socal",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Gateway_Sunland_Fuel Project",
-      "project_url": "https://www.fs.usda.gov/r05/angeles/projects/67373",
-      "description": "This project will reduce the buildup of hazardous fuels adjacent to the foothill communities of Sunland and Tujunga providing increased defensible space within the Wildland Urban Interface (WUI) areas.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:16:14.908434+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "03/25/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "04/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2025 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Decision Memo",
-      "ce_citation": "32.3 (9); 32.2 (23), 36 Cfr 220.6(E)(23); 32.2 (25), 36 Cfr 220.6(E)(25); 32.3(11)",
-      "location_summary": "Sunland is located approximately 26 miles from Los Angeles and sits at the base of the San Gabriel Mountains north of the 210 freeway, along forest road 2N86",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "03/25/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "04/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2025 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "Southern CA National Forests",
-      "forest_code": "socal",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Goldspotted Oak Borer (GSOB) Management Across At Risk Areas (M.A.A.R.A.)",
-      "project_url": "https://www.fs.usda.gov/r05/angeles/projects/58139",
-      "description": "Having a GSOB treatment plan based on topography, road distance, recreational uses, special uses, and a corresponding site-specific management plan is critical to the rapid assessment and treatment of newly discovered infestations.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:16:14.908533+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "05/06/2020",
-          "estimated": false
-        },
-        {
-          "milestone": "Comment Period",
-          "date": "05/07/2020",
-          "estimated": false
-        },
-        {
-          "milestone": "Objection Period Start",
-          "date": "09/02/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "10/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "10/2025 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
-      "ce_citation": "",
-      "location_summary": "Approximately 4,680 acres (see map).",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Objection Period Start",
-          "date": "09/02/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "10/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "10/2025 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "Southern CA National Forests",
-      "forest_code": "socal",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Mobile Relay Associates Project at Whitaker Ridge Comm Site",
-      "project_url": "https://www.fs.usda.gov/r05/angeles/projects/59203",
-      "description": "MRA requested to obtain a SUP for a two-way radio communication tower at Whitaker Ridge adjacent to the LA-RICS Facility.  It includes a freestanding shelter and attached mounting within the existing chain-link fence on site.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:16:14.908581+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "02/25/2021",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2021 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2022 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Decision Memo",
-      "ce_citation": "32.2 (3), 36 Cfr 220.6(E)(3)",
-      "location_summary": "T6N, R17W, Sec-30, San Bernardino Meridian",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "02/25/2021",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2021 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2022 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "Southern CA National Forests",
-      "forest_code": "socal",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Laguna Mountain Forest Restoration",
-      "project_url": "https://www.fs.usda.gov/r05/cleveland/projects/300563",
-      "description": "This project is designed to support Fireshed Risk Reduction and Climate-Adapted Conservation through treatments for Reforestation, Post-Wildfire Forest Health, Pre-Wildfire Forest Health, Prescribed Fire and Hazardous Fuels Reduction.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:16:19.330026+00:00",
-      "milestones": [
-        {
-          "milestone": "NEPA Start Date",
-          "date": "",
-          "estimated": false
-        },
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "",
-          "estimated": false
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
-      "ce_citation": "",
-      "location_summary": "East of Descanso California, North of Interstate 8.",
-      "accepting_comments": true,
-      "comment_deadline": "9/27/2026 11:59:59 PM (Pacific Standard Time)",
-      "first_seen": "2026-09-06",
-      "most_recent_activity": [
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "",
-          "estimated": false
-        }
-      ]
-    },
-    {
-      "forest_name": "Southern CA National Forests",
-      "forest_code": "socal",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "SCIRP Highway 74",
-      "project_url": "https://www.fs.usda.gov/r05/cleveland/projects/253186",
-      "description": "The primary focus of the project is to reduce the risk of ignition along the State Highway System. This document covers treatment only on NFS land adjacent to Highway 74 from milepost 12.7 to 16.6.  FANEC was signed on 04/14/2026. Data was lost in ELMS after signature and had to be recreated.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:16:19.330091+00:00",
-      "milestones": [
-        {
-          "milestone": "NEPA Start Date",
-          "date": "7/28/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "4/14/2026",
-          "estimated": false
-        }
-      ],
-      "analysis_type": "Categorical Exclusion",
-      "ce_citation": "Pub. L. 117-58, Sec. 40806",
-      "location_summary": "The SR-74 WABs encompass approximately 23.25 acres within 4.5 linear miles and include roadside areas extending approximately 30 feet from the edge of pavement along the shoulders of both the eastbound and westbound travel lanes and medians between approximately postmile (PM) 12.5 and PM 17 ending at the Riverside County line.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-06",
-      "most_recent_activity": [
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "4/14/2026",
-          "estimated": false
-        }
-      ]
-    },
-    {
-      "forest_name": "Southern CA National Forests",
-      "forest_code": "socal",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "SCIRP Interstate 8",
-      "project_url": "https://www.fs.usda.gov/r05/cleveland/projects/256747",
-      "description": "The primary focus of the project is to reduce the risk of ignition along the State Highway System. Project is approximately 37.65 discontinuous acres between approximately postmile (PM) 35 and PM 48. FANEC was signed on 04/13/2026. Data was lost in ELMS after signature and had to be recreated.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:16:19.330139+00:00",
-      "milestones": [
-        {
-          "milestone": "NEPA Start Date",
-          "date": "7/28/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "4/13/2026",
-          "estimated": false
-        }
-      ],
-      "analysis_type": "Categorical Exclusion",
-      "ce_citation": "Pub. L. 117-58, Sec. 40806",
-      "location_summary": "The I-8 WABs encompass approximately 37.75 acres within 17 discontinuous linear miles and are comprised of numerous discrete roadside areas that extend approximately 30 feet from the edge of pavement along the shoulders of both the eastbound and westbound travel lanes, as well as portions of the center median, between approximately postmile (PM) 34 and PM 51.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-06",
-      "most_recent_activity": [
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "4/13/2026",
-          "estimated": false
-        }
-      ]
-    },
-    {
-      "forest_name": "Southern CA National Forests",
-      "forest_code": "socal",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Sill Hill Range Allotment",
-      "project_url": "https://www.fs.usda.gov/r05/cleveland/projects/66932",
-      "description": "This project will analyze a historic grazing allotment that is not currently authorized for viability of grazing approximately 150 head months.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:16:19.330185+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "12/20/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "Comment Period",
-          "date": "07/11/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Objection Period Start",
-          "date": "08/12/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "10/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "10/2025 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
-      "ce_citation": "",
-      "location_summary": "Allotment would include portions of the historic Sill Hill and Pine Hills allotments and the natural grassland areas along Boulder Creek Road between the Inaja Reservation and Three Sisters trailhead.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Objection Period Start",
-          "date": "08/12/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "10/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "10/2025 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "Southern CA National Forests",
-      "forest_code": "socal",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Trabuco Road and Bridge Stabilization",
-      "project_url": "https://www.fs.usda.gov/r05/cleveland/projects/237293",
-      "description": "Project to protect Trabuco Creek Road and associated bridges and arches from damage resulting from altered hydrology and increased sedimentation after the 2024 Airport Fire.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-22T22:16:19.330231+00:00",
-      "milestones": [
-        {
-          "milestone": "NEPA Start Date",
-          "date": "3/9/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "",
-          "estimated": false
-        }
-      ],
-      "analysis_type": "Categorical Exclusion",
-      "ce_citation": "USDA-01d-FSA",
-      "location_summary": "Township: 6S, Range: 6W, Sections: 4-6. Work will occur on and adjacent to Trabuco Canyon Road (6S13) and Holy Jim Road (6S14) located within the Trabuco Ranger District of the Cleveland National Forest.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-09-06",
-      "most_recent_activity": [
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "",
-          "estimated": false
-        }
-      ]
-    },
-    {
-      "forest_name": "Southern CA National Forests",
-      "forest_code": "socal",
-      "region": "R05",
-      "state": "CA",
       "project_name": "Big Bear Mountain Resort Master Development Plan Projects",
       "project_url": "https://www.fs.usda.gov/r05/sanbernardino/projects/283463",
       "description": "Expand and connect Bear Mountain and Snow Summit SUP boundaries; grade trails and terminals; tree clearing; install two lifts, ski trails, beginner pod and connector, snowmaking lines and pond, summer activities, road, and ski bridge.",
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:16:23.457290+00:00",
+      "scraped_at": "2026-09-24T18:34:13.637160+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -24817,7 +24436,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:16:23.457352+00:00",
+      "scraped_at": "2026-09-24T18:34:13.637221+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -24880,7 +24499,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:16:23.457399+00:00",
+      "scraped_at": "2026-09-24T18:34:13.637293+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -24938,7 +24557,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:16:23.457445+00:00",
+      "scraped_at": "2026-09-24T18:34:13.637340+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -24991,7 +24610,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-22T22:16:23.457489+00:00",
+      "scraped_at": "2026-09-24T18:34:13.637388+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -25791,7 +25410,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.384392+00:00",
+      "scraped_at": "2026-09-24T18:34:50.196797+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -25844,7 +25463,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.384450+00:00",
+      "scraped_at": "2026-09-24T18:34:50.196860+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -25897,7 +25516,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.384492+00:00",
+      "scraped_at": "2026-09-24T18:34:50.196906+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -25950,7 +25569,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.384531+00:00",
+      "scraped_at": "2026-09-24T18:34:50.196951+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26013,7 +25632,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.384570+00:00",
+      "scraped_at": "2026-09-24T18:34:50.196995+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -26081,7 +25700,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.384609+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197040+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26144,7 +25763,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.384648+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197085+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26197,7 +25816,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.384687+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197128+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26260,7 +25879,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.384725+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197172+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26313,7 +25932,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.384762+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197216+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26366,7 +25985,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.384799+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197282+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -26434,7 +26053,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.384846+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197328+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26487,7 +26106,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.384884+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197373+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26540,7 +26159,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.384921+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197418+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26593,7 +26212,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.384959+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197462+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -26631,7 +26250,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.384997+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197506+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -26669,7 +26288,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385034+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197549+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -26707,7 +26326,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385072+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197593+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -26745,7 +26364,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385111+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197637+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -26783,7 +26402,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385150+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197680+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -26821,7 +26440,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385189+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197723+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -26859,7 +26478,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385228+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197766+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -26897,7 +26516,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385266+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197809+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26960,7 +26579,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385305+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197852+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -26998,7 +26617,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385344+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197895+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27036,7 +26655,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385387+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197937+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27074,7 +26693,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385426+00:00",
+      "scraped_at": "2026-09-24T18:34:50.197979+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27112,7 +26731,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385463+00:00",
+      "scraped_at": "2026-09-24T18:34:50.198021+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27150,7 +26769,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385499+00:00",
+      "scraped_at": "2026-09-24T18:34:50.198065+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27188,7 +26807,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385537+00:00",
+      "scraped_at": "2026-09-24T18:34:50.198108+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27226,7 +26845,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385574+00:00",
+      "scraped_at": "2026-09-24T18:34:50.198150+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27264,7 +26883,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385611+00:00",
+      "scraped_at": "2026-09-24T18:34:50.198193+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27302,7 +26921,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385648+00:00",
+      "scraped_at": "2026-09-24T18:34:50.198253+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27340,7 +26959,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385685+00:00",
+      "scraped_at": "2026-09-24T18:34:50.198300+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27378,7 +26997,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385722+00:00",
+      "scraped_at": "2026-09-24T18:34:50.198343+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27416,7 +27035,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385760+00:00",
+      "scraped_at": "2026-09-24T18:34:50.198384+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27454,7 +27073,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385796+00:00",
+      "scraped_at": "2026-09-24T18:34:50.198427+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27492,7 +27111,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-23T18:31:57.385842+00:00",
+      "scraped_at": "2026-09-24T18:34:50.198468+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
