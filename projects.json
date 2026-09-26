@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-09-25T18:43:18.695287+00:00",
-  "total_projects": 595,
+  "scraped_at": "2026-09-26T18:05:52.471694+00:00",
+  "total_projects": 604,
   "forests_scraped": 32,
   "projects": [
     {
@@ -14,7 +14,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.977937+00:00",
+      "scraped_at": "2026-09-26T17:31:07.314966+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -30,8 +30,8 @@
       "analysis_type": "Environmental Assessment",
       "ce_citation": "",
       "location_summary": "The Project Area, located within the Mount Baker Ranger District (MBRD), lies approximately 23 miles east of Bellingham, WA and 16 miles northeast of Sedro-Woolley, WA with some portions straddling the Skagit-Whatcom County line.",
-      "accepting_comments": true,
-      "comment_deadline": "9/25/2026 11:59:59 PM (Pacific Standard Time)",
+      "accepting_comments": false,
+      "comment_deadline": "",
       "first_seen": "2026-05-28",
       "most_recent_activity": [
         {
@@ -52,7 +52,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978022+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315046+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -110,7 +110,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978097+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315144+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -163,7 +163,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978176+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315201+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -201,7 +201,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978232+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315251+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -254,7 +254,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978282+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315299+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -292,7 +292,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978331+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315351+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -345,7 +345,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978385+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315403+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -398,7 +398,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978434+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315450+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -451,7 +451,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978484+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315499+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -489,7 +489,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978532+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315543+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -527,7 +527,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978578+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315588+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -580,7 +580,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978625+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315633+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -633,7 +633,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978672+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315679+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -671,7 +671,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978719+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315724+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -724,7 +724,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978765+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315768+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -777,7 +777,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978811+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315812+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -830,7 +830,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978860+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315860+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -883,7 +883,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978907+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315905+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -936,7 +936,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978952+00:00",
+      "scraped_at": "2026-09-26T17:31:07.315954+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -989,7 +989,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.978998+00:00",
+      "scraped_at": "2026-09-26T17:31:07.316000+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1042,7 +1042,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.979043+00:00",
+      "scraped_at": "2026-09-26T17:31:07.316045+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1090,7 +1090,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.979088+00:00",
+      "scraped_at": "2026-09-26T17:31:07.316110+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1128,7 +1128,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.979133+00:00",
+      "scraped_at": "2026-09-26T17:31:07.316158+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1166,7 +1166,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:09:19.979204+00:00",
+      "scraped_at": "2026-09-26T17:31:07.316202+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1219,7 +1219,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:01.328224+00:00",
+      "scraped_at": "2026-09-26T17:32:48.176732+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1257,7 +1257,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:01.328287+00:00",
+      "scraped_at": "2026-09-26T17:32:48.176795+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1310,7 +1310,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:01.328336+00:00",
+      "scraped_at": "2026-09-26T17:32:48.176842+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1363,7 +1363,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:01.328383+00:00",
+      "scraped_at": "2026-09-26T17:32:48.176887+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1416,7 +1416,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:01.328429+00:00",
+      "scraped_at": "2026-09-26T17:32:48.176932+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1454,7 +1454,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.833580+00:00",
+      "scraped_at": "2026-09-26T17:33:16.622997+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1507,7 +1507,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.833642+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623078+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1555,7 +1555,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.833689+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623134+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1613,7 +1613,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.833735+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623181+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1666,7 +1666,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.833778+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623226+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1704,7 +1704,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.833822+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623272+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1757,7 +1757,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.833865+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623317+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1810,7 +1810,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.833909+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623362+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1863,7 +1863,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.833955+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623410+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1901,7 +1901,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.834000+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623457+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1964,7 +1964,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.834043+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623501+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2002,7 +2002,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.834087+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623546+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2055,7 +2055,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.834129+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623590+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2108,7 +2108,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.834194+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623634+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2146,7 +2146,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.834238+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623678+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2184,7 +2184,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.834281+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623721+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2242,7 +2242,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.834325+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623764+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2280,7 +2280,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.834368+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623809+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2333,7 +2333,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.834411+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623853+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2371,7 +2371,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.834454+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623896+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2409,7 +2409,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.834496+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623938+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2447,7 +2447,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.834539+00:00",
+      "scraped_at": "2026-09-26T17:33:16.623982+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2500,7 +2500,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:11:28.834581+00:00",
+      "scraped_at": "2026-09-26T17:33:16.624024+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2553,7 +2553,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:02.312572+00:00",
+      "scraped_at": "2026-09-26T17:34:51.642376+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2606,7 +2606,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:02.312635+00:00",
+      "scraped_at": "2026-09-26T17:34:51.642440+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2659,7 +2659,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:02.312685+00:00",
+      "scraped_at": "2026-09-26T17:34:51.642487+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2697,7 +2697,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:02.312735+00:00",
+      "scraped_at": "2026-09-26T17:34:51.642533+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2735,7 +2735,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:02.312782+00:00",
+      "scraped_at": "2026-09-26T17:34:51.642577+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2773,7 +2773,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:02.312830+00:00",
+      "scraped_at": "2026-09-26T17:34:51.642622+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2811,7 +2811,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:02.312883+00:00",
+      "scraped_at": "2026-09-26T17:34:51.642667+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2849,7 +2849,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:02.312930+00:00",
+      "scraped_at": "2026-09-26T17:34:51.642711+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2887,7 +2887,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:02.312977+00:00",
+      "scraped_at": "2026-09-26T17:34:51.642755+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2925,7 +2925,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:02.313023+00:00",
+      "scraped_at": "2026-09-26T17:34:51.642800+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2963,7 +2963,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:02.313068+00:00",
+      "scraped_at": "2026-09-26T17:34:51.642844+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -3001,7 +3001,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:02.313114+00:00",
+      "scraped_at": "2026-09-26T17:34:51.642888+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -3444,7 +3444,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:55.562950+00:00",
+      "scraped_at": "2026-09-26T17:35:33.117277+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -3482,7 +3482,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:55.563094+00:00",
+      "scraped_at": "2026-09-26T17:35:33.117411+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3535,7 +3535,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:55.563157+00:00",
+      "scraped_at": "2026-09-26T17:35:33.117456+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3598,7 +3598,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:55.563208+00:00",
+      "scraped_at": "2026-09-26T17:35:33.117502+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3651,7 +3651,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:55.563254+00:00",
+      "scraped_at": "2026-09-26T17:35:33.117547+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3704,7 +3704,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:55.563298+00:00",
+      "scraped_at": "2026-09-26T17:35:33.117591+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -3767,7 +3767,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:55.563341+00:00",
+      "scraped_at": "2026-09-26T17:35:33.117636+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -3835,7 +3835,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:55.563385+00:00",
+      "scraped_at": "2026-09-26T17:35:33.117681+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3898,7 +3898,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:55.563428+00:00",
+      "scraped_at": "2026-09-26T17:35:33.117726+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -3966,7 +3966,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:55.563473+00:00",
+      "scraped_at": "2026-09-26T17:35:33.117771+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4019,7 +4019,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:55.563517+00:00",
+      "scraped_at": "2026-09-26T17:35:33.117815+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4068,7 +4068,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:55.563561+00:00",
+      "scraped_at": "2026-09-26T17:35:33.117859+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4131,7 +4131,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:55.563604+00:00",
+      "scraped_at": "2026-09-26T17:35:33.117903+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4184,7 +4184,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:13:55.563649+00:00",
+      "scraped_at": "2026-09-26T17:35:33.117946+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4212,6 +4212,476 @@
       ]
     },
     {
+      "forest_name": "Nez Perce-CW & Idaho Panhandle",
+      "forest_code": "nezperce-ipnf",
+      "region": "R01",
+      "state": "ID",
+      "project_name": "Bonehead Hill Blowdown Salvage",
+      "project_url": "https://www.fs.usda.gov/r01/idahopanhandle/projects/294259",
+      "description": "We propose to salvage currently identified blown down and damaged trees near Avery, Idaho in response to a severe wind event in December 2025 that caused substantial mortality and damage to forested vegetation.",
+      "status": "",
+      "unit": "",
+      "purpose": "",
+      "scraped_at": "2026-09-26T17:35:37.965176+00:00",
+      "milestones": [
+        {
+          "milestone": "NEPA Start Date",
+          "date": "6/8/2026",
+          "estimated": false
+        },
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "7/2/2026",
+          "estimated": false
+        }
+      ],
+      "analysis_type": "Environmental Assessment",
+      "ce_citation": "",
+      "location_summary": "The Project is located five to seven miles south and southeast of Avery, Idaho in the vicinity of Jacksons Knob, Bonehead Hill, Sisters Creek, Siwash Creek, Blue Grouse Cree, Shoepack Creek and East Fork Fishhook Creek.",
+      "accepting_comments": false,
+      "comment_deadline": "",
+      "first_seen": "2026-09-06",
+      "most_recent_activity": [
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "7/2/2026",
+          "estimated": false
+        }
+      ]
+    },
+    {
+      "forest_name": "Nez Perce-CW & Idaho Panhandle",
+      "forest_code": "nezperce-ipnf",
+      "region": "R01",
+      "state": "ID",
+      "project_name": "Chloride Gold Restoration",
+      "project_url": "https://www.fs.usda.gov/r01/idahopanhandle/projects/305838",
+      "description": "The primary focus of this project would be initiating the restoration of ecosystem components in the project area where prudent and economically feasible, as well as guiding the project towards objectives listed in the Idaho Panhandle National Forests Land Management Plan.",
+      "status": "",
+      "unit": "",
+      "purpose": "",
+      "scraped_at": "2026-09-26T17:35:37.965223+00:00",
+      "milestones": [
+        {
+          "milestone": "NEPA Start Date",
+          "date": "",
+          "estimated": false
+        },
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "",
+          "estimated": false
+        }
+      ],
+      "analysis_type": "Environmental Assessment",
+      "ce_citation": "",
+      "location_summary": "Adjacent to the southeast part of Lake Pend Oreille",
+      "accepting_comments": false,
+      "comment_deadline": "",
+      "first_seen": "2026-09-06",
+      "most_recent_activity": [
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "",
+          "estimated": false
+        }
+      ]
+    },
+    {
+      "forest_name": "Nez Perce-CW & Idaho Panhandle",
+      "forest_code": "nezperce-ipnf",
+      "region": "R01",
+      "state": "ID",
+      "project_name": "Granite Fuels",
+      "project_url": "https://www.fs.usda.gov/r01/idahopanhandle/projects/66722",
+      "description": "To reduce the risk of uncharacteristically severe wildfire and influence how wildfire and other disturbances shape the landscape the Forest Service proposes to authorize prescribed burns on up to 10,000 acres over the next 10 years.",
+      "status": "",
+      "unit": "",
+      "purpose": "",
+      "scraped_at": "2026-09-26T17:35:37.965267+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "10/01/2024",
+          "estimated": false
+        },
+        {
+          "milestone": "Comment Period",
+          "date": "10/16/2024",
+          "estimated": false
+        },
+        {
+          "milestone": "Objection Period Start",
+          "date": "01/01/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "10/2025 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2026 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Environmental Assessment",
+      "ce_citation": "",
+      "location_summary": "The project is located in the southeastern corner of the St. Joe Ranger District in Shoshone County. Most of the project area consists of Recommended Wilderness and Backcountry Areas.",
+      "accepting_comments": false,
+      "comment_deadline": "",
+      "first_seen": "2026-09-07",
+      "most_recent_activity": [
+        {
+          "milestone": "Objection Period Start",
+          "date": "01/01/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "10/2025 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2026 (Estimated)",
+          "estimated": true
+        }
+      ]
+    },
+    {
+      "forest_name": "Nez Perce-CW & Idaho Panhandle",
+      "forest_code": "nezperce-ipnf",
+      "region": "R01",
+      "state": "ID",
+      "project_name": "Halfway Malin Blowdown Salvage",
+      "project_url": "https://www.fs.usda.gov/r01/idahopanhandle/projects/251744",
+      "description": "This project proposes to implement salvage activities in areas affected by a recent blowdown event. Windthrow resulted in concentrations of downed and damaged trees that present elevated risks related to insect infestation, hazardous fuel loading, and public and firefighter safety.",
+      "status": "",
+      "unit": "",
+      "purpose": "",
+      "scraped_at": "2026-09-26T17:35:37.965311+00:00",
+      "milestones": [
+        {
+          "milestone": "NEPA Start Date",
+          "date": "3/17/2026",
+          "estimated": false
+        },
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "5/28/2026",
+          "estimated": false
+        }
+      ],
+      "analysis_type": "Categorical Exclusion",
+      "ce_citation": "USDA-36d-USFS",
+      "location_summary": "Approximately 12 miles east of Avery, Idaho, between Malin and Eagle Creeks, primarily within the previous Halfway Malin EA NEPA decision.",
+      "accepting_comments": false,
+      "comment_deadline": "",
+      "first_seen": "2026-09-06",
+      "most_recent_activity": [
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "5/28/2026",
+          "estimated": false
+        }
+      ]
+    },
+    {
+      "forest_name": "Nez Perce-CW & Idaho Panhandle",
+      "forest_code": "nezperce-ipnf",
+      "region": "R01",
+      "state": "ID",
+      "project_name": "IPNF Forest-wide Prescribed Fire",
+      "project_url": "https://www.fs.usda.gov/r01/idahopanhandle/projects/306272",
+      "description": "The project proposes to increase the application of prescribed fire across landscapes to reduce the risk of uncharacteristically severe and large wildfires, promote forest resiliency, and reduce impact risk on local communities and valued resources.",
+      "status": "",
+      "unit": "",
+      "purpose": "",
+      "scraped_at": "2026-09-26T17:35:37.965355+00:00",
+      "milestones": [
+        {
+          "milestone": "NEPA Start Date",
+          "date": "8/18/2026",
+          "estimated": false
+        },
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "",
+          "estimated": false
+        }
+      ],
+      "analysis_type": "Environmental Assessment",
+      "ce_citation": "",
+      "location_summary": "Forest-wide on the IPNF except for certain Management Areas (MAs) that are excluded, and excluding the Granite Fuels project area.",
+      "accepting_comments": false,
+      "comment_deadline": "",
+      "first_seen": "2026-09-06",
+      "most_recent_activity": [
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "",
+          "estimated": false
+        }
+      ]
+    },
+    {
+      "forest_name": "Nez Perce-CW & Idaho Panhandle",
+      "forest_code": "nezperce-ipnf",
+      "region": "R01",
+      "state": "ID",
+      "project_name": "Katkee Fuels",
+      "project_url": "https://www.fs.usda.gov/r01/idahopanhandle/projects/65300",
+      "description": "Reduce hazardous fuels and address the concerns of our communities and partners; the IPNF is considering activities that will create fuel breaks along private land, infrastructure, and egress routes adjacent to priority firesheds.",
+      "status": "",
+      "unit": "",
+      "purpose": "",
+      "scraped_at": "2026-09-26T17:35:37.965399+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "02/02/2024",
+          "estimated": false
+        },
+        {
+          "milestone": "Comment Period",
+          "date": "06/23/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "11/2025 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "07/2026 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Environmental Assessment",
+      "ce_citation": "",
+      "location_summary": "Located within the Bonners Ferry Ranger District about seven miles southeast of Bonners Ferry.",
+      "accepting_comments": false,
+      "comment_deadline": "",
+      "first_seen": "2026-09-07",
+      "most_recent_activity": [
+        {
+          "milestone": "Comment Period",
+          "date": "06/23/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "11/2025 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "07/2026 (Estimated)",
+          "estimated": true
+        }
+      ]
+    },
+    {
+      "forest_name": "Nez Perce-CW & Idaho Panhandle",
+      "forest_code": "nezperce-ipnf",
+      "region": "R01",
+      "state": "ID",
+      "project_name": "Lacy Lemoosh",
+      "project_url": "https://www.fs.usda.gov/r01/idahopanhandle/projects/60853",
+      "description": "Vegetation management activities, including timber harvest, road construction, prescribed burning and tree planting.",
+      "status": "",
+      "unit": "",
+      "purpose": "",
+      "scraped_at": "2026-09-26T17:35:37.965442+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "04/27/2023",
+          "estimated": false
+        },
+        {
+          "milestone": "Comment Period",
+          "date": "08/29/2024",
+          "estimated": false
+        },
+        {
+          "milestone": "Objection Period Start",
+          "date": "02/14/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2025 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2025 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Environmental Assessment",
+      "ce_citation": "",
+      "location_summary": "The project area is located south of Emida, Idaho in the Charlie Creek drainage.",
+      "accepting_comments": false,
+      "comment_deadline": "",
+      "first_seen": "2026-09-07",
+      "most_recent_activity": [
+        {
+          "milestone": "Objection Period Start",
+          "date": "02/14/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2025 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2025 (Estimated)",
+          "estimated": true
+        }
+      ]
+    },
+    {
+      "forest_name": "Nez Perce-CW & Idaho Panhandle",
+      "forest_code": "nezperce-ipnf",
+      "region": "R01",
+      "state": "ID",
+      "project_name": "Lookout Fuels Management",
+      "project_url": "https://www.fs.usda.gov/r01/idahopanhandle/projects/274339",
+      "description": "The project proposes to reduce hazardous fuel loading and the extent of insects and disease through salvage and fuels reduction activities on 560 acres within and adjacent to Lookout Pass Ski and Recreation Area.",
+      "status": "",
+      "unit": "",
+      "purpose": "",
+      "scraped_at": "2026-09-26T17:35:37.965486+00:00",
+      "milestones": [
+        {
+          "milestone": "NEPA Start Date",
+          "date": "4/27/2026",
+          "estimated": false
+        },
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "6/2/2026",
+          "estimated": false
+        }
+      ],
+      "analysis_type": "Categorical Exclusion",
+      "ce_citation": "Section 603 of HFRA (16 U.S.C. 6591b)",
+      "location_summary": "Lookout Pass Ski and Recreation Area near Mullan, Idaho in Shoshone County, Idaho and  Mineral County, Montana.",
+      "accepting_comments": false,
+      "comment_deadline": "",
+      "first_seen": "2026-09-06",
+      "most_recent_activity": [
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "6/2/2026",
+          "estimated": false
+        }
+      ]
+    },
+    {
+      "forest_name": "Nez Perce-CW & Idaho Panhandle",
+      "forest_code": "nezperce-ipnf",
+      "region": "R01",
+      "state": "ID",
+      "project_name": "Moyie Meadow",
+      "project_url": "https://www.fs.usda.gov/r01/idahopanhandle/projects/135823",
+      "description": "This project will create a fuel break on National Forest lands in Boundary County with the intention to reduce wildfire severity by thinning and burning along roads and powerlines, to help protect communities and create a safer area for firefighters.",
+      "status": "",
+      "unit": "",
+      "purpose": "",
+      "scraped_at": "2026-09-26T17:35:37.965530+00:00",
+      "milestones": [
+        {
+          "milestone": "NEPA Start Date",
+          "date": "10/29/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "4/24/2026",
+          "estimated": false
+        }
+      ],
+      "analysis_type": "Categorical Exclusion",
+      "ce_citation": "Pub. L. 117-58, Sec. 40806",
+      "location_summary": "Moyie River and Meadow Creek County Roads, from Highway 2 north to Highway 95. Some powerline treatment proposed along Deer Creek and Perkins Lake Rd. Project Documents available at https://usfs.app.box.com/folder/378932629409",
+      "accepting_comments": false,
+      "comment_deadline": "",
+      "first_seen": "2026-09-06",
+      "most_recent_activity": [
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "4/24/2026",
+          "estimated": false
+        }
+      ]
+    },
+    {
+      "forest_name": "Nez Perce-CW & Idaho Panhandle",
+      "forest_code": "nezperce-ipnf",
+      "region": "R01",
+      "state": "ID",
+      "project_name": "Sandpoint South",
+      "project_url": "https://www.fs.usda.gov/r01/idahopanhandle/projects/67684",
+      "description": "Reduce hazardous fuels through fuels and vegetation treatment in the vicinity of communities and values at risk to move forest health and ecological functions towards desired conditions and objectives identified in the 2015 Idaho Plan.",
+      "status": "",
+      "unit": "",
+      "purpose": "",
+      "scraped_at": "2026-09-26T17:35:37.965574+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "03/20/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Comment Period",
+          "date": "06/27/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "12/2025 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "08/2026 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Environmental Assessment",
+      "ce_citation": "",
+      "location_summary": "The project area is near the town of Sandpoint, Idaho, along Highway 95 and Lake Pend Oreille, in Bonner County.",
+      "accepting_comments": false,
+      "comment_deadline": "",
+      "first_seen": "2026-09-07",
+      "most_recent_activity": [
+        {
+          "milestone": "Comment Period",
+          "date": "06/27/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "12/2025 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "08/2026 (Estimated)",
+          "estimated": true
+        }
+      ]
+    },
+    {
       "forest_name": "Boise & Payette National Forests",
       "forest_code": "boise-payette",
       "region": "R04",
@@ -4222,7 +4692,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.868935+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689161+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4260,7 +4730,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.868999+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689223+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4313,7 +4783,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869046+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689270+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4351,7 +4821,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869093+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689316+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4404,7 +4874,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869157+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689361+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4442,7 +4912,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869210+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689405+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4495,7 +4965,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869257+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689450+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4558,7 +5028,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869303+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689493+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4611,7 +5081,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869349+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689536+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4649,7 +5119,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869394+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689581+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4687,7 +5157,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869497+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689626+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4740,7 +5210,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869545+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689669+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4778,7 +5248,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869590+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689712+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -4816,7 +5286,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869634+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689755+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4869,7 +5339,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869684+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689798+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4922,7 +5392,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869729+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689840+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -4975,7 +5445,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869773+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689882+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -5028,7 +5498,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869818+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689926+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -5086,7 +5556,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869863+00:00",
+      "scraped_at": "2026-09-26T17:37:13.689969+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -5149,7 +5619,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869908+00:00",
+      "scraped_at": "2026-09-26T17:37:13.690012+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -5202,7 +5672,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869951+00:00",
+      "scraped_at": "2026-09-26T17:37:13.690054+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -5265,7 +5735,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.869996+00:00",
+      "scraped_at": "2026-09-26T17:37:13.690123+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -5318,7 +5788,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.870040+00:00",
+      "scraped_at": "2026-09-26T17:37:13.690172+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5356,7 +5826,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.870083+00:00",
+      "scraped_at": "2026-09-26T17:37:13.690216+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5394,7 +5864,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:14:56.870129+00:00",
+      "scraped_at": "2026-09-26T17:37:13.690260+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -5447,7 +5917,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029030+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714014+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5485,7 +5955,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029093+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714097+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -5554,7 +6024,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029161+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714148+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5592,7 +6062,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029212+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714195+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5630,7 +6100,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029256+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714241+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5668,7 +6138,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029301+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714285+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5706,7 +6176,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029345+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714333+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -5759,7 +6229,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029389+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714378+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -5827,7 +6297,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029433+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714422+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5865,7 +6335,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029477+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714468+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5903,7 +6373,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029563+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714557+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5941,7 +6411,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029606+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714601+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -5979,7 +6449,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029648+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714644+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6017,7 +6487,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029690+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714686+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6055,7 +6525,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029733+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714730+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6093,7 +6563,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029775+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714772+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6131,7 +6601,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029819+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714814+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6169,7 +6639,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029864+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714856+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6207,7 +6677,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029907+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714899+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6245,7 +6715,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029950+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714942+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6298,7 +6768,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.029992+00:00",
+      "scraped_at": "2026-09-26T17:38:49.714983+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6351,7 +6821,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.030034+00:00",
+      "scraped_at": "2026-09-26T17:38:49.715026+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6404,7 +6874,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.030076+00:00",
+      "scraped_at": "2026-09-26T17:38:49.715084+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6442,7 +6912,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.030118+00:00",
+      "scraped_at": "2026-09-26T17:38:49.715132+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6480,7 +6950,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:16:43.030181+00:00",
+      "scraped_at": "2026-09-26T17:38:49.715175+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6518,7 +6988,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.480685+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591004+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6556,7 +7026,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.480794+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591139+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6594,7 +7064,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.480839+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591186+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6647,7 +7117,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.480883+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591233+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6700,7 +7170,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.480929+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591280+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6758,7 +7228,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.480973+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591325+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6816,7 +7286,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481020+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591370+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6869,7 +7339,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481066+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591414+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -6927,7 +7397,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481111+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591458+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -6965,7 +7435,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481181+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591503+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7003,7 +7473,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481236+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591546+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7056,7 +7526,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481279+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591590+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7114,7 +7584,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481323+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591634+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7130,8 +7600,8 @@
       "analysis_type": "Categorical Exclusion",
       "ce_citation": "Pub. L. 117-58, Sec. 40806; USDA-38d-USFS",
       "location_summary": "The project area is located on the Salmon-Cobalt Ranger District, west of Salmon, ID.  The project area runs along the Idaho Power Transmission line, Forest System Road #65002 (Leesburg Stage), Forest System Road #60707 (Morning Glory), and Forest System Road #65001 (U.P. Lake), from the Salmon-Challis Administrative Boundary west to Forest System Road #60020 (Ridge Road).",
-      "accepting_comments": true,
-      "comment_deadline": "9/25/2026 11:59:59 PM (Mountain Standard Time)",
+      "accepting_comments": false,
+      "comment_deadline": "",
       "first_seen": "2026-09-06",
       "most_recent_activity": [
         {
@@ -7152,7 +7622,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481367+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591678+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7190,7 +7660,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481411+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591722+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7243,7 +7713,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481454+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591766+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7296,7 +7766,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481498+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591811+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7334,7 +7804,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481542+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591857+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7387,7 +7857,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481586+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591902+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7425,7 +7895,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481632+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591946+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7463,7 +7933,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481675+00:00",
+      "scraped_at": "2026-09-26T17:40:28.591989+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7501,7 +7971,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481718+00:00",
+      "scraped_at": "2026-09-26T17:40:28.592033+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7559,7 +8029,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481762+00:00",
+      "scraped_at": "2026-09-26T17:40:28.592095+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7597,7 +8067,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481805+00:00",
+      "scraped_at": "2026-09-26T17:40:28.592143+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7655,7 +8125,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481848+00:00",
+      "scraped_at": "2026-09-26T17:40:28.592188+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7693,7 +8163,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:18:22.481893+00:00",
+      "scraped_at": "2026-09-26T17:40:28.592233+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7731,7 +8201,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.233733+00:00",
+      "scraped_at": "2026-09-26T17:42:15.297401+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7784,7 +8254,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.233798+00:00",
+      "scraped_at": "2026-09-26T17:42:15.297463+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -7837,7 +8307,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.233893+00:00",
+      "scraped_at": "2026-09-26T17:42:15.297557+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7875,7 +8345,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.233939+00:00",
+      "scraped_at": "2026-09-26T17:42:15.297603+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7913,7 +8383,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.233984+00:00",
+      "scraped_at": "2026-09-26T17:42:15.297648+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7951,7 +8421,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.234029+00:00",
+      "scraped_at": "2026-09-26T17:42:15.297693+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -7989,7 +8459,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.234073+00:00",
+      "scraped_at": "2026-09-26T17:42:15.297736+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8042,7 +8512,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.234117+00:00",
+      "scraped_at": "2026-09-26T17:42:15.297780+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8080,7 +8550,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.234184+00:00",
+      "scraped_at": "2026-09-26T17:42:15.297823+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8118,7 +8588,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.234231+00:00",
+      "scraped_at": "2026-09-26T17:42:15.297867+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8181,7 +8651,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.234276+00:00",
+      "scraped_at": "2026-09-26T17:42:15.297911+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8219,7 +8689,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.234321+00:00",
+      "scraped_at": "2026-09-26T17:42:15.297954+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8257,7 +8727,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.234367+00:00",
+      "scraped_at": "2026-09-26T17:42:15.297998+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8295,7 +8765,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.234412+00:00",
+      "scraped_at": "2026-09-26T17:42:15.298040+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8348,7 +8818,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.234456+00:00",
+      "scraped_at": "2026-09-26T17:42:15.298102+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8386,7 +8856,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.234501+00:00",
+      "scraped_at": "2026-09-26T17:42:15.298146+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8424,7 +8894,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.234547+00:00",
+      "scraped_at": "2026-09-26T17:42:15.298192+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8462,7 +8932,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:20:07.234591+00:00",
+      "scraped_at": "2026-09-26T17:42:15.298237+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8500,7 +8970,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:21:26.878124+00:00",
+      "scraped_at": "2026-09-26T17:43:33.058125+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8553,7 +9023,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:21:26.878210+00:00",
+      "scraped_at": "2026-09-26T17:43:33.058190+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8606,7 +9076,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:21:26.878261+00:00",
+      "scraped_at": "2026-09-26T17:43:33.058238+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8644,7 +9114,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:21:26.878307+00:00",
+      "scraped_at": "2026-09-26T17:43:33.058285+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8697,7 +9167,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:21:26.878353+00:00",
+      "scraped_at": "2026-09-26T17:43:33.058329+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8735,7 +9205,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:21:26.878431+00:00",
+      "scraped_at": "2026-09-26T17:43:33.058374+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8793,7 +9263,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:21:26.878495+00:00",
+      "scraped_at": "2026-09-26T17:43:33.058419+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -8846,7 +9316,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:21:26.878542+00:00",
+      "scraped_at": "2026-09-26T17:43:33.058470+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8884,7 +9354,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:21:26.878590+00:00",
+      "scraped_at": "2026-09-26T17:43:33.058513+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8922,7 +9392,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:21:26.878637+00:00",
+      "scraped_at": "2026-09-26T17:43:33.058558+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8960,7 +9430,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:21:26.878680+00:00",
+      "scraped_at": "2026-09-26T17:43:33.058603+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -8998,7 +9468,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119188+00:00",
+      "scraped_at": "2026-09-26T17:44:18.220559+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -9062,7 +9532,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119249+00:00",
+      "scraped_at": "2026-09-26T17:44:18.220620+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9125,7 +9595,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119296+00:00",
+      "scraped_at": "2026-09-26T17:44:18.220673+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9178,7 +9648,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119340+00:00",
+      "scraped_at": "2026-09-26T17:44:18.220719+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9231,7 +9701,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119384+00:00",
+      "scraped_at": "2026-09-26T17:44:18.220765+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9279,7 +9749,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119428+00:00",
+      "scraped_at": "2026-09-26T17:44:18.220809+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9317,7 +9787,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119471+00:00",
+      "scraped_at": "2026-09-26T17:44:18.220853+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9370,7 +9840,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119513+00:00",
+      "scraped_at": "2026-09-26T17:44:18.220897+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9408,7 +9878,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119555+00:00",
+      "scraped_at": "2026-09-26T17:44:18.220942+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9446,7 +9916,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119598+00:00",
+      "scraped_at": "2026-09-26T17:44:18.220986+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9484,7 +9954,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119642+00:00",
+      "scraped_at": "2026-09-26T17:44:18.221030+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9547,7 +10017,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119687+00:00",
+      "scraped_at": "2026-09-26T17:44:18.221091+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9600,7 +10070,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119731+00:00",
+      "scraped_at": "2026-09-26T17:44:18.221139+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9653,7 +10123,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119776+00:00",
+      "scraped_at": "2026-09-26T17:44:18.221187+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9706,7 +10176,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119820+00:00",
+      "scraped_at": "2026-09-26T17:44:18.221234+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -9774,7 +10244,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119908+00:00",
+      "scraped_at": "2026-09-26T17:44:18.221323+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9812,7 +10282,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.119952+00:00",
+      "scraped_at": "2026-09-26T17:44:18.221367+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -9850,7 +10320,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.120043+00:00",
+      "scraped_at": "2026-09-26T17:44:18.221411+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9903,7 +10373,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.120091+00:00",
+      "scraped_at": "2026-09-26T17:44:18.221456+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -9966,7 +10436,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.120149+00:00",
+      "scraped_at": "2026-09-26T17:44:18.221499+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10004,7 +10474,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:22:21.120200+00:00",
+      "scraped_at": "2026-09-26T17:44:18.221543+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10057,7 +10527,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171157+00:00",
+      "scraped_at": "2026-09-26T17:45:36.247815+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10110,7 +10580,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171224+00:00",
+      "scraped_at": "2026-09-26T17:45:36.247876+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10163,7 +10633,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171272+00:00",
+      "scraped_at": "2026-09-26T17:45:36.247922+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10216,7 +10686,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171318+00:00",
+      "scraped_at": "2026-09-26T17:45:36.247966+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10269,7 +10739,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171364+00:00",
+      "scraped_at": "2026-09-26T17:45:36.248011+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10322,7 +10792,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171410+00:00",
+      "scraped_at": "2026-09-26T17:45:36.248057+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10375,7 +10845,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171455+00:00",
+      "scraped_at": "2026-09-26T17:45:36.248126+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10422,51 +10892,13 @@
       "forest_code": "fremont-umatilla",
       "region": "R06",
       "state": "OR",
-      "project_name": "Klamath County-Summers Quarry Operations",
-      "project_url": "https://www.fs.usda.gov/r06/fremont-winema/projects/227263",
-      "description": "There is a need for Klamath County to utilize the existing rock pit, Summers Quarry, for future road maintenance and construction projects. Klamath County would like to reauthorize a new permit for aggregate production and stockpiling of materials.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171498+00:00",
-      "milestones": [
-        {
-          "milestone": "NEPA Start Date",
-          "date": "1/28/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "3/30/2026",
-          "estimated": false
-        }
-      ],
-      "analysis_type": "Categorical Exclusion",
-      "ce_citation": "USDA-28d-USFS",
-      "location_summary": "Klamath Couty, Oregon 10 miles east of the town of Chiloquin.  Sections 8 and 17 of Township 35 South Range 9 East.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "first_seen": "2026-05-28",
-      "most_recent_activity": [
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "3/30/2026",
-          "estimated": false
-        }
-      ]
-    },
-    {
-      "forest_name": "Fremont-Winema & Umatilla NFs",
-      "forest_code": "fremont-umatilla",
-      "region": "R06",
-      "state": "OR",
       "project_name": "Klamath Landscape Resiliency: Rocky Point WUI",
       "project_url": "https://www.fs.usda.gov/r06/fremont-winema/projects/65409",
       "description": "The proposed action includes treatments on approximately 4,260 acres including vegetation restoration and resilience treatments, fuel breaks, road maintenance, and recreation enhancement activities.",
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171541+00:00",
+      "scraped_at": "2026-09-26T17:45:36.248172+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10519,7 +10951,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171586+00:00",
+      "scraped_at": "2026-09-26T17:45:36.248218+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10557,7 +10989,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171630+00:00",
+      "scraped_at": "2026-09-26T17:45:36.248263+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10610,7 +11042,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171673+00:00",
+      "scraped_at": "2026-09-26T17:45:36.248306+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10668,7 +11100,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171716+00:00",
+      "scraped_at": "2026-09-26T17:45:36.248349+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10721,7 +11153,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171758+00:00",
+      "scraped_at": "2026-09-26T17:45:36.248393+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10759,7 +11191,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171800+00:00",
+      "scraped_at": "2026-09-26T17:45:36.248438+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10797,7 +11229,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171844+00:00",
+      "scraped_at": "2026-09-26T17:45:36.248482+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10835,7 +11267,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171888+00:00",
+      "scraped_at": "2026-09-26T17:45:36.248525+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10888,7 +11320,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171931+00:00",
+      "scraped_at": "2026-09-26T17:45:36.248568+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -10941,7 +11373,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.171976+00:00",
+      "scraped_at": "2026-09-26T17:45:36.248611+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10979,7 +11411,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.371991+00:00",
+      "scraped_at": "2026-09-26T17:45:37.864103+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -10995,8 +11427,8 @@
       "analysis_type": "Environmental Assessment",
       "ce_citation": "",
       "location_summary": "​The project is located on National Forest System land within the northeast portion of North Fork John Day Ranger District. The project area boundary is generally described as south and west to the district boundary from NFSR 5400, north to the junction of NFSR 5400 with NFSR 5427 and north and west to the district boundary from NFSR 5427.",
-      "accepting_comments": true,
-      "comment_deadline": "9/25/2026 11:59:59 PM (Pacific Standard Time)",
+      "accepting_comments": false,
+      "comment_deadline": "",
       "first_seen": "2026-05-28",
       "most_recent_activity": [
         {
@@ -11017,7 +11449,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.372054+00:00",
+      "scraped_at": "2026-09-26T17:45:37.864167+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11055,7 +11487,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.372102+00:00",
+      "scraped_at": "2026-09-26T17:45:37.864215+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11093,7 +11525,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.372169+00:00",
+      "scraped_at": "2026-09-26T17:45:37.864263+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -11161,7 +11593,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.372219+00:00",
+      "scraped_at": "2026-09-26T17:45:37.864309+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11224,7 +11656,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.372266+00:00",
+      "scraped_at": "2026-09-26T17:45:37.864353+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11277,7 +11709,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.372312+00:00",
+      "scraped_at": "2026-09-26T17:45:37.864398+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11330,7 +11762,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.372356+00:00",
+      "scraped_at": "2026-09-26T17:45:37.864443+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11368,7 +11800,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.372400+00:00",
+      "scraped_at": "2026-09-26T17:45:37.864488+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11406,7 +11838,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.372445+00:00",
+      "scraped_at": "2026-09-26T17:45:37.864531+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11459,7 +11891,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.372490+00:00",
+      "scraped_at": "2026-09-26T17:45:37.864575+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11512,7 +11944,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.372534+00:00",
+      "scraped_at": "2026-09-26T17:45:37.864619+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11575,7 +12007,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.372580+00:00",
+      "scraped_at": "2026-09-26T17:45:37.864662+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11623,7 +12055,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.372626+00:00",
+      "scraped_at": "2026-09-26T17:45:37.864705+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11661,7 +12093,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:23:46.372671+00:00",
+      "scraped_at": "2026-09-26T17:45:37.864748+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -11714,7 +12146,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.973815+00:00",
+      "scraped_at": "2026-09-26T17:47:38.597660+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11752,7 +12184,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.973878+00:00",
+      "scraped_at": "2026-09-26T17:47:38.597722+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11790,7 +12222,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.973927+00:00",
+      "scraped_at": "2026-09-26T17:47:38.597768+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11828,7 +12260,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.973974+00:00",
+      "scraped_at": "2026-09-26T17:47:38.597812+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11866,7 +12298,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.974020+00:00",
+      "scraped_at": "2026-09-26T17:47:38.597856+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11904,7 +12336,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.974066+00:00",
+      "scraped_at": "2026-09-26T17:47:38.597899+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11942,7 +12374,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.974112+00:00",
+      "scraped_at": "2026-09-26T17:47:38.597943+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -11980,7 +12412,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.974188+00:00",
+      "scraped_at": "2026-09-26T17:47:38.598000+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12018,7 +12450,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.974238+00:00",
+      "scraped_at": "2026-09-26T17:47:38.598041+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12056,7 +12488,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.974284+00:00",
+      "scraped_at": "2026-09-26T17:47:38.598106+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12119,7 +12551,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.974335+00:00",
+      "scraped_at": "2026-09-26T17:47:38.598152+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12157,7 +12589,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.974421+00:00",
+      "scraped_at": "2026-09-26T17:47:38.598195+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12195,7 +12627,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.974493+00:00",
+      "scraped_at": "2026-09-26T17:47:38.598238+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12233,7 +12665,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.974562+00:00",
+      "scraped_at": "2026-09-26T17:47:38.598279+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12271,7 +12703,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.974610+00:00",
+      "scraped_at": "2026-09-26T17:47:38.598321+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12309,7 +12741,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.974654+00:00",
+      "scraped_at": "2026-09-26T17:47:38.598363+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12347,7 +12779,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.974698+00:00",
+      "scraped_at": "2026-09-26T17:47:38.598405+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12385,7 +12817,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:25:49.974743+00:00",
+      "scraped_at": "2026-09-26T17:47:38.598447+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12423,7 +12855,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.265374+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482016+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12481,7 +12913,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.265439+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482099+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12534,7 +12966,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.265486+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482149+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12587,7 +13019,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.265532+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482194+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12650,7 +13082,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.265576+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482239+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -12703,7 +13135,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.265622+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482286+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12741,7 +13173,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.265667+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482330+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12779,7 +13211,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.265713+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482373+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12817,7 +13249,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.265757+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482416+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12855,7 +13287,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.265801+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482461+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12893,7 +13325,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.265846+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482506+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12931,7 +13363,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.265888+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482550+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -12969,7 +13401,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.265932+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482596+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13007,7 +13439,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.265974+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482641+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13045,7 +13477,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.266018+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482683+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13083,7 +13515,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.266063+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482726+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13121,7 +13553,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.266106+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482770+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13159,7 +13591,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.266172+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482815+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13217,7 +13649,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:26:58.266219+00:00",
+      "scraped_at": "2026-09-26T17:48:48.482859+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13270,7 +13702,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:28:13.945040+00:00",
+      "scraped_at": "2026-09-26T17:50:03.048282+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13323,7 +13755,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:28:13.945104+00:00",
+      "scraped_at": "2026-09-26T17:50:03.048356+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13376,7 +13808,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:28:13.945175+00:00",
+      "scraped_at": "2026-09-26T17:50:03.048407+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13424,7 +13856,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:28:13.945227+00:00",
+      "scraped_at": "2026-09-26T17:50:03.048454+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13462,7 +13894,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:28:13.945274+00:00",
+      "scraped_at": "2026-09-26T17:50:03.048500+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13500,7 +13932,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:28:13.945320+00:00",
+      "scraped_at": "2026-09-26T17:50:03.048547+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13538,7 +13970,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:28:13.945365+00:00",
+      "scraped_at": "2026-09-26T17:50:03.048593+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13576,7 +14008,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:28:13.945411+00:00",
+      "scraped_at": "2026-09-26T17:50:03.048638+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13629,7 +14061,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:28:13.945456+00:00",
+      "scraped_at": "2026-09-26T17:50:03.048683+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13667,7 +14099,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:28:13.945502+00:00",
+      "scraped_at": "2026-09-26T17:50:03.048728+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13730,7 +14162,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:28:13.945546+00:00",
+      "scraped_at": "2026-09-26T17:50:03.048772+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13768,7 +14200,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:28:13.945590+00:00",
+      "scraped_at": "2026-09-26T17:50:03.048816+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13816,7 +14248,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:28:13.945634+00:00",
+      "scraped_at": "2026-09-26T17:50:03.048861+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13854,7 +14286,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:28:13.945678+00:00",
+      "scraped_at": "2026-09-26T17:50:03.048906+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13907,7 +14339,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.968342+00:00",
+      "scraped_at": "2026-09-26T17:51:05.469920+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -13945,7 +14377,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.968407+00:00",
+      "scraped_at": "2026-09-26T17:51:05.469984+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -13998,7 +14430,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.968456+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470033+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14051,7 +14483,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.968501+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470101+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14104,7 +14536,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.968545+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470150+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14157,7 +14589,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.968608+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470197+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14210,7 +14642,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.968710+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470243+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14263,7 +14695,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.968759+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470292+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -14301,7 +14733,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.968802+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470339+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -14339,7 +14771,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.968848+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470384+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14402,7 +14834,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.968893+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470428+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14455,7 +14887,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.968937+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470472+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14508,7 +14940,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.968982+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470516+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14561,7 +14993,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969027+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470559+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -14599,7 +15031,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969071+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470603+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14647,7 +15079,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969115+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470646+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -14685,7 +15117,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969181+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470689+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -14723,7 +15155,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969228+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470733+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -14761,7 +15193,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969272+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470776+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14814,7 +15246,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969315+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470819+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -14863,11 +15295,11 @@
       "state": "OR",
       "project_name": "Ivy Cliff",
       "project_url": "https://www.fs.usda.gov/r06/willamette/projects/301816",
-      "description": "This project would commercially harvest about 1,228 acres of managed and natural stands to enhance the growth and structural complexity of the stands and to provide forest products to the local economy. Project also includes machine placement of wood in streams.",
+      "description": "This project would commercially harvest about 1,228 acres of managed and natural stands to enhance stand growth and structural complexity and to provide forest products to the local economy. Non-commercial treatments include falling and leaving trees, and machine placement of logs in Cliff Creek.",
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969358+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470861+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -14882,7 +15314,7 @@
       ],
       "analysis_type": "Environmental Assessment",
       "ce_citation": "",
-      "location_summary": "T11S R5E, Sect 1,2,10,11,12,13,14,15,22,23,24, and 25; T11S R6E, Sect 6,7,8,17,18,19,20,21,28,29,30,31,32, and 33; T12S R6E, Sect 4 and 5. Approximately 8 miles SE of Detroit.",
+      "location_summary": "T11S R5E, Sect 1,2,10,11,12,13,14,15,22,23,24, and 25; T11S R6E, Sect 6,7,8,17,18,19,20,21,28,29,30,31,32, and 33; T12S R6E, Sect 4 and 5. Approximately 14 miles SE of Detroit.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
@@ -14905,7 +15337,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969402+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470904+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -14943,7 +15375,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969446+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470947+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -14981,7 +15413,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969490+00:00",
+      "scraped_at": "2026-09-26T17:51:05.470989+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15044,7 +15476,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969534+00:00",
+      "scraped_at": "2026-09-26T17:51:05.471031+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15097,7 +15529,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969580+00:00",
+      "scraped_at": "2026-09-26T17:51:05.471093+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -15135,7 +15567,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969625+00:00",
+      "scraped_at": "2026-09-26T17:51:05.471142+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -15173,7 +15605,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969669+00:00",
+      "scraped_at": "2026-09-26T17:51:05.471186+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15226,7 +15658,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969713+00:00",
+      "scraped_at": "2026-09-26T17:51:05.471229+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15284,7 +15716,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969755+00:00",
+      "scraped_at": "2026-09-26T17:51:05.471271+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15347,7 +15779,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969798+00:00",
+      "scraped_at": "2026-09-26T17:51:05.471314+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15400,7 +15832,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969840+00:00",
+      "scraped_at": "2026-09-26T17:51:05.471356+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -15438,7 +15870,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969883+00:00",
+      "scraped_at": "2026-09-26T17:51:05.471399+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15501,7 +15933,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969925+00:00",
+      "scraped_at": "2026-09-26T17:51:05.471442+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -15539,7 +15971,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.969968+00:00",
+      "scraped_at": "2026-09-26T17:51:05.471484+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -15577,7 +16009,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.970012+00:00",
+      "scraped_at": "2026-09-26T17:51:05.471527+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15640,7 +16072,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.970074+00:00",
+      "scraped_at": "2026-09-26T17:51:05.471586+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15703,7 +16135,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:29:08.970116+00:00",
+      "scraped_at": "2026-09-26T17:51:05.471628+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -15771,7 +16203,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:31:34.581739+00:00",
+      "scraped_at": "2026-09-26T17:53:31.558262+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15819,7 +16251,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:31:34.581866+00:00",
+      "scraped_at": "2026-09-26T17:53:31.558394+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15882,7 +16314,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:31:34.581911+00:00",
+      "scraped_at": "2026-09-26T17:53:31.558441+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15945,7 +16377,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:31:34.581957+00:00",
+      "scraped_at": "2026-09-26T17:53:31.558486+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -15998,7 +16430,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:31:34.582001+00:00",
+      "scraped_at": "2026-09-26T17:53:31.558531+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16061,7 +16493,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:05.018022+00:00",
+      "scraped_at": "2026-09-26T17:54:02.653122+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -16099,7 +16531,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:05.018087+00:00",
+      "scraped_at": "2026-09-26T17:54:02.653185+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16157,7 +16589,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:05.018154+00:00",
+      "scraped_at": "2026-09-26T17:54:02.653234+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16215,7 +16647,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:05.018210+00:00",
+      "scraped_at": "2026-09-26T17:54:02.653280+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16263,7 +16695,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:05.018259+00:00",
+      "scraped_at": "2026-09-26T17:54:02.653326+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16316,7 +16748,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:05.018304+00:00",
+      "scraped_at": "2026-09-26T17:54:02.653371+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16379,7 +16811,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:05.018349+00:00",
+      "scraped_at": "2026-09-26T17:54:02.653417+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16432,7 +16864,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:05.018394+00:00",
+      "scraped_at": "2026-09-26T17:54:02.653461+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16495,7 +16927,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:05.018491+00:00",
+      "scraped_at": "2026-09-26T17:54:02.653550+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16558,7 +16990,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:05.018540+00:00",
+      "scraped_at": "2026-09-26T17:54:02.653599+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -16596,7 +17028,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:45.968277+00:00",
+      "scraped_at": "2026-09-26T17:54:41.197655+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -16634,7 +17066,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:45.968340+00:00",
+      "scraped_at": "2026-09-26T17:54:41.197718+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16687,7 +17119,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:45.968388+00:00",
+      "scraped_at": "2026-09-26T17:54:41.197766+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -16725,7 +17157,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:45.968435+00:00",
+      "scraped_at": "2026-09-26T17:54:41.197811+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -16763,7 +17195,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:45.968482+00:00",
+      "scraped_at": "2026-09-26T17:54:41.197856+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -16801,7 +17233,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:45.968527+00:00",
+      "scraped_at": "2026-09-26T17:54:41.197901+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16854,7 +17286,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:45.968573+00:00",
+      "scraped_at": "2026-09-26T17:54:41.197947+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -16892,7 +17324,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:32:45.968621+00:00",
+      "scraped_at": "2026-09-26T17:54:41.197991+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -16941,11 +17373,11 @@
       "state": "CA",
       "project_name": "American Dark Fiber Middle Mile Broadband Project (ADF-F12-USFS-EN1)",
       "project_url": "https://www.fs.usda.gov/r05/shasta-trinity/projects/371776",
-      "description": "American Dark Fiber proposes construction, installation, operation, use, and maintenance of approximately 26,018 feet of aerial and buried fiber optic cable within existing utility and road rights-of-way. A special use permit will be issued for fiber optic uses for a term of 30 years.",
+      "description": "American Dark Fiber has requested a fiber optic special use permit for construction, installation, operation, use, and maintenance of approximately 26,018 feet of aerial and buried fiber optic cable within existing utility and road rights-of-way on the Mount Shasta Ranger District.",
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749087+00:00",
+      "scraped_at": "2026-09-26T17:55:14.644614+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -16960,7 +17392,7 @@
       ],
       "analysis_type": "Categorical Exclusion",
       "ce_citation": "USDA-28d-USFS",
-      "location_summary": "Along highway 97, approximately 5 miles northeast of Weed, California. T40N R4W sec 6; T42N R4W secs 4, 8, and 18; T43N R3W secs 20, 30, and 31; Mount Diablo Meridian, Siskiyou County, California",
+      "location_summary": "On the Mount Shasta Ranger District along highway 97, approximately 5 miles northeast of Weed, California. T40N R4W sec 6; T42N R4W secs 4, 8, and 18; T43N R3W secs 20, 30, and 31; Mount Diablo Meridian, Siskiyou County, California",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-07-28",
@@ -16983,7 +17415,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749172+00:00",
+      "scraped_at": "2026-09-26T17:55:14.644678+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17036,7 +17468,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749223+00:00",
+      "scraped_at": "2026-09-26T17:55:14.644726+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -17074,7 +17506,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749270+00:00",
+      "scraped_at": "2026-09-26T17:55:14.644771+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -17112,7 +17544,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749315+00:00",
+      "scraped_at": "2026-09-26T17:55:14.644814+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17165,7 +17597,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749359+00:00",
+      "scraped_at": "2026-09-26T17:55:14.644858+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17223,7 +17655,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749403+00:00",
+      "scraped_at": "2026-09-26T17:55:14.644903+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -17261,7 +17693,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749447+00:00",
+      "scraped_at": "2026-09-26T17:55:14.644949+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17319,7 +17751,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749491+00:00",
+      "scraped_at": "2026-09-26T17:55:14.644993+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17372,7 +17804,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749537+00:00",
+      "scraped_at": "2026-09-26T17:55:14.645039+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17435,7 +17867,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749581+00:00",
+      "scraped_at": "2026-09-26T17:55:14.645102+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17483,7 +17915,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749624+00:00",
+      "scraped_at": "2026-09-26T17:55:14.645148+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -17521,7 +17953,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749667+00:00",
+      "scraped_at": "2026-09-26T17:55:14.645191+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17569,7 +18001,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749710+00:00",
+      "scraped_at": "2026-09-26T17:55:14.645283+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17617,7 +18049,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749754+00:00",
+      "scraped_at": "2026-09-26T17:55:14.645330+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17670,7 +18102,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749798+00:00",
+      "scraped_at": "2026-09-26T17:55:14.645373+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -17708,7 +18140,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749841+00:00",
+      "scraped_at": "2026-09-26T17:55:14.645416+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -17746,7 +18178,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749885+00:00",
+      "scraped_at": "2026-09-26T17:55:14.645459+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17809,7 +18241,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749930+00:00",
+      "scraped_at": "2026-09-26T17:55:14.645502+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17862,7 +18294,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.749973+00:00",
+      "scraped_at": "2026-09-26T17:55:14.645544+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -17920,7 +18352,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.750016+00:00",
+      "scraped_at": "2026-09-26T17:55:14.645585+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -17958,7 +18390,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:33:23.750058+00:00",
+      "scraped_at": "2026-09-26T17:55:14.645626+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18666,7 +19098,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.117298+00:00",
+      "scraped_at": "2026-09-26T17:56:48.732303+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18729,7 +19161,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.117361+00:00",
+      "scraped_at": "2026-09-26T17:56:48.732366+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -18767,7 +19199,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.117412+00:00",
+      "scraped_at": "2026-09-26T17:56:48.732413+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -18805,7 +19237,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.117460+00:00",
+      "scraped_at": "2026-09-26T17:56:48.732460+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18868,7 +19300,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.117507+00:00",
+      "scraped_at": "2026-09-26T17:56:48.732504+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18931,7 +19363,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.117554+00:00",
+      "scraped_at": "2026-09-26T17:56:48.732549+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -18989,7 +19421,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.117600+00:00",
+      "scraped_at": "2026-09-26T17:56:48.732592+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19027,7 +19459,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.117646+00:00",
+      "scraped_at": "2026-09-26T17:56:48.732635+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19080,7 +19512,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.117692+00:00",
+      "scraped_at": "2026-09-26T17:56:48.732680+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19118,7 +19550,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.117737+00:00",
+      "scraped_at": "2026-09-26T17:56:48.732724+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19176,7 +19608,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.117783+00:00",
+      "scraped_at": "2026-09-26T17:56:48.732766+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19229,7 +19661,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.117829+00:00",
+      "scraped_at": "2026-09-26T17:56:48.732810+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19282,7 +19714,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.117875+00:00",
+      "scraped_at": "2026-09-26T17:56:48.732854+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19335,7 +19767,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.117921+00:00",
+      "scraped_at": "2026-09-26T17:56:48.732900+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19388,7 +19820,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.117967+00:00",
+      "scraped_at": "2026-09-26T17:56:48.732943+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19441,7 +19873,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.118012+00:00",
+      "scraped_at": "2026-09-26T17:56:48.732992+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19499,7 +19931,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.118057+00:00",
+      "scraped_at": "2026-09-26T17:56:48.733035+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19557,7 +19989,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.118102+00:00",
+      "scraped_at": "2026-09-26T17:56:48.733096+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19620,7 +20052,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.118167+00:00",
+      "scraped_at": "2026-09-26T17:56:48.733144+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19673,7 +20105,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.239441+00:00",
+      "scraped_at": "2026-09-26T17:56:52.486594+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19731,7 +20163,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.239504+00:00",
+      "scraped_at": "2026-09-26T17:56:52.486656+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -19769,7 +20201,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.239553+00:00",
+      "scraped_at": "2026-09-26T17:56:52.486704+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19822,7 +20254,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.239600+00:00",
+      "scraped_at": "2026-09-26T17:56:52.486750+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19875,7 +20307,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.239646+00:00",
+      "scraped_at": "2026-09-26T17:56:52.486794+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19938,7 +20370,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.239693+00:00",
+      "scraped_at": "2026-09-26T17:56:52.486837+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -19986,7 +20418,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.239737+00:00",
+      "scraped_at": "2026-09-26T17:56:52.486881+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -20039,7 +20471,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:34:55.239782+00:00",
+      "scraped_at": "2026-09-26T17:56:52.486924+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -20087,7 +20519,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:36:44.598846+00:00",
+      "scraped_at": "2026-09-26T17:58:50.003394+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20125,7 +20557,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:36:44.598907+00:00",
+      "scraped_at": "2026-09-26T17:58:50.003460+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20163,7 +20595,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:36:44.598956+00:00",
+      "scraped_at": "2026-09-26T17:58:50.003511+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -20221,7 +20653,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:36:44.599002+00:00",
+      "scraped_at": "2026-09-26T17:58:50.003558+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20259,7 +20691,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:36:44.599048+00:00",
+      "scraped_at": "2026-09-26T17:58:50.003605+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -20312,7 +20744,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:36:44.599095+00:00",
+      "scraped_at": "2026-09-26T17:58:50.003651+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20350,7 +20782,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:36:44.599160+00:00",
+      "scraped_at": "2026-09-26T17:58:50.003695+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -20413,7 +20845,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:36:44.599210+00:00",
+      "scraped_at": "2026-09-26T17:58:50.003739+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20451,7 +20883,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:36:44.599256+00:00",
+      "scraped_at": "2026-09-26T17:58:50.003784+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20489,7 +20921,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:36:44.599302+00:00",
+      "scraped_at": "2026-09-26T17:58:50.003830+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20527,7 +20959,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:36:44.599347+00:00",
+      "scraped_at": "2026-09-26T17:58:50.003876+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -20590,7 +21022,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:36:44.599391+00:00",
+      "scraped_at": "2026-09-26T17:58:50.003920+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -20643,7 +21075,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.062435+00:00",
+      "scraped_at": "2026-09-26T17:59:39.428754+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -20696,7 +21128,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.062498+00:00",
+      "scraped_at": "2026-09-26T17:59:39.428818+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20734,7 +21166,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.062547+00:00",
+      "scraped_at": "2026-09-26T17:59:39.428866+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20772,7 +21204,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.062594+00:00",
+      "scraped_at": "2026-09-26T17:59:39.428912+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20810,7 +21242,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.062641+00:00",
+      "scraped_at": "2026-09-26T17:59:39.428958+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20848,7 +21280,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.062692+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429003+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20886,7 +21318,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.062738+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429048+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -20924,7 +21356,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.062783+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429114+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -20977,7 +21409,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.062828+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429159+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -21015,7 +21447,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.062874+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429202+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -21053,7 +21485,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.062920+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429246+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -21091,7 +21523,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.062965+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429290+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -21144,7 +21576,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063011+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429333+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -21182,7 +21614,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063055+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429377+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -21220,7 +21652,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063101+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429421+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -21273,7 +21705,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063164+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429464+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -21326,7 +21758,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063212+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429507+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -21364,7 +21796,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063256+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429551+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -21417,7 +21849,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063301+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429594+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -21470,7 +21902,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063345+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429637+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -21508,7 +21940,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063389+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429680+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -21566,7 +21998,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063432+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429723+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -21604,7 +22036,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063476+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429765+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -21642,7 +22074,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063520+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429807+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -21700,7 +22132,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063564+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429850+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -21738,7 +22170,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063607+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429892+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -21806,7 +22238,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063651+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429933+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -21859,7 +22291,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063695+00:00",
+      "scraped_at": "2026-09-26T17:59:39.429974+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -21907,7 +22339,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:37:36.063740+00:00",
+      "scraped_at": "2026-09-26T17:59:39.430016+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -24739,7 +25171,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:39:38.243474+00:00",
+      "scraped_at": "2026-09-26T18:01:53.389769+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -24792,7 +25224,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:39:38.243535+00:00",
+      "scraped_at": "2026-09-26T18:01:53.389834+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -24845,7 +25277,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:39:38.243583+00:00",
+      "scraped_at": "2026-09-26T18:01:53.389881+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -24883,7 +25315,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:39:38.243629+00:00",
+      "scraped_at": "2026-09-26T18:01:53.389926+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -24936,7 +25368,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:39:38.243673+00:00",
+      "scraped_at": "2026-09-26T18:01:53.389977+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -24974,7 +25406,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:39:38.243719+00:00",
+      "scraped_at": "2026-09-26T18:01:53.390022+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -25027,7 +25459,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:39:38.243766+00:00",
+      "scraped_at": "2026-09-26T18:01:53.390084+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -25065,7 +25497,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:39:38.243810+00:00",
+      "scraped_at": "2026-09-26T18:01:53.390135+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -25118,7 +25550,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:39:38.243854+00:00",
+      "scraped_at": "2026-09-26T18:01:53.390179+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -25171,7 +25603,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:39:38.243901+00:00",
+      "scraped_at": "2026-09-26T18:01:53.390225+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -25229,7 +25661,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:39:38.243946+00:00",
+      "scraped_at": "2026-09-26T18:01:53.390271+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -25282,7 +25714,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:39:38.243991+00:00",
+      "scraped_at": "2026-09-26T18:01:53.390316+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -25320,7 +25752,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:40:38.941666+00:00",
+      "scraped_at": "2026-09-26T18:03:02.687945+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -25329,20 +25761,20 @@
         },
         {
           "milestone": "Finding/Decision Date",
-          "date": "",
+          "date": "8/5/2026",
           "estimated": false
         }
       ],
       "analysis_type": "Environmental Assessment",
       "ce_citation": "",
-      "location_summary": "",
+      "location_summary": "South of the City of Big Bear Lake",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-06",
       "most_recent_activity": [
         {
           "milestone": "Finding/Decision Date",
-          "date": "",
+          "date": "8/5/2026",
           "estimated": false
         }
       ]
@@ -25358,7 +25790,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:40:38.941726+00:00",
+      "scraped_at": "2026-09-26T18:03:02.688009+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -25421,7 +25853,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:40:38.941774+00:00",
+      "scraped_at": "2026-09-26T18:03:02.688058+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -25479,7 +25911,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:40:38.941821+00:00",
+      "scraped_at": "2026-09-26T18:03:02.688131+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -25532,7 +25964,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:40:38.941865+00:00",
+      "scraped_at": "2026-09-26T18:03:02.688178+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26332,7 +26764,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589243+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970013+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26385,7 +26817,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589303+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970097+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26438,7 +26870,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589351+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970148+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26491,7 +26923,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589397+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970195+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26554,7 +26986,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589441+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970239+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -26622,7 +27054,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589486+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970286+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26685,7 +27117,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589530+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970331+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26738,7 +27170,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589574+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970375+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26801,7 +27233,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589619+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970419+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26854,7 +27286,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589663+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970464+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -26907,7 +27339,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589707+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970507+00:00",
       "milestones": [
         {
           "milestone": "NOI in Federal Register",
@@ -26975,7 +27407,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589752+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970552+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -27028,7 +27460,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589796+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970597+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -27081,7 +27513,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589842+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970641+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -27134,7 +27566,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589886+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970686+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27172,7 +27604,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589930+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970732+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27210,7 +27642,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.589975+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970776+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27248,7 +27680,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590019+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970821+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27286,7 +27718,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590064+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970865+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27324,7 +27756,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590108+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970910+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27362,7 +27794,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590171+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970954+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27400,7 +27832,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590217+00:00",
+      "scraped_at": "2026-09-26T18:03:39.970998+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27438,7 +27870,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590260+00:00",
+      "scraped_at": "2026-09-26T18:03:39.971040+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -27501,7 +27933,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590304+00:00",
+      "scraped_at": "2026-09-26T18:03:39.971104+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27539,7 +27971,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590347+00:00",
+      "scraped_at": "2026-09-26T18:03:39.971152+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27577,7 +28009,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590390+00:00",
+      "scraped_at": "2026-09-26T18:03:39.971196+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27615,7 +28047,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590434+00:00",
+      "scraped_at": "2026-09-26T18:03:39.971240+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27653,7 +28085,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590477+00:00",
+      "scraped_at": "2026-09-26T18:03:39.971282+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27691,7 +28123,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590521+00:00",
+      "scraped_at": "2026-09-26T18:03:39.971326+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27729,7 +28161,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590565+00:00",
+      "scraped_at": "2026-09-26T18:03:39.971370+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27767,7 +28199,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590609+00:00",
+      "scraped_at": "2026-09-26T18:03:39.971414+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27805,7 +28237,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590652+00:00",
+      "scraped_at": "2026-09-26T18:03:39.971458+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27843,7 +28275,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590697+00:00",
+      "scraped_at": "2026-09-26T18:03:39.971501+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27881,7 +28313,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590741+00:00",
+      "scraped_at": "2026-09-26T18:03:39.971545+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27919,7 +28351,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590785+00:00",
+      "scraped_at": "2026-09-26T18:03:39.971588+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27957,7 +28389,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590828+00:00",
+      "scraped_at": "2026-09-26T18:03:39.971631+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -27995,7 +28427,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590871+00:00",
+      "scraped_at": "2026-09-26T18:03:39.971674+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -28033,7 +28465,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-09-25T18:41:06.590915+00:00",
+      "scraped_at": "2026-09-26T18:03:39.971717+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
