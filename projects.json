@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-09-26T18:05:52.471694+00:00",
-  "total_projects": 604,
+  "scraped_at": "2026-09-27T18:00:22.177436+00:00",
+  "total_projects": 601,
   "forests_scraped": 32,
   "projects": [
     {
@@ -4009,55 +4009,6 @@
       ]
     },
     {
-      "forest_name": "Nez Perce-CW & Idaho Panhandle, Wallowa-Whitman",
-      "forest_code": "multi",
-      "region": "R01",
-      "state": "ID",
-      "project_name": "Race Cow Project",
-      "project_url": "https://www.fs.usda.gov/r01/nezperce-clearwater/projects/61303",
-      "description": "Improve forest resilience, reduce hazardous fuels, enhance native grasslands, improve road access, develop two rock pits, reduce sediment delivery, provide timber products. Requesting EAD under IIJA, comment period per IIJA offered if granted.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-26T17:35:33.117815+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "01/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Decision",
-          "date": "01/2027 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "06/2028 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
-      "ce_citation": "",
-      "location_summary": "The project area is located approximately 7 miles northwest of Riggins, Idaho, in Idaho County.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "is_multi_forest": true,
-      "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "01/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Decision",
-          "date": "01/2027 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
       "forest_code": "nezperce-ipnf",
       "region": "R01",
@@ -5941,75 +5892,6 @@
           "milestone": "Finding/Decision Date",
           "date": "5/18/2026",
           "estimated": false
-        }
-      ]
-    },
-    {
-      "forest_name": "Caribou-Targhee National Forests, Salmon-Challis National Forest, Sawtooth National Forest",
-      "forest_code": "multi",
-      "region": "R04",
-      "state": "ID",
-      "project_name": "Amendments to Land Management Plans Regarding Sage-grouse Conservation",
-      "project_url": "https://www.fs.usda.gov/r04/caribou-targhee/projects/52904",
-      "description": "The Forest Service is considering amending its land management plans to address new and evolving issues arising since implementing sage-grouse plans in 2015. This project is in cooperation with the USDI Bureau of Land Management.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-26T17:38:49.714097+00:00",
-      "milestones": [
-        {
-          "milestone": "NOI in Federal Register",
-          "date": "11/21/2017",
-          "estimated": false
-        },
-        {
-          "milestone": "DEIS NOA in Federal Register",
-          "date": "10/05/2018",
-          "estimated": false
-        },
-        {
-          "milestone": "FEIS NOA in Federal Register",
-          "date": "08/02/2019",
-          "estimated": false
-        },
-        {
-          "milestone": "Objection Period Start",
-          "date": "08/02/2019",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2020 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "01/2021 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Impact Statement",
-      "ce_citation": "",
-      "location_summary": "Sagebrush lands in National Forests of Nevada, Utah, southern Idaho, southwest Montana, southwest & south-central Wyoming and northern Colorado.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "is_multi_forest": true,
-      "first_seen": "2026-09-23",
-      "most_recent_activity": [
-        {
-          "milestone": "Objection Period Start",
-          "date": "08/02/2019",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2020 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "01/2021 (Estimated)",
-          "estimated": true
         }
       ]
     },
@@ -9454,70 +9336,6 @@
           "milestone": "Finding/Decision Date",
           "date": "",
           "estimated": false
-        }
-      ]
-    },
-    {
-      "forest_name": "Wallowa-Whitman, Malheur",
-      "forest_code": "multi",
-      "region": "R06",
-      "state": "OR",
-      "project_name": "Austin",
-      "project_url": "https://www.fs.usda.gov/r06/wallowa-whitman/projects/53678",
-      "description": "This project includes a suite of activities to restore forest and watershed resiliency, including: fuels treatments and prescribed burning; and upland and watershed restoration.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-09-26T17:44:18.220559+00:00",
-      "milestones": [
-        {
-          "milestone": "NOI in Federal Register",
-          "date": "05/15/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "DEIS NOA in Federal Register",
-          "date": "02/02/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "FEIS NOA in Federal Register",
-          "date": "08/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Decision",
-          "date": "04/2027 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2027 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Impact Statement",
-      "ce_citation": "",
-      "location_summary": "The project is located approximately 9 miles northeast of Prairie City, Oregon and borders the Wallowa Whitman National Forest.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "is_multi_forest": true,
-      "first_seen": "2026-05-28",
-      "most_recent_activity": [
-        {
-          "milestone": "DEIS NOA in Federal Register",
-          "date": "02/02/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "FEIS NOA in Federal Register",
-          "date": "08/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Decision",
-          "date": "04/2027 (Estimated)",
-          "estimated": true
         }
       ]
     },
