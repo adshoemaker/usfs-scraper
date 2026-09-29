@@ -44,7 +44,7 @@
     "first_seen": "2026-09-06",
     "forest_code": "nezperce-ipnf",
     "forest_name": "Nez Perce-CW & Idaho Panhandle",
-    "name": "IPNF Forest-wide Prescribed Fire",
+    "name": "IPNF Forestwide Prescribed Fire",
     "status": ""
   },
   "https://www.fs.usda.gov/r01/idahopanhandle/projects/60853": {
@@ -4344,6 +4344,14 @@
     "forest_code": "okanogan-wenatchee",
     "forest_name": "Okanogan-Wenatchee National Forest",
     "name": "Upper Swauk Restoration Project",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r06/okanogan-wenatchee/projects/344996": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-09-29",
+    "forest_code": "okanogan-wenatchee",
+    "forest_name": "Okanogan-Wenatchee National Forest",
+    "name": "Maple Canyon Restoration",
     "status": ""
   },
   "https://www.fs.usda.gov/r06/okanogan-wenatchee/projects/349472": {
