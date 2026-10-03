@@ -631,6 +631,22 @@
     "name": "Vaux Mine Investigation",
     "status": ""
   },
+  "https://www.fs.usda.gov/r04/payette/projects/430904": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-10-03",
+    "forest_code": "boise-payette",
+    "forest_name": "Boise & Payette National Forests",
+    "name": "Old Bear Creek Trail Incorporation",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r04/payette/projects/430905": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-10-03",
+    "forest_code": "boise-payette",
+    "forest_name": "Boise & Payette National Forests",
+    "name": "Cold Springs Trail Re-establishment",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r04/payette/projects/54805": {
     "analysis_type": "Decision Memo",
     "first_seen": "2026-09-08",
@@ -3151,6 +3167,14 @@
     "first_seen": "2026-05-28",
     "name": "Tacoma Creek Salvage"
   },
+  "https://www.fs.usda.gov/r06/colville/projects/396533": {
+    "analysis_type": "Environmental Assessment",
+    "first_seen": "2026-10-03",
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "Sinlahekin Post-Fire Recovery",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r06/colville/projects/41517": {
     "first_seen": "2026-05-28",
     "name": "Leclerc Creek Grazing Allotment Management Planning"
@@ -3333,6 +3357,14 @@
     "forest_code": "deschutes",
     "forest_name": "Deschutes National Forest",
     "name": "Akawa Butte Fire Recovery",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r06/deschutes/projects/417360": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-10-03",
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "2026 Crescent and Odell Lakes Recreation Residence Projects Batch 2",
     "status": ""
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/66207": {
