@@ -2175,6 +2175,22 @@
     "name": "Sequoia and Sierra National Forests Prescribed Fire Project",
     "status": ""
   },
+  "https://www.fs.usda.gov/r05/sequoia/projects/362135": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-10-05",
+    "forest_code": "inyo-sequoia",
+    "forest_name": "Inyo & Sequoia National Forests",
+    "name": "Balch Park  and Blue Ridge Road Fuels Management and Hazard Tree Mitigation Project",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/sequoia/projects/370314": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-10-05",
+    "forest_code": "inyo-sequoia",
+    "forest_name": "Inyo & Sequoia National Forests",
+    "name": "Horse Meadow Hydrologic Restoration Project",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r05/sequoia/projects/61326": {
     "analysis_type": "Environmental Assessment",
     "first_seen": "2026-09-08",
