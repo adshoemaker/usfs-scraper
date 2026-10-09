@@ -1919,6 +1919,14 @@
     "name": "Bear Soup Forest Health Project",
     "status": ""
   },
+  "https://www.fs.usda.gov/r05/modoc/projects/434189": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-10-09",
+    "forest_code": "lassen-modoc",
+    "forest_name": "Lassen & Modoc National Forests",
+    "name": "Cal-Ore Telephone Company ReConnect 4 Fiber Optic Cable Installation",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r05/modoc/projects/56938": {
     "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-09-08",
@@ -4416,6 +4424,14 @@
     "forest_code": "okanogan-wenatchee",
     "forest_name": "Okanogan-Wenatchee National Forest",
     "name": "Lower North Shore Landscape Restoration",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r06/okanogan-wenatchee/projects/434925": {
+    "analysis_type": "Environmental Assessment",
+    "first_seen": "2026-10-09",
+    "forest_code": "okanogan-wenatchee",
+    "forest_name": "Okanogan-Wenatchee National Forest",
+    "name": "Little Giant Post-Fire Recovery Project - Phase 1",
     "status": ""
   },
   "https://www.fs.usda.gov/r06/okanogan-wenatchee/projects/54502": {
