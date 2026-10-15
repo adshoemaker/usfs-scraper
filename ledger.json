@@ -79,6 +79,14 @@
     "name": "Sandpoint South",
     "status": ""
   },
+  "https://www.fs.usda.gov/r01/nezperce-clearwater/projects/302702": {
+    "analysis_type": "Environmental Assessment",
+    "first_seen": "2026-10-15",
+    "forest_code": "nezperce-ipnf",
+    "forest_name": "Nez Perce-CW & Idaho Panhandle",
+    "name": "Feather Creek Landscape Restoration Project",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r01/nezperce-clearwater/projects/328084": {
     "analysis_type": "Environmental Assessment",
     "first_seen": "2026-09-06",
@@ -3373,6 +3381,14 @@
     "forest_code": "deschutes",
     "forest_name": "Deschutes National Forest",
     "name": "GTN Compressor Station 12 Vegetation Manangement",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r06/deschutes/projects/409790": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-10-15",
+    "forest_code": "deschutes",
+    "forest_name": "Deschutes National Forest",
+    "name": "2026 Crescent Lake 25 Recreation Residence Rebuild",
     "status": ""
   },
   "https://www.fs.usda.gov/r06/deschutes/projects/411684": {
