@@ -804,7 +804,7 @@
     "first_seen": "2026-09-06",
     "forest_code": "salmon-challis",
     "forest_name": "Salmon-Challis National Forest",
-    "name": "Bench Timber Sale",
+    "name": "Bench Creek Vegetation Project",
     "status": ""
   },
   "https://www.fs.usda.gov/r04/salmon-challis/projects/307855": {
@@ -2557,6 +2557,14 @@
     "forest_code": "sierra",
     "forest_name": "Sierra National Forest",
     "name": "Emergency Control of Spanish Broom in the Garnet Fire Area",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/sierra/projects/440355": {
+    "analysis_type": "Environmental Assessment",
+    "first_seen": "2026-10-17",
+    "forest_code": "sierra",
+    "forest_name": "Sierra National Forest",
+    "name": "Rodgers Ridge & Sweetwater Grazing Allotments",
     "status": ""
   },
   "https://www.fs.usda.gov/r05/sierra/projects/63529": {
