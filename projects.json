@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-10-21T18:57:40.241072+00:00",
-  "total_projects": 623,
+  "scraped_at": "2026-10-22T18:27:01.237055+00:00",
+  "total_projects": 620,
   "forests_scraped": 32,
   "projects": [
     {
@@ -14,15 +14,32 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608284+00:00",
-      "milestones": [],
-      "analysis_type": "",
+      "scraped_at": "2026-10-22T18:12:59.123142+00:00",
+      "milestones": [
+        {
+          "milestone": "NEPA Start Date",
+          "date": "9/10/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "",
+          "estimated": false
+        }
+      ],
+      "analysis_type": "Environmental Assessment",
       "ce_citation": "",
-      "location_summary": "",
+      "location_summary": "The Project Area, located within the Mount Baker Ranger District (MBRD), lies approximately 23 miles east of Bellingham, WA and 16 miles northeast of Sedro-Woolley, WA with some portions straddling the Skagit-Whatcom County line.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "",
+          "estimated": false
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -35,7 +52,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608356+00:00",
+      "scraped_at": "2026-10-22T18:12:59.123219+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -93,15 +110,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608423+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-10-22T18:12:59.123284+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "04/24/2017",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2019 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "05/2021 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (5), 36 Cfr 220.6(D)(5)",
+      "location_summary": "Township 30N; Range 10E; Section 22.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "04/24/2017",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2019 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "05/2021 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -114,15 +163,32 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608470+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-10-22T18:12:59.123333+00:00",
+      "milestones": [
+        {
+          "milestone": "NEPA Start Date",
+          "date": "1/15/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "6/4/2026",
+          "estimated": false
+        }
+      ],
+      "analysis_type": "Categorical Exclusion",
+      "ce_citation": "USDA-26d-USFS",
+      "location_summary": "The Deception Falls Trail, just east of Skykomish, WA.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "6/4/2026",
+          "estimated": false
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -135,15 +201,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608510+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-10-22T18:12:59.123373+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "07/28/2017",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "12/2017 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "01/2018 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (1), 36 Cfr 220.6(D)(1)",
+      "location_summary": "Road 6020-110, the Lake Serene Trailhead, National Forest System land in T 27 N, R 10 E, Section 19,30,31,32 the Lake Serene Trail #1068, including the Bridal Veil Falls Trail.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "07/28/2017",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "12/2017 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "01/2018 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -156,15 +254,32 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608547+00:00",
-      "milestones": [],
-      "analysis_type": "",
+      "scraped_at": "2026-10-22T18:12:59.123413+00:00",
+      "milestones": [
+        {
+          "milestone": "NEPA Start Date",
+          "date": "9/3/2025",
+          "estimated": false
+        },
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "7/6/2026",
+          "estimated": false
+        }
+      ],
+      "analysis_type": "Environmental Assessment",
       "ce_citation": "",
-      "location_summary": "",
+      "location_summary": "Entire Administrative Boundary of the MBS",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "7/6/2026",
+          "estimated": false
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -177,15 +292,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608585+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-10-22T18:12:59.123448+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "04/24/2017",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "04/2018 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2018 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (4), 36 Cfr 220.6(D)(4)",
+      "location_summary": "Township 32N; Range 12E; Section 10.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "04/24/2017",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "04/2018 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2018 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -198,7 +345,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608621+00:00",
+      "scraped_at": "2026-10-22T18:12:59.123483+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -251,15 +398,32 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608656+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-10-22T18:12:59.123516+00:00",
+      "milestones": [
+        {
+          "milestone": "NEPA Start Date",
+          "date": "3/25/2026",
+          "estimated": false
+        },
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "5/28/2026",
+          "estimated": false
+        }
+      ],
+      "analysis_type": "Categorical Exclusion",
+      "ce_citation": "USDA-01d-FSA",
+      "location_summary": "This project is located east of the town of Glacier on FSR 37 at milepost 1.9, Whatcom County.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Finding/Decision Date",
+          "date": "5/28/2026",
+          "estimated": false
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -272,7 +436,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608688+00:00",
+      "scraped_at": "2026-10-22T18:12:59.123548+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -310,15 +474,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608718+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-10-22T18:12:59.123580+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "09/30/2013",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "06/2014 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "08/2014 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.2 (1), 36 Cfr 220.6(E)(1)",
+      "location_summary": "Adjacent to Middle Fork Snoqualmie River and Forest Service Road 56",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "09/30/2013",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "06/2014 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "08/2014 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -331,7 +527,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608750+00:00",
+      "scraped_at": "2026-10-22T18:12:59.123616+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -384,15 +580,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608783+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-10-22T18:12:59.123650+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "03/03/2014",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2015 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2015 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (5), 36 Cfr 220.6(D)(5)",
+      "location_summary": "This project is approximately 13 miles north of Concrete, WA and is accessed from the Baker Lake Highway.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "03/03/2014",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2015 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2015 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -405,7 +633,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608814+00:00",
+      "scraped_at": "2026-10-22T18:12:59.123685+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -458,15 +686,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608846+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-10-22T18:12:59.123717+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "08/01/2018",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2019 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2019 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (10)",
+      "location_summary": "1)Suiattle River, Green Mtn. Lookout, T32N, R12E, Sec.3; 2)Miner's Ridge, T31N, R15E, Sec. 5; 3)Lost Creek, T30N, R10E, Sec. 6. 4)Barlow, T30N, R10E, Sec. 24; 5)Jack Pass, T27N, R12E, Sec 16.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "08/01/2018",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2019 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "06/2019 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -479,7 +739,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608878+00:00",
+      "scraped_at": "2026-10-22T18:12:59.123748+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -532,15 +792,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608926+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-10-22T18:12:59.123779+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "02/05/2018",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.12 (4), 36 Cfr 220.6(D)(4)",
+      "location_summary": "Cedar Mainline Road, National Forest System Road 50, at Mile Post 23.38",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "02/05/2018",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "05/2018 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -553,7 +845,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608961+00:00",
+      "scraped_at": "2026-10-22T18:12:59.123810+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -606,15 +898,47 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.608996+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-10-22T18:12:59.123843+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "09/25/2013",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "06/2014 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "08/2014 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.2 (1), 36 Cfr 220.6(E)(1)",
+      "location_summary": "The Snoqualmie Lake Trailhead is located at the end of Forest Service Road 5640 in the Middle Fork Snoqualmie River corridor",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "09/25/2013",
+          "estimated": false
+        },
+        {
+          "milestone": "Decision",
+          "date": "06/2014 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "08/2014 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -627,15 +951,42 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.609027+00:00",
-      "milestones": [],
-      "analysis_type": "",
-      "ce_citation": "",
-      "location_summary": "",
+      "scraped_at": "2026-10-22T18:12:59.123875+00:00",
+      "milestones": [
+        {
+          "milestone": "Scoping Start",
+          "date": "09/2024 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Decision",
+          "date": "10/2024 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Implementation",
+          "date": "01/2025 (Estimated)",
+          "estimated": true
+        }
+      ],
+      "analysis_type": "Decision Memo",
+      "ce_citation": "32.2 (5), 36 Cfr 220.6(E)(5)",
+      "location_summary": "South Fork Skykomish River Miles 6.5-20, 4 parcels on USFS land. Closest community is the town of Grotto.",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": []
+      "most_recent_activity": [
+        {
+          "milestone": "Scoping Start",
+          "date": "09/2024 (Estimated)",
+          "estimated": true
+        },
+        {
+          "milestone": "Decision",
+          "date": "10/2024 (Estimated)",
+          "estimated": true
+        }
+      ]
     },
     {
       "forest_name": "Mt. Baker-Snoqualmie National Forest",
@@ -648,7 +999,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.609059+00:00",
+      "scraped_at": "2026-10-22T18:12:59.123905+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -686,7 +1037,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:19:11.609091+00:00",
+      "scraped_at": "2026-10-22T18:12:59.123936+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -739,7 +1090,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:22.078766+00:00",
+      "scraped_at": "2026-10-22T18:14:22.144570+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -777,7 +1128,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:22.078819+00:00",
+      "scraped_at": "2026-10-22T18:14:22.144630+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -830,7 +1181,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:22.078852+00:00",
+      "scraped_at": "2026-10-22T18:14:22.144667+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -883,7 +1234,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:22.078886+00:00",
+      "scraped_at": "2026-10-22T18:14:22.144701+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -936,7 +1287,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:22.078933+00:00",
+      "scraped_at": "2026-10-22T18:14:22.144735+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -974,7 +1325,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961030+00:00",
+      "scraped_at": "2026-10-22T18:14:44.550894+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1027,7 +1378,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961087+00:00",
+      "scraped_at": "2026-10-22T18:14:44.550954+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1075,7 +1426,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961124+00:00",
+      "scraped_at": "2026-10-22T18:14:44.550993+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1133,7 +1484,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961159+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551029+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1186,7 +1537,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961190+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551078+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1224,7 +1575,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961222+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551113+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1277,7 +1628,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961254+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551149+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1330,7 +1681,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961286+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551183+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1383,7 +1734,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961316+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551215+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1421,7 +1772,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961348+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551248+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1484,7 +1835,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961380+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551279+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1522,7 +1873,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961410+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551309+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1575,7 +1926,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961443+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551343+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1613,7 +1964,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961473+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551375+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1666,7 +2017,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961502+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551408+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1704,7 +2055,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961534+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551439+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1742,7 +2093,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961566+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551470+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1780,7 +2131,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961598+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551502+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1838,7 +2189,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961629+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551533+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1876,7 +2227,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961661+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551564+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -1929,7 +2280,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961692+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551594+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -1967,7 +2318,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961722+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551625+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2005,7 +2356,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961755+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551656+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2043,7 +2394,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961785+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551687+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2096,7 +2447,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:20:53.961814+00:00",
+      "scraped_at": "2026-10-22T18:14:44.551717+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2149,7 +2500,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:20.998213+00:00",
+      "scraped_at": "2026-10-22T18:16:14.155890+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2202,7 +2553,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:20.998266+00:00",
+      "scraped_at": "2026-10-22T18:16:14.155949+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2240,7 +2591,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:20.998302+00:00",
+      "scraped_at": "2026-10-22T18:16:14.155988+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2278,7 +2629,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:20.998336+00:00",
+      "scraped_at": "2026-10-22T18:16:14.156024+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2316,7 +2667,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:20.998367+00:00",
+      "scraped_at": "2026-10-22T18:16:14.156071+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2354,7 +2705,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:20.998400+00:00",
+      "scraped_at": "2026-10-22T18:16:14.156105+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2392,7 +2743,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:20.998432+00:00",
+      "scraped_at": "2026-10-22T18:16:14.156138+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2430,7 +2781,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:20.998464+00:00",
+      "scraped_at": "2026-10-22T18:16:14.156170+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2468,7 +2819,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:20.998495+00:00",
+      "scraped_at": "2026-10-22T18:16:14.156202+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2506,7 +2857,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:20.998526+00:00",
+      "scraped_at": "2026-10-22T18:16:14.156234+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2544,7 +2895,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:51.931780+00:00",
+      "scraped_at": "2026-10-22T18:16:53.153832+00:00",
       "milestones": [],
       "analysis_type": "",
       "ce_citation": "",
@@ -2565,7 +2916,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:51.931904+00:00",
+      "scraped_at": "2026-10-22T18:16:53.153953+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2603,7 +2954,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:51.931945+00:00",
+      "scraped_at": "2026-10-22T18:16:53.153990+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2641,7 +2992,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:51.931977+00:00",
+      "scraped_at": "2026-10-22T18:16:53.154024+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -2694,7 +3045,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:51.932008+00:00",
+      "scraped_at": "2026-10-22T18:16:53.154070+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2732,47 +3083,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:51.932039+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "09/22/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "10/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "11/2025 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Decision Memo",
-      "ce_citation": "32.2 (13), 36 Cfr 220.6(E)(13)",
-      "location_summary": "Ferry County, Washington, west of Highway 395, south of Deadman Creek, north of Nancy Creek. Forest Service road 9500550.",
+      "scraped_at": "2026-10-22T18:16:53.154105+00:00",
+      "milestones": [],
+      "analysis_type": "",
+      "ce_citation": "",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-05-28",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "09/22/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "10/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "11/2025 (Estimated)",
-          "estimated": true
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Colville National Forest",
@@ -2785,7 +3104,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:51.932072+00:00",
+      "scraped_at": "2026-10-22T18:16:53.154136+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2823,7 +3142,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:51.932104+00:00",
+      "scraped_at": "2026-10-22T18:16:53.154167+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2861,7 +3180,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:51.932138+00:00",
+      "scraped_at": "2026-10-22T18:16:53.154199+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2899,7 +3218,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:51.932171+00:00",
+      "scraped_at": "2026-10-22T18:16:53.154232+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2937,7 +3256,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:51.932201+00:00",
+      "scraped_at": "2026-10-22T18:16:53.154265+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -2975,7 +3294,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:51.932231+00:00",
+      "scraped_at": "2026-10-22T18:16:53.154297+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -3013,7 +3332,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:22:51.932260+00:00",
+      "scraped_at": "2026-10-22T18:16:53.154328+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -3051,7 +3370,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:40.565976+00:00",
+      "scraped_at": "2026-10-22T18:19:26.181465+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -3089,7 +3408,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:40.566084+00:00",
+      "scraped_at": "2026-10-22T18:19:26.181639+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3142,57 +3461,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:40.566118+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "03/11/2020",
-          "estimated": false
-        },
-        {
-          "milestone": "Comment Period",
-          "date": "05/28/2021",
-          "estimated": false
-        },
-        {
-          "milestone": "Objection Period Start",
-          "date": "04/27/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2024 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2025 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
+      "scraped_at": "2026-10-22T18:19:26.181674+00:00",
+      "milestones": [],
+      "analysis_type": "",
       "ce_citation": "",
-      "location_summary": "Township 39 North, Range 10 East %u2013 Sections 1-4 & 10-12. Township 39 North, Range 11 East %u2013 Sections 3-9 & 16-18. Township 40 North, Range 10 East %u2013 Sections 1-3, 9-16, 20-29, & 32-36. Township 39 N",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Objection Period Start",
-          "date": "04/27/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2024 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2025 (Estimated)",
-          "estimated": true
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -3205,47 +3482,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:40.566149+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "09/06/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2023 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "12/2023 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Decision Memo",
-      "ce_citation": "32.3(11)",
-      "location_summary": "FS Roads 522 and 9803 near Wheeler Mountain",
+      "scraped_at": "2026-10-22T18:19:26.181708+00:00",
+      "milestones": [],
+      "analysis_type": "",
+      "ce_citation": "",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "09/06/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2023 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "12/2023 (Estimated)",
-          "estimated": true
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -3258,47 +3503,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:40.566182+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "10/17/2017",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "05/2018 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "03/2018 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Decision Memo",
-      "ce_citation": "32.12 (4), 36 Cfr 220.6(D)(4)",
-      "location_summary": "T40N, R2E, Section 11, Clearwater County, Idaho",
+      "scraped_at": "2026-10-22T18:19:26.181741+00:00",
+      "milestones": [],
+      "analysis_type": "",
+      "ce_citation": "",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "10/17/2017",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "05/2018 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "03/2018 (Estimated)",
-          "estimated": true
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -3311,57 +3524,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:40.566212+00:00",
-      "milestones": [
-        {
-          "milestone": "NOI in Federal Register",
-          "date": "02/16/2018",
-          "estimated": false
-        },
-        {
-          "milestone": "DEIS NOA in Federal Register",
-          "date": "07/12/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "FEIS NOA in Federal Register",
-          "date": "12/06/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "01/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2025 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Impact Statement",
+      "scraped_at": "2026-10-22T18:19:26.181772+00:00",
+      "milestones": [],
+      "analysis_type": "",
       "ce_citation": "",
-      "location_summary": "Located south of Grangeville, ID in the Fish Creek, Cove Creek and North Fork White Bird Creek portions of the Forest.",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "FEIS NOA in Federal Register",
-          "date": "12/06/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "01/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2025 (Estimated)",
-          "estimated": true
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -3374,7 +3545,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:40.566242+00:00",
+      "scraped_at": "2026-10-22T18:19:26.181803+00:00",
       "milestones": [
         {
           "milestone": "NEPA Start Date",
@@ -3412,62 +3583,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:40.566272+00:00",
-      "milestones": [
-        {
-          "milestone": "NOI in Federal Register",
-          "date": "02/12/2014",
-          "estimated": false
-        },
-        {
-          "milestone": "DEIS NOA in Federal Register",
-          "date": "03/10/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "FEIS NOA in Federal Register",
-          "date": "09/08/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Objection Period Start",
-          "date": "09/08/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2024 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "11/2024 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Impact Statement",
+      "scraped_at": "2026-10-22T18:19:26.181835+00:00",
+      "milestones": [],
+      "analysis_type": "",
       "ce_citation": "",
-      "location_summary": "T27N, R04E; T28N, R04E; R29N, 04E; (Boise Meridian)",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Objection Period Start",
-          "date": "09/08/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2024 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "11/2024 (Estimated)",
-          "estimated": true
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -3480,7 +3604,7 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:40.566303+00:00",
+      "scraped_at": "2026-10-22T18:19:26.181867+00:00",
       "milestones": [
         {
           "milestone": "Scoping Start",
@@ -3543,62 +3667,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:40.566332+00:00",
-      "milestones": [
-        {
-          "milestone": "NOI in Federal Register",
-          "date": "07/15/2014",
-          "estimated": false
-        },
-        {
-          "milestone": "DEIS NOA in Federal Register",
-          "date": "12/20/2019",
-          "estimated": false
-        },
-        {
-          "milestone": "FEIS NOA in Federal Register",
-          "date": "01/10/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Objection Period Start",
-          "date": "11/28/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "01/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "02/2025 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Impact Statement",
+      "scraped_at": "2026-10-22T18:19:26.181898+00:00",
+      "milestones": [],
+      "analysis_type": "",
       "ce_citation": "",
-      "location_summary": "Central Idaho",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Objection Period Start",
-          "date": "11/28/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "01/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "02/2025 (Estimated)",
-          "estimated": true
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -3611,51 +3688,19 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:40.566361+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "05/23/2018",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "04/2022 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "10/2022 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Decision Memo",
-      "ce_citation": "32.12 (4), 36 Cfr 220.6(D)(4)",
-      "location_summary": "Meadow Creek Bridge: T43N, R3W, Sec 34; Graves Meadow Bridge: T42N, R2W, Sec 25; Latah County, Idaho",
+      "scraped_at": "2026-10-22T18:19:26.181928+00:00",
+      "milestones": [],
+      "analysis_type": "",
+      "ce_citation": "",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "05/23/2018",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "04/2022 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "10/2022 (Estimated)",
-          "estimated": true
-        }
-      ]
+      "most_recent_activity": []
     },
     {
-      "forest_name": "Nez Perce-CW & Idaho Panhandle, Wallowa-Whitman",
-      "forest_code": "multi",
+      "forest_name": "Nez Perce-CW & Idaho Panhandle",
+      "forest_code": "nezperce-ipnf",
       "region": "R01",
       "state": "ID",
       "project_name": "Race Cow Project",
@@ -3664,43 +3709,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:40.566392+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "01/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Decision",
-          "date": "01/2027 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "06/2028 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
+      "scraped_at": "2026-10-22T18:19:26.181960+00:00",
+      "milestones": [],
+      "analysis_type": "",
       "ce_citation": "",
-      "location_summary": "The project area is located approximately 7 miles northwest of Riggins, Idaho, in Idaho County.",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
-      "is_multi_forest": true,
       "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "01/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Decision",
-          "date": "01/2027 (Estimated)",
-          "estimated": true
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -3713,57 +3730,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:40.566425+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "03/16/2020",
-          "estimated": false
-        },
-        {
-          "milestone": "Comment Period",
-          "date": "03/16/2020",
-          "estimated": false
-        },
-        {
-          "milestone": "Objection Period Start",
-          "date": "04/23/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2024 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "07/2025 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
+      "scraped_at": "2026-10-22T18:19:26.181993+00:00",
+      "milestones": [],
+      "analysis_type": "",
       "ce_citation": "",
-      "location_summary": "The Section 16 project is located in Idaho County approximately two miles north of Powell, Idaho. The main road access to the project area is via Forest Road 569 from the south via U.S. Highway 12.",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Objection Period Start",
-          "date": "04/23/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2024 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "07/2025 (Estimated)",
-          "estimated": true
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -3776,47 +3751,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:40.566455+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "09/06/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "02/2024 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "02/2024 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Decision Memo",
-      "ce_citation": "32.3(11)",
-      "location_summary": "FS Road 1858 near Newsome, Idaho",
+      "scraped_at": "2026-10-22T18:19:26.182024+00:00",
+      "milestones": [],
+      "analysis_type": "",
+      "ce_citation": "",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Scoping Start",
-          "date": "09/06/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "02/2024 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "02/2024 (Estimated)",
-          "estimated": true
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -3829,32 +3772,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:40.566484+00:00",
-      "milestones": [
-        {
-          "milestone": "NEPA Start Date",
-          "date": "7/22/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "9/11/2026",
-          "estimated": false
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
+      "scraped_at": "2026-10-22T18:19:26.182068+00:00",
+      "milestones": [],
+      "analysis_type": "",
       "ce_citation": "",
-      "location_summary": "The area is generally located approximately 7 air miles northeast of Harvard, ID, approximately 3.5 air miles southwest of Bald Mountain lookout, and approximately 1.5 air miles from White Pine Campground and Highway 6.",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-06",
-      "most_recent_activity": [
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "9/11/2026",
-          "estimated": false
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -3867,32 +3793,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:44.266934+00:00",
-      "milestones": [
-        {
-          "milestone": "NEPA Start Date",
-          "date": "6/8/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "7/2/2026",
-          "estimated": false
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
+      "scraped_at": "2026-10-22T18:19:26.298088+00:00",
+      "milestones": [],
+      "analysis_type": "",
       "ce_citation": "",
-      "location_summary": "The Project is located five to seven miles south and southeast of Avery, Idaho in the vicinity of Jacksons Knob, Bonehead Hill, Sisters Creek, Siwash Creek, Blue Grouse Cree, Shoepack Creek and East Fork Fishhook Creek.",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-06",
-      "most_recent_activity": [
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "7/2/2026",
-          "estimated": false
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -3905,32 +3814,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:44.266969+00:00",
-      "milestones": [
-        {
-          "milestone": "NEPA Start Date",
-          "date": "",
-          "estimated": false
-        },
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "",
-          "estimated": false
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
+      "scraped_at": "2026-10-22T18:19:26.298127+00:00",
+      "milestones": [],
+      "analysis_type": "",
       "ce_citation": "",
-      "location_summary": "Adjacent to the southeast part of Lake Pend Oreille",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-06",
-      "most_recent_activity": [
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "",
-          "estimated": false
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -3943,57 +3835,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:44.267002+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "10/01/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "Comment Period",
-          "date": "10/16/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "Objection Period Start",
-          "date": "01/01/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "10/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "06/2026 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
+      "scraped_at": "2026-10-22T18:19:26.298164+00:00",
+      "milestones": [],
+      "analysis_type": "",
       "ce_citation": "",
-      "location_summary": "The project is located in the southeastern corner of the St. Joe Ranger District in Shoshone County. Most of the project area consists of Recommended Wilderness and Backcountry Areas.",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-07",
-      "most_recent_activity": [
-        {
-          "milestone": "Objection Period Start",
-          "date": "01/01/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "10/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "06/2026 (Estimated)",
-          "estimated": true
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -4006,32 +3856,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:44.267033+00:00",
-      "milestones": [
-        {
-          "milestone": "NEPA Start Date",
-          "date": "3/17/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "5/28/2026",
-          "estimated": false
-        }
-      ],
-      "analysis_type": "Categorical Exclusion",
-      "ce_citation": "USDA-36d-USFS",
-      "location_summary": "Approximately 12 miles east of Avery, Idaho, between Malin and Eagle Creeks, primarily within the previous Halfway Malin EA NEPA decision.",
+      "scraped_at": "2026-10-22T18:19:26.298200+00:00",
+      "milestones": [],
+      "analysis_type": "",
+      "ce_citation": "",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-06",
-      "most_recent_activity": [
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "5/28/2026",
-          "estimated": false
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -4044,32 +3877,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:44.267066+00:00",
-      "milestones": [
-        {
-          "milestone": "NEPA Start Date",
-          "date": "4/9/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "9/29/2026",
-          "estimated": false
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
+      "scraped_at": "2026-10-22T18:19:26.298233+00:00",
+      "milestones": [],
+      "analysis_type": "",
       "ce_citation": "",
-      "location_summary": "Forest-wide on the IPNF except for certain Management Areas (MAs) that are excluded, and excluding the Granite Fuels project area.",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-06",
-      "most_recent_activity": [
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "9/29/2026",
-          "estimated": false
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -4082,52 +3898,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:44.267097+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "02/02/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "Comment Period",
-          "date": "06/23/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "11/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
+      "scraped_at": "2026-10-22T18:19:26.298266+00:00",
+      "milestones": [],
+      "analysis_type": "",
       "ce_citation": "",
-      "location_summary": "Located within the Bonners Ferry Ranger District about seven miles southeast of Bonners Ferry.",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-07",
-      "most_recent_activity": [
-        {
-          "milestone": "Comment Period",
-          "date": "06/23/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "11/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "07/2026 (Estimated)",
-          "estimated": true
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -4140,57 +3919,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:44.267127+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "04/27/2023",
-          "estimated": false
-        },
-        {
-          "milestone": "Comment Period",
-          "date": "08/29/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "Objection Period Start",
-          "date": "02/14/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "05/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "06/2025 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
+      "scraped_at": "2026-10-22T18:19:26.298298+00:00",
+      "milestones": [],
+      "analysis_type": "",
       "ce_citation": "",
-      "location_summary": "The project area is located south of Emida, Idaho in the Charlie Creek drainage.",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-07",
-      "most_recent_activity": [
-        {
-          "milestone": "Objection Period Start",
-          "date": "02/14/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "05/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "06/2025 (Estimated)",
-          "estimated": true
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -4203,32 +3940,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:44.267159+00:00",
-      "milestones": [
-        {
-          "milestone": "NEPA Start Date",
-          "date": "4/27/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "6/2/2026",
-          "estimated": false
-        }
-      ],
-      "analysis_type": "Categorical Exclusion",
-      "ce_citation": "Section 603 of HFRA (16 U.S.C. 6591b)",
-      "location_summary": "Lookout Pass Ski and Recreation Area near Mullan, Idaho in Shoshone County, Idaho and  Mineral County, Montana.",
+      "scraped_at": "2026-10-22T18:19:26.298331+00:00",
+      "milestones": [],
+      "analysis_type": "",
+      "ce_citation": "",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-06",
-      "most_recent_activity": [
-        {
-          "milestone": "Finding/Decision Date",
-          "date": "6/2/2026",
-          "estimated": false
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Nez Perce-CW & Idaho Panhandle",
@@ -4241,52 +3961,15 @@
       "status": "",
       "unit": "",
       "purpose": "",
-      "scraped_at": "2026-10-21T18:23:44.267189+00:00",
-      "milestones": [
-        {
-          "milestone": "Scoping Start",
-          "date": "03/20/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Comment Period",
-          "date": "06/27/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "08/2026 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Assessment",
+      "scraped_at": "2026-10-22T18:19:26.298365+00:00",
+      "milestones": [],
+      "analysis_type": "",
       "ce_citation": "",
-      "location_summary": "The project area is near the town of Sandpoint, Idaho, along Highway 95 and Lake Pend Oreille, in Bonner County.",
+      "location_summary": "",
       "accepting_comments": false,
       "comment_deadline": "",
       "first_seen": "2026-09-07",
-      "most_recent_activity": [
-        {
-          "milestone": "Comment Period",
-          "date": "06/27/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2025 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "08/2026 (Estimated)",
-          "estimated": true
-        }
-      ]
+      "most_recent_activity": []
     },
     {
       "forest_name": "Boise & Payette National Forests",
@@ -4400,75 +4083,6 @@
         {
           "milestone": "Implementation",
           "date": "05/2025 (Estimated)",
-          "estimated": true
-        }
-      ]
-    },
-    {
-      "forest_name": "Boise & Payette National Forests, Caribou-Targhee National Forests, Salmon-Challis National Forest, Sawtooth National Forest",
-      "forest_code": "multi",
-      "region": "R04",
-      "state": "ID",
-      "project_name": "Amendments to Land Management Plans Regarding Sage-grouse Conservation",
-      "project_url": "https://www.fs.usda.gov/r04/boise/projects/52904",
-      "description": "The Forest Service is considering amending its land management plans to address new and evolving issues arising since implementing sage-grouse plans in 2015. This project is in cooperation with the USDI Bureau of Land Management.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-10-21T18:25:07.653620+00:00",
-      "milestones": [
-        {
-          "milestone": "NOI in Federal Register",
-          "date": "11/21/2017",
-          "estimated": false
-        },
-        {
-          "milestone": "DEIS NOA in Federal Register",
-          "date": "10/05/2018",
-          "estimated": false
-        },
-        {
-          "milestone": "FEIS NOA in Federal Register",
-          "date": "08/02/2019",
-          "estimated": false
-        },
-        {
-          "milestone": "Objection Period Start",
-          "date": "08/02/2019",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2020 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "01/2021 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Impact Statement",
-      "ce_citation": "",
-      "location_summary": "Sagebrush lands in National Forests of Nevada, Utah, southern Idaho, southwest Montana, southwest & south-central Wyoming and northern Colorado.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "is_multi_forest": true,
-      "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "Objection Period Start",
-          "date": "08/02/2019",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "12/2020 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "01/2021 (Estimated)",
           "estimated": true
         }
       ]
@@ -9629,70 +9243,6 @@
           "milestone": "Finding/Decision Date",
           "date": "",
           "estimated": false
-        }
-      ]
-    },
-    {
-      "forest_name": "Wallowa-Whitman, Malheur",
-      "forest_code": "multi",
-      "region": "R06",
-      "state": "OR",
-      "project_name": "Austin",
-      "project_url": "https://www.fs.usda.gov/r06/wallowa-whitman/projects/53678",
-      "description": "This project includes a suite of activities to restore forest and watershed resiliency, including: fuels treatments and prescribed burning; and upland and watershed restoration.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-10-21T18:32:52.640389+00:00",
-      "milestones": [
-        {
-          "milestone": "NOI in Federal Register",
-          "date": "05/15/2025",
-          "estimated": false
-        },
-        {
-          "milestone": "DEIS NOA in Federal Register",
-          "date": "02/02/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "FEIS NOA in Federal Register",
-          "date": "08/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Decision",
-          "date": "04/2027 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2027 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Impact Statement",
-      "ce_citation": "",
-      "location_summary": "The project is located approximately 9 miles northeast of Prairie City, Oregon and borders the Wallowa Whitman National Forest.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "is_multi_forest": true,
-      "first_seen": "2026-05-28",
-      "most_recent_activity": [
-        {
-          "milestone": "DEIS NOA in Federal Register",
-          "date": "02/02/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "FEIS NOA in Federal Register",
-          "date": "08/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Decision",
-          "date": "04/2027 (Estimated)",
-          "estimated": true
         }
       ]
     },
@@ -22617,70 +22167,6 @@
           "milestone": "Finding/Decision Date",
           "date": "",
           "estimated": false
-        }
-      ]
-    },
-    {
-      "forest_name": "Tahoe & Eldorado National Forests, Stanislaus National Forest",
-      "forest_code": "multi",
-      "region": "R05",
-      "state": "CA",
-      "project_name": "Mokelumne Amador Calaveras Forest Resilience Project",
-      "project_url": "https://www.fs.usda.gov/r05/eldorado/projects/65796",
-      "description": "This project aims to restore ecosystem health and resilience to wildfire, insect and disease, and drought through forest thinning, fuels reduction and a suite of watershed improvement actions.",
-      "status": "",
-      "unit": "",
-      "purpose": "",
-      "scraped_at": "2026-10-21T18:47:45.379144+00:00",
-      "milestones": [
-        {
-          "milestone": "NOI in Federal Register",
-          "date": "09/26/2024",
-          "estimated": false
-        },
-        {
-          "milestone": "DEIS NOA in Federal Register",
-          "date": "02/17/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "FEIS NOA in Federal Register",
-          "date": "04/17/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "04/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2026 (Estimated)",
-          "estimated": true
-        }
-      ],
-      "analysis_type": "Environmental Impact Statement",
-      "ce_citation": "",
-      "location_summary": "The project is in the central Sierra Nevada mountains in portions of Amador, Calaveras, El Dorado, Tuolumne, and Alpine Counties and bisected by North Fork Mokelumne River.",
-      "accepting_comments": false,
-      "comment_deadline": "",
-      "is_multi_forest": true,
-      "first_seen": "2026-09-08",
-      "most_recent_activity": [
-        {
-          "milestone": "FEIS NOA in Federal Register",
-          "date": "04/17/2026",
-          "estimated": false
-        },
-        {
-          "milestone": "Decision",
-          "date": "04/2026 (Estimated)",
-          "estimated": true
-        },
-        {
-          "milestone": "Implementation",
-          "date": "04/2026 (Estimated)",
-          "estimated": true
         }
       ]
     },
