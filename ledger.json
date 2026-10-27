@@ -887,6 +887,14 @@
     "name": "Jesse Creek Transmission Line Fuel Break",
     "status": ""
   },
+  "https://www.fs.usda.gov/r04/salmon-challis/projects/447840": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-10-27",
+    "forest_code": "salmon-challis",
+    "forest_name": "Salmon-Challis National Forest",
+    "name": "Darling Creek Vegetation Project",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r04/salmon-challis/projects/59074": {
     "analysis_type": "Decision Memo",
     "first_seen": "2026-09-08",
@@ -2207,6 +2215,14 @@
     "name": "Horse Meadow Hydrologic Restoration Project",
     "status": ""
   },
+  "https://www.fs.usda.gov/r05/sequoia/projects/371778": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-10-27",
+    "forest_code": "inyo-sequoia",
+    "forest_name": "Inyo & Sequoia National Forests",
+    "name": "Peppermint Work Center TSI Trailer Removal",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r05/sequoia/projects/61326": {
     "analysis_type": "Environmental Assessment",
     "first_seen": "2026-09-08",
@@ -2981,6 +2997,14 @@
     "forest_code": "tahoe-eldorado",
     "forest_name": "Tahoe & Eldorado National Forests",
     "name": "Star Crest Mine",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/tahoe/projects/442935": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-10-27",
+    "forest_code": "tahoe-eldorado",
+    "forest_name": "Tahoe & Eldorado National Forests",
+    "name": "American River AML 2026",
     "status": ""
   },
   "https://www.fs.usda.gov/r05/tahoe/projects/45914": {
