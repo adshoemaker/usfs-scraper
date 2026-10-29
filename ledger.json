@@ -1547,6 +1547,14 @@
     "name": "Cecilville Fire & Hose Company DBA Salmon River Volunteer Fire and Rescue Permit Amendment",
     "status": ""
   },
+  "https://www.fs.usda.gov/r05/klamath/projects/429160": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-10-29",
+    "forest_code": "klamath",
+    "forest_name": "Klamath National Forest",
+    "name": "American Dark Fiber - Route 97",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r05/klamath/projects/54174": {
     "analysis_type": "Decision Memo",
     "first_seen": "2026-05-28",
@@ -1785,6 +1793,14 @@
     "forest_code": "lospadres",
     "forest_name": "Los Padres National Forest",
     "name": "Mount Pinos Forest Health Project -  PALS #58380",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/lospadres/projects/360255": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-10-29",
+    "forest_code": "lospadres",
+    "forest_name": "Los Padres National Forest",
+    "name": "Los Prietos Office Trailers Utilities Project",
     "status": ""
   },
   "https://www.fs.usda.gov/r05/lospadres/projects/58213": {
@@ -4340,6 +4356,14 @@
     "forest_code": "ochoco",
     "forest_name": "Ochoco National Forest",
     "name": "Juniper Fire BAR- Drill Seeding",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r06/ochoco/projects/431854": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-10-29",
+    "forest_code": "ochoco",
+    "forest_name": "Ochoco National Forest",
+    "name": "Mill Creek Salvage",
     "status": ""
   },
   "https://www.fs.usda.gov/r06/ochoco/projects/61651": {
