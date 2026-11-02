@@ -485,6 +485,12 @@ def load_projects():
         p["scoping_start"]    = scoping
         p["decision_date"]    = decision
         p["implementation_date"] = implementation
+        # Safety net: never show "taking comments" if the deadline has passed
+        # or the project is Completed (stale flag from an older scrape).
+        if p.get("accepting_comments"):
+            _dl = days_left_to_comment(p.get("comment_deadline", ""))
+            if (_dl is not None and _dl < 0) or p.get("status") == "Completed":
+                p["accepting_comments"] = False
     return projects, scraped_at
 
 
@@ -500,7 +506,8 @@ def filter_projects(projects, search="", forest_code="", status="",
 
     for p in projects:
         if search and search_lower not in p.get("project_name", "").lower() \
-                  and search_lower not in p.get("description", "").lower():
+                  and search_lower not in p.get("description", "").lower() \
+                  and search_lower not in p.get("location_summary", "").lower():
             continue
         if forest_code and p.get("forest_code") != forest_code:
             if not p.get("is_multi_forest"):
@@ -1266,8 +1273,8 @@ PAGE_TEMPLATE = """
                     <!-- Status badge -->
 
                     <!-- Description -->
-                    {% if p.description %}
-                    <div class="description">{{ p.description }}</div>
+                    {% if p.description or p.location_summary %}
+                    <div class="description">{{ p.description or p.location_summary }}</div>
                     {% endif %}
 
 

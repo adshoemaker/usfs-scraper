@@ -270,6 +270,11 @@ def fetch_with_retry(session: requests.Session, url: str,
                     time.sleep(backoff)
                     backoff *= 2
                     continue
+            if r.status_code == 404 and attempt < max_retries - 1:
+                print(f"    ⚠️  Got 404 — waiting {backoff}s before retry...")
+                time.sleep(backoff)
+                backoff *= 2
+                continue
             r.raise_for_status()
             return r
         except requests.exceptions.Timeout:
@@ -615,8 +620,8 @@ def scrape_forest(session: requests.Session, forest: dict,
 
     # Remove all dead projects found
     if dead_urls:
-        projects[:] = [p for p in projects if p["project_url"] not in dead_urls]
-        print(f"  Removed {len(dead_urls)} dead page(s)")
+        print(f"  Skipping detail data for {len(dead_urls)} unreachable page(s) — keeping listing data")
+        # Don't remove them — keep them with listing-page data only
 
     return projects
 
@@ -805,6 +810,16 @@ def run_scraper():
                         cached_desc = existing_milestones.get(p.get("project_url", ""), {}).get("description", "")
                         if cached_desc:
                             p["description"] = cached_desc
+                # Re-check CARA for cached projects flagged as taking comments,
+                # so closed comment periods get cleared (only a handful of requests)
+                for p in forest_projects:
+                    if p.get("accepting_comments"):
+                        _pid = p.get("project_url", "").rstrip("/").split("/")[-1]
+                        if _pid.isdigit():
+                            polite_sleep()
+                            _info = parse_comment_period(session, _pid)
+                            p["accepting_comments"] = _info.get("accepting_comments", False)
+                            p["comment_deadline"] = _info.get("comment_deadline", "")
                 all_projects.extend(forest_projects)
                 print(f"  Using {len(forest_projects)} cached projects")
             except Exception:
