@@ -2387,6 +2387,14 @@
     "name": "American Dark Fiber Middle Mile Broadband Project (ADF-F12-USFS-EN1)",
     "status": ""
   },
+  "https://www.fs.usda.gov/r05/shasta-trinity/projects/415792": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-11-05",
+    "forest_code": "shasta-trinity",
+    "forest_name": "Shasta-Trinity National Forest",
+    "name": "Bunny Flat",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r05/shasta-trinity/projects/44237": {
     "analysis_type": "Decision Memo",
     "first_seen": "2026-05-28",
@@ -5060,6 +5068,14 @@
     "forest_code": "wallowa-whitman",
     "forest_name": "Wallowa-Whitman National Forest",
     "name": "Horse Memaloose Salvage",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r06/wallowa-whitman/projects/446982": {
+    "analysis_type": "Environmental Assessment",
+    "first_seen": "2026-11-05",
+    "forest_code": "wallowa-whitman",
+    "forest_name": "Wallowa-Whitman National Forest",
+    "name": "Whitman Post-Fire Recovery",
     "status": ""
   },
   "https://www.fs.usda.gov/r06/wallowa-whitman/projects/45945": {
