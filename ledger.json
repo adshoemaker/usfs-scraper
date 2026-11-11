@@ -3864,8 +3864,12 @@
     "status": ""
   },
   "https://www.fs.usda.gov/r06/malheur/projects/307841": {
+    "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-07-14",
-    "name": "Austin"
+    "forest_code": "malheur",
+    "forest_name": "Malheur National Forest",
+    "name": "Austin",
+    "status": ""
   },
   "https://www.fs.usda.gov/r06/malheur/projects/44570": {
     "analysis_type": "Environmental Assessment",
