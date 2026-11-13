@@ -36,7 +36,7 @@
     "first_seen": "2026-09-06",
     "forest_code": "nezperce-ipnf",
     "forest_name": "Nez Perce-CW & Idaho Panhandle",
-    "name": "Chloride Gold Restoration",
+    "name": "Chloride Gold",
     "status": ""
   },
   "https://www.fs.usda.gov/r01/idahopanhandle/projects/306272": {
@@ -653,6 +653,14 @@
     "forest_code": "boise-payette",
     "forest_name": "Boise & Payette National Forests",
     "name": "Cold Springs Trail Re-establishment",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r04/payette/projects/442939": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-11-13",
+    "forest_code": "boise-payette",
+    "forest_name": "Boise & Payette National Forests",
+    "name": "Tartar Fire Salvage and Sanitation Project",
     "status": ""
   },
   "https://www.fs.usda.gov/r04/payette/projects/54805": {
