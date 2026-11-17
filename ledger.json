@@ -663,6 +663,14 @@
     "name": "Tartar Fire Salvage and Sanitation Project",
     "status": ""
   },
+  "https://www.fs.usda.gov/r04/payette/projects/464324": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-11-17",
+    "forest_code": "boise-payette",
+    "forest_name": "Boise & Payette National Forests",
+    "name": "HOOK EXPLORATION DRILLING",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r04/payette/projects/54805": {
     "analysis_type": "Decision Memo",
     "first_seen": "2026-09-08",
@@ -1653,6 +1661,14 @@
     "forest_code": "lassen-modoc",
     "forest_name": "Lassen & Modoc National Forests",
     "name": "Dixie Postfire Restoration and Recovery Project - Decision 2",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/lassen/projects/450041": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-11-17",
+    "forest_code": "lassen-modoc",
+    "forest_name": "Lassen & Modoc National Forests",
+    "name": "Lassen National Forest Cooperative Roadside Fuelbreaks Project",
     "status": ""
   },
   "https://www.fs.usda.gov/r05/lassen/projects/50770": {
@@ -3290,6 +3306,14 @@
   "https://www.fs.usda.gov/r06/colville/projects/41517": {
     "first_seen": "2026-05-28",
     "name": "Leclerc Creek Grazing Allotment Management Planning"
+  },
+  "https://www.fs.usda.gov/r06/colville/projects/461501": {
+    "analysis_type": "Environmental Assessment",
+    "first_seen": "2026-11-17",
+    "forest_code": "colville",
+    "forest_name": "Colville National Forest",
+    "name": "49 Degrees North Expansion",
+    "status": ""
   },
   "https://www.fs.usda.gov/r06/colville/projects/58832": {
     "analysis_type": "Decision Memo",
