@@ -495,6 +495,14 @@
     "name": "Middle Creek and West Indian Creek Grazing Analysis",
     "status": ""
   },
+  "https://www.fs.usda.gov/r04/caribou-targhee/projects/467737": {
+    "analysis_type": "Environmental Assessment",
+    "first_seen": "2026-11-20",
+    "forest_code": "caribou-targhee",
+    "forest_name": "Caribou-Targhee National Forests",
+    "name": "Freeman Ridge Exploration Project",
+    "status": ""
+  },
   "https://www.fs.usda.gov/r04/caribou-targhee/projects/52904": {
     "analysis_type": "Environmental Impact Statement",
     "first_seen": "2026-09-23",
@@ -1520,7 +1528,7 @@
     "first_seen": "2026-05-28",
     "forest_code": "klamath",
     "forest_name": "Klamath National Forest",
-    "name": "McKinney Fire Restoration EA_Veg/Fuels",
+    "name": "McKinney Fire Restoration",
     "status": ""
   },
   "https://www.fs.usda.gov/r05/klamath/projects/309802": {
@@ -1833,6 +1841,14 @@
     "forest_code": "lospadres",
     "forest_name": "Los Padres National Forest",
     "name": "Little Pine Mountain Reforestation Project",
+    "status": ""
+  },
+  "https://www.fs.usda.gov/r05/lospadres/projects/467739": {
+    "analysis_type": "Categorical Exclusion",
+    "first_seen": "2026-11-20",
+    "forest_code": "lospadres",
+    "forest_name": "Los Padres National Forest",
+    "name": "Botanicals Trail Adoption",
     "status": ""
   },
   "https://www.fs.usda.gov/r05/lospadres/projects/58213": {
