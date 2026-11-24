@@ -27761,24 +27761,24 @@
   },
   {
     "date": "2026-11-24",
-    "total": 600,
+    "total": 598,
     "taking_comments": 8,
     "by_analysis_type": {
       "Environmental Assessment": 183,
       "Decision Memo": 213,
-      "Categorical Exclusion": 171,
+      "Categorical Exclusion": 169,
       "Environmental Impact Statement": 31,
       "Unknown": 2
     },
     "by_forest": {
       "mbs": {
         "name": "Mt. Baker-Snoqualmie National Forest",
-        "total": 22,
+        "total": 21,
         "taking_comments": 0,
         "by_analysis_type": {
           "Environmental Assessment": 3,
           "Decision Memo": 15,
-          "Categorical Exclusion": 4
+          "Categorical Exclusion": 3
         }
       },
       "olympic": {
@@ -27826,13 +27826,13 @@
       },
       "nezperce-ipnf": {
         "name": "Nez Perce-CW & Idaho Panhandle",
-        "total": 22,
+        "total": 21,
         "taking_comments": 1,
         "by_analysis_type": {
           "Environmental Assessment": 12,
           "Decision Memo": 5,
           "Environmental Impact Statement": 3,
-          "Categorical Exclusion": 2
+          "Categorical Exclusion": 1
         }
       },
       "multi": {
